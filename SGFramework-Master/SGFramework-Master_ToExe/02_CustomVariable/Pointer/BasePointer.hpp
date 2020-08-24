@@ -3,6 +3,9 @@
 #include <atomic>
 #include "../Atomic/Atomic.hpp"
 
+#define sgnew
+#define sgdelete
+
 //Framework namespace
 namespace SGFramework
 {

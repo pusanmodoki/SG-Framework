@@ -4,7 +4,7 @@
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_INPUT_JOYSTICKCODE_HPP_
 #define SGFRAMEWORK_HEADER_INPUT_JOYSTICKCODE_HPP_
-#include "../ConstAndUsing/ConstAndUsing.hpp"
+#include "../MacroAndUsing/MacroAndUsing.hpp"
 
 //Framework namespace
 namespace SGFramework

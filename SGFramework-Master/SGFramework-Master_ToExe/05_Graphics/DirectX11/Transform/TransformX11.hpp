@@ -118,7 +118,9 @@ namespace SGFramework
 							result = m_lock.compare_exchange_weak(oldLock, newLock);
 							if (IS_FALSE(result))
 							{
+								oldLock = m_lock.load();
 								oldLock.id = thisID;
+								newLock.counter = oldLock.counter + 1;
 								result = m_lock.compare_exchange_weak(oldLock, newLock);
 							}
 						} while (IS_FALSE(result));
@@ -141,7 +143,9 @@ namespace SGFramework
 							result = m_lock.compare_exchange_weak(oldLock, newLock);
 							if (IS_FALSE(result))
 							{
+								oldLock = m_lock.load();
 								oldLock.id = thisID;
+								newLock.counter = oldLock.counter + 1;
 								result = m_lock.compare_exchange_weak(oldLock, newLock);
 							}
 						} while (IS_FALSE(result));
@@ -167,7 +171,6 @@ namespace SGFramework
 					static std::atomic<bool> m_isNowSyncFrame;
 
 					std::atomic<Lock>& m_lock;
-					//std::atomic<std::thread::id>& m_lock;
 				};
 
 				

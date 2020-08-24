@@ -4,8 +4,12 @@
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_INPUTCODE_KEYCODE_HPP_
 #define SGFRAMEWORK_HEADER_INPUTCODE_KEYCODE_HPP_
+
+#if defined(SGF_PLATFORM_WINDOWS)
 #include <Windows.h>
-#include "../ConstAndUsing/ConstAndUsing.hpp"
+#endif //SGF_PLATFORM_WINDOWS
+
+#include "../MacroAndUsing/MacroAndUsing.hpp"
 
 //Framework namespace
 namespace SGFramework
@@ -16,6 +20,8 @@ namespace SGFramework
 	{
 		enum Enum : int
 		{
+			//Windows key list
+#if defined(SGF_PLATFORM_WINDOWS)
 			//システムキー ---------------------------------------
 			Shiht = VK_SHIFT,						//Shift
 			RightShiht = VK_RSHIFT,				//右Shift
@@ -118,6 +124,7 @@ namespace SGFramework
 			F10 = VK_F10,
 			F11 = VK_F11,
 			F12 = VK_F12,
+#endif //SGF_PLATFORM_WINDOWS
 		};
 	};
 }

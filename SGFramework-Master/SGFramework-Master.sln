@@ -7,20 +7,26 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SGFramework-Master_ToExe", 
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
+		DebugInReleaseWinDx|x64 = DebugInReleaseWinDx|x64
+		DebugInReleaseWinDx|x86 = DebugInReleaseWinDx|x86
+		DebugWinDx|x64 = DebugWinDx|x64
+		DebugWinDx|x86 = DebugWinDx|x86
+		ReleaseWinDx|x64 = ReleaseWinDx|x64
+		ReleaseWinDx|x86 = ReleaseWinDx|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.Debug|x64.ActiveCfg = Debug|x64
-		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.Debug|x64.Build.0 = Debug|x64
-		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.Debug|x86.ActiveCfg = Debug|Win32
-		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.Debug|x86.Build.0 = Debug|Win32
-		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.Release|x64.ActiveCfg = Release|x64
-		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.Release|x64.Build.0 = Release|x64
-		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.Release|x86.ActiveCfg = Release|Win32
-		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.Release|x86.Build.0 = Release|Win32
+		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.DebugInReleaseWinDx|x64.ActiveCfg = DebugInReleaseWinDx|x64
+		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.DebugInReleaseWinDx|x64.Build.0 = DebugInReleaseWinDx|x64
+		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.DebugInReleaseWinDx|x86.ActiveCfg = ReleaseWinDx|x64
+		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.DebugInReleaseWinDx|x86.Build.0 = ReleaseWinDx|x64
+		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.DebugWinDx|x64.ActiveCfg = DebugWinDx|x64
+		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.DebugWinDx|x64.Build.0 = DebugWinDx|x64
+		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.DebugWinDx|x86.ActiveCfg = ReleaseWinDx|x64
+		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.DebugWinDx|x86.Build.0 = ReleaseWinDx|x64
+		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.ReleaseWinDx|x64.ActiveCfg = ReleaseWinDx|x64
+		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.ReleaseWinDx|x64.Build.0 = ReleaseWinDx|x64
+		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.ReleaseWinDx|x86.ActiveCfg = ReleaseWinDx|x64
+		{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}.ReleaseWinDx|x86.Build.0 = ReleaseWinDx|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,10 +1,11 @@
 /*----------------------------------------------------------------------------------
-¯•Êq‚Æ‚È‚éLayer, LayerMask structure
+è­˜åˆ¥å­ã¨ãªã‚‹Layer, LayerMask structure
 ------------------------------------------------------------------------------------*/
 #ifndef SGFREAMWORK_HEADER_LAYER_HPP_
 #define SGFREAMWORK_HEADER_LAYER_HPP_
-#include "../ConstAndUsing/ConstAndUsing.hpp"
-#include "../String/SGString.hpp"
+#include <unordered_map>
+#include "../MacroAndUsing/MacroAndUsing.hpp"
+#include "../Exception/Exception.hpp"
 #include "../ReadElement/ReadElement.hpp"
 #include "../../03_MathAF/MathAF.hpp"
 
@@ -18,7 +19,7 @@ namespace SGFramework
 	struct Layer;
 	struct LayerMask;
 
-	//¯•Êq‚Æ‚È‚éLayer structure
+	//è­˜åˆ¥å­ã¨ãªã‚‹Layer structure
 	struct Layer
 	{
 	public:
@@ -27,41 +28,41 @@ namespace SGFramework
 		friend struct LayerMask;
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒ^ƒO‚ğ‰Šú‰»‚·‚é, Layer = cMissingLayer
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ã‚¿ã‚°ã‚’åˆæœŸåŒ–ã™ã‚‹, Layer = cMissingLayer
 		inline Layer() : m_layer(cMissingLayer) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒ^ƒO‚ğ‰Šú‰»‚·‚é
-		//throw: Name‚ª–³Œø‚Ìê‡
-		//ˆø”1: ƒ^ƒO–¼
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ã‚¿ã‚°ã‚’åˆæœŸåŒ–ã™ã‚‹
+		//throw: NameãŒç„¡åŠ¹ã®å ´åˆ
+		//å¼•æ•°1: ã‚¿ã‚°å
 		inline Layer(const sgstring& layerName) : m_layer(cMissingLayer)
 		{
 			auto find = m_layers.find(layerName);
 
-			//—LŒø
+			//æœ‰åŠ¹
 			if (find != m_layers.end())
 				*this = find->second;
-			//–³Œø
+			//ç„¡åŠ¹
 			else
 			{
 				m_layer = cMissingLayer;
-				throw InvalidArgument(L"Error! Layer->Constructor", L"Missing Layer Name : " + layerName);
+				throw Exception::InvalidArgumentException(L"Error! Layer->Constructor", L"Missing Layer Name : " + layerName);
 			}
 		}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒ^ƒO‚ğ‰Šú‰»‚·‚é
-		//throw: ID‚ª–³Œø‚Ìê‡
-		//ˆø”1: LayerID
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ã‚¿ã‚°ã‚’åˆæœŸåŒ–ã™ã‚‹
+		//throw: IDãŒç„¡åŠ¹ã®å ´åˆ
+		//å¼•æ•°1: LayerID
 		inline Layer(uint layerID) : m_layer(cMissingLayer)
 		{
 			auto find = m_layersKeyID.find(layerID);
 
-			//—LŒø
+			//æœ‰åŠ¹
 			if (find != m_layersKeyID.end())
 				*this = find->second;
-			//–³Œø
+			//ç„¡åŠ¹
 			else
 			{
 				m_layer = cMissingLayer;
@@ -84,9 +85,9 @@ namespace SGFramework
 		inline static Layer DefaultLayer() { return Layer(cDefaultLayerID); }
 		//----------------------------------------------------------------------------------
 		//[SearchLayer]
-		//return: LayerName‚ÌLayer‚ª‚ ‚Á‚½ê‡: Layer, Layer‚ª‚È‚©‚Á‚½ê‡: cMissingLayer
-		//throw: Layer‚ª‘¶İ‚µ‚È‚©‚Á‚½ê‡
-		//ˆø”1: LayerName 
+		//return: LayerNameã®LayerãŒã‚ã£ãŸå ´åˆ: Layer, LayerãŒãªã‹ã£ãŸå ´åˆ: cMissingLayer
+		//throw: LayerãŒå­˜åœ¨ã—ãªã‹ã£ãŸå ´åˆ
+		//å¼•æ•°1: LayerName 
 		inline static Layer SearchLayer(const sgstring& layerName) 
 		{
 			auto find = m_layers.find(layerName);
@@ -98,9 +99,9 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[SearchLayer]
-		//return: LayerName‚ÌLayer‚ª‚ ‚Á‚½ê‡: Layer, Layer‚ª‚È‚©‚Á‚½ê‡: cMissingLayer
-		//throw: Layer‚ª‘¶İ‚µ‚È‚©‚Á‚½ê‡
-		//ˆø”1: LayerID
+		//return: LayerNameã®LayerãŒã‚ã£ãŸå ´åˆ: Layer, LayerãŒãªã‹ã£ãŸå ´åˆ: cMissingLayer
+		//throw: LayerãŒå­˜åœ¨ã—ãªã‹ã£ãŸå ´åˆ
+		//å¼•æ•°1: LayerID
 		inline static Layer SearchLayer(uint layerID)
 		{
 			auto find = m_layersKeyID.find(layerID);
@@ -216,39 +217,31 @@ namespace SGFramework
 		static constexpr uint cDefaultLayerID = 0;
 		//Default Layer Value
 		static constexpr uint cDefaultLayerValue = 0x00000001;
-		//SearchLayerÀsƒ^ƒO‚ª‚È‚©‚Á‚½ê‡‚É•Ô‹p‚³‚ê‚é
+		//SearchLayerå®Ÿè¡Œæ™‚ã‚¿ã‚°ãŒãªã‹ã£ãŸå ´åˆã«è¿”å´ã•ã‚Œã‚‹
 		static constexpr uint cMissingLayer = VariableLimit::cUintMax;
 
 	private:	
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒŒƒCƒ„[‚ğ‰Šú‰»‚·‚é
-		//ˆø”1: Layer
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Layer
 		inline Layer(const Layer* layer) : m_layer(layer->getLayerValue()), m_name(layer->getLayaerName()) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒŒƒCƒ„[‚ğ‰Šú‰»‚·‚é
-		//ˆø”1: Layer id
-		//ˆø”2: Layer name
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Layer id
+		//å¼•æ•°2: Layer name
 		inline Layer(uint value, const sgstring& name) : m_layer(1 << value), m_name(name) {}
 
 		//----------------------------------------------------------------------------------
 		//[ReadLayers]
-		//SettingFile‚©‚çLayer‚ğ“Ç‚İ‚Ş
-		//ˆø”1: LayerGroop
+		//SettingFileã‹ã‚‰Layerã‚’èª­ã¿è¾¼ã‚€
+		//å¼•æ•°1: LayerGroop
 		inline static void ReadLayers(const ReadElement::Groop& layers);
 
-		//----------------------------------------------------------------------------------
-		//[LayerManagement]
-		//return: ƒ^ƒO‚ğŠ„‚è“–‚Ä‚é or ƒ^ƒO‚ğŒŸõ or ƒ^ƒO‚ğ“o˜^
-		//ˆø”1: Layer–¼*
-		//ˆø”2: LayerID*
-		//ˆø”3: Àsƒ‚[ƒh
-		//inline static uint LayerManagement(const sgstring* layerName, uint* layerID, uint mode);
-
-		//Layer–¼ƒ}ƒbƒv
+		//Layeråãƒãƒƒãƒ—
 		static std::unordered_map<std::wstring, Layer> m_layers;
-		//Layer–¼ƒ}ƒbƒv
+		//Layeråãƒãƒƒãƒ—
 		static std::unordered_map<uint, Layer> m_layersKeyID;
 		//LayerHitTable
 		static std::unordered_map<uint, uint> m_layerHitTable;
@@ -264,28 +257,28 @@ namespace SGFramework
 		friend struct Layer;
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒŒƒCƒ„[ƒ}ƒXƒN‚ğ‰Šú‰»‚·‚é
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ¬ã‚¤ãƒ¤ãƒ¼ãƒã‚¹ã‚¯ã‚’åˆæœŸåŒ–ã™ã‚‹
 		inline LayerMask() : value(0) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒŒƒCƒ„[ƒ}ƒXƒN‚ğ‰Šú‰»‚·‚é
-		//ˆø”1: Layer Value
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ¬ã‚¤ãƒ¤ãƒ¼ãƒã‚¹ã‚¯ã‚’åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Layer Value
 		inline LayerMask(uint layerValue) : value(layerValue) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒŒƒCƒ„[ƒ}ƒXƒN‚ğ‰Šú‰»‚·‚é
-		//ˆø”1: Layer Value
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ¬ã‚¤ãƒ¤ãƒ¼ãƒã‚¹ã‚¯ã‚’åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Layer Value
 		inline LayerMask(int layerValue) : value(static_cast<uint>(layerValue)) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒŒƒCƒ„[ƒ}ƒXƒN‚ğ‰Šú‰»‚·‚é
-		//ˆø”1: Layer
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ¬ã‚¤ãƒ¤ãƒ¼ãƒã‚¹ã‚¯ã‚’åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Layer
 		inline LayerMask(Layer layer) : value(layer.m_layer) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒŒƒCƒ„[ƒ}ƒXƒN‚ğ‰Šú‰»‚·‚é
-		//ˆø”pack: Layer IDs
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ¬ã‚¤ãƒ¤ãƒ¼ãƒã‚¹ã‚¯ã‚’åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°pack: Layer IDs
 		template<class ...Args>
 		inline LayerMask(const Args&... layerIDs) : value(0)
 		{
@@ -305,8 +298,8 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[InitializeUsingNames]
-		//ƒŒƒCƒ„[ƒ}ƒXƒN‚ğLayerName‚ğg—p‚µ‚Ä‰Šú‰»‚·‚é
-		//ˆø”pack: Layer Names
+		//ãƒ¬ã‚¤ãƒ¤ãƒ¼ãƒã‚¹ã‚¯ã‚’LayerNameã‚’ä½¿ç”¨ã—ã¦åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°pack: Layer Names
 		template<class ...Args>
 		inline void InitializeUsingNames(const Args&... layerNames)
 		{
@@ -323,8 +316,8 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[InitializeUsingIDs]
-		//ƒŒƒCƒ„[ƒ}ƒXƒN‚ğLayerName‚ğg—p‚µ‚Ä‰Šú‰»‚·‚é
-		//ˆø”pack: Layer IDs
+		//ãƒ¬ã‚¤ãƒ¤ãƒ¼ãƒã‚¹ã‚¯ã‚’LayerNameã‚’ä½¿ç”¨ã—ã¦åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°pack: Layer IDs
 		template<class ...Args>
 		inline void InitializeUsingIDs(const Args&... layerIDs)
 		{
@@ -352,9 +345,9 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[CreateUsingNames]
-		//ƒŒƒCƒ„[ƒ}ƒXƒN‚ğLayerName‚ğg—p‚µ‚Ä‰Šú‰»‚·‚é]
-		//return: ì¬‚µ‚½LayerMask
-		//ˆø”pack: Layer Names
+		//ãƒ¬ã‚¤ãƒ¤ãƒ¼ãƒã‚¹ã‚¯ã‚’LayerNameã‚’ä½¿ç”¨ã—ã¦åˆæœŸåŒ–ã™ã‚‹]
+		//return: ä½œæˆã—ãŸLayerMask
+		//å¼•æ•°pack: Layer Names
 		template<class ...Args>
 		static inline LayerMask CreateUsingNames(const Args&... layerNames)
 		{
@@ -375,9 +368,9 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[CreateUsingIDs]
-		//ƒŒƒCƒ„[ƒ}ƒXƒN‚ğLayerName‚ğg—p‚µ‚Ä‰Šú‰»‚·‚é
-		//return: ì¬‚µ‚½LayerMask
-		//ˆø”pack: Layer IDs
+		//ãƒ¬ã‚¤ãƒ¤ãƒ¼ãƒã‚¹ã‚¯ã‚’LayerNameã‚’ä½¿ç”¨ã—ã¦åˆæœŸåŒ–ã™ã‚‹
+		//return: ä½œæˆã—ãŸLayerMask
+		//å¼•æ•°pack: Layer IDs
 		template<class ...Args>
 		static inline LayerMask CreateUsingIDs(const Args&... layerIDs)
 		{
@@ -487,27 +480,27 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[ReadLayers]
-	//SettingFile‚©‚çLayer‚ğ“Ç‚İ‚Ş
-	//ˆø”1: LayerGroop
+	//SettingFileã‹ã‚‰Layerã‚’èª­ã¿è¾¼ã‚€
+	//å¼•æ•°1: LayerGroop
 	inline void Layer::ReadLayers(const ReadElement::Groop & layers)
 	{
 		//Layer ID
 		uint layerID = 1;
 
-		//Default“o˜^
+		//Defaultç™»éŒ²
 		m_layers.try_emplace(cDefaultLayerName, Layer(cDefaultLayerID, cDefaultLayerName));
 		m_layersKeyID.try_emplace(cDefaultLayerID, Layer(cDefaultLayerID, cDefaultLayerName));
 
-		//“o˜^ƒ‹[ƒv
+		//ç™»éŒ²ãƒ«ãƒ¼ãƒ—
 		for (auto& e : layers.packs)
 		{	
-			//Layer“o˜^
+			//Layerç™»éŒ²
 			m_layers.try_emplace(e.header, Layer(layerID, e.header));
 			m_layersKeyID.try_emplace(layerID, Layer(layerID, e.header));
 			layerID++;
 		}
 
-		//Tableì¬ƒ‹[ƒv
+		//Tableä½œæˆãƒ«ãƒ¼ãƒ—
 		
 		//DefaultLayer
 		{
@@ -524,10 +517,10 @@ namespace SGFramework
 		for (uint i = 0, size = static_cast<uint>(layers.packs.size()); i < size; ++i)
 		{
 			uint hitLayerMask = 0;
-			//‰¡ƒ‹[ƒv
+			//æ¨ªãƒ«ãƒ¼ãƒ—
 			for (uint k = 0, size1 = static_cast<uint>(layers.packs[i].elements.size()); k < size1; ++k)
 				hitLayerMask |= static_cast<uint>(layers.packs[i].elements[k].valueInt) << k;
-			//cƒ‹[ƒv
+			//ç¸¦ãƒ«ãƒ¼ãƒ—
 			for (uint k = i + 1; k < size; ++k)
 			{
 				if (layers.packs[k].elements.size() > i + 1)

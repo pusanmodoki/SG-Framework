@@ -37,19 +37,19 @@ namespace SGFramework
 		};
 
 	private:
-		static constexpr ValueShort m_cUpperBitMouse = 0x0100;					//マウス
-		static constexpr ValueShort m_cUpperBitJoystick = 0x0200;					//ジョイスティック
-		static constexpr ValueShort m_cUpperBitWindow = 0x0400;					//ウィンドウ
-		static constexpr ValueShort m_cLowerBitMouseAccelerationX = 0x01;	//マウス加速度X
-		static constexpr ValueShort m_cLowerBitMouseAccelerationY = 0x02;	//マウス加速度Y
-		static constexpr ValueShort m_cLowerBitJoystickLTrigger = 0x01;			//ジョイスティックトリガーL
-		static constexpr ValueShort m_cLowerBitJoystickRTrigger = 0x02;			//ジョイスティックトリガーR
-		static constexpr ValueShort m_cLowerBitJoystickLStickX = 0x04;			//ジョイスティックLスティックX
-		static constexpr ValueShort m_cLowerBitJoystickLStickY = 0x08;			//ジョイスティックLスティックY
-		static constexpr ValueShort m_cLowerBitJoystickRStickX = 0x10;			//ジョイスティックRスティックX
-		static constexpr ValueShort m_cLowerBitJoystickRStickY = 0x20;			//ジョイスティックRスティックY
-		static constexpr ValueShort m_cLowerBitWindowAccelerationX = 0x01;	//ウィンドウ移動X
-		static constexpr ValueShort m_cLowerBitWindowAccelerationY = 0x32;	//ウィンドウ移動Y
+		static constexpr short m_cUpperBitMouse = 0x0100;					//マウス
+		static constexpr short m_cUpperBitJoystick = 0x0200;					//ジョイスティック
+		static constexpr short m_cUpperBitWindow = 0x0400;					//ウィンドウ
+		static constexpr short m_cLowerBitMouseAccelerationX = 0x01;	//マウス加速度X
+		static constexpr short m_cLowerBitMouseAccelerationY = 0x02;	//マウス加速度Y
+		static constexpr short m_cLowerBitJoystickLTrigger = 0x01;			//ジョイスティックトリガーL
+		static constexpr short m_cLowerBitJoystickRTrigger = 0x02;			//ジョイスティックトリガーR
+		static constexpr short m_cLowerBitJoystickLStickX = 0x04;			//ジョイスティックLスティックX
+		static constexpr short m_cLowerBitJoystickLStickY = 0x08;			//ジョイスティックLスティックY
+		static constexpr short m_cLowerBitJoystickRStickX = 0x10;			//ジョイスティックRスティックX
+		static constexpr short m_cLowerBitJoystickRStickY = 0x20;			//ジョイスティックRスティックY
+		static constexpr short m_cLowerBitWindowAccelerationX = 0x01;	//ウィンドウ移動X
+		static constexpr short m_cLowerBitWindowAccelerationY = 0x32;	//ウィンドウ移動Y
 	};
 }
 #endif // !SGFRAMEWORK_HEADER_INPUTCODE_INPUTCODE_HPP_

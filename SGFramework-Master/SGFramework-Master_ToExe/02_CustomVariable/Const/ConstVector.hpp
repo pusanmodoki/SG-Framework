@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-’è”‚ğ“Z‚ß‚½Const namespace
+å®šæ•°ã‚’çºã‚ãŸConst namespace
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_CONST_VECTOR_HPP_
 #define SGFRAMEWORK_HEADER_CONST_VECTOR_HPP_

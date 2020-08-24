@@ -1,17 +1,17 @@
 /*----------------------------------------------------------------------------------
-ƒ‰ƒCƒuƒ‰ƒŠŠÖ”‚ÌImport‚ğs‚¤LibraryImport.h
+ãƒ©ã‚¤ãƒ–ãƒ©ãƒªé–¢æ•°ã®Importã‚’è¡Œã†LibraryImport.h
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_LIBRARYIMPORT_HPP_
 #define SGFRAMEWORK_HEADER_LIBRARYIMPORT_HPP_
 
 //----------------------------------------------------------------------------------
-//ƒVƒXƒeƒ€Œn
+//ã‚·ã‚¹ãƒ†ãƒ ç³»
 //----------------------------------------------------------------------------------
-//•Ï”Œ^‚Ì‚©‚½‚Ü‚è
+//å¤‰æ•°å‹ã®ã‹ãŸã¾ã‚Š
 #include "../02_CustomVariable/CustomVariable.hpp"
-//ŒvZ
+//è¨ˆç®—
 #include "../03_MathAF/MathAF.hpp"
-//AssetŠÇ—
+//Assetç®¡ç†
 #include "../04_Asset/AssetManager.hpp"
 #include "../04_Asset/InstantiateAsset.hpp"
 //Graphics
@@ -33,32 +33,32 @@
 #include "../11_GameObject/GameObject.hpp"
 //GUI
 #include "../12_GUI/GUI.hpp"
-////ŒvZ
+////è¨ˆç®—
 //#include "../03_Math/Math.h"
-////‰ñ“]
+////å›è»¢
 //#include "../04_Rotate/Rotate.h"
 ////DirectX 3D
 //#include "../05_DirectX\DirectX.h"					
-////DirectX3DƒNƒ‰ƒX‚ª•K—v
+////DirectX3Dã‚¯ãƒ©ã‚¹ãŒå¿…è¦
 //#ifdef _DIRECTX_H_
-//	//ƒeƒNƒXƒ`ƒƒŠÇ—
+//	//ãƒ†ã‚¯ã‚¹ãƒãƒ£ç®¡ç†
 //	#include "../06_TextureManager/TextureManager.h"
 //	//3DModel
 //	#include "../07_ModelManager/ModelManager.h"
 //#endif // _DIRECTX_H_
-////‰¹ºÄ¶
+////éŸ³å£°å†ç”Ÿ
 //#include "../08_AudioManager\AudioManager.h"	   
-////ƒtƒ@ƒCƒ‹XVŠÇ—
+////ãƒ•ã‚¡ã‚¤ãƒ«æ›´æ–°ç®¡ç†
 //#include "../09_FileManager/FileManager.h"
-////ƒCƒ“ƒvƒbƒg
+////ã‚¤ãƒ³ãƒ—ãƒƒãƒˆ
 //#include "../10_Input\Input.h"
-////WindowsŠÖ”
+////Windowsé–¢æ•°
 //#include "../11_WindowsFunction/WindowsFunction.h"
 //
 ////----------------------------------------------------------------------------------
-////ƒQ[ƒ€Œn
+////ã‚²ãƒ¼ãƒ ç³»
 ////----------------------------------------------------------------------------------
-////ƒ^ƒO
+////ã‚¿ã‚°
 //#include "../12_Tag/Tag.h"
 ////GameObject												  
 //#include "../13_GameObject/GameObject.h"		
@@ -70,7 +70,7 @@
 ////GameScene
 //#include "../16_GameScene/GameScene.h"
 //#include "../16_GameScene/GameSceneManager.h"
-////ƒAƒjƒ[ƒVƒ‡ƒ“
+////ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³
 //#include "../17_Animator/Animator.h"
 ////Collider
 //#include "../18_Collider/Collider.h"
@@ -79,29 +79,29 @@
 //
 
 ////----------------------------------------------------------------------------------
-////ƒQ[ƒ€Œn
+////ã‚²ãƒ¼ãƒ ç³»
 ////----------------------------------------------------------------------------------
 //
-////<><><> GameObject2D‚ğ‚à‚Æ‚Æ‚µ‚½ƒNƒ‰ƒXŒQ <><><>
-////ƒQ[ƒ€ƒIƒuƒWƒFƒNƒg
+////<><><> GameObject2Dã‚’ã‚‚ã¨ã¨ã—ãŸã‚¯ãƒ©ã‚¹ç¾¤ <><><>
+////ã‚²ãƒ¼ãƒ ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 //#include "GameObject\GameObject2D.h"				   
-////ƒQ[ƒ€ƒIƒuƒWƒFƒNƒg + ˆÚ“® (GameObject2D•K{)
+////ã‚²ãƒ¼ãƒ ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ + ç§»å‹• (GameObject2Då¿…é ˆ)
 //#include "GameObject\Movement\Movement2D.h"	   
-////ƒQ[ƒ€ƒIƒuƒWƒFƒNƒg + ˆÚ“® + ƒLƒƒƒ‰ƒXƒe[ƒ^ƒX(GameObject2D & Movement•K{)
+////ã‚²ãƒ¼ãƒ ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ + ç§»å‹• + ã‚­ãƒ£ãƒ©ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹(GameObject2D & Movementå¿…é ˆ)
 //#include "GameObject\Movement\Character\Character2D.h"
-////ƒIƒuƒWƒFƒNƒg“–‚½‚è”»’è (GameObject2D•K{)													
+////ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå½“ãŸã‚Šåˆ¤å®š (GameObject2Då¿…é ˆ)													
 //#include "Collider\ColliderManager\ColliderManager.h"
-////ƒQ[ƒ€ƒ[ƒ‹ƒh(GameObject2D•K{)
+////ã‚²ãƒ¼ãƒ ãƒ¯ãƒ¼ãƒ«ãƒ‰(GameObject2Då¿…é ˆ)
 //#include "GameWorld\GameWorld2D.h"
-////ƒJƒƒ‰(GameObject2D•K{)
+////ã‚«ãƒ¡ãƒ©(GameObject2Då¿…é ˆ)
 //#include "Camera\Camera2D.h"
 ////<><><><><><><><> <><><><><><><><>
 //
-////ƒIƒuƒWƒFƒNƒgƒAƒjƒ[ƒVƒ‡ƒ“													 
+////ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³													 
 //#include "Animator\Animator2D.h"		  
-////ƒp[ƒeƒBƒNƒ‹
+////ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«
 //#include "Particle\Particle.h"						   
-////ƒ^ƒO
+////ã‚¿ã‚°
 //#include "Tag\Tag.h"
 
 #endif // !SGFRAMEWORK_HEADER_LIBRARYIMPORT_HPP_

@@ -4,9 +4,6 @@
     <Filter Include="01_LibraryImport">
       <UniqueIdentifier>{5cc44d1d-8a4d-430d-9c49-e8cbfffca689}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02_CustomVariable">
-      <UniqueIdentifier>{9f22bd7f-62ea-40ff-92ac-d13c59404a8a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="03_MathAF">
       <UniqueIdentifier>{56ce0350-c7cc-434f-ab8b-b77e7754a6a8}</UniqueIdentifier>
     </Filter>
@@ -36,123 +33,6 @@
     </Filter>
     <Filter Include="12_GUI">
       <UniqueIdentifier>{616309b8-8aba-440e-bbba-e90de4663042}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Atomic">
-      <UniqueIdentifier>{fc843be7-e85a-47e3-8e65-8697135a3a7f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\CharacterCode">
-      <UniqueIdentifier>{dac24929-311e-4109-b8a2-e6fd96511985}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Color">
-      <UniqueIdentifier>{98d13539-334f-4896-8291-c5a456bd402d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\ConditionVariable">
-      <UniqueIdentifier>{62093ed3-64d3-437c-a0c2-11146c0f95b8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\ConstLibrary">
-      <UniqueIdentifier>{fe02ce2a-816c-4d96-9395-df35854d64e1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\ConstAndUsing">
-      <UniqueIdentifier>{ef9c2619-30dc-4fb5-bae0-96854f358d73}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\DebugMode">
-      <UniqueIdentifier>{2bcc7ee0-de63-47cf-9440-0c72761ce376}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\DeletePointer">
-      <UniqueIdentifier>{d9ebb882-9e97-41cc-b573-fa713cd065fa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\GpuAccelerator">
-      <UniqueIdentifier>{a30ff822-b4b0-4970-9c1d-e043660eef21}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\InputCode">
-      <UniqueIdentifier>{61378883-2625-4591-9ac3-584614f0d31a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\InvalidArgument">
-      <UniqueIdentifier>{86492016-0307-46da-ac98-ab1aa84dc1d1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\LayerAndTag">
-      <UniqueIdentifier>{01c1614e-2905-4536-bfb5-7fee87e7c205}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Matrix">
-      <UniqueIdentifier>{ea1dbd89-c290-493c-a2fb-761d9119ce76}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Object">
-      <UniqueIdentifier>{df49cfff-b34d-41f6-b3f1-3a11d9b47f09}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\PhysicsFlags">
-      <UniqueIdentifier>{420adf4f-a43c-4408-ab84-f7f11ffcc6c6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Tuple">
-      <UniqueIdentifier>{1a0dfa9b-6aca-4533-b500-521f4fa70299}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\UV">
-      <UniqueIdentifier>{9d2d01b8-b5b2-491f-b721-afadb087c66d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\VariableLimit">
-      <UniqueIdentifier>{6cda188f-d95e-4752-90e2-00fce49c9421}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Vector">
-      <UniqueIdentifier>{e8fbd6a2-4041-4263-b304-4a82030c1709}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Pointer">
-      <UniqueIdentifier>{d74b8905-27c6-47eb-ba21-b4411538f21a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Property">
-      <UniqueIdentifier>{974baa26-23a8-48c9-bff7-273f4ef3704c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Quaternion">
-      <UniqueIdentifier>{9b60b29d-c70b-40ba-87f7-079f05a1250b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Random">
-      <UniqueIdentifier>{a975395e-37f8-4fe4-80a4-9657331185c7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\ReadElement">
-      <UniqueIdentifier>{d6b8b069-0d2e-47e0-b44c-88a9a9d95fbd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Singleton">
-      <UniqueIdentifier>{ccae1c17-8f70-43f2-b7c9-e16655136f1e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\String">
-      <UniqueIdentifier>{e342932e-11de-4cf6-af64-b7467f2b8fc8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Time">
-      <UniqueIdentifier>{d2928072-aab9-4367-b00e-5ac4161b8b87}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\TriggerCollider">
-      <UniqueIdentifier>{9761ab5b-7b65-4041-94d5-bc0a19a913e1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Vector\Window">
-      <UniqueIdentifier>{ceb1d72a-c946-4ea8-89c7-12963109c1a4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Vector\Vector2Ref">
-      <UniqueIdentifier>{cb73deec-9df0-4786-b0bf-140613f06d2e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Vector\Vector4x4">
-      <UniqueIdentifier>{694725b5-5ec6-40a8-87e4-5d50f0d44b11}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Vector\Vector4Ref">
-      <UniqueIdentifier>{c4c7a577-e3c2-49b1-8e45-10be8d3d98d9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Vector\Vector4Int">
-      <UniqueIdentifier>{9854b36f-853e-4f8c-b3bc-add69060f3da}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Vector\Vector4">
-      <UniqueIdentifier>{9e4641d4-90a8-4f7c-aecd-61019f483c97}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Vector\Vector3Ref">
-      <UniqueIdentifier>{0a2210ce-ecee-4237-8aab-d0badf43f31d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Vector\Vector3Int">
-      <UniqueIdentifier>{0c02c164-8199-453b-8a29-d0811f435721}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Vector\Vector3">
-      <UniqueIdentifier>{21a0a70a-ba9c-4cfa-a32b-ce0d04dcea14}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Vector\Vector2Int">
-      <UniqueIdentifier>{5ec9d69c-d8a7-4c07-9d59-bc5332b65097}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02_CustomVariable\Vector\Vector2">
-      <UniqueIdentifier>{af449da0-88ef-4fef-ab6c-82bb6270806b}</UniqueIdentifier>
     </Filter>
     <Filter Include="04_Asset\Asset">
       <UniqueIdentifier>{ea7b201f-ec38-4f52-9c6f-93c7f70e7789}</UniqueIdentifier>
@@ -262,9 +142,6 @@
     <Filter Include="998_DemoSource\Shader\UseDemo">
       <UniqueIdentifier>{40da89d8-eb7e-4e16-bd4c-895c1752e593}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02_CustomVariable\ComWear">
-      <UniqueIdentifier>{696043f1-bc20-463f-8da0-66fc3aeae4d4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="06_Audio\AudioDetail">
       <UniqueIdentifier>{0d4d5bc5-e9b9-4810-865e-ab68e8053746}</UniqueIdentifier>
     </Filter>
@@ -273,6 +150,123 @@
     </Filter>
     <Filter Include="10_Physics\PhysicsFunction">
       <UniqueIdentifier>{020e8b08-29a4-4c80-85fc-cd9b621e2645}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables">
+      <UniqueIdentifier>{9f22bd7f-62ea-40ff-92ac-d13c59404a8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Atomic">
+      <UniqueIdentifier>{fc843be7-e85a-47e3-8e65-8697135a3a7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\CharacterCode">
+      <UniqueIdentifier>{dac24929-311e-4109-b8a2-e6fd96511985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Color">
+      <UniqueIdentifier>{98d13539-334f-4896-8291-c5a456bd402d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\InputCode">
+      <UniqueIdentifier>{61378883-2625-4591-9ac3-584614f0d31a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\LayerAndTag">
+      <UniqueIdentifier>{01c1614e-2905-4536-bfb5-7fee87e7c205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Matrix">
+      <UniqueIdentifier>{ea1dbd89-c290-493c-a2fb-761d9119ce76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Object">
+      <UniqueIdentifier>{df49cfff-b34d-41f6-b3f1-3a11d9b47f09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\PhysicsFlags">
+      <UniqueIdentifier>{420adf4f-a43c-4408-ab84-f7f11ffcc6c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Tuple">
+      <UniqueIdentifier>{1a0dfa9b-6aca-4533-b500-521f4fa70299}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\UV">
+      <UniqueIdentifier>{9d2d01b8-b5b2-491f-b721-afadb087c66d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\VariableLimit">
+      <UniqueIdentifier>{6cda188f-d95e-4752-90e2-00fce49c9421}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Vector">
+      <UniqueIdentifier>{e8fbd6a2-4041-4263-b304-4a82030c1709}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Vector\Window">
+      <UniqueIdentifier>{ceb1d72a-c946-4ea8-89c7-12963109c1a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Vector\Vector2Ref">
+      <UniqueIdentifier>{cb73deec-9df0-4786-b0bf-140613f06d2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Vector\Vector4x4">
+      <UniqueIdentifier>{694725b5-5ec6-40a8-87e4-5d50f0d44b11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Vector\Vector4Ref">
+      <UniqueIdentifier>{c4c7a577-e3c2-49b1-8e45-10be8d3d98d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Vector\Vector4Int">
+      <UniqueIdentifier>{9854b36f-853e-4f8c-b3bc-add69060f3da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Vector\Vector4">
+      <UniqueIdentifier>{9e4641d4-90a8-4f7c-aecd-61019f483c97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Vector\Vector3Ref">
+      <UniqueIdentifier>{0a2210ce-ecee-4237-8aab-d0badf43f31d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Vector\Vector3Int">
+      <UniqueIdentifier>{0c02c164-8199-453b-8a29-d0811f435721}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Vector\Vector3">
+      <UniqueIdentifier>{21a0a70a-ba9c-4cfa-a32b-ce0d04dcea14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Vector\Vector2Int">
+      <UniqueIdentifier>{5ec9d69c-d8a7-4c07-9d59-bc5332b65097}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Vector\Vector2">
+      <UniqueIdentifier>{af449da0-88ef-4fef-ab6c-82bb6270806b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Pointer">
+      <UniqueIdentifier>{d74b8905-27c6-47eb-ba21-b4411538f21a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Property">
+      <UniqueIdentifier>{974baa26-23a8-48c9-bff7-273f4ef3704c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Quaternion">
+      <UniqueIdentifier>{9b60b29d-c70b-40ba-87f7-079f05a1250b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Random">
+      <UniqueIdentifier>{a975395e-37f8-4fe4-80a4-9657331185c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\ReadElement">
+      <UniqueIdentifier>{d6b8b069-0d2e-47e0-b44c-88a9a9d95fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Singleton">
+      <UniqueIdentifier>{ccae1c17-8f70-43f2-b7c9-e16655136f1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\String">
+      <UniqueIdentifier>{e342932e-11de-4cf6-af64-b7467f2b8fc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Time">
+      <UniqueIdentifier>{d2928072-aab9-4367-b00e-5ac4161b8b87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\TriggerCollider">
+      <UniqueIdentifier>{9761ab5b-7b65-4041-94d5-bc0a19a913e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\MacroAndUsing">
+      <UniqueIdentifier>{ef9c2619-30dc-4fb5-bae0-96854f358d73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Exception">
+      <UniqueIdentifier>{86492016-0307-46da-ac98-ab1aa84dc1d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\ConstVariables">
+      <UniqueIdentifier>{152d3657-86d4-4d1f-9c7f-58b419717995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\ConditionVariable">
+      <UniqueIdentifier>{62093ed3-64d3-437c-a0c2-11146c0f95b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\ComPointer%28併合予定%29">
+      <UniqueIdentifier>{696043f1-bc20-463f-8da0-66fc3aeae4d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\ConstLibrary%28削除予定%29">
+      <UniqueIdentifier>{fe02ce2a-816c-4d96-9395-df35854d64e1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -283,172 +277,154 @@
       <Filter>01_LibraryImport</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Atomic\Atomic.hpp">
-      <Filter>02_CustomVariable\Atomic</Filter>
+      <Filter>02_Variables\Atomic</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\CharacterCode\CharacterCode.hpp">
-      <Filter>02_CustomVariable\CharacterCode</Filter>
+      <Filter>02_Variables\CharacterCode</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Color\Color.hpp">
-      <Filter>02_CustomVariable\Color</Filter>
+      <Filter>02_Variables\Color</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\ConditionVariable\ConditionVariable.hpp">
-      <Filter>02_CustomVariable\ConditionVariable</Filter>
+      <Filter>02_Variables\ConditionVariable</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Const\Const.hpp">
-      <Filter>02_CustomVariable\ConstLibrary</Filter>
+      <Filter>02_Variables\ConstLibrary%28削除予定%29</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Const\ConstVector.hpp">
-      <Filter>02_CustomVariable\ConstLibrary</Filter>
-    </ClInclude>
-    <ClInclude Include="02_CustomVariable\ConstAndUsing\ConstAndUsing.hpp">
-      <Filter>02_CustomVariable\ConstAndUsing</Filter>
-    </ClInclude>
-    <ClInclude Include="02_CustomVariable\DebugMode\DebugMode.hpp">
-      <Filter>02_CustomVariable\DebugMode</Filter>
-    </ClInclude>
-    <ClInclude Include="02_CustomVariable\DeletePointer\DeletePointer.hpp">
-      <Filter>02_CustomVariable\DeletePointer</Filter>
-    </ClInclude>
-    <ClInclude Include="02_CustomVariable\GpuAccelerator\GpuAccelerator.hpp">
-      <Filter>02_CustomVariable\GpuAccelerator</Filter>
+      <Filter>02_Variables\ConstLibrary%28削除予定%29</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\InputCode\InputCode.hpp">
-      <Filter>02_CustomVariable\InputCode</Filter>
+      <Filter>02_Variables\InputCode</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\InputCode\JoystickCode.hpp">
-      <Filter>02_CustomVariable\InputCode</Filter>
+      <Filter>02_Variables\InputCode</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\InputCode\KeyBordCode.hpp">
-      <Filter>02_CustomVariable\InputCode</Filter>
+      <Filter>02_Variables\InputCode</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\InputCode\MouseCode.hpp">
-      <Filter>02_CustomVariable\InputCode</Filter>
-    </ClInclude>
-    <ClInclude Include="02_CustomVariable\InvalidArgument\InvalidArgument.hpp">
-      <Filter>02_CustomVariable\InvalidArgument</Filter>
+      <Filter>02_Variables\InputCode</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\LayerAndTag\Tag.hpp">
-      <Filter>02_CustomVariable\LayerAndTag</Filter>
+      <Filter>02_Variables\LayerAndTag</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\LayerAndTag\Layer.hpp">
-      <Filter>02_CustomVariable\LayerAndTag</Filter>
+      <Filter>02_Variables\LayerAndTag</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Matrix\Matrix.hpp">
-      <Filter>02_CustomVariable\Matrix</Filter>
+      <Filter>02_Variables\Matrix</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Object\Object.hpp">
-      <Filter>02_CustomVariable\Object</Filter>
+      <Filter>02_Variables\Object</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\PhysicsFlags\PhysicsFlags.hpp">
-      <Filter>02_CustomVariable\PhysicsFlags</Filter>
+      <Filter>02_Variables\PhysicsFlags</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Pointer\BasePointer.hpp">
-      <Filter>02_CustomVariable\Pointer</Filter>
+      <Filter>02_Variables\Pointer</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Pointer\ClonePointer.hpp">
-      <Filter>02_CustomVariable\Pointer</Filter>
+      <Filter>02_Variables\Pointer</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Pointer\GarbageCollector.hpp">
-      <Filter>02_CustomVariable\Pointer</Filter>
+      <Filter>02_Variables\Pointer</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Pointer\LockWeakGuard.hpp">
-      <Filter>02_CustomVariable\Pointer</Filter>
+      <Filter>02_Variables\Pointer</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Pointer\Pointer.hpp">
-      <Filter>02_CustomVariable\Pointer</Filter>
+      <Filter>02_Variables\Pointer</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Pointer\SharedPointer.hpp">
-      <Filter>02_CustomVariable\Pointer</Filter>
+      <Filter>02_Variables\Pointer</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Pointer\UniquePointer.hpp">
-      <Filter>02_CustomVariable\Pointer</Filter>
+      <Filter>02_Variables\Pointer</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Property\Property.hpp">
-      <Filter>02_CustomVariable\Property</Filter>
+      <Filter>02_Variables\Property</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Quarernion\Quaternion.hpp">
-      <Filter>02_CustomVariable\Quaternion</Filter>
+      <Filter>02_Variables\Quaternion</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Random\Random.hpp">
-      <Filter>02_CustomVariable\Random</Filter>
+      <Filter>02_Variables\Random</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\ReadElement\ReadElement.hpp">
-      <Filter>02_CustomVariable\ReadElement</Filter>
+      <Filter>02_Variables\ReadElement</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Singleton\Singleton.hpp">
-      <Filter>02_CustomVariable\Singleton</Filter>
+      <Filter>02_Variables\Singleton</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\String\SGString.hpp">
-      <Filter>02_CustomVariable\String</Filter>
+      <Filter>02_Variables\String</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\String\StdStringFunction.hpp">
-      <Filter>02_CustomVariable\String</Filter>
+      <Filter>02_Variables\String</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\String\String.hpp">
-      <Filter>02_CustomVariable\String</Filter>
+      <Filter>02_Variables\String</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Time\TimeProcessing.hpp">
-      <Filter>02_CustomVariable\Time</Filter>
+      <Filter>02_Variables\Time</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Time\Time.hpp">
-      <Filter>02_CustomVariable\Time</Filter>
+      <Filter>02_Variables\Time</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\TriggerCollider\TriggerCollider.hpp">
-      <Filter>02_CustomVariable\TriggerCollider</Filter>
+      <Filter>02_Variables\TriggerCollider</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Tuple\Tuple.hpp">
-      <Filter>02_CustomVariable\Tuple</Filter>
+      <Filter>02_Variables\Tuple</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\UV\UV.hpp">
-      <Filter>02_CustomVariable\UV</Filter>
+      <Filter>02_Variables\UV</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\VariableLimit\VariableLimit.hpp">
-      <Filter>02_CustomVariable\VariableLimit</Filter>
+      <Filter>02_Variables\VariableLimit</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Window\Window.hpp">
-      <Filter>02_CustomVariable\Vector\Window</Filter>
+      <Filter>02_Variables\Vector\Window</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Window\HinstanceHolder\HinstanceHolder.hpp">
-      <Filter>02_CustomVariable\Vector\Window</Filter>
+      <Filter>02_Variables\Vector\Window</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Window\HwndHolder\HwndHolder.hpp">
-      <Filter>02_CustomVariable\Vector\Window</Filter>
-    </ClInclude>
-    <ClInclude Include="02_CustomVariable\CustomVariable.hpp">
-      <Filter>02_CustomVariable</Filter>
+      <Filter>02_Variables\Vector\Window</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Vector\Vector2\Vector2.hpp">
-      <Filter>02_CustomVariable\Vector\Vector2</Filter>
+      <Filter>02_Variables\Vector\Vector2</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Vector\Vector2\Int\Vector2Int.hpp">
-      <Filter>02_CustomVariable\Vector\Vector2Int</Filter>
+      <Filter>02_Variables\Vector\Vector2Int</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Vector\Vector2\Ref\Vector2Ref.hpp">
-      <Filter>02_CustomVariable\Vector\Vector2Ref</Filter>
+      <Filter>02_Variables\Vector\Vector2Ref</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Vector\Vector3\Vector3.hpp">
-      <Filter>02_CustomVariable\Vector\Vector3</Filter>
+      <Filter>02_Variables\Vector\Vector3</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Vector\Vector3\Ref\Vector3Ref.hpp">
-      <Filter>02_CustomVariable\Vector\Vector3Ref</Filter>
+      <Filter>02_Variables\Vector\Vector3Ref</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Vector\Vector3\Int\Vector3Int.hpp">
-      <Filter>02_CustomVariable\Vector\Vector3Int</Filter>
+      <Filter>02_Variables\Vector\Vector3Int</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Vector\Vector4\Vector4.hpp">
-      <Filter>02_CustomVariable\Vector\Vector4</Filter>
+      <Filter>02_Variables\Vector\Vector4</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Vector\Vector4\Int\Vector4Int.hpp">
-      <Filter>02_CustomVariable\Vector\Vector4Int</Filter>
+      <Filter>02_Variables\Vector\Vector4Int</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Vector\Vector4\Ref\Vector4Ref.hpp">
-      <Filter>02_CustomVariable\Vector\Vector4Ref</Filter>
+      <Filter>02_Variables\Vector\Vector4Ref</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Vector\Vector4\4x4\Vector4x4.hpp">
-      <Filter>02_CustomVariable\Vector\Vector4x4</Filter>
+      <Filter>02_Variables\Vector\Vector4x4</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Vector\Vector.hpp">
-      <Filter>02_CustomVariable\Vector</Filter>
+      <Filter>02_Variables\Vector</Filter>
     </ClInclude>
     <ClInclude Include="03_MathAF\MathAFFloatEdit.hpp">
       <Filter>03_MathAF</Filter>
@@ -728,7 +704,7 @@
     </ClInclude>
     <ClInclude Include="SGFramwork.hpp" />
     <ClInclude Include="02_CustomVariable\ComWear\ComWear.hpp">
-      <Filter>02_CustomVariable\ComWear</Filter>
+      <Filter>02_Variables\ComPointer%28併合予定%29</Filter>
     </ClInclude>
     <ClInclude Include="06_Audio\AudioDetail\AudioMessagePack.hpp">
       <Filter>06_Audio\AudioDetail</Filter>
@@ -751,61 +727,70 @@
     <ClInclude Include="10_Physics\Detail\PhysicsMessage.hpp">
       <Filter>10_Physics\PhysicsDetail</Filter>
     </ClInclude>
+    <ClInclude Include="02_CustomVariable\Pointer\Allocator.hpp">
+      <Filter>02_Variables\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\MacroAndUsing\MacroAndUsing.hpp">
+      <Filter>02_Variables\MacroAndUsing</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Exception\Exception.hpp">
+      <Filter>02_Variables\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Variables.hpp">
+      <Filter>02_Variables</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="02_CustomVariable\CharacterCode\CharacterCode.cpp">
-      <Filter>02_CustomVariable\CharacterCode</Filter>
-    </ClCompile>
-    <ClCompile Include="02_CustomVariable\DebugMode\DebugMode.cpp">
-      <Filter>02_CustomVariable\DebugMode</Filter>
+      <Filter>02_Variables\CharacterCode</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\LayerAndTag\LayerAndTag.cpp">
-      <Filter>02_CustomVariable\LayerAndTag</Filter>
+      <Filter>02_Variables\LayerAndTag</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Pointer\GarbageCollector.cpp">
-      <Filter>02_CustomVariable\Pointer</Filter>
+      <Filter>02_Variables\Pointer</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Random\Random.cpp">
-      <Filter>02_CustomVariable\Random</Filter>
+      <Filter>02_Variables\Random</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\String\SGString.cpp">
-      <Filter>02_CustomVariable\String</Filter>
+      <Filter>02_Variables\String</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Time\TimeStaticVariable.cpp">
-      <Filter>02_CustomVariable\Time</Filter>
+      <Filter>02_Variables\Time</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Window\HinstanceHolder\HinstanceHolder.cpp">
-      <Filter>02_CustomVariable\Vector\Window</Filter>
+      <Filter>02_Variables\Vector\Window</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Window\HwndHolder\HwndHolder.cpp">
-      <Filter>02_CustomVariable\Vector\Window</Filter>
+      <Filter>02_Variables\Vector\Window</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Vector\Vector2\Vector2.cpp">
-      <Filter>02_CustomVariable\Vector\Vector2</Filter>
+      <Filter>02_Variables\Vector\Vector2</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Vector\Vector2\Int\Vector2Int.cpp">
-      <Filter>02_CustomVariable\Vector\Vector2Int</Filter>
+      <Filter>02_Variables\Vector\Vector2Int</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Vector\Vector2\Ref\Vector2Ref.cpp">
-      <Filter>02_CustomVariable\Vector\Vector2Ref</Filter>
+      <Filter>02_Variables\Vector\Vector2Ref</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Vector\Vector3\Vector3.cpp">
-      <Filter>02_CustomVariable\Vector\Vector3</Filter>
+      <Filter>02_Variables\Vector\Vector3</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Vector\Vector3\Ref\Vector3Ref.cpp">
-      <Filter>02_CustomVariable\Vector\Vector3Ref</Filter>
+      <Filter>02_Variables\Vector\Vector3Ref</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Vector\Vector3\Int\Vector3Int.cpp">
-      <Filter>02_CustomVariable\Vector\Vector3Int</Filter>
+      <Filter>02_Variables\Vector\Vector3Int</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Vector\Vector4\Vector4.cpp">
-      <Filter>02_CustomVariable\Vector\Vector4</Filter>
+      <Filter>02_Variables\Vector\Vector4</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Vector\Vector4\Int\Vector4Int.cpp">
-      <Filter>02_CustomVariable\Vector\Vector4Int</Filter>
+      <Filter>02_Variables\Vector\Vector4Int</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Vector\Vector4\Ref\Vector4Ref.cpp">
-      <Filter>02_CustomVariable\Vector\Vector4Ref</Filter>
+      <Filter>02_Variables\Vector\Vector4Ref</Filter>
     </ClCompile>
     <ClCompile Include="04_Asset\Asset\BaseAsset.cpp">
       <Filter>04_Asset\Asset</Filter>
@@ -953,6 +938,9 @@
     </ClCompile>
     <ClCompile Include="10_Physics\PhysicsThread.cpp">
       <Filter>10_Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\ConstVariables\ConstVariables.cpp">
+      <Filter>02_Variables\ConstVariables</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

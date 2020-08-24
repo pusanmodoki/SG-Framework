@@ -1,36 +1,36 @@
 /*----------------------------------------------------------------------------------
-ƒQ[ƒ€ƒNƒ‰ƒX‚ÌƒVƒXƒeƒ€ƒCƒ“ƒ|[ƒg—pGameClassImport h
+ã‚²ãƒ¼ãƒ ã‚¯ãƒ©ã‚¹ã®ã‚·ã‚¹ãƒ†ãƒ ã‚¤ãƒ³ãƒãƒ¼ãƒˆç”¨GameClassImport h
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_GAMECLASS_IMPORT_HPP_
 #define SGFRAMEWORK_HEADER_GAMECLASS_IMPORT_HPP_
 
 //----------------------------------------------------------------------------------
-//ƒVƒXƒeƒ€Œn
+//ã‚·ã‚¹ãƒ†ãƒ ç³»
 //----------------------------------------------------------------------------------
-//•Ï”Œ^‚Ì‚©‚½‚Ü‚è
+//å¤‰æ•°å‹ã®ã‹ãŸã¾ã‚Š
 #include "../02_CustomVariable/CustomVariable.hpp"
-//ŒvZ
+//è¨ˆç®—
 #include "../03_MathAF/MathAF.hpp"
-//AssetŠÇ—
+//Assetç®¡ç†
 #include "../04_Asset/AssetManager.hpp"
 //DirectX 3D
 #include "../04_DirectX/DirectX3D.hpp"
-////DirectX3DƒNƒ‰ƒX‚ª•K—v
+////DirectX3Dã‚¯ãƒ©ã‚¹ãŒå¿…è¦
 //#ifdef _DIRECTX_H_
-////ƒeƒNƒXƒ`ƒƒŠÇ—
+////ãƒ†ã‚¯ã‚¹ãƒãƒ£ç®¡ç†
 //#include "../06_TextureManager/TextureManager.h"
 ////3DModel
 //#include "../07_ModelManager/ModelManager.h"
 //#endif // _DIRECTX_H_
-////‰¹ºÄ¶
+////éŸ³å£°å†ç”Ÿ
 //#include "../08_AudioManager\AudioManager.h"	   
-////ƒtƒ@ƒCƒ‹XVŠÇ—
+////ãƒ•ã‚¡ã‚¤ãƒ«æ›´æ–°ç®¡ç†
 //#include "../09_FileManager/FileManager.h"
-////ƒCƒ“ƒvƒbƒg
+////ã‚¤ãƒ³ãƒ—ãƒƒãƒˆ
 //#include "../10_Input\Input.h"
-////WindowsŠÖ”
+////Windowsé–¢æ•°
 //#include "../11_WindowsFunction/WindowsFunction.h"
-////ƒ^ƒO
+////ã‚¿ã‚°
 //#include "../12_Tag/Tag.h"
 
 #endif // !SGFRAMEWORK_HEADER_GAMECLASS_IMPORT_HPP_

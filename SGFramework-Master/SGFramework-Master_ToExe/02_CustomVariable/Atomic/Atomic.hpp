@@ -1,15 +1,25 @@
+/*----------------------------------------------------------------------------------
+std::atomicを操作するAtomic namespaceを記述したAtomic.hpp
+------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_ATOMIC_HPP_
 #define SGFRAMEWORK_HEADER_ATOMIC_HPP_
 #include <atomic>
 #include <type_traits>
+#ifdef SGF_DEBUG
+#include "../Exception/Exception.hpp"
+#endif // SGF_DEBUG
 
+
+//Windows version
+#if defined(SGF_PLATFORM_WINDOWS)
 #undef max
+#endif
 
 //Framework namespace
 namespace SGFramework
 {
-	//std::atomicを操作するAtomicOperation
-	namespace AtomicOperation
+	//std::atomicを操作するAtomic namespace
+	namespace Atomic
 	{
 		//----------------------------------------------------------------------------------
 		//All
@@ -25,15 +35,11 @@ namespace SGFramework
 		template <class T>
 		inline T Init(std::atomic<T>& atomic, T init)
 		{
-			T oldAtomic, newAtomic;
+			T expected = atomic.load();
 
-			do
-			{
-				oldAtomic = atomic.load();
-				newAtomic = init;
-			} while (1 ^ atomic.compare_exchange_weak(oldAtomic, newAtomic));
+			while (1 ^ atomic.compare_exchange_weak(expected, init)) {}
 
-			return newAtomic;
+			return init;
 		}
 		//----------------------------------------------------------------------------------
 		//[Init]
@@ -50,9 +56,72 @@ namespace SGFramework
 			return Init(atomic, static_cast<T>(init));
 		}
 
+
+
 		//----------------------------------------------------------------------------------
 		//Bool
 		//----------------------------------------------------------------------------------
+
+
+		//----------------------------------------------------------------------------------
+		//[And]
+		//atomic<bool>をロックフリーアルゴリズムを用いてAND演算する
+		//return: 計算結果 (atomicに代入済み)
+		//引数1: atomic (bool)
+		inline bool And(std::atomic<bool>& atomicBoolean, bool andFlag)
+		{
+			bool expected = atomicBoolean.load();
+
+			while (1 ^ atomicBoolean.compare_exchange_weak(expected, expected & andFlag)) {}
+
+			return atomicBoolean.load();
+		}
+		//----------------------------------------------------------------------------------
+		//[Or]
+		//atomic<bool>をロックフリーアルゴリズムを用いてOR演算する
+		//return: 計算結果 (atomicに代入済み)
+		//引数1: atomic (bool)
+		inline bool Or(std::atomic<bool>& atomicBoolean, bool orFlag)
+		{
+			bool expected = atomicBoolean.load();
+
+			while (1 ^ atomicBoolean.compare_exchange_weak(expected, expected | orFlag)) {}
+
+			return atomicBoolean.load();
+		}
+		//----------------------------------------------------------------------------------
+		//[Xor]
+		//atomic<bool>をロックフリーアルゴリズムを用いてOR演算する
+		//return: 計算結果 (atomicに代入済み)
+		//引数1: atomic (bool)
+		inline bool Xor(std::atomic<bool>& atomicBoolean, bool xorFlag)
+		{
+			bool expected = atomicBoolean.load();
+
+			while (1 ^ atomicBoolean.compare_exchange_weak(expected, expected ^ xorFlag)) {}
+
+			return atomicBoolean.load();
+		}
+		//----------------------------------------------------------------------------------
+		//[BitInversion]
+		//atomic<bool>をロックフリーアルゴリズムを用いてビット反転させる
+		//return: 計算結果 (atomicに代入済み)
+		//引数1: atomic (bool)
+		inline bool BitInversion(std::atomic<bool>& atomicBoolean)
+		{
+			bool expected = atomicBoolean.load();
+
+			while (1 ^ atomicBoolean.compare_exchange_weak(expected, expected ^ 1)) {}
+
+			return atomicBoolean.load();
+		}
+
+
+
+		//----------------------------------------------------------------------------------
+		//Bool(Lock)
+		//----------------------------------------------------------------------------------
+
 
 		//----------------------------------------------------------------------------------
 		//[LockAtomic]
@@ -60,9 +129,9 @@ namespace SGFramework
 		//引数1: atomic (bool)
 		inline void LockAtomic(std::atomic<bool>& atomicBoolean)
 		{
-			bool oldFlag = false, newFlag = true;
+			bool expected = false;
 
-			while (1 ^ atomicBoolean.compare_exchange_weak(oldFlag, newFlag)) {}
+			while (1 ^ atomicBoolean.compare_exchange_weak(expected, true)) { expected = false; }
 		}
 		//----------------------------------------------------------------------------------
 		//[TryLockAtomic]
@@ -71,9 +140,9 @@ namespace SGFramework
 		//引数1: atomic (bool)
 		inline bool TryLockAtomic(std::atomic<bool>& atomicBoolean)
 		{
-			bool oldFlag = false, newFlag = true;
+			bool expected = false;
 
-			return (1 ^ atomicBoolean.compare_exchange_weak(oldFlag, newFlag));
+			return (1 ^ atomicBoolean.compare_exchange_weak(expected, true));
 		}
 		//----------------------------------------------------------------------------------
 		//[TryCycleLockAtomic]
@@ -83,14 +152,14 @@ namespace SGFramework
 		//引数2: cycle, forループ回数
 		inline bool TryCycleLockAtomic(std::atomic<bool>& atomicBoolean, unsigned int cycle)
 		{
-			bool oldFlag = false, newFlag = true;
+			bool expected = false;
 
-			for (unsigned int i = 0; i < cycle;)
+			for (unsigned int i = 0; i < cycle; expected = false)
 			{
-				if (1 ^ atomicBoolean.compare_exchange_weak(oldFlag, newFlag))
-					++i;
-				else
-					return true;
+				expected = false;
+
+				if (1 ^ atomicBoolean.compare_exchange_weak(expected, true)) ++i;
+				else return true;
 			}
 			return false;
 		}
@@ -100,11 +169,10 @@ namespace SGFramework
 		//引数1: atomic (bool)
 		inline void UnlockAtomic(std::atomic<bool>& atomicBoolean)
 		{
-			bool oldFlag = true, newFlag = false;
+			bool expected = true;
 
-			while (1 ^ atomicBoolean.compare_exchange_weak(oldFlag, newFlag)) {}
+			while (1 ^ atomicBoolean.compare_exchange_weak(expected, false)) { expected = true; }
 		}
-
 		//Atomic版LockGuard
 		class LockGuard
 		{
@@ -130,78 +198,12 @@ namespace SGFramework
 			std::atomic<bool>& m_atomic;
 		};
 
-		//----------------------------------------------------------------------------------
-		//[And]
-		//atomic<bool>をロックフリーアルゴリズムを用いてAND演算する
-		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (bool)
-		inline bool And(std::atomic<bool>& atomicBoolean, bool andFlag)
-		{
-			bool oldFlag = false, newFlag = false;
 
-			do
-			{
-				oldFlag = atomicBoolean.load();
-				newFlag = oldFlag & andFlag;
-			} while (1 ^ atomicBoolean.compare_exchange_weak(oldFlag, newFlag));
-
-			return newFlag;
-		}
-		//----------------------------------------------------------------------------------
-		//[Or]
-		//atomic<bool>をロックフリーアルゴリズムを用いてOR演算する
-		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (bool)
-		inline bool Or(std::atomic<bool>& atomicBoolean, bool orFlag)
-		{
-			bool oldFlag = false, newFlag = false;
-
-			do
-			{
-				oldFlag = atomicBoolean.load();
-				newFlag = oldFlag | orFlag;
-			} while (1 ^ atomicBoolean.compare_exchange_weak(oldFlag, newFlag));
-
-			return newFlag;
-		}
-		//----------------------------------------------------------------------------------
-		//[Xor]
-		//atomic<bool>をロックフリーアルゴリズムを用いてOR演算する
-		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (bool)
-		inline bool Xor(std::atomic<bool>& atomicBoolean, bool xorFlag)
-		{
-			bool oldFlag = false, newFlag = false;
-
-			do
-			{
-				oldFlag = atomicBoolean.load();
-				newFlag = oldFlag ^ xorFlag;
-			} while (1 ^ atomicBoolean.compare_exchange_weak(oldFlag, newFlag));
-
-			return newFlag;
-		}
-		//----------------------------------------------------------------------------------
-		//[BitInversion]
-		//atomic<bool>をロックフリーアルゴリズムを用いてビット反転させる
-		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (bool)
-		inline bool BitInversion(std::atomic<bool>& atomicBoolean)
-		{
-			bool oldFlag = false, newFlag = false;
-
-			do
-			{
-				oldFlag = atomicBoolean.load();
-				newFlag = oldFlag ^ 1;
-			} while (1 ^ atomicBoolean.compare_exchange_weak(oldFlag, newFlag));
-
-			return newFlag;
-		}
 
 		//----------------------------------------------------------------------------------
 		//Integral
 		//----------------------------------------------------------------------------------
+
 
 		//----------------------------------------------------------------------------------
 		//[Add]
@@ -215,15 +217,11 @@ namespace SGFramework
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 
-			T oldCounter = 0, newCounter = 0;
+			T expected = atomicIntegral.load();
 
-			do
-			{
-				oldCounter = atomicIntegral.load();
-				newCounter = oldCounter + add;
-			} while (1 ^ atomicIntegral.compare_exchange_weak(oldCounter, newCounter));
+			while (1 ^ atomicIntegral.compare_exchange_weak(expected, expected + add)) {}
 
-			return newCounter;
+			return atomicIntegral.load();
 		}
 		//----------------------------------------------------------------------------------
 		//[Subtract]
@@ -237,15 +235,11 @@ namespace SGFramework
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 
-			T oldCounter = 0, newCounter = 0;
+			T expected = atomicIntegral.load();
 
-			do
-			{
-				oldCounter = atomicIntegral.load();
-				newCounter = oldCounter - sub;
-			} while (1 ^ atomicIntegral.compare_exchange_weak(oldCounter, newCounter));
+			while (1 ^ atomicIntegral.compare_exchange_weak(expected, expected - sub)) {}
 
-			return newCounter;
+			return atomicIntegral.load();
 		}
 		//----------------------------------------------------------------------------------
 		//[Subtract]
@@ -259,15 +253,11 @@ namespace SGFramework
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 
-			T oldCounter = 0, newCounter = 0;
+			T expected = atomicIntegral.load();
 
-			do
-			{
-				oldCounter = atomicIntegral.load();
-				newCounter = oldCounter * multi;
-			} while (1 ^ atomicIntegral.compare_exchange_weak(oldCounter, newCounter));
+			while (1 ^ atomicIntegral.compare_exchange_weak(expected, expected * multi)) {}
 
-			return newCounter;
+			return atomicIntegral.load();
 		}
 		//----------------------------------------------------------------------------------
 		//[Divide]
@@ -280,16 +270,15 @@ namespace SGFramework
 		inline T Divide(std::atomic<T>& atomicIntegral, T div)
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
+#ifdef SGF_DEBUG
+			if (div == 0) throw Exception::InvalidArgumentException("Atomic", "Divide", "div == 0");
+#endif // SGF_DEBUG
 
-			T oldCounter = 0, newCounter = 0;
+			T expected = atomicIntegral.load();
 
-			do
-			{
-				oldCounter = atomicIntegral.load();
-				if (div != 0) newCounter = oldCounter / div;
-			} while (1 ^ atomicIntegral.compare_exchange_weak(oldCounter, newCounter));
+			while (1 ^ atomicIntegral.compare_exchange_weak(expected, expected / div)) {}
 
-			return newCounter;
+			return atomicIntegral.load();
 		}
 
 		//----------------------------------------------------------------------------------
@@ -303,15 +292,11 @@ namespace SGFramework
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 
-			T oldFlag = 0, newFlag = 0;
+			T expected = atomicIntegral.load();
 
-			do
-			{
-				oldFlag = atomicIntegral.load();
-				newFlag = oldFlag & andFlag;
-			} while (1 ^ atomicIntegral.compare_exchange_weak(oldFlag, newFlag));
+			while (1 ^ atomicIntegral.compare_exchange_weak(expected, expected & andFlag)) {}
 
-			return newFlag;
+			return atomicIntegral.load();
 		}
 		//----------------------------------------------------------------------------------
 		//[Or]
@@ -324,15 +309,11 @@ namespace SGFramework
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 
-			T oldFlag = 0, newFlag = 0;
+			T expected = atomicIntegral.load();
 
-			do
-			{
-				oldFlag = atomicIntegral.load();
-				newFlag = oldFlag | orFlag;
-			} while (1 ^ atomicIntegral.compare_exchange_weak(oldFlag, newFlag));
+			while (1 ^ atomicIntegral.compare_exchange_weak(expected, expected | orFlag)) {}
 
-			return newFlag;
+			return atomicIntegral.load();
 		}
 		//----------------------------------------------------------------------------------
 		//[Xor]
@@ -345,15 +326,11 @@ namespace SGFramework
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 
-			T oldFlag = 0, newFlag = 0;
+			T expected = atomicIntegral.load();
 
-			do
-			{
-				oldFlag = atomicIntegral.load();
-				newFlag = oldFlag ^ xorFlag;
-			} while (1 ^ atomicIntegral.compare_exchange_weak(oldFlag, newFlag));
+			while (1 ^ atomicIntegral.compare_exchange_weak(expected, expected ^ xorFlag)) {}
 
-			return newFlag;
+			return atomicIntegral.load();
 		}
 		//----------------------------------------------------------------------------------
 		//[BitInversion]
@@ -365,17 +342,13 @@ namespace SGFramework
 		inline T BitInversion(std::atomic<T>& atomicIntegral)
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
+			static constexpr unsigned long long cMaxBit = std::numeric_limits<unsigned long long>::max();
 
-			T oldFlag = 0, newFlag = 0;
+			T expected = atomicIntegral.load();
 
-			do
-			{
-				oldFlag = atomicIntegral.load();
-				newFlag = oldFlag ^ 
-					static_cast<T>(std::numeric_limits<unsigned long long>::max());
-			} while (1 ^ atomicIntegral.compare_exchange_weak(oldFlag, newFlag));
+			while (1 ^ atomicIntegral.compare_exchange_weak(expected, expected ^ static_cast<T>(cMaxBit))) {}
 
-			return newFlag;
+			return atomicIntegral.load();
 		}
 
 		//----------------------------------------------------------------------------------
@@ -389,7 +362,7 @@ namespace SGFramework
 		inline T Add(std::atomic<T>& atomicIntegral, CastType add)
 		{
 			static_assert(std::is_convertible_v<CastType, T>, "Only castable type is supported");
-		
+
 			return Add(atomicIntegral, static_cast<T>(add));
 		}
 		//----------------------------------------------------------------------------------
@@ -475,9 +448,12 @@ namespace SGFramework
 			return Xor(atomicIntegral, static_cast<T>(xorFlag));
 		}
 
+
+
 		//----------------------------------------------------------------------------------
 		//Pointer
 		//----------------------------------------------------------------------------------
+
 
 		//----------------------------------------------------------------------------------
 		//[Add]
@@ -491,15 +467,11 @@ namespace SGFramework
 		{
 			static_assert(std::is_pointer_v<T>, "Only pointer type is supported");
 
-			T* oldPointer = nullptr, newPointer = nullptr;
+			T* expected = atomicPointer.load();
 
-			do
-			{
-				oldPointer = atomicPointer.load();
-				newPointer = oldPointer + add;
-			} while (1 ^ atomicPointer.compare_exchange_weak(oldPointer, newPointer));
+			while (1 ^ atomicPointer.compare_exchange_weak(expected, expected + add)) {}
 
-			return newPointer;
+			return atomicPointer.load();
 		}
 		//----------------------------------------------------------------------------------
 		//[Subtract]
@@ -513,15 +485,11 @@ namespace SGFramework
 		{
 			static_assert(std::is_pointer_v<T>, "Only pointer type is supported");
 
-			T* oldPointer = nullptr, newPointer = nullptr;
+			T* expected = atomicPointer.load();
 
-			do
-			{
-				oldPointer = atomicPointer.load();
-				newPointer = oldPointer - sub;
-			} while (1 ^ atomicPointer.compare_exchange_weak(oldPointer, newPointer));
+			while (1 ^ atomicPointer.compare_exchange_weak(expected, expected - sub)) {}
 
-			return newPointer;
+			return atomicPointer.load();
 		}
 	}
 }

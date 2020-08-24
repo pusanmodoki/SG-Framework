@@ -1,32 +1,52 @@
 /*----------------------------------------------------------------------------------
-using と const定数を記述するConstAndUsing.h
+using, 定数などを記述するMacroAndUsing.h
 ----------------------------------------------------------------------------------*/
-#ifndef SGFRAMEWORK_HEADER_CONST_AND_USING_HPP_
-#define SGFRAMEWORK_HEADER_CONST_AND_USING_HPP_
-#include <amp.h>
+#ifndef SGFRAMEWORK_HEADER_MACRO_AND_USING_HPP_
+#define SGFRAMEWORK_HEADER_MACRO_AND_USING_HPP_
 #include <cmath>
 #include <limits>
 #include <mutex>
 #include <array>
+
+//Windows Version
+#if defined(SGF_PLATFORM_WINDOWS)
 #include <DirectXMath.h>
 #include <Windows.h>
-#include "../Atomic/Atomic.hpp"
+//else
+#else
+#error "Unsupported platform."
+#endif//endif
 
+//Windows Version
+#if defined(SGF_PLATFORM_WINDOWS)
 #undef min
 #undef max
+//else
+#else
+#error "Unsupported platform."
+#endif//endif
+
 
 //inline property
-#define SGF_FUNCTION_PROPERTY inline
+#define SGF_PROPERTY inline
 //inline property
-#define SGF_NOTINLINE_FUNCTION_PROPERTY
+#define SGF_PROPERTY_NOINLINE
 
+//汎用マクロ
 #define IS_TRUE(val) ((val) ^ false)
 #define IS_FALSE(val) ((val) ^ true)
-#define MAKE_COMMAND(function) ([this]() { function; })
-#define MAKE_FOR_COMMAND(function) ([&]() { function; })
+
 #define DELETE_POINTER(pointer) if (pointer != nullptr) { delete pointer; pointer = nullptr; }
+#define DELETE_ARRAY_POINTER(pointer) if (pointer != nullptr) { delete[] pointer; pointer = nullptr; }
+
+#define DELETE_POINTER_LIST(pointerList) { for (auto& e : pointerList) if (e != nullptr) delete e; pointerList.clear(); }
+#define DELETE_ARRAY_POINTER_LIST(pointerList) { for (auto& e : pointerList) if (e != nullptr) delete[] e; pointerList.clear(); }
+
 #define COM_RELEASE(pointer) if (pointer != nullptr) { pointer->Release(); pointer = nullptr; }
 #define PHYSX_RELEASE(pointer) if (pointer != nullptr) { pointer->release(); pointer = nullptr; }
+
+#define MAKE_COMMAND(function) ([this]() { function; })
+#define MAKE_FOR_COMMAND(function) ([&]() { function; })
 
 #define DELETE_ALL_DEFAULT_CLASS_FUNCTIONS(className) \
 		className() = delete; \
@@ -52,8 +72,16 @@ using と const定数を記述するConstAndUsing.h
 namespace SGFramework
 {
 	//using
-	using XmMatrix = DirectX::XMMATRIX;
-	using XmVector = DirectX::XMVECTOR;
+
+	//Windows Version
+#if defined(SGF_PLATFORM_WINDOWS) && defined (SGF_USED_GRAPHICS_DIRECTX)
+	using SimdMatrix = DirectX::XMMATRIX;
+	using SimdVector = DirectX::XMVECTOR;
+#else
+	using SimdMatrix = std::nullptr_t;
+	using SimdVector = std::nullptr_t;
+#endif
+	
 	using byte = unsigned char;
 	using wchar = wchar_t;
 	using uchar = unsigned char;
@@ -63,15 +91,7 @@ namespace SGFramework
 	using ulonglong = unsigned long long;
 	using int64 = long long;
 	using uint64 = unsigned long long;
-	namespace GPGPU
-	{
-		template <class TKey, int dimension>
-		using ArrayCpu = concurrency::array_view<TKey, dimension>;
-		template <class TKey, int dimension>
-		using ArrayGpu = concurrency::array<TKey, dimension>;
-		template <class TKey, int dimension>
-		using ArrayViewGpu = concurrency::array_view<TKey, dimension>;
-	}
+
 	//Fowler-Noll-Vo用定数
 	namespace Hash
 	{
@@ -79,48 +99,14 @@ namespace SGFramework
 		constexpr size_t cFowlerNollVoOffsetBasis = 14695981039346656037u;
 	}
 
-	//値をパックするValue struct
-	//Value〇〇として別名定義されている (ValueIntなど)
-	template <typename T>
-	struct Value
-	{
-		//----------------------------------------------------------------------------------
-		//[コンストラクタ]
-		//初期化を行う
-		//引数1: value
-		inline constexpr Value(T value) : value(value) {}
-
-		//T operator
-		inline constexpr operator T () const { return value; }
-		//() operator return T
-		inline constexpr T operator () () const { return value; }
-		
-		T value;	//value
-	};
-	//using
-	using ValueBool = Value<bool>;
-	using ValueChar = Value<char>;
-	using ValueShort = Value<short>;
-	using ValueInt = Value<int>;
-	using ValueLong = Value<long>;
-	using ValueLongLong = Value<long long>;
-	using ValueInt64 = Value<int64>;
-	using ValueByte = Value<byte>;
-	using ValueUchar = Value<uchar>;
-	using ValueUshort = Value<ushort>;
-	using ValueUint = Value<uint>;
-	using ValueUlong = Value<ulong>;
-	using ValueUlongLong = Value<ulonglong>;
-	using ValueInt64 = Value<int64>;
-	using ValueSizeT = Value<size_t>;
-	using ValueFloat = Value<float>;
-	using ValueDouble = Value<double>;
-
-	//次元
+	//次元を定義するDimension enum
 	struct Dimension
 	{
-		static constexpr ValueByte c2D = 0x1;	//2D
-		static constexpr ValueByte c3D = 0x2;	//3D
+		enum Enum
+		{
+			Dimension2D = 0x1,	//2D
+			Dimension3D = 0x2,	//3D
+		};
 	};
 
 	//計算ライブラリ
@@ -258,13 +244,17 @@ namespace SGFramework
 			constexpr std::array<int, 5> cRefreshs = { 30, 60, 120, 144, 244 };
 
 			int result;
-			HDC hdc = GetDC(hWnd);
 			bool isEqual = false;
 
-			//Get
+			//Get ...Windows Version
+#if defined(SGF_PLATFORM_WINDOWS)
+			HDC hdc = GetDC(hWnd);
 			result = GetDeviceCaps(hdc, VREFRESH);
 			ReleaseDC(hWnd, hdc);
-
+#else
+#error "GetRefreshRate->Unimplemented"
+			throw std::exception("GetRefreshRate->Unimplemented");
+#endif
 			//設定リフレッシュレートと合致するか確認
 			for (const auto& e : cRefreshs)
 				if (result == e) isEqual = true;
@@ -290,4 +280,4 @@ namespace SGFramework
 		}
 	}
 }
-#endif // !SGFRAMEWORK_HEADER_CONST_AND_USING_HPP_
+#endif // !SGFRAMEWORK_HEADER_MACRO_AND_USING_HPP_

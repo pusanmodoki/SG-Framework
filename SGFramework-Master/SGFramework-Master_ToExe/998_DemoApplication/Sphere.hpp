@@ -11,14 +11,14 @@ public:
 
 	//----------------------------------------------------------------------------------
 	//[EnabledCallbacks]
-	//return: ©g‚ªCall‚³‚ê‚éCallback Flags, GameObject::CallbackFunctionsQÆ
+	//return: è‡ªèº«ãŒCallã•ã‚Œã‚‹Callback Flags, GameObject::CallbackFunctionså‚ç…§
 	inline uint EnableCallbacks() { return CallbackFunctions::Awake | CallbackFunctions::Update 
 		| CallbackFunctions::MakeDrawCommand | CallbackFunctions::OnCollisionEnter; }
 
 	//----------------------------------------------------------------------------------
 	//[OnCollisionEnter]
-	//Collider‚ª“–‚½‚Á‚½uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
-	//ˆø”1: ÚGƒIƒuƒWƒFƒNƒg‚Ìî•ñ
+	//ColliderãŒå½“ãŸã£ãŸç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
+	//å¼•æ•°1: æ¥è§¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æƒ…å ±
 	inline virtual void OnCollisionEnter(const ContactInfo& contactInfo) 
 	{
 		//transform->getWorldPosition();
@@ -26,7 +26,7 @@ public:
 	}
 	//----------------------------------------------------------------------------------
 	//[Awake]
-	//ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½uŠÔ‚ÉŒÄ‚Î‚ê‚éCallbackŠÖ”
+	//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸç¬é–“ã«å‘¼ã°ã‚Œã‚‹Callbacké–¢æ•°
 	inline void Awake() 
 	{
 		InitModel();
@@ -37,7 +37,7 @@ public:
 
 	//----------------------------------------------------------------------------------
 	//[Update]
-	//–ˆƒtƒŒ[ƒ€UpdateƒuƒƒbƒN‚ÅCallback‚³‚ê‚éŠÖ”
+	//æ¯ãƒ•ãƒ¬ãƒ¼ãƒ Updateãƒ–ãƒ­ãƒƒã‚¯ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 	inline virtual void Update() 	
 	{
 	//	for (int i = 0; i < 1000; ++i) {}
@@ -45,24 +45,24 @@ public:
 
 	//----------------------------------------------------------------------------------
 	//[MakeDrawCommand]
-	//Update, Sync, LateUpdate ƒuƒƒbƒNŒã‚ÉCallback‚³‚ê‚é,
-	//		DrawCommand‚ğì¬‚·‚é‚½‚ß‚ÌŠÖ”
+	//Update, Sync, LateUpdate ãƒ–ãƒ­ãƒƒã‚¯å¾Œã«Callbackã•ã‚Œã‚‹,
+	//		DrawCommandã‚’ä½œæˆã™ã‚‹ãŸã‚ã®é–¢æ•°
 	inline void MakeDrawCommand()
 	{
 		Graphics::SendDrawFunction(MAKE_COMMAND(
 			transform->setDrawMatrix();
 
-		// ’¸“_ƒoƒbƒtƒ@‚ğƒZƒbƒg‚·‚é
+		// é ‚ç‚¹ãƒãƒƒãƒ•ã‚¡ã‚’ã‚»ãƒƒãƒˆã™ã‚‹
 		unsigned int stride = sizeof(Vertex::Polygon);
 		unsigned  offset = 0;
 		Graphics::context->IASetVertexBuffers(0, 1, &m_vertexBuffer, &stride, &offset);
 
-		Graphics::context->IASetIndexBuffer(m_indexBuffer, DXGI_FORMAT_R32_UINT, 0);			// ƒCƒ“ƒfƒbƒNƒXƒoƒbƒtƒ@‚ğƒZƒbƒg
-		Graphics::context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);		// ƒgƒ|ƒƒW[‚ğƒZƒbƒgi‹ŒƒvƒŠƒ~ƒeƒBƒuƒ^ƒCƒv
+		Graphics::context->IASetIndexBuffer(m_indexBuffer, DXGI_FORMAT_R32_UINT, 0);			// ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãƒãƒƒãƒ•ã‚¡ã‚’ã‚»ãƒƒãƒˆ
+		Graphics::context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);		// ãƒˆãƒãƒ­ã‚¸ãƒ¼ã‚’ã‚»ãƒƒãƒˆï¼ˆæ—§ãƒ—ãƒªãƒŸãƒ†ã‚£ãƒ–ã‚¿ã‚¤ãƒ—
 
-		Graphics::context->DrawIndexed(200 * 200 * 2 * 3,		// •`‰æ‚·‚éƒCƒ“ƒfƒbƒNƒX”i–Ê”~‚Rj
-			0,									// Å‰‚ÌƒCƒ“ƒfƒbƒNƒXƒoƒbƒtƒ@‚ÌˆÊ’u
-			0);									// ’¸“_ƒoƒbƒtƒ@‚ÌÅ‰‚©‚çg‚¤
+		Graphics::context->DrawIndexed(200 * 200 * 2 * 3,		// æç”»ã™ã‚‹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹æ•°ï¼ˆé¢æ•°Ã—ï¼“ï¼‰
+			0,									// æœ€åˆã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãƒãƒƒãƒ•ã‚¡ã®ä½ç½®
+			0);									// é ‚ç‚¹ãƒãƒƒãƒ•ã‚¡ã®æœ€åˆã‹ã‚‰ä½¿ã†
 	
 		), 4);
 	}

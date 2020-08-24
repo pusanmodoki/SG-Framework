@@ -24,12 +24,12 @@ namespace SGFramework
 			//return: 実行後のカウンタ数, ポインタが無効だった場合null
 			inline uint AddRef() { if (m_pointer == nullptr) return 0; return AtomicOperation::Add(m_counter, 1); }
 
-			//com pointer (read only property)
-			SGF_FUNCTION_PROPERTY WearClass* getPointer() const { return m_pointer; }
-			//now refecence count (read only property)
-			SGF_FUNCTION_PROPERTY WearClass* getNumReference() const { return m_counter != nullptr ? m_counter->load() : 0; }
-			//pointer is valid(有効)? (read only property)
-			SGF_FUNCTION_PROPERTY bool getIsValid() const { return m_counter != nullptr && *m_counter > 0; }
+			//<property> com pointer
+			SGF_PROPERTY WearClass* _getPointer() const { return m_pointer; }
+			//<property> now refecence count
+			SGF_PROPERTY WearClass* _getNumReference() const { return m_counter != nullptr ? m_counter->load() : 0; }
+			//<property> pointer is valid(有効)?
+			SGF_PROPERTY bool _getIsValid() const { return m_counter != nullptr && *m_counter > 0; }
 			
 			//pointer operator
 			inline operator WearClass* () const { return m_pointer; }

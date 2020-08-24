@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ConditionVariableŒnƒNƒ‰ƒX‚Ìƒx[ƒX‚Æ‚È‚éBaseConditionVariable class
+ConditionVariableç³»ã‚¯ãƒ©ã‚¹ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseConditionVariable class
 ----------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_CONDITION_VARABLE_HPP_
 #define SGFRAMEWORK_HEADER_CONDITION_VARABLE_HPP_
@@ -8,6 +8,7 @@ ConditionVariableŒnƒNƒ‰ƒX‚Ìƒx[ƒX‚Æ‚È‚éBaseConditionVariable class
 #include <functional>
 #include <type_traits>
 #include "../Pointer/Pointer.hpp"
+#include "../Exception/Exception.hpp"
 
 //Framework namespace
 namespace SGFramework
@@ -15,591 +16,269 @@ namespace SGFramework
 	//Base Classes
 	namespace BaseClass
 	{
-		//ConditionVariableŒnƒNƒ‰ƒX‚Ìƒx[ƒX‚Æ‚È‚éBaseConditionVariable class
+		//ConditionVariableç³»ã‚¯ãƒ©ã‚¹ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseConditionVariable class
 		class BaseConditionVariable
 		{
 		public:
-			//----------------------------------------------------------------------------------
-			//[WaitingForAllRelease]
-			//waitCounter == 0‚É‚È‚é‚Ü‚Å‘Ò‹@‚·‚é
-			inline void WaitingForAllRelease()
-			{
-				while (true)
-				{
-					m_mutex->lock();
-					int result = *m_waitCounter;
-					m_mutex->unlock();
-					if (result == 0)  break;
-					else std::this_thread::yield();
-				}
-			}
-			//using condition_variable mutex (get function property)
-			SGF_FUNCTION_PROPERTY const std::mutex& getMutex() const { return *m_mutex; }
-			//using condition_variable (get function property)
-			SGF_FUNCTION_PROPERTY const std::condition_variable& getVariable() const { return m_condition; }
-			//using condition_variable->native_handle (get function property)
-			SGF_FUNCTION_PROPERTY std::condition_variable::native_handle_type getNativeHandle() { return m_condition.native_handle(); }
+
+			//<property> mutex
+			SGF_PROPERTY const std::mutex& _mutex() const { return *m_mutex; }
+			//<property> condition_variable
+			SGF_PROPERTY const std::condition_variable& _conditionVariable() const { return m_condition; }
+			//<property> condition_variable->native_handle
+			SGF_PROPERTY std::condition_variable::native_handle_type _nativeHandle() { return m_condition.native_handle(); }
 
 		protected:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//new‰Šú‰»
-			//ˆø”1: m_waitCounter‚ğnew‚·‚é‚©”Û‚©
-			inline BaseConditionVariable(bool isNewWaitCounter) : m_mutex(new std::mutex()), m_waitCounter(isNewWaitCounter ? new int(0) : nullptr), m_condition() {}
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//newåˆæœŸåŒ–
+			inline BaseConditionVariable() : m_mutex(new std::mutex()), m_condition() {}
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//copy‰Šú‰»
-			//ˆø”1: copy
-			inline BaseConditionVariable(const BaseConditionVariable& copy) : m_mutex(copy.m_mutex), m_waitCounter(copy.m_waitCounter), m_condition() {}
-			//----------------------------------------------------------------------------------
-			//[CopyBase]
-			//‚±‚ÌƒNƒ‰ƒX‚Ì•Ï”‚ğcopy‚·‚é
-			//ˆø”1: copy
-			inline void CopyBase(const BaseConditionVariable* copy) { m_mutex = copy->m_mutex; m_waitCounter = copy->m_waitCounter; }
-
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//copyåˆæœŸåŒ–
+			//å¼•æ•°1: copy
+			inline BaseConditionVariable(const BaseConditionVariable& copy) : m_mutex(copy.m_mutex), m_condition() {}
+		
 			SharedPointer<std::mutex> m_mutex;		//mutex
-			SharedPointer<int> m_waitCounter;			//couneter
 			std::condition_variable m_condition;			//condition_variable
 		};
 	}
 
-	//ğŒ•Ï”ƒNƒ‰ƒX‚ğ‚Ü‚Æ‚ß‚½ConditionVariable namespace
-	namespace ConditionVariable
+	//ConditionVariable->NotifyOneé™å®šã§è¡Œãˆã‚‹ConditionVariableOne class
+	class ConditionVariableOne : public BaseClass::BaseConditionVariable
 	{
-		//©“®‚Å§Œä‚ğs‚¤ConditionVariable->Auto class
-		class Auto : public BaseClass::BaseConditionVariable
+	public:
+		//----------------------------------------------------------------------------------
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//åˆæœŸåŒ–ã™ã‚‹
+		inline ConditionVariableOne() : BaseConditionVariable(), m_isPredicate(false) {}
+		//----------------------------------------------------------------------------------
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ã‚³ãƒ”ãƒ¼åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: ã‚³ãƒ”ãƒ¼
+		inline ConditionVariableOne(const ConditionVariableOne& copy) : BaseConditionVariable(copy), m_isPredicate(false) {}
+		//delete
+		ConditionVariableOne& operator = (const ConditionVariableOne&) = delete;
+
+		//----------------------------------------------------------------------------------
+		//[NotifyOne]
+		//åœæ­¢è§£é™¤å‘½ä»¤ã‚’ä¸€ã¤ã ã‘é€ä¿¡ã™ã‚‹
+		inline void NotifyOne() { m_mutex->lock(); m_isPredicate = true; m_mutex->unlock(); m_condition.notify_one(); }
+
+		//----------------------------------------------------------------------------------
+		//[Wait]
+		//Notifyé–¢æ•°ãŒå®Ÿè¡Œã•ã‚Œã‚‹ã¾ã§ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’åœæ­¢ã™ã‚‹
+		inline void Wait()
 		{
-		public:
-			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»‚·‚é
-			inline Auto() : BaseConditionVariable(true), m_predicate(new bool(false)) {}
-			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//ƒRƒs[‰Šú‰»‚·‚é
-			//ˆø”1: ƒRƒs[
-			inline Auto(const Auto& copy) : BaseConditionVariable(copy), m_predicate(copy.m_predicate) {}
-			//copy operator, return this
-			inline const Auto& operator = (const Auto& copy) { CopyBase(&copy); m_predicate = copy.m_predicate; return *this; }
+			//lock
+			std::unique_lock<std::mutex> lock(*m_mutex);
 
-			//----------------------------------------------------------------------------------
-			//[NotifyOne]
-			//’â~‰ğœ–½—ß‚ğˆê‚Â‚¾‚¯‘—M‚·‚é
-			inline void NotifyOne() { m_mutex->lock(); *m_predicate = true; m_mutex->unlock(); m_condition.notify_one(); }
-			//----------------------------------------------------------------------------------
-			//[NotifyAll]
-			//’â~‰ğœ–½—ß‚ğ‘S‚Ä‚É‘—M‚·‚é
-			inline void NotifyAll() { m_mutex->lock(); *m_predicate = true; m_mutex->unlock(); m_condition.notify_all(); }
-			//----------------------------------------------------------------------------------
-			//[Wait]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			inline void Wait()
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//add counter
-				++*m_waitCounter;
-				//wait
-				m_condition.wait(lock, [this]() { return *m_predicate; });
+#if defined(SGF_DEBUG)
+			//å®‰å…¨è£…ç½®
+			if (m_isWait) throw Exception::InvalidFunctionCallException("ConditionVariableOne", "Wait", "this function already running");
+#endif // SGF_DEBUG
+			//å¾…ã¡ãƒ•ãƒ©ã‚°trueã«ã™ã‚‹
+			m_isWait = true;
 
-				//sub counter, counter == 0 -> flag = false
-				if (--*m_waitCounter == 0)
-					*m_predicate = false;
-			}
-			//----------------------------------------------------------------------------------
-			//[WaitFor]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚Å or w’è‘Š‘ÎŠÔŒo‰ß‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			//ˆø”1: ’â~‘Š‘ÎŠÔ
-			template <class Rep, class Period>
-			inline bool WaitFor(const std::chrono::duration<Rep, Period>& relativeWaitTime)
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//add counter
-				++*m_waitCounter;
-				//wait
-				bool result = m_condition.wait_for(lock, relativeWaitTime, [this]() { return *m_predicate; });
-				if (IS_FALSE(result)) return result;
-
-				//sub counter, counter == 0 -> flag = false
-				if (--*m_waitCounter == 0)
-					*m_predicate = false;
-
-				return result;
-			}
-			//----------------------------------------------------------------------------------
-			//[WaitUntil]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚Å or w’èâ‘ÎŠÔŒo‰ß‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			//ˆø”1: ’â~â‘ÎŠÔ
-			template <class Clock, class Duration>
-			inline bool WaitUntil(const std::chrono::time_point<Clock, Duration>& absoluteTime)
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//add counter
-				++*m_waitCounter;
-				//wait
-				bool result = m_condition.wait_until(lock, absoluteTime, [this]() { return *m_predicate; });
-				if (IS_FALSE(result)) return result;
-
-				//sub counter, counter == 0 -> flag = false
-				if (--*m_waitCounter == 0)
-					*m_predicate = false;
-
-				return result;
-			}
-
-			//using condition_variable predicate (get function property)
-			SGF_FUNCTION_PROPERTY const bool& getPredicate() { return *m_predicate; }
-
-		private:
-			SharedPointer<bool> m_predicate;	//Predicate
-		};
-
-		//condition_variable->waitŠÖ”‚Ìˆø”Predicate‚Åg‚¤’l‚ÌŒ^‚ğƒeƒ“ƒvƒŒ[ƒg‚Åw’èA 
-		//Œ^‚Ítemplate‚Åw’è‚·‚é‚ª, À‘Ì‚ÍŠO•”‚Ì‚à‚Ì‚ğQÆ‚µ‚Äˆµ‚¤ConditionVariable->AutoReference class
-		//template 1: Predicate‚Åg‚¤•Ï”Œ^
-		//template 2: NotifyŠÖ”Às‚Ég‚¤’l, default = 1
-		//template 2: wait‰ğœŒãƒŠƒZƒbƒg‚Ég‚¤’l, default = 0
-		template<class NotifyType, NotifyType notifyInitializer = 1, NotifyType resetInitializer = 0>
-		class AutoReference : public BaseClass::BaseConditionVariable
+			//wait
+			m_condition.wait(lock, [this]() { return m_isPredicate; });
+			//flag = false
+			m_isPredicate = false;
+			m_isWait = false;
+		}
+		//----------------------------------------------------------------------------------
+		//[WaitFor]
+		//Notifyé–¢æ•°ãŒå®Ÿè¡Œã•ã‚Œã‚‹ã¾ã§ or æŒ‡å®šç›¸å¯¾æ™‚é–“çµŒéã¾ã§ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’åœæ­¢ã™ã‚‹
+		//å¼•æ•°1: åœæ­¢ç›¸å¯¾æ™‚é–“
+		template <class Rep, class Period>
+		inline bool WaitFor(const std::chrono::duration<Rep, Period>& relativeWaitTime)
 		{
-		public:
-			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»‚·‚é
-			//ˆø”1: ğŒ•Ï”‚ÆƒyƒA‚É‚·‚é’l, ‚±‚ÌÀ‘Ì‚ª‘¶İ‚µ‚Ä‚¢‚éŠÔ‚Í•K‚¸íœ‚³‚ê‚È‚¢‚±‚Æ
-			inline AutoReference(NotifyType& predicate) : BaseConditionVariable(true), m_predicate(&predicate) { *m_predicate = resetInitializer; }
-			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//ƒRƒs[‰Šú‰»‚·‚é
-			//ˆø”1: ƒRƒs[
-			inline AutoReference(const AutoReference& copy) : BaseConditionVariable(copy), m_predicate(copy.m_predicate) {}
-			//copy operator, return this
-			inline const AutoReference& operator = (const AutoReference& copy) { CopyBase(&copy); m_predicate = copy.m_predicate; return *this; }
+			//lock
+			std::unique_lock<std::mutex> lock(*m_mutex);
 
-			//----------------------------------------------------------------------------------
-			//[NotifyOne]
-			//’â~‰ğœ–½—ß‚ğˆê‚Â‚¾‚¯‘—M‚·‚é
-			inline void NotifyOne() { m_mutex->lock(); *m_predicate = notifyInitializer; m_mutex->unlock(); m_condition.notify_one(); }
-			//----------------------------------------------------------------------------------
-			//[NotifyAll]
-			//’â~‰ğœ–½—ß‚ğ‘S‚Ä‚É‘—M‚·‚é
-			inline void NotifyAll() { m_mutex->lock(); *m_predicate = notifyInitializer; m_mutex->unlock(); m_condition.notify_all(); }
-			//----------------------------------------------------------------------------------
-			//[Wait]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			inline void Wait()
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//add counter
-				++*m_waitCounter;
-				//wait
-				m_condition.wait(lock, [this]() { return (*m_predicate == notifyInitializer); });
+#if defined(SGF_DEBUG)
+			//å®‰å…¨è£…ç½®
+			if (m_isWait) throw Exception::InvalidFunctionCallException("ConditionVariableOne", "WaitFor", "this function already running");
+#endif // SGF_DEBUG
+			//å¾…ã¡ãƒ•ãƒ©ã‚°trueã«ã™ã‚‹
+			m_isWait = true;
 
-				//sub counter, counter == 0 -> flag = false
-				if (--*m_waitCounter == 0)
-					*m_predicate = resetInitializer;
-			}
-			//----------------------------------------------------------------------------------
-			//[WaitFor]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚Å or w’è‘Š‘ÎŠÔŒo‰ß‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			//ˆø”1: ’â~‘Š‘ÎŠÔ
-			template <class Rep, class Period>
-			inline bool WaitFor(const std::chrono::duration<Rep, Period>& relativeWaitTime)
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//add counter
-				++*m_waitCounter;
-				//wait
-				bool result = m_condition.wait_for(lock, relativeWaitTime, [this]() { return (*m_predicate == notifyInitializer); });
-				if (IS_FALSE(result)) return result;
+			//wait
+			std::cv_status result = m_condition.wait_for(lock, relativeWaitTime, [this]() { return m_isPredicate; });
 
-				//sub counter, counter == 0 -> flag = false
-				if (--*m_waitCounter == 0)
-					*m_predicate = resetInitializer;
+			//flag = false
+			m_isWait = false;
+			m_isPredicate = false;
 
-				return result;
-			}
-			//----------------------------------------------------------------------------------
-			//[WaitUntil]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚Å or w’èâ‘ÎŠÔŒo‰ß‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			//ˆø”1: ’â~â‘ÎŠÔ
-			template <class Clock, class Duration>
-			inline bool WaitUntil(const std::chrono::time_point<Clock, Duration>& absoluteTime)
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//add counter
-				++*m_waitCounter;
-				//wait
-				bool result = m_condition.wait_until(lock, absoluteTime, [this]() { return (*m_predicate == notifyInitializer); });
-				if (IS_FALSE(result)) return result;
-
-				//sub counter, counter == 0 -> flag = false
-				if (--*m_waitCounter == 0)
-					*m_predicate = resetInitializer;
-
-				return result;
-			}
-
-			//using condition_variable predicate (get function property)
-			SGF_FUNCTION_PROPERTY const bool& getPredicate() { return *m_predicate; }
-
-		private:
-			NotifyType* m_predicate;	//Predicate
-		};
-
-		//condition_variable->waitŠÖ”‚Ìˆø”Predicate‚ğfunction‚Æ‚µ‚Ä•Û‘¶, g—p‚·‚éConditionVariable->Predicate class
-		class Predicate : public BaseClass::BaseConditionVariable
+			//resultè¿”å´
+			return result == std::cv_status::no_timeout;
+		}
+		//----------------------------------------------------------------------------------
+		//[WaitUntil]
+		//Notifyé–¢æ•°ãŒå®Ÿè¡Œã•ã‚Œã‚‹ã¾ã§ or æŒ‡å®šçµ¶å¯¾æ™‚é–“çµŒéã¾ã§ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’åœæ­¢ã™ã‚‹
+		//å¼•æ•°1: åœæ­¢çµ¶å¯¾æ™‚é–“
+		template <class Clock, class Duration>
+		inline bool WaitUntil(const std::chrono::time_point<Clock, Duration>& absoluteTime)
 		{
-		public:
-			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»‚·‚é
-			//ˆø”1: wait‚Ég—p‚·‚éŠÖ” (bool())
-			inline Predicate(const std::function<bool()>& predicate) : BaseConditionVariable(false), m_predicate(predicate) {}
-			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//ƒRƒs[‰Šú‰»‚·‚é
-			//ˆø”1: ƒRƒs[
-			inline Predicate(const Predicate& copy) : BaseConditionVariable(copy), m_predicate(copy.m_predicate) {}
-			//copy operator, return this
-			inline const Predicate& operator = (const Predicate& copy) { CopyBase(&copy); m_predicate = copy.m_predicate; }
+			//lock
+			std::unique_lock<std::mutex> lock(*m_mutex);
 
-			//----------------------------------------------------------------------------------
-			//[NotifyOne]
-			//’â~‰ğœ–½—ß‚ğˆê‚Â‚¾‚¯‘—M‚·‚é
-			inline void NotifyOne() { m_condition.notify_one(); }
-			//----------------------------------------------------------------------------------
-			//[NotifyAll]
-			//’â~‰ğœ–½—ß‚ğ‘S‚Ä‚É‘—M‚·‚é
-			inline void NotifyAll() { m_condition.notify_all(); }
-			//----------------------------------------------------------------------------------
-			//[Wait]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			inline void Wait()
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//wait
-				m_condition.wait(lock, m_predicate);
-			}
-			//----------------------------------------------------------------------------------
-			//[WaitFor]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚Å or w’è‘Š‘ÎŠÔŒo‰ß‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			//ˆø”1: ’â~‘Š‘ÎŠÔ
-			template <class Rep, class Period>
-			inline bool WaitFor(const std::chrono::duration<Rep, Period>& relativeWaitTime)
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//wait
-				bool result = m_condition.wait_for(lock, relativeWaitTime, m_predicate);
-				return result;
-			}
-			//----------------------------------------------------------------------------------
-			//[WaitUntil]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚Å or w’èâ‘ÎŠÔŒo‰ß‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			//ˆø”1: ’â~â‘ÎŠÔ
-			template <class Clock, class Duration>
-			inline bool WaitUntil(const std::chrono::time_point<Clock, Duration>& absoluteTime)
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//wait
-				bool result = m_condition.wait_until(lock, absoluteTime, m_predicate);
-				return result;
-			}
+#if defined(SGF_DEBUG)
+			//å®‰å…¨è£…ç½®
+			if (m_isWait) throw Exception::InvalidFunctionCallException("ConditionVariableOne", "WaitUntil", "this function already running");
+#endif // SGF_DEBUG
+			//å¾…ã¡ãƒ•ãƒ©ã‚°trueã«ã™ã‚‹
+			m_isWait = true;
 
-			//using condition_variable predicate (get function property)
-			SGF_FUNCTION_PROPERTY const std::function<bool()>& getPredicate() { return m_predicate; }
+			//wait
+			std::cv_status result = m_condition.wait_for(lock, relativeWaitTime, [this]() { return m_isPredicate; });
 
-		private:
-			std::function<bool()> m_predicate;		//Predicate
-		};
+			//flag = false
+			m_isWait = false;
+			m_isPredicate = false;
 
-		//condition_variable->waitŠÖ”‚ÌPredicate‚Åg‚¤“¯’l”»’è‚·‚é’l‚ğƒtƒ‰ƒO (uint) ‚Æ‚µ‚ÄA
-		//•¡”’lw’è‚·‚éConditionVariable->MultipleBit class
-		class MultipleBit : public BaseClass::BaseConditionVariable
+			//resultè¿”å´
+			return result == std::cv_status::no_timeout;
+		}
+
+		//<property> condition_variable predicate (used lock)
+		SGF_PROPERTY bool _isPredicate() { std::lock_guard<std::mutex> guard(*m_mutex); return m_isPredicate; }
+
+	private:
+		bool m_isPredicate;	//æ¡ä»¶ç”¨
+		bool m_isWait;			//å®‰å…¨è£…ç½®
+	};
+
+	//ConditionVariable->NotifyAll, Oneã‚’è¡Œãˆã‚‹ConditionVariableAdvance class
+	class ConditionVariableAdvance : public BaseClass::BaseConditionVariable
+	{
+	public:
+		//----------------------------------------------------------------------------------
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//åˆæœŸåŒ–ã™ã‚‹
+		inline ConditionVariableAdvance() : BaseConditionVariable(), m_isPredicates() {}
+		//----------------------------------------------------------------------------------
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ã‚³ãƒ”ãƒ¼åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: ã‚³ãƒ”ãƒ¼
+		inline ConditionVariableAdvance(const ConditionVariableAdvance& copy) : BaseConditionVariable(copy), m_isPredicates(false) {}
+		//delete
+		ConditionVariableOne& operator = (const ConditionVariableOne&) = delete;
+
+		//----------------------------------------------------------------------------------
+		//[RegisterThread]
+		//Waitã™ã‚‹ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’ç™»éŒ²ã™ã‚‹, NotifyAllå‘¼ã³å‡ºã—å‰ã«ç™»éŒ²ã™ã‚‹ã“ã¨
+		//å¼•æ•°1: thread::id
+		inline void RegisterThread(const std::thread::id& threadID) 
+		{ 
+			m_mutex->lock(); 
+			if (threadID != std::thread::id() && m_isPredicates.find(threadID) == m_isPredicates.end()) 
+				m_isPredicates.try_emplace(threadID, false); 
+			m_mutex->unlock();
+		}
+		//----------------------------------------------------------------------------------
+		//[NotifyOne]
+		//åœæ­¢è§£é™¤å‘½ä»¤ã‚’ç‰¹å®šã®å¾…æ©Ÿã‚¹ãƒ¬ãƒƒãƒ‰ã«é€ä¿¡ã™ã‚‹
+		//å¼•æ•°1: èµ·åºŠã•ã›ã‚‹Threadã®ID
+		inline void NotifyOne(std::thread::id threadID)
 		{
-		public:
-			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»‚·‚é
-			//ˆø”1: ‰ğœğŒ‚Æ‚È‚éƒtƒ‰ƒO
-			inline MultipleBit(uint equalBits)
-				: BaseConditionVariable(true), m_predicates(new uint[3], 3)
-			{
-				m_predicates[m_cValueState] = 0;
-				m_predicates[m_cEqualBitsState] = equalBits;
-				m_predicates[m_cUnlockResultState] = 0;
-			}
-			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//ƒRƒs[‰Šú‰»‚·‚é
-			//ˆø”1: ƒRƒs[
-			inline MultipleBit(const MultipleBit& copy)
-				: BaseConditionVariable(copy), m_predicates(copy.m_predicates) {}
-			//copy operator, return this
-			inline const MultipleBit& operator = (const MultipleBit& copy)
-			{
-				CopyBase(&copy);
-				m_predicates = copy.m_predicates;
-				return *this;
-			}
+			m_mutex->lock();
+#if defined(SGF_DEBUG)
+			//å®‰å…¨è£…ç½®
+			if (threadID == std::thread::id() || m_isPredicates.find(threadID) == m_isPredicates.end())
+				throw Exception::InvalidFunctionCallException("ConditionVariableAdvance", "NotifyOne", "threadID unregistered");
+#endif // SGF_DEBUG
+			m_isPredicates.at(threadID) = true;
+			m_mutex->unlock(); 
+			m_condition.notify_all(); 
+		}
+		//----------------------------------------------------------------------------------
+		//[NotifyAll]
+		//åœæ­¢è§£é™¤å‘½ä»¤ã‚’å…¨ã¦ã®å¾…æ©Ÿã‚¹ãƒ¬ãƒƒãƒ‰ã«é€ä¿¡ã™ã‚‹
+		inline void NotifyAll() { m_mutex->lock(); for (auto& e : m_isPredicates) e.second = true; m_mutex->unlock(); m_condition.notify_all(); }
 
-			//----------------------------------------------------------------------------------
-			//[NotifyOne]
-			//’â~‰ğœ–½—ß‚ğˆê‚Â‚¾‚¯‘—M‚·‚é
-			//ˆø”1: ‰ğœ‚Ég‚¤ƒtƒ‰ƒO
-			inline void NotifyOne(uint notifyInitializer)
-			{
-				m_mutex->lock();
-				m_predicates[m_cValueState] = notifyInitializer;
-				m_mutex->unlock();
-				m_condition.notify_one();
-			}
-			//----------------------------------------------------------------------------------
-			//[NotifyAll]
-			//’â~‰ğœ–½—ß‚ğ‘S‚Ä‚É‘—M‚·‚é
-			//ˆø”1: ‰ğœ‚Ég‚¤ƒtƒ‰ƒO
-			inline void NotifyAll(uint notifyInitializer)
-			{
-				m_mutex->lock();
-				m_predicates[m_cValueState] = notifyInitializer;
-				m_mutex->unlock();
-				m_condition.notify_all();
-			}
-			//----------------------------------------------------------------------------------
-			//[Wait]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			//return: ‰ğœ‚Ì’l
-			inline uint Wait()
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//add counter
-				++*m_waitCounter;
-				//wait
-				m_condition.wait(lock, [this]() { m_predicates[m_cUnlockResultState] = (m_predicates[m_cValueState] & m_predicates[m_cEqualBitsState]); return (m_predicates[m_cUnlockResultState] != 0); });
+		//----------------------------------------------------------------------------------
+		//[Wait]
+		//Notifyé–¢æ•°ãŒå®Ÿè¡Œã•ã‚Œã‚‹ã¾ã§ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’åœæ­¢ã™ã‚‹
+		inline void Wait()
+		{
+			//lock
+			std::unique_lock<std::mutex> lock(*m_mutex);
 
-				//sub counter, counter == 0 -> flag = false
-				if (--*m_waitCounter == 0)
-					m_predicates[m_cValueState] = 0;
+#if defined(SGF_DEBUG)
+			//å®‰å…¨è£…ç½®
+			if (std::this_thread::get_id() == std::thread::id() || m_isPredicates.find(std::this_thread::get_id()) == m_isPredicates.end())
+				throw Exception::InvalidFunctionCallException("ConditionVariableAdvance", "Wait", "This thread unregistered");
+#endif // SGF_DEBUG
 
-				return m_predicates[m_cUnlockResultState];
-			}
-			//----------------------------------------------------------------------------------
-			//[WaitFor]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚Å or w’è\/, ‘Š‘ÎŠÔŒo‰ß‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			//return: ƒ^ƒCƒ€ƒAƒEƒg‚µ‚½ê‡‚Ífalse
-			//ˆø”1: ’â~‘Š‘ÎŠÔ
-			//ˆø”2: nullptr‚Å‚È‚¢ê‡‰ğœ‚µ‚½‚ÌŒ‹‰Ê‚ª‘ã“ü‚³‚ê‚é
-			template <class Rep, class Period>
-			inline bool WaitFor(const std::chrono::duration<Rep, Period>& relativeWaitTime, uint* unlockResult)
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//add counter
-				++*m_waitCounter;
 			
-				//wait
-				bool result = m_condition.wait_for(lock, relativeWaitTime,
-					[this]() { m_predicates[m_cUnlockResultState] = (m_predicates[m_cValueState] & m_predicates[m_cEqualBitsState]); return (m_predicates[m_cUnlockResultState] != 0); });
-					//result
-				if (unlockResult != nullptr) unlockResult = m_predicates[m_cUnlockResultState];
-				//time out?
-				if (IS_FALSE(result)) return result;				
-				
-				//sub counter, counter == 0 -> flag = false
-				if (--*m_waitCounter == 0)
-					m_predicates[m_cValueState] = 0;
-
-				return result;
-			}
-			//----------------------------------------------------------------------------------
-			//[WaitUntil]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚Å or w’èâ‘ÎŠÔŒo‰ß‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			//ˆø”1: ’â~â‘ÎŠÔ
-			//ˆø”2: nullptr‚Å‚È‚¢ê‡‰ğœ‚µ‚½‚ÌŒ‹‰Ê‚ª‘ã“ü‚³‚ê‚é
-			template <class Clock, class Duration>
-			inline bool WaitUntil(const std::chrono::time_point<Clock, Duration>& absoluteTime, uint* unlockResult)
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//add counter
-				++*m_waitCounter;
-
-				//wait
-				uint notify;
-				bool result = m_condition.wait_until(lock, absoluteTime, 
-					[this]() { m_predicates[m_cUnlockResultState] = (m_predicates[m_cValueState] & m_predicates[m_cEqualBitsState]); return (m_predicates[m_cUnlockResultState] != 0); });
-
-				//result
-				if (unlockResult != nullptr) unlockResult = m_predicates[m_cUnlockResultState];
-				//time out?
-				if (IS_FALSE(result)) return result;
-
-				//sub counter, counter == 0 -> flag = false
-				if (--*m_waitCounter == 0)
-					m_predicates[m_cValueState] = 0;
-
-				return result;
-			}
-
-			//using condition_variable predicate (get function property)
-			SGF_FUNCTION_PROPERTY uint getPredicate() { return m_predicates[m_cValueState]; }
-
-		private:
-			static constexpr uint m_cValueState = 0;				//Value
-			static constexpr uint m_cEqualBitsState = 1;		//EqualBits
-			static constexpr uint m_cUnlockResultState = 2;	//UnlockResult
-			SharedPointer<uint[]> m_predicates;					//Predicates
-		};
-
-		//condition_variable->waitŠÖ”‚Ìˆø”Predicate‚Åg‚¤’l‚ÌŒ^‚ğƒeƒ“ƒvƒŒ[ƒg‚Åw’è, 
-		//“¯’l”»’è‚·‚é’l‚ğƒtƒ‰ƒO‚Æ‚µ‚Ä•¡”’lw’è‚·‚éConditionVariable->MultipleBitReference class
-		//Œ^‚Ítemplate‚Åw’è‚·‚é‚ª, À‘Ì‚ÍŠO•”‚Ì‚à‚Ì‚ğQÆ‚µ‚Äˆµ‚¤
-		//template 1: Predicate‚Åg‚¤•Ï”Œ^
-		//template 2: wait‰ğœŒãƒŠƒZƒbƒg‚Ég‚¤’l, default = 0
-		template<class NotifyType, NotifyType resetInitializer = 0>
-		class MultipleBitReference : public BaseClass::BaseConditionVariable
+			//wait
+			m_condition.wait(lock, [this]() { return m_isPredicates.at(std::this_thread::get_id()); });
+			//flag = false
+			m_isPredicates.at(std::this_thread::get_id()) = false;
+		}
+		//----------------------------------------------------------------------------------
+		//[WaitFor]
+		//Notifyé–¢æ•°ãŒå®Ÿè¡Œã•ã‚Œã‚‹ã¾ã§ or æŒ‡å®šç›¸å¯¾æ™‚é–“çµŒéã¾ã§ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’åœæ­¢ã™ã‚‹
+		//å¼•æ•°1: åœæ­¢ç›¸å¯¾æ™‚é–“
+		template <class Rep, class Period>
+		inline bool WaitFor(const std::chrono::duration<Rep, Period>& relativeWaitTime)
 		{
-			static_assert(std::is_integral_v<NotifyType>, "MultipleBitReference -> integral type only");
-		public:
-			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»‚·‚é
-			//ˆø”1: ğŒ•Ï”‚ÆƒyƒA‚É‚·‚é’l, ‚±‚ÌÀ‘Ì‚ª‘¶İ‚µ‚Ä‚¢‚éŠÔ‚Í•K‚¸íœ‚³‚ê‚È‚¢‚±‚Æ
-			//ˆø”2: ‰ğœğŒ‚Æ‚È‚éƒtƒ‰ƒO (•¡”‚ ‚éê‡or‰‰Z‚Åw’è)
-			inline MultipleBitReference(NotifyType& predicate, const NotifyType& equalBits)
-				: BaseConditionVariable(true), m_predicateValue(&predicate), m_predicateEqualBits(equalBits), m_unlockResult(resetInitializer) {}
-			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//ƒRƒs[‰Šú‰»‚·‚é
-			//ˆø”1: ƒRƒs[
-			inline MultipleBitReference(const MultipleBitReference& copy)
-				: BaseConditionVariable(copy), m_predicateValue(copy.m_predicateValue), 
-				m_predicateEqualBits(copy.m_predicateEqualBits), m_unlockResult(resetInitializer) {}
+			//lock
+			std::unique_lock<std::mutex> lock(*m_mutex);
+			
+#if defined(SGF_DEBUG)
+			//å®‰å…¨è£…ç½®
+			if (std::this_thread::get_id() == std::thread::id() || m_isPredicates.find(std::this_thread::get_id()) == m_isPredicates.end())
+				throw Exception::InvalidFunctionCallException("ConditionVariableAdvance", "WaitFor", "This thread unregistered");
+#endif // SGF_DEBUG
 
-			//copy operator, return this
-			inline const MultipleBitReference& operator = (const MultipleBitReference& copy)
-			{
-				CopyBase(&copy);
-				m_predicateValue = copy.m_predicateValue;
-				m_predicateEqualBits = copy.m_predicateEqualBits;
-				m_unlockResult = copy.m_unlockResult;
-				return *this;
-			}
+			//wait
+			std::cv_status result = m_condition.wait_for(lock, relativeWaitTime, [this]() { return m_isPredicates.at(std::this_thread::get_id()); });
 
-			//----------------------------------------------------------------------------------
-			//[NotifyOne]
-			//’â~‰ğœ–½—ß‚ğˆê‚Â‚¾‚¯‘—M‚·‚é
-			//ˆø”1: ‰ğœ‚Ég‚¤ƒtƒ‰ƒO
-			inline void NotifyOne(const NotifyType& notifyInitializer)
-			{
-				m_mutex->lock();
-				*m_predicateValue = notifyInitializer;
-				m_mutex->unlock();
-				m_condition.notify_one();
-			}
-			//----------------------------------------------------------------------------------
-			//[NotifyAll]
-			//’â~‰ğœ–½—ß‚ğ‘S‚Ä‚É‘—M‚·‚é
-			//ˆø”1: ‰ğœ‚Ég‚¤ƒtƒ‰ƒO
-			inline void NotifyAll(const NotifyType& notifyInitializer)
-			{
-				m_mutex->lock();
-				*m_predicateValue = notifyInitializer;
-				m_mutex->unlock();
-				m_condition.notify_all();
-			}
-			//----------------------------------------------------------------------------------
-			//[Wait]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			//return: ‰ğœ‚Ì’l
-			inline NotifyType Wait()
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//add counter
-				++*m_waitCounter;
-				//wait
-				m_condition.wait(lock, [this]() { m_unlockResult = (*m_predicateValue & m_predicateEqualBits); return (m_unlockResult != 0); });
+			//flag = false
+			m_isPredicates.at(std::this_thread::get_id()) = false;
 
-				//sub counter, counter == 0 -> flag = false
-				if (--*m_waitCounter == 0)
-					*m_predicateValue = resetInitializer;
+			//resultè¿”å´
+			return result == std::cv_status::no_timeout;
+		}
+		//----------------------------------------------------------------------------------
+		//[WaitUntil]
+		//Notifyé–¢æ•°ãŒå®Ÿè¡Œã•ã‚Œã‚‹ã¾ã§ or æŒ‡å®šçµ¶å¯¾æ™‚é–“çµŒéã¾ã§ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’åœæ­¢ã™ã‚‹
+		//å¼•æ•°1: åœæ­¢çµ¶å¯¾æ™‚é–“
+		template <class Clock, class Duration>
+		inline bool WaitUntil(const std::chrono::time_point<Clock, Duration>& absoluteTime)
+		{
+			//lock
+			std::unique_lock<std::mutex> lock(*m_mutex);
 
-				return m_unlockResult;
-			}
-			//----------------------------------------------------------------------------------
-			//[WaitFor]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚Å or w’è‘Š‘ÎŠÔŒo‰ß‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			//return: ƒ^ƒCƒ€ƒAƒEƒg‚µ‚½ê‡‚Ífalse
-			//ˆø”1: ’â~‘Š‘ÎŠÔ
-			//ˆø”2: nullptr‚Å‚È‚¢ê‡‰ğœ‚µ‚½‚ÌŒ‹‰Ê‚ª‘ã“ü‚³‚ê‚é
-			template <class Rep, class Period>
-			inline bool WaitFor(const std::chrono::duration<Rep, Period>& relativeWaitTime, NotifyType* unlockResult)
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//add counter
-				++*m_waitCounter;
+#if defined(SGF_DEBUG)
+			//å®‰å…¨è£…ç½®
+			if (std::this_thread::get_id() == std::thread::id() || m_isPredicates.find(std::this_thread::get_id()) == m_isPredicates.end())
+				throw Exception::InvalidFunctionCallException("ConditionVariableAdvance", "WaitUntil", "This thread unregistered");
+#endif // SGF_DEBUG
 
-				//wait
-				bool result = m_condition.wait_for(lock, relativeWaitTime, [this]() { m_unlockResult = (*m_predicateValue & m_predicateEqualBits); return (m_unlockResult != 0); });
-				if (IS_FALSE(result)) return result;
+			//wait
+			std::cv_status result = m_condition.wait_for(lock, relativeWaitTime, [this]() { return m_isPredicates.at(std::this_thread::get_id()); });
 
-				//sub counter, counter == 0 -> flag = false
-				if (--*m_waitCounter == 0)
-					*m_predicateValue = resetInitializer;
+			//flag = false
+			m_isPredicates.at(std::this_thread::get_id()) = false;
 
-				//result
-				if (unlockResult != nullptr)
-					unlockResult = m_unlockResult;
+			//resultè¿”å´
+			return result == std::cv_status::no_timeout;
+		}
 
-				return result;
-			}
-			//----------------------------------------------------------------------------------
-			//[WaitUntil]
-			//NotifyŠÖ”‚ªÀs‚³‚ê‚é‚Ü‚Å or w’èâ‘ÎŠÔŒo‰ß‚Ü‚ÅƒXƒŒƒbƒh‚ğ’â~‚·‚é
-			//ˆø”1: ’â~â‘ÎŠÔ
-			//ˆø”2: nullptr‚Å‚È‚¢ê‡‰ğœ‚µ‚½‚ÌŒ‹‰Ê‚ª‘ã“ü‚³‚ê‚é
-			template <class Clock, class Duration>
-			inline bool WaitUntil(const std::chrono::time_point<Clock, Duration>& absoluteTime, NotifyType* unlockResult)
-			{
-				//lock
-				std::unique_lock<std::mutex> lock(*m_mutex);
-				//add counter
-				++*m_waitCounter;
+		//<property> condition_variable predicate (used lock)
+		SGF_PROPERTY bool _isPredicate(std::thread::id threadID) 
+		{ 
+			std::lock_guard<std::mutex> guard(*m_mutex); 
+			auto find = m_isPredicates.find(threadID); 
+			return find != m_isPredicates.end() ?  find->second : false; 
+		}
 
-				//wait
-				bool result = m_condition.wait_until(lock, absoluteTime, [this]() { m_unlockResult = (*m_predicateValue & m_predicateEqualBits); return (m_unlockResult != 0); });
-				if (IS_FALSE(result)) return result;
-
-				//sub counter, counter == 0 -> flag = false
-				if (--*m_waitCounter == 0)
-					*m_predicateValue = resetInitializer;
-
-				//result
-				if (unlockResult != nullptr)
-					unlockResult = m_unlockResult;
-
-				return result;
-			}
-
-			//using condition_variable predicate (get function property)
-			SGF_FUNCTION_PROPERTY const NotifyType& getPredicate() { return *m_predicateValue; }
-
-		private:
-			NotifyType* m_predicateValue;		//Predicate
-			NotifyType m_predicateEqualBits;	//Equal
-			NotifyType m_unlockResult;			//Wait Result
-		};
-	}
+	private:
+		//predicate map
+		std::unordered_map<std::thread::id, bool> m_isPredicates;
+	};
 }
 #endif // !SGFRAMEWORK_HEADER_CONDITION_VARABLE_HPP_

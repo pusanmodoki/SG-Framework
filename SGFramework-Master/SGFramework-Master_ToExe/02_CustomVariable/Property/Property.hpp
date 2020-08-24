@@ -4,8 +4,6 @@ C#のプロパティ的な振る舞いができるProperty.h
 #ifndef SGFRAMEWORK_HEADER_PROPERTY_HPP_
 #define SGFRAMEWORK_HEADER_PROPERTY_HPP_
 
-#define SGF_FUNCTION_PROPERTY inline
-
 //Framework namespace
 namespace SGFramework
 {
