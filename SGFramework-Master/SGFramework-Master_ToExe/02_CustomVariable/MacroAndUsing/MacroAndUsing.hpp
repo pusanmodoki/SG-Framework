@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-using, ’è”‚È‚Ç‚ğ‹Lq‚·‚éMacroAndUsing.h
+using, å®šæ•°ãªã©ã‚’è¨˜è¿°ã™ã‚‹MacroAndUsing.h
 ----------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_MACRO_AND_USING_HPP_
 #define SGFRAMEWORK_HEADER_MACRO_AND_USING_HPP_
@@ -32,7 +32,7 @@ using, ’è”‚È‚Ç‚ğ‹Lq‚·‚éMacroAndUsing.h
 //inline property
 #define SGF_PROPERTY_NOINLINE
 
-//”Ä—pƒ}ƒNƒ
+//æ±ç”¨ãƒã‚¯ãƒ­
 #define IS_TRUE(val) ((val) ^ false)
 #define IS_FALSE(val) ((val) ^ true)
 
@@ -92,14 +92,14 @@ namespace SGFramework
 	using int64 = long long;
 	using uint64 = unsigned long long;
 
-	//Fowler-Noll-Vo—p’è”
+	//Fowler-Noll-Voç”¨å®šæ•°
 	namespace Hash
 	{
 		constexpr size_t cFowlerNollVoPrime = 1099511628211u;
 		constexpr size_t cFowlerNollVoOffsetBasis = 14695981039346656037u;
 	}
 
-	//ŸŒ³‚ğ’è‹`‚·‚éDimension enum
+	//æ¬¡å…ƒã‚’å®šç¾©ã™ã‚‹Dimension enum
 	struct Dimension
 	{
 		enum Enum
@@ -109,24 +109,24 @@ namespace SGFramework
 		};
 	};
 
-	//ŒvZƒ‰ƒCƒuƒ‰ƒŠ
+	//è¨ˆç®—ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 	namespace MathAF
 	{
-		//Å‘ådegree
+		//æœ€å¤§degree
 		constexpr float cMaxDegree = 180.0f;
-		//Å¬degree
+		//æœ€å°degree
 		constexpr float cMinDegree = -180.0f;
-		//‰~ü—¦
+		//å††å‘¨ç‡
 		constexpr float cPi = 3.141592654f;
-		//‰~ü—¦ x 2
+		//å††å‘¨ç‡ x 2
 		constexpr float cPix2 = 6.283185307f;
-		//‰~ü—¦ / 2
+		//å††å‘¨ç‡ / 2
 		constexpr float cPiDiv2 = 1.570796327f;
-		//‰~ü—¦ / 4
+		//å††å‘¨ç‡ / 4
 		constexpr float cPiDiv4 = 0.785398163f;
-		//³‚Ì–³ŒÀ‘å
+		//æ­£ã®ç„¡é™å¤§
 		constexpr float cInfinity = std::numeric_limits<float>::infinity();
-		//•‰‚Ì–³ŒÀ‘å
+		//è² ã®ç„¡é™å¤§
 		constexpr float cNegativeInfinity = -std::numeric_limits<float>::infinity();
 		//Nan
 		constexpr float cNaN = std::numeric_limits<float>::quiet_NaN();
@@ -135,42 +135,42 @@ namespace SGFramework
 		//radian->degree, rad * this
 		constexpr float cRadToDeg = 360 / (cPi * 2);
 
-		//float‚ÌŒë·
+		//floatã®èª¤å·®
 		constexpr float cEpsilon = std::numeric_limits<float>::epsilon();
-		//double‚ÌŒë·
+		//doubleã®èª¤å·®
 		constexpr double cDoubleEpsilon = std::numeric_limits<double>::epsilon();
 		
 		//----------------------------------------------------------------------------------
 		//[EquivalentWithEpsilon]
-		//Œë·‚ ‚è‚Ì==‰‰Z‚ğs‚¤
-		//return: val1 - val2‚ªŒë·ˆÈ‰º‚È‚çtrue‚ğ•Ô‹p
-		//ˆø”1: val1
-		//ˆø”2: val2
+		//èª¤å·®ã‚ã‚Šã®==æ¼”ç®—ã‚’è¡Œã†
+		//return: val1 - val2ãŒèª¤å·®ä»¥ä¸‹ãªã‚‰trueã‚’è¿”å´
+		//å¼•æ•°1: val1
+		//å¼•æ•°2: val2
 		inline constexpr bool IsEqual(float val1, float val2) { return (val1 - val2) < 0.0f ? (-(val1 - val2) <= cEpsilon) : ((val1 - val2) <= cEpsilon); }
 		//----------------------------------------------------------------------------------
 		//[EquivalentWithEpsilon]
-		//Œë·‚ ‚è‚Ì==‰‰Z‚ğs‚¤
-		//return: val1 - val2‚ªŒë·ˆÈ‰º‚È‚çtrue‚ğ•Ô‹p
-		//ˆø”1: val1
-		//ˆø”2: val2
+		//èª¤å·®ã‚ã‚Šã®==æ¼”ç®—ã‚’è¡Œã†
+		//return: val1 - val2ãŒèª¤å·®ä»¥ä¸‹ãªã‚‰trueã‚’è¿”å´
+		//å¼•æ•°1: val1
+		//å¼•æ•°2: val2
 		inline constexpr bool IsEqual(double val1, double val2) { return val1 - val2 < 0 ? (-(val1 - val2) <= cDoubleEpsilon) : (val1 - val2 <= cDoubleEpsilon); }
 		//----------------------------------------------------------------------------------
 		//[NonEquivalentWithEpsilon]
-		//Œë·‚ ‚è‚Ì!=‰‰Z‚ğs‚¤
-		//return: val1 - val2‚ªŒë·’´‰ß‚È‚çtrue‚ğ•Ô‹p
-		//ˆø”1: val1
-		//ˆø”2: val2
+		//èª¤å·®ã‚ã‚Šã®!=æ¼”ç®—ã‚’è¡Œã†
+		//return: val1 - val2ãŒèª¤å·®è¶…éãªã‚‰trueã‚’è¿”å´
+		//å¼•æ•°1: val1
+		//å¼•æ•°2: val2
 		inline constexpr bool IsNotEqual(float val1, float val2) { return val1 - val2 < 0 ? (-(val1 - val2) > cEpsilon) : (val1 - val2 > cEpsilon); }
 		//----------------------------------------------------------------------------------
 		//[NonEquivalentWithEpsilon]
-		//Œë·‚ ‚è‚Ì!=‰‰Z‚ğs‚¤
-		//return: val1 - val2‚ªŒë·’´‰ß‚È‚çtrue‚ğ•Ô‹p
-		//ˆø”1: val1
-		//ˆø”2: val2
+		//èª¤å·®ã‚ã‚Šã®!=æ¼”ç®—ã‚’è¡Œã†
+		//return: val1 - val2ãŒèª¤å·®è¶…éãªã‚‰trueã‚’è¿”å´
+		//å¼•æ•°1: val1
+		//å¼•æ•°2: val2
 		inline constexpr bool IsNotEqual(double val1, double val2) { return val1 - val2 < 0 ? (-(val1 - val2) > cDoubleEpsilon) : (val1 - val2 > cDoubleEpsilon); }
 	}
 
-	//ƒtƒ@ƒCƒ‹ƒTƒCƒY•ÏŠ·
+	//ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚ºå¤‰æ›
 	namespace DataVolumeConversion
 	{
 		//byte->kilobyte, byte / this
@@ -231,16 +231,16 @@ namespace SGFramework
 	}
 
 
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		//----------------------------------------------------------------------------------
 		//[GetRefreshRate]
-		//return: 30, 60, 120, 144, 244‚Ì’†‚©‚çGetDeviceCaps‚Åæ“¾‚µ‚½ƒŠƒtƒŒƒbƒVƒ…ƒŒ[ƒg‚ÉÅ‚à‹ß‚¢’l
-		//ˆø”1: GetDeviceCaps‚Åg—p‚·‚éHWND
+		//return: 30, 60, 120, 144, 244ã®ä¸­ã‹ã‚‰GetDeviceCapsã§å–å¾—ã—ãŸãƒªãƒ•ãƒ¬ãƒƒã‚·ãƒ¥ãƒ¬ãƒ¼ãƒˆã«æœ€ã‚‚è¿‘ã„å€¤
+		//å¼•æ•°1: GetDeviceCapsã§ä½¿ç”¨ã™ã‚‹HWND
 		inline float GetRefreshRate(HWND hWnd)
 		{
-			//İ’èƒŠƒtƒŒƒbƒVƒ…ƒŒ[ƒg
+			//è¨­å®šãƒªãƒ•ãƒ¬ãƒƒã‚·ãƒ¥ãƒ¬ãƒ¼ãƒˆ
 			constexpr std::array<int, 5> cRefreshs = { 30, 60, 120, 144, 244 };
 
 			int result;
@@ -255,15 +255,15 @@ namespace SGFramework
 #error "GetRefreshRate->Unimplemented"
 			throw std::exception("GetRefreshRate->Unimplemented");
 #endif
-			//İ’èƒŠƒtƒŒƒbƒVƒ…ƒŒ[ƒg‚Æ‡’v‚·‚é‚©Šm”F
+			//è¨­å®šãƒªãƒ•ãƒ¬ãƒƒã‚·ãƒ¥ãƒ¬ãƒ¼ãƒˆã¨åˆè‡´ã™ã‚‹ã‹ç¢ºèª
 			for (const auto& e : cRefreshs)
 				if (result == e) isEqual = true;
-			//ˆê‚È‚ç‚»‚Ì‚Ü‚Ü•Ô‚·
+			//ä¸€ç·’ãªã‚‰ãã®ã¾ã¾è¿”ã™
 			if (IS_TRUE(isEqual)) return static_cast<float>(result);
 
-			//ˆê”Ô‹ß‚¢’l‚ğ’T‚·—p
+			//ä¸€ç•ªè¿‘ã„å€¤ã‚’æ¢ã™ç”¨
 			int fasts[2] = { 100, -1 };
-			//’Tõƒ‹[ƒv
+			//æ¢ç´¢ãƒ«ãƒ¼ãƒ—
 			for (int i = 0; i < 5; i++)
 			{
 				int distance = cRefreshs[i] - result;
@@ -275,7 +275,7 @@ namespace SGFramework
 				}
 			}
 
-			//ˆê”Ô‹ß‚¢’l•Ô‹p
+			//ä¸€ç•ªè¿‘ã„å€¤è¿”å´
 			return static_cast<float>(cRefreshs[fasts[1]]);
 		}
 	}

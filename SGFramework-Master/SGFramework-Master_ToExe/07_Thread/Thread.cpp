@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-”Ä—pXVƒXƒŒƒbƒh‚ğŠÇ—‚·‚éThread class
+æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’ç®¡ç†ã™ã‚‹Thread class
 ------------------------------------------------------------------------------------*/
 #include "Thread.hpp"
 #include "../05_Graphics/Graphics.hpp"
@@ -8,70 +8,70 @@
 // Framework namespace
 namespace SGFramework
 {
-	//‚±‚ÌƒNƒ‰ƒX‚ªŠÇ—‚µ‚Ä‚¢‚é”Ä—pXVê—pƒXƒŒƒbƒh”
+	//ã“ã®ã‚¯ãƒ©ã‚¹ãŒç®¡ç†ã—ã¦ã„ã‚‹æ±ç”¨æ›´æ–°å°‚ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ•°
 	GetOnlyProperty<uint> Thread::numUpdateThreads(m_numUseUpdateThreads);
-	//‚±‚ÌƒNƒ‰ƒX‚ªŠÇ—‚µ‚Ä‚¢‚éXVƒ‰ƒCƒ“”
+	//ã“ã®ã‚¯ãƒ©ã‚¹ãŒç®¡ç†ã—ã¦ã„ã‚‹æ›´æ–°ãƒ©ã‚¤ãƒ³æ•°
 	GetOnlyProperty<uint> Thread::numFunctionLines(m_numFunctionLines);
-	//Às‚µ‚Ä‚¢‚éPC‚Ìƒn[ƒhƒEƒFƒAƒXƒŒƒbƒh”
+	//å®Ÿè¡Œã—ã¦ã„ã‚‹PCã®ãƒãƒ¼ãƒ‰ã‚¦ã‚§ã‚¢ã‚¹ãƒ¬ãƒƒãƒ‰æ•°
 	GetOnlyProperty<uint> Thread::numHardwareThreads(m_numHardwareThreads);
 
-	//”Ä—pXVƒXƒŒƒbƒh
+	//æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰
 	std::vector<std::thread> Thread::m_updateThreads;							
-	//‰ŠúXVƒŠƒXƒg
+	//åˆæœŸæ›´æ–°ãƒªã‚¹ãƒˆ
 	std::vector<std::vector<void(*)()>> Thread::m_beginFunctions;
-	//ƒ‰ƒCƒ“Š„“–ƒŠƒXƒg
+	//ãƒ©ã‚¤ãƒ³å‰²å½“ãƒªã‚¹ãƒˆ
 	std::vector<std::vector<int>> Thread::m_lineAllocations;
 	
-	//”Ä—pƒXƒŒƒbƒhXVŠJnğŒ•Ï”‚½‚¿
+	//æ±ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ›´æ–°é–‹å§‹æ¡ä»¶å¤‰æ•°ãŸã¡
 	std::vector<ConditionVariable::AutoReference<bool>> Thread::m_startUpdateConditions;
-	//”Ä—pƒXƒŒƒbƒhXVI—¹ğŒ•Ï”‚½‚¿
+	//æ±ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ›´æ–°çµ‚äº†æ¡ä»¶å¤‰æ•°ãŸã¡
 	std::vector<ConditionVariable::AutoReference<bool>> Thread::m_endUpdateConditions;
-	//ƒI[ƒfƒBƒIƒOƒ‰ƒtƒBƒbƒNî•ñ“¯ŠúŠJnğŒ•Ï”
+	//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯æƒ…å ±åŒæœŸé–‹å§‹æ¡ä»¶å¤‰æ•°
 	UniquePointer<ConditionVariable::AutoReference<bool>> Thread::m_startAudioGraphicsCondition;
-	//ƒI[ƒfƒBƒIƒOƒ‰ƒtƒBƒbƒNî•ñ“¯ŠúI—¹ğŒ•Ï”
+	//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯æƒ…å ±åŒæœŸçµ‚äº†æ¡ä»¶å¤‰æ•°
 	UniquePointer<ConditionVariable::AutoReference<bool>> Thread::m_endAudioGraphicsCondition;
 
-	std::thread Thread::m_audioGraphicsThread;			//AudioGraphicsUpdate—pƒXƒŒƒbƒh
-	UniquePointer<bool[]> Thread::m_conditionFlags;		//ğŒ•Ï”—pƒtƒ‰ƒO‚½‚¿
-	std::atomic<uint> Thread::m_runningCounter = 0;	//g—pƒXƒŒƒbƒh”Œv‘ª
-	std::atomic<uint> Thread::m_beginCounter = 0;		//BeginFunctionƒJƒEƒ“ƒ^
-	uint Thread::m_numMaxUsingThreads = 0;					//Å‘åg—pƒXƒŒƒbƒh”Clamp
-	uint Thread::m_numHardwareThreads = 0;					//PC‚Ìƒn[ƒhƒEƒFƒAƒXƒŒƒbƒh”
-	uint Thread::m_numFunctionLines = 0;						//–{ƒNƒ‰ƒX‚ª‚ÂXVƒ‰ƒCƒ“”
-	uint Thread::m_numUseUpdateThreads = 0;				//–{ƒNƒ‰ƒX‚ª‚Â”Ä—pXVƒXƒŒƒbƒh”
-	uint Thread::m_updateType = 0;									//‰½‚ğXV‚·‚é‚©
-	uint Thread::m_callbackType = 0;								//‰½‚ÌComponent->Callback‚ğÀs‚·‚é‚©
-	uint Thread::m_transformCount = 0;							//transformUpdateƒXƒŒƒbƒh”Šm”F—p
+	std::thread Thread::m_audioGraphicsThread;			//AudioGraphicsUpdateç”¨ã‚¹ãƒ¬ãƒƒãƒ‰
+	UniquePointer<bool[]> Thread::m_conditionFlags;		//æ¡ä»¶å¤‰æ•°ç”¨ãƒ•ãƒ©ã‚°ãŸã¡
+	std::atomic<uint> Thread::m_runningCounter = 0;	//ä½¿ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ•°è¨ˆæ¸¬
+	std::atomic<uint> Thread::m_beginCounter = 0;		//BeginFunctionã‚«ã‚¦ãƒ³ã‚¿
+	uint Thread::m_numMaxUsingThreads = 0;					//æœ€å¤§ä½¿ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ•°Clamp
+	uint Thread::m_numHardwareThreads = 0;					//PCã®ãƒãƒ¼ãƒ‰ã‚¦ã‚§ã‚¢ã‚¹ãƒ¬ãƒƒãƒ‰æ•°
+	uint Thread::m_numFunctionLines = 0;						//æœ¬ã‚¯ãƒ©ã‚¹ãŒæŒã¤æ›´æ–°ãƒ©ã‚¤ãƒ³æ•°
+	uint Thread::m_numUseUpdateThreads = 0;				//æœ¬ã‚¯ãƒ©ã‚¹ãŒæŒã¤æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰æ•°
+	uint Thread::m_updateType = 0;									//ä½•ã‚’æ›´æ–°ã™ã‚‹ã‹
+	uint Thread::m_callbackType = 0;								//ä½•ã®Component->Callbackã‚’å®Ÿè¡Œã™ã‚‹ã‹
+	uint Thread::m_transformCount = 0;							//transformUpdateã‚¹ãƒ¬ãƒƒãƒ‰æ•°ç¢ºèªç”¨
 	
 	//----------------------------------------------------------------------------------
 	//[StartUp]
-	//ƒXƒŒƒbƒh‚ğ‹N“®‚·‚é
-	//throw: ƒn[ƒhƒEƒFƒAƒXƒŒƒbƒh”‚ª4–¢–‚Ìê‡ (ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ğÀs‚Å‚«‚È‚¢)
-	//ˆø”1: ŠÖ”ƒLƒ…[‚Ì”
-	//ˆø”2: Å‘åg—pƒXƒŒƒbƒh”
+	//ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’èµ·å‹•ã™ã‚‹
+	//throw: ãƒãƒ¼ãƒ‰ã‚¦ã‚§ã‚¢ã‚¹ãƒ¬ãƒƒãƒ‰æ•°ãŒ4æœªæº€ã®å ´åˆ (ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å®Ÿè¡Œã§ããªã„)
+	//å¼•æ•°1: é–¢æ•°ã‚­ãƒ¥ãƒ¼ã®æ•°
+	//å¼•æ•°2: æœ€å¤§ä½¿ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ•°
 	void Thread::StartUp(const ReadElement::Pack& numLines, const ReadElement::Pack& numMaxUsingThreads)
 	{
-		//ƒXƒŒƒbƒh”æ“¾
+		//ã‚¹ãƒ¬ãƒƒãƒ‰æ•°å–å¾—
 		m_numHardwareThreads = std::thread::hardware_concurrency();
-		//4ƒXƒŒƒbƒh–¢–‚Èê‡Às‚Å‚«‚È‚¢‚Ì‚Åthrow
+		//4ã‚¹ãƒ¬ãƒƒãƒ‰æœªæº€ãªå ´åˆå®Ÿè¡Œã§ããªã„ã®ã§throw
 		if (m_numHardwareThreads < 4)
 			throw InvalidArgument(L"Error!! Thread->StartUp", L"This application requires a cpu with 4 or more threads");
 
-		//Å‘åg—pƒXƒŒƒbƒh”æ“¾
+		//æœ€å¤§ä½¿ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ•°å–å¾—
 		m_numMaxUsingThreads = static_cast<uint>(numMaxUsingThreads[0].valueInt);
 
-		//g—pƒXƒŒƒbƒh‚ğŠÖ”ƒ‰ƒCƒ“”‚Ææ“¾‚Å‚«‚éÅ‘åƒXƒŒƒbƒh”‚ğ”äŠr‚µ¬‚³‚¢•û‚Éİ’è
+		//ä½¿ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’é–¢æ•°ãƒ©ã‚¤ãƒ³æ•°ã¨å–å¾—ã§ãã‚‹æœ€å¤§ã‚¹ãƒ¬ãƒƒãƒ‰æ•°ã‚’æ¯”è¼ƒã—å°ã•ã„æ–¹ã«è¨­å®š
 		m_numUseUpdateThreads = MathAF::Min(m_numHardwareThreads - m_cNumExclusiveUseThreads,
 			static_cast<uint>(numLines[0].valueInt));
-		//Å‘åg—pƒXƒŒƒbƒh”‚Ü‚ÅƒNƒ‰ƒ“ƒv
+		//æœ€å¤§ä½¿ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ•°ã¾ã§ã‚¯ãƒ©ãƒ³ãƒ—
 		m_numUseUpdateThreads = MathAF::Min(m_numUseUpdateThreads, m_numMaxUsingThreads);
 
-		//ŠÖ”ƒ‰ƒCƒ“”
+		//é–¢æ•°ãƒ©ã‚¤ãƒ³æ•°
 		m_numFunctionLines = static_cast<uint>(numLines[0].valueInt);
-		//ğŒ•Ï”—pƒtƒ‰ƒO
+		//æ¡ä»¶å¤‰æ•°ç”¨ãƒ•ãƒ©ã‚°
 		m_conditionFlags = Pointer::MakeUniqueArray::Auto<bool>((m_numUseUpdateThreads * 2) + 2);
 
-		//ƒ‰ƒCƒ“Š„“–
+		//ãƒ©ã‚¤ãƒ³å‰²å½“
 		for (uint i = 0; i < m_numFunctionLines; ++i)
 		{
 			if (i < m_numUseUpdateThreads)
@@ -80,7 +80,7 @@ namespace SGFramework
 			m_lineAllocations[i % m_numUseUpdateThreads].emplace_back(static_cast<int>(i));
 		}
 
-		//Begin Functionsì¬
+		//Begin Functionsä½œæˆ
 		m_beginFunctions.resize(m_numUseUpdateThreads);
 		for (uint i = 0, threads = 0, isAddCounterFunction = 1; i < m_numUseUpdateThreads || i < m_cNumBeginFunctions; ++i, ++threads)
 		{
@@ -102,7 +102,7 @@ namespace SGFramework
 			}
 
 
-			//’è”‚µ‚©“ü‚ç‚È‚¢‚Ì‚ÅƒSƒŠƒSƒŠƒvƒƒOƒ‰ƒ€‚ğ‘g‚İ‚Ü‚·
+			//å®šæ•°ã—ã‹å…¥ã‚‰ãªã„ã®ã§ã‚´ãƒªã‚´ãƒªãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’çµ„ã¿ã¾ã™
 			switch (threads)
 			{
 			case 0:
@@ -217,17 +217,17 @@ namespace SGFramework
 			}
 		}
 
-		//ğŒ•Ï”ì¬
+		//æ¡ä»¶å¤‰æ•°ä½œæˆ
 		m_startAudioGraphicsCondition = Pointer::MakeUnique::Auto<ConditionVariable::AutoReference<bool>>(m_conditionFlags[m_conditionFlags.getArraySize() - 2]);
 		m_endAudioGraphicsCondition = Pointer::MakeUnique::Auto<ConditionVariable::AutoReference<bool>>(m_conditionFlags[m_conditionFlags.getArraySize() - 1]);
-		//•¡”ğŒ•Ï”ì¬
+		//è¤‡æ•°æ¡ä»¶å¤‰æ•°ä½œæˆ
 		for (uint i = 0; i < m_numUseUpdateThreads; i++)
 		{
 			m_startUpdateConditions.emplace_back(m_conditionFlags[i]);
 			m_endUpdateConditions.emplace_back(m_conditionFlags[m_numUseUpdateThreads + i]);
 		}
 
-		//ƒXƒŒƒbƒh‚ğ•K—v”•ªì¬, ƒXƒ^ƒ“ƒoƒCó‘Ô‚É‚³‚¹‚é
+		//ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’å¿…è¦æ•°åˆ†ä½œæˆ, ã‚¹ã‚¿ãƒ³ãƒã‚¤çŠ¶æ…‹ã«ã•ã›ã‚‹
 		m_updateThreads.reserve(m_numUseUpdateThreads);
 		for (uint i = 0, shift = 0; i < m_numUseUpdateThreads; i++)
 		{
@@ -244,16 +244,16 @@ namespace SGFramework
 		}
 
 
-		//ƒXƒŒƒbƒhì¬
+		//ã‚¹ãƒ¬ãƒƒãƒ‰ä½œæˆ
 		m_audioGraphicsThread = std::thread(AudioGraphicsUpdate);
 		setAffinityGraphicsUpdate(m_audioGraphicsThread.native_handle());
 		
-		//ƒOƒ‰ƒtƒBƒbƒNƒX‚ÌƒRƒ}ƒ“ƒhƒŠƒXƒg‚ğ‰Šú‰»
+		//ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¹ã®ã‚³ãƒãƒ³ãƒ‰ãƒªã‚¹ãƒˆã‚’åˆæœŸåŒ–
 		Graphics::InitCommandList(m_updateThreads);
-		//ƒ‰ƒ“ƒ_ƒ€“o˜^
+		//ãƒ©ãƒ³ãƒ€ãƒ ç™»éŒ²
 		Random::InitThreads(m_updateThreads);
 		Random::InitThread(m_audioGraphicsThread);
-		//GUI“o˜^
+		//GUIç™»éŒ²
 		{
 			sgstring string1 = L"Update[";
 			sgstring string2 = L"]";
@@ -267,12 +267,12 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ShutDown]
-	//ƒXƒŒƒbƒh‚ğI—¹‚·‚é
+	//ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’çµ‚äº†ã™ã‚‹
 	void Thread::ShutDown()
 	{
-		//‘SƒXƒŒƒbƒhI—¹ƒtƒ‰ƒOİ’è
+		//å…¨ã‚¹ãƒ¬ãƒƒãƒ‰çµ‚äº†ãƒ•ãƒ©ã‚°è¨­å®š
 		m_updateType = m_UpdateQuit;
-		//XVŠJn‚ğ‹–‰Â(”²‚¯‚é‚½‚ß)
+		//æ›´æ–°é–‹å§‹ã‚’è¨±å¯(æŠœã‘ã‚‹ãŸã‚)
 		if (IS_TRUE(m_startAudioGraphicsCondition.getIsOwned()))
 			m_startAudioGraphicsCondition->NotifyOne();
 		

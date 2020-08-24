@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ƒwƒbƒ_éŒ¾‚ğs‚¤ CustomVariable.h
+ãƒ˜ãƒƒãƒ€å®£è¨€ã‚’è¡Œã† CustomVariable.h
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_CUSTOM_VARIABLE_HPP_
 #define SGFRAMEWORK_HEADER_CUSTOM_VARIABLE_HPP_

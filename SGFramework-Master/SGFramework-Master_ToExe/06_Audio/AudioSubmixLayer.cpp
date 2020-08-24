@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-ƒI[ƒfƒBƒI‚ğŠÇ—‚·‚éAudio class
-	->SubmixLayer‚ğ‹Lq‚·‚éAudioSubmixLayer.cpp
+ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚’ç®¡ç†ã™ã‚‹Audio class
+	->SubmixLayerã‚’è¨˜è¿°ã™ã‚‹AudioSubmixLayer.cpp
 ------------------------------------------------------------------------------------*/
 #include "Audio.hpp"
 
@@ -8,8 +8,8 @@
 namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//Root—p‰Šú‰»‚ğs‚¤
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//Rootç”¨åˆæœŸåŒ–ã‚’è¡Œã†
 	Audio::SubmixLayer::SubmixLayer() : voice(m_voice), layerName(m_layerName), layerID(m_layerID),
 		channels(m_channels), processingStage(m_processingStage), m_childrens(), m_sendVoices(), m_layerName(L"Null"),
 		m_parent(), m_voice(nullptr),m_layerID(VariableLimit::cUintMax), m_processingStage(VariableLimit::cUintMax)
@@ -25,10 +25,10 @@ namespace SGFramework
 	}
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//”ñRoot—p‰Šú‰»‚ğs‚¤
-	//ˆø”1: ƒŒƒCƒ„[–¼
-	//ˆø”2: ƒŒƒCƒ„[ID
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//éRootç”¨åˆæœŸåŒ–ã‚’è¡Œã†
+	//å¼•æ•°1: ãƒ¬ã‚¤ãƒ¤ãƒ¼å
+	//å¼•æ•°2: ãƒ¬ã‚¤ãƒ¤ãƒ¼ID
 	Audio::SubmixLayer::SubmixLayer(const sgstring & name, uint id)
 		: voice(m_voice), layerName(m_layerName), layerID(m_layerID), channels(m_channels), processingStage(m_processingStage),
 		m_childrens(), m_sendVoices(), m_layerName(name), m_parent(), m_voice(nullptr), m_layerID(id), m_processingStage(VariableLimit::cUintMax)
@@ -44,8 +44,8 @@ namespace SGFramework
 	}
 
 	//----------------------------------------------------------------------------------
-	//[ƒfƒXƒgƒ‰ƒNƒ^]
-	//DestroyVoice‚ğs‚¤
+	//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//DestroyVoiceã‚’è¡Œã†
 	Audio::SubmixLayer::~SubmixLayer()
 	{
 		if (m_voice && Audio::m_xaudio2)
@@ -58,11 +58,11 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[SettingRoot]
-	//Root—pİ’è‚ğs‚¤
-	//ˆø”1: ‰¹—Ê
+	//Rootç”¨è¨­å®šã‚’è¡Œã†
+	//å¼•æ•°1: éŸ³é‡
 	void Audio::SubmixLayer::SettingRoot(float volume)
 	{
-		//İ’è
+		//è¨­å®š
 		m_layerName = cRootName;
 		m_layerID = cRootID;
 		m_processingStage = 0;
@@ -73,21 +73,21 @@ namespace SGFramework
 		if (FAILED(result))
 			throw InvalidArgument(L"Error!! Audio::SubmixLayer->SettingRoot", L"CreateSubmixVoice error", result);
 	
-		//İ’è
+		//è¨­å®š
 		m_sendVoices[0].pOutputVoice = m_voice;
 		m_sends.SendCount = 1;
 		m_sends.pSends = m_sendVoices.data();
-		//‰¹—ÊƒZƒbƒg
+		//éŸ³é‡ã‚»ãƒƒãƒˆ
 		m_voice->SetVolume(volume);
 	}
 
 	//----------------------------------------------------------------------------------
 	//[SettingMonoralRoot]
-	//MonoralRoot—pİ’è‚ğs‚¤
-	//ˆø”1: ‰¹—Ê
+	//MonoralRootç”¨è¨­å®šã‚’è¡Œã†
+	//å¼•æ•°1: éŸ³é‡
 	void Audio::SubmixLayer::SettingMonoralRoot(float volume)
 	{
-		//İ’è
+		//è¨­å®š
 		m_layerName = cMonoralRootName;
 		m_layerID = cMonoralRootID;
 		m_processingStage = 0;
@@ -98,32 +98,32 @@ namespace SGFramework
 		if (FAILED(result))
 			throw InvalidArgument(L"Error!! Audio::SubmixLayer->SettingMonoralRoot", L"CreateSubmixVoice error", result);
 
-		//İ’è
+		//è¨­å®š
 		m_sendVoices[0].pOutputVoice = m_voice;
 		m_sends.SendCount = 1;
 		m_sends.pSends = m_sendVoices.data();
-		//‰¹—ÊƒZƒbƒg
+		//éŸ³é‡ã‚»ãƒƒãƒˆ
 		m_voice->SetVolume(volume);
 	}
 
 	//----------------------------------------------------------------------------------
 	//[SettingSubmix]
-	//”ñRoot—pİ’è‚ğs‚¤
-	//ˆø”1: ‰¹—Ê
+	//éRootç”¨è¨­å®šã‚’è¡Œã†
+	//å¼•æ•°1: éŸ³é‡
 	void Audio::SubmixLayer::SettingSubmix(float volume)
 	{
 		//processingStage
 		uint stage = 1;
-		//channelsİ’è
+		//channelsè¨­å®š
 		m_channels = Audio::m_masterChannels;
 
-		//e’Tõƒ‹[ƒv
+		//è¦ªæ¢ç´¢ãƒ«ãƒ¼ãƒ—
 		for (auto pt = m_parent; pt->m_parent.getIsValid(); pt = pt->m_parent)
 		{
-			//ƒXƒe[ƒW‰ÁZ
+			//ã‚¹ãƒ†ãƒ¼ã‚¸åŠ ç®—
 			++stage;
 
-			//Send“o˜^
+			//Sendç™»éŒ²
 			XAUDIO2_SEND_DESCRIPTOR send;
 			send.Flags = 0;
 			send.pOutputVoice = pt->m_voice;
@@ -134,7 +134,7 @@ namespace SGFramework
 				m_channels = Audio::cMonoral;
 		}
 		
-		//İ’è
+		//è¨­å®š
 		this->m_processingStage = stage;
 
 		//Create
@@ -142,11 +142,11 @@ namespace SGFramework
 		if (FAILED(result))
 			throw InvalidArgument(L"Error!! Audio::SubmixLayer->SettingRoot", L"CreateSubmixVoice error", result);
 
-		//İ’è
+		//è¨­å®š
 		m_sendVoices[0].pOutputVoice = m_voice;
 		m_sends.SendCount = static_cast<uint>(m_sendVoices.size());
 		m_sends.pSends = m_sendVoices.data();
-		//‰¹—ÊƒZƒbƒg
+		//éŸ³é‡ã‚»ãƒƒãƒˆ
 		m_voice->SetVolume(volume);
 	}
 }

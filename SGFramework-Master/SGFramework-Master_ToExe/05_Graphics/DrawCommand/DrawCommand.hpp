@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-•`‰æƒRƒ}ƒ“ƒh‚ğ•Û‘¶‚·‚éDrawCommand
+æç”»ã‚³ãƒãƒ³ãƒ‰ã‚’ä¿å­˜ã™ã‚‹DrawCommand
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_DRAW_COMMAND_HPP_
 #define SGFRAMEWORK_HEADER_DRAW_COMMAND_HPP_
@@ -9,13 +9,13 @@
 // Framework namespace
 namespace SGFramework
 {
-	//•`‰æƒRƒ}ƒ“ƒh‚ğ•Û‘¶‚·‚éDrawCommand
+	//æç”»ã‚³ãƒãƒ³ãƒ‰ã‚’ä¿å­˜ã™ã‚‹DrawCommand
 	struct DrawCommand
 	{
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”1: DrawŠÖ”ƒIƒuƒWƒFƒNƒg, •ÊƒXƒŒƒbƒh‚Å•`‰æ‚ğÀs‚·‚é‚Ì‚ÅƒXƒŒƒbƒhƒZ[ƒt‚È“®ì‚ª•K—v
-		//ˆø”1: •`‰æ—Dæ“x
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°1: Drawé–¢æ•°ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ, åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰ã§æç”»ã‚’å®Ÿè¡Œã™ã‚‹ã®ã§ã‚¹ãƒ¬ãƒƒãƒ‰ã‚»ãƒ¼ãƒ•ãªå‹•ä½œãŒå¿…è¦
+		//å¼•æ•°1: æç”»å„ªå…ˆåº¦
 		inline DrawCommand(const std::function<void()>& drawFunctionCommand, int priority)
 			: drawFunctionCommand(drawFunctionCommand), priority(priority) {}
 
@@ -24,8 +24,8 @@ namespace SGFramework
 		//> operator
 		inline bool operator > (const DrawCommand& right) { return (priority > right.priority); }
 
-		std::function<void()> drawFunctionCommand;	//DrawŠÖ”
-		int priority;														//—Dæ“x
+		std::function<void()> drawFunctionCommand;	//Drawé–¢æ•°
+		int priority;														//å„ªå…ˆåº¦
 	};
 }
 #endif // !SGFRAMEWORK_HEADER_DRAW_COMMAND_HPP_

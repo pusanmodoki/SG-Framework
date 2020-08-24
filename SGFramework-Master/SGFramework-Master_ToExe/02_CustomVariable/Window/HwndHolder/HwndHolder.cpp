@@ -1,20 +1,20 @@
 /*----------------------------------------------------------------------------------
-hWnd‚ğŠÇ—‚·‚éHwndHolder class
+hWndã‚’ç®¡ç†ã™ã‚‹HwndHolder class
 ------------------------------------------------------------------------------------*/
 #include "HwndHolder.hpp"
 
 //Framework namespace
 namespace SGFramework
 {
-	//WindowŠÇ—
+	//Windowç®¡ç†
 	namespace Window
 	{
-		//‹N“®ƒEƒBƒ“ƒhƒE‚Ìƒnƒ“ƒhƒ‹
+		//èµ·å‹•ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®ãƒãƒ³ãƒ‰ãƒ«
 		PointerProperty<HWND> HwndHolder::main(m_main);
 
 		//hWnds[0]
 		HWND HwndHolder::m_main = nullptr;
-		//hWndƒŠƒXƒg
+		//hWndãƒªã‚¹ãƒˆ
 		std::vector<HWND> HwndHolder::m_hwnds;
 		//mutex
 		std::mutex HwndHolder::m_mutex;

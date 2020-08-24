@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-RigidBody‚ð’è‹`‚·‚éRigidBody.cpp
+RigidBodyã‚’å®šç¾©ã™ã‚‹RigidBody.cpp
 ------------------------------------------------------------------------------------*/
 #include "RigidBody.hpp"
 #include "../Collider/BaseCollider.hpp"
@@ -12,12 +12,12 @@ namespace SGFramework
 	{
 		//----------------------------------------------------------------------------------
 		//[TransferColliders]
-		//Ž©g‚ÌRigidBody‚É•R•t‚¢‚Ä‚¢‚éCollider‚ðe‚ÉˆÚ‚·
+		//è‡ªèº«ã®RigidBodyã«ç´ä»˜ã„ã¦ã„ã‚‹Colliderã‚’è¦ªã«ç§»ã™
 		void BaseRigidBody::TransferColliders()
 		{
 			Physics::LockGuardPhysics guard(false);
 
-			//Œ»Ý‚ÌCollider”Žæ“¾, 0‚È‚çI—¹
+			//ç¾åœ¨ã®Collideræ•°å–å¾—, 0ãªã‚‰çµ‚äº†
 			uint numColliders = m_numAttachColliders.load();
 
 			if (numColliders == 0 || IS_TRUE(transform->getIsDestroy())) return;
@@ -27,33 +27,33 @@ namespace SGFramework
 			//New RigidBody (parent)
 			WeakPointer<BaseClass::BaseRigidBody> newRigidBody;
 
-			//‚Ü‚¸‚Í‚à‚Á‚Ä‚¢‚éCollider‚ðŽæ“¾
+			//ã¾ãšã¯ã‚‚ã£ã¦ã„ã‚‹Colliderã‚’å–å¾—
 			physx::PxShape** shapes = new physx::PxShape*[numColliders];
 			getBaseActor()->getShapes(shapes, numColliders, 0);
 			
-			//Collider componentsŽæ“¾
+			//Collider componentså–å¾—
 			for (uint i = 0, max = getBaseActor()->getNbShapes(); i < max; ++i)
 				colliders[i] = reinterpret_cast<WeakPointer<BaseClass::BaseCollider>*>(shapes[i]->userData);
 
-			//ParentŒŸõƒ‹[ƒv
+			//Parentæ¤œç´¢ãƒ«ãƒ¼ãƒ—
 			for (Transform* parent = transform->m_parent.TryGetInstance();
 				parent != nullptr || IS_FALSE(newRigidBody.getIsValid()); parent = parent->m_parent.TryGetInstance())
 			{
-				//static-> static rigid body‚Ì‚ÝŒŸõ
+				//static-> static rigid bodyã®ã¿æ¤œç´¢
 				if (IS_FALSE(m_isStatic))
 					newRigidBody = parent->FindComponent<RigidBodyStatic>().DownCast<BaseClass::BaseRigidBody>();
-				//not static-> static or dynamic rigid body‚ðŒŸõ
+				//not static-> static or dynamic rigid bodyã‚’æ¤œç´¢
 				else
 					newRigidBody = parent->FindComponent<BaseClass::BaseRigidBody>();
 			}
 
-			//e‚ÉV‚µ‚¢RigidBody‚ðŒ©‚Â‚¯‚½->Collider‚ðˆÚ‚·
+			//è¦ªã«æ–°ã—ã„RigidBodyã‚’è¦‹ã¤ã‘ãŸ->Colliderã‚’ç§»ã™
 			if (IS_TRUE(newRigidBody.getIsValid()))
 			{
 				for (auto& e : colliders)
 					(*e)->TransferRigidBody(newRigidBody->transform, newRigidBody);
 			}
-			//e‚ÉV‚µ‚¢RigidBody‚Í‚¢‚Ü‚¹‚ñ->Componentíœ
+			//è¦ªã«æ–°ã—ã„RigidBodyã¯ã„ã¾ã›ã‚“->Componentå‰Šé™¤
 			else
 			{
 				for (auto& e : colliders)

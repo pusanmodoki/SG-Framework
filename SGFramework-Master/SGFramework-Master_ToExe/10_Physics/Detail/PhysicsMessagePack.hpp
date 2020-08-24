@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-•¨—ƒGƒ“ƒWƒ“(PhysX)‚ğŠÇ—‚·‚éPhysics class
-	->Message“à‚ÌUnion‚Åg—p‚·‚é\‘¢‘Ì“™‚ğ’è‹`‚·‚éPhysicsMessagePack.hpp
+ç‰©ç†ã‚¨ãƒ³ã‚¸ãƒ³(PhysX)ã‚’ç®¡ç†ã™ã‚‹Physics class
+	->Messageå†…ã®Unionã§ä½¿ç”¨ã™ã‚‹æ§‹é€ ä½“ç­‰ã‚’å®šç¾©ã™ã‚‹PhysicsMessagePack.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_PHYSICS_MESSAGE_PACK_HPP_
 #define SGFRAMEWORK_HEADER_PHYSICS_MESSAGE_PACK_HPP_
@@ -9,14 +9,14 @@
 //Framework namespace
 namespace SGFramework
 {
-	//ƒp[ƒc
+	//ãƒ‘ãƒ¼ãƒ„
 	namespace Detail
 	{
 		//Physics
 		namespace Physics
 		{
-			//Message‚Ìí—Ş‚ğ’è‹`‚µ‚½MessageType enumˆê”Ê“I—p“r
-			//ƒƒbƒZ[ƒWí—Ş‚ª‘½‚·‚¬‚é & ”Ä—p•Ï”‚ğ‘½—p‚·‚é‚½‚ßA”Ä—p•Ï”‚ğg—p‚·‚éŠeƒƒ“ƒo‚ÌÅŒã‚Ég—p•Ï”Œ^‚ğ‹LÚ
+			//Messageã®ç¨®é¡ã‚’å®šç¾©ã—ãŸMessageType enumä¸€èˆ¬çš„ç”¨é€”
+			//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ç¨®é¡ãŒå¤šã™ãã‚‹ & æ±ç”¨å¤‰æ•°ã‚’å¤šç”¨ã™ã‚‹ãŸã‚ã€æ±ç”¨å¤‰æ•°ã‚’ä½¿ç”¨ã™ã‚‹å„ãƒ¡ãƒ³ãƒã®æœ€å¾Œã«ä½¿ç”¨å¤‰æ•°å‹ã‚’è¨˜è¼‰
 			//rigidBody -> RG, collider -> CL, force -> FO, velocity -> VL, lock = LO, capsule = CP
 			//transferRigidBody -> TR vector3 -> V3, floatData = FL, byteData = BY, booleanData = BO
 			struct MessageType
@@ -95,32 +95,32 @@ namespace SGFramework
 				};
 			};
 
-			//AddForce OR AddTprque message‚Åg—p‚·‚éPackForce structure
+			//AddForce OR AddTprque messageã§ä½¿ç”¨ã™ã‚‹PackForce structure
 			struct PackForce
 			{
 				Vector3 force;						//Force
 				ForceMode::Enum forceMode;	//Force mode
 				bool isAutoAwake;					//auto awake?
 			};
-			//SetVelocity OR SetAngulerVelocity message‚Åg—p‚·‚éPackVelocity structure
+			//SetVelocity OR SetAngulerVelocity messageã§ä½¿ç”¨ã™ã‚‹PackVelocity structure
 			struct PackVelocity
 			{
 				Vector3 velocity;					//Set velocity
 				bool isAutoAwake;					//auto awake?
 			};
-			//SetLockFlags message‚Åg—p‚·‚éPackLock structure
+			//SetLockFlags messageã§ä½¿ç”¨ã™ã‚‹PackLock structure
 			struct PackLock
 			{
 				RigidBodyLock::Enum flag;		//Lock flag
 				bool isSet;								//set Value
 			};
-			//CapsuleCollider messages‚Åg—p‚·‚éPackCapsule structure
+			//CapsuleCollider messagesã§ä½¿ç”¨ã™ã‚‹PackCapsule structure
 			struct PackCapsule
 			{
 				float height;	//height
 				float radius;	//radius
 			};
-			//TransferRigidBody message‚Åg—p‚·‚éPackTransferRigidBody structure
+			//TransferRigidBody messageã§ä½¿ç”¨ã™ã‚‹PackTransferRigidBody structure
 			struct PackTransferRigidBody
 			{
 				physx::PxShape* shape;

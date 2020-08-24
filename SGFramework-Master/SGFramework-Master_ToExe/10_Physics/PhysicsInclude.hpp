@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-PhysicsÇIncludeÇ∑ÇÈPhysicsInclude.hpp
+Physics„ÇíInclude„Åô„ÇãPhysicsInclude.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_PHYSICS_INCLUDE_HPP_
 #define SGFRAMEWORK_HEADER_PHYSICS_INCLUDE_HPP_

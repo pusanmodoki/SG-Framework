@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ŒvZƒ‰ƒCƒuƒ‰ƒŠ‚ÈMathAF namespace (math + almost float)
+è¨ˆç®—ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãªMathAF namespace (math + almost float)
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_CMATHF_BASIS_HPP_
 #define SGFRAMEWORK_HEADER_CMATHF_BASIS_HPP_
@@ -8,38 +8,38 @@
 //Framework namespace
 namespace SGFramework
 {
-	//ŒvZƒ‰ƒCƒuƒ‰ƒŠ
+	//è¨ˆç®—ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 	namespace MathAF
 	{
 		//----------------------------------------------------------------------------------
 		//[Absolute]
-		//return: f‚Ìâ‘Î’l
-		//ˆø”1: f
+		//return: fã®çµ¶å¯¾å€¤
+		//å¼•æ•°1: f
 		template<class T>
 		inline constexpr T Absolute(T f) noexcept { return f < 0 ? -f : f; }
 		//----------------------------------------------------------------------------------
 		//[IsNaN]
-		//return: f‚ªnan‚È‚çtrue
-		//ˆø”1: f
+		//return: fãŒnanãªã‚‰true
+		//å¼•æ•°1: f
 		template<class FloationgType>
 		inline constexpr bool IsNaN(FloationgType f) noexcept { static_assert(std::is_floating_point_v<FloationgType>, L"Error value is Floationg"); return !(f == f); }
 		//----------------------------------------------------------------------------------
 		//[IsZero]
-		//return: f‚ª0(Œë·ŠÜ‚Ş)‚È‚çtrue
-		//ˆø”1: f
+		//return: fãŒ0(èª¤å·®å«ã‚€)ãªã‚‰true
+		//å¼•æ•°1: f
 		template<class FloationgType>
 		inline constexpr bool IsZero(FloationgType f) noexcept { static_assert(std::is_floating_point_v<FloationgType>, L"Error value is Floationg");  return (-cEpsilon > f && f > cEpsilon); }
 		//----------------------------------------------------------------------------------
 		//[IsMinusSign]
-		//return: f‚ª-‚Ì’l‚È‚çtrue
-		//ˆø”1: f
+		//return: fãŒ-ã®å€¤ãªã‚‰true
+		//å¼•æ•°1: f
 		template<class FloationgType>
 		inline constexpr bool IsMinusSign(FloationgType f) noexcept { static_assert(std::is_floating_point_v<FloationgType>, L"Error value is Floationg");  return (!IsNaN(f) && f < 0); }
 		//----------------------------------------------------------------------------------
 		//[CopySign]
-		//return: value‚Ésign‚Ì•„†‚ğƒRƒs[‚µ‚½‚à‚Ì
-		//ˆø”1: value
-		//ˆø”2: sign
+		//return: valueã«signã®ç¬¦å·ã‚’ã‚³ãƒ”ãƒ¼ã—ãŸã‚‚ã®
+		//å¼•æ•°1: value
+		//å¼•æ•°2: sign
 		template<class FloationgType>
 		inline constexpr float CopySign(FloationgType value, FloationgType sign) noexcept
 		{
@@ -50,11 +50,11 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Clamp]
-		//f‚ğmin ~ max‚ÌŠÔ‚Å§ŒÀ‚·‚é
-		//return: min ~ max ‚Å§ŒÀ‚³‚¹‚½’l
-		//ˆø”1: f
-		//ˆø”2: Å¬§ŒÀ’l
-		//ˆø”3: Å‘å§ŒÀ’l
+		//fã‚’min ~ maxã®é–“ã§åˆ¶é™ã™ã‚‹
+		//return: min ~ max ã§åˆ¶é™ã•ã›ãŸå€¤
+		//å¼•æ•°1: f
+		//å¼•æ•°2: æœ€å°åˆ¶é™å€¤
+		//å¼•æ•°3: æœ€å¤§åˆ¶é™å€¤
 		template<class T>
 		inline constexpr T Clamp(T f, T min, T max) noexcept
 		{
@@ -64,11 +64,11 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Clamp01]
-		//f‚ğ0 ~ 1‚ÌŠÔ‚Å§ŒÀ‚·‚é
-		//return: 0 ~ 1 ‚Å§ŒÀ‚³‚¹‚½’l
-		//ˆø”1: f
-		//ˆø”2: Å¬§ŒÀ’l
-		//ˆø”3: Å‘å§ŒÀ’l
+		//fã‚’0 ~ 1ã®é–“ã§åˆ¶é™ã™ã‚‹
+		//return: 0 ~ 1 ã§åˆ¶é™ã•ã›ãŸå€¤
+		//å¼•æ•°1: f
+		//å¼•æ•°2: æœ€å°åˆ¶é™å€¤
+		//å¼•æ•°3: æœ€å¤§åˆ¶é™å€¤
 		template<class FloationgType>
 		inline constexpr float Clamp01(FloationgType f) noexcept
 		{
@@ -79,34 +79,34 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Max]
-		//f1‚Æf2‚ğ”äŠr‚·‚é
-		//return: ‘å‚«‚¢•û‚Ì’l
-		//ˆø”1: f1
-		//ˆø”2: f2
+		//f1ã¨f2ã‚’æ¯”è¼ƒã™ã‚‹
+		//return: å¤§ãã„æ–¹ã®å€¤
+		//å¼•æ•°1: f1
+		//å¼•æ•°2: f2
 		template<class T>
 		inline constexpr T Max(T f1, T f2) noexcept { return f1 > f2 ? f1 : f2; }
 		//----------------------------------------------------------------------------------
 		//[MaxWithAbsolute]
-		//f1‚Æf2‚Ìâ‘Î’l‚ğ”äŠr‚·‚é
-		//return: â‘Î’l‚Ì‘å‚«‚¢•û‚Ì’l
-		//ˆø”1: f1
-		//ˆø”2: f2
+		//f1ã¨f2ã®çµ¶å¯¾å€¤ã‚’æ¯”è¼ƒã™ã‚‹
+		//return: çµ¶å¯¾å€¤ã®å¤§ãã„æ–¹ã®å€¤
+		//å¼•æ•°1: f1
+		//å¼•æ•°2: f2
 		template<class T>
 		inline constexpr T MaxWithAbsolute(T f1, T f2) noexcept { return Absolute(f1) > Absolute(f2) ? f1 : f2; }
 		//----------------------------------------------------------------------------------
 		//[Min]
-		//f1‚Æf2‚ğ”äŠr‚·‚é
-		//return: ¬‚³‚¢•û‚Ì’l
-		//ˆø”1: f1
-		//ˆø”2: f2
+		//f1ã¨f2ã‚’æ¯”è¼ƒã™ã‚‹
+		//return: å°ã•ã„æ–¹ã®å€¤
+		//å¼•æ•°1: f1
+		//å¼•æ•°2: f2
 		template<class T>
 		inline constexpr T Min(T f1, T f2) noexcept { return f1 < f2 ? f1 : f2; }
 		//----------------------------------------------------------------------------------
 		//[MinWithAbsolute]
-		//f1‚Æf2‚Ìâ‘Î’l‚ğ”äŠr‚·‚é
-		//return: â‘Î’l‚Ì¬‚³‚¢•û‚Ì’l
-		//ˆø”1: f1
-		//ˆø”2: f2
+		//f1ã¨f2ã®çµ¶å¯¾å€¤ã‚’æ¯”è¼ƒã™ã‚‹
+		//return: çµ¶å¯¾å€¤ã®å°ã•ã„æ–¹ã®å€¤
+		//å¼•æ•°1: f1
+		//å¼•æ•°2: f2
 		template<class T>
 		inline constexpr T MinWithAbsolute(T f1, T f2) noexcept { return Absolute(f1) < Absolute(f2) ? f1 : f2; }
 	}

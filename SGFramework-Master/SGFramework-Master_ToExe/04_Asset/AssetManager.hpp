@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Asset‚ÌŠÇ—, ¶¬‚ğs‚¤AssetManager class
+Assetã®ç®¡ç†, ç”Ÿæˆã‚’è¡Œã†AssetManager class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_ASSET_MANAGER_HPP_
 #define SGFRAMEWORK_HEADER_ASSET_MANAGER_HPP_
@@ -28,7 +28,7 @@ namespace SGFramework
 		}
 	}
 
-	//AssetŠÖ˜A‚ğŠi”[‚µ‚½Asset namespace
+	//Asseté–¢é€£ã‚’æ ¼ç´ã—ãŸAsset namespace
 	namespace Asset
 	{
 		//prototpye
@@ -62,12 +62,12 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[InstantiateAsset]
-		//ƒAƒZƒbƒgƒNƒ‰ƒX‚ğ¶¬‚·‚é
+		//ã‚¢ã‚»ãƒƒãƒˆã‚¯ãƒ©ã‚¹ã‚’ç”Ÿæˆã™ã‚‹
 		//template: asset class
 		//return: make_shared pointer
-		//ˆø”1: file path
-		//ˆø”2: asset is register shared? 
-		//			(Šù‚ÉSharedİ’è‚Ì“¯–¼“¯Œ^ƒ|ƒCƒ“ƒ^‚ª‚ ‚Á‚½ê‡‚»‚ê‚ğ•Ô‹p‚·‚é), default = true
+		//å¼•æ•°1: file path
+		//å¼•æ•°2: asset is register shared? 
+		//			(æ—¢ã«Sharedè¨­å®šã®åŒååŒå‹ãƒã‚¤ãƒ³ã‚¿ãŒã‚ã£ãŸå ´åˆãã‚Œã‚’è¿”å´ã™ã‚‹), default = true
 		template <typename TAsset>
 		inline SharedPointer<TAsset> InstantiateAsset(const sgstring& filePath, bool isRegisterSharedAsset);
 	}
@@ -75,10 +75,10 @@ namespace SGFramework
 	//Prototype
 	class Application;
 
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
-		//Asset‚ÌŠÇ—, ¶¬‚ğs‚¤AssetManager class
+		//Assetã®ç®¡ç†, ç”Ÿæˆã‚’è¡Œã†AssetManager class
 		class AssetManager final
 		{
 		public:
@@ -92,16 +92,16 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[StartMonitoring]
-			//ƒAƒZƒbƒg‚ÌŠÄ‹‚ğ•ÊƒXƒŒƒbƒh‚Ås‚¤ (ƒfƒoƒbƒOƒ‚[ƒhŒÀ’è)
+			//ã‚¢ã‚»ãƒƒãƒˆã®ç›£è¦–ã‚’åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰ã§è¡Œã† (ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰é™å®š)
 			static void StartMonitoring();
 			//----------------------------------------------------------------------------------
 			//[EndMonitoring]
-			//•ÊƒXƒŒƒbƒh‚Ås‚Á‚Ä‚¢‚½ƒAƒZƒbƒg‚ÌŠÄ‹‚ğI—¹‚·‚é (ƒfƒoƒbƒOƒ‚[ƒhŒÀ’è)
+			//åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰ã§è¡Œã£ã¦ã„ãŸã‚¢ã‚»ãƒƒãƒˆã®ç›£è¦–ã‚’çµ‚äº†ã™ã‚‹ (ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰é™å®š)
 			static void EndMonitoring();
 
 			//----------------------------------------------------------------------------------
 			//[CleanUp]
-			//ŠÄ‹‚µ‚Ä‚¢‚éƒAƒZƒbƒg‚ÉƒŠƒ“ƒNØ‚ê‚ª‚È‚¢‚©Šm”F‚·‚é (’Êí‚Í‚ ‚è‚¦‚È‚¢)
+			//ç›£è¦–ã—ã¦ã„ã‚‹ã‚¢ã‚»ãƒƒãƒˆã«ãƒªãƒ³ã‚¯åˆ‡ã‚ŒãŒãªã„ã‹ç¢ºèªã™ã‚‹ (é€šå¸¸ã¯ã‚ã‚Šãˆãªã„)
 			static void CleanUp();
 
 		private:
@@ -110,7 +110,7 @@ namespace SGFramework
 			{
 			public:
 				//----------------------------------------------------------------------------------
-				//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
+				//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 				inline LockGuardAsset(std::atomic_ushort& atomic, bool isWrite)
 					: m_atomic(atomic), m_isLockWrite(isWrite)
 				{
@@ -121,7 +121,7 @@ namespace SGFramework
 
 					do
 					{
-						//ReadLock‚Ìê‡ReadƒJƒEƒ“ƒ^‚ğ‰ÁZ‚µ‚½’l‚É‚·‚é
+						//ReadLockã®å ´åˆReadã‚«ã‚¦ãƒ³ã‚¿ã‚’åŠ ç®—ã—ãŸå€¤ã«ã™ã‚‹
 						if (IS_FALSE(m_isLockWrite))
 						{
 							oldFlag = m_atomic.load() - (m_atomic.load() & m_cWriteLockFlag);
@@ -132,7 +132,7 @@ namespace SGFramework
 				}
 
 				//----------------------------------------------------------------------------------
-				//[ƒfƒXƒgƒ‰ƒNƒ^]
+				//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 				inline ~LockGuardAsset()
 				{
 					ushort oldFlag = 0, newFlag = 0;
@@ -142,7 +142,7 @@ namespace SGFramework
 
 					do
 					{
-						//ReadLock‚Ìê‡ReadƒJƒEƒ“ƒ^‚ğ‰ÁZ‚µ‚½’l‚É‚·‚é
+						//ReadLockã®å ´åˆReadã‚«ã‚¦ãƒ³ã‚¿ã‚’åŠ ç®—ã—ãŸå€¤ã«ã™ã‚‹
 						if (IS_FALSE(m_isLockWrite))
 						{
 							oldFlag = m_atomic.load();
@@ -160,8 +160,8 @@ namespace SGFramework
 			//----------------------------------------------------------------------------------
 			//[FindAsset]
 			//return: hit -> pointer, else -> null
-			//ˆø”1: file path
-			//ˆø”2: asset type
+			//å¼•æ•°1: file path
+			//å¼•æ•°2: asset type
 			inline static SharedPointer<BaseClass::BaseAsset> FindAsset(const sgstring& filePath, Asset::AssetType type)
 			{
 				LockGuardAsset guard(m_lock, false);
@@ -174,18 +174,18 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[RegisterAsset]
-			//ˆø”1: object pointer
-			//ˆø”2: asset type
-			//ˆø”3: register shared
+			//å¼•æ•°1: object pointer
+			//å¼•æ•°2: asset type
+			//å¼•æ•°3: register shared
 			inline static void RegisterAsset(WeakPointer<BaseClass::BaseAsset> pointer,
 				Asset::AssetType type, bool isRegisterShared)
 			{
 				LockGuardAsset guard(m_lock, true);
 
-				//ŠÄ‹ƒŠƒXƒg‚É“o˜^
+				//ç›£è¦–ãƒªã‚¹ãƒˆã«ç™»éŒ²
 				m_assets.try_emplace(pointer->instanceID(), pointer);
 
-				//‹¤—LƒŠƒXƒg‚É“o˜^
+				//å…±æœ‰ãƒªã‚¹ãƒˆã«ç™»éŒ²
 				if (IS_TRUE(isRegisterShared))
 				{
 					pointer->m_isSharedAsset = true;
@@ -194,37 +194,37 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[UnregisterSharedAsset]
-			//ˆø”1: asset name
-			//ˆø”2: asset type
-			//ˆø”3: asset instanceID
+			//å¼•æ•°1: asset name
+			//å¼•æ•°2: asset type
+			//å¼•æ•°3: asset instanceID
 			inline static void UnregisterSharedAsset(const sgstring& name, Asset::AssetType type, uint instanceID)
 			{
 				LockGuardAsset guard(m_lock, true);
 
-				//ŠÄ‹ƒŠƒXƒgíœ
+				//ç›£è¦–ãƒªã‚¹ãƒˆå‰Šé™¤
 				m_assets.erase(instanceID);
 
-				//‹¤—LƒŠƒXƒgíœ
+				//å…±æœ‰ãƒªã‚¹ãƒˆå‰Šé™¤
 				if (m_findAssets[type].find(name) != m_findAssets[type].end())
 					m_findAssets.at(type).erase(name);
 			}
 
 			//----------------------------------------------------------------------------------
 			//[MonitoringThread]
-			//ƒAƒZƒbƒg‚ğŠÄ‹‚·‚é (•ÊƒXƒŒƒbƒh“®ì)
+			//ã‚¢ã‚»ãƒƒãƒˆã‚’ç›£è¦–ã™ã‚‹ (åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰å‹•ä½œ)
 			static void MonitoringThread();
 
-			//ŠÄ‹ŠÔŠu
+			//ç›£è¦–é–“éš”
 			static const std::chrono::seconds m_cMonitoringInterval;
-			//ƒAƒZƒbƒgŠÇ—ƒŠƒXƒg
+			//ã‚¢ã‚»ãƒƒãƒˆç®¡ç†ãƒªã‚¹ãƒˆ
 			static std::unordered_map<uint, WeakPointer<BaseClass::BaseAsset>> m_assets;
-			//ƒAƒZƒbƒgŒŸõ—pƒŠƒXƒg
+			//ã‚¢ã‚»ãƒƒãƒˆæ¤œç´¢ç”¨ãƒªã‚¹ãƒˆ
 			static std::unordered_map<Asset::AssetType, std::unordered_map<
 				std::wstring, WeakPointer<BaseClass::BaseAsset>>> m_findAssets;	
-			static std::thread m_monitoringThread;				//ƒAƒZƒbƒgŠÄ‹ƒXƒŒƒbƒh
+			static std::thread m_monitoringThread;				//ã‚¢ã‚»ãƒƒãƒˆç›£è¦–ã‚¹ãƒ¬ãƒƒãƒ‰
 			static std::atomic_ushort m_lock;						//lock
-			static std::atomic_bool m_isEndUpdate;				//ƒAƒbƒvƒf[ƒgI—¹ƒtƒ‰ƒO
-			static std::atomic_bool m_isNotStopUpdate;			//Update’â~ƒtƒ‰ƒO
+			static std::atomic_bool m_isEndUpdate;				//ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆçµ‚äº†ãƒ•ãƒ©ã‚°
+			static std::atomic_bool m_isNotStopUpdate;			//Updateåœæ­¢ãƒ•ãƒ©ã‚°
 		};
 	}
 }

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ŒvZƒ‰ƒCƒuƒ‰ƒŠ‚ÈMathAF namespace (math + almost float)
+è¨ˆç®—ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãªMathAF namespace (math + almost float)
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_CMATHF_DECLARATION_HPP_
 #define SGFRAMEWORK_HEADER_CMATHF_DECLARATION_HPP_
@@ -12,176 +12,176 @@
 //Framework namespace
 namespace SGFramework
 {
-	//ŒvZƒ‰ƒCƒuƒ‰ƒŠ
+	//è¨ˆç®—ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 	namespace MathAF
 	{
 		//----------------------------------------------------------------------------------
 		//[Cos]
 		//return: cosine(f)
-		//ˆø”1: f (radian)
+		//å¼•æ•°1: f (radian)
 		inline float Cos(float f) noexcept { return std::cosf(f); }
 		//----------------------------------------------------------------------------------
 		//[Sin]
 		//return: sine(f)
-		//ˆø”1: f (radian)
+		//å¼•æ•°1: f (radian)
 		inline float Sin(float f) noexcept { return std::sinf(f); }
 		//----------------------------------------------------------------------------------
 		//[Tan]
 		//return: tangent(f)
-		//ˆø”1: f (radian)
+		//å¼•æ•°1: f (radian)
 		inline float Tan(float f) noexcept { return std::tanf(f); }
 		//----------------------------------------------------------------------------------
 		//[Acos]
 		//return: arcCosine(f)
-		//ˆø”1: f (radian)
+		//å¼•æ•°1: f (radian)
 		inline float Acos(float f) noexcept { return std::acosf(f); }
 		//----------------------------------------------------------------------------------
 		//[Asin]
 		//return: arcSine(f)
-		//ˆø”1: f (radian)
+		//å¼•æ•°1: f (radian)
 		inline float Asin(float f) noexcept { return std::asinf(f); }
 		//----------------------------------------------------------------------------------
 		//[Atan]
 		//return: arcAangent(f)
-		//ˆø”1: f (radian)
+		//å¼•æ•°1: f (radian)
 		inline float Atan(float f) noexcept { return std::atanf(f); }
 		//----------------------------------------------------------------------------------
 		//[Atan2]
 		//return: arcAangent2(f)
-		//ˆø”1: f (radian)
+		//å¼•æ•°1: f (radian)
 		inline float Atan2(float y, float x) noexcept { return std::atan2f(y, x); }
 		//----------------------------------------------------------------------------------
 		//[Sqrt]
-		//return: f‚Ì•½•ûª, Fast inverse square root‚ğ—p‚¢‚é‚Ì‚Å’á¸“x & ‚‘¬
-		//ˆø”1: f
+		//return: fã®å¹³æ–¹æ ¹, Fast inverse square rootã‚’ç”¨ã„ã‚‹ã®ã§ä½ç²¾åº¦ & é«˜é€Ÿ
+		//å¼•æ•°1: f
 		inline constexpr float Sqrt(float f) noexcept;
 		//----------------------------------------------------------------------------------
 		//[SqrtLowAccuracy]
-		//return: f‚Ì•½•ûª, Sqrt‚æ‚è‚àX‚É’á¸“x‚¾‚ªÅ‚‘¬
-		//ˆø”1: f
+		//return: fã®å¹³æ–¹æ ¹, Sqrtã‚ˆã‚Šã‚‚æ›´ã«ä½ç²¾åº¦ã ãŒæœ€é«˜é€Ÿ
+		//å¼•æ•°1: f
 		inline constexpr float SqrtLowAccuracy(float f) noexcept;
 		//----------------------------------------------------------------------------------
 		//[SqrtHighAccuracy]
-		//return: f‚Ì•½•ûª, Sqrt‚æ‚è‚¸“x & ’á‘¬
-		//ˆø”1: f
+		//return: fã®å¹³æ–¹æ ¹, Sqrtã‚ˆã‚Šé«˜ç²¾åº¦ & ä½é€Ÿ
+		//å¼•æ•°1: f
 		inline float SqrtHighAccuracy(float f) noexcept { return std::sqrtf(f); }
 		//----------------------------------------------------------------------------------
 		//[Pow]
-		//return: f‚Ìpæ, p = int‚Ì•û‚ª‚‘¬
-		//ˆø”1: f
-		//ˆø”2: p
+		//return: fã®pä¹—, p = intã®æ–¹ãŒé«˜é€Ÿ
+		//å¼•æ•°1: f
+		//å¼•æ•°2: p
 		inline float Pow(float f, float p) noexcept {return std::powf(f, p); }
 		//----------------------------------------------------------------------------------
 		//[Pow]
-		//return: f‚Ìpæ
-		//ˆø”1: f
-		//ˆø”2: p
+		//return: fã®pä¹—
+		//å¼•æ•°1: f
+		//å¼•æ•°2: p
 		inline constexpr float Pow(float f, int p) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Pow2]
-		//return: f‚Ì2æ
-		//ˆø”1: f
+		//return: fã®2ä¹—
+		//å¼•æ•°1: f
 		inline constexpr float Pow2(float f) noexcept { return f * f; }
 		//----------------------------------------------------------------------------------
 		//[Pow3]
-		//return: f‚Ì3æ
-		//ˆø”1: f
+		//return: fã®3ä¹—
+		//å¼•æ•°1: f
 		inline constexpr float Pow3(float f) noexcept { return f * f * f; }
 		//----------------------------------------------------------------------------------
 		//[Pow4]
-		//return: f‚Ì4æ
-		//ˆø”1: f
+		//return: fã®4ä¹—
+		//å¼•æ•°1: f
 		inline constexpr float Pow4(float f) noexcept { return f * f * f * f; }
 		//----------------------------------------------------------------------------------
 		//[Pow5]
-		//return: f‚Ì5æ
-		//ˆø”1: f
+		//return: fã®5ä¹—
+		//å¼•æ•°1: f
 		inline constexpr float Pow5(float f) noexcept { return f * f * f * f * f; }
 		//----------------------------------------------------------------------------------
 		//[Log]
-		//return: f‚Ì‘Î”
-		//ˆø”1: f
+		//return: fã®å¯¾æ•°
+		//å¼•æ•°1: f
 		inline float Log(float f) noexcept { return std::logf(f); }
 		//----------------------------------------------------------------------------------
 		//[Log10]
-		//return: f‚Ì’ê‚ª10‚È‘Î”
-		//ˆø”1: f
+		//return: fã®åº•ãŒ10ãªå¯¾æ•°
+		//å¼•æ•°1: f
 		inline float Log10(float f) noexcept { return std::log10f(f); }
 
 		//----------------------------------------------------------------------------------
 		//[Lerp3D]
-		//from‚Æto‚ÌŠÔ‚ğt‚ÅüŒ`•âŠ®‚µ‚½‚à‚Ì‚ğ•Ô‹p‚·‚é, •âŠ®‚É‚Í3ŸŠÖ”•âŠ®‚ğg‚¤
-		//return: from‚©‚çto‚Ö‚ÌüŒ`(3ŸŠÖ”)•âŠÔ
-		//ˆø”1: from
-		//ˆø”2: to
-		//ˆø”3: •âŠ®‚Ì“x‡‚¢(0 ~ 1)s
+		//fromã¨toã®é–“ã‚’tã§ç·šå½¢è£œå®Œã—ãŸã‚‚ã®ã‚’è¿”å´ã™ã‚‹, è£œå®Œã«ã¯3æ¬¡é–¢æ•°è£œå®Œã‚’ä½¿ã†
+		//return: fromã‹ã‚‰toã¸ã®ç·šå½¢(3æ¬¡é–¢æ•°)è£œé–“
+		//å¼•æ•°1: from
+		//å¼•æ•°2: to
+		//å¼•æ•°3: è£œå®Œã®åº¦åˆã„(0 ~ 1)s
 		inline constexpr float Lerp3D(float from, float to, float t) noexcept;
 		//----------------------------------------------------------------------------------
 		//[LerpDirect]
-		//from‚Æto‚ÌŠÔ‚ğt‚ÅüŒ`•âŠ®‚µ‚½‚à‚Ì‚ğ•Ô‹p‚·‚é, •âŠ®‚É‚Í‚½‚¾‚ÌüŒ`•âŠÔ‚ğg‚¤
-		//return: from‚©‚çto‚Ö‚ÌüŒ`•âŠÔ
-		//ˆø”1: from
-		//ˆø”2: to
-		//ˆø”3: •âŠ®‚Ì“x‡‚¢(0 ~ 1)
+		//fromã¨toã®é–“ã‚’tã§ç·šå½¢è£œå®Œã—ãŸã‚‚ã®ã‚’è¿”å´ã™ã‚‹, è£œå®Œã«ã¯ãŸã ã®ç·šå½¢è£œé–“ã‚’ä½¿ã†
+		//return: fromã‹ã‚‰toã¸ã®ç·šå½¢è£œé–“
+		//å¼•æ•°1: from
+		//å¼•æ•°2: to
+		//å¼•æ•°3: è£œå®Œã®åº¦åˆã„(0 ~ 1)
 		inline constexpr float LerpDirect(float from, float to, float t) noexcept;
 
 		//----------------------------------------------------------------------------------
 		//[GreatestCommonDenominator]
-		//return: A‚ÆB‚ÌÅ‘åŒö–ñ”
-		//ˆø”1: ”šA
-		//ˆø”1: ”šB
+		//return: Aã¨Bã®æœ€å¤§å…¬ç´„æ•°
+		//å¼•æ•°1: æ•°å­—A
+		//å¼•æ•°1: æ•°å­—B
 		inline constexpr int GreatestCommonDenominator(int a, int b) noexcept;
 		//----------------------------------------------------------------------------------
 		//[AspectRatio]
-		//return: A‚ÆB‚ÌƒAƒXƒyƒNƒg”ä
-		//ˆø”1: ƒAƒXƒyƒNƒg”ä‚ğZo‚·‚éVector
+		//return: Aã¨Bã®ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
+		//å¼•æ•°1: ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”ã‚’ç®—å‡ºã™ã‚‹Vector
 		inline constexpr Vector2Int AspectRatio(Vector2Int vec) noexcept;
 
 
 		//----------------------------------------------------------------------------------
 		//[NormalDirection]
-		//return: O“_‚ªì‚é–Ê‚Ì–@üƒxƒNƒgƒ‹
-		//ˆø”1: ’¸“_1
-		//ˆø”2: ’¸“_2
-		//ˆø”3: ’¸“_3
+		//return: ä¸‰ç‚¹ãŒä½œã‚‹é¢ã®æ³•ç·šãƒ™ã‚¯ãƒˆãƒ«
+		//å¼•æ•°1: é ‚ç‚¹1
+		//å¼•æ•°2: é ‚ç‚¹2
+		//å¼•æ•°3: é ‚ç‚¹3
 		inline SGFramework::Vector3 NormalDirection(const SGFramework::Vector3& vertex1, 
 			const SGFramework::Vector3& vertex2, const SGFramework::Vector3& vertex3) noexcept { return Vector3::Cross(vertex2 - vertex1, vertex3 - vertex2).Normalized(); }
 		//----------------------------------------------------------------------------------
 		//[DistanceWithPointToPlane]
-		//return: À•W‚Æ•½–Ê‚ÌÅ’Z‹——£
-		//ˆø”1: À•W
-		//ˆø”2: •½–Ê‚ÌÀ•W
-		//ˆø”3: •½–Ê‚Ì–@ü
+		//return: åº§æ¨™ã¨å¹³é¢ã®æœ€çŸ­è·é›¢
+		//å¼•æ•°1: åº§æ¨™
+		//å¼•æ•°2: å¹³é¢ã®åº§æ¨™
+		//å¼•æ•°3: å¹³é¢ã®æ³•ç·š
 		inline float DistanceWithPointToPlane(const SGFramework::Vector3& point, 
 			const SGFramework::Vector3& planePos, const SGFramework::Vector3& planeNormal) noexcept { return Absolute(Vector3::Dot(planeNormal, point - planePos)); }
 
 		//----------------------------------------------------------------------------------
 		//[AspectRatioSettingX]
-		//x‚ğŠî‚Éw’è‚µ‚½ƒAƒXƒyƒNƒg”ä‚ÌVector‚ğZo‚·‚é
-		//return: x‚ğŠî‚ÉŒvZ‚µ‚½ƒAƒXƒyƒNƒg”ä
-		//ˆø”1: Šî‚É‚·‚éx
-		//ˆø”2: ƒAƒXƒyƒNƒg”ä
+		//xã‚’åŸºã«æŒ‡å®šã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”ã®Vectorã‚’ç®—å‡ºã™ã‚‹
+		//return: xã‚’åŸºã«è¨ˆç®—ã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
+		//å¼•æ•°1: åŸºã«ã™ã‚‹x
+		//å¼•æ•°2: ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
 		inline constexpr SGFramework::Vector2 AspectRatioSettingX(float x, const SGFramework::Vector2& aspectRadio) noexcept;
 		//----------------------------------------------------------------------------------
 		//[AspectRatioSettingX]
-		//x‚ğŠî‚Éw’è‚µ‚½ƒAƒXƒyƒNƒg”ä‚ÌVector‚ğZo‚·‚é
-		//return: x‚ğŠî‚ÉŒvZ‚µ‚½ƒAƒXƒyƒNƒg”ä
-		//ˆø”1: Šî‚É‚·‚éx
-		//ˆø”2: ƒAƒXƒyƒNƒg”ä
+		//xã‚’åŸºã«æŒ‡å®šã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”ã®Vectorã‚’ç®—å‡ºã™ã‚‹
+		//return: xã‚’åŸºã«è¨ˆç®—ã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
+		//å¼•æ•°1: åŸºã«ã™ã‚‹x
+		//å¼•æ•°2: ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
 		inline constexpr Vector2Int AspectRatioSettingX(int x, const Vector2Int& aspectRadio) noexcept;
 		//----------------------------------------------------------------------------------
 		//[AspectRatioSettingY]
-		//y‚ğŠî‚Éw’è‚µ‚½ƒAƒXƒyƒNƒg”ä‚ÌVector‚ğZo‚·‚é
-		//return: y‚ğŠî‚ÉŒvZ‚µ‚½ƒAƒXƒyƒNƒg”ä
-		//ˆø”1: Šî‚É‚·‚éy
-		//ˆø”2: ƒAƒXƒyƒNƒg”ä
+		//yã‚’åŸºã«æŒ‡å®šã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”ã®Vectorã‚’ç®—å‡ºã™ã‚‹
+		//return: yã‚’åŸºã«è¨ˆç®—ã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
+		//å¼•æ•°1: åŸºã«ã™ã‚‹y
+		//å¼•æ•°2: ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
 		inline constexpr SGFramework::Vector2 AspectRatioSettingY(float y, const SGFramework::Vector2& aspectRadio) noexcept;
 		//----------------------------------------------------------------------------------
 		//[AspectRatioSettingY]
-		//y‚ğŠî‚Éw’è‚µ‚½ƒAƒXƒyƒNƒg”ä‚ÌVector‚ğZo‚·‚é
-		//return: y‚ğŠî‚ÉŒvZ‚µ‚½ƒAƒXƒyƒNƒg”ä
-		//ˆø”1: Šî‚É‚·‚éy
-		//ˆø”2: ƒAƒXƒyƒNƒg”ä
+		//yã‚’åŸºã«æŒ‡å®šã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”ã®Vectorã‚’ç®—å‡ºã™ã‚‹
+		//return: yã‚’åŸºã«è¨ˆç®—ã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
+		//å¼•æ•°1: åŸºã«ã™ã‚‹y
+		//å¼•æ•°2: ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
 		inline constexpr Vector2Int AspectRatioSettingY(int y, const Vector2Int& aspectRadio) noexcept;
 
 
@@ -192,8 +192,8 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Sqrt]
-		//return: f‚Ì•½•ûª, Fast inverse square root‚ğ—p‚¢‚é‚Ì‚Å¸“x‚Í’á‚ß
-		//ˆø”1: f (radian)
+		//return: fã®å¹³æ–¹æ ¹, Fast inverse square rootã‚’ç”¨ã„ã‚‹ã®ã§ç²¾åº¦ã¯ä½ã‚
+		//å¼•æ•°1: f (radian)
 		inline constexpr float Sqrt(float f) noexcept
 		{
 			int i = 0x5f3759df - (*reinterpret_cast<int*>(&f) >> 1);
@@ -204,8 +204,8 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[SqrtLowAccuracy]
-		//return: f‚Ì•½•ûª, Sqrt‚æ‚è‚àX‚É’á¸“x‚¾‚ªÅ‚‘¬
-		//ˆø”1: f
+		//return: fã®å¹³æ–¹æ ¹, Sqrtã‚ˆã‚Šã‚‚æ›´ã«ä½ç²¾åº¦ã ãŒæœ€é«˜é€Ÿ
+		//å¼•æ•°1: f
 		constexpr float SqrtLowAccuracy(float f) noexcept
 		{
 			int i = 0x5f3759df - (*reinterpret_cast<int*>(&f) >> 1);
@@ -216,9 +216,9 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Pow]
-		//return: f‚Ìpæ
-		//ˆø”1: f
-		//ˆø”2: p
+		//return: fã®pä¹—
+		//å¼•æ•°1: f
+		//å¼•æ•°2: p
 		inline constexpr float Pow(float f, int p) noexcept
 		{
 			if (IsZero(f) || p == 0) return 1.0f;
@@ -234,15 +234,15 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Lerp3D]
-		//from‚Æto‚ÌŠÔ‚ğt‚ÅüŒ`•âŠ®‚µ‚½‚à‚Ì‚ğ•Ô‹p‚·‚é, •âŠ®‚É‚Í3ŸŠÖ”•âŠ®‚ğg‚¤
-		//return: from‚©‚çto‚Ö‚ÌüŒ`(3ŸŠÖ”)•âŠÔ
-		//ˆø”1: from
-		//ˆø”2: to
-		//ˆø”3: •âŠ®‚Ì“x‡‚¢(0 ~ 1)s
+		//fromã¨toã®é–“ã‚’tã§ç·šå½¢è£œå®Œã—ãŸã‚‚ã®ã‚’è¿”å´ã™ã‚‹, è£œå®Œã«ã¯3æ¬¡é–¢æ•°è£œå®Œã‚’ä½¿ã†
+		//return: fromã‹ã‚‰toã¸ã®ç·šå½¢(3æ¬¡é–¢æ•°)è£œé–“
+		//å¼•æ•°1: from
+		//å¼•æ•°2: to
+		//å¼•æ•°3: è£œå®Œã®åº¦åˆã„(0 ~ 1)s
 		inline constexpr float Lerp3D(float from, float to, float t) noexcept
 		{
 			if (t > 1.0f) t = 1.0f;	else if (t < 0.0f) t = 0.0f;
-			//3ŸŠÖ”•âŠÔ
+			//3æ¬¡é–¢æ•°è£œé–“
 			float rate = t * t * (3.0f - 2.0f * t);
 
 			//return
@@ -250,11 +250,11 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[LerpDirect]
-		//from‚Æto‚ÌŠÔ‚ğt‚ÅüŒ`•âŠ®‚µ‚½‚à‚Ì‚ğ•Ô‹p‚·‚é, •âŠ®‚É‚Í‚½‚¾‚ÌüŒ`•âŠÔ‚ğg‚¤
-		//return: from‚©‚çto‚Ö‚ÌüŒ`•âŠÔ
-		//ˆø”1: from
-		//ˆø”2: to
-		//ˆø”3: •âŠ®‚Ì“x‡‚¢(0 ~ 1)
+		//fromã¨toã®é–“ã‚’tã§ç·šå½¢è£œå®Œã—ãŸã‚‚ã®ã‚’è¿”å´ã™ã‚‹, è£œå®Œã«ã¯ãŸã ã®ç·šå½¢è£œé–“ã‚’ä½¿ã†
+		//return: fromã‹ã‚‰toã¸ã®ç·šå½¢è£œé–“
+		//å¼•æ•°1: from
+		//å¼•æ•°2: to
+		//å¼•æ•°3: è£œå®Œã®åº¦åˆã„(0 ~ 1)
 		inline constexpr float LerpDirect(float from, float to, float t) noexcept
 		{
 			if (t > 1.0f) t = 1.0f;	else if (t < 0.0f) t = 0.0f;
@@ -264,18 +264,18 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[GreatestCommonDenominator]
-		//return: A‚ÆB‚ÌÅ‘åŒö–ñ”
-		//ˆø”1: ”šA
-		//ˆø”1: ”šB
+		//return: Aã¨Bã®æœ€å¤§å…¬ç´„æ•°
+		//å¼•æ•°1: æ•°å­—A
+		//å¼•æ•°1: æ•°å­—B
 		inline constexpr int GreatestCommonDenominator(int a, int b) noexcept
 		{
-			// - ‚Ì’l‚Ìê‡‹““®‚ª‰ö‚µ‚¢‚Ì‚ÅI—¹
+			// - ã®å€¤ã®å ´åˆæŒ™å‹•ãŒæ€ªã—ã„ã®ã§çµ‚äº†
 			if (a < 0 || b < 0)	return 0;
-			//b‚ªa‚æ‚è‘å‚«‚¢ê‡‹t‚ğÀs
+			//bãŒaã‚ˆã‚Šå¤§ãã„å ´åˆé€†ã‚’å®Ÿè¡Œ
 			else if (a < b)		return GreatestCommonDenominator(b, a);
 			else
 			{
-				//ƒ†[ƒNƒŠƒbƒh‚ÌŒİœ–@
+				//ãƒ¦ãƒ¼ã‚¯ãƒªãƒƒãƒ‰ã®äº’é™¤æ³•
 				while (b != 0)
 				{
 					int temp = a % b;
@@ -287,8 +287,8 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[AspectRatio]
-		//return: A‚ÆB‚ÌƒAƒXƒyƒNƒg”ä
-		//ˆø”1: ƒAƒXƒyƒNƒg”ä‚ğZo‚·‚éVector
+		//return: Aã¨Bã®ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
+		//å¼•æ•°1: ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”ã‚’ç®—å‡ºã™ã‚‹Vector
 		inline constexpr SGFramework::Vector2Int AspectRatio(SGFramework::Vector2Int vec) noexcept
 		{
 			int gcd = GreatestCommonDenominator(vec.x, vec.y);
@@ -299,40 +299,40 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[AspectRatioSettingX]
-		//x‚ğŠî‚Éw’è‚µ‚½ƒAƒXƒyƒNƒg”ä‚ÌVector‚ğZo‚·‚é
-		//return: x‚ğŠî‚ÉŒvZ‚µ‚½ƒAƒXƒyƒNƒg”ä
-		//ˆø”1: Šî‚É‚·‚éx
-		//ˆø”2: ƒAƒXƒyƒNƒg”ä
+		//xã‚’åŸºã«æŒ‡å®šã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”ã®Vectorã‚’ç®—å‡ºã™ã‚‹
+		//return: xã‚’åŸºã«è¨ˆç®—ã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
+		//å¼•æ•°1: åŸºã«ã™ã‚‹x
+		//å¼•æ•°2: ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
 		inline constexpr SGFramework::Vector2 AspectRatioSettingX(float x, const SGFramework::Vector2& aspectRadio) noexcept
 		{
 			return SGFramework::Vector2(x, x * (aspectRadio.y / aspectRadio.x));
 		}
 		//----------------------------------------------------------------------------------
 		//[AspectRatioSettingX]
-		//x‚ğŠî‚Éw’è‚µ‚½ƒAƒXƒyƒNƒg”ä‚ÌVector‚ğZo‚·‚é
-		//return: x‚ğŠî‚ÉŒvZ‚µ‚½ƒAƒXƒyƒNƒg”ä
-		//ˆø”1: Šî‚É‚·‚éx
-		//ˆø”2: ƒAƒXƒyƒNƒg”ä
+		//xã‚’åŸºã«æŒ‡å®šã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”ã®Vectorã‚’ç®—å‡ºã™ã‚‹
+		//return: xã‚’åŸºã«è¨ˆç®—ã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
+		//å¼•æ•°1: åŸºã«ã™ã‚‹x
+		//å¼•æ•°2: ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
 		inline constexpr SGFramework::Vector2Int AspectRatioSettingX(int x, const SGFramework::Vector2Int& aspectRadio) noexcept
 		{
 			return Vector2Int(x, static_cast<int>(static_cast<float>(x) * (static_cast<float>(aspectRadio.y) / static_cast<float>(aspectRadio.x))));
 		}
 		//----------------------------------------------------------------------------------
 		//[AspectRatioSettingY]
-		//y‚ğŠî‚Éw’è‚µ‚½ƒAƒXƒyƒNƒg”ä‚ÌVector‚ğZo‚·‚é
-		//return: y‚ğŠî‚ÉŒvZ‚µ‚½ƒAƒXƒyƒNƒg”ä
-		//ˆø”1: Šî‚É‚·‚éy
-		//ˆø”2: ƒAƒXƒyƒNƒg”ä
+		//yã‚’åŸºã«æŒ‡å®šã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”ã®Vectorã‚’ç®—å‡ºã™ã‚‹
+		//return: yã‚’åŸºã«è¨ˆç®—ã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
+		//å¼•æ•°1: åŸºã«ã™ã‚‹y
+		//å¼•æ•°2: ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
 		inline constexpr SGFramework::Vector2 AspectRatioSettingY(float y, const SGFramework::Vector2& aspectRadio) noexcept
 		{
 			return SGFramework::Vector2(y, y * (aspectRadio.x / aspectRadio.y));
 		}
 		//----------------------------------------------------------------------------------
 		//[AspectRatioSettingY]
-		//y‚ğŠî‚Éw’è‚µ‚½ƒAƒXƒyƒNƒg”ä‚ÌVector‚ğZo‚·‚é
-		//return: y‚ğŠî‚ÉŒvZ‚µ‚½ƒAƒXƒyƒNƒg”ä
-		//ˆø”1: Šî‚É‚·‚éy
-		//ˆø”2: ƒAƒXƒyƒNƒg”ä
+		//yã‚’åŸºã«æŒ‡å®šã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”ã®Vectorã‚’ç®—å‡ºã™ã‚‹
+		//return: yã‚’åŸºã«è¨ˆç®—ã—ãŸã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
+		//å¼•æ•°1: åŸºã«ã™ã‚‹y
+		//å¼•æ•°2: ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
 		inline constexpr SGFramework::Vector2Int AspectRatioSettingY(int y, const SGFramework::Vector2Int& aspectRadio) noexcept
 		{
 			return SGFramework::Vector2Int(y, static_cast<int>(static_cast<float>(y) *

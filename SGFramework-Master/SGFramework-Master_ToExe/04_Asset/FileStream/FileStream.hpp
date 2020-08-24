@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-File“üo—Í‚ğs‚¤FileStream, WFileStream class
+Fileå…¥å‡ºåŠ›ã‚’è¡Œã†FileStream, WFileStream class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_FILE_STREAM_HPP_
 #define SGFRAMEWORK_HEADER_FILE_STREAM_HPP_
@@ -19,104 +19,104 @@ namespace SGFramework
 	//File Edit
 	namespace File
 	{
-		//File“üo—Í‚ğs‚¤FileStream
-		//‘Î‰•¶š‚Íchar•¶š, ‹K’è•¶šƒR[ƒh‚ÍUTF-8
+		//Fileå…¥å‡ºåŠ›ã‚’è¡Œã†FileStream
+		//å¯¾å¿œæ–‡å­—ã¯charæ–‡å­—, è¦å®šæ–‡å­—ã‚³ãƒ¼ãƒ‰ã¯UTF-8
 		class FileStream final
 		{
 		public:
 			//----------------------------------------------------------------------------------
 			//[Open]
-			//ƒtƒ@ƒCƒ‹‚ğŠJ‚­,  –{ŠÖ”Às“_‚Å‘Î‰ƒR[ƒh‚ÍUTF-8‚Æ‚È‚é
-			//throw: ƒtƒ@ƒ‹‚ªŠJ‚¯‚È‚©‚Á‚½ê‡
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX(Šg’£qŠÜ‚Ş)
-			//ˆø”2: ƒoƒCƒiƒŠ‚ÅŠJ‚­‚©”Û‚© : default = false
-			//ˆø”3: ’Ç‰Á‘‚«‚İd—l‚ÅŠJ‚­‚©”Û‚© : default = false
-			//ˆø”4: UTF-8w’è‚ğ–³Œø‚É‚·‚é : default = false
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã,  æœ¬é–¢æ•°å®Ÿè¡Œæ™‚ç‚¹ã§å¯¾å¿œã‚³ãƒ¼ãƒ‰ã¯UTF-8ã¨ãªã‚‹
+			//throw: ãƒ•ã‚¡ãƒ«ãŒé–‹ã‘ãªã‹ã£ãŸå ´åˆ
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹(æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: ãƒã‚¤ãƒŠãƒªã§é–‹ãã‹å¦ã‹ : default = false
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ä»•æ§˜ã§é–‹ãã‹å¦ã‹ : default = false
+			//å¼•æ•°4: UTF-8æŒ‡å®šã‚’ç„¡åŠ¹ã«ã™ã‚‹ : default = false
 			inline void Open(const sgstring& path, bool isBinary = false, 
 				bool isAppend = false, bool isInvalidUtf8 = false);
 			//----------------------------------------------------------------------------------
 			//[Close]
-			//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 			inline void Close();
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş (char->wide•ÏŠ·)
-			//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€ (char->wideå¤‰æ›)
+			//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—
 			inline sgstring Read();
 			//----------------------------------------------------------------------------------
 			//[ReadUnite]
-			//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş (•ÏŠ·‚Å‚Í‚È‚­, char2•¶š‚ğ‡‘Ì‚³‚¹‚Äwchar‚Æ‚µ‚Äˆµ‚¤)
-			//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€ (å¤‰æ›ã§ã¯ãªã, char2æ–‡å­—ã‚’åˆä½“ã•ã›ã¦wcharã¨ã—ã¦æ‰±ã†)
+			//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—
 			inline sgstring ReadUnite();
 			//----------------------------------------------------------------------------------
 			//[ReadStd]
-			//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş, std”Å
-			//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€, stdç‰ˆ
+			//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—
 			inline std::string ReadStd();
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş (char->wide•ÏŠ·)
-			//ˆø”1: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ‚ğ‘ã“ü‚·‚éstring
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€ (char->wideå¤‰æ›)
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹string
 			inline void Read(sgstring& string);
 			//----------------------------------------------------------------------------------
 			//[ReadUnite]
-			//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş (•ÏŠ·‚Å‚Í‚È‚­, char2•¶š‚ğ‡‘Ì‚³‚¹‚Äwchar‚Æ‚µ‚Äˆµ‚¤)
-			//ˆø”1: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ‚ğ‘ã“ü‚·‚éstring
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€ (å¤‰æ›ã§ã¯ãªã, char2æ–‡å­—ã‚’åˆä½“ã•ã›ã¦wcharã¨ã—ã¦æ‰±ã†)
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹string
 			inline sgstring ReadUnite(sgstring& string);
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş, std”Å
-			//ˆø”1: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ‚ğ‘ã“ü‚·‚éstring
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€, stdç‰ˆ
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹string
 			inline void ReadStd(std::string& string);
 			//----------------------------------------------------------------------------------
 			//[ReadVector]
-			//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş, std::vector”Å
-			//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€, std::vectorç‰ˆ
+			//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—
 			inline std::vector<byte> ReadVector();
 			//----------------------------------------------------------------------------------
 			//[ReadVector]
-			//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş, std::vector”Å
-			//ˆø”1: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ‚ğ‘ã“ü‚·‚évector
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€, std::vectorç‰ˆ
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹vector
 			inline void ReadVector(std::vector<byte>& vector);
 			//----------------------------------------------------------------------------------
 			//[Write]
-			//ƒtƒ@ƒCƒ‹‚Éwrite‚ğ‘‚«‚Ş (wide->char•ÏŠ·)
-			//ˆø”1: ƒtƒ@ƒCƒ‹‚É‘‚«‚Şstring
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã«writeã‚’æ›¸ãè¾¼ã‚€ (wide->charå¤‰æ›)
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€string
 			inline void Write(const sgstring& write);
 			//----------------------------------------------------------------------------------
 			//[WriteSplit]
-			//ƒtƒ@ƒCƒ‹‚Éwrite‚ğ‘‚«‚Ş (•ÏŠ·‚Å‚Í‚È‚­, wchar1•¶š‚ğ•ªŠ„‚³‚¹‚Ächar‚Æ‚µ‚Äˆµ‚¤)
-			//ˆø”1: ƒtƒ@ƒCƒ‹‚É‘‚«‚Şstring
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã«writeã‚’æ›¸ãè¾¼ã‚€ (å¤‰æ›ã§ã¯ãªã, wchar1æ–‡å­—ã‚’åˆ†å‰²ã•ã›ã¦charã¨ã—ã¦æ‰±ã†)
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€string
 			inline void WriteSplit(const sgstring& write);
 			//----------------------------------------------------------------------------------
 			//[Write]
-			//ƒtƒ@ƒCƒ‹‚Éwrite‚ğ‘‚«‚Ş , std”Å
-			//ˆø”1: ƒtƒ@ƒCƒ‹‚É‘‚«‚Şstring
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã«writeã‚’æ›¸ãè¾¼ã‚€ , stdç‰ˆ
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€string
 			inline void Write(const std::string& write);
 			//----------------------------------------------------------------------------------
 			//[Write]
-			//ƒtƒ@ƒCƒ‹‚Éwrite‚ğ‘‚«‚Ş , std”Å
-			//ˆø”1: ƒtƒ@ƒCƒ‹‚É‘‚«‚Şstring
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã«writeã‚’æ›¸ãè¾¼ã‚€ , stdç‰ˆ
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€string
 			inline void Write(const std::vector<byte>& write);
 			//----------------------------------------------------------------------------------
 			//[IsOpen]
-			//return: ƒtƒ@ƒCƒ‹‚ªthis‚ğ—p‚¢‚ÄŠJ‚¢‚Ä‚¢‚é‚©”Û‚©
+			//return: ãƒ•ã‚¡ã‚¤ãƒ«ãŒthisã‚’ç”¨ã„ã¦é–‹ã„ã¦ã„ã‚‹ã‹å¦ã‹
 			inline bool IsOpen();
 			//----------------------------------------------------------------------------------
 			//[IsBinary]
-			//return: ƒoƒCƒiƒŠŠJ‚¢‚Ä‚¢‚é‚©”Û‚©
+			//return: ãƒã‚¤ãƒŠãƒªé–‹ã„ã¦ã„ã‚‹ã‹å¦ã‹
 			inline bool IsBinary() { return m_isBinary; }
 
 			//----------------------------------------------------------------------------------
 			//[ChangeLocale]
-			//Locale‚ğ•ÏX‚·‚é
-			//ˆø”1: •ÏX‚·‚élocale , ’ˆÓIthis‚ÌƒfƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Î‚ê‚é‚Ü‚Å—LŒø‚Èƒ|ƒCƒ“ƒ^‚Å‚ ‚é‚±‚Æ
+			//Localeã‚’å¤‰æ›´ã™ã‚‹
+			//å¼•æ•°1: å¤‰æ›´ã™ã‚‹locale , æ³¨æ„ï¼thisã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã°ã‚Œã‚‹ã¾ã§æœ‰åŠ¹ãªãƒã‚¤ãƒ³ã‚¿ã§ã‚ã‚‹ã“ã¨
 			template <class _Elem, unsigned long _Mymax, std::codecvt_mode _Mymode>
 			inline void ChangeLocale(std::codecvt_utf8<_Elem, _Mymax, _Mymode>& convert);
 			//----------------------------------------------------------------------------------
 			//[ChangeLocale]
-			//Locale‚ğ•ÏX‚·‚é
-			//ˆø”1: •ÏX‚·‚élocale , ’ˆÓIthis‚ÌƒfƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Î‚ê‚é‚Ü‚Å—LŒø‚Èƒ|ƒCƒ“ƒ^‚Å‚ ‚é‚±‚Æ
+			//Localeã‚’å¤‰æ›´ã™ã‚‹
+			//å¼•æ•°1: å¤‰æ›´ã™ã‚‹locale , æ³¨æ„ï¼thisã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã°ã‚Œã‚‹ã¾ã§æœ‰åŠ¹ãªãƒã‚¤ãƒ³ã‚¿ã§ã‚ã‚‹ã“ã¨
 			template <class _Elem, unsigned long _Mymax, std::codecvt_mode _Mymode>
 			inline void ChangeLocale(std::codecvt_utf16<_Elem, _Mymax, _Mymode>& convert);
 			
@@ -136,74 +136,74 @@ namespace SGFramework
 			bool m_isBinary;
 		};
 
-		//File“üo—Í‚ğs‚¤WFileStream
-		//‘Î‰•¶š‚Íwchar•¶š, ‹K’è•¶šƒR[ƒh‚ÍUTF-8
+		//Fileå…¥å‡ºåŠ›ã‚’è¡Œã†WFileStream
+		//å¯¾å¿œæ–‡å­—ã¯wcharæ–‡å­—, è¦å®šæ–‡å­—ã‚³ãƒ¼ãƒ‰ã¯UTF-8
 		class WFileStream final
 		{
 		public:
 			//----------------------------------------------------------------------------------
 			//[Open]
-			//ƒtƒ@ƒCƒ‹‚ğŠJ‚­,  –{ŠÖ”Às“_‚Å‘Î‰ƒR[ƒh‚ÍUTF-8‚Æ‚È‚é
-			//throw: ƒtƒ@ƒ‹‚ªŠJ‚¯‚È‚©‚Á‚½ê‡
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX(Šg’£qŠÜ‚Ş)
-			//ˆø”2: ƒoƒCƒiƒŠ‚ÅŠJ‚­‚©”Û‚© : default = false
-			//ˆø”3: ’Ç‰Á‘‚«‚İd—l‚ÅŠJ‚­‚©”Û‚© : default = false
-			//ˆø”4: UTF-8w’è‚ğ–³Œø‚É‚·‚é : default = false
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã,  æœ¬é–¢æ•°å®Ÿè¡Œæ™‚ç‚¹ã§å¯¾å¿œã‚³ãƒ¼ãƒ‰ã¯UTF-8ã¨ãªã‚‹
+			//throw: ãƒ•ã‚¡ãƒ«ãŒé–‹ã‘ãªã‹ã£ãŸå ´åˆ
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹(æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: ãƒã‚¤ãƒŠãƒªã§é–‹ãã‹å¦ã‹ : default = false
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ä»•æ§˜ã§é–‹ãã‹å¦ã‹ : default = false
+			//å¼•æ•°4: UTF-8æŒ‡å®šã‚’ç„¡åŠ¹ã«ã™ã‚‹ : default = false
 			inline void Open(const sgstring& path, bool isBinary = false,
 				bool isAppend = false, bool isInvalidUtf8 = false);
 			//----------------------------------------------------------------------------------
 			//[Close]
-			//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 			inline void Close();
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş
-			//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€
+			//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—
 			inline sgstring Read();
 			//----------------------------------------------------------------------------------
 			//[ReadStd]
-			//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş, std”Å
-			//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€, stdç‰ˆ
+			//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—
 			inline std::string ReadStd();
 			//----------------------------------------------------------------------------------
 			//[ReadStd]
-			//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş
-			//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€
+			//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—
 			inline void Read(sgstring& string);
 			//----------------------------------------------------------------------------------
 			//[ReadStd]
-			//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş, std”Å
-			//ˆø”1: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ‚ğ‘ã“ü‚·‚éstring
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€, stdç‰ˆ
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹string
 			inline void ReadStd(std::wstring& string);
 			//----------------------------------------------------------------------------------
 			//[Write]
-			//ƒtƒ@ƒCƒ‹‚Éwrite‚ğ‘‚«‚Ş
-			//ˆø”1: ƒtƒ@ƒCƒ‹‚É‘‚«‚Şstring
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã«writeã‚’æ›¸ãè¾¼ã‚€
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€string
 			inline void Write(const sgstring& write);
 			//----------------------------------------------------------------------------------
 			//[Write]
-			//ƒtƒ@ƒCƒ‹‚Éwrite‚ğ‘‚«‚Ş
-			//ˆø”1: ƒtƒ@ƒCƒ‹‚É‘‚«‚Şstring
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã«writeã‚’æ›¸ãè¾¼ã‚€
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€string
 			inline void Write(const std::wstring& write);
 			//----------------------------------------------------------------------------------
 			//[IsOpen]
-			//return: ƒtƒ@ƒCƒ‹‚ªthis‚ğ—p‚¢‚ÄŠJ‚¢‚Ä‚¢‚é‚©”Û‚©
+			//return: ãƒ•ã‚¡ã‚¤ãƒ«ãŒthisã‚’ç”¨ã„ã¦é–‹ã„ã¦ã„ã‚‹ã‹å¦ã‹
 			inline bool IsOpen();
 			//----------------------------------------------------------------------------------
 			//[IsBinary]
-			//return: ƒoƒCƒiƒŠŠJ‚¢‚Ä‚¢‚é‚©”Û‚©
+			//return: ãƒã‚¤ãƒŠãƒªé–‹ã„ã¦ã„ã‚‹ã‹å¦ã‹
 			inline bool IsBinary() { return m_isBinary; }
 
 			//----------------------------------------------------------------------------------
 			//[ChangeLocale]
-			//Locale‚ğ•ÏX‚·‚é
-			//ˆø”1: •ÏX‚·‚élocale , ’ˆÓIthis‚ÌƒfƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Î‚ê‚é‚Ü‚Å—LŒø‚Èƒ|ƒCƒ“ƒ^‚Å‚ ‚é‚±‚Æ
+			//Localeã‚’å¤‰æ›´ã™ã‚‹
+			//å¼•æ•°1: å¤‰æ›´ã™ã‚‹locale , æ³¨æ„ï¼thisã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã°ã‚Œã‚‹ã¾ã§æœ‰åŠ¹ãªãƒã‚¤ãƒ³ã‚¿ã§ã‚ã‚‹ã“ã¨
 			template <class _Elem, unsigned long _Mymax, std::codecvt_mode _Mymode>
 			inline void ChangeLocale(std::codecvt_utf8<_Elem, _Mymax, _Mymode>& convert);
 			//----------------------------------------------------------------------------------
 			//[ChangeLocale]
-			//Locale‚ğ•ÏX‚·‚é
-			//ˆø”1: •ÏX‚·‚élocale , ’ˆÓIthis‚ÌƒfƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Î‚ê‚é‚Ü‚Å—LŒø‚Èƒ|ƒCƒ“ƒ^‚Å‚ ‚é‚±‚Æ
+			//Localeã‚’å¤‰æ›´ã™ã‚‹
+			//å¼•æ•°1: å¤‰æ›´ã™ã‚‹locale , æ³¨æ„ï¼thisã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã°ã‚Œã‚‹ã¾ã§æœ‰åŠ¹ãªãƒã‚¤ãƒ³ã‚¿ã§ã‚ã‚‹ã“ã¨
 			template <class _Elem, unsigned long _Mymax, std::codecvt_mode _Mymode>
 			inline void ChangeLocale(std::codecvt_utf16<_Elem, _Mymax, _Mymode>& convert);
 
@@ -226,12 +226,12 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Open]
-		//ƒtƒ@ƒCƒ‹‚ğŠJ‚­,  –{ŠÖ”Às“_‚Å‘Î‰ƒR[ƒh‚ÍUTF-8‚Æ‚È‚é
-		//throw: ƒtƒ@ƒ‹‚ªŠJ‚¯‚È‚©‚Á‚½ê‡
-		//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX(Šg’£qŠÜ‚Ş)
-		//ˆø”2: ƒoƒCƒiƒŠ‚ÅŠJ‚­‚©”Û‚© : default = false
-		//ˆø”3: ’Ç‰Á‘‚«‚İd—l‚ÅŠJ‚­‚©”Û‚© : default = false
-		//ˆø”4: UTF-8w’è‚ğ–³Œø‚É‚·‚é : default = false
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã,  æœ¬é–¢æ•°å®Ÿè¡Œæ™‚ç‚¹ã§å¯¾å¿œã‚³ãƒ¼ãƒ‰ã¯UTF-8ã¨ãªã‚‹
+		//throw: ãƒ•ã‚¡ãƒ«ãŒé–‹ã‘ãªã‹ã£ãŸå ´åˆ
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹(æ‹¡å¼µå­å«ã‚€)
+		//å¼•æ•°2: ãƒã‚¤ãƒŠãƒªã§é–‹ãã‹å¦ã‹ : default = false
+		//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ä»•æ§˜ã§é–‹ãã‹å¦ã‹ : default = false
+		//å¼•æ•°4: UTF-8æŒ‡å®šã‚’ç„¡åŠ¹ã«ã™ã‚‹ : default = false
 		inline void FileStream::Open(const sgstring & path, bool isBinary, bool isAppend, bool isInvalidUtf8)
 		{
 			std::ios::openmode openMode = 0;
@@ -261,24 +261,24 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Close]
-		//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 		inline void FileStream::Close() { m_fileStream.close(); }
 		//----------------------------------------------------------------------------------
 		//[Read]
-		//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş (char->wide•ÏŠ·)
-		//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€ (char->wideå¤‰æ›)
+		//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—
 		inline sgstring FileStream::Read() { return sgstring(std::string(std::istreambuf_iterator<char>(m_fileStream), std::istreambuf_iterator<char>())); }
 		//----------------------------------------------------------------------------------
 		//[ReadUnite]
-		//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş (•ÏŠ·‚Å‚Í‚È‚­, char2•¶š‚ğ‡‘Ì‚³‚¹‚Äwchar‚Æ‚µ‚Äˆµ‚¤)
-		//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€ (å¤‰æ›ã§ã¯ãªã, char2æ–‡å­—ã‚’åˆä½“ã•ã›ã¦wcharã¨ã—ã¦æ‰±ã†)
+		//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—
 		inline sgstring FileStream::ReadUnite()
 		{
-			//1ƒoƒCƒg•¶š—ñ
+			//1ãƒã‚¤ãƒˆæ–‡å­—åˆ—
 			std::string read1Byte = std::string(std::istreambuf_iterator<char>(m_fileStream), std::istreambuf_iterator<char>());
-			//•Ô‚è’l
+			//è¿”ã‚Šå€¤
 			sgstring read2Byte;
-			//wchar•ÏŠ·
+			//wcharå¤‰æ›
 			for (auto it = read1Byte.begin(); it != read1Byte.end();)
 			{
 				read2Byte.push_back(static_cast<wchar>(*(it + 1) << 8) | *it);
@@ -288,25 +288,25 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[ReadStd]
-		//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş, std”Å
-		//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñs
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€, stdç‰ˆ
+		//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—s
 		inline std::string FileStream::ReadStd() { return std::string(std::istreambuf_iterator<char>(m_fileStream), std::istreambuf_iterator<char>()); }
 		//----------------------------------------------------------------------------------
 		//[Read]
-		//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş
-		//ˆø”1: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ‚ğ‘ã“ü‚·‚éstring
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹string
 		inline void FileStream::Read(sgstring & string) { string.assign(sgstring(std::string(std::istreambuf_iterator<char>(m_fileStream), std::istreambuf_iterator<char>()))); }
 		//----------------------------------------------------------------------------------
 		//[ReadUnite]
-		//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş (•ÏŠ·‚Å‚Í‚È‚­, char2•¶š‚ğ‡‘Ì‚³‚¹‚Äwchar‚Æ‚µ‚Äˆµ‚¤)
-		//ˆø”1: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ‚ğ‘ã“ü‚·‚éstring
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€ (å¤‰æ›ã§ã¯ãªã, char2æ–‡å­—ã‚’åˆä½“ã•ã›ã¦wcharã¨ã—ã¦æ‰±ã†)
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹string
 		inline sgstring FileStream::ReadUnite(sgstring & string)
 		{
-			//1ƒoƒCƒg•¶š—ñ
+			//1ãƒã‚¤ãƒˆæ–‡å­—åˆ—
 			std::string read1Byte = std::string(std::istreambuf_iterator<char>(m_fileStream), std::istreambuf_iterator<char>());
 			//clear
 			string.clear();
-			//wchar•ÏŠ·
+			//wcharå¤‰æ›
 			for (auto it = read1Byte.begin(); it != read1Byte.end();)
 			{
 				string.push_back(static_cast<wchar>(*(it + 1) << 8) | *it);
@@ -316,13 +316,13 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Read]
-		//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş, std”Å
-		//ˆø”1: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ‚ğ‘ã“ü‚·‚éstring
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€, stdç‰ˆ
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹string
 		inline void FileStream::ReadStd(std::string & string) { string.assign(std::istreambuf_iterator<char>(m_fileStream), std::istreambuf_iterator<char>()); }
 		//----------------------------------------------------------------------------------
 		//[ReadVector]
-		//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş, std::vector”Å
-		//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€, std::vectorç‰ˆ
+		//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—
 		inline std::vector<byte> FileStream::ReadVector() 
 		{
 			m_fileStream.seekg(0, std::ios::end);
@@ -335,8 +335,8 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[ReadVector]
-		//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş, std::vector”Å
-		//ˆø”1: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ‚ğ‘ã“ü‚·‚évector
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€, std::vectorç‰ˆ
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹vector
 		inline void FileStream::ReadVector(std::vector<byte>& vector)
 		{
 			m_fileStream.seekg(0, std::ios::end);
@@ -349,62 +349,62 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Write]
-		//ƒtƒ@ƒCƒ‹‚Éwrite‚ğ‘‚«‚Ş
-		//ˆø”1: ƒtƒ@ƒCƒ‹‚É‘‚«‚Şstring
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã«writeã‚’æ›¸ãè¾¼ã‚€
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€string
 		inline void FileStream::Write(const sgstring & write)
 		{
-			//•ÏŠ·
+			//å¤‰æ›
 			int inLength = static_cast<int>(write.length());
 			int outLength = WideCharToMultiByte(CP_ACP, 0, write.c_str(), inLength, 0, 0, nullptr, nullptr);
 			std::string result(outLength, L'\0');
 			if (outLength) WideCharToMultiByte(CP_UTF8, 0, write.c_str(), inLength, &result[0], outLength, nullptr, nullptr);
 			
-			//‘‚«‚İ
+			//æ›¸ãè¾¼ã¿
 			if (IS_FALSE(m_isBinary)) m_fileStream << result;
 			else m_fileStream.write(result.c_str(), result.size());
 		}
 		//----------------------------------------------------------------------------------
 		//[WriteSplit]
-		//ƒtƒ@ƒCƒ‹‚Éwrite‚ğ‘‚«‚Ş (•ÏŠ·‚Å‚Í‚È‚­, wchar1•¶š‚ğ•ªŠ„‚³‚¹‚Ächar‚Æ‚µ‚Äˆµ‚¤)
-		//ˆø”1: ƒtƒ@ƒCƒ‹‚É‘‚«‚Şstring
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã«writeã‚’æ›¸ãè¾¼ã‚€ (å¤‰æ›ã§ã¯ãªã, wchar1æ–‡å­—ã‚’åˆ†å‰²ã•ã›ã¦charã¨ã—ã¦æ‰±ã†)
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€string
 		inline void FileStream::WriteSplit(const sgstring & write)
 		{
 			std::string join;
-			//string•ÏŠ·
+			//stringå¤‰æ›
 			for (auto& e : write)
 			{
 				join.push_back((char)(e >> 8));
 				join.push_back((char)(e & 0xff));
 			}
-			//‘‚«‚İ
+			//æ›¸ãè¾¼ã¿
 			if (IS_FALSE(m_isBinary)) m_fileStream << join;
 			else m_fileStream.write(join.c_str(), join.size());
 		}
 		//----------------------------------------------------------------------------------
 		//[Write]
-		//ƒtƒ@ƒCƒ‹‚Éwrite‚ğ‘‚«‚Ş , std”Å
-		//ˆø”1: ƒtƒ@ƒCƒ‹‚É‘‚«‚Şstring
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã«writeã‚’æ›¸ãè¾¼ã‚€ , stdç‰ˆ
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€string
 		inline void FileStream::Write(const std::string & write) { IS_FALSE(m_isBinary) ? m_fileStream << write : m_fileStream.write(write.c_str(), write.size()); }
 		//----------------------------------------------------------------------------------
 		//[Write]
-		//ƒtƒ@ƒCƒ‹‚Éwrite‚ğ‘‚«‚Ş , std”Å
-		//ˆø”1: ƒtƒ@ƒCƒ‹‚É‘‚«‚Şstring
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã«writeã‚’æ›¸ãè¾¼ã‚€ , stdç‰ˆ
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€string
 		inline void FileStream::Write(const std::vector<byte>& write) { m_fileStream.write(reinterpret_cast<const char*>(write.data()), write.size()); }
 		//----------------------------------------------------------------------------------
 		//[IsOpen]
-		//return: ƒtƒ@ƒCƒ‹‚ªthis‚ğ—p‚¢‚ÄŠJ‚¢‚Ä‚¢‚é‚©”Û‚©
+		//return: ãƒ•ã‚¡ã‚¤ãƒ«ãŒthisã‚’ç”¨ã„ã¦é–‹ã„ã¦ã„ã‚‹ã‹å¦ã‹
 		inline bool FileStream::IsOpen() { return m_fileStream.is_open(); }
 
 		//----------------------------------------------------------------------------------
 		//[ChangeLocale]
-		//Locale‚ğ•ÏX‚·‚é
-		//ˆø”1: •ÏX‚·‚élocale , ’ˆÓIthis‚ÌƒfƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Î‚ê‚é‚Ü‚Å—LŒø‚Èƒ|ƒCƒ“ƒ^‚Å‚ ‚é‚±‚Æ
+		//Localeã‚’å¤‰æ›´ã™ã‚‹
+		//å¼•æ•°1: å¤‰æ›´ã™ã‚‹locale , æ³¨æ„ï¼thisã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã°ã‚Œã‚‹ã¾ã§æœ‰åŠ¹ãªãƒã‚¤ãƒ³ã‚¿ã§ã‚ã‚‹ã“ã¨
 		template<class _Elem, unsigned long _Mymax, std::codecvt_mode _Mymode>
 		inline void FileStream::ChangeLocale(std::codecvt_utf8<_Elem, _Mymax, _Mymode>& convert) { m_fileStream->imbue(std::locale(std::locale::empty(), &convert)); }
 		//----------------------------------------------------------------------------------
 		//[ChangeLocale]
-		//Locale‚ğ•ÏX‚·‚é
-		//ˆø”1: •ÏX‚·‚élocale , ’ˆÓIthis‚ÌƒfƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Î‚ê‚é‚Ü‚Å—LŒø‚Èƒ|ƒCƒ“ƒ^‚Å‚ ‚é‚±‚Æ
+		//Localeã‚’å¤‰æ›´ã™ã‚‹
+		//å¼•æ•°1: å¤‰æ›´ã™ã‚‹locale , æ³¨æ„ï¼thisã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã°ã‚Œã‚‹ã¾ã§æœ‰åŠ¹ãªãƒã‚¤ãƒ³ã‚¿ã§ã‚ã‚‹ã“ã¨
 		template<class _Elem, unsigned long _Mymax, std::codecvt_mode _Mymode>
 		inline void FileStream::ChangeLocale(std::codecvt_utf16<_Elem, _Mymax, _Mymode>& convert) { m_fileStream->imbue(std::locale(std::locale::empty(), &convert)); }
 	
@@ -419,12 +419,12 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Open]
-		//ƒtƒ@ƒCƒ‹‚ğŠJ‚­,  –{ŠÖ”Às“_‚Å‘Î‰ƒR[ƒh‚ÍUTF-8‚Æ‚È‚é
-		//throw: ƒtƒ@ƒ‹‚ªŠJ‚¯‚È‚©‚Á‚½ê‡
-		//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX(Šg’£qŠÜ‚Ş)
-		//ˆø”2: ƒoƒCƒiƒŠ‚ÅŠJ‚­‚©”Û‚© : default = false
-		//ˆø”3: ’Ç‰Á‘‚«‚İd—l‚ÅŠJ‚­‚©”Û‚© : default = false
-		//ˆø”4: UTF-8w’è‚ğ–³Œø‚É‚·‚é : default = false
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã,  æœ¬é–¢æ•°å®Ÿè¡Œæ™‚ç‚¹ã§å¯¾å¿œã‚³ãƒ¼ãƒ‰ã¯UTF-8ã¨ãªã‚‹
+		//throw: ãƒ•ã‚¡ãƒ«ãŒé–‹ã‘ãªã‹ã£ãŸå ´åˆ
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹(æ‹¡å¼µå­å«ã‚€)
+		//å¼•æ•°2: ãƒã‚¤ãƒŠãƒªã§é–‹ãã‹å¦ã‹ : default = false
+		//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ä»•æ§˜ã§é–‹ãã‹å¦ã‹ : default = false
+		//å¼•æ•°4: UTF-8æŒ‡å®šã‚’ç„¡åŠ¹ã«ã™ã‚‹ : default = false
 		inline void WFileStream::Open(const sgstring & path, bool isBinary, bool isAppend, bool isInvalidUtf8)
 		{
 			std::ios::openmode openMode = 0;
@@ -454,47 +454,47 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Close]
-		//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 		inline void WFileStream::Close() { m_fileStream.close(); }
 		//----------------------------------------------------------------------------------
 		//[Read]
-		//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş
-		//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€
+		//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—
 		inline sgstring WFileStream::Read() { return sgstring(std::wstring(std::istreambuf_iterator<wchar>(m_fileStream), std::istreambuf_iterator<wchar>())); }
 		//----------------------------------------------------------------------------------
 		//[ReadStd]
-		//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş, std”Å
-		//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€, stdç‰ˆ
+		//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—
 		inline std::string WFileStream::ReadStd() { return std::string(std::istreambuf_iterator<wchar>(m_fileStream), std::istreambuf_iterator<wchar>()); }
 		//----------------------------------------------------------------------------------
 		//[ReadStd]
-		//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş
-		//return: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€
+		//return: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—
 		inline void WFileStream::Read(sgstring & string) { string.assign(sgstring(std::wstring(std::istreambuf_iterator<wchar>(m_fileStream), std::istreambuf_iterator<wchar>()))); }
 		//----------------------------------------------------------------------------------
 		//[ReadStd]
-		//ƒtƒ@ƒCƒ‹‚Ì’†g‚ğ‘S•¶“Ç‚İ‚Ş, std”Å
-		//ˆø”1: ƒtƒ@ƒCƒ‹‚Ì’†‚Ì•¶š—ñ‚ğ‘ã“ü‚·‚éstring
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚’å…¨æ–‡èª­ã¿è¾¼ã‚€, stdç‰ˆ
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­ã®æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹string
 		inline void WFileStream::ReadStd(std::wstring & string) { string.assign(std::istreambuf_iterator<wchar>(m_fileStream), std::istreambuf_iterator<wchar>()); }
 		//----------------------------------------------------------------------------------
 		//[Write]
-		//ƒtƒ@ƒCƒ‹‚Éwrite‚ğ‘‚«‚Ş
-		//ˆø”1: ƒtƒ@ƒCƒ‹‚É‘‚«‚Şstring
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã«writeã‚’æ›¸ãè¾¼ã‚€
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€string
 		inline void WFileStream::Write(const sgstring & write) { IS_FALSE(m_isBinary) ? m_fileStream << write : m_fileStream.write(write.c_str(), write.size()); }
 		//----------------------------------------------------------------------------------
 		//[Write]
-		//ƒtƒ@ƒCƒ‹‚Éwrite‚ğ‘‚«‚Ş
-		//ˆø”1: ƒtƒ@ƒCƒ‹‚É‘‚«‚Şstring
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã«writeã‚’æ›¸ãè¾¼ã‚€
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€string
 		inline void WFileStream::Write(const std::wstring & write) { IS_FALSE(m_isBinary) ? m_fileStream << write : m_fileStream.write(write.c_str(), write.size()); }
 		//----------------------------------------------------------------------------------
 		//[IsOpen]
-		//return: ƒtƒ@ƒCƒ‹‚ªthis‚ğ—p‚¢‚ÄŠJ‚¢‚Ä‚¢‚é‚©”Û‚©
+		//return: ãƒ•ã‚¡ã‚¤ãƒ«ãŒthisã‚’ç”¨ã„ã¦é–‹ã„ã¦ã„ã‚‹ã‹å¦ã‹
 		inline bool WFileStream::IsOpen() { return m_fileStream.is_open(); }
 
 		//----------------------------------------------------------------------------------
 		//[ChangeLocale]
-		//Locale‚ğ•ÏX‚·‚é
-		//ˆø”1: •ÏX‚·‚élocale , ’ˆÓIthis‚ÌƒfƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Î‚ê‚é‚Ü‚Å—LŒø‚Èƒ|ƒCƒ“ƒ^‚Å‚ ‚é‚±‚Æ
+		//Localeã‚’å¤‰æ›´ã™ã‚‹
+		//å¼•æ•°1: å¤‰æ›´ã™ã‚‹locale , æ³¨æ„ï¼thisã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã°ã‚Œã‚‹ã¾ã§æœ‰åŠ¹ãªãƒã‚¤ãƒ³ã‚¿ã§ã‚ã‚‹ã“ã¨
 		template<class _Elem, unsigned long _Mymax, std::codecvt_mode _Mymode>
 		inline void WFileStream::ChangeLocale(std::codecvt_utf8<_Elem, _Mymax, _Mymode>& convert)
 		{
@@ -502,8 +502,8 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[ChangeLocale]
-		//Locale‚ğ•ÏX‚·‚é
-		//ˆø”1: •ÏX‚·‚élocale , ’ˆÓIthis‚ÌƒfƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Î‚ê‚é‚Ü‚Å—LŒø‚Èƒ|ƒCƒ“ƒ^‚Å‚ ‚é‚±‚Æ
+		//Localeã‚’å¤‰æ›´ã™ã‚‹
+		//å¼•æ•°1: å¤‰æ›´ã™ã‚‹locale , æ³¨æ„ï¼thisã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã°ã‚Œã‚‹ã¾ã§æœ‰åŠ¹ãªãƒã‚¤ãƒ³ã‚¿ã§ã‚ã‚‹ã“ã¨
 		template<class _Elem, unsigned long _Mymax, std::codecvt_mode _Mymode>
 		inline void WFileStream::ChangeLocale(std::codecvt_utf16<_Elem, _Mymax, _Mymode>& convert)
 		{

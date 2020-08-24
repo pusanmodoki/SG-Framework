@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-’ÊíSE‚ğˆµ‚¤AudioAssetEffect class
+é€šå¸¸SEã‚’æ‰±ã†AudioAssetEffect class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_AUDIO_ASSET_EFFECT_HPP_
 #define SGFRAMEWORK_HEADER_AUDIO_ASSET_EFFECT_HPP_
@@ -18,10 +18,10 @@ namespace SGFramework
 	class Audio::SubmixLayer;
 	class AssetManager;
 
-	//AssetŠÖ˜A‚ğŠi”[‚µ‚½Asset namespace
+	//Asseté–¢é€£ã‚’æ ¼ç´ã—ãŸAsset namespace
 	namespace Asset
 	{
-		//’ÊíSE‚ğˆµ‚¤AudioAssetEffect class
+		//é€šå¸¸SEã‚’æ‰±ã†AudioAssetEffect class
 		class AudioAssetEffect final : public BaseClass::BaseAudioSEAsset
 		{
 		public:
@@ -33,59 +33,59 @@ namespace SGFramework
 
 
 			//----------------------------------------------------------------------------------
-			//[ƒfƒXƒgƒ‰ƒNƒ^]
-			//ƒAƒZƒbƒg‚ÌŠJ•ú‚ğs‚¤
+			//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ã‚¢ã‚»ãƒƒãƒˆã®é–‹æ”¾ã‚’è¡Œã†
 			inline ~AudioAssetEffect() { ReleaseVoice(); CloseBaseAsset(getType(), true); }
 
 			//----------------------------------------------------------------------------------
 			//[Open]
-			//ƒAƒZƒbƒg‚Ìƒ[ƒh‚ğs‚¤
-			//ˆø”1: ‰¹º‚ªŠ‘®‚·‚éSubmixLayer, default = not monoral root layer
-			//ˆø”2: ƒ\[ƒX‚Ì” (Å‘å“¯Ä¶”)
-			//ˆø”3: Ä¶ŠÔŠu
-			//ˆø”4: Ä¶ŠJn•b”, default = cDefault (Begin)
-			//ˆø”5: ƒ‹[ƒvŠJn•b”, default = cDefault (Begin)
-			//ˆø”6: Ä¶I—¹•b”, default = cDefault (End)
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
+			//å¼•æ•°1: éŸ³å£°ãŒæ‰€å±ã™ã‚‹SubmixLayer, default = not monoral root layer
+			//å¼•æ•°2: ã‚½ãƒ¼ã‚¹ã®æ•° (æœ€å¤§åŒæ™‚å†ç”Ÿæ•°)
+			//å¼•æ•°3: å†ç”Ÿé–“éš”
+			//å¼•æ•°4: å†ç”Ÿé–‹å§‹ç§’æ•°, default = cDefault (Begin)
+			//å¼•æ•°5: ãƒ«ãƒ¼ãƒ—æ™‚é–‹å§‹ç§’æ•°, default = cDefault (Begin)
+			//å¼•æ•°6: å†ç”Ÿçµ‚äº†ç§’æ•°, default = cDefault (End)
 			void Open(WeakPointer<Audio::SubmixLayer> submixLayer = Audio::submixRootLayer(),
 				uint amountOfSource = 1, float playbackInterval = 0.0f, float setPlayBeginSeconds = cDefault, 
 				float setLoopBeginSeconds = cDefault, float setPlayEndSeconds = cDefault);
 
 			//----------------------------------------------------------------------------------
 			//[Reload]
-			//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
 			void Reload() override;
 			//----------------------------------------------------------------------------------
 			//[Close]
-			//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 			void Close()  override;
 
 
 			//----------------------------------------------------------------------------------
 			//[Play]
-			//Ä¶‚ğs‚¤, ÀÛ‚ÉÄ¶‚³‚ê‚é‚Ì‚Í1ƒtƒŒ[ƒ€Œã‚Æ‚È‚é
-			//ˆø”1: ƒ‹[ƒv‰ñ”, default = 0
+			//å†ç”Ÿã‚’è¡Œã†, å®Ÿéš›ã«å†ç”Ÿã•ã‚Œã‚‹ã®ã¯1ãƒ•ãƒ¬ãƒ¼ãƒ å¾Œã¨ãªã‚‹
+			//å¼•æ•°1: ãƒ«ãƒ¼ãƒ—å›æ•°, default = 0
 			inline void Play(uint loopCount = 0)
 			{
 				using namespace Detail::Audio;
 
-				//Messageì¬
+				//Messageä½œæˆ
 				AudioMessage message(MessageType::EffectFlag | MessageType::PlayEffect);
 				message.attachment.playEffect.instanceID = instanceID();
 				message.attachment.playEffect.loopCount = loopCount;
-				//Message‘—M
+				//Messageé€ä¿¡
 				Audio::SendAudioMessage(message);
 			}
 			//----------------------------------------------------------------------------------
 			//[Stop]
-			//Ä¶‚ğ‘S‚Ä’â~‚·‚é, ÀÛ‚É’â~‚³‚ê‚é‚Ì‚Í1ƒtƒŒ[ƒ€Œã‚Æ‚È‚é
+			//å†ç”Ÿã‚’å…¨ã¦åœæ­¢ã™ã‚‹, å®Ÿéš›ã«åœæ­¢ã•ã‚Œã‚‹ã®ã¯1ãƒ•ãƒ¬ãƒ¼ãƒ å¾Œã¨ãªã‚‹
 			inline void Stop()
 			{
 				using namespace Detail::Audio;
 
-				//Messageì¬
+				//Messageä½œæˆ
 				AudioMessage message(MessageType::EffectFlag | MessageType::StopEffect);
 				message.attachment.onlyInstanceID = instanceID();
-				//Message‘—M
+				//Messageé€ä¿¡
 				Audio::SendAudioMessage(message);
 			}
 
@@ -94,21 +94,21 @@ namespace SGFramework
 
 		private:	
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»‚ğs‚¤
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//åˆæœŸåŒ–ã‚’è¡Œã†
 			inline AudioAssetEffect() : BaseAudioSEAsset() {}
 
 			//----------------------------------------------------------------------------------
 			//[PlayExecution]
-			//ÀÛ‚ÉÄ¶‚ğs‚¤
+			//å®Ÿéš›ã«å†ç”Ÿã‚’è¡Œã†
 			void PlayExecution(uint loopCount);
 			//----------------------------------------------------------------------------------
 			//[StopExecution]
-			//ÀÛ‚É’â~‚ğs‚¤
+			//å®Ÿéš›ã«åœæ­¢ã‚’è¡Œã†
 			void StopExecution();
 			//----------------------------------------------------------------------------------
 			//[ReleaseVoice]
-			//‰¹º‚ğŠJ•ú‚·‚é
+			//éŸ³å£°ã‚’é–‹æ”¾ã™ã‚‹
 			void ReleaseVoice();
 		};
 	}

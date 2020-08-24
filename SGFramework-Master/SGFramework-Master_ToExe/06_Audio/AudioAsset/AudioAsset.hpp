@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-BaseAudioAssetŒnƒNƒ‰ƒX‚Ìƒx[ƒX‚Æ‚È‚éBaseAudioAsset class
+BaseAudioAssetç³»ã‚¯ãƒ©ã‚¹ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseAudioAsset class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_AUDIO_ASSET_HPP_
 #define SGFRAMEWORK_HEADER_AUDIO_ASSET_HPP_
@@ -30,45 +30,45 @@ namespace SGFramework
 	//Base Classes
 	namespace BaseClass
 	{
-		//AudioAssetŒnƒNƒ‰ƒX‚Ìƒx[ƒX‚Æ‚È‚éBaseAudioAsset class
+		//AudioAssetç³»ã‚¯ãƒ©ã‚¹ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseAudioAsset class
 		class BaseAudioAsset;
-		//AudioAssetSEŒnƒNƒ‰ƒX‚Ìƒx[ƒX‚Æ‚È‚éBaseAudioSEAsset class
+		//AudioAssetSEç³»ã‚¯ãƒ©ã‚¹ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseAudioSEAsset class
 		class BaseAudioSEAsset;
 
 
-		//BaseAudioAssetŒnƒNƒ‰ƒX‚Ìƒx[ƒX‚Æ‚È‚éBaseAudioAsset class
+		//BaseAudioAssetç³»ã‚¯ãƒ©ã‚¹ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseAudioAsset class
 		class BaseAudioAsset : public BaseClass::BaseAsset
 		{
 		public:
 			//friend
 			friend class SGFramework::Audio;
-			//ƒfƒtƒHƒ‹ƒg’l
+			//ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤
 			static constexpr float cDefault = -1;
 
 			//----------------------------------------------------------------------------------
 			//[Stop]
-			//Ä¶‚ğ‘S‚Ä’â~‚·‚é, ÀÛ‚É’â~‚³‚ê‚é‚Ì‚Í1ƒtƒŒ[ƒ€Œã‚Æ‚È‚é
+			//å†ç”Ÿã‚’å…¨ã¦åœæ­¢ã™ã‚‹, å®Ÿéš›ã«åœæ­¢ã•ã‚Œã‚‹ã®ã¯1ãƒ•ãƒ¬ãƒ¼ãƒ å¾Œã¨ãªã‚‹
 			virtual void Stop() = 0;
 
 			//----------------------------------------------------------------------------------
 			//[ChangeSpeedSmoothly]
-			//Ä¶ƒXƒs[ƒh‚ğtarget‚Ü‚ÅŠŠ‚ç‚©‚É•ÏX‚·‚é
-			//ˆø”1: •ÏXtarget
-			//ˆø”2: •ÏX‚É‚©‚¯‚é•b”
-			//ˆø”3: I—¹Œã’â~‚·‚é‚©”Û‚©, default = false
+			//å†ç”Ÿã‚¹ãƒ”ãƒ¼ãƒ‰ã‚’targetã¾ã§æ»‘ã‚‰ã‹ã«å¤‰æ›´ã™ã‚‹
+			//å¼•æ•°1: å¤‰æ›´target
+			//å¼•æ•°2: å¤‰æ›´ã«ã‹ã‘ã‚‹ç§’æ•°
+			//å¼•æ•°3: çµ‚äº†å¾Œåœæ­¢ã™ã‚‹ã‹å¦ã‹, default = false
 			inline void ChangeSpeedSmoothly(float target, float seconds, bool isStop = false)
 			{
 				using namespace Detail::Audio;
 
-				//Œ»İ‚Ì’l
+				//ç¾åœ¨ã®å€¤
 				float speed = getPlayBackSpeed();
-				//“¯‚¶‚È‚çI—¹
+				//åŒã˜ãªã‚‰çµ‚äº†
 				if (target == speed) return;
 
-				//Message—p
+				//Messageç”¨
 				AudioMessage message(MessageType::SmoothFlag | MessageType::AddSmoothAudio);
 
-				//Message‚Ì“Y•tî•ñ‚ğ‘ã“ü
+				//Messageã®æ·»ä»˜æƒ…å ±ã‚’ä»£å…¥
 				message.attachment.smoothAudio.asset = m_thisPointer.DynamicCast<BaseAudioAsset>();
 				message.attachment.smoothAudio.smoothType = SmoothType::Speed;
 				message.attachment.smoothAudio.now = speed;
@@ -76,28 +76,28 @@ namespace SGFramework
 				message.attachment.smoothAudio.speed = (target - speed) / seconds;
 				message.attachment.smoothAudio.isStop = isStop;
 
-				//Message‘—M
+				//Messageé€ä¿¡
 				Audio::SendAudioMessage(message);
 			}
 			//----------------------------------------------------------------------------------
 			//[ChangeVolumeSmoothly]
-			//Ä¶‰¹—Ê‚ğtarget‚Ü‚ÅŠŠ‚ç‚©‚É•ÏX‚·‚é
-			//ˆø”1: •ÏXtarget
-			//ˆø”2: •ÏX‚É‚©‚¯‚é•b”
-			//ˆø”3: I—¹Œã’â~‚·‚é‚©”Û‚©, default = false
+			//å†ç”ŸéŸ³é‡ã‚’targetã¾ã§æ»‘ã‚‰ã‹ã«å¤‰æ›´ã™ã‚‹
+			//å¼•æ•°1: å¤‰æ›´target
+			//å¼•æ•°2: å¤‰æ›´ã«ã‹ã‘ã‚‹ç§’æ•°
+			//å¼•æ•°3: çµ‚äº†å¾Œåœæ­¢ã™ã‚‹ã‹å¦ã‹, default = false
 			inline void ChangeVolumeSmoothly(float target, float seconds, bool isStop = false)
 			{
 				using namespace Detail::Audio;
 
-				//Œ»İ‚Ì’l
+				//ç¾åœ¨ã®å€¤
 				float volume = getVolume();
-				//“¯‚¶‚È‚çI—¹
+				//åŒã˜ãªã‚‰çµ‚äº†
 				if (target == volume) return;
 
-				//Message—p
+				//Messageç”¨
 				AudioMessage message(MessageType::SmoothFlag | MessageType::AddSmoothAudio);
 				
-				//Message‚Ì“Y•tî•ñ‚ğ‘ã“ü
+				//Messageã®æ·»ä»˜æƒ…å ±ã‚’ä»£å…¥
 				message.attachment.smoothAudio.asset = m_thisPointer.DynamicCast<BaseAudioAsset>();
 				message.attachment.smoothAudio.smoothType = SmoothType::Volume;
 				message.attachment.smoothAudio.now = volume;
@@ -105,7 +105,7 @@ namespace SGFramework
 				message.attachment.smoothAudio.speed = (target - volume) / seconds;
 				message.attachment.smoothAudio.isStop = isStop;
 
-				//Message‘—M
+				//Messageé€ä¿¡
 				Audio::SendAudioMessage(message);
 			}
 			
@@ -125,16 +125,16 @@ namespace SGFramework
 			//voice pointer (get function property)
 			SGF_FUNCTION_PROPERTY IXAudio2SourceVoice* getVoice() const { return m_voice(); }
 
-			GetOnlyProperty<float> audioSeconds;											//ƒtƒ@ƒCƒ‹‚Ì•b”
-			GetOnlyProperty<float> playBeginSeconds;										//Ä¶ŠJn•b”
-			GetOnlyProperty<float> loopBeginSeconds;										//ƒ‹[ƒvŠJn•b”
-			GetOnlyProperty<float> playEndSeconds;										//Ä¶I—¹•b”
-			GetOnlyProperty<uint> sourceSampleRate;										//ƒ\[ƒX‚ÌƒTƒ“ƒvƒ‹ƒŒ[ƒg (Ä¶ƒŒ[ƒg‚ÍAudio‚ÌsampleRate)
-			GetOnlyProperty<uint> channels;													//ƒ\[ƒX‚Ìƒ`ƒƒƒ“ƒlƒ‹”(Ä¶ƒŒ[ƒg‚ÍSubmixLayer‚Ìchannels)
-			GetOnlyProperty<uint> submixLayerID;											//©g‚ÌŠ‘®‚·‚éƒTƒuƒ~ƒbƒNƒXƒŒƒCƒ„[ID
+			GetOnlyProperty<float> audioSeconds;											//ãƒ•ã‚¡ã‚¤ãƒ«ã®ç§’æ•°
+			GetOnlyProperty<float> playBeginSeconds;										//å†ç”Ÿé–‹å§‹ç§’æ•°
+			GetOnlyProperty<float> loopBeginSeconds;										//ãƒ«ãƒ¼ãƒ—æ™‚é–‹å§‹ç§’æ•°
+			GetOnlyProperty<float> playEndSeconds;										//å†ç”Ÿçµ‚äº†ç§’æ•°
+			GetOnlyProperty<uint> sourceSampleRate;										//ã‚½ãƒ¼ã‚¹ã®ã‚µãƒ³ãƒ—ãƒ«ãƒ¬ãƒ¼ãƒˆ (å†ç”Ÿãƒ¬ãƒ¼ãƒˆã¯Audioã®sampleRate)
+			GetOnlyProperty<uint> channels;													//ã‚½ãƒ¼ã‚¹ã®ãƒãƒ£ãƒ³ãƒãƒ«æ•°(å†ç”Ÿãƒ¬ãƒ¼ãƒˆã¯SubmixLayerã®channels)
+			GetOnlyProperty<uint> submixLayerID;											//è‡ªèº«ã®æ‰€å±ã™ã‚‹ã‚µãƒ–ãƒŸãƒƒã‚¯ã‚¹ãƒ¬ã‚¤ãƒ¤ãƒ¼ID
 
 		protected:
-			//ƒRƒ“ƒXƒgƒ‰ƒNƒ^, ƒQƒbƒ^[‚É’l‘ã“ü‚µ‚Ü‚­‚é
+			//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿, ã‚²ãƒƒã‚¿ãƒ¼ã«å€¤ä»£å…¥ã—ã¾ãã‚‹
 			inline BaseAudioAsset() : BaseAsset(), audioSeconds(m_audioSeconds), 
 				playBeginSeconds(m_playBeginSeconds), loopBeginSeconds(m_loopBeginSeconds),
 				playEndSeconds(m_playEndSeconds), sourceSampleRate(m_sourceSampleRate), 
@@ -143,19 +143,19 @@ namespace SGFramework
 			static constexpr uint m_cBaseFlagPublicState = 0;
 			static constexpr uint m_cBaseFlagPrivateState = 1;
 			
-			//ƒƒCƒ“ƒ{ƒCƒX
+			//ãƒ¡ã‚¤ãƒ³ãƒœã‚¤ã‚¹
 			ComWearFunction<IXAudio2SourceVoice> m_voice;	
-			float m_audioSeconds = 0.0f;								//ƒtƒ@ƒCƒ‹‚Ì•b”
-			float m_playBeginSeconds = 0.0f;						//Ä¶ŠJn•b”
-			float m_loopBeginSeconds = 0.0f;						//ƒ‹[ƒvŠJn•b”
-			float m_playEndSeconds = 0.0f;							//Ä¶I—¹•b”
-			uint m_sourceSampleRate = 0;							//ƒ\[ƒX‚ÌƒTƒ“ƒvƒ‹ƒŒ[ƒg (Ä¶ƒŒ[ƒg‚ÍAudio‚ÌsampleRate)
-			uint m_channels = 0;											//ƒ\[ƒX‚Ìƒ`ƒƒƒ“ƒlƒ‹”(Ä¶ƒŒ[ƒg‚ÍSubmixLayer‚Ìchannels)
-			uint m_submixLayerID = 0;								//©g‚ÌŠ‘®‚·‚éƒTƒuƒ~ƒbƒNƒXƒŒƒCƒ„[ID
+			float m_audioSeconds = 0.0f;								//ãƒ•ã‚¡ã‚¤ãƒ«ã®ç§’æ•°
+			float m_playBeginSeconds = 0.0f;						//å†ç”Ÿé–‹å§‹ç§’æ•°
+			float m_loopBeginSeconds = 0.0f;						//ãƒ«ãƒ¼ãƒ—æ™‚é–‹å§‹ç§’æ•°
+			float m_playEndSeconds = 0.0f;							//å†ç”Ÿçµ‚äº†ç§’æ•°
+			uint m_sourceSampleRate = 0;							//ã‚½ãƒ¼ã‚¹ã®ã‚µãƒ³ãƒ—ãƒ«ãƒ¬ãƒ¼ãƒˆ (å†ç”Ÿãƒ¬ãƒ¼ãƒˆã¯Audioã®sampleRate)
+			uint m_channels = 0;											//ã‚½ãƒ¼ã‚¹ã®ãƒãƒ£ãƒ³ãƒãƒ«æ•°(å†ç”Ÿãƒ¬ãƒ¼ãƒˆã¯SubmixLayerã®channels)
+			uint m_submixLayerID = 0;								//è‡ªèº«ã®æ‰€å±ã™ã‚‹ã‚µãƒ–ãƒŸãƒƒã‚¯ã‚¹ãƒ¬ã‚¤ãƒ¤ãƒ¼ID
 		};
 
 
-		//AudioAssetSEŒnƒNƒ‰ƒX‚Ìƒx[ƒX‚Æ‚È‚éBaseAudioSEAsset class
+		//AudioAssetSEç³»ã‚¯ãƒ©ã‚¹ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseAudioSEAsset class
 		class BaseAudioSEAsset : public BaseAudioAsset
 		{
 		public:
@@ -187,54 +187,54 @@ namespace SGFramework
 			//sub voice end iterator (get function property)
 			SGF_FUNCTION_PROPERTY auto getSubVoiceEnd() const { return m_subVoices.end(); }
 
-			//ƒ\[ƒX‚Ì” (Å‘å“¯Ä¶”)
+			//ã‚½ãƒ¼ã‚¹ã®æ•° (æœ€å¤§åŒæ™‚å†ç”Ÿæ•°)
 			GetOnlyProperty<uint> amountOfSource;
-			//Ä¶ŠÔŠu
+			//å†ç”Ÿé–“éš”
 			GetOnlyProperty<float> playbackInterval;
 
 		protected:
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 			inline BaseAudioSEAsset() : BaseAudioAsset(), 
 				amountOfSource(m_amountOfSource), playbackInterval(m_playbackInterval) {}
 
 			//----------------------------------------------------------------------------------
 			//[LoadFile]
-			//ƒAƒZƒbƒg‚Ìƒ[ƒh‚ğs‚¤
-			//ˆø”1: ‰¹º‚ªŠ‘®‚·‚éSubmixLayer, default = not monoral root layer
-			//ˆø”2: ƒ\[ƒX‚Ì” (Å‘å“¯Ä¶”)
-			//ˆø”3: Ä¶ŠÔŠu
-			//ˆø”4: Ä¶ŠJn•b”, default = cDefault (Begin)
-			//ˆø”5: ƒ‹[ƒvŠJn•b”, default = cDefault (Begin)
-			//ˆø”6: Ä¶I—¹•b”, default = cDefault (End)
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
+			//å¼•æ•°1: éŸ³å£°ãŒæ‰€å±ã™ã‚‹SubmixLayer, default = not monoral root layer
+			//å¼•æ•°2: ã‚½ãƒ¼ã‚¹ã®æ•° (æœ€å¤§åŒæ™‚å†ç”Ÿæ•°)
+			//å¼•æ•°3: å†ç”Ÿé–“éš”
+			//å¼•æ•°4: å†ç”Ÿé–‹å§‹ç§’æ•°, default = cDefault (Begin)
+			//å¼•æ•°5: ãƒ«ãƒ¼ãƒ—æ™‚é–‹å§‹ç§’æ•°, default = cDefault (Begin)
+			//å¼•æ•°6: å†ç”Ÿçµ‚äº†ç§’æ•°, default = cDefault (End)
 			void LoadFile(const WeakPointer<Audio::SubmixLayer>& submixLayer = Audio::submixRootLayer(),
 				uint amountOfSource = 1, float playbackInterval = 0.0f, float setPlayBeginSeconds = cDefault,
 				float setLoopBeginSeconds = cDefault, float setPlayEndSeconds = cDefault);
 			//----------------------------------------------------------------------------------
 			//[ReleaseBaseVoice]
-			//‰¹º‚ğŠJ•ú‚·‚é
+			//éŸ³å£°ã‚’é–‹æ”¾ã™ã‚‹
 			void ReleaseBaseVoice();
 
 			//----------------------------------------------------------------------------------
-			//[FindChunkŠÖ”]
-			//Chunk‚ğ’T‚·,ƒTƒ“ƒvƒ‹‚©‚ç‚¢‚½‚¾‚¢‚½
+			//[FindChunké–¢æ•°]
+			//Chunkã‚’æ¢ã™,ã‚µãƒ³ãƒ—ãƒ«ã‹ã‚‰ã„ãŸã ã„ãŸ
 			bool FindChunk(const HANDLE hFile, const DWORD fourcc, DWORD & dwChunkSize, DWORD & dwChunkDataPosition);
 			//----------------------------------------------------------------------------------
-			//[ReadChunkDataŠÖ”]
-			//Chunk‚ğ“Ç‚İ‚Ş,ƒTƒ“ƒvƒ‹‚©‚ç‚¢‚½‚¾‚¢‚½
+			//[ReadChunkDataé–¢æ•°]
+			//Chunkã‚’èª­ã¿è¾¼ã‚€,ã‚µãƒ³ãƒ—ãƒ«ã‹ã‚‰ã„ãŸã ã„ãŸ
 			bool ReadChunkData(const HANDLE hFile, void * buffer, const DWORD buffersize, const DWORD bufferoffset);
 
-			//SE—p‚ÌƒTƒuƒ{ƒCƒX
+			//SEç”¨ã®ã‚µãƒ–ãƒœã‚¤ã‚¹
 			std::vector<ComWearFunction<IXAudio2SourceVoice>> m_subVoices;
-			//Ä¶ƒoƒbƒtƒ@[
+			//å†ç”Ÿãƒãƒƒãƒ•ã‚¡ãƒ¼
 			ComWearDelete<byte> m_buffer = nullptr;
-			//X3DAudio—pƒoƒbƒtƒ@
+			//X3DAudioç”¨ãƒãƒƒãƒ•ã‚¡
 			ComWearDelete<float> m_x3dBuffer = nullptr;
-			XAUDIO2_BUFFER m_bufferInfo = {};			//ƒoƒbƒtƒ@[
+			XAUDIO2_BUFFER m_bufferInfo = {};			//ãƒãƒƒãƒ•ã‚¡ãƒ¼
 			XAUDIO2_VOICE_STATE m_state = {};		//state
-			float m_playbackInterval = 0.0f;					//Ä¶ŠÔŠu
-			float m_playElapased = 0.0f;						//Ä¶ŠÔŠuŒv‘ª—p
-			uint m_amountOfSource = 0;						//ƒ\[ƒX‚Ì” (Å‘å“¯Ä¶”)
-			int m_useVoice = -1;									//g—pƒ{ƒCƒXƒJƒEƒ“ƒ^
+			float m_playbackInterval = 0.0f;					//å†ç”Ÿé–“éš”
+			float m_playElapased = 0.0f;						//å†ç”Ÿé–“éš”è¨ˆæ¸¬ç”¨
+			uint m_amountOfSource = 0;						//ã‚½ãƒ¼ã‚¹ã®æ•° (æœ€å¤§åŒæ™‚å†ç”Ÿæ•°)
+			int m_useVoice = -1;									//ä½¿ç”¨ãƒœã‚¤ã‚¹ã‚«ã‚¦ãƒ³ã‚¿
 			std::atomic_bool m_lock = false;					//lock
 		};
 	}

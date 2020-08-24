@@ -17,11 +17,11 @@ namespace SGFramework
 			//default
 			Polygon() = default;
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‘ã“ü‰Šú‰»‚·‚é
-			//ˆø”1: position
-			//ˆø”2: color
-			//ˆø”3: uv
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+			//å¼•æ•°1: position
+			//å¼•æ•°2: color
+			//å¼•æ•°3: uv
 			Polygon(const Vector3& position, const Color& color, const UV& uv/*, const UV& uvNormalMap*/)
 				: position(position), color(color), uv(uv)/*, uvNormalMap(uvNormalMap)*/ {}
 
@@ -37,13 +37,13 @@ namespace SGFramework
 			//default
 			Model() = default;
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‘ã“ü‰Šú‰»‚·‚é
-			//ˆø”1: position
-			//ˆø”2: normal
-			//ˆø”3: uv
-			//ˆø”4: bone weight
-			//ˆø”5: bone indexes
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+			//å¼•æ•°1: position
+			//å¼•æ•°2: normal
+			//å¼•æ•°3: uv
+			//å¼•æ•°4: bone weight
+			//å¼•æ•°5: bone indexes
 			Model(const Vector3& position, const Vector3& normal, const UV& uv0,
 				const UV& uv1, const Vector4& weight, const Vector4Int& boneIndexesVector)
 				: position(position), normal(normal)//, weight(weight), boneIndexes(boneIndexes) 
@@ -61,7 +61,7 @@ namespace SGFramework
 			static constexpr int cIdentityBoneIndex = 999;
 			static constexpr int cInvalidBoneIndex = -1;
 
-			//Ÿ‚É‰Šú‰»‚·‚×‚«BoneIndex(–³Œø->-1) (read function property)
+			//æ¬¡ã«åˆæœŸåŒ–ã™ã¹ãBoneIndex(ç„¡åŠ¹->-1) (read function property)
 			SGF_FUNCTION_PROPERTY int getInitialBoneIndex()
 			{
 				return boneIndexes[0] == cInvalidBoneIndex ? 0
@@ -93,11 +93,11 @@ namespace SGFramework
 			//default
 			ImGui() = default;
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‘ã“ü‰Šú‰»‚·‚é
-			//ˆø”1: position
-			//ˆø”2: uv
-			//ˆø”3: color
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+			//å¼•æ•°1: position
+			//å¼•æ•°2: uv
+			//å¼•æ•°3: color
 			ImGui(const Vector2& position, const UV& uv, uint color)
 				: position(position), uv(uv), color(color){}
 

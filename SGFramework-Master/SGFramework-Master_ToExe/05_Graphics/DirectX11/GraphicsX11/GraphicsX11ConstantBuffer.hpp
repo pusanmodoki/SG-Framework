@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ƒRƒ“ƒXƒ^ƒ“ƒgƒoƒbƒtƒ@ƒNƒ‰ƒX‚ğW‚ß‚½DirectX11ConstantBuffer.hpp
+ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡ã‚¯ãƒ©ã‚¹ã‚’é›†ã‚ãŸDirectX11ConstantBuffer.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_GRAPHICS_X11_CONSTANT_BUFFER_HPP_
 #define SGFRAMEWORK_HEADER_GRAPHICS_X11_CONSTANT_BUFFER_HPP_
@@ -11,7 +11,7 @@ namespace SGFramework
 {
 	class Application;
 	class Thread;
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		//GraphicsDetail namespace
@@ -20,13 +20,13 @@ namespace SGFramework
 			//DirectX11
 			namespace X11
 			{
-				//ƒRƒ“ƒXƒ^ƒ“ƒgƒoƒbƒtƒ@->Scene, •ÏX’ˆÓ!
+				//ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡->Scene, å¤‰æ›´æ³¨æ„!
 				struct ConstantBufferScene
 				{
 					Vector4x4 viewMatrix;
 					Vector4x4 projectionMatrix;
 				};
-				//ƒRƒ“ƒXƒ^ƒ“ƒgƒoƒbƒtƒ@->Light, •ÏX’ˆÓ!
+				//ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡->Light, å¤‰æ›´æ³¨æ„!
 				struct ConstantBufferLight
 				{
 					struct Directional
@@ -59,13 +59,13 @@ namespace SGFramework
 					Point point = {};
 					HemiSphere hemiSphere = {};
 				};
-				//ƒRƒ“ƒXƒ^ƒ“ƒgƒoƒbƒtƒ@->Object, •ÏX’ˆÓ!
+				//ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡->Object, å¤‰æ›´æ³¨æ„!
 				struct ConstantBufferObject
 				{
 					Vector4x4 worldMatrix;
 					Vector4x4 worldInverseMatrix;
 				};
-				//ƒRƒ“ƒXƒ^ƒ“ƒgƒoƒbƒtƒ@->Material3D, •ÏX’ˆÓ!
+				//ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡->Material3D, å¤‰æ›´æ³¨æ„!
 				struct ConstantBufferMaterial3D
 				{
 					Color ambient = Const::Color::white;		//Ambient
@@ -76,12 +76,12 @@ namespace SGFramework
 					float transparent = 1.0f;							//Transparent
 					float power = 1.0f;									//Power
 				};
-				//ƒRƒ“ƒXƒ^ƒ“ƒgƒoƒbƒtƒ@->Material2D, •ÏX’ˆÓ!
+				//ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡->Material2D, å¤‰æ›´æ³¨æ„!
 				struct ConstantBufferMaterial2D
 				{
 					Color color = Const::Color::white;			//Polygon Color
 				};
-				//ƒRƒ“ƒXƒ^ƒ“ƒgƒoƒbƒtƒ@->Model, •ÏX’ˆÓ!
+				//ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡->Model, å¤‰æ›´æ³¨æ„!
 				struct ConstantBufferModel
 				{
 					Vector4x4 bones[1000];

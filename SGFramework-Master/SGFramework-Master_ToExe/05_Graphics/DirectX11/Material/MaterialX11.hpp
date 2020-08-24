@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-DirectX11 Material‚ðˆµ‚¤MaterialX11 class
+DirectX11 Materialã‚’æ‰±ã†MaterialX11 class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_MATERIAL_X11_HPP_
 #define SGFRAMEWORK_HEADER_MATERIAL_X11_HPP_
@@ -13,7 +13,7 @@ DirectX11 Material‚ðˆµ‚¤MaterialX11 class
 // Framework namespace
 namespace SGFramework
 {
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ð‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		//friend
@@ -31,11 +31,11 @@ namespace SGFramework
 
 				MaterialX11() {}
 
-				//ƒ}ƒ‹ƒ`ƒeƒNƒXƒ`ƒƒ‘Î‰ž”
+				//ãƒžãƒ«ãƒãƒ†ã‚¯ã‚¹ãƒãƒ£å¯¾å¿œæ•°
 				static constexpr uint cNumSupportedTextures = 2;
-				//ƒm[ƒ}ƒ‹ƒ}ƒbƒv‘Î‰ž”
+				//ãƒŽãƒ¼ãƒžãƒ«ãƒžãƒƒãƒ—å¯¾å¿œæ•°
 				static constexpr uint cNumSupportedNormalMaps = 1;
-				//ƒnƒCƒgƒ}ƒbƒv‘Î‰ž”
+				//ãƒã‚¤ãƒˆãƒžãƒƒãƒ—å¯¾å¿œæ•°
 				static constexpr uint cNumSupportedHeightMaps = 1;
 
 				SGF_FUNCTION_PROPERTY void setMaterial();

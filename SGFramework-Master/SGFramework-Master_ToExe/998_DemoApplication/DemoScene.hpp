@@ -15,17 +15,17 @@ public:
 	
 	//----------------------------------------------------------------------------------
 	//[StartScene]
-	//�V�[���쐬�������ŌĂяo�����R�[���o�b�N�֐�
-	//����1: �O�V�[������̈����p�����
+	//シーン作成時自動で呼び出されるコールバック関数
+	//引数1: 前シーンからの引き継ぎ情報
 	void StartScene(Scene::SceneBaton& nextBaton) override;
 	
 	//----------------------------------------------------------------------------------
 	//[EndScene]
-	//�V�[���I���������ŌĂяo�����R�[���o�b�N�֐�, �I���������s��
-	//�Ԃ�l��null�|�C���^�������ꍇ�A�A�v���P�[�V�������I������
-	//����1: ���V�[���ֈ����p�����, Start�ŌĂяo�����
-	//����2: true��������Ǝ��V�[���ȊO�̃X�^�b�N��{�V�[���܂߂ăX�^�b�N����N���A����
-	//����2: true��������Ɩ{�V�[�����X�^�b�N���炷��
+	//シーン終了時自動で呼び出されるコールバック関数, 終了処理を行う
+	//返り値がnullポインタだった場合、アプリケーションが終了する
+	//引数1: 次シーンへ引き継ぐ情報, Startで呼び出される
+	//引数2: trueを代入すると次シーン以外のスタックを本シーン含めてスタックからクリアする
+	//引数2: trueを代入すると本シーンをスタックからする
 	virtual UniquePointer<BaseScene> EndScene(Scene::SceneBaton& nextBaton, bool& isStackClear, bool& isStackPop)
 	{
 		COM_RELEASE(Sphere::m_vertexBuffer);
@@ -56,44 +56,44 @@ public:
 
 	//----------------------------------------------------------------------------------
 	//[RewindScene]
-	//�V�[�����I�������V�[���Ȃ� & isPop�Ŗ{�V�[���ɖ߂��Ă����ꍇ��
-	//�����ŌĂяo�����R�[���o�b�N�֐�
-	//����1: ���V�[������̈����p�����
+	//シーンが終了し次シーンなし & isPopで本シーンに戻ってきた場合に
+	//自動で呼び出されるコールバック関数
+	//引数1: 次シーンからの引き継ぐ情報
 	inline virtual void RewindScene(Scene::SceneBaton& nextBaton) {}
 
 	//----------------------------------------------------------------------------------
 	//[Update]
-	//����X�V�������ŌĂяo�����R�[���o�b�N�֐�
-	//���̃R�[���o�b�N�Ɠ����ɕ���Ăяo������A�I�u�W�F�N�g�̍X�V�����s��
+	//並列更新時自動で呼び出されるコールバック関数
+	//他のコールバックと同時に並列呼び出しされ、オブジェクトの更新等を行う
 	void Update();
 	//----------------------------------------------------------------------------------
 	//[Sync]
-	//�����X�V�������ŌĂяo�����R�[���o�b�N�֐�
-	//Update��ɃV���O���X���b�h�ŌĂяo����A�ϐ��̋��L�⓯�����s��
-	//return: �V�[�����s -> true
+	//同期更新時自動で呼び出されるコールバック関数
+	//Update後にシングルスレッドで呼び出され、変数の共有や同期を行う
+	//return: シーン続行 -> true
 	virtual bool Sync() { return true; }
 
 	//----------------------------------------------------------------------------------
 	//[LateUpdate]
-	//Update & Sync�I����̕���X�V�������ŌĂяo�����R�[���o�b�N�֐�
-	//���̃R�[���o�b�N�Ɠ����ɕ���Ăяo������A�I�u�W�F�N�g�̍X�V�����s��
+	//Update & Sync終了後の並列更新時自動で呼び出されるコールバック関数
+	//他のコールバックと同時に並列呼び出しされ、オブジェクトの更新等を行う
 	inline virtual void LateUpdate() {}
 
 	//----------------------------------------------------------------------------------
 	//[FixedUpdate]
-	//Fixed�t���[���ł̕���X�V�������ŌĂяo�����R�[���o�b�N�֐�
-	//���̃R�[���o�b�N�Ɠ����ɕ���Ăяo������A�I�u�W�F�N�g�̍X�V�����s��
+	//Fixedフレームでの並列更新時自動で呼び出されるコールバック関数
+	//他のコールバックと同時に並列呼び出しされ、オブジェクトの更新等を行う
 	inline virtual void FixedUpdate() {}
 	//----------------------------------------------------------------------------------
 	//[FixedSync]
-	//Fixed�t���[���ł̓����X�V�������ŌĂяo�����R�[���o�b�N�֐�
-	//Update��ɌĂяo����A�ϐ��̋��L�⓯�����s��
+	//Fixedフレームでの同期更新時自動で呼び出されるコールバック関数
+	//Update後に呼び出され、変数の共有や同期を行う
 	inline virtual void FixedSync(){}
 
 	//----------------------------------------------------------------------------------
 	//[MakeDrawCommand]
-	//�`��X�V�������ŌĂяo�����R�[���o�b�N�֐�
-	//�`��o�^�����s��
+	//描画更新時自動で呼び出されるコールバック関数
+	//描画登録等を行う
 	inline virtual void MakeDrawCommand();
 
 	//scene name (read function property)
@@ -111,7 +111,7 @@ private:
 	std::vector<SharedPointer<GameObject>> m_largeAmountObjects;
 	std::vector<SharedPointer<Asset::ModelAsset>> m_largeAmountModelAssets;
 
-	//Polygon class�͈ȑO�̐݌v�v�z�Ő��삳�ꂽ���K�V�[�ȃN���X�����A���Ԃ��Ȃ����߂��̂܂܎g�p
+	//Polygon classは以前の設計思想で制作されたレガシーなクラスだが、時間がないためそのまま使用
 	SharedPointer<PolygonSquare> m_ground;
 
 	TimeProcessing::TimeLimiter m_limiter;

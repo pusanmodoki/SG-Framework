@@ -12,28 +12,28 @@ void Sphere::InitModel()
 	if (m_indexBuffer) return;
 
 	float radius = 1.0f;
-	// –Ê”ƒZƒbƒg
+	// é¢æ•°ã‚»ãƒƒãƒˆ
 	int numFaces = 200 * 200 * 2;
 
 	m_faces = new Face[numFaces];
 
 	Face* pface = m_faces;
 
-	// ƒCƒ“ƒfƒbƒNƒX¶¬
+	// ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ç”Ÿæˆ
 	for (unsigned int y = 0; y < 200; y++)
 	{
 		for (unsigned int x = 0; x < 200; x++)
 		{
-			int count = (200 + 1)*y + x;			// ¶ãÀ•W‚ÌƒCƒ“ƒfƒbƒNƒX
+			int count = (200 + 1)*y + x;			// å·¦ä¸Šåº§æ¨™ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
 
-			// ã”¼•ª
+			// ä¸ŠåŠåˆ†
 			pface->indexes[0] = count;
 			pface->indexes[1] = count + 1;
 			pface->indexes[2] = count + 1 + (200 + 1);
 
 			pface++;
 
-			// ‰º”¼•ª
+			// ä¸‹åŠåˆ†
 			pface->indexes[0] = count;
 			pface->indexes[1] = count + (200 + 1) + 1;
 			pface->indexes[2] = count + (200 + 1);
@@ -44,8 +44,8 @@ void Sphere::InitModel()
 
 
 
-	float azimuth = 0.0f;			// •ûˆÊŠp
-	float elevation = 0.0f;			// ‹ÂŠp
+	float azimuth = 0.0f;			// æ–¹ä½è§’
+	float elevation = 0.0f;			// ä»°è§’
 
 	m_vertexes = new Vertex::Polygon[(200 + 1) * (200 + 1)];
 	Vertex::Polygon* pvtx = m_vertexes;
@@ -57,41 +57,41 @@ void Sphere::InitModel()
 	int colorIndex = 0;
 
 	Vector3	normal;
-	// •ûˆÊŠp‚Æ‹ÂŠp‚©‚ç‹…ƒƒbƒVƒ…‚Ì’¸“_ƒf[ƒ^‚ğì¬
+	// æ–¹ä½è§’ã¨ä»°è§’ã‹ã‚‰çƒãƒ¡ãƒƒã‚·ãƒ¥ã®é ‚ç‚¹ãƒ‡ãƒ¼ã‚¿ã‚’ä½œæˆ
 	for (unsigned int y = 0; y <= 200; y++) {
-		elevation = (MathAF::cPi * (float)y) / (float)200;    // ‹ÂŠp‚ğƒZƒbƒg
-		float r = 1.0f * sinf(elevation);					// ‹ÂŠp‚É‰‚¶‚½”¼Œa‚ğŒvZ
+		elevation = (MathAF::cPi * (float)y) / (float)200;    // ä»°è§’ã‚’ã‚»ãƒƒãƒˆ
+		float r = 1.0f * sinf(elevation);					// ä»°è§’ã«å¿œã˜ãŸåŠå¾„ã‚’è¨ˆç®—
 
 
 		colorIndex = Random::RangeToInt(0, 3);
 		for (unsigned int x = 0; x <= 200; x++) {
-			azimuth = (2 * MathAF::cPi  * (float)x) / (float)200 ;	// •ûˆÊŠp‚ğƒZƒbƒg
+			azimuth = (2 * MathAF::cPi  * (float)x) / (float)200 ;	// æ–¹ä½è§’ã‚’ã‚»ãƒƒãƒˆ
 
-			// ’¸“_À•WƒZƒbƒg
+			// é ‚ç‚¹åº§æ¨™ã‚»ãƒƒãƒˆ
 			pvtx->position.x = r * cosf(azimuth);
 			pvtx->position.y = radius * cosf(elevation);
 			pvtx->position.z = r * sinf(azimuth);
 
 			pvtx->color = colors[colorIndex];
-			// –@üƒxƒNƒgƒ‹ƒZƒbƒg
-			//Normalize(pvtx->Pos, normal);		// –@ü‚ğŒvZ
-			//pvtx-> = normal;				// –@ü‚ğƒZƒbƒg
+			// æ³•ç·šãƒ™ã‚¯ãƒˆãƒ«ã‚»ãƒƒãƒˆ
+			//Normalize(pvtx->Pos, normal);		// æ³•ç·šã‚’è¨ˆç®—
+			//pvtx-> = normal;				// æ³•ç·šã‚’ã‚»ãƒƒãƒˆ
 
-			// Ÿ‚Ö
+			// æ¬¡ã¸
 			pvtx++;
 		}
 	}
 
 
-	// ƒRƒ“ƒXƒ^ƒ“ƒgƒoƒbƒtƒ@¶¬
+	// ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡ç”Ÿæˆ
 	D3D11_BUFFER_DESC bd;
 	D3D11_SUBRESOURCE_DATA InitData;
 
 	ZeroMemory(&bd, sizeof(bd));
-	bd.Usage = D3D11_USAGE_DEFAULT;								// ƒoƒbƒtƒ@g—p•û–@
-	bd.ByteWidth = sizeof(Vertex::Polygon)*(200 + 1) * (200 + 1);									// ƒoƒbƒtƒ@‚Ì‘å‚«
-	bd.BindFlags = D3D11_BIND_VERTEX_BUFFER;					// ƒRƒ“ƒXƒ^ƒ“ƒgƒoƒbƒtƒ@
-	bd.CPUAccessFlags = 0;										// CPUƒAƒNƒZƒX•s—v
+	bd.Usage = D3D11_USAGE_DEFAULT;								// ãƒãƒƒãƒ•ã‚¡ä½¿ç”¨æ–¹æ³•
+	bd.ByteWidth = sizeof(Vertex::Polygon)*(200 + 1) * (200 + 1);									// ãƒãƒƒãƒ•ã‚¡ã®å¤§ã
+	bd.BindFlags = D3D11_BIND_VERTEX_BUFFER;					// ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡
+	bd.CPUAccessFlags = 0;										// CPUã‚¢ã‚¯ã‚»ã‚¹ä¸è¦
 
 	ZeroMemory(&InitData, sizeof(InitData));
 	InitData.pSysMem = m_vertexes;
@@ -105,10 +105,10 @@ void Sphere::InitModel()
 
 
 	ZeroMemory(&bd, sizeof(bd));
-	bd.Usage = D3D11_USAGE_DEFAULT;								// ƒoƒbƒtƒ@g—p•û–@
-	bd.ByteWidth = sizeof(uint)*(200) * (200) * 2 * 3;									// ƒoƒbƒtƒ@‚Ì‘å‚«
-	bd.BindFlags = D3D11_BIND_INDEX_BUFFER;					// ƒRƒ“ƒXƒ^ƒ“ƒgƒoƒbƒtƒ@
-	bd.CPUAccessFlags = 0;										// CPUƒAƒNƒZƒX•s—v
+	bd.Usage = D3D11_USAGE_DEFAULT;								// ãƒãƒƒãƒ•ã‚¡ä½¿ç”¨æ–¹æ³•
+	bd.ByteWidth = sizeof(uint)*(200) * (200) * 2 * 3;									// ãƒãƒƒãƒ•ã‚¡ã®å¤§ã
+	bd.BindFlags = D3D11_BIND_INDEX_BUFFER;					// ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡
+	bd.CPUAccessFlags = 0;										// CPUã‚¢ã‚¯ã‚»ã‚¹ä¸è¦
 
 	ZeroMemory(&InitData, sizeof(InitData));
 	InitData.pSysMem = m_faces;

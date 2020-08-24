@@ -190,9 +190,6 @@
     <Filter Include="02_Variables\Vector">
       <UniqueIdentifier>{e8fbd6a2-4041-4263-b304-4a82030c1709}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02_Variables\Vector\Window">
-      <UniqueIdentifier>{ceb1d72a-c946-4ea8-89c7-12963109c1a4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="02_Variables\Vector\Vector2Ref">
       <UniqueIdentifier>{cb73deec-9df0-4786-b0bf-140613f06d2e}</UniqueIdentifier>
     </Filter>
@@ -267,6 +264,9 @@
     </Filter>
     <Filter Include="02_Variables\ConstLibrary%28削除予定%29">
       <UniqueIdentifier>{fe02ce2a-816c-4d96-9395-df35854d64e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_Variables\Window">
+      <UniqueIdentifier>{ceb1d72a-c946-4ea8-89c7-12963109c1a4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -385,13 +385,13 @@
       <Filter>02_Variables\VariableLimit</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Window\Window.hpp">
-      <Filter>02_Variables\Vector\Window</Filter>
+      <Filter>02_Variables\Window</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Window\HinstanceHolder\HinstanceHolder.hpp">
-      <Filter>02_Variables\Vector\Window</Filter>
+      <Filter>02_Variables\Window</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Window\HwndHolder\HwndHolder.hpp">
-      <Filter>02_Variables\Vector\Window</Filter>
+      <Filter>02_Variables\Window</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Vector\Vector2\Vector2.hpp">
       <Filter>02_Variables\Vector\Vector2</Filter>
@@ -727,9 +727,6 @@
     <ClInclude Include="10_Physics\Detail\PhysicsMessage.hpp">
       <Filter>10_Physics\PhysicsDetail</Filter>
     </ClInclude>
-    <ClInclude Include="02_CustomVariable\Pointer\Allocator.hpp">
-      <Filter>02_Variables\Pointer</Filter>
-    </ClInclude>
     <ClInclude Include="02_CustomVariable\MacroAndUsing\MacroAndUsing.hpp">
       <Filter>02_Variables\MacroAndUsing</Filter>
     </ClInclude>
@@ -760,10 +757,10 @@
       <Filter>02_Variables\Time</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Window\HinstanceHolder\HinstanceHolder.cpp">
-      <Filter>02_Variables\Vector\Window</Filter>
+      <Filter>02_Variables\Window</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Window\HwndHolder\HwndHolder.cpp">
-      <Filter>02_Variables\Vector\Window</Filter>
+      <Filter>02_Variables\Window</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Vector\Vector2\Vector2.cpp">
       <Filter>02_Variables\Vector\Vector2</Filter>

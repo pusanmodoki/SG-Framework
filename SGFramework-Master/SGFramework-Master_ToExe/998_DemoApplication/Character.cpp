@@ -3,7 +3,7 @@
 
 //----------------------------------------------------------------------------------
 //[Awake]
-//ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½uŠÔ‚ÉŒÄ‚Î‚ê‚éCallbackŠÖ”
+//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸç¬é–“ã«å‘¼ã°ã‚Œã‚‹Callbacké–¢æ•°
 void Player::Awake()
 {
 	AddComponent<AudioListener>();
@@ -42,7 +42,7 @@ void Player::Awake()
 
 //----------------------------------------------------------------------------------
 //[Update]
-//–ˆƒtƒŒ[ƒ€UpdateƒuƒƒbƒN‚ÅCallback‚³‚ê‚éŠÖ”
+//æ¯ãƒ•ãƒ¬ãƒ¼ãƒ Updateãƒ–ãƒ­ãƒƒã‚¯ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 void Player::Update()
 {
 }
@@ -82,8 +82,8 @@ void Player::FixedUpdate()
 
 //----------------------------------------------------------------------------------
 //[MakeDrawCommand]
-//Update, Sync, LateUpdate ƒuƒƒbƒNŒã‚ÉCallback‚³‚ê‚é,
-//		DrawCommand‚ğì¬‚·‚é‚½‚ß‚ÌŠÖ”
+//Update, Sync, LateUpdate ãƒ–ãƒ­ãƒƒã‚¯å¾Œã«Callbackã•ã‚Œã‚‹,
+//		DrawCommandã‚’ä½œæˆã™ã‚‹ãŸã‚ã®é–¢æ•°
 void Player::MakeDrawCommand()
 {
 	Graphics::SendDrawFunction(MAKE_COMMAND(m_cameraComponent->setCameraMatrix()), 0);

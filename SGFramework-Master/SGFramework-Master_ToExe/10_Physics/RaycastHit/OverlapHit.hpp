@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Overlap(OverlapBox, OverlapSphere, OverlapCapsule)で使用するOverlapHit structure
+Overlap(OverlapBox, OverlapSphere, OverlapCapsule)縺ｧ菴ｿ逕ｨ縺吶ｋOverlapHit structure
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_OVERLAP_HIT_HPP_
 #define SGFRAMEWORK_HEADER_OVERLAP_HIT_HPP_
@@ -9,7 +9,7 @@ Overlap(OverlapBox, OverlapSphere, OverlapCapsule)で使用するOverlapHit structure
 //Framework namespace
 namespace SGFramework
 {
-	//Overlap(OverlapBox, OverlapSphere, OverlapCapsule)で使用するOverlapHit structure
+	//Overlap(OverlapBox, OverlapSphere, OverlapCapsule)縺ｧ菴ｿ逕ｨ縺吶ｋOverlapHit structure
 	struct OverlapHit
 	{
 		//friend
@@ -56,7 +56,7 @@ namespace SGFramework
 	private:
 		//----------------------------------------------------------------------------------
 		//[Init]
-		//Bufferをコピーする
+		//Buffer繧偵さ繝斐�ｼ縺吶ｋ
 		void Init(physx::PxOverlapBuffer& buffer)
 		{
 			(*const_cast<bool*>(&this->isValid)) = buffer.getNbAnyHits() ? true : false;

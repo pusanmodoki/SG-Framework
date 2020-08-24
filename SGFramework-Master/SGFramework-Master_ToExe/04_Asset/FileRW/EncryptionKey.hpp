@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ˆÃ†‰»ƒL[‚ğˆµ‚¤EncryptionKey class
+æš—å·åŒ–ã‚­ãƒ¼ã‚’æ‰±ã†EncryptionKey class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_ENCRYPTION_KEY_HPP_
 #define SGFRAMEWORK_HEADER_ENCRYPTION_KEY_HPP_
@@ -11,109 +11,109 @@ namespace SGFramework
 	//File Edit
 	namespace File
 	{
-		//ˆÃ†‰»ƒL[‚ğˆµ‚¤EncryptionKey class
+		//æš—å·åŒ–ã‚­ãƒ¼ã‚’æ‰±ã†EncryptionKey class
 		class EncryptionKey final
 		{
 		public:
 			//delete
 			inline EncryptionKey() = delete;
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//ƒL[‚ğ‘ã“ü‚·‚é
-			//ˆø”1: value
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ã‚­ãƒ¼ã‚’ä»£å…¥ã™ã‚‹
+			//å¼•æ•°1: value
 			inline EncryptionKey(const wchar value = 0) : value(m_value) { m_value = value; }
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//ƒL[‚ğ¶¬‚·‚é
-			//ˆø”1: ƒV[ƒh
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ã‚­ãƒ¼ã‚’ç”Ÿæˆã™ã‚‹
+			//å¼•æ•°1: ã‚·ãƒ¼ãƒ‰
 			inline EncryptionKey(const sgstring& seed) : value(m_value) { *this = CreateKey(seed); }
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//ƒL[‚ğ¶¬‚·‚é
-			//ˆø”1: ƒV[ƒh
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ã‚­ãƒ¼ã‚’ç”Ÿæˆã™ã‚‹
+			//å¼•æ•°1: ã‚·ãƒ¼ãƒ‰
 			inline EncryptionKey(const int seed) : value(m_value) { *this = CreateKey(seed); }
 
 			//----------------------------------------------------------------------------------
 			//[CreateKey]
-			//ƒL[‚ğ¶¬‚·‚é
-			//return: ¶¬‚µ‚½ƒL[
-			//ˆø”1: ƒV[ƒh
+			//ã‚­ãƒ¼ã‚’ç”Ÿæˆã™ã‚‹
+			//return: ç”Ÿæˆã—ãŸã‚­ãƒ¼
+			//å¼•æ•°1: ã‚·ãƒ¼ãƒ‰
 			inline static EncryptionKey CreateKey(const sgstring& seed);
 			//----------------------------------------------------------------------------------
 			//[CreateKey]
-			//ƒL[‚ğ¶¬‚·‚é
-			//return: ¶¬‚µ‚½ƒL[
-			//ˆø”1: ƒV[ƒh
+			//ã‚­ãƒ¼ã‚’ç”Ÿæˆã™ã‚‹
+			//return: ç”Ÿæˆã—ãŸã‚­ãƒ¼
+			//å¼•æ•°1: ã‚·ãƒ¼ãƒ‰
 			inline static EncryptionKey CreateKey(const int seed);
 
 			//----------------------------------------------------------------------------------
 			//[InitDefaultKey]
-			//ŠeŠÖ”‚Å“K—p‚³‚ê‚éƒfƒtƒHƒ‹ƒgƒCƒ“ƒXƒ^ƒ“ƒX‚ğİ’è‚·‚é
-			//return: İ’è‚µ‚½ƒL[
-			//ˆø”1: İ’è‚·‚éƒL[
+			//å„é–¢æ•°ã§é©ç”¨ã•ã‚Œã‚‹ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’è¨­å®šã™ã‚‹
+			//return: è¨­å®šã—ãŸã‚­ãƒ¼
+			//å¼•æ•°1: è¨­å®šã™ã‚‹ã‚­ãƒ¼
 			inline static EncryptionKey InitDefaultKey(EncryptionKey key) { return Key(&key); }
 			//----------------------------------------------------------------------------------
 			//[DefaultKey]
-			//ŠeŠÖ”‚Å“K—p‚³‚ê‚éƒfƒtƒHƒ‹ƒgƒCƒ“ƒXƒ^ƒ“ƒX‚ğæ“¾‚·‚é
-			//return: İ’è‚µ‚½ƒL[
+			//å„é–¢æ•°ã§é©ç”¨ã•ã‚Œã‚‹ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’å–å¾—ã™ã‚‹
+			//return: è¨­å®šã—ãŸã‚­ãƒ¼
 			inline static EncryptionKey DefaultKey() { return Key(nullptr); }
 
 			//----------------------------------------------------------------------------------
 			//[Lock]
-			//•¶š—ñ‚ğˆÃ†‰»‚·‚é
-			//return: ˆÃ†‰»•¶š—ñ
-			//ˆø”1: ˆÃ†‰»‚·‚é•¶š—ñ
-			//ˆø”2: g—p‚·‚éƒL[, default = DefaultKey
+			//æ–‡å­—åˆ—ã‚’æš—å·åŒ–ã™ã‚‹
+			//return: æš—å·åŒ–æ–‡å­—åˆ—
+			//å¼•æ•°1: æš—å·åŒ–ã™ã‚‹æ–‡å­—åˆ—
+			//å¼•æ•°2: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 			inline static sgstring Lock(const sgstring& encryptionString, const EncryptionKey lockKey = DefaultKey());
 			//----------------------------------------------------------------------------------
 			//[Unlock]
-			//•¶š—ñ‚ğˆÃ†‰»‰ğœ‚·‚é
-			//return: ˆÃ†‰»‰ğœ•¶š—ñ
-			//ˆø”1: ˆÃ†‰»‰ğœ‚·‚é•¶š—ñ
-			//ˆø”2: g—p‚·‚éƒL[, default = DefaultKey
+			//æ–‡å­—åˆ—ã‚’æš—å·åŒ–è§£é™¤ã™ã‚‹
+			//return: æš—å·åŒ–è§£é™¤æ–‡å­—åˆ—
+			//å¼•æ•°1: æš—å·åŒ–è§£é™¤ã™ã‚‹æ–‡å­—åˆ—
+			//å¼•æ•°2: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 			inline static sgstring Unlock(const sgstring& encryptionString, const EncryptionKey unlockKey = DefaultKey());
 			//----------------------------------------------------------------------------------
 			//[Lock]
-			//•¶š—ñ‚ğˆÃ†‰»‚·‚é
-			//ˆø”1: ˆÃ†‰»•¶š—ñ‚ğ‘ã“ü‚·‚é•¶š—ñ
-			//ˆø”2: ˆÃ†‰»‚·‚é•¶š—ñ
-			//ˆø”3: g—p‚·‚éƒL[, default = DefaultKey
+			//æ–‡å­—åˆ—ã‚’æš—å·åŒ–ã™ã‚‹
+			//å¼•æ•°1: æš—å·åŒ–æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹æ–‡å­—åˆ—
+			//å¼•æ•°2: æš—å·åŒ–ã™ã‚‹æ–‡å­—åˆ—
+			//å¼•æ•°3: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 			inline static void Lock(sgstring& string, const sgstring& encryptionString, const EncryptionKey lockKey = DefaultKey());
 			//----------------------------------------------------------------------------------
 			//[Unlock]
-			//•¶š—ñ‚ğˆÃ†‰»‰ğœ‚·‚é
-			//ˆø”1: ˆÃ†‰»‰ğœ•¶š—ñ‚ğ‘ã“ü‚·‚é•¶š—ñ
-			//ˆø”2: ˆÃ†‰»‰ğœ‚·‚é•¶š—ñ
-			//ˆø”3: g—p‚·‚éƒL[, default = DefaultKey
+			//æ–‡å­—åˆ—ã‚’æš—å·åŒ–è§£é™¤ã™ã‚‹
+			//å¼•æ•°1: æš—å·åŒ–è§£é™¤æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹æ–‡å­—åˆ—
+			//å¼•æ•°2: æš—å·åŒ–è§£é™¤ã™ã‚‹æ–‡å­—åˆ—
+			//å¼•æ•°3: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 			inline static void Unlock(sgstring& string, const sgstring& encryptionString, const EncryptionKey unlockKey = DefaultKey());
 
 			//----------------------------------------------------------------------------------
 			//[LockBinary]
-			//•¶š—ñ‚ğˆÃ†‰»‚·‚é, ƒoƒCƒiƒŠ”Å (byte)
-			//return: ˆÃ†‰»•¶š—ñ
-			//ˆø”1: ˆÃ†‰»‚·‚é•¶š—ñ
-			//ˆø”2: g—p‚·‚éƒL[, default = DefaultKey
+			//æ–‡å­—åˆ—ã‚’æš—å·åŒ–ã™ã‚‹, ãƒã‚¤ãƒŠãƒªç‰ˆ (byte)
+			//return: æš—å·åŒ–æ–‡å­—åˆ—
+			//å¼•æ•°1: æš—å·åŒ–ã™ã‚‹æ–‡å­—åˆ—
+			//å¼•æ•°2: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 			inline static std::vector<byte> LockBinary(const std::vector<byte>& encryptionString, const EncryptionKey lockKey = DefaultKey());
 			//----------------------------------------------------------------------------------
 			//[Unlock]
-			//•¶š—ñ‚ğˆÃ†‰»‰ğœ‚·‚é, ƒoƒCƒiƒŠ”Å (byte)
-			//return: ˆÃ†‰»‰ğœ•¶š—ñ
-			//ˆø”1: ˆÃ†‰»‰ğœ‚·‚é•¶š—ñ
-			//ˆø”2: g—p‚·‚éƒL[, default = DefaultKey
+			//æ–‡å­—åˆ—ã‚’æš—å·åŒ–è§£é™¤ã™ã‚‹, ãƒã‚¤ãƒŠãƒªç‰ˆ (byte)
+			//return: æš—å·åŒ–è§£é™¤æ–‡å­—åˆ—
+			//å¼•æ•°1: æš—å·åŒ–è§£é™¤ã™ã‚‹æ–‡å­—åˆ—
+			//å¼•æ•°2: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 			inline static std::vector<byte> UnlockBinary(const std::vector<byte>& encryptionString, const EncryptionKey unlockKey = DefaultKey());
 			//----------------------------------------------------------------------------------
 			//[Lock]
-			//•¶š—ñ‚ğˆÃ†‰»‚·‚é, ƒoƒCƒiƒŠ”Å (byte)
-			//ˆø”1: ˆÃ†‰»•¶š—ñ‚ğ‘ã“ü‚·‚é•¶š—ñ
-			//ˆø”2: ˆÃ†‰»‚·‚é•¶š—ñ
-			//ˆø”3: g—p‚·‚éƒL[, default = DefaultKey
+			//æ–‡å­—åˆ—ã‚’æš—å·åŒ–ã™ã‚‹, ãƒã‚¤ãƒŠãƒªç‰ˆ (byte)
+			//å¼•æ•°1: æš—å·åŒ–æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹æ–‡å­—åˆ—
+			//å¼•æ•°2: æš—å·åŒ–ã™ã‚‹æ–‡å­—åˆ—
+			//å¼•æ•°3: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 			inline static void LockBinary(std::vector<byte>& string, const std::vector<byte>& encryptionString, const EncryptionKey lockKey = DefaultKey());
 			//----------------------------------------------------------------------------------
 			//[Unlock]
-			//•¶š—ñ‚ğˆÃ†‰»‰ğœ‚·‚é, ƒoƒCƒiƒŠ”Å (byte)
-			//ˆø”1: ˆÃ†‰»‰ğœ•¶š—ñ‚ğ‘ã“ü‚·‚é•¶š—ñ
-			//ˆø”2: ˆÃ†‰»‰ğœ‚·‚é•¶š—ñ
-			//ˆø”3: g—p‚·‚éƒL[, default = DefaultKey
+			//æ–‡å­—åˆ—ã‚’æš—å·åŒ–è§£é™¤ã™ã‚‹, ãƒã‚¤ãƒŠãƒªç‰ˆ (byte)
+			//å¼•æ•°1: æš—å·åŒ–è§£é™¤æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹æ–‡å­—åˆ—
+			//å¼•æ•°2: æš—å·åŒ–è§£é™¤ã™ã‚‹æ–‡å­—åˆ—
+			//å¼•æ•°3: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 			inline static void UnlockBinary(std::vector<byte>& string, const std::vector<byte>& encryptionString, const EncryptionKey unlockKey = DefaultKey());
 
 			//wchar operator
@@ -123,15 +123,15 @@ namespace SGFramework
 			//() operator
 			inline wchar operator () () { return m_value; }
 
-			//ƒL[
+			//ã‚­ãƒ¼
 			GetOnlyProperty<wchar> value;
 
 		private:
 			//----------------------------------------------------------------------------------
 			//[Key]
-			//ƒXƒ^ƒeƒBƒbƒNƒCƒ“ƒXƒ^ƒ“ƒX‚ğƒQƒbƒg, ƒZƒbƒg‚·‚é
-			//return: ƒXƒ^ƒeƒBƒbƒNƒCƒ“ƒXƒ^ƒ“ƒX
-			//ˆø”1: Keyƒ|ƒCƒ“ƒ^, ’l‚ ‚è = Set, nullptr = Get
+			//ã‚¹ã‚¿ãƒ†ã‚£ãƒƒã‚¯ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’ã‚²ãƒƒãƒˆ, ã‚»ãƒƒãƒˆã™ã‚‹
+			//return: ã‚¹ã‚¿ãƒ†ã‚£ãƒƒã‚¯ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹
+			//å¼•æ•°1: Keyãƒã‚¤ãƒ³ã‚¿, å€¤ã‚ã‚Š = Set, nullptr = Get
 			inline static EncryptionKey Key(EncryptionKey* set);
 
 			// = operator
@@ -146,9 +146,9 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[CreateKey]
-		//ƒL[‚ğ¶¬‚·‚é
-		//return: ¶¬‚µ‚½ƒL[
-		//ˆø”1: ƒV[ƒh
+		//ã‚­ãƒ¼ã‚’ç”Ÿæˆã™ã‚‹
+		//return: ç”Ÿæˆã—ãŸã‚­ãƒ¼
+		//å¼•æ•°1: ã‚·ãƒ¼ãƒ‰
 		inline EncryptionKey EncryptionKey::CreateKey(const sgstring& seed)
 		{
 			wchar value = 0;
@@ -158,9 +158,9 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[CreateKey]
-		//ƒL[‚ğ¶¬‚·‚é
-		//return: ¶¬‚µ‚½ƒL[
-		//ˆø”1: ƒV[ƒh
+		//ã‚­ãƒ¼ã‚’ç”Ÿæˆã™ã‚‹
+		//return: ç”Ÿæˆã—ãŸã‚­ãƒ¼
+		//å¼•æ•°1: ã‚·ãƒ¼ãƒ‰
 		inline EncryptionKey EncryptionKey::CreateKey(const int seed)
 		{
 			wchar value = 0;
@@ -172,10 +172,10 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Lock]
-		//•¶š—ñ‚ğˆÃ†‰»‚·‚é
-		//return: ˆÃ†‰»•¶š—ñ
-		//ˆø”1: ˆÃ†‰»‚·‚é•¶š—ñ
-		//ˆø”2: g—p‚·‚éƒL[, default = DefaultKey
+		//æ–‡å­—åˆ—ã‚’æš—å·åŒ–ã™ã‚‹
+		//return: æš—å·åŒ–æ–‡å­—åˆ—
+		//å¼•æ•°1: æš—å·åŒ–ã™ã‚‹æ–‡å­—åˆ—
+		//å¼•æ•°2: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 		inline sgstring EncryptionKey::Lock(const sgstring& encryptionString, const EncryptionKey lockKey)
 		{
 			sgstring result;
@@ -186,10 +186,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Unlock]
-		//•¶š—ñ‚ğˆÃ†‰»‰ğœ‚·‚é
-		//return: ˆÃ†‰»‰ğœ•¶š—ñ
-		//ˆø”1: ˆÃ†‰»‰ğœ‚·‚é•¶š—ñ
-		//ˆø”2: g—p‚·‚éƒL[, default = DefaultKey
+		//æ–‡å­—åˆ—ã‚’æš—å·åŒ–è§£é™¤ã™ã‚‹
+		//return: æš—å·åŒ–è§£é™¤æ–‡å­—åˆ—
+		//å¼•æ•°1: æš—å·åŒ–è§£é™¤ã™ã‚‹æ–‡å­—åˆ—
+		//å¼•æ•°2: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 		inline sgstring EncryptionKey::Unlock(const sgstring& encryptionString, const EncryptionKey unlockKey)
 		{
 			sgstring result;
@@ -200,10 +200,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Lock]
-		//•¶š—ñ‚ğˆÃ†‰»‚·‚é
-		//ˆø”1: ˆÃ†‰»•¶š—ñ‚ğ‘ã“ü‚·‚é•¶š—ñ
-		//ˆø”2: ˆÃ†‰»‚·‚é•¶š—ñ
-		//ˆø”3: g—p‚·‚éƒL[, default = DefaultKey
+		//æ–‡å­—åˆ—ã‚’æš—å·åŒ–ã™ã‚‹
+		//å¼•æ•°1: æš—å·åŒ–æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹æ–‡å­—åˆ—
+		//å¼•æ•°2: æš—å·åŒ–ã™ã‚‹æ–‡å­—åˆ—
+		//å¼•æ•°3: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 		inline void EncryptionKey::Lock(sgstring & string, const sgstring & encryptionString, const EncryptionKey lockKey)
 		{
 			string.clear();
@@ -213,10 +213,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Unlock]
-		//•¶š—ñ‚ğˆÃ†‰»‰ğœ‚·‚é
-		//ˆø”1: ˆÃ†‰»‰ğœ•¶š—ñ‚ğ‘ã“ü‚·‚é•¶š—ñ
-		//ˆø”2: ˆÃ†‰»‰ğœ‚·‚é•¶š—ñ
-		//ˆø”3: g—p‚·‚éƒL[, default = DefaultKey
+		//æ–‡å­—åˆ—ã‚’æš—å·åŒ–è§£é™¤ã™ã‚‹
+		//å¼•æ•°1: æš—å·åŒ–è§£é™¤æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹æ–‡å­—åˆ—
+		//å¼•æ•°2: æš—å·åŒ–è§£é™¤ã™ã‚‹æ–‡å­—åˆ—
+		//å¼•æ•°3: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 		inline void EncryptionKey::Unlock(sgstring & string, const sgstring & encryptionString, const EncryptionKey unlockKey)
 		{
 			string.clear();
@@ -228,10 +228,10 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[LockBinary]
-		//•¶š—ñ‚ğˆÃ†‰»‚·‚é, ƒoƒCƒiƒŠ”Å (byte)
-		//return: ˆÃ†‰»•¶š—ñ
-		//ˆø”1: ˆÃ†‰»‚·‚é•¶š—ñ
-		//ˆø”2: g—p‚·‚éƒL[, default = DefaultKey
+		//æ–‡å­—åˆ—ã‚’æš—å·åŒ–ã™ã‚‹, ãƒã‚¤ãƒŠãƒªç‰ˆ (byte)
+		//return: æš—å·åŒ–æ–‡å­—åˆ—
+		//å¼•æ•°1: æš—å·åŒ–ã™ã‚‹æ–‡å­—åˆ—
+		//å¼•æ•°2: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 		inline std::vector<byte> EncryptionKey::LockBinary(const std::vector<byte> & encryptionString, const EncryptionKey lockKey)
 		{
 			byte value = static_cast<byte>(lockKey.m_value);
@@ -245,10 +245,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Unlock]
-		//•¶š—ñ‚ğˆÃ†‰»‰ğœ‚·‚é, ƒoƒCƒiƒŠ”Å (byte)
-		//return: ˆÃ†‰»‰ğœ•¶š—ñ
-		//ˆø”1: ˆÃ†‰»‰ğœ‚·‚é•¶š—ñ
-		//ˆø”2: g—p‚·‚éƒL[, default = DefaultKey
+		//æ–‡å­—åˆ—ã‚’æš—å·åŒ–è§£é™¤ã™ã‚‹, ãƒã‚¤ãƒŠãƒªç‰ˆ (byte)
+		//return: æš—å·åŒ–è§£é™¤æ–‡å­—åˆ—
+		//å¼•æ•°1: æš—å·åŒ–è§£é™¤ã™ã‚‹æ–‡å­—åˆ—
+		//å¼•æ•°2: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 		inline std::vector<byte> EncryptionKey::UnlockBinary(const std::vector<byte> & encryptionString, const EncryptionKey unlockKey)
 		{
 			byte value = static_cast<byte>(unlockKey.m_value);
@@ -262,10 +262,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Lock]
-		//•¶š—ñ‚ğˆÃ†‰»‚·‚é, ƒoƒCƒiƒŠ”Å (byte)
-		//ˆø”1: ˆÃ†‰»•¶š—ñ‚ğ‘ã“ü‚·‚é•¶š—ñ
-		//ˆø”2: ˆÃ†‰»‚·‚é•¶š—ñ
-		//ˆø”3: g—p‚·‚éƒL[, default = DefaultKey
+		//æ–‡å­—åˆ—ã‚’æš—å·åŒ–ã™ã‚‹, ãƒã‚¤ãƒŠãƒªç‰ˆ (byte)
+		//å¼•æ•°1: æš—å·åŒ–æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹æ–‡å­—åˆ—
+		//å¼•æ•°2: æš—å·åŒ–ã™ã‚‹æ–‡å­—åˆ—
+		//å¼•æ•°3: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 		inline void EncryptionKey::LockBinary(std::vector<byte>& string, const std::vector<byte>& encryptionString, const EncryptionKey lockKey)
 		{
 			byte value = static_cast<byte>(lockKey.m_value);
@@ -277,10 +277,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Unlock]
-		//•¶š—ñ‚ğˆÃ†‰»‰ğœ‚·‚é, ƒoƒCƒiƒŠ”Å (byte)
-		//ˆø”1: ˆÃ†‰»‰ğœ•¶š—ñ‚ğ‘ã“ü‚·‚é•¶š—ñ
-		//ˆø”2: ˆÃ†‰»‰ğœ‚·‚é•¶š—ñ
-		//ˆø”3: g—p‚·‚éƒL[, default = DefaultKey
+		//æ–‡å­—åˆ—ã‚’æš—å·åŒ–è§£é™¤ã™ã‚‹, ãƒã‚¤ãƒŠãƒªç‰ˆ (byte)
+		//å¼•æ•°1: æš—å·åŒ–è§£é™¤æ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹æ–‡å­—åˆ—
+		//å¼•æ•°2: æš—å·åŒ–è§£é™¤ã™ã‚‹æ–‡å­—åˆ—
+		//å¼•æ•°3: ä½¿ç”¨ã™ã‚‹ã‚­ãƒ¼, default = DefaultKey
 		inline void EncryptionKey::UnlockBinary(std::vector<byte>& string, const std::vector<byte>& encryptionString, const EncryptionKey unlockKey)
 		{
 			byte value = static_cast<byte>(unlockKey.m_value);
@@ -295,9 +295,9 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Key]
-		//ƒXƒ^ƒeƒBƒbƒNƒCƒ“ƒXƒ^ƒ“ƒX‚ğƒQƒbƒg, ƒZƒbƒg‚·‚é
-		//return: ƒXƒ^ƒeƒBƒbƒNƒCƒ“ƒXƒ^ƒ“ƒX
-		//ˆø”1: Keyƒ|ƒCƒ“ƒ^, ’l‚ ‚è = Set, nullptr = Get
+		//ã‚¹ã‚¿ãƒ†ã‚£ãƒƒã‚¯ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’ã‚²ãƒƒãƒˆ, ã‚»ãƒƒãƒˆã™ã‚‹
+		//return: ã‚¹ã‚¿ãƒ†ã‚£ãƒƒã‚¯ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹
+		//å¼•æ•°1: Keyãƒã‚¤ãƒ³ã‚¿, å€¤ã‚ã‚Š = Set, nullptr = Get
 		inline EncryptionKey EncryptionKey::Key(EncryptionKey* set)
 		{
 			static EncryptionKey key(0);

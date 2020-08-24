@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Collider class‚ÌBase‚Æ‚È‚éBaseCollider class
+Collider classã®Baseã¨ãªã‚‹BaseCollider class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_BASE_COLLIDER_HPP_
 #define SGFRAMEWORK_HEADER_BASE_COLLIDER_HPP_
@@ -13,7 +13,7 @@ namespace SGFramework
 	//Base Classes
 	namespace BaseClass
 	{
-		//Collider class‚ÌBase‚Æ‚È‚éBaseCollider class
+		//Collider classã®Baseã¨ãªã‚‹BaseCollider class
 		class BaseCollider : public Component
 		{
 		public:
@@ -21,7 +21,7 @@ namespace SGFramework
 			friend class BaseRigidBody;
 			friend class Physics;
 
-			//ˆø”‚ªˆá‚¤‚Ì‚Åvirtual‚É‚Í‚µ‚È‚¢
+			//å¼•æ•°ãŒé•ã†ã®ã§virtualã«ã¯ã—ãªã„
 			//virtual BuildCollider() = 0;	
 
 			//physx pointer (read function property, not lokced)
@@ -53,7 +53,7 @@ namespace SGFramework
 			{
 				Physics::LockGuardPhysics guard(true);
 				
-				//simulation shape‚Ætrigger‚Í‹¤‘¶‚Å‚«‚È‚¢
+				//simulation shapeã¨triggerã¯å…±å­˜ã§ããªã„
 				if (IS_TRUE(set))
 				{
 					m_shape->setFlag(physx::PxShapeFlag::eSIMULATION_SHAPE, false);
@@ -82,12 +82,12 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[EnabledCallbacks]
-			//return: ©g‚ªCall‚³‚ê‚éCallback Flags, Component::CallbackFunctionsQÆ
+			//return: è‡ªèº«ãŒCallã•ã‚Œã‚‹Callback Flags, Component::CallbackFunctionså‚ç…§
 			inline uint EnableCallbacks() override { return CallbackFunctions::OnDestroy | CallbackFunctions::ChangeUpperHierarchy; }
 
 			//----------------------------------------------------------------------------------
 			//[GetActor]
-			//Actor‚ğŒŸõ
+			//Actorã‚’æ¤œç´¢
 			inline void GetActor() 
 			{
 				//find dynamic rigid body
@@ -114,14 +114,14 @@ namespace SGFramework
 					m_rigidBody = rigidStatic.DownCast<BaseClass::BaseRigidBody>();
 					m_actor = &rigidStatic->getPhysX();
 				}
-				//Both Find->‚Ç‚¿‚ç‚ª’¼‹ß‚©”»’è
+				//Both Find->ã©ã¡ã‚‰ãŒç›´è¿‘ã‹åˆ¤å®š
 				else if (isFindDynamic & isFindStatic)
 				{
-					//parentŒŸõƒ‹[ƒv
+					//parentæ¤œç´¢ãƒ«ãƒ¼ãƒ—
 					for (auto parent = transform; 
 						IS_TRUE(parent.getIsValid()); parent = parent->getParent())
 					{
-						//‚Ç‚¿‚ç‚©Œ©‚Â‚©‚ê‚ÎI—¹
+						//ã©ã¡ã‚‰ã‹è¦‹ã¤ã‹ã‚Œã°çµ‚äº†
 						if (rigidStatic->transform->instanceID() == parent->instanceID()
 							|| rigidDynamic->transform->instanceID() == parent->instanceID())
 						{
@@ -134,7 +134,7 @@ namespace SGFramework
 
 				//linked ?
 				m_isLinkRigidBody = m_rigidBodyTransform.getIsValid();
-				//linked->equal”»’è
+				//linked->equalåˆ¤å®š
 				if (IS_TRUE(m_isLinkRigidBody))
 					m_isEqualRigidTransform = (transform->instanceID() == m_rigidBodyTransform->instanceID());
 				else
@@ -147,7 +147,7 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[OnDestroy]
-			//ƒCƒ“ƒXƒ^ƒ“ƒX‚ªíœ‚³‚ê‚éuŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
+			//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒå‰Šé™¤ã•ã‚Œã‚‹ç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
 			inline void OnDestroy() override
 			{
 				using namespace Detail::Physics;
@@ -157,7 +157,7 @@ namespace SGFramework
 
 				if (m_shape != nullptr)
 				{
-					//messageì¬
+					//messageä½œæˆ
 					PhysicsMessage message(MessageType::PointerMessageFlag | MessageType::UnregisterCollider, instanceID());
 
 					//send message
@@ -169,18 +169,18 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[ChangeUpperHierarchy]
-			//parentˆÈã‚ÌŠK‘wŠÖŒW‚É•ÏX‚ªs‚í‚ê‚½(parent‚Ì•ÏX‚È‚Ç)uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
-			//d—lãUpdateFlame‚ÅŒÄ‚Ño‚³‚ê‚é‰Â”\«‚ª‚ ‚é‚±‚Æ‚É—¯ˆÓ‚·‚é‚±‚Æ (parent‚Ì•ÏX‚È‚Ç‚ğs‚Á‚½ƒXƒŒƒbƒh‚ÅŒÄ‚Ño‚µ)
-			//ˆø”1: new parent (null‚Ì‰Â”\«‚ ‚è)
-			//ˆø”2: old parent (null‚Ì‰Â”\«‚ ‚è)
+			//parentä»¥ä¸Šã®éšå±¤é–¢ä¿‚ã«å¤‰æ›´ãŒè¡Œã‚ã‚ŒãŸ(parentã®å¤‰æ›´ãªã©)ç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
+			//ä»•æ§˜ä¸ŠUpdateFlameã§å‘¼ã³å‡ºã•ã‚Œã‚‹å¯èƒ½æ€§ãŒã‚ã‚‹ã“ã¨ã«ç•™æ„ã™ã‚‹ã“ã¨ (parentã®å¤‰æ›´ãªã©ã‚’è¡Œã£ãŸã‚¹ãƒ¬ãƒƒãƒ‰ã§å‘¼ã³å‡ºã—)
+			//å¼•æ•°1: new parent (nullã®å¯èƒ½æ€§ã‚ã‚Š)
+			//å¼•æ•°2: old parent (nullã®å¯èƒ½æ€§ã‚ã‚Š)
 			inline virtual void ChangeUpperHierarchy(WeakPointer<Transform> newParent, WeakPointer<Transform> oldParent) override
 			{
-				//transform’¼•t‚¯ or link‚»‚à‚»‚à‚µ‚Ä‚¢‚È‚¢ or ‚Ü‚¾e‚ÉRigid Body‚ª‘¶İ‚µ‚Ä‚¢‚é‚È‚çI—¹
+				//transformç›´ä»˜ã‘ or linkãã‚‚ãã‚‚ã—ã¦ã„ãªã„ or ã¾ã è¦ªã«Rigid BodyãŒå­˜åœ¨ã—ã¦ã„ã‚‹ãªã‚‰çµ‚äº†
 				if (m_isEqualRigidTransform | IS_FALSE(m_isLinkRigidBody)
 					| transform->IsTargetMyUpperHierarchy(m_rigidBodyTransform)) 
 					return;
 
-				//new parent‚ª‘¶İ‚µ‚È‚¢ê‡‚Í©g‚ğ–³Œø‰»
+				//new parentãŒå­˜åœ¨ã—ãªã„å ´åˆã¯è‡ªèº«ã‚’ç„¡åŠ¹åŒ–
 				if (IS_FALSE(newParent.getIsValid()))
 				{
 					m_rigidBodyTransform.Reset();
@@ -190,13 +190,13 @@ namespace SGFramework
 				//get component
 				WeakPointer<BaseClass::BaseRigidBody> getComponent;
 
-				//static only‚Èê‡->Static‚Ì‚İ‚ÅŒŸõ, ‚»‚¤‚Å‚È‚¢ê‡‚Í—¼•ûŒŸõ
+				//static onlyãªå ´åˆ->Staticã®ã¿ã§æ¤œç´¢, ãã†ã§ãªã„å ´åˆã¯ä¸¡æ–¹æ¤œç´¢
 				if (IS_FALSE(getIsStaticOnlly()))
 					getComponent = transform->FindComponentInParent<RigidBodyStatic>(false).DownCast<BaseClass::BaseRigidBody>();
 				else
 					getComponent = transform->FindComponentInParent<BaseClass::BaseRigidBody>(false);
 
-				//Œ©‚Â‚¯‚½‚ç’Ç‰Á, Œ©‚Â‚©‚ç‚È‚¯‚ê‚Î–³Œø‰»
+				//è¦‹ã¤ã‘ãŸã‚‰è¿½åŠ , è¦‹ã¤ã‹ã‚‰ãªã‘ã‚Œã°ç„¡åŠ¹åŒ–
 				if (IS_TRUE(getComponent.getIsValid()))
 					TransferRigidBody(getComponent->transform, getComponent);
 				else
@@ -206,16 +206,16 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[CreateShape]
-			//ÀÛ‚ÉShape‚ğì¬‚·‚é
+			//å®Ÿéš›ã«Shapeã‚’ä½œæˆã™ã‚‹
 			inline virtual void CreateShape() = 0;
 			//----------------------------------------------------------------------------------
 			//[ChangeScale]
-			//Scale‚ğ•ÏX‚·‚é
+			//Scaleã‚’å¤‰æ›´ã™ã‚‹
 			inline virtual void ChangeScale() = 0;
 
 			//----------------------------------------------------------------------------------
 			//[InitFilterMask]
-			//FilterData‚ğİ’è‚·‚é
+			//FilterDataã‚’è¨­å®šã™ã‚‹
 			inline void InitFilterMask(bool isUsedCallback)
 			{
 				//Filter Data
@@ -249,7 +249,7 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[UpdatePhysics]
-			//Physics‚©‚çUpdate‚Æ‚µ‚ÄCallback‚³‚ê‚éŠÖ”
+			//Physicsã‹ã‚‰Updateã¨ã—ã¦Callbackã•ã‚Œã‚‹é–¢æ•°
 			void UpdatePhysics()
 			{
 				//un linked
@@ -304,18 +304,18 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[TransferRigidBody]
-			//NewRigidBody‚ÖCollider‚ğˆÚ“®‚·‚é
-			//ˆø”1: Transform
-			//ˆø”2: RigidBody
+			//NewRigidBodyã¸Colliderã‚’ç§»å‹•ã™ã‚‹
+			//å¼•æ•°1: Transform
+			//å¼•æ•°2: RigidBody
 			inline void TransferRigidBody(const WeakPointer<Transform>& newRigidBodyTransform,
 				const WeakPointer<BaseClass::BaseRigidBody>& newRigidBody)
 			{
 				using namespace Detail::Physics;
 
-				//Shape‚ªNull‚Å‚È‚¢
+				//ShapeãŒNullã§ãªã„
 				if (m_shape != nullptr)
 				{
-					//messageì¬
+					//messageä½œæˆ
 					PhysicsMessage message(MessageType::BaseColliderMessageFlag | MessageType::TransferRigidBodyTR, instanceID());
 					message.attachment.transferRigidBody.shape = m_shape;
 					message.attachment.transferRigidBody.oldActor = m_actor;
@@ -324,25 +324,25 @@ namespace SGFramework
 					Physics::SendPhysicsMessage(message);
 				}
 
-				//‘ã“ü
+				//ä»£å…¥
 				m_rigidBodyTransform = newRigidBodyTransform;
 				m_rigidBody = newRigidBody;
 				m_actor = newRigidBody->getBaseActor();
-				//‰Šú‰»
+				//åˆæœŸåŒ–
 				m_isUnLinked = false;
-				//Flagİ’è
+				//Flagè¨­å®š
 				m_isLinkRigidBody = m_rigidBodyTransform.getIsValid();
 				if (IS_TRUE(m_isLinkRigidBody))
 					m_isEqualRigidTransform = (transform->instanceID() == m_rigidBodyTransform->instanceID());
 				else
 					m_isEqualRigidTransform = false;
 
-				//XV
+				//æ›´æ–°
 				//UpdatePhysics();
 			}
 
 			//----------------------------------------------------------------------------------
-			//private‚É‰B‚·‚½‚ß‹óéŒ¾
+			//privateã«éš ã™ãŸã‚ç©ºå®£è¨€
 			inline void OnEnable() override {}
 			inline void Start() override {}
 			inline void Update() override {}

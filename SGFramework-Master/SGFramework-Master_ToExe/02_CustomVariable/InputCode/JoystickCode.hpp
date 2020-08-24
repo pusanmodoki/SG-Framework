@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-ƒWƒ‡ƒCƒpƒbƒh“ü—Í‚ð’S“–‚·‚éInput Class“àŠÖ”‚Å‚Ìˆø”‚ÉŽg‚¤A
-ƒWƒ‡ƒCƒpƒbƒhŽæ“¾—penum‚ð“Z‚ß‚½JoystickCode.h
+ã‚¸ãƒ§ã‚¤ãƒ‘ãƒƒãƒ‰å…¥åŠ›ã‚’æ‹…å½“ã™ã‚‹Input Classå†…é–¢æ•°ã§ã®å¼•æ•°ã«ä½¿ã†ã€
+ã‚¸ãƒ§ã‚¤ãƒ‘ãƒƒãƒ‰å–å¾—ç”¨enumã‚’çºã‚ãŸJoystickCode.h
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_INPUT_JOYSTICKCODE_HPP_
 #define SGFRAMEWORK_HEADER_INPUT_JOYSTICKCODE_HPP_
@@ -10,29 +10,29 @@
 namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
-	//ƒWƒ‡ƒCƒpƒbƒh”»’è‚Å”»’èƒ{ƒ^ƒ“‚ÌŽw’è‚ðs‚¤JoystickCode
+	//ã‚¸ãƒ§ã‚¤ãƒ‘ãƒƒãƒ‰åˆ¤å®šã§åˆ¤å®šãƒœã‚¿ãƒ³ã®æŒ‡å®šã‚’è¡Œã†JoystickCode
 	struct JoystickCode
 	{
 		enum Enum : ushort
 		{
-			A = 0x1000,				//Aƒ{ƒ^ƒ“
-			B = 0x2000,				//Bƒ{ƒ^ƒ“
-			X = 0x4000,				//Xƒ{ƒ^ƒ“
-			Y = 0x8000,				//Yƒ{ƒ^ƒ“
-			LB = 0x100,				//LBƒ{ƒ^ƒ“
-			RB = 0x200,				//RBƒ{ƒ^ƒ“
-			StickLeft = 0x40,		//¶ƒXƒeƒBƒbƒN‰Ÿ‚µž‚Ý
-			StickRight = 0x80,		//‰EƒXƒeƒBƒbƒN‰Ÿ‚µž‚Ý
-			Up = 0x1,					//\Žšãƒ{ƒ^ƒ“
-			Down = 0x2,				//\Žš‰ºƒ{ƒ^ƒ“
-			Left = 0x4,				//\Žš¶ƒ{ƒ^ƒ“
-			Right = 0x8,				//\Žš‰Eƒ{ƒ^ƒ“
-			//Xbox360ê—p------------------------------------------------------
-			Start = 0x10,				//ƒXƒ^[ƒgƒ{ƒ^ƒ“(Menuƒ{ƒ^ƒ“)
-			Back = 0x20,				//ƒoƒbƒNƒ{ƒ^ƒ“(Viewƒ{ƒ^ƒ“)
-			//XboxOneê—p------------------------------------------------------
-			Menu = 0x10,			//ƒƒjƒ…[ƒ{ƒ^ƒ“(Startƒ{ƒ^ƒ“)
-			View = 0x20,				//ƒrƒ…[ƒ{ƒ^ƒ“(Backƒ{ƒ^ƒ“)
+			A = 0x1000,				//Aãƒœã‚¿ãƒ³
+			B = 0x2000,				//Bãƒœã‚¿ãƒ³
+			X = 0x4000,				//Xãƒœã‚¿ãƒ³
+			Y = 0x8000,				//Yãƒœã‚¿ãƒ³
+			LB = 0x100,				//LBãƒœã‚¿ãƒ³
+			RB = 0x200,				//RBãƒœã‚¿ãƒ³
+			StickLeft = 0x40,		//å·¦ã‚¹ãƒ†ã‚£ãƒƒã‚¯æŠ¼ã—è¾¼ã¿
+			StickRight = 0x80,		//å³ã‚¹ãƒ†ã‚£ãƒƒã‚¯æŠ¼ã—è¾¼ã¿
+			Up = 0x1,					//åå­—ä¸Šãƒœã‚¿ãƒ³
+			Down = 0x2,				//åå­—ä¸‹ãƒœã‚¿ãƒ³
+			Left = 0x4,				//åå­—å·¦ãƒœã‚¿ãƒ³
+			Right = 0x8,				//åå­—å³ãƒœã‚¿ãƒ³
+			//Xbox360å°‚ç”¨------------------------------------------------------
+			Start = 0x10,				//ã‚¹ã‚¿ãƒ¼ãƒˆãƒœã‚¿ãƒ³(Menuãƒœã‚¿ãƒ³)
+			Back = 0x20,				//ãƒãƒƒã‚¯ãƒœã‚¿ãƒ³(Viewãƒœã‚¿ãƒ³)
+			//XboxOneå°‚ç”¨------------------------------------------------------
+			Menu = 0x10,			//ãƒ¡ãƒ‹ãƒ¥ãƒ¼ãƒœã‚¿ãƒ³(Startãƒœã‚¿ãƒ³)
+			View = 0x20,				//ãƒ“ãƒ¥ãƒ¼ãƒœã‚¿ãƒ³(Backãƒœã‚¿ãƒ³)
 		};
 	};
 }

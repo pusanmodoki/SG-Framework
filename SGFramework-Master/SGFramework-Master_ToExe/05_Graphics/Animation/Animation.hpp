@@ -11,7 +11,7 @@ namespace SGFramework
 	{
 	public:
 		friend class Animator;
-
+		//あに
 		struct AnimationCallback
 		{
 			std::function<void()> callbackFunction;

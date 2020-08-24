@@ -7,7 +7,7 @@
 // Framework namespace
 namespace SGFramework
 {
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ð‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		void GraphicsX11::InitCommandList()
@@ -29,22 +29,22 @@ namespace SGFramework
 		}
 		void GraphicsX11::SyncGraphics()
 		{
-			//InstanceId‰Šú‰»
+			//InstanceIdåˆæœŸåŒ–
 			for(auto& e : m_nowShaderInstanceIDs)
 				e = -1;
 			m_nowTextureInstanceID = -1;
 
-			//ƒRƒ}ƒ“ƒh‚ðˆÚ“®
+			//ã‚³ãƒžãƒ³ãƒ‰ã‚’ç§»å‹•
 			for (auto& e : m_commandQueue)
 				m_commandList[e.first].splice(m_commandList[e.first].end(), e.second);
 
-			//Enableî•ñƒRƒs[
+			//Enableæƒ…å ±ã‚³ãƒ”ãƒ¼
 			m_isEnabledAlphaBlending[m_cGraphicsThreadState] 
 				= m_isEnabledAlphaBlending[m_UpdateThreadState];
 			m_isEnabledDepthBuffer[m_cGraphicsThreadState]
 				= m_isEnabledDepthBuffer[m_UpdateThreadState];
 
-			//ƒ‰ƒCƒg‚Ì’l‚ðƒRƒs[
+			//ãƒ©ã‚¤ãƒˆã®å€¤ã‚’ã‚³ãƒ”ãƒ¼
 			memcpy_s(&m_setConstantBufferLight.directional, sizeof(m_setConstantBufferLight.directional), &GraphicsDetail::DirectionalLightX11::m_pack, sizeof(GraphicsDetail::DirectionalLightX11::m_pack));
 			memcpy_s(&m_setConstantBufferLight.point, sizeof(m_setConstantBufferLight.point), &GraphicsDetail::PointLightX11::m_pack, sizeof(GraphicsDetail::PointLightX11::m_pack));
 			memcpy_s(&m_setConstantBufferLight.hemiSphere, sizeof(m_setConstantBufferLight.hemiSphere), &GraphicsDetail::HemiSphereLightX11::m_pack, sizeof(GraphicsDetail::HemiSphereLightX11::m_pack));
@@ -92,11 +92,11 @@ namespace SGFramework
 				e.second.clear();
 			}
 
-			// ƒ^[ƒQƒbƒgƒoƒbƒtƒ@ƒNƒŠƒA
+			// ã‚¿ãƒ¼ã‚²ãƒƒãƒˆãƒãƒƒãƒ•ã‚¡ã‚¯ãƒªã‚¢
 			m_deviceContext->ClearRenderTargetView(m_renderTargetView, m_clearColor);
-			// Zƒoƒbƒtƒ@ƒNƒŠƒA
+			// Zãƒãƒƒãƒ•ã‚¡ã‚¯ãƒªã‚¢
 			m_deviceContext->ClearDepthStencilView(m_depthStencilView, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
-			//ƒ‰ƒCƒgXV
+			//ãƒ©ã‚¤ãƒˆæ›´æ–°
 			if (IS_TRUE(m_isSetConstantBufferLight))
 			{
 				m_deviceContext->UpdateSubresource(m_constantBufferLight, 0, nullptr, &m_setConstantBufferLight, 0, 0);

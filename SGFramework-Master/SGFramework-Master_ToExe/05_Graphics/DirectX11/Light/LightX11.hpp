@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-DirectX11 LightÇìZÇﬂÇÈLightX11.hpp
+DirectX11 Light„ÇíÁ∫è„ÇÅ„ÇãLightX11.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_LIGHT_X11_HPP_
 #define SGFRAMEWORK_HEADER_LIGHT_X11_HPP_

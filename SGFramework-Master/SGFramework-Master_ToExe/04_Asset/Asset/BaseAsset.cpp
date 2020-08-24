@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-AssetŒnƒNƒ‰ƒX‚Ìƒx[ƒX‚Æ‚È‚éBaseAsset class
+Assetç³»ã‚¯ãƒ©ã‚¹ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseAsset class
 ------------------------------------------------------------------------------------*/
 #include "BaseAsset.hpp"
 #include "../AssetManager.hpp"
@@ -12,18 +12,18 @@ namespace SGFramework
 	{
 		//----------------------------------------------------------------------------------
 		//[CloseBaseAsset]
-		//BaseAsset‘¤‚ÅŠJ‚¢‚Ä‚¢‚éƒtƒ@ƒCƒ‹ƒnƒ“ƒhƒ‹‚ğ•Â‚¶‚é
+		//BaseAssetå´ã§é–‹ã„ã¦ã„ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ãƒãƒ³ãƒ‰ãƒ«ã‚’é–‰ã˜ã‚‹
 		void BaseAsset::CloseBaseAsset(Asset::AssetType type, bool isDestructor)
 		{
-			//ŠJ‚¢‚Ä‚È‚©‚Á‚½‚çI—¹
+			//é–‹ã„ã¦ãªã‹ã£ãŸã‚‰çµ‚äº†
 			if (IS_FALSE(getIsFileOpened())) return;
 
 			if (isDestructor)
 				Administrator::AssetManager::UnregisterSharedAsset(m_name, type, instanceID());
 
-			//•Â‚¶‚é
+			//é–‰ã˜ã‚‹
 			CloseHandle(m_fileHandle);
-			//‰Šú‰»
+			//åˆæœŸåŒ–
 			m_fileHandle = nullptr;
 
 			AtomicOperation::Init(m_isOpened, false);

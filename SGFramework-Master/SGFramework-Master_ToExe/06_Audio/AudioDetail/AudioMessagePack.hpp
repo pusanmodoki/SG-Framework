@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-ƒI[ƒfƒBƒI‚ğŠÇ—‚·‚éAudio class
-	->Message“à‚ÌUnion‚Åg—p‚·‚é\‘¢‘Ì“™‚ğ’è‹`‚·‚éAudioMessagePack.hpp
+ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚’ç®¡ç†ã™ã‚‹Audio class
+	->Messageå†…ã®Unionã§ä½¿ç”¨ã™ã‚‹æ§‹é€ ä½“ç­‰ã‚’å®šç¾©ã™ã‚‹AudioMessagePack.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_AUDIO_MESSAGE_PACK_HPP_
 #define SGFRAMEWORK_HEADER_AUDIO_MESSAGE_PACK_HPP_
@@ -23,13 +23,13 @@ namespace SGFramework
 		class AudioAssetEffect3D;
 	}
 
-	//ƒp[ƒc
+	//ãƒ‘ãƒ¼ãƒ„
 	namespace Detail
 	{
 		//Audio
 		namespace Audio
 		{
-			//Message‚ÅSmoothí—Ş‚ğ”»•Ê‚·‚éSmoothType enum
+			//Messageã§Smoothç¨®é¡ã‚’åˆ¤åˆ¥ã™ã‚‹SmoothType enum
 			struct SmoothType
 			{
 				enum Enum
@@ -38,7 +38,7 @@ namespace SGFramework
 					Volume = 0x2	//volume Change
 				};
 			};
-			//Message‚Ìí—Ş‚ğ’è‹`‚µ‚½MessageType enum
+			//Messageã®ç¨®é¡ã‚’å®šç¾©ã—ãŸMessageType enum
 			struct MessageType
 			{
 				enum Enum
@@ -61,57 +61,57 @@ namespace SGFramework
 				};
 			};
 
-			//AddSmoothSubmix message‚Åg—p‚·‚éPackSubmixSmooth structure
+			//AddSmoothSubmix messageã§ä½¿ç”¨ã™ã‚‹PackSubmixSmooth structure
 			struct PackSubmixSmooth
 			{
 				//submixVoice
 				IXAudio2SubmixVoice* submixVoice;
-				float now;				//Œ»İ’l
-				float target;			//ƒ^[ƒQƒbƒg
-				float speed;			//•ÏXƒXƒs[ƒh (•b‘¬)
+				float now;				//ç¾åœ¨å€¤
+				float target;			//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆ
+				float speed;			//å¤‰æ›´ã‚¹ãƒ”ãƒ¼ãƒ‰ (ç§’é€Ÿ)
 			};
-			//AddSmoothAudio message‚Åg—p‚·‚éPackAudioSmooth structure
+			//AddSmoothAudio messageã§ä½¿ç”¨ã™ã‚‹PackAudioSmooth structure
 			struct PackAudioSmooth
 			{
 				//asset
 				WeakPointer<BaseClass::BaseAudioAsset> asset;
 				//smooth type
 				SmoothType::Enum smoothType;
-				float now;				//Œ»İ’l
-				float target;			//ƒ^[ƒQƒbƒg
-				float speed;			//•ÏXƒXƒs[ƒh (•b‘¬)
-				bool isStop;			//•ÏXŠ®—¹’â~‚·‚é‚©”Û‚©
+				float now;				//ç¾åœ¨å€¤
+				float target;			//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆ
+				float speed;			//å¤‰æ›´ã‚¹ãƒ”ãƒ¼ãƒ‰ (ç§’é€Ÿ)
+				bool isStop;			//å¤‰æ›´å®Œäº†æ™‚åœæ­¢ã™ã‚‹ã‹å¦ã‹
 			};
 
-			//AddEffect message‚Åg—p‚·‚éPackAddEffect structure
+			//AddEffect messageã§ä½¿ç”¨ã™ã‚‹PackAddEffect structure
 			struct PackAddEffect
 			{
 				//Asset, if remove -> null
 				WeakPointer<Asset::AudioAssetEffect> asset;
 				uint instanceID;			//asset instance id
 			};
-			//PlayEffect message‚Åg—p‚·‚éPackPlayEffect structure
+			//PlayEffect messageã§ä½¿ç”¨ã™ã‚‹PackPlayEffect structure
 			struct PackPlayEffect
 			{
 				uint instanceID;			//asset instance id
-				uint loopCount;			//ƒ‹[ƒv‰ñ”
+				uint loopCount;			//ãƒ«ãƒ¼ãƒ—å›æ•°
 			};
 
-			//AddEffect3D message‚Åg—p‚·‚éPackAddEffect3D structure
+			//AddEffect3D messageã§ä½¿ç”¨ã™ã‚‹PackAddEffect3D structure
 			struct PackAddEffect3D
 			{
 				//Asset, if remove -> null
 				WeakPointer<Asset::AudioAssetEffect3D> asset;
 				uint instanceID;	//asset instance id
 			};
-			//PlayEffect3D message‚Åg—p‚·‚éPackPlayEffect3D structure
+			//PlayEffect3D messageã§ä½¿ç”¨ã™ã‚‹PackPlayEffect3D structure
 			struct PackPlayEffect3D
 			{
-				Vector3 position;	//À•W
-				Vector3 velocity;	//ˆÚ“®—Ê (•b‘¬)
-				Vector3 forward;	//‘O•ûŒüƒxƒNƒgƒ‹
-				Vector3 up;			//ã•ûŒüƒxƒNƒgƒ‹
-				uint loopCount;		//ƒ‹[ƒv‰ñ”
+				Vector3 position;	//åº§æ¨™
+				Vector3 velocity;	//ç§»å‹•é‡ (ç§’é€Ÿ)
+				Vector3 forward;	//å‰æ–¹å‘ãƒ™ã‚¯ãƒˆãƒ«
+				Vector3 up;			//ä¸Šæ–¹å‘ãƒ™ã‚¯ãƒˆãƒ«
+				uint loopCount;		//ãƒ«ãƒ¼ãƒ—å›æ•°
 				uint instanceID;		//asset instance id
 			};
 		}

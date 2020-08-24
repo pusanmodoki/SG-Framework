@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-RigidBody‚ğ’è‹`‚·‚éRigidBody.hpp
+RigidBodyã‚’å®šç¾©ã™ã‚‹RigidBody.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_RIGID_BODY_HPP_
 #define SGFRAMEWORK_HEADER_RIGID_BODY_HPP_
@@ -17,7 +17,7 @@ namespace SGFramework
 	//Base Classes
 	namespace BaseClass
 	{
-		//Static, Dynamic‚ÌBase‚Æ‚È‚éBaseRigidBody class
+		//Static, Dynamicã®Baseã¨ãªã‚‹BaseRigidBody class
 		class BaseRigidBody : public Component
 		{
 		public:
@@ -33,31 +33,31 @@ namespace SGFramework
 		protected:
 			//----------------------------------------------------------------------------------
 			//[BuildRigidBody]
-			//RigidBodyì¬
+			//RigidBodyä½œæˆ
 			virtual void BuildRigidBody() = 0;
 			//----------------------------------------------------------------------------------
 			//[UpdatePhysics]
-			//Physics‚©‚çŒÄ‚Ño‚³‚ê‚éXVŠÖ”
+			//Physicsã‹ã‚‰å‘¼ã³å‡ºã•ã‚Œã‚‹æ›´æ–°é–¢æ•°
 			virtual void UpdatePhysics() = 0;
 			//----------------------------------------------------------------------------------
 			//[TransferColliders]
-			//©g‚ÌRigidBody
+			//è‡ªèº«ã®RigidBody
 			void TransferColliders();
 
 			//----------------------------------------------------------------------------------
 			//[OnDestroy]
-			//ƒCƒ“ƒXƒ^ƒ“ƒX‚ªíœ‚³‚ê‚éuŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
+			//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒå‰Šé™¤ã•ã‚Œã‚‹ç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
 			inline void OnDestroy() override
 			{
 				using namespace Detail::Physics;
 
 				if (getBaseActor() == nullptr) return;
 
-				//©g‚ÉCollider‚ª•R•t‚¢‚Ä‚¢‚é & Transform‚²‚Æíœ‚Å‚È‚¢ê‡e‚ÉˆÚ‚·‚æ‚¤‚·
+				//è‡ªèº«ã«ColliderãŒç´ä»˜ã„ã¦ã„ã‚‹ & Transformã”ã¨å‰Šé™¤ã§ãªã„å ´åˆè¦ªã«ç§»ã™ã‚ˆã†è©¦ã™
 				if (m_numAttachColliders.load() > 0)
 					TransferColliders();
 
-				//messageì¬
+				//messageä½œæˆ
 				PhysicsMessage message(MessageType::PointerMessageFlag | MessageType::UnregisterRigidBody, instanceID());
 				//send message
 				Physics::SendPhysicsMessage(message);
@@ -70,7 +70,7 @@ namespace SGFramework
 			{
 				physx::PxShape* shape = nullptr;
 
-				//Simulation‚È‚Ç‚Ís‚í‚È‚¢
+				//Simulationãªã©ã¯è¡Œã‚ãªã„
 				shape = Physics::physicsFactory->createShape(physx::PxSphereGeometry(1.0f),
 					*Physics::defaultPhysicsMaterial(), true);
 				shape->setFlag(physx::PxShapeFlag::eSIMULATION_SHAPE, true);
@@ -110,9 +110,9 @@ namespace SGFramework
 		private:
 			//----------------------------------------------------------------------------------
 			//[InvokeCallback]
-			//Physics hit callback‚ğtransform‚É‘—M‚·‚é
-			//ˆø”1: callback type
-			//ˆø”2: contact info
+			//Physics hit callbackã‚’transformã«é€ä¿¡ã™ã‚‹
+			//å¼•æ•°1: callback type
+			//å¼•æ•°2: contact info
 			inline void InvokeCallback(uint callbackType, const ContactInfo& info)
 			{
 				transform->InvokeCallbackPhysics(callbackType, info);
@@ -125,7 +125,7 @@ namespace SGFramework
 
 
 
-	//“®‚©‚È‚¢static object‚Écollider‚ğ“K—p‚·‚é‚±‚Æ‚ª‚Å‚«‚éRigidBodyStatic class
+	//å‹•ã‹ãªã„static objectã«colliderã‚’é©ç”¨ã™ã‚‹ã“ã¨ãŒã§ãã‚‹RigidBodyStatic class
 	class RigidBodyStatic final : public BaseClass::BaseRigidBody
 	{
 	public:
@@ -136,7 +136,7 @@ namespace SGFramework
 	private:
 		//----------------------------------------------------------------------------------
 		//[BuildRigidBody]
-		//RigidBodyì¬
+		//RigidBodyä½œæˆ
 		inline void BuildRigidBody() override
 		{
 			auto shape = DefaultShape();
@@ -156,16 +156,16 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[UpdatePhysics]
-		//Physics‚©‚çŒÄ‚Ño‚³‚ê‚éXVŠÖ”
+		//Physicsã‹ã‚‰å‘¼ã³å‡ºã•ã‚Œã‚‹æ›´æ–°é–¢æ•°
 		inline void UpdatePhysics() override {}
 		//----------------------------------------------------------------------------------
 		//[EnabledCallbacks]
-		//return: ©g‚ªCall‚³‚ê‚éCallback Flags, Component::CallbackFunctionsQÆ
+		//return: è‡ªèº«ãŒCallã•ã‚Œã‚‹Callback Flags, Component::CallbackFunctionså‚ç…§
 		inline uint EnableCallbacks() override { return CallbackFunctions::Awake | CallbackFunctions::OnDestroy; }
 
 		//----------------------------------------------------------------------------------
 		//[Awake]
-		//ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½uŠÔ‚ÉŒÄ‚Î‚ê‚éCallbackŠÖ”
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸç¬é–“ã«å‘¼ã°ã‚Œã‚‹Callbacké–¢æ•°
 		void Awake() override
 		{
 			using namespace Detail::Physics;
@@ -173,7 +173,7 @@ namespace SGFramework
 			//is static
 			m_isStatic = true;
 
-			//messageì¬
+			//messageä½œæˆ
 			PhysicsMessage message(MessageType::PointerMessageFlag | MessageType::RegisterRigidBodyRG, instanceID());
 			message.attachment.rigidBody = m_thisPointer.DynamicCast<BaseClass::BaseRigidBody>();
 
@@ -185,7 +185,7 @@ namespace SGFramework
 		SGF_FUNCTION_PROPERTY physx::PxRigidActor* getBaseActor() override { return m_rigidBody; }
 
 		//----------------------------------------------------------------------------------
-		//private‚É‰B‚·‚½‚ß‹óéŒ¾
+		//privateã«éš ã™ãŸã‚ç©ºå®£è¨€
 		inline void OnEnable() override {}
 		inline void Start() override {}
 		inline void Update() override {}
@@ -208,21 +208,21 @@ namespace SGFramework
 
 
 
-	//“®“IƒIƒuƒWƒFƒNƒg‚ÉƒAƒ^ƒbƒ`‚·‚éRigidBodyDynamic class
+	//å‹•çš„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã‚¢ã‚¿ãƒƒãƒã™ã‚‹RigidBodyDynamic class
 	class RigidBodyDynamic final : public BaseClass::BaseRigidBody
 	{
 	public:
 		//----------------------------------------------------------------------------------
 		//[AddForce]
-		//RigidBody‚ÉŠO—Í‚ğ—^‚¦‚é
-		//ˆø”1: force
-		//ˆø”2: force mode, default = force
-		//ˆø”3: sleepó‘Ô©“®‚Å‹N‚±‚·‚©”Û‚©, default = true
+		//RigidBodyã«å¤–åŠ›ã‚’ä¸ãˆã‚‹
+		//å¼•æ•°1: force
+		//å¼•æ•°2: force mode, default = force
+		//å¼•æ•°3: sleepçŠ¶æ…‹æ™‚è‡ªå‹•ã§èµ·ã“ã™ã‹å¦ã‹, default = true
 		inline void AddForce(Vector3 force, ForceMode::Enum forceMode = ForceMode::Force, bool isAutoAwake = true)
 		{
 			using namespace Detail::Physics;
 
-			//messageì¬
+			//messageä½œæˆ
 			PhysicsMessage message(MessageType::RigidBodyDynamicMessageFlag
 				| MessageType::RigidBodyDynamicAddForceFlag | MessageType::RigidAddForceFO, instanceID());
 			message.attachment.force.force = force;
@@ -233,20 +233,20 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[ClearForce]
-		//Œ»İ—^‚¦‚ç‚ê‚Ä‚¢‚éŠO—Í‚ğ‰ğœ‚·‚é
+		//ç¾åœ¨ä¸ãˆã‚‰ã‚Œã¦ã„ã‚‹å¤–åŠ›ã‚’è§£é™¤ã™ã‚‹
 		inline void ClearForce() { if (IS_FALSE(m_isRegisterScene)) return; Physics::LockGuardPhysics guard(true); m_rigidBody->clearForce(); }
 
 		//----------------------------------------------------------------------------------
 		//[AddTorque]
-		//RigidBody‚Éƒgƒ‹ƒN(‰ñ“])‚ğ—^‚¦‚é
-		//ˆø”1: ƒgƒ‹ƒN(‰ñ“])
-		//ˆø”2: force mode, default = force
-		//ˆø”3: sleepó‘Ô©“®‚Å‹N‚±‚·‚©”Û‚©, default = true
+		//RigidBodyã«ãƒˆãƒ«ã‚¯(å›è»¢)ã‚’ä¸ãˆã‚‹
+		//å¼•æ•°1: ãƒˆãƒ«ã‚¯(å›è»¢)
+		//å¼•æ•°2: force mode, default = force
+		//å¼•æ•°3: sleepçŠ¶æ…‹æ™‚è‡ªå‹•ã§èµ·ã“ã™ã‹å¦ã‹, default = true
 		void AddTorque(Vector3 torque, ForceMode::Enum forceMode = ForceMode::Force, bool isAutoAwake = true)
 		{
 			using namespace Detail::Physics;
 
-			//messageì¬
+			//messageä½œæˆ
 			PhysicsMessage message(MessageType::RigidBodyDynamicMessageFlag
 				| MessageType::RigidBodyDynamicAddForceFlag | MessageType::RigidAddTorqueFO, instanceID());
 			message.attachment.force.force = torque;
@@ -257,12 +257,12 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[ClearForce]
-		//Œ»İ—^‚¦‚ç‚ê‚Ä‚¢‚éƒgƒ‹ƒN‚ğ‰ğœ‚·‚é
+		//ç¾åœ¨ä¸ãˆã‚‰ã‚Œã¦ã„ã‚‹ãƒˆãƒ«ã‚¯ã‚’è§£é™¤ã™ã‚‹
 		void ClearTorque() { if (IS_FALSE(m_isRegisterScene)) return; Physics::LockGuardPhysics guard(true); m_rigidBody->clearTorque(); }
 
 		//----------------------------------------------------------------------------------
 		//[WakeUp]
-		//Rigid Body‚ªƒXƒŠ[ƒvó‘Ô‚Ìê‡‹N°‚³‚¹‚é
+		//Rigid BodyãŒã‚¹ãƒªãƒ¼ãƒ—çŠ¶æ…‹ã®å ´åˆèµ·åºŠã•ã›ã‚‹
 		void WakeUp() { Physics::LockGuardPhysics guard(true); m_rigidBody->wakeUp(); }
 
 		//now linear velocity (read function property)
@@ -299,14 +299,14 @@ namespace SGFramework
 			return set;
 		}
 
-		//linear velocity damping(Œ¸ŠŒW”) (read function property)
+		//linear velocity damping(æ¸›è¡°ä¿‚æ•°) (read function property)
 		SGF_FUNCTION_PROPERTY float getVelocityDamping() 
 		{
 			if (IS_FALSE(m_isRegisterScene)) return 0.0f; 
 			Physics::LockGuardPhysics guard(false); 
 			return m_rigidBody->getLinearDamping(); 
 		}
-		//linear velocity damping(Œ¸ŠŒW”) (set function property)
+		//linear velocity damping(æ¸›è¡°ä¿‚æ•°) (set function property)
 		//argument 1: set linear velocity damping
 		SGF_FUNCTION_PROPERTY float setVelocityDamping(float set)
 		{
@@ -346,14 +346,14 @@ namespace SGFramework
 			return set;
 		}
 
-		//angular velocity damping(Œ¸ŠŒW”) (read function property)
+		//angular velocity damping(æ¸›è¡°ä¿‚æ•°) (read function property)
 		SGF_FUNCTION_PROPERTY float getAngularVelocityDamping()
 		{
 			if (IS_FALSE(m_isRegisterScene)) return 0.0f;
 			Physics::LockGuardPhysics guard(false);
 			return m_rigidBody->getAngularDamping();
 		}
-		//angular velocity damping(Œ¸ŠŒW”) (set function property)
+		//angular velocity damping(æ¸›è¡°ä¿‚æ•°) (set function property)
 		//argument 1: set angular velocity damping
 		SGF_FUNCTION_PROPERTY float setAngularVelocityDamping(float set)
 		{
@@ -393,7 +393,7 @@ namespace SGFramework
 		{
 			using namespace Detail::Physics;
 
-			//messageì¬
+			//messageä½œæˆ
 			PhysicsMessage message(MessageType::RigidBodyDynamicMessageFlag
 				| MessageType::RigidBodyDynamicOtherFlag | MessageType::RigidSetLockFlagsLO, instanceID());
 			message.attachment.lock.flag = flag;
@@ -408,7 +408,7 @@ namespace SGFramework
 		{
 			using namespace Detail::Physics;
 
-			//messageì¬
+			//messageä½œæˆ
 			PhysicsMessage message(MessageType::RigidBodyDynamicMessageFlag 
 				| MessageType::RigidBodyDynamicOtherFlag | MessageType::RigidSetLockFlagsBY, instanceID());
 			message.attachment.byteData = flags;
@@ -426,33 +426,33 @@ namespace SGFramework
 			if (IS_FALSE(m_isRegisterScene)) return false;
 
 			Physics::LockGuardPhysics guard(true);
-			//İ’è
+			//è¨­å®š
 			m_isKinematic = set;
 			m_rigidBody->setRigidBodyFlag(physx::PxRigidBodyFlag::eKINEMATIC, set);
 			if (IS_TRUE(m_isKinematic))
 			{
-				//CCD‚Æ‚Í•¹—p‚Å‚«‚È‚¢
+				//CCDã¨ã¯ä½µç”¨ã§ããªã„
 				m_isCCD = false;			
-				//kinematicXV
+				//kinematicæ›´æ–°
 				m_rigidBody->setKinematicTarget(
 					physx::PxTransform(transform->getWorldPosition().ToPhysX(), transform->getWorldRotation().ToPhysX()));
 			}
 			return set;
 		}
 
-		//this ccd setting?(‚‘¬‚Å‚àŒŸ’m‚µ‚Ü‚·) (read function property)
+		//this ccd setting?(é«˜é€Ÿã§ã‚‚æ¤œçŸ¥ã—ã¾ã™) (read function property)
 		SGF_FUNCTION_PROPERTY bool getIsCCD() { if (IS_FALSE(m_isRegisterScene)) return false; Physics::LockGuardPhysics guard(false); return m_isCCD; }
-		//this ccd setting?(‚‘¬‚Å‚àŒŸ’m‚µ‚Ü‚·) (set function property)
+		//this ccd setting?(é«˜é€Ÿã§ã‚‚æ¤œçŸ¥ã—ã¾ã™) (set function property)
 		//argument 1: set value
 		SGF_FUNCTION_PROPERTY bool setIsCCD(bool set)
 		{
 			if (IS_FALSE(m_isRegisterScene)) return false;
 
 			Physics::LockGuardPhysics guard(true);
-			//İ’è
+			//è¨­å®š
 			m_isCCD = set;
 			m_rigidBody->setRigidBodyFlag(physx::PxRigidBodyFlag::eENABLE_CCD, set);
-			//Kinematic‚Æ‚Í•¹—p‚Å‚«‚È‚¢
+			//Kinematicã¨ã¯ä½µç”¨ã§ããªã„
 			if (IS_TRUE(m_isCCD)) m_isKinematic = false;
 			return set;
 		}
@@ -460,13 +460,13 @@ namespace SGFramework
 		//this sleeping? (read function property)
 		SGF_FUNCTION_PROPERTY bool getIsSleep() { if (IS_FALSE(m_isRegisterScene)) return false;  Physics::LockGuardPhysics guard(false); return m_rigidBody->isSleeping(); }
 		//this sleeping? (set function property)
-		//kinematic ‚É‚Í–³Œø, Œ»İ‚Ì’l‚ğ•Ô‹p
+		//kinematic ã«ã¯ç„¡åŠ¹, ç¾åœ¨ã®å€¤ã‚’è¿”å´
 		SGF_FUNCTION_PROPERTY bool setIsSleep(bool set)
 		{
 			if (IS_FALSE(m_isRegisterScene)) return false;
 
 			Physics::LockGuardPhysics guard(true);
-			//kinematic‚É‚Í–³Œø
+			//kinematicã«ã¯ç„¡åŠ¹
 			if (IS_TRUE(m_isKinematic)) return m_rigidBody->isSleeping();
 
 			//now sleeping
@@ -485,7 +485,7 @@ namespace SGFramework
 	private:
 		//----------------------------------------------------------------------------------
 		//[UpdatePhysics]
-		//Physics‚©‚çŒÄ‚Ño‚³‚ê‚éXVŠÖ”
+		//Physicsã‹ã‚‰å‘¼ã³å‡ºã•ã‚Œã‚‹æ›´æ–°é–¢æ•°
 		inline void UpdatePhysics() override
 		{	
 			static const physx::PxRigidDynamicLockFlags cAllLockVelocity =
@@ -498,10 +498,10 @@ namespace SGFramework
 				physx::PxRigidDynamicLockFlag::eLOCK_ANGULAR_X |
 				physx::PxRigidDynamicLockFlag::eLOCK_ANGULAR_X;
 
-			//kinematic‚Å‚È‚¯‚ê‚Îtransform‚É”½‰f
+			//kinematicã§ãªã‘ã‚Œã°transformã«åæ˜ 
 			if (IS_FALSE(m_isKinematic))
 			{
-				//Œ»İÀ•Wæ“¾
+				//ç¾åœ¨åº§æ¨™å–å¾—
 				auto pxtransform = m_rigidBody->getGlobalPose();
 				//Flags
 				auto flags = m_rigidBody->getRigidDynamicLockFlags();
@@ -532,7 +532,7 @@ namespace SGFramework
 				if ((m_rigidBody->getRigidDynamicLockFlags() & cAllLockRotation) != cAllLockRotation)
 					transform->setWorldRotation(pxtransform.q);
 			}
-			//kinematic‚È‚çrigid body‚É”½‰f
+			//kinematicãªã‚‰rigid bodyã«åæ˜ 
 			else
 			{
 				m_rigidBody->setKinematicTarget(
@@ -541,7 +541,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[BuildRigidBody]
-		//RigidBodyì¬
+		//RigidBodyä½œæˆ
 		inline void BuildRigidBody() override
 		{
 			auto shape = DefaultShape();
@@ -562,11 +562,11 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[EnabledCallbacks]
-		//return: ©g‚ªCall‚³‚ê‚éCallback Flags, Component::CallbackFunctionsQÆ
+		//return: è‡ªèº«ãŒCallã•ã‚Œã‚‹Callback Flags, Component::CallbackFunctionså‚ç…§
 		inline uint EnableCallbacks() override { return CallbackFunctions::Awake | CallbackFunctions::OnDestroy; }
 		//----------------------------------------------------------------------------------
 		//[Awake]
-		//ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½uŠÔ‚ÉŒÄ‚Î‚ê‚éCallbackŠÖ”
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸç¬é–“ã«å‘¼ã°ã‚Œã‚‹Callbacké–¢æ•°
 		void Awake() override
 		{
 			using namespace Detail::Physics;
@@ -577,7 +577,7 @@ namespace SGFramework
 			m_isKinematic = false;
 			m_isCCD = false;
 
-			//messageì¬
+			//messageä½œæˆ
 			PhysicsMessage message(MessageType::PointerMessageFlag | MessageType::RegisterRigidBodyRG, instanceID());
 			message.attachment.rigidBody = m_thisPointer.DynamicCast<BaseClass::BaseRigidBody>();
 			//send message

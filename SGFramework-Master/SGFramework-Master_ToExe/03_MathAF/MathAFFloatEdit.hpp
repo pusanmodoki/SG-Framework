@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ŒvZƒ‰ƒCƒuƒ‰ƒŠ‚ÈMathAF namespace (math + almost float)
+è¨ˆç®—ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãªMathAF namespace (math + almost float)
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_CMATHF_FLOAT_EDIT_HPP_
 #define SGFRAMEWORK_HEADER_CMATHF_FLOAT_EDIT_HPP_
@@ -11,45 +11,45 @@
 //Framework namespace
 namespace SGFramework
 {
-	//ŒvZƒ‰ƒCƒuƒ‰ƒŠ
+	//è¨ˆç®—ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 	namespace MathAF
 	{
 		//----------------------------------------------------------------------------------
 		//[Floor]
-		//return: f‚ÌØ‚èÌ‚Ä
-		//ˆø”1: f
+		//return: fã®åˆ‡ã‚Šæ¨ã¦
+		//å¼•æ•°1: f
 		inline constexpr float Floor(float f) noexcept { return static_cast<float>(f < 0.0f ? static_cast<int>(f) - 1 : static_cast<int>(f)); }
 		//----------------------------------------------------------------------------------
 		//[Floor]
-		//return: f‚ÌØ‚èÌ‚Ä(int)
-		//ˆø”1: f
+		//return: fã®åˆ‡ã‚Šæ¨ã¦(int)
+		//å¼•æ•°1: f
 		inline constexpr int FloorToInt(float f) noexcept { return f < 0.0f ? static_cast<int>(f) - 1 : static_cast<int>(f); }
 		//----------------------------------------------------------------------------------
 		//[Ceil]
-		//return: f‚ÌØ‚èã‚°
-		//ˆø”1: f
+		//return: fã®åˆ‡ã‚Šä¸Šã’
+		//å¼•æ•°1: f
 		inline constexpr float Ceil(float f) noexcept { return static_cast<float>(f < 0.0f ? static_cast<int>(f) : static_cast<int>(f) + 1); }
 		//----------------------------------------------------------------------------------
 		//[CeilToInt]
-		//return: f‚ÌØ‚èã‚°(int)
-		//ˆø”1: f
+		//return: fã®åˆ‡ã‚Šä¸Šã’(int)
+		//å¼•æ•°1: f
 		inline constexpr int CeilToInt(float f) noexcept { return f < 0.0f ? static_cast<int>(f) : static_cast<int>(f) + 1; }
 		//----------------------------------------------------------------------------------
 		//[Round]
-		//return: f‚Ì‹ô”ŠÛ‚ß
-		//ˆø”1: f
+		//return: fã®å¶æ•°ä¸¸ã‚
+		//å¼•æ•°1: f
 		inline constexpr float Round(float f) noexcept { return static_cast<float>(static_cast<int>(f + 0.5f)); }
 		//----------------------------------------------------------------------------------
 		//[RoundInt]
-		//return: f‚Ì‹ô”ŠÛ‚ß(int)
-		//ˆø”1: f
+		//return: fã®å¶æ•°ä¸¸ã‚(int)
+		//å¼•æ•°1: f
 		inline constexpr int RoundToInt(float f) noexcept { return static_cast<int>(f + 0.5f); }
 
 		//----------------------------------------------------------------------------------
 		//[Mod]
-		//return: f‚Æp‚Ì‚ ‚Ü‚èZ, f%p
-		//ˆø”1: f
-		//ˆø”1: p
+		//return: fã¨pã®ã‚ã¾ã‚Šç®—, f%p
+		//å¼•æ•°1: f
+		//å¼•æ•°1: p
 		inline constexpr float Mod(float f, float p) noexcept
 		{
 			p = Absolute(p);
@@ -60,10 +60,10 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[PingPong]
-		//t‚ğ0 ~ length‚ÌŠÔ‚Ås‚«—ˆ‚³‚¹‚é
-		//return: t‚ğ0 ~ length‚ÌŠÔ‚É§ŒÀ, s‚«—ˆ‚³‚¹‚½’l
-		//ˆø”1: t
-		//ˆø”2: §ŒÀ’l
+		//tã‚’0 ~ lengthã®é–“ã§è¡Œãæ¥ã•ã›ã‚‹
+		//return: tã‚’0 ~ lengthã®é–“ã«åˆ¶é™, è¡Œãæ¥ã•ã›ãŸå€¤
+		//å¼•æ•°1: t
+		//å¼•æ•°2: åˆ¶é™å€¤
 		inline constexpr float PingPong(float t, float length) noexcept
 		{
 			return Mod(t / length, 2) < 1.0f ? Mod(t, length) : length - Mod(t, length);

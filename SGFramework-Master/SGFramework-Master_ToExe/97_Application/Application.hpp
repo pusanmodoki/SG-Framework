@@ -8,7 +8,7 @@
 //Framework namespace
 namespace SGFramework
 {
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator { class ApplicationFunctionCaller; }
 
 	class Application final
@@ -22,7 +22,7 @@ namespace SGFramework
 		
 		DELETE_ALL_DEFAULT_CLASS_FUNCTIONS(Application);
 
-		inline static void Quit(const bool isQuitMessage = false, const sgstring& quitHeader = L"Šm”F", const sgstring& quitMassage = L"I—¹‚µ‚Ü‚·‚©H");
+		inline static void Quit(const bool isQuitMessage = false, const sgstring& quitHeader = L"ç¢ºèª", const sgstring& quitMassage = L"çµ‚äº†ã—ã¾ã™ã‹ï¼Ÿ");
 
 		SGF_FUNCTION_PROPERTY static void setWindowName(const sgstring& name);
 		SGF_FUNCTION_PROPERTY static void setWindowName(const sgstring& name, const bool isJoinProduct);

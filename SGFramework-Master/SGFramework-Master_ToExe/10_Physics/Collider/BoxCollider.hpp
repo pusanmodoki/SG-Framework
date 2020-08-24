@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-Boxó“–‚½‚è”»’è‚ğ’ñ‹Ÿ‚·‚éBoxCollider class
-BuildCollider‚ğÀs‚·‚é‚Ü‚Å“–‚½‚è”»’è‚Í‹@”\‚µ‚È‚¢‚Ì‚Å’ˆÓ
+BoxçŠ¶å½“ãŸã‚Šåˆ¤å®šã‚’æä¾›ã™ã‚‹BoxCollider class
+BuildColliderã‚’å®Ÿè¡Œã™ã‚‹ã¾ã§å½“ãŸã‚Šåˆ¤å®šã¯æ©Ÿèƒ½ã—ãªã„ã®ã§æ³¨æ„
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_BOX_COLLIDER_HPP_
 #define SGFRAMEWORK_HEADER_BOX_COLLIDER_HPP_
@@ -11,8 +11,8 @@ BuildCollider‚ğÀs‚·‚é‚Ü‚Å“–‚½‚è”»’è‚Í‹@”\‚µ‚È‚¢‚Ì‚Å’ˆÓ
 //Framework namespace
 namespace SGFramework
 {
-	//Boxó“–‚½‚è”»’è‚ğ’ñ‹Ÿ‚·‚éBoxCollider class
-	//BuildCollider‚ğÀs‚·‚é‚Ü‚Å“–‚½‚è”»’è‚Í‹@”\‚µ‚È‚¢‚Ì‚Å’ˆÓ
+	//BoxçŠ¶å½“ãŸã‚Šåˆ¤å®šã‚’æä¾›ã™ã‚‹BoxCollider class
+	//BuildColliderã‚’å®Ÿè¡Œã™ã‚‹ã¾ã§å½“ãŸã‚Šåˆ¤å®šã¯æ©Ÿèƒ½ã—ãªã„ã®ã§æ³¨æ„
 	class BoxCollider : public BaseClass::BaseCollider
 	{
 	public:
@@ -27,7 +27,7 @@ namespace SGFramework
 			m_scale = set * 0.5f;
 			if (m_shape)
 			{
-				//messageì¬
+				//messageä½œæˆ
 				PhysicsMessage message(MessageType::BoxColliderMessageFlag | MessageType::BoxSetScaleV3, instanceID());
 				message.attachment.vector3 = m_scale * transform->getWorldScale();
 				//send message
@@ -40,12 +40,12 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[BuildCollider]
-		//Collider‚ğ¶¬‚·‚é
-		//ˆø”1: box scale (transform->getWorldScale * this value)
-		//ˆø”2: collider is trigger?, default = false
-		//ˆø”3: used hit callback?, default = ture
-		//ˆø”4: collider center, default = zero
-		//ˆø”5: physics material, default = defaultMaterial
+		//Colliderã‚’ç”Ÿæˆã™ã‚‹
+		//å¼•æ•°1: box scale (transform->getWorldScale * this value)
+		//å¼•æ•°2: collider is trigger?, default = false
+		//å¼•æ•°3: used hit callback?, default = ture
+		//å¼•æ•°4: collider center, default = zero
+		//å¼•æ•°5: physics material, default = defaultMaterial
 		inline void BuildCollider(const Vector3& scale, bool isTrigger = false, bool isUsedCallback = true,
 			const Vector3& center = Const::Vector3::zero,
 			const PhysicsMaterial& material = Physics::defaultPhysicsMaterial())
@@ -60,7 +60,7 @@ namespace SGFramework
 			m_material = material;
 			m_isUsedCallback = isUsedCallback;
 
-			//messageì¬
+			//messageä½œæˆ
 			PhysicsMessage message(MessageType::PointerMessageFlag | MessageType::RegisterColliderCL, instanceID());
 			message.attachment.collider = m_thisPointer.DynamicCast<BaseClass::BaseCollider>();
 			//send message
@@ -71,7 +71,7 @@ namespace SGFramework
 	private:
 		//----------------------------------------------------------------------------------
 		//[CreateShape]
-		//ÀÛ‚ÉShape‚ğì¬‚·‚é
+		//å®Ÿéš›ã«Shapeã‚’ä½œæˆã™ã‚‹
 		inline void CreateShape() override
 		{	
 			//flag setting
@@ -108,17 +108,17 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[ChangeScale]
-		//Scale‚ğ•ÏX‚·‚é
+		//Scaleã‚’å¤‰æ›´ã™ã‚‹
 		inline void ChangeScale() override
 		{
 			//get
 			Vector3 get = transform->getWorldScale();
 
-			//buf‚Æˆá‚¦‚Î•ÏX
+			//bufã¨é•ãˆã°å¤‰æ›´
 			if (m_transformScale != get)
 				m_shape->setGeometry(physx::PxBoxGeometry((m_scale  * get).ToPhysX()));
 
-			//buf•Û‘¶
+			//bufä¿å­˜
 			m_transformScale = get;
 		}
 

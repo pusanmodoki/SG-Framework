@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-F‚ğˆµ‚¤ƒJƒ‰[ structure‚ğ‹Lq‚µ‚½Color.hpp
+è‰²ã‚’æ‰±ã†ã‚«ãƒ©ãƒ¼ structureã‚’è¨˜è¿°ã—ãŸColor.hpp
 ----------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_COLOR_HPP_
 #define SGFRAMEWORK_HEADER_COLOR_HPP_
@@ -9,23 +9,23 @@
 //Framework namespace
 namespace SGFramework
 {
-	//F‚ğˆµ‚¤ƒJƒ‰[ structure
+	//è‰²ã‚’æ‰±ã†ã‚«ãƒ©ãƒ¼ structure
 	struct Color
 	{
-		//ƒRƒ“ƒXƒgƒ‰ƒNƒ^cƒNƒŠƒA‚É‰Šú‰»
+		//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿â€¦ã‚¯ãƒªã‚¢ã«åˆæœŸåŒ–
 		inline constexpr Color() : r(0.0f) , g(0.0f) , b(0.0f) , a(0.0f) {}
-		//ƒRƒ“ƒXƒgƒ‰ƒNƒ^c‘ã“ü‰Šú‰»
-		//ˆø”1: R
-		//ˆø”2: G
-		//ˆø”3: B
-		//ˆø”4: A
+		//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿â€¦ä»£å…¥åˆæœŸåŒ–
+		//å¼•æ•°1: R
+		//å¼•æ•°2: G
+		//å¼•æ•°3: B
+		//å¼•æ•°4: A
 		inline constexpr Color(float _r, float _g, float _b, float _a) : r(_r), g(_g), b(_b), a(_a) {}
-		//ƒRƒ“ƒXƒgƒ‰ƒNƒ^c‘ã“ü‰Šú‰»
-		//ˆø”1: RGB
-		//ˆø”3: A
+		//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿â€¦ä»£å…¥åˆæœŸåŒ–
+		//å¼•æ•°1: RGB
+		//å¼•æ•°3: A
 		inline constexpr Color(const Color& color, float _a) : r(color.r), g(color.g), b(color.b), a(_a) {}
 
-
+		//Const colors
 		static const Color black;		//black (0.0f, 0.0f, 0.0f, 1.0f)
 		static const Color blue;		//blue (0.0f, 0.0f, 1.0f, 1.0f)
 		static const Color clear;		//clear (0.0f, 0.0f, 0.0f, 0.0f)
@@ -37,7 +37,7 @@ namespace SGFramework
 		static const Color white;		//white (1.0f, 1.0f, 1.0f, 1.0f)
 		static const Color yellow;	//yellow (1.0f, 1.0f, 0.0f, 1.0f)
 
-		//•Ï”
+		//å¤‰æ•°
 		union
 		{
 			struct
@@ -50,11 +50,11 @@ namespace SGFramework
 			float values[4];	//values
 		};
 		
-		//floatƒIƒyƒŒ[ƒ^[
+		//floatã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator float*() { return values; }
 		//float
 		inline operator const float*() const { return values; }
-		//==ƒIƒyƒŒ[ƒ^[
+		//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator ==(const Color& color) const
 		{
 			return (fabsf(r - color.r) <= MathAF::cEpsilon
@@ -62,7 +62,7 @@ namespace SGFramework
 				&& fabsf(b - color.b) <= MathAF::cEpsilon
 				&& fabsf(a - color.a) <= MathAF::cEpsilon);
 		};
-		//!=ƒIƒyƒŒ[ƒ^[
+		//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator !=(const Color& color) const
 		{
 			return (fabsf(r - color.r) > MathAF::cEpsilon
@@ -70,37 +70,37 @@ namespace SGFramework
 				&& fabsf(b - color.b) > MathAF::cEpsilon
 				&& fabsf(a - color.a) > MathAF::cEpsilon);
 		};
-		//+ƒIƒyƒŒ[ƒ^[
+		//+ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Color operator +(const Color& color) const { return Color(r + color.r, g + color.g, b + color.b, a + color.a); }
-		//+ƒIƒyƒŒ[ƒ^[
+		//+ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Color operator +(float color) const { return Color(r + color, g + color, b + color, a + color); }
-		//-ƒIƒyƒŒ[ƒ^[
+		//-ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Color operator -(const Color& color) const { return Color(r - color.r, g - color.g, b - color.b, a - color.a); }
-		//-ƒIƒyƒŒ[ƒ^[
+		//-ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Color operator -(float color) const { return Color(r - color, g - color, b - color, a - color); }
-		//*ƒIƒyƒŒ[ƒ^[
+		//*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Color operator *(const Color& color) const { return Color(r * color.r, g * color.g, b * color.b, a * color.a); }
-		//*ƒIƒyƒŒ[ƒ^[
+		//*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Color operator *(float color) const { return Color(r * color, g * color, b * color, a * color); }
-		// /ƒIƒyƒŒ[ƒ^[
+		// /ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Color operator /(const Color& color) const { return Color(r / color.r, g / color.g, b / color.b, a / color.a); }
-		// /ƒIƒyƒŒ[ƒ^[
+		// /ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Color operator /(float color) const { return Color(r / color, g / color, b / color, a / color); }
-		//+=ƒIƒyƒŒ[ƒ^[
+		//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Color& operator +=(const Color& color) { r += color.r; g += color.g; b += color.b; a += color.a; return *this; }
-		//+=ƒIƒyƒŒ[ƒ^[
+		//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Color& operator +=(float color) { r += color; g += color; b += color; a += color; return *this; }
-		//-=ƒIƒyƒŒ[ƒ^[
+		//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Color& operator -=(const Color& color) { r -= color.r; g += color.g; b -= color.b; a -= color.a; return *this; }
-		//-=ƒIƒyƒŒ[ƒ^[
+		//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Color& operator -=(float color) { r -= color; g -= color; b -= color; a -= color; return *this; }
-		//*=ƒIƒyƒŒ[ƒ^[
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Color& operator *=(const Color& color) { r *= color.r; g *= color.g; b *= color.b; a *= color.a; return *this; }
-		//*=ƒIƒyƒŒ[ƒ^[
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Color& operator *=(float color) { r *= color; g *= color; b *= color; a *= color; return *this; }
-		// /=ƒIƒyƒŒ[ƒ^[
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Color& operator /=(const Color& color) { r /= color.r; g /= color.g; b /= color.b; a /= color.a; return *this; }
-		// /=ƒIƒyƒŒ[ƒ^[
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Color& operator /=(float color) { r /= color; g /= color; b /= color; a /= color; return *this; }
 	};
 }

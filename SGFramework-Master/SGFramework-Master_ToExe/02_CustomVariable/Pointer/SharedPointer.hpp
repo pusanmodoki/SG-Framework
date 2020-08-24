@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-QÆƒJƒEƒ“ƒ^‚ğ‚¿ƒJƒEƒ“ƒ^ == 0‚Å©“®“I‚Édelete‚³‚ê‚éSharedPointer class
-ãQÆƒJƒEƒ“ƒ^‚ğ‚ÂWeakPointer class
+å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¡ã‚«ã‚¦ãƒ³ã‚¿ == 0ã§è‡ªå‹•çš„ã«deleteã•ã‚Œã‚‹SharedPointer class
+å¼±å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¤WeakPointer class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_SHARED_POINTR_HPP_
 #define SGFRAMEWORK_HEADER_SHARED_POINTR_HPP_
@@ -9,14 +9,14 @@
 //Framework namespace
 namespace SGFramework
 {
-	//QÆƒJƒEƒ“ƒ^‚ğ‚¿ƒJƒEƒ“ƒ^ == 0‚Å©“®“I‚Édelete‚³‚ê‚éSharedPointer class
+	//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¡ã‚«ã‚¦ãƒ³ã‚¿ == 0ã§è‡ªå‹•çš„ã«deleteã•ã‚Œã‚‹SharedPointer class
 	template<class PointerType>
 	class SharedPointer;
-	//ãQÆƒJƒEƒ“ƒ^‚ğ‚ÂWeakPointer class
+	//å¼±å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¤WeakPointer class
 	template<class PointerType>
 	class WeakPointer;
 
-	//QÆƒJƒEƒ“ƒ^‚ğ‚¿ƒJƒEƒ“ƒ^ == 0‚Å©“®“I‚Édelete‚³‚ê‚éSharedPointer class
+	//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¡ã‚«ã‚¦ãƒ³ã‚¿ == 0ã§è‡ªå‹•çš„ã«deleteã•ã‚Œã‚‹SharedPointer class
 	template<class PointerType>
 	class SharedPointer final : public Detail::Pointer::BaseCountPointer
 	{
@@ -27,49 +27,49 @@ namespace SGFramework
 		template<class NewClass> friend class WeakPointer;
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//nullptr‰Šú‰»‚ğs‚¤
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//nullptråˆæœŸåŒ–ã‚’è¡Œã†
 		inline SharedPointer() noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//QÆƒRƒs[‚ğs‚¤
-		//ˆø”1: ƒRƒs[Œ³
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å‚ç…§ã‚³ãƒ”ãƒ¼ã‚’è¡Œã†
+		//å¼•æ•°1: ã‚³ãƒ”ãƒ¼å…ƒ
 		inline SharedPointer(const SharedPointer<PointerType>& copy) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//©g‚Ö‚ÌMove‚ğs‚¤
-		//ˆø”1: MoveŒ³
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//è‡ªèº«ã¸ã®Moveã‚’è¡Œã†
+		//å¼•æ•°1: Moveå…ƒ
 		inline SharedPointer(SharedPointer<PointerType>&& move) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‰Šú‰»‚ğs‚¤
-		//ˆø”1: new‚µ‚½ƒ|ƒCƒ“ƒ^[
-		//ˆø”2: Used mutex counter (Required for Multi thread), default = true
-		//ˆø”3: Auto gabage collection?, default = true
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//åˆæœŸåŒ–ã‚’è¡Œã†
+		//å¼•æ•°1: newã—ãŸãƒã‚¤ãƒ³ã‚¿ãƒ¼
+		//å¼•æ•°2: Used mutex counter (Required for Multi thread), default = true
+		//å¼•æ•°3: Auto gabage collection?, default = true
 		template<class NewType>
 		inline explicit SharedPointer(NewType* newPointer, 
 			bool isUsedMutexCounter = true, bool isAutoGabageCollection = true) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒfƒXƒgƒ‰ƒNƒ^]
-		//ƒƒ“ƒo•Ï”‚ÌƒfƒXƒgƒ‰ƒNƒ^‚É‚æ‚èƒJƒEƒ“ƒ^‚ÌŒvZ‚âŠJ•ú‚ğs‚¤
+		//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ¡ãƒ³ãƒå¤‰æ•°ã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«ã‚ˆã‚Šã‚«ã‚¦ãƒ³ã‚¿ã®è¨ˆç®—ã‚„é–‹æ”¾ã‚’è¡Œã†
 		inline ~SharedPointer() noexcept { ReleasePointer(); }
 
 		//----------------------------------------------------------------------------------
 		//[AddRef]
-		//QÆƒJƒEƒ“ƒ^‚ğ‘‚â‚·, memcpy‚µ‚½—p‚¾‚ªA‰Â”\‚ÈŒÀ‚èg‚¤‚×‚©‚ç‚¸
+		//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’å¢—ã‚„ã™, memcpyã—ãŸæ™‚ç”¨ã ãŒã€å¯èƒ½ãªé™ã‚Šä½¿ã†ã¹ã‹ã‚‰ãš
 		inline void AddRef() const noexcept { if (m_counter) m_counter->addShared(); }
 		//----------------------------------------------------------------------------------
 		//[WaiverAndReset]
-		//ƒ|ƒCƒ“ƒ^‚ÌŠ—LŒ ‚ğ•úŠü‚µ©g‚ğnullptr‚É‰Šú‰»‚·‚é
+		//ãƒã‚¤ãƒ³ã‚¿ã®æ‰€æœ‰æ¨©ã‚’æ”¾æ£„ã—è‡ªèº«ã‚’nullptrã«åˆæœŸåŒ–ã™ã‚‹
 		inline void WaiverAndReset() noexcept { ReleasePointer(); }
 		//----------------------------------------------------------------------------------
 		//[DynamicCast]
-		//return: DynamicCast‚µ‚½SharedPointer
+		//return: DynamicCastã—ãŸSharedPointer
 		template<class DifferentType>
 		inline SharedPointer<DifferentType> DynamicCast() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[DownCast]
-		//return: DownCast‚µ‚½SharedPointer
+		//return: DownCastã—ãŸSharedPointer
 		template<class DifferentType>
 		inline SharedPointer<DifferentType> DownCast() const noexcept;
 		
@@ -79,7 +79,7 @@ namespace SGFramework
 		SGF_FUNCTION_PROPERTY ushort getSharedCount() const noexcept { return m_counter ? m_counter->getShared() : 0; }
 		//weak count (get function property)
 		SGF_FUNCTION_PROPERTY ushort getWeakCount() const noexcept { return m_counter ? m_counter->getWeak() : 0; }
-		//pointer is valid(—LŒø)? (get function property)
+		//pointer is valid(æœ‰åŠ¹)? (get function property)
 		SGF_FUNCTION_PROPERTY bool getIsValid() const noexcept { return m_pointer ? true : false; }
 
 		//null pointer<static>(get function property)
@@ -130,11 +130,11 @@ namespace SGFramework
 		//Release Pointer (Used Gabage Collector if Clone)
 		inline void ReleasePointer() noexcept override;
 
-		//ƒ|ƒCƒ“ƒ^
+		//ãƒã‚¤ãƒ³ã‚¿
 		PointerType* m_pointer;
 	};
 
-	//QÆƒJƒEƒ“ƒ^‚ğ‚¿ƒJƒEƒ“ƒ^ == 0‚Å©“®“I‚Édelete‚³‚ê‚éSharedPointer class [Array]
+	//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¡ã‚«ã‚¦ãƒ³ã‚¿ == 0ã§è‡ªå‹•çš„ã«deleteã•ã‚Œã‚‹SharedPointer class [Array]
 	template<class PointerType>
 	class SharedPointer<PointerType[]> final : public Detail::Pointer::BaseCountPointer
 	{
@@ -147,50 +147,50 @@ namespace SGFramework
 		template<class NewType> friend class SharedPointer;
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//nullptr‰Šú‰»‚ğs‚¤
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//nullptråˆæœŸåŒ–ã‚’è¡Œã†
 		inline SharedPointer() noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//QÆƒRƒs[‚ğs‚¤
-		//ˆø”1: ƒRƒs[Œ³
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å‚ç…§ã‚³ãƒ”ãƒ¼ã‚’è¡Œã†
+		//å¼•æ•°1: ã‚³ãƒ”ãƒ¼å…ƒ
 		inline SharedPointer(const SharedPointer<PointerType[]>& copy) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//©g‚Ö‚ÌMove‚ğs‚¤
-		//ˆø”1: MoveŒ³
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//è‡ªèº«ã¸ã®Moveã‚’è¡Œã†
+		//å¼•æ•°1: Moveå…ƒ
 		inline SharedPointer(SharedPointer<PointerType[]>&& move) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‰Šú‰»‚ğs‚¤
-		//ˆø”1: new‚µ‚½ƒ|ƒCƒ“ƒ^[
-		//ˆø”2: ”z—ñƒTƒCƒY
-		//ˆø”3: Used mutex counter (Required for Multi thread), default = true
-		//ˆø”4: Auto gabage collection?, default = true
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//åˆæœŸåŒ–ã‚’è¡Œã†
+		//å¼•æ•°1: newã—ãŸãƒã‚¤ãƒ³ã‚¿ãƒ¼
+		//å¼•æ•°2: é…åˆ—ã‚µã‚¤ã‚º
+		//å¼•æ•°3: Used mutex counter (Required for Multi thread), default = true
+		//å¼•æ•°4: Auto gabage collection?, default = true
 		template<class NewType>
 		inline explicit SharedPointer(NewType* newPointer, ushort arraySize, 
 			bool isUsedMutexCounter = true, bool isAutoGabageCollection = true) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒfƒXƒgƒ‰ƒNƒ^]
-		//ƒƒ“ƒo•Ï”‚ÌƒfƒXƒgƒ‰ƒNƒ^‚É‚æ‚èƒJƒEƒ“ƒ^‚ÌŒvZ‚âŠJ•ú‚ğs‚¤
+		//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ¡ãƒ³ãƒå¤‰æ•°ã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«ã‚ˆã‚Šã‚«ã‚¦ãƒ³ã‚¿ã®è¨ˆç®—ã‚„é–‹æ”¾ã‚’è¡Œã†
 		inline ~SharedPointer() noexcept { ReleasePointer(); }
 
 		//----------------------------------------------------------------------------------
 		//[AddRef]
-		//QÆƒJƒEƒ“ƒ^‚ğ‘‚â‚·, memcpy‚µ‚½—p‚¾‚ªA‰Â”\‚ÈŒÀ‚èg‚¤‚×‚©‚ç‚¸
+		//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’å¢—ã‚„ã™, memcpyã—ãŸæ™‚ç”¨ã ãŒã€å¯èƒ½ãªé™ã‚Šä½¿ã†ã¹ã‹ã‚‰ãš
 		inline void AddRef() const noexcept { if (m_counter) m_counter->addShared(); }
 		//----------------------------------------------------------------------------------
 		//[WaiverAndReset]
-		//ƒ|ƒCƒ“ƒ^‚ÌŠ—LŒ ‚ğ•úŠü‚µ©g‚ğnullptr‚É‰Šú‰»‚·‚é
+		//ãƒã‚¤ãƒ³ã‚¿ã®æ‰€æœ‰æ¨©ã‚’æ”¾æ£„ã—è‡ªèº«ã‚’nullptrã«åˆæœŸåŒ–ã™ã‚‹
 		inline void WaiverAndReset() noexcept { ReleasePointer(); }
 		//----------------------------------------------------------------------------------
 		//[DynamicCast]
-		//return: DynamicCast‚µ‚½SharedPointer
+		//return: DynamicCastã—ãŸSharedPointer
 		template<class DifferentType>
 		inline SharedPointer<DifferentType[]> DynamicCast() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[DownCast]
-		//return: DownCast‚µ‚½SharedPointer
+		//return: DownCastã—ãŸSharedPointer
 		template<class DifferentType>
 		inline SharedPointer<DifferentType[]> DownCast() const noexcept;
 	
@@ -200,7 +200,7 @@ namespace SGFramework
 		SGF_FUNCTION_PROPERTY ushort getSharedCount() const noexcept { return m_counter ? m_counter->getShared() : 0; }
 		//weak count (get function property)
 		SGF_FUNCTION_PROPERTY ushort getWeakCount() const noexcept { return m_counter ? m_counter->getWeak() : 0; }
-		//pointer is valid(—LŒø)? (get function property)
+		//pointer is valid(æœ‰åŠ¹)? (get function property)
 		SGF_FUNCTION_PROPERTY bool getIsValid() const noexcept { return m_pointer ? true : false; }
 
 		//array size (get function property)
@@ -253,14 +253,14 @@ namespace SGFramework
 		//Release Pointer (Used Gabage Collector if Clone)
 		inline void ReleasePointer() noexcept override;
 
-		//ƒ|ƒCƒ“ƒ^
+		//ãƒã‚¤ãƒ³ã‚¿
 		PointerType* m_pointer;
 		//ArraySize
 		ushort m_arraySize;
 	};
 
 
-	//ãQÆƒJƒEƒ“ƒ^‚ğ‚ÂWeakPointer class
+	//å¼±å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¤WeakPointer class
 	template<class PointerType>
 	class WeakPointer final : public Detail::Pointer::BaseCountPointer
 	{
@@ -271,81 +271,81 @@ namespace SGFramework
 		template<class NewClass> friend class WeakPointer;
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//nullptr‰Šú‰»‚ğs‚¤
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//nullptråˆæœŸåŒ–ã‚’è¡Œã†
 		inline WeakPointer() noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//QÆƒRƒs[‚ğs‚¤
-		//ˆø”1: ƒRƒs[Œ³
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å‚ç…§ã‚³ãƒ”ãƒ¼ã‚’è¡Œã†
+		//å¼•æ•°1: ã‚³ãƒ”ãƒ¼å…ƒ
 		inline WeakPointer(const WeakPointer<PointerType>& copy) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//©g‚Ö‚ÌMove‚ğs‚¤
-		//ˆø”1: MoveŒ³
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//è‡ªèº«ã¸ã®Moveã‚’è¡Œã†
+		//å¼•æ•°1: Moveå…ƒ
 		inline WeakPointer(WeakPointer<PointerType>&& move) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//QÆƒRƒs[‚ğs‚¤
-		//ˆø”1: ƒRƒs[Œ³<Shared>
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å‚ç…§ã‚³ãƒ”ãƒ¼ã‚’è¡Œã†
+		//å¼•æ•°1: ã‚³ãƒ”ãƒ¼å…ƒ<Shared>
 		inline WeakPointer(const SharedPointer<PointerType>& copy) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒfƒXƒgƒ‰ƒNƒ^]
-		//ƒƒ“ƒo•Ï”‚ÌƒfƒXƒgƒ‰ƒNƒ^‚É‚æ‚èƒJƒEƒ“ƒ^‚ÌŒvZ‚âŠJ•ú‚ğs‚¤
+		//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ¡ãƒ³ãƒå¤‰æ•°ã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«ã‚ˆã‚Šã‚«ã‚¦ãƒ³ã‚¿ã®è¨ˆç®—ã‚„é–‹æ”¾ã‚’è¡Œã†
 		inline ~WeakPointer() noexcept { ReleasePointer(); }
 
 
 		//----------------------------------------------------------------------------------
 		//[AddRef]
-		//QÆƒJƒEƒ“ƒ^‚ğ‘‚â‚·, memcpy‚µ‚½—p‚¾‚ªA‰Â”\‚ÈŒÀ‚èg‚¤‚×‚©‚ç‚¸
+		//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’å¢—ã‚„ã™, memcpyã—ãŸæ™‚ç”¨ã ãŒã€å¯èƒ½ãªé™ã‚Šä½¿ã†ã¹ã‹ã‚‰ãš
 		inline void AddRef() const noexcept { if (m_counter) m_counter->addWeak(); }
 		//----------------------------------------------------------------------------------
 		//[Reset]
-		//QÆ‚ğ•úŠü‚µ©g‚ğnullptr‚É‰Šú‰»‚·‚é
+		//å‚ç…§ã‚’æ”¾æ£„ã—è‡ªèº«ã‚’nullptrã«åˆæœŸåŒ–ã™ã‚‹
 		inline void Reset() noexcept { ReleasePointer(); }
 		//----------------------------------------------------------------------------------
 		//[LockShared]
-		//QÆ‚ª—LŒø‚Èê‡‚ÍQÆƒJƒEƒ“ƒg‚ğˆê“I‚É1‘‚â‚µƒI[ƒgíœ‹@”\‚ğƒƒbƒN‚·‚é
-		//ƒI[ƒgíœ‹@”\‚ğ–³Œø‰»‚·‚é‚¾‚¯‚Å•¡”ƒXƒŒƒbƒh‚É‚æ‚éQÆ‚Í‰ğŒˆ‚µ‚È‚¢
-		//return: ƒƒbƒN¬Œ÷‰Â”Û
+		//å‚ç…§ãŒæœ‰åŠ¹ãªå ´åˆã¯å‚ç…§ã‚«ã‚¦ãƒ³ãƒˆã‚’ä¸€æ™‚çš„ã«1å¢—ã‚„ã—ã‚ªãƒ¼ãƒˆå‰Šé™¤æ©Ÿèƒ½ã‚’ãƒ­ãƒƒã‚¯ã™ã‚‹
+		//ã‚ªãƒ¼ãƒˆå‰Šé™¤æ©Ÿèƒ½ã‚’ç„¡åŠ¹åŒ–ã™ã‚‹ã ã‘ã§è¤‡æ•°ã‚¹ãƒ¬ãƒƒãƒ‰ã«ã‚ˆã‚‹å‚ç…§ã¯è§£æ±ºã—ãªã„
+		//return: ãƒ­ãƒƒã‚¯æˆåŠŸå¯å¦
 		inline bool LockShared() noexcept;
 		//----------------------------------------------------------------------------------
 		//[UnlockShared]
-		//Lock‚ğÀs‚µ‚Ä‚¢‚½ê‡ƒI[ƒgíœ‹@”\ƒƒbƒN‰ğœ‚ğs‚¤
-		//return: ƒƒbƒN‰ğœ¬Œ÷‰Â”Û
+		//Lockã‚’å®Ÿè¡Œã—ã¦ã„ãŸå ´åˆã‚ªãƒ¼ãƒˆå‰Šé™¤æ©Ÿèƒ½ãƒ­ãƒƒã‚¯è§£é™¤ã‚’è¡Œã†
+		//return: ãƒ­ãƒƒã‚¯è§£é™¤æˆåŠŸå¯å¦
 		inline bool UnlockShared() noexcept;
 		//----------------------------------------------------------------------------------
 		//[DynamicCast]
-		//return: DynamicCast‚µ‚½WeakPointer
+		//return: DynamicCastã—ãŸWeakPointer
 		template<class DifferentType>
 		inline WeakPointer<DifferentType> DynamicCast() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[DownCast]
-		//return: DownCast‚µ‚½WeakPointer
+		//return: DownCastã—ãŸWeakPointer
 		template<class DifferentType>
 		inline WeakPointer<DifferentType> DownCast() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[TryGetInstance]
-		//ƒCƒ“ƒXƒ^ƒ“ƒXæ“¾‚ğ‚İ‚é
-		//return: ƒCƒ“ƒXƒ^ƒ“ƒXƒ|ƒCƒ“ƒ^, SharedCount == 0‚Ìê‡‚Ínullptr
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹å–å¾—ã‚’è©¦ã¿ã‚‹
+		//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãƒã‚¤ãƒ³ã‚¿, SharedCount == 0ã®å ´åˆã¯nullptr
 		inline PointerType* TryGetInstance() const noexcept { return m_counter && m_counter->getShared() > 0 ? m_pointer : nullptr; }
 		//----------------------------------------------------------------------------------
 		//[InstantiateShared]
-		//return: ãQÆ‚ğŠî‚Éì¬‚µ‚½SharedPointer(SharedCount == 0‚Ìê‡‚Ínullptr)
+		//return: å¼±å‚ç…§ã‚’åŸºã«ä½œæˆã—ãŸSharedPointer(SharedCount == 0ã®å ´åˆã¯nullptr)
 		inline SharedPointer<PointerType> InstantiateShared() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[InstantiateShared]
-		//ãQÆ‚ğŠî‚Éì¬‚µ‚½SharedPointer‚ğì¬‚·‚é(SharedCount == 0‚Ìê‡‚Ínullptr)
-		//ˆø”1: ì¬‚µ‚½SharedPointer‚ğ‘ã“ü‚·‚éƒ|ƒCƒ“ƒ^
+		//å¼±å‚ç…§ã‚’åŸºã«ä½œæˆã—ãŸSharedPointerã‚’ä½œæˆã™ã‚‹(SharedCount == 0ã®å ´åˆã¯nullptr)
+		//å¼•æ•°1: ä½œæˆã—ãŸSharedPointerã‚’ä»£å…¥ã™ã‚‹ãƒã‚¤ãƒ³ã‚¿
 		inline void InstantiateShared(SharedPointer<PointerType>& pointer) const noexcept;
 
 		//shared count (get function property)
 		SGF_FUNCTION_PROPERTY ushort getSharedCount() const noexcept { return m_counter ? m_counter->getShared() : 0; }
 		//weak count (get function property)
 		SGF_FUNCTION_PROPERTY ushort getWeakCount() const noexcept { return m_counter ? m_counter->getWeak() : 0; }
-		//pointer is valid(—LŒø)? (get function property)
+		//pointer is valid(æœ‰åŠ¹)? (get function property)
 		SGF_FUNCTION_PROPERTY bool getIsValid() const noexcept { return m_pointer ? true : false; }
-		//pointer is revocatoin(¸Œø)? (get function property)
+		//pointer is revocatoin(å¤±åŠ¹)? (get function property)
 		SGF_FUNCTION_PROPERTY bool getIsRevocatoin() const noexcept { return m_counter && m_counter->getShared() == 0 ? true : false; }
 		//pointer is locked? (get function property)
 		SGF_FUNCTION_PROPERTY bool getIsLocked() const noexcept { return m_isImLocked; }
@@ -400,15 +400,15 @@ namespace SGFramework
 		//Release Pointer (Used Gabage Collector if Clone)
 		inline void ReleasePointer() noexcept override;
 
-		//ƒ|ƒCƒ“ƒ^
+		//ãƒã‚¤ãƒ³ã‚¿
 		PointerType* m_pointer;
-		//Locks‚Á‚½‚©
+		//Lockè¡Œã£ãŸã‹
 		bool m_isImLocked;
 	};
 
 
 
-	//ãQÆƒJƒEƒ“ƒ^‚ğ‚ÂWeakPointer class
+	//å¼±å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¤WeakPointer class
 	template<class PointerType>
 	class WeakPointer<PointerType[]> final : public Detail::Pointer::BaseCountPointer
 	{
@@ -421,81 +421,81 @@ namespace SGFramework
 		template<class NewType> friend class WeakPointer;
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//nullptr‰Šú‰»‚ğs‚¤
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//nullptråˆæœŸåŒ–ã‚’è¡Œã†
 		inline WeakPointer() noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//QÆƒRƒs[‚ğs‚¤
-		//ˆø”1: ƒRƒs[Œ³
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å‚ç…§ã‚³ãƒ”ãƒ¼ã‚’è¡Œã†
+		//å¼•æ•°1: ã‚³ãƒ”ãƒ¼å…ƒ
 		inline WeakPointer(const WeakPointer<PointerType[]>& copy) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//©g‚Ö‚ÌMove‚ğs‚¤
-		//ˆø”1: MoveŒ³
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//è‡ªèº«ã¸ã®Moveã‚’è¡Œã†
+		//å¼•æ•°1: Moveå…ƒ
 		inline WeakPointer(WeakPointer<PointerType[]>&& move) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//QÆƒRƒs[‚ğs‚¤
-		//ˆø”1: ƒRƒs[Œ³<Shared>
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å‚ç…§ã‚³ãƒ”ãƒ¼ã‚’è¡Œã†
+		//å¼•æ•°1: ã‚³ãƒ”ãƒ¼å…ƒ<Shared>
 		inline WeakPointer(const SharedPointer<PointerType[]>& copy) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒfƒXƒgƒ‰ƒNƒ^]
-		//ƒƒ“ƒo•Ï”‚ÌƒfƒXƒgƒ‰ƒNƒ^‚É‚æ‚èƒJƒEƒ“ƒ^‚ÌŒvZ‚âŠJ•ú‚ğs‚¤
+		//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ¡ãƒ³ãƒå¤‰æ•°ã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«ã‚ˆã‚Šã‚«ã‚¦ãƒ³ã‚¿ã®è¨ˆç®—ã‚„é–‹æ”¾ã‚’è¡Œã†
 		inline ~WeakPointer() noexcept { ReleasePointer(); }
 
 
 		//----------------------------------------------------------------------------------
 		//[AddRef]
-		//QÆƒJƒEƒ“ƒ^‚ğ‘‚â‚·, memcpy‚µ‚½—p‚¾‚ªA‰Â”\‚ÈŒÀ‚èg‚¤‚×‚©‚ç‚¸
+		//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’å¢—ã‚„ã™, memcpyã—ãŸæ™‚ç”¨ã ãŒã€å¯èƒ½ãªé™ã‚Šä½¿ã†ã¹ã‹ã‚‰ãš
 		inline void AddRef() const noexcept { if (m_counter) m_counter->addWeak(); }
 		//----------------------------------------------------------------------------------
 		//[Reset]
-		//QÆ‚ğ•úŠü‚µ©g‚ğnullptr‚É‰Šú‰»‚·‚é
+		//å‚ç…§ã‚’æ”¾æ£„ã—è‡ªèº«ã‚’nullptrã«åˆæœŸåŒ–ã™ã‚‹
 		inline void Reset() noexcept { ReleasePointer(); }
 		//----------------------------------------------------------------------------------
 		//[LockShared]
-		//QÆ‚ª—LŒø‚Èê‡‚ÍQÆƒJƒEƒ“ƒg‚ğˆê“I‚É1‘‚â‚µƒI[ƒgíœ‹@”\‚ğƒƒbƒN‚·‚é
-		//ƒI[ƒgíœ‹@”\‚ğ–³Œø‰»‚·‚é‚¾‚¯‚Å•¡”ƒXƒŒƒbƒh‚É‚æ‚éQÆ‚Í‰ğŒˆ‚µ‚È‚¢
-		//return: ƒƒbƒN¬Œ÷‰Â”Û
+		//å‚ç…§ãŒæœ‰åŠ¹ãªå ´åˆã¯å‚ç…§ã‚«ã‚¦ãƒ³ãƒˆã‚’ä¸€æ™‚çš„ã«1å¢—ã‚„ã—ã‚ªãƒ¼ãƒˆå‰Šé™¤æ©Ÿèƒ½ã‚’ãƒ­ãƒƒã‚¯ã™ã‚‹
+		//ã‚ªãƒ¼ãƒˆå‰Šé™¤æ©Ÿèƒ½ã‚’ç„¡åŠ¹åŒ–ã™ã‚‹ã ã‘ã§è¤‡æ•°ã‚¹ãƒ¬ãƒƒãƒ‰ã«ã‚ˆã‚‹å‚ç…§ã¯è§£æ±ºã—ãªã„
+		//return: ãƒ­ãƒƒã‚¯æˆåŠŸå¯å¦
 		inline bool LockShared() noexcept;
 		//----------------------------------------------------------------------------------
 		//[UnlockShared]
-		//Lock‚ğÀs‚µ‚Ä‚¢‚½ê‡ƒI[ƒgíœ‹@”\ƒƒbƒN‰ğœ‚ğs‚¤
-		//return: ƒƒbƒN‰ğœ¬Œ÷‰Â”Û
+		//Lockã‚’å®Ÿè¡Œã—ã¦ã„ãŸå ´åˆã‚ªãƒ¼ãƒˆå‰Šé™¤æ©Ÿèƒ½ãƒ­ãƒƒã‚¯è§£é™¤ã‚’è¡Œã†
+		//return: ãƒ­ãƒƒã‚¯è§£é™¤æˆåŠŸå¯å¦
 		inline bool UnlockShared() noexcept;
 		//----------------------------------------------------------------------------------
 		//[DynamicCast]
-		//return: DynamicCast‚µ‚½WeakPointer
+		//return: DynamicCastã—ãŸWeakPointer
 		template<class DifferentType>
 		inline WeakPointer<DifferentType[]> DynamicCast() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[DownCast]
-		//return: DownCast‚µ‚½WeakPointer
+		//return: DownCastã—ãŸWeakPointer
 		template<class DifferentType>
 		inline WeakPointer<DifferentType[]> DownCast() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[TryGetInstance]
-		//ƒCƒ“ƒXƒ^ƒ“ƒXæ“¾‚ğ‚İ‚é
-		//return: ƒCƒ“ƒXƒ^ƒ“ƒXƒ|ƒCƒ“ƒ^, SharedCount == 0‚Ìê‡‚Ínullptr
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹å–å¾—ã‚’è©¦ã¿ã‚‹
+		//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãƒã‚¤ãƒ³ã‚¿, SharedCount == 0ã®å ´åˆã¯nullptr
 		inline PointerType* TryGetInstance() const noexcept { return m_counter && m_counter->getShared() > 0 ? m_pointer : nullptr; }
 		//----------------------------------------------------------------------------------
 		//[InstantiateShared]
-		//return: ãQÆ‚ğŠî‚Éì¬‚µ‚½SharedPointer(SharedCount == 0‚Ìê‡‚Ínullptr)
+		//return: å¼±å‚ç…§ã‚’åŸºã«ä½œæˆã—ãŸSharedPointer(SharedCount == 0ã®å ´åˆã¯nullptr)
 		inline SharedPointer<PointerType[]> InstantiateShared() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[InstantiateShared]
-		//ãQÆ‚ğŠî‚Éì¬‚µ‚½SharedPointer‚ğì¬‚·‚é(SharedCount == 0‚Ìê‡‚Ínullptr)
-		//ˆø”1: ì¬‚µ‚½SharedPointer‚ğ‘ã“ü‚·‚éƒ|ƒCƒ“ƒ^
+		//å¼±å‚ç…§ã‚’åŸºã«ä½œæˆã—ãŸSharedPointerã‚’ä½œæˆã™ã‚‹(SharedCount == 0ã®å ´åˆã¯nullptr)
+		//å¼•æ•°1: ä½œæˆã—ãŸSharedPointerã‚’ä»£å…¥ã™ã‚‹ãƒã‚¤ãƒ³ã‚¿
 		inline void InstantiateShared(SharedPointer<PointerType[]>& pointer) const noexcept;
 		
 		//shared count (get function property)
 		SGF_FUNCTION_PROPERTY ushort getSharedCount() const noexcept { return m_counter ? m_counter->getShared() : 0; }
 		//weak count (get function property)
 		SGF_FUNCTION_PROPERTY ushort getWeakCount() const noexcept { return m_counter ? m_counter->getWeak() : 0; }
-		//pointer is valid(—LŒø)? (get function property)
+		//pointer is valid(æœ‰åŠ¹)? (get function property)
 		SGF_FUNCTION_PROPERTY bool getIsValid() const noexcept { return m_pointer ? true : false; }
-		//pointer is revocatoin(¸Œø)? (get function property)
+		//pointer is revocatoin(å¤±åŠ¹)? (get function property)
 		SGF_FUNCTION_PROPERTY bool getIsRevocatoin() const noexcept { return m_counter && m_counter->getShared() == 0 ? true : false; }
 		//pointer is locked? (get function property)
 		SGF_FUNCTION_PROPERTY bool getIsLocked() const noexcept { return m_isImLocked; }
@@ -552,13 +552,13 @@ namespace SGFramework
 		inline bool operator != (const WeakPointer<T[]>& pointer) { return m_pointer != pointer.m_pointer; }
 	
 private:
-		//Š—LŒ ‚ğ•úŠü
+		//æ‰€æœ‰æ¨©ã‚’æ”¾æ£„
 		inline void ReleasePointer() noexcept override;
 
-		//ƒ|ƒCƒ“ƒ^
+		//ãƒã‚¤ãƒ³ã‚¿
 		PointerType* m_pointer;
 		ushort m_arraySize;		//arraySize
-		bool m_isImLocked;	//Locks‚Á‚½‚©
+		bool m_isImLocked;	//Lockè¡Œã£ãŸã‹
 	};
 
 
@@ -572,15 +572,15 @@ private:
 
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//nullptr‰Šú‰»‚ğs‚¤
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//nullptråˆæœŸåŒ–ã‚’è¡Œã†
 	template<class PointerType>
 	inline SharedPointer<PointerType>::SharedPointer() noexcept
 		: BaseCountPointer(nullptr), m_pointer(nullptr) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//QÆƒRƒs[‚ğs‚¤
-	//ˆø”1: ƒRƒs[Œ³
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//å‚ç…§ã‚³ãƒ”ãƒ¼ã‚’è¡Œã†
+	//å¼•æ•°1: ã‚³ãƒ”ãƒ¼å…ƒ
 	template<class PointerType>
 	inline SharedPointer<PointerType>::SharedPointer(const SharedPointer<PointerType>& copy) noexcept
 		: BaseCountPointer(copy.m_counter), m_pointer(copy.m_pointer)
@@ -589,9 +589,9 @@ private:
 		else m_pointer = nullptr;
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//©g‚Ö‚ÌMove‚ğs‚¤
-	//ˆø”1: MoveŒ³
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//è‡ªèº«ã¸ã®Moveã‚’è¡Œã†
+	//å¼•æ•°1: Moveå…ƒ
 	template<class PointerType>
 	inline SharedPointer<PointerType>::SharedPointer(SharedPointer<PointerType>&& move) noexcept
 		: BaseCountPointer(move.m_counter), m_pointer(move.m_pointer)
@@ -600,11 +600,11 @@ private:
 		move.m_counter = nullptr;
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‰Šú‰»‚ğs‚¤
-	//ˆø”1: new‚µ‚½ƒ|ƒCƒ“ƒ^[
-	//ˆø”2: Used mutex counter (Required for Multi thread), default = true
-	//ˆø”3: Auto gabage collection?, default = true
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//åˆæœŸåŒ–ã‚’è¡Œã†
+	//å¼•æ•°1: newã—ãŸãƒã‚¤ãƒ³ã‚¿ãƒ¼
+	//å¼•æ•°2: Used mutex counter (Required for Multi thread), default = true
+	//å¼•æ•°3: Auto gabage collection?, default = true
 	template<class PointerType>
 	template<class NewType>
 	inline SharedPointer<PointerType>::SharedPointer(NewType* newPointer,
@@ -628,7 +628,7 @@ private:
 
 	//----------------------------------------------------------------------------------
 	//[DynamicCast]
-	//return: DynamicCast‚µ‚½SharedPointer
+	//return: DynamicCastã—ãŸSharedPointer
 	template<class PointerType>
 	template<class DifferentType>
 	inline SharedPointer<DifferentType> SharedPointer<PointerType>::DynamicCast() const noexcept
@@ -652,7 +652,7 @@ private:
 	}
 	//----------------------------------------------------------------------------------
 	//[DowmCast]
-	//return: DownCast‚µ‚½SharedPointer
+	//return: DownCastã—ãŸSharedPointer
 	template<class PointerType>
 	template<class DifferentType>
 	inline SharedPointer<DifferentType> SharedPointer<PointerType>::DownCast() const noexcept
@@ -679,14 +679,14 @@ private:
 	template<class PointerType>
 	inline const SharedPointer<PointerType>& SharedPointer<PointerType>::operator=(const SharedPointer<PointerType>& copy) noexcept
 	{
-		//ˆá‚¤‚©‚Á‚½‚çƒRƒs[
+		//é•ã†ã‹ã£ãŸã‚‰ã‚³ãƒ”ãƒ¼
 		if (copy.m_pointer != m_pointer)
 		{
-			//1“xŠJ•ú
+			//1åº¦é–‹æ”¾
 			ReleasePointer();
-			//null‚Å‚È‚¯‚ê‚ÎƒJƒEƒ“ƒ^‰ÁZ
+			//nullã§ãªã‘ã‚Œã°ã‚«ã‚¦ãƒ³ã‚¿åŠ ç®—
 			if (copy.m_pointer != nullptr) copy.m_counter->addShared();
-			//‘ã“ü
+			//ä»£å…¥
 			m_pointer = copy.m_pointer;
 			m_counter = copy.m_counter;
 		}
@@ -696,12 +696,12 @@ private:
 	template<class PointerType>
 	inline SharedPointer<PointerType>& SharedPointer<PointerType>::operator=(SharedPointer<PointerType>&& move) noexcept
 	{
-		//ˆá‚¤‚©‚Á‚½‚çƒ€[ƒu
+		//é•ã†ã‹ã£ãŸã‚‰ãƒ ãƒ¼ãƒ–
 		if (m_pointer != move.m_pointer)
 		{
-			//1“xŠJ•ú
+			//1åº¦é–‹æ”¾
 			ReleasePointer();
-			//ˆÚ“®
+			//ç§»å‹•
 			m_pointer = move.m_pointer;
 			m_counter = move.m_counter;
 			move.m_pointer = nullptr;
@@ -741,7 +741,7 @@ private:
 	template<class PointerType>
 	inline void SharedPointer<PointerType>::ReleasePointer() noexcept
 	{
-		//not null -> íœ—\–ñ
+		//not null -> å‰Šé™¤äºˆç´„
 		if (m_pointer != nullptr)
 			GabageCollector::DestroyShared(m_pointer, this);
 
@@ -758,15 +758,15 @@ private:
 
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//nullptr‰Šú‰»‚ğs‚¤
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//nullptråˆæœŸåŒ–ã‚’è¡Œã†
 	template<class PointerType>
 	inline SharedPointer<PointerType[]>::SharedPointer() noexcept
 		: BaseCountPointer(nullptr), m_pointer(nullptr), m_arraySize(0) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//QÆƒRƒs[‚ğs‚¤
-	//ˆø”1: ƒRƒs[Œ³
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//å‚ç…§ã‚³ãƒ”ãƒ¼ã‚’è¡Œã†
+	//å¼•æ•°1: ã‚³ãƒ”ãƒ¼å…ƒ
 	template<class PointerType>
 	inline SharedPointer<PointerType[]>::SharedPointer(const SharedPointer<PointerType[]>& copy) noexcept
 		: BaseCountPointer(copy.m_counter), m_pointer(copy.m_pointer), m_arraySize(copy.m_arraySize)
@@ -779,9 +779,9 @@ private:
 		}
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//©g‚Ö‚ÌMove‚ğs‚¤
-	//ˆø”1: MoveŒ³
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//è‡ªèº«ã¸ã®Moveã‚’è¡Œã†
+	//å¼•æ•°1: Moveå…ƒ
 	template<class PointerType>
 	inline SharedPointer<PointerType[]>::SharedPointer(SharedPointer<PointerType[]>&& move) noexcept
 		: BaseCountPointer(move.m_counter), m_pointer(move.m_pointer), m_arraySize(move.m_arraySize)
@@ -791,12 +791,12 @@ private:
 		move.m_arraySize = 0;
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‰Šú‰»‚ğs‚¤
-	//ˆø”1: new‚µ‚½ƒ|ƒCƒ“ƒ^[
-	//ˆø”2: ”z—ñƒTƒCƒY
-	//ˆø”3: Used mutex counter (Required for Multi thread), default = true
-	//ˆø”4: Auto gabage collection?, default = true
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//åˆæœŸåŒ–ã‚’è¡Œã†
+	//å¼•æ•°1: newã—ãŸãƒã‚¤ãƒ³ã‚¿ãƒ¼
+	//å¼•æ•°2: é…åˆ—ã‚µã‚¤ã‚º
+	//å¼•æ•°3: Used mutex counter (Required for Multi thread), default = true
+	//å¼•æ•°4: Auto gabage collection?, default = true
 	template<class PointerType>
 	template<class NewType>
 	inline SharedPointer<PointerType[]>::SharedPointer(NewType* newPointer, ushort arraySize,
@@ -820,7 +820,7 @@ private:
 
 	//----------------------------------------------------------------------------------
 	//[DynamicCast]
-	//return: DynamicCast‚µ‚½SharedPointer
+	//return: DynamicCastã—ãŸSharedPointer
 	template<class PointerType>
 	template<class DifferentType>
 	inline SharedPointer<DifferentType[]> SharedPointer<PointerType[]>::DynamicCast() const noexcept
@@ -845,7 +845,7 @@ private:
 	}
 	//----------------------------------------------------------------------------------
 	//[DownCast]
-	//return: DownCast‚µ‚½SharedPointer
+	//return: DownCastã—ãŸSharedPointer
 	template<class PointerType>
 	template<class DifferentType>
 	inline SharedPointer<DifferentType[]> SharedPointer<PointerType[]>::DownCast() const noexcept
@@ -873,14 +873,14 @@ private:
 	template<class PointerType>
 	inline const SharedPointer<PointerType[]>& SharedPointer<PointerType[]>::operator=(const SharedPointer<PointerType[]>& copy) noexcept
 	{
-		//ˆá‚¤‚©‚Á‚½‚çƒRƒs[
+		//é•ã†ã‹ã£ãŸã‚‰ã‚³ãƒ”ãƒ¼
 		if (copy.m_pointer != m_pointer)
 		{
-			//1“xŠJ•ú
+			//1åº¦é–‹æ”¾
 			ReleasePointer();
-			//null‚Å‚È‚¯‚ê‚ÎƒJƒEƒ“ƒ^‰ÁZ
+			//nullã§ãªã‘ã‚Œã°ã‚«ã‚¦ãƒ³ã‚¿åŠ ç®—
 			if (copy.m_counter != nullptr) copy.m_counter->addShared();
-			//‘ã“ü
+			//ä»£å…¥
 			m_pointer = copy.m_pointer;
 			m_counter = copy.m_counter;
 			m_arraySize = copy.m_arraySize;
@@ -891,12 +891,12 @@ private:
 	template<class PointerType>
 	inline SharedPointer<PointerType[]>& SharedPointer<PointerType[]>::operator=(SharedPointer<PointerType[]>&& move) noexcept
 	{
-		//ˆá‚¤‚©‚Á‚½‚çƒ€[ƒu
+		//é•ã†ã‹ã£ãŸã‚‰ãƒ ãƒ¼ãƒ–
 		if (m_pointer != move.m_pointer)
 		{
-			//1“xŠJ•ú
+			//1åº¦é–‹æ”¾
 			ReleasePointer();
-			//ˆÚ“®
+			//ç§»å‹•
 			m_pointer = move.m_pointer;
 			m_counter = move.m_counter;
 			m_arraySize = move.m_arraySize;
@@ -934,11 +934,11 @@ private:
 		return m_pointer != pointer.m_pointer;
 	}
 
-	//ƒ|ƒCƒ“ƒ^‚ÌŠJ•ú‚ğ‚İ‚é
+	//ãƒã‚¤ãƒ³ã‚¿ã®é–‹æ”¾ã‚’è©¦ã¿ã‚‹
 	template<class PointerType>
 	inline void SharedPointer<PointerType[]>::ReleasePointer() noexcept
 	{
-		//not null -> íœ—\–ñ
+		//not null -> å‰Šé™¤äºˆç´„
 		if (m_pointer != nullptr)
 			GabageCollector::DestroyShared(m_pointer, this);
 
@@ -955,15 +955,15 @@ private:
 	//----------------------------------------------------------------------------------
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//nullptr‰Šú‰»‚ğs‚¤
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//nullptråˆæœŸåŒ–ã‚’è¡Œã†
 	template<class PointerType>
 	inline WeakPointer<PointerType>::WeakPointer() noexcept
 		: BaseCountPointer(nullptr), m_pointer(nullptr), m_isImLocked(false) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//QÆƒRƒs[‚ğs‚¤
-	//ˆø”1: ƒRƒs[Œ³
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//å‚ç…§ã‚³ãƒ”ãƒ¼ã‚’è¡Œã†
+	//å¼•æ•°1: ã‚³ãƒ”ãƒ¼å…ƒ
 	template<class PointerType>
 	inline WeakPointer<PointerType>::WeakPointer(const WeakPointer<PointerType>& copy) noexcept
 		: BaseCountPointer(copy.m_counter), m_pointer(copy.m_pointer), m_isImLocked(false)
@@ -974,9 +974,9 @@ private:
 			m_pointer = nullptr;
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//©g‚Ö‚ÌMove‚ğs‚¤
-	//ˆø”1: MoveŒ³
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//è‡ªèº«ã¸ã®Moveã‚’è¡Œã†
+	//å¼•æ•°1: Moveå…ƒ
 	template<class PointerType>
 	inline WeakPointer<PointerType>::WeakPointer(WeakPointer<PointerType>&& move) noexcept
 		: BaseCountPointer(move.m_counter), m_pointer(move.m_pointer), m_isImLocked(move.m_isImLocked)
@@ -986,9 +986,9 @@ private:
 		move.m_isImLocked = false;
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//QÆƒRƒs[‚ğs‚¤
-	//ˆø”1: ƒRƒs[Œ³<Shared>
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//å‚ç…§ã‚³ãƒ”ãƒ¼ã‚’è¡Œã†
+	//å¼•æ•°1: ã‚³ãƒ”ãƒ¼å…ƒ<Shared>
 	template<class PointerType>
 	inline WeakPointer<PointerType>::WeakPointer(const SharedPointer<PointerType>& copy) noexcept
 		: BaseCountPointer(copy.m_counter), m_pointer(copy.m_pointer), m_isImLocked(false)
@@ -1001,12 +1001,12 @@ private:
 
 	//----------------------------------------------------------------------------------
 	//[LockShared]
-	//QÆ‚ª—LŒø‚Èê‡‚ÍQÆƒJƒEƒ“ƒg‚ğˆê“I‚É1‘‚â‚µƒI[ƒgíœ‹@”\‚ğƒƒbƒN‚·‚é
-	//ƒI[ƒgíœ‹@”\‚ğ–³Œø‰»‚·‚é‚¾‚¯‚Å•¡”ƒXƒŒƒbƒh‚É‚æ‚éQÆ‚Í‰ğŒˆ‚µ‚È‚¢
+	//å‚ç…§ãŒæœ‰åŠ¹ãªå ´åˆã¯å‚ç…§ã‚«ã‚¦ãƒ³ãƒˆã‚’ä¸€æ™‚çš„ã«1å¢—ã‚„ã—ã‚ªãƒ¼ãƒˆå‰Šé™¤æ©Ÿèƒ½ã‚’ãƒ­ãƒƒã‚¯ã™ã‚‹
+	//ã‚ªãƒ¼ãƒˆå‰Šé™¤æ©Ÿèƒ½ã‚’ç„¡åŠ¹åŒ–ã™ã‚‹ã ã‘ã§è¤‡æ•°ã‚¹ãƒ¬ãƒƒãƒ‰ã«ã‚ˆã‚‹å‚ç…§ã¯è§£æ±ºã—ãªã„
 	template<class PointerType>
 	inline bool WeakPointer<PointerType>::LockShared() noexcept
 	{
-		//ƒƒbƒN‚µ‚Ä‚È‚¢ & À‘Ì‚ ‚è->ƒJƒEƒ“ƒ^++¬Œ÷‚Åreturn true
+		//ãƒ­ãƒƒã‚¯ã—ã¦ãªã„ & å®Ÿä½“ã‚ã‚Š->ã‚«ã‚¦ãƒ³ã‚¿++æˆåŠŸã§return true
 		if (IS_FALSE(m_isImLocked) && m_counter)
 			return m_isImLocked = m_counter->LockShared();
 		
@@ -1014,12 +1014,12 @@ private:
 	}
 	//----------------------------------------------------------------------------------
 	//[UnlockShared]
-	//Lock‚ğÀs‚µ‚Ä‚¢‚½ê‡ƒI[ƒgíœ‹@”\ƒƒbƒN‰ğœ‚ğs‚¤
-	//return: ƒƒbƒN‰ğœ¬Œ÷‰Â”Û
+	//Lockã‚’å®Ÿè¡Œã—ã¦ã„ãŸå ´åˆã‚ªãƒ¼ãƒˆå‰Šé™¤æ©Ÿèƒ½ãƒ­ãƒƒã‚¯è§£é™¤ã‚’è¡Œã†
+	//return: ãƒ­ãƒƒã‚¯è§£é™¤æˆåŠŸå¯å¦
 	template<class PointerType>
 	inline bool WeakPointer<PointerType>::UnlockShared() noexcept
 	{
-		//ƒƒbƒN‚µ‚Ä‚é
+		//ãƒ­ãƒƒã‚¯ã—ã¦ã‚‹
 		if (IS_TRUE(m_isImLocked))
 		{
 			//Destroy
@@ -1032,7 +1032,7 @@ private:
 	}
 	//----------------------------------------------------------------------------------
 	//[DynamicCast]
-	//return: DynamicCast‚µ‚½WeakPointer
+	//return: DynamicCastã—ãŸWeakPointer
 	template<class PointerType>
 	template<class DifferentType>
 	inline WeakPointer<DifferentType> WeakPointer<PointerType>::DynamicCast() const noexcept
@@ -1057,7 +1057,7 @@ private:
 	}
 	//----------------------------------------------------------------------------------
 	//[DownCast]
-	//return: DownCast‚µ‚½WeakPointer
+	//return: DownCastã—ãŸWeakPointer
 	template<class PointerType>
 	template<class DifferentType>
 	inline WeakPointer<DifferentType> WeakPointer<PointerType>::DownCast() const noexcept
@@ -1082,14 +1082,14 @@ private:
 	}
 	//----------------------------------------------------------------------------------
 	//[InstantiateShared]
-	//ãQÆ‚ğŠî‚Éì¬‚µ‚½SharedPointer‚ğì¬‚·‚é(SharedCount == 0‚Ìê‡‚Ínullptr)
-	//ˆø”1: ì¬‚µ‚½SharedPointer‚ğ‘ã“ü‚·‚é
+	//å¼±å‚ç…§ã‚’åŸºã«ä½œæˆã—ãŸSharedPointerã‚’ä½œæˆã™ã‚‹(SharedCount == 0ã®å ´åˆã¯nullptr)
+	//å¼•æ•°1: ä½œæˆã—ãŸSharedPointerã‚’ä»£å…¥ã™ã‚‹
 	template<class PointerType>
 	inline SharedPointer<PointerType> WeakPointer<PointerType>::InstantiateShared() const noexcept
 	{
 		SharedPointer<PointerType> result;
 
-		//ƒCƒ“ƒXƒ^ƒ“ƒX‚ª‚ ‚é
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒã‚ã‚‹
 		if (m_counter && IS_TRUE(m_counter->LockShared()))
 		{
 			result.m_pointer = m_pointer;
@@ -1100,15 +1100,15 @@ private:
 	}
 	//----------------------------------------------------------------------------------
 	//[InstantiateShared]
-	//ãQÆ‚ğŠî‚Éì¬‚µ‚½SharedPointer‚ğì¬‚·‚é(SharedCount == 0‚Ìê‡‚Ínullptr)
-	//ˆø”1: ì¬‚µ‚½SharedPointer‚ğ‘ã“ü‚·‚éƒ|ƒCƒ“ƒ^
+	//å¼±å‚ç…§ã‚’åŸºã«ä½œæˆã—ãŸSharedPointerã‚’ä½œæˆã™ã‚‹(SharedCount == 0ã®å ´åˆã¯nullptr)
+	//å¼•æ•°1: ä½œæˆã—ãŸSharedPointerã‚’ä»£å…¥ã™ã‚‹ãƒã‚¤ãƒ³ã‚¿
 	template<class PointerType>
 	inline void WeakPointer<PointerType>::InstantiateShared(SharedPointer<PointerType>& pointer) const noexcept
 	{
-		//ŠJ•ú
+		//é–‹æ”¾
 		pointer.ReleasePointer();
 
-		//ƒCƒ“ƒXƒ^ƒ“ƒX‚ª‚ ‚é
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒã‚ã‚‹
 		if (m_counter && IS_TRUE(m_counter->LockShared()))
 		{
 			pointer.m_pointer = m_pointer;
@@ -1120,12 +1120,12 @@ private:
 	template<class PointerType>
 	inline const WeakPointer<PointerType>& WeakPointer<PointerType>::operator=(const WeakPointer<PointerType>& copy) noexcept
 	{
-		//ˆá‚Á‚½‚çƒRƒs[
+		//é•ã£ãŸã‚‰ã‚³ãƒ”ãƒ¼
 		if (copy.m_pointer != m_pointer)
 		{
-			//ˆê“xŠJ•ú
+			//ä¸€åº¦é–‹æ”¾
 			ReleasePointer();
-			//null‚Å‚È‚¯‚ê‚ÎƒJƒEƒ“ƒ^‰ÁZ
+			//nullã§ãªã‘ã‚Œã°ã‚«ã‚¦ãƒ³ã‚¿åŠ ç®—
 			if (copy.m_counter != nullptr) copy.m_counter->addWeak();
 
 			//copy
@@ -1138,10 +1138,10 @@ private:
 	template<class PointerType>
 	inline WeakPointer<PointerType>& WeakPointer<PointerType>::operator=(WeakPointer<PointerType>&& move) noexcept
 	{
-		//ˆá‚Á‚½‚çƒ€[ƒu
+		//é•ã£ãŸã‚‰ãƒ ãƒ¼ãƒ–
 		if (m_counter != move.m_counter)
 		{
-			//ˆê“xŠJ•ú
+			//ä¸€åº¦é–‹æ”¾
 			ReleasePointer();
 			//move
 			m_pointer = move.m_pointer;
@@ -1158,12 +1158,12 @@ private:
 	template<class PointerType>
 	inline const SharedPointer<PointerType>& WeakPointer<PointerType>::operator=(const SharedPointer<PointerType>& copy) noexcept
 	{
-		//’lˆá‚Á‚½‚çƒRƒs[
+		//å€¤é•ã£ãŸã‚‰ã‚³ãƒ”ãƒ¼
 		if (m_counter != copy.m_counter)
 		{
-			//ˆê“xŠJ•ú
+			//ä¸€åº¦é–‹æ”¾
 			ReleasePointer();
-			//null‚Å‚È‚¯‚ê‚ÎƒJƒEƒ“ƒ^‰ÁZ
+			//nullã§ãªã‘ã‚Œã°ã‚«ã‚¦ãƒ³ã‚¿åŠ ç®—
 			if (copy.m_counter != nullptr)
 				copy.m_counter->addWeak();
 
@@ -1178,7 +1178,7 @@ private:
 	template<class PointerType>
 	inline void WeakPointer<PointerType>::ReleasePointer() noexcept
 	{
-		//ƒƒbƒN‚µ‚Ä‚½‚çŠJ•ú
+		//ãƒ­ãƒƒã‚¯ã—ã¦ãŸã‚‰é–‹æ”¾
 		if (IS_TRUE(m_isImLocked)) UnlockShared();
 	
 		//Destroy
@@ -1198,15 +1198,15 @@ private:
 
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//nullptr‰Šú‰»‚ğs‚¤
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//nullptråˆæœŸåŒ–ã‚’è¡Œã†
 	template<class PointerType>
 	inline WeakPointer<PointerType[]>::WeakPointer() noexcept
 		: BaseCountPointer(nullptr), m_pointer(nullptr), m_arraySize(0), m_isImLocked(false) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//QÆƒRƒs[‚ğs‚¤
-	//ˆø”1: ƒRƒs[Œ³
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//å‚ç…§ã‚³ãƒ”ãƒ¼ã‚’è¡Œã†
+	//å¼•æ•°1: ã‚³ãƒ”ãƒ¼å…ƒ
 	template<class PointerType>
 	inline WeakPointer<PointerType[]>::WeakPointer(const WeakPointer<PointerType[]>& copy) noexcept
 		: BaseCountPointer(copy.m_counter), m_pointer(copy.m_pointer),
@@ -1220,9 +1220,9 @@ private:
 		}
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//©g‚Ö‚ÌMove‚ğs‚¤
-	//ˆø”1: MoveŒ³
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//è‡ªèº«ã¸ã®Moveã‚’è¡Œã†
+	//å¼•æ•°1: Moveå…ƒ
 	template<class PointerType>
 	inline WeakPointer<PointerType[]>::WeakPointer(WeakPointer<PointerType[]>&& move) noexcept
 		: BaseCountPointer(move.m_counter), m_pointer(move.m_pointer), 
@@ -1234,9 +1234,9 @@ private:
 		move.m_isImLocked = false;
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//QÆƒRƒs[‚ğs‚¤
-	//ˆø”1: ƒRƒs[Œ³<Shared>
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//å‚ç…§ã‚³ãƒ”ãƒ¼ã‚’è¡Œã†
+	//å¼•æ•°1: ã‚³ãƒ”ãƒ¼å…ƒ<Shared>
 	template<class PointerType>
 	inline WeakPointer<PointerType[]>::WeakPointer(const SharedPointer<PointerType[]>& copy) noexcept
 		: BaseCountPointer(copy.m_counter), m_pointer(copy.m_pointer),
@@ -1252,12 +1252,12 @@ private:
 
 	//----------------------------------------------------------------------------------
 	//[LockShared]
-	//QÆ‚ª—LŒø‚Èê‡‚ÍQÆƒJƒEƒ“ƒg‚ğˆê“I‚É1‘‚â‚µƒI[ƒgíœ‹@”\‚ğƒƒbƒN‚·‚é
-	//ƒI[ƒgíœ‹@”\‚ğ–³Œø‰»‚·‚é‚¾‚¯‚Å•¡”ƒXƒŒƒbƒh‚É‚æ‚éQÆ‚Í‰ğŒˆ‚µ‚È‚¢
+	//å‚ç…§ãŒæœ‰åŠ¹ãªå ´åˆã¯å‚ç…§ã‚«ã‚¦ãƒ³ãƒˆã‚’ä¸€æ™‚çš„ã«1å¢—ã‚„ã—ã‚ªãƒ¼ãƒˆå‰Šé™¤æ©Ÿèƒ½ã‚’ãƒ­ãƒƒã‚¯ã™ã‚‹
+	//ã‚ªãƒ¼ãƒˆå‰Šé™¤æ©Ÿèƒ½ã‚’ç„¡åŠ¹åŒ–ã™ã‚‹ã ã‘ã§è¤‡æ•°ã‚¹ãƒ¬ãƒƒãƒ‰ã«ã‚ˆã‚‹å‚ç…§ã¯è§£æ±ºã—ãªã„
 	template<class PointerType>
 	inline bool WeakPointer<PointerType[]>::LockShared() noexcept
 	{
-		//ƒƒbƒN‚µ‚Ä‚È‚¢ & À‘Ì‚ ‚è->ƒJƒEƒ“ƒ^++¬Œ÷‚Åreturn true
+		//ãƒ­ãƒƒã‚¯ã—ã¦ãªã„ & å®Ÿä½“ã‚ã‚Š->ã‚«ã‚¦ãƒ³ã‚¿++æˆåŠŸã§return true
 		if (IS_FALSE(m_isImLocked))
 			if (m_counter)
 				return m_isImLocked = m_counter->LockShared();
@@ -1266,12 +1266,12 @@ private:
 	}
 	//----------------------------------------------------------------------------------
 	//[UnlockShared]
-	//Lock‚ğÀs‚µ‚Ä‚¢‚½ê‡ƒI[ƒgíœ‹@”\ƒƒbƒN‰ğœ‚ğs‚¤
-	//return: ƒƒbƒN‰ğœ¬Œ÷‰Â”Û
+	//Lockã‚’å®Ÿè¡Œã—ã¦ã„ãŸå ´åˆã‚ªãƒ¼ãƒˆå‰Šé™¤æ©Ÿèƒ½ãƒ­ãƒƒã‚¯è§£é™¤ã‚’è¡Œã†
+	//return: ãƒ­ãƒƒã‚¯è§£é™¤æˆåŠŸå¯å¦
 	template<class PointerType>
 	inline bool WeakPointer<PointerType[]>::UnlockShared() noexcept
 	{
-		//ƒƒbƒN‚µ‚Ä‚é
+		//ãƒ­ãƒƒã‚¯ã—ã¦ã‚‹
 		if (IS_TRUE(m_isImLocked))
 		{
 			//Destroy
@@ -1284,7 +1284,7 @@ private:
 	}
 	//----------------------------------------------------------------------------------
 	//[DynamicCast]
-	//return: DynamicCast‚µ‚½WeakPointer
+	//return: DynamicCastã—ãŸWeakPointer
 	template<class PointerType>
 	template<class DifferentType>
 	inline WeakPointer<DifferentType[]> WeakPointer<PointerType[]>::DynamicCast() const noexcept
@@ -1310,7 +1310,7 @@ private:
 	}
 	//----------------------------------------------------------------------------------
 	//[DownCast]
-	//return: DownCast‚µ‚½WeakPointer
+	//return: DownCastã—ãŸWeakPointer
 	template<class PointerType>
 	template<class DifferentType>
 	inline WeakPointer<DifferentType[]> WeakPointer<PointerType[]>::DownCast() const noexcept
@@ -1336,14 +1336,14 @@ private:
 	}
 	//----------------------------------------------------------------------------------
 	//[InstantiateShared]
-	//ãQÆ‚ğŠî‚Éì¬‚µ‚½SharedPointer‚ğì¬‚·‚é(SharedCount == 0‚Ìê‡‚Ínullptr)
-	//ˆø”1: ì¬‚µ‚½SharedPointer‚ğ‘ã“ü‚·‚é
+	//å¼±å‚ç…§ã‚’åŸºã«ä½œæˆã—ãŸSharedPointerã‚’ä½œæˆã™ã‚‹(SharedCount == 0ã®å ´åˆã¯nullptr)
+	//å¼•æ•°1: ä½œæˆã—ãŸSharedPointerã‚’ä»£å…¥ã™ã‚‹
 	template<class PointerType>
 	inline SharedPointer<PointerType[]> WeakPointer<PointerType[]>::InstantiateShared() const noexcept
 	{
 		SharedPointer<PointerType> result;
 
-		//ƒCƒ“ƒXƒ^ƒ“ƒX‚ª‚ ‚é
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒã‚ã‚‹
 		if (m_counter && IS_TRUE(m_counter->LockShared()))
 		{
 			result.m_pointer = m_pointer;
@@ -1354,15 +1354,15 @@ private:
 	}
 	//----------------------------------------------------------------------------------
 	//[InstantiateShared]
-	//ãQÆ‚ğŠî‚Éì¬‚µ‚½SharedPointer‚ğì¬‚·‚é(SharedCount == 0‚Ìê‡‚Ínullptr)
-	//ˆø”1: ì¬‚µ‚½SharedPointer‚ğ‘ã“ü‚·‚éƒ|ƒCƒ“ƒ^
+	//å¼±å‚ç…§ã‚’åŸºã«ä½œæˆã—ãŸSharedPointerã‚’ä½œæˆã™ã‚‹(SharedCount == 0ã®å ´åˆã¯nullptr)
+	//å¼•æ•°1: ä½œæˆã—ãŸSharedPointerã‚’ä»£å…¥ã™ã‚‹ãƒã‚¤ãƒ³ã‚¿
 	template<class PointerType>
 	inline void WeakPointer<PointerType[]>::InstantiateShared(SharedPointer<PointerType[]>& pointer) const noexcept
 	{
-		//ŠJ•ú
+		//é–‹æ”¾
 		pointer.ReleasePointers();
 
-		//ƒCƒ“ƒXƒ^ƒ“ƒX‚ª‚ ‚é
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒã‚ã‚‹
 		if (m_counter && IS_TRUE(m_counter->LockShared()))
 		{
 			pointer.m_pointer = m_pointer;
@@ -1375,12 +1375,12 @@ private:
 	template<class PointerType>
 	inline const WeakPointer<PointerType[]>& WeakPointer<PointerType[]>::operator=(const WeakPointer<PointerType[]>& copy) noexcept
 	{
-		//ˆá‚Á‚½‚çƒRƒs[
+		//é•ã£ãŸã‚‰ã‚³ãƒ”ãƒ¼
 		if (copy.m_pointer != m_pointer)
 		{
-			//ˆê“xŠJ•ú
+			//ä¸€åº¦é–‹æ”¾
 			ReleasePointer();
-			//null‚Å‚È‚¯‚ê‚ÎƒJƒEƒ“ƒ^‰ÁZ
+			//nullã§ãªã‘ã‚Œã°ã‚«ã‚¦ãƒ³ã‚¿åŠ ç®—
 			if (copy.m_counter != nullptr) copy.m_counter->addWeak();
 
 			//copy
@@ -1394,10 +1394,10 @@ private:
 	template<class PointerType>
 	inline WeakPointer<PointerType[]>& WeakPointer<PointerType[]>::operator=(WeakPointer<PointerType[]>&& move) noexcept
 	{
-		//ˆá‚Á‚½‚çƒ€[ƒu
+		//é•ã£ãŸã‚‰ãƒ ãƒ¼ãƒ–
 		if (m_counter != move.m_counter)
 		{
-			//ˆê“xŠJ•ú
+			//ä¸€åº¦é–‹æ”¾
 			ReleasePointer();
 			//move
 			m_pointer = move.m_pointer;
@@ -1416,12 +1416,12 @@ private:
 	template<class PointerType>
 	inline const SharedPointer<PointerType[]>& WeakPointer<PointerType[]>::operator=(const SharedPointer<PointerType[]>& copy) noexcept
 	{
-		//’lˆá‚Á‚½‚çƒRƒs[
+		//å€¤é•ã£ãŸã‚‰ã‚³ãƒ”ãƒ¼
 		if (m_counter != copy.m_counter)
 		{
-			//ˆê“xŠJ•ú
+			//ä¸€åº¦é–‹æ”¾
 			ReleasePointer();
-			//null‚Å‚È‚¯‚ê‚ÎƒJƒEƒ“ƒ^‰ÁZ
+			//nullã§ãªã‘ã‚Œã°ã‚«ã‚¦ãƒ³ã‚¿åŠ ç®—
 			if (copy.m_counter != nullptr)
 				m_counter->addWeak();
 
@@ -1433,11 +1433,11 @@ private:
 		return copy;
 	}
 
-	//Š—LŒ ‚ğ•úŠü
+	//æ‰€æœ‰æ¨©ã‚’æ”¾æ£„
 	template<class PointerType>
 	inline void WeakPointer<PointerType[]>::ReleasePointer() noexcept
 	{
-		//ƒƒbƒN‚µ‚Ä‚½‚çŠJ•ú
+		//ãƒ­ãƒƒã‚¯ã—ã¦ãŸã‚‰é–‹æ”¾
 		if (IS_TRUE(m_isImLocked)) UnlockShared();
 
 		//Destroy

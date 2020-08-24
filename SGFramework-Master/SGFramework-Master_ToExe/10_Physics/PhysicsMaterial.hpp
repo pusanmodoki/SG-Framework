@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-•¨—ƒ}ƒeƒŠƒAƒ‹‚ð’è‹`‚·‚éPhysicsMaterial
+ç‰©ç†ãƒžãƒ†ãƒªã‚¢ãƒ«ã‚’å®šç¾©ã™ã‚‹PhysicsMaterial
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_PHYSICS_MATERIAL_HPP_
 #define SGFRAMEWORK_HEADER_PHYSICS_MATERIAL_HPP_
@@ -12,22 +12,22 @@ namespace SGFramework
 	//friend
 	class Physics;
 
-	//•¨—ƒ}ƒeƒŠƒAƒ‹‚ð’è‹`‚·‚éPhysicsMaterial
+	//ç‰©ç†ãƒžãƒ†ãƒªã‚¢ãƒ«ã‚’å®šç¾©ã™ã‚‹PhysicsMaterial
 	class PhysicsMaterial
 	{
 	public:
 		//friend
 		friend class Physics;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//nullptr‚ÉÝ’è‚³‚ê‚é
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//nullptrã«è¨­å®šã•ã‚Œã‚‹
 		inline PhysicsMaterial() : m_material(nullptr) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚ðs‚¤
-		//ˆø”1: ÃŽ~–€ŽCŒW”
-		//ˆø”2: “®“I–€ŽCŒW”
-		//ˆø”3: ”½”­ŒW”
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã‚’è¡Œã†
+		//å¼•æ•°1: é™æ­¢æ‘©æ“¦ä¿‚æ•°
+		//å¼•æ•°2: å‹•çš„æ‘©æ“¦ä¿‚æ•°
+		//å¼•æ•°3: åç™ºä¿‚æ•°
 		inline PhysicsMaterial(float staticFriction, float dynamicFriction, float restitution) : m_material(nullptr)
 		{
 			m_material = Physics()->createMaterial(staticFriction, dynamicFriction, restitution);
@@ -35,9 +35,9 @@ namespace SGFramework
 				throw InvalidArgument(L"Error!! PhysicsMaterial->Constructor", L"createMaterial failed");
 		}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒRƒs[‚ðs‚¤
-		//ˆø”1: copy
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ã‚³ãƒ”ãƒ¼ã‚’è¡Œã†
+		//å¼•æ•°1: copy
 		inline PhysicsMaterial(const PhysicsMaterial& copy) : m_material(nullptr)
 		{
 			PHYSX_RELEASE(m_material);
@@ -45,19 +45,19 @@ namespace SGFramework
 			if (m_material) m_material->acquireReference();
 		}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒ€[ƒu‚ðs‚¤
-		//ˆø”1: move
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ ãƒ¼ãƒ–ã‚’è¡Œã†
+		//å¼•æ•°1: move
 		inline PhysicsMaterial(PhysicsMaterial&& move) : m_material(move.m_material)
 		{
 			move.m_material = nullptr;
 		}
 		//----------------------------------------------------------------------------------
-		//[ƒfƒXƒgƒ‰ƒNƒ^]
+		//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 		inline ~PhysicsMaterial() { PHYSX_RELEASE(m_material); }
 		//----------------------------------------------------------------------------------
 		//[Release]
-		//“à•”ƒ|ƒCƒ“ƒ^‚ÌŠJ•ú‚ðs‚¤
+		//å†…éƒ¨ãƒã‚¤ãƒ³ã‚¿ã®é–‹æ”¾ã‚’è¡Œã†
 		inline void Release() { PHYSX_RELEASE(m_material); }
 
 		//PxMaterial cast operator

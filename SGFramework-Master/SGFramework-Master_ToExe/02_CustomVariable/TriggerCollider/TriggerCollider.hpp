@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Collider‚ÌTrigger‚ğw’è‚·‚éTriggerCollider.h
+Colliderã®Triggerã‚’æŒ‡å®šã™ã‚‹TriggerCollider.h
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_COLLIDER_TRIGGER_HPP_
 #define SGFRAMEWORK_HEADER_COLLIDER_TRIGGER_HPP_
@@ -7,23 +7,23 @@ Collider‚ÌTrigger‚ğw’è‚·‚éTriggerCollider.h
 //Framework namespace
 namespace SGFramework
 {
-	//ƒRƒ‰ƒCƒ_[‚ÌƒgƒŠƒK[
+	//ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ã®ãƒˆãƒªã‚¬ãƒ¼
 	enum class Triggers
 	{
-		TriggerNull = 0x0,	//‰Šú’l
-		TriggerFalse = 0x1,	//§ŒÀ‚È‚µ
-		TriggerTrue = 0x2,	//§ŒÀ‚ ‚è
+		TriggerNull = 0x0,	//åˆæœŸå€¤
+		TriggerFalse = 0x1,	//åˆ¶é™ãªã—
+		TriggerTrue = 0x2,	//åˆ¶é™ã‚ã‚Š
 	};
 
-	//ƒRƒ‰ƒCƒ_[‚Ìí—Ş
+	//ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ã®ç¨®é¡
 	enum class Colliders
 	{
-		Mesh,					//ƒƒbƒVƒ…ƒRƒ‰ƒCƒ_[
-		Ray,						//ƒŒƒCƒLƒƒƒXƒg
-		Box3D,					//ƒ{ƒbƒNƒXƒRƒ‰ƒCƒ_[ (3D)
-		Box2D,					//ƒ{ƒbƒNƒXƒRƒ‰ƒCƒ_[ (2D)
-		Sphere,					//ƒXƒtƒBƒAƒRƒ‰ƒCƒ_[ (3D)
-		Circle,					//ƒT[ƒNƒ‹ƒRƒ‰ƒCƒ_[ (2D)
+		Mesh,					//ãƒ¡ãƒƒã‚·ãƒ¥ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼
+		Ray,						//ãƒ¬ã‚¤ã‚­ãƒ£ã‚¹ãƒˆ
+		Box3D,					//ãƒœãƒƒã‚¯ã‚¹ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ (3D)
+		Box2D,					//ãƒœãƒƒã‚¯ã‚¹ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ (2D)
+		Sphere,					//ã‚¹ãƒ•ã‚£ã‚¢ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ (3D)
+		Circle,					//ã‚µãƒ¼ã‚¯ãƒ«ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ (2D)
 	};
 }
 #endif // !SGFRAMEWORK_HEADER_COLLIDER_TRIGGER_HPP_

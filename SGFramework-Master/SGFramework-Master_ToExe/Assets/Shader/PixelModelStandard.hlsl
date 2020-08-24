@@ -2,29 +2,29 @@
 
 float4 main(VertexOutputModel input) : SV_Target
 {	
-	//ƒJƒƒ‰•ûŒü
+	//ã‚«ãƒ¡ãƒ©æ–¹å‘
 	float4 lightDirection = cLightBuffer.directionalDirections[0];
-	//–@ü
+	//æ³•ç·š
 	float4 normal = input.normal;
 
-	//lightDirection.w = 0.0f;								// Œõ‚Ì•ûŒü‚ÍƒxƒNƒgƒ‹‚È‚Ì‚Å‚v‚Ì’l‚ğ‚O‚É‚·‚éB
-	//‹ts—ñ‚ğ‚©‚¯‚é
+	//lightDirection.w = 0.0f;								// å…‰ã®æ–¹å‘ã¯ãƒ™ã‚¯ãƒˆãƒ«ãªã®ã§ï¼·ã®å€¤ã‚’ï¼ã«ã™ã‚‹ã€‚
+	//é€†è¡Œåˆ—ã‚’ã‹ã‘ã‚‹
   // lightDirection = normalize(mul(cObjectBuffer.worldInverseMatrix, lightDirection));
 
 //	normal.w = 0.0f;
 	//normal = normalize(normal);
 	
-	// ŠgU”½ËŒõ‚ÌŒvZ
-    float4 diffuse = cMaterialBuffer3D.diffuse * (cLightBuffer.directionalColors[0] * cLightBuffer.directionalPowers[0]) * dot(normal, lightDirection); //ƒ‰ƒ“ƒo[ƒg—]Œ·‘¥‚Æƒ}ƒeƒŠƒAƒ‹’l‚ÆŠ|‚¯Z
+	// æ‹¡æ•£åå°„å…‰ã®è¨ˆç®—
+    float4 diffuse = cMaterialBuffer3D.diffuse * (cLightBuffer.directionalColors[0] * cLightBuffer.directionalPowers[0]) * dot(normal, lightDirection); //ãƒ©ãƒ³ãƒãƒ¼ãƒˆä½™å¼¦å‰‡ã¨ãƒãƒ†ãƒªã‚¢ãƒ«å€¤ã¨æ›ã‘ç®—
    // diffuse.rgb = diffuse.rgb * cLightBuffer.directionalColors[0].rgb * cLightBuffer.directionalPowers[0];
 
 
-	//// ‹¾–Ê”½ËŒõ‚ÌŒvZ
+	//// é¡é¢åå°„å…‰ã®è¨ˆç®—
     float4 specularDetail = normalize(lightDirection + normalize(cLightBuffer.eyePosition - input.worldPosition));
     float4 specular = pow(max(0, dot(normal, specularDetail)), 50) * cMaterialBuffer3D.specular;
    // specular.rgb = specular.rgb * cLightBuffer.directionalColors[0].rgb * cLightBuffer.directionalPowers[0];
 
-	////F
+	////è‰²
 	float4 resultColor;
     float4 textureColor;
     textureColor.rgb = g_textureSlot0.Sample(g_samplerSlot0, input.textureUV0).rgb;

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Vector2,Vector3�����������ŌĂяo���\�ɂ���Vector.h
+Vector2,Vector3をこいつだけで呼び出し可能にするVector.h
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_VECTOR_VECTOR_HPP_
 #define SGFRAMEWORK_HEADER_VECTOR_VECTOR_HPP_

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÅLockShared, ƒfƒXƒgƒ‰ƒNƒ^‚ÅUnlockShared‚·‚é
+ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§LockShared, ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§UnlockSharedã™ã‚‹
 LockWeakGuard class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_LOCK_WEAK_GUARD_HPP_
@@ -8,7 +8,7 @@ LockWeakGuard class
 //Framework namespace
 namespace SGFramework
 {
-	//ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÅLockShared, ƒfƒXƒgƒ‰ƒNƒ^‚ÅUnlockShared‚·‚é
+	//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§LockShared, ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§UnlockSharedã™ã‚‹
 	//LockWeakGuard class
 	template <class Weak>
 	class LockWeakGuard
@@ -22,9 +22,9 @@ namespace SGFramework
 		LockWeakGuard& operator=(LockWeakGuard&& move) = delete;
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//LockShared‚ðs‚¤
-		//ˆø”1: WeakPointer
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//LockSharedã‚’è¡Œã†
+		//å¼•æ•°1: WeakPointer
 		inline explicit LockWeakGuard(Weak& weak) : m_weak(weak)
 		{
 			m_isResult = m_weak.getIsLocked();
@@ -33,8 +33,8 @@ namespace SGFramework
 		}
 
 		//----------------------------------------------------------------------------------
-		//[ƒfƒXƒgƒ‰ƒNƒ^]
-		//UnlockShared‚ðs‚¤
+		//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//UnlockSharedã‚’è¡Œã†
 		inline ~LockWeakGuard()
 		{
 			m_weak.UnlockShared();
@@ -48,7 +48,7 @@ namespace SGFramework
 		inline bool operator !() { return !m_isResult; }
 
 	private:
-		Weak& m_weak;	//WeakPointer‚ÌŽQÆ
+		Weak& m_weak;	//WeakPointerã®å‚ç…§
 		bool m_isResult;		//result
 	};
 }

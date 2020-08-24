@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-C#‚ÌƒvƒƒpƒeƒB“I‚ÈU‚é•‘‚¢‚ª‚Å‚«‚éProperty.h
+C#ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£çš„ãªæŒ¯ã‚‹èˆã„ãŒã§ãã‚‹Property.h
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_PROPERTY_HPP_
 #define SGFRAMEWORK_HEADER_PROPERTY_HPP_
@@ -7,14 +7,14 @@ C#‚ÌƒvƒƒpƒeƒB“I‚ÈU‚é•‘‚¢‚ª‚Å‚«‚éProperty.h
 //Framework namespace
 namespace SGFramework
 {
-	//get, set‚ª‚Å‚«‚éAccessorProperty class
+	//get, setãŒã§ãã‚‹AccessorProperty class
 	template<typename T>
 	class AccessorProperty final
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”1: QÆ‚·‚é•Ï”
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°1: å‚ç…§ã™ã‚‹å¤‰æ•°
 		inline AccessorProperty(T& t) : m_value(t) {}
 
 		//----------------------------------------------------------------------------------
@@ -39,14 +39,14 @@ namespace SGFramework
 	private:
 		T& m_value;	//value
 	};
-	//get, set‚ª‚Å‚«‚éAccessorProperty class (pointer)
+	//get, setãŒã§ãã‚‹AccessorProperty class (pointer)
 	template<typename T>
 	class AccessorProperty<T*> final
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”1: QÆ‚·‚é•Ï”
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°1: å‚ç…§ã™ã‚‹å¤‰æ•°
 		inline AccessorProperty(T*& t) : m_value(t) {}
 
 		//----------------------------------------------------------------------------------
@@ -72,14 +72,14 @@ namespace SGFramework
 		T* m_value;	//value
 	};
 
-	//get, set‚ª‚Å‚«, ƒAƒNƒZƒXƒtƒ‰ƒO‚ğ‚Â‚éAccessorPropertyNotify class
+	//get, setãŒã§ã, ã‚¢ã‚¯ã‚»ã‚¹ãƒ•ãƒ©ã‚°ã‚’æŒã¤ã‚‹AccessorPropertyNotify class
 	template<typename T>
 	class AccessorPropertyNotify final
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”1: QÆ‚·‚é•Ï”
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°1: å‚ç…§ã™ã‚‹å¤‰æ•°
 		inline AccessorPropertyNotify(T& t, bool& notify) : m_value(t), m_isAccess(notify) {}
 
 		//----------------------------------------------------------------------------------
@@ -108,14 +108,14 @@ namespace SGFramework
 		T& m_value;	//value
 		bool& m_isAccess;
 	};
-	//get, set‚ª‚Å‚«, ƒAƒNƒZƒXƒtƒ‰ƒO‚ğ‚ÂAccessorPropertyNotify class(pointer)
+	//get, setãŒã§ã, ã‚¢ã‚¯ã‚»ã‚¹ãƒ•ãƒ©ã‚°ã‚’æŒã¤AccessorPropertyNotify class(pointer)
 	template<typename T>
 	class AccessorPropertyNotify<T*> final
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”1: QÆ‚·‚é•Ï”
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°1: å‚ç…§ã™ã‚‹å¤‰æ•°
 		inline AccessorPropertyNotify(T*& t, bool& notify) : m_value(t), m_isAccess(false) {}
 
 		//----------------------------------------------------------------------------------
@@ -145,14 +145,14 @@ namespace SGFramework
 		bool& m_isAccess;
 	};
 
-	//get‚ª‚Å‚«‚éGetOnlyProperty class
+	//getãŒã§ãã‚‹GetOnlyProperty class
 	template<typename T>
 	class GetOnlyProperty final
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”1: QÆ‚·‚é•Ï”
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°1: å‚ç…§ã™ã‚‹å¤‰æ•°
 		inline GetOnlyProperty(T& t) : m_value(t) {}
 
 		//----------------------------------------------------------------------------------
@@ -177,14 +177,14 @@ namespace SGFramework
 
 		T& m_value;	//value
 	};
-	//get‚ª‚Å‚«‚éGetOnlyProperty class (Pointer)
+	//getãŒã§ãã‚‹GetOnlyProperty class (Pointer)
 	template<typename T>
 	class GetOnlyProperty<T*> final
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”1: QÆ‚·‚é•Ï”
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°1: å‚ç…§ã™ã‚‹å¤‰æ•°
 		inline GetOnlyProperty(T*& t) : m_value(t) {}
 
 		//----------------------------------------------------------------------------------
@@ -209,20 +209,20 @@ namespace SGFramework
 
 		T* m_value;	//value
 	};
-	//get(Not Const)‚ª‚Å‚«‚éPointerProperty class
+	//get(Not Const)ãŒã§ãã‚‹PointerProperty class
 	template<typename T>
 	class PointerProperty final
 	{
 	};
 
-	//get(Not Const)‚ª‚Å‚«‚éPointerProperty class
+	//get(Not Const)ãŒã§ãã‚‹PointerProperty class
 	template<typename T>
 	class PointerProperty<T*> final
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”1: QÆ‚·‚é•Ï”
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°1: å‚ç…§ã™ã‚‹å¤‰æ•°
 		inline PointerProperty(T*& t) : m_value(t) {}
 
 		//delete 
@@ -256,14 +256,14 @@ namespace SGFramework
 		T*& m_value;	//value
 	};
 
-	//set‚ª‚Å‚«‚éSetOnlyProperty class
+	//setãŒã§ãã‚‹SetOnlyProperty class
 	template<typename T>
 	class SetOnlyProperty final
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”1: QÆ‚·‚é•Ï”
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°1: å‚ç…§ã™ã‚‹å¤‰æ•°
 		inline SetOnlyProperty(T& t) : m_value(t) {}
 
 		//----------------------------------------------------------------------------------

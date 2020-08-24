@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-DirectX11 Texture‚ğˆµ‚¤BaseTextureAssetX11 class
+DirectX11 Textureã‚’æ‰±ã†BaseTextureAssetX11 class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_TEXTURE_ASSET_X11_HPP_
 #define SGFRAMEWORK_HEADER_TEXTURE_ASSET_X11_HPP_
@@ -20,7 +20,7 @@ namespace SGFramework
 		}
 	}
 
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		class AssetManager;
@@ -31,7 +31,7 @@ namespace SGFramework
 			class ModelAssetX11;
 			class MaterialX11;
 
-			//DirectX11 Texture‚ğˆµ‚¤TextureAssetX11 class
+			//DirectX11 Textureã‚’æ‰±ã†TextureAssetX11 class
 			class TextureAssetX11 final : public BaseClass::BaseAsset
 			{
 			public:
@@ -43,31 +43,31 @@ namespace SGFramework
 				friend SharedPointer<TAsset> Asset::InstantiateAsset(const sgstring& filePath, bool isRegisterSharedAsset);
 
 				//----------------------------------------------------------------------------------
-				//[ƒfƒXƒgƒ‰ƒNƒ^]
-				//ƒŠƒ\[ƒX‚ÌŠJ•ú‚ğs‚¤
+				//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+				//ãƒªã‚½ãƒ¼ã‚¹ã®é–‹æ”¾ã‚’è¡Œã†
 				inline ~TextureAssetX11() override { COM_RELEASE(m_shaderResourceView); CloseBaseAsset(getType(), true); }
 
 				//----------------------------------------------------------------------------------
 				//[Open]
-				//ƒVƒF[ƒ_[‚ğƒ[ƒh‚·‚é
-				//throw: ƒ[ƒh‚É¸”s‚µ‚½ê‡
-				//ˆø”1: samplerState, default = Graphics::defaultSamplerState
+				//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’ãƒ­ãƒ¼ãƒ‰ã™ã‚‹
+				//throw: ãƒ­ãƒ¼ãƒ‰ã«å¤±æ•—ã—ãŸå ´åˆ
+				//å¼•æ•°1: samplerState, default = Graphics::defaultSamplerState
 				inline virtual void Open(ID3D11SamplerState* samplerState = Administrator::GraphicsX11::m_defaultSamplerState);
 				//----------------------------------------------------------------------------------
 				//[Reload]
-				//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤
-				//throw: ƒ[ƒh‚É¸”s‚µ‚½ê‡
+				//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
+				//throw: ãƒ­ãƒ¼ãƒ‰ã«å¤±æ•—ã—ãŸå ´åˆ
 				inline void Reload() override;
 				//----------------------------------------------------------------------------------
 				//[Close]
-				//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 				inline void Close() override;
 
 				//----------------------------------------------------------------------------------
 				//[ChangeSamplerState]
-				//SamplerState‚ğ•ÏX‚·‚é, nullƒ|ƒCƒ“ƒ^‚Ìê‡•ÏX‚ğs‚í‚È‚¢
-				//Graphics::defaultSamplerStateˆÈŠO‚Í©“®ŠJ•ú‚ğs‚í‚È‚¢‚Ì‚Å’ˆÓ
-				//ˆø”1: samplerState, default = Graphics::defaultSamplerState
+				//SamplerStateã‚’å¤‰æ›´ã™ã‚‹, nullãƒã‚¤ãƒ³ã‚¿ã®å ´åˆå¤‰æ›´ã‚’è¡Œã‚ãªã„
+				//Graphics::defaultSamplerStateä»¥å¤–ã¯è‡ªå‹•é–‹æ”¾ã‚’è¡Œã‚ãªã„ã®ã§æ³¨æ„
+				//å¼•æ•°1: samplerState, default = Graphics::defaultSamplerState
 				void ChangeSamplerState(ID3D11SamplerState* samplerState
 					= Administrator::GraphicsX11::m_defaultSamplerState);
 
@@ -78,7 +78,7 @@ namespace SGFramework
 				//argument 1 : slot, defualt = 0
 				SGF_FUNCTION_PROPERTY void setTexture(uint slot = 0)
 				{
-					//ƒVƒF[ƒ_[ƒŠƒ\[ƒXƒrƒ…[null‚Å‚È‚¯‚ê‚ÎƒeƒNƒXƒ`ƒƒƒZƒbƒg
+					//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒªã‚½ãƒ¼ã‚¹ãƒ“ãƒ¥ãƒ¼nullã§ãªã‘ã‚Œã°ãƒ†ã‚¯ã‚¹ãƒãƒ£ã‚»ãƒƒãƒˆ
 					if (m_shaderResourceView != nullptr && Administrator::GraphicsX11::m_nowTextureInstanceID != instanceID())
 					{
 						Administrator::GraphicsX11::m_deviceContext->PSSetShaderResources(slot, 1, &m_shaderResourceView);
@@ -114,10 +114,10 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Open]
-			//ƒVƒF[ƒ_[‚ğƒ[ƒh‚·‚é
-			//throw: ƒ[ƒh‚É¸”s‚µ‚½ê‡
-			//ˆø”1: ƒeƒNƒXƒ`ƒƒ‚Ìƒtƒ@ƒCƒ‹ƒpƒX
-			//ˆø”2: samplerState, default = Graphics::defaultSamplerState
+			//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’ãƒ­ãƒ¼ãƒ‰ã™ã‚‹
+			//throw: ãƒ­ãƒ¼ãƒ‰ã«å¤±æ•—ã—ãŸå ´åˆ
+			//å¼•æ•°1: ãƒ†ã‚¯ã‚¹ãƒãƒ£ã®ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹
+			//å¼•æ•°2: samplerState, default = Graphics::defaultSamplerState
 			inline void TextureAssetX11::Open(ID3D11SamplerState * samplerState)
 			{
 				if (IS_TRUE(getIsFileOpened())) return;
@@ -127,7 +127,7 @@ namespace SGFramework
 				ID3D11Resource* textureResource = nullptr;
 				HRESULT result = S_OK;
 
-				//Šg’£qæ“¾
+				//æ‹¡å¼µå­å–å¾—
 				sgstring extension = name().my_functions.FindExtension();
 				if (extension == L"")
 				{
@@ -143,7 +143,7 @@ namespace SGFramework
 						SGFramework::Administrator::GraphicsX11::m_device,
 						name().c_str(), &textureResource, &m_shaderResourceView);
 
-					//¸”s‚È‚çthrow
+					//å¤±æ•—ãªã‚‰throw
 					if (FAILED(result))
 					{
 						setIsOpenFailed(true);
@@ -161,7 +161,7 @@ namespace SGFramework
 					DirectX::GetMetadataFromTGAFile(name().c_str(), metaData);
 					result = DirectX::LoadFromTGAFile(name().c_str(), &metaData, *image);
 
-					//¸”s‚È‚çthrow
+					//å¤±æ•—ãªã‚‰throw
 					if (FAILED(result))
 					{
 						setIsOpenFailed(true);
@@ -172,7 +172,7 @@ namespace SGFramework
 					result = DirectX::CreateShaderResourceView(SGFramework::Administrator::GraphicsX11::m_device,
 						image->GetImages(), image->GetImageCount(), metaData, &m_shaderResourceView);
 
-					//¸”s‚È‚çthrow
+					//å¤±æ•—ãªã‚‰throw
 					if (FAILED(result))
 					{
 						setIsOpenFailed(true);
@@ -186,7 +186,7 @@ namespace SGFramework
 					result = DirectX::CreateWICTextureFromFile(SGFramework::Administrator::GraphicsX11::m_device,
 						name().c_str(), &textureResource, &m_shaderResourceView);
 
-					//¸”s‚È‚çthrow
+					//å¤±æ•—ãªã‚‰throw
 					if (FAILED(result))
 					{
 						setIsOpenFailed(true);
@@ -195,7 +195,7 @@ namespace SGFramework
 					}
 				}
 
-				//İ’è
+				//è¨­å®š
 				m_samplerState = samplerState;
 
 				//BaseAsset
@@ -204,12 +204,12 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Close]
-			//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 			inline void TextureAssetX11::Close()
 			{
 				if (IS_FALSE(getIsFileOpened())) return;
 				
-				//ƒŠƒ\[ƒXŠJ•ú
+				//ãƒªã‚½ãƒ¼ã‚¹é–‹æ”¾
 				COM_RELEASE(m_shaderResourceView);
 
 				//BaseAsset
@@ -217,13 +217,13 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[Reload]
-			//throw: ƒ[ƒh‚É¸”s‚µ‚½ê‡
-			//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤
+			//throw: ãƒ­ãƒ¼ãƒ‰ã«å¤±æ•—ã—ãŸå ´åˆ
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
 			inline void TextureAssetX11::Reload()
 			{
 				if (IS_FALSE(getIsFileOpened())) return;
 				
-				//ŠJ•ú
+				//é–‹æ”¾
 				Close();
 
 				//Open
@@ -231,7 +231,7 @@ namespace SGFramework
 				{
 					Open(m_samplerState);
 				}
-				//¸”s‚È‚çthrow
+				//å¤±æ•—ãªã‚‰throw
 				catch (...)
 				{
 					throw;
@@ -239,11 +239,11 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ChangeSamplerState]
-			//SamplerState‚ğ•ÏX‚·‚é, Graphics::defaultSamplerStateˆÈŠO‚Í©“®ŠJ•ú‚ğs‚í‚È‚¢
-			//ˆø”1: samplerState, default = Graphics::defaultSamplerState
+			//SamplerStateã‚’å¤‰æ›´ã™ã‚‹, Graphics::defaultSamplerStateä»¥å¤–ã¯è‡ªå‹•é–‹æ”¾ã‚’è¡Œã‚ãªã„
+			//å¼•æ•°1: samplerState, default = Graphics::defaultSamplerState
 			inline void TextureAssetX11::ChangeSamplerState(ID3D11SamplerState * samplerState)
 			{
-				//null‚Å‚È‚¯‚ê‚Î‘ã“ü
+				//nullã§ãªã‘ã‚Œã°ä»£å…¥
 				m_samplerState = (samplerState != nullptr) ? samplerState : m_samplerState;
 			}
 		}

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ŠÔ‚ğˆ—‚·‚éTime Class
+æ™‚é–“ã‚’å‡¦ç†ã™ã‚‹Time Class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_TIME_HPP_
 #define SGFRAMEWORK_HEADER_TIME_HPP_
@@ -20,11 +20,11 @@
 //Framework namespace
 namespace SGFramework
 {
-	//ŠÔ‚ğˆ—‚·‚éTime Class
+	//æ™‚é–“ã‚’å‡¦ç†ã™ã‚‹Time Class
 	class Time final
 	{
 	public:
-		//TimeScale‚ÌLayer class
+		//TimeScaleã®Layer class
 		class TimeLayer;
 		//friend
 		friend TimeLayer;
@@ -36,51 +36,51 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Start]
-		//ƒ^ƒCƒ€ˆ—‚Ì‰Šú‰»‚ğs‚¤
+		//ã‚¿ã‚¤ãƒ å‡¦ç†ã®åˆæœŸåŒ–ã‚’è¡Œã†
 		inline static void StartTimeProcessing(const ReadElement::Pack& isNoRestrictionsFPS,
 			const ReadElement::Pack& fixedInterval, const ReadElement::Groop& layers, bool isRemote);
 		//----------------------------------------------------------------------------------
 		//[FixedUpdate]
-		//Fixedƒ^ƒCƒ€ˆ—‚ÌXV‚ğs‚¤
-		//return: FixedXVƒtƒŒ[ƒ€‚©”Û‚©, n‰ñtrue‚ğŒJ‚è•Ô‚·
+		//Fixedã‚¿ã‚¤ãƒ å‡¦ç†ã®æ›´æ–°ã‚’è¡Œã†
+		//return: Fixedæ›´æ–°ãƒ•ãƒ¬ãƒ¼ãƒ ã‹å¦ã‹, nå›trueã‚’ç¹°ã‚Šè¿”ã™
 		inline static bool FixedUpdate();
 		//----------------------------------------------------------------------------------
 		//[FixedLastUpdate]
-		//Fixedƒ^ƒCƒ€ˆ—‚ÌÅIXV‚ğs‚¤
-		//•â³ƒ‚[ƒh‚ÌŠm”F‚ğs‚¤‚½‚ßƒtƒŒ[ƒ€Àsˆ—‚Ì’†‚É“ü‚ê‚é‚±‚Æ
+		//Fixedã‚¿ã‚¤ãƒ å‡¦ç†ã®æœ€çµ‚æ›´æ–°ã‚’è¡Œã†
+		//è£œæ­£ãƒ¢ãƒ¼ãƒ‰ã®ç¢ºèªã‚’è¡Œã†ãŸã‚ãƒ•ãƒ¬ãƒ¼ãƒ å®Ÿè¡Œå‡¦ç†ã®ä¸­ã«å…¥ã‚Œã‚‹ã“ã¨
 		inline static void FixedLastUpdate();
 		//----------------------------------------------------------------------------------
 		//[Update]
-		//ƒ^ƒCƒ€ˆ—‚ÌXV‚ğs‚¤
-		//return: XVƒtƒŒ[ƒ€‚©”Û‚©
+		//ã‚¿ã‚¤ãƒ å‡¦ç†ã®æ›´æ–°ã‚’è¡Œã†
+		//return: æ›´æ–°ãƒ•ãƒ¬ãƒ¼ãƒ ã‹å¦ã‹
 		inline static bool Update();
 
 	public:
 
 		//----------------------------------------------------------------------------------
 		//[FindTimeLayer]
-		//TimeLayer‚ğæ“¾‚·‚é
-		//return: layerName‚ÉŠY“–‚·‚éƒŒƒCƒ„[, Œ©‚Â‚©‚ç‚È‚¢ê‡‚Í‹óƒ|ƒCƒ“ƒ^
-		//ˆø”1: ƒŒƒCƒ„[–¼(getTimeLayer‚æ‚èd‚¢)
+		//TimeLayerã‚’å–å¾—ã™ã‚‹
+		//return: layerNameã«è©²å½“ã™ã‚‹ãƒ¬ã‚¤ãƒ¤ãƒ¼, è¦‹ã¤ã‹ã‚‰ãªã„å ´åˆã¯ç©ºãƒã‚¤ãƒ³ã‚¿
+		//å¼•æ•°1: ãƒ¬ã‚¤ãƒ¤ãƒ¼å(getTimeLayerã‚ˆã‚Šé‡ã„)
 		inline static SharedPointer<TimeLayer> FindTimeLayer(const sgstring& layerName);
 
 		//----------------------------------------------------------------------------------
 		//[ResetWorldTimeScale]
-		//RootLayer‚Ìƒ^ƒCƒ€ƒXƒP[ƒ‹‚ğİ’è‚·‚é
-		//0‚É‚·‚é‚Æƒ^ƒCƒ€Œn•Ï”‚ªŠ®‘S‚ÉƒXƒgƒbƒv‚·‚é
-		//ˆø”1: İ’è‚·‚é’l(0~)
+		//RootLayerã®ã‚¿ã‚¤ãƒ ã‚¹ã‚±ãƒ¼ãƒ«ã‚’è¨­å®šã™ã‚‹
+		//0ã«ã™ã‚‹ã¨ã‚¿ã‚¤ãƒ ç³»å¤‰æ•°ãŒå®Œå…¨ã«ã‚¹ãƒˆãƒƒãƒ—ã™ã‚‹
+		//å¼•æ•°1: è¨­å®šã™ã‚‹å€¤(0~)
 		inline static void ResetWorldTimeScale(float value);
 		//----------------------------------------------------------------------------------
 		//[CurrentTimeToString]
-		//return: "[:•ª:•b]"
+		//return: "[æ™‚:åˆ†:ç§’]"
 		inline static sgstring CurrentTimeToString();
 		//----------------------------------------------------------------------------------
 		//[CurrentTimeToStdString]
-		//return: "[:•ª:•b]"
+		//return: "[æ™‚:åˆ†:ç§’]"
 		inline static std::string CurrentTimeToStdString();
 		//----------------------------------------------------------------------------------
 		//[CurrentTime]
-		//sec, min, hourŠeˆø”‚ªNULL‚Å‚È‚¯‚ê‚ÎŒ»İ‚ğ‘ã“ü‚·‚é
+		//sec, min, hourå„å¼•æ•°ãŒNULLã§ãªã‘ã‚Œã°ç¾åœ¨æ™‚åˆ»ã‚’ä»£å…¥ã™ã‚‹
 		inline static void CurrentTime(int* sec, int* min, int* hour);
 
 		//time layer[id], <static>(get function property)
@@ -101,29 +101,29 @@ namespace SGFramework
 			return TimeLayer::cInvaridID;
 		}
 
-		//ƒQƒbƒ^[
+		//ã‚²ãƒƒã‚¿ãƒ¼
 		//double
-		static GetOnlyProperty<double> timeWithClock;					//Clockƒx[ƒX‚ÌŠÔ
-		static GetOnlyProperty<double> fixedInterval;						//İ’èÏ‚İ‚ÌFixedXVŠÔŠu(‰Šú’lƒvƒŠƒZƒbƒg)
+		static GetOnlyProperty<double> timeWithClock;					//Clockãƒ™ãƒ¼ã‚¹ã®æ™‚é–“
+		static GetOnlyProperty<double> fixedInterval;						//è¨­å®šæ¸ˆã¿ã®Fixedæ›´æ–°é–“éš”(åˆæœŸå€¤ãƒ—ãƒªã‚»ãƒƒãƒˆ)
 		//float
 		static GetOnlyProperty<float> fps;										//fps
-		static GetOnlyProperty<float> targetFrameRate;					//ƒ^[ƒQƒbƒgƒtƒŒ[ƒ€ƒŒ[ƒg
-		static GetOnlyProperty<float> worldTimeScale;					//ŠedeltaTime‚É‚©‚¯‚é”{—¦
+		static GetOnlyProperty<float> targetFrameRate;					//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¬ãƒ¼ãƒˆ
+		static GetOnlyProperty<float> worldTimeScale;					//å„deltaTimeã«ã‹ã‘ã‚‹å€ç‡
 		//float NotFixed
-		static GetOnlyProperty<float> time;									//StartÀs‚©‚ç‚ÌŒo‰ß•b”
-		static GetOnlyProperty<float> worldDeltaTime;					//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ
-		static GetOnlyProperty<float> unScaledWorldDeltaTime;		//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ(Scale‚ğ‚©‚¯‚È‚¢)
+		static GetOnlyProperty<float> time;									//Startå®Ÿè¡Œæ™‚ã‹ã‚‰ã®çµŒéç§’æ•°
+		static GetOnlyProperty<float> worldDeltaTime;					//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“
+		static GetOnlyProperty<float> unScaledWorldDeltaTime;		//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“(Scaleã‚’ã‹ã‘ãªã„)
 		//float Fixed		
-		static GetOnlyProperty<float> fixedTime;								//StartÀs‚©‚ç‚ÌŒo‰ß•b”(fixedFreame‚ÉXV)
-		static GetOnlyProperty<float> fixedDeltaTime;						//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ(fixed)
-		static GetOnlyProperty<float> unScaledFixedDeltaTime;		//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ(Scale‚ğ‚©‚¯‚È‚¢, fixed)		
+		static GetOnlyProperty<float> fixedTime;								//Startå®Ÿè¡Œæ™‚ã‹ã‚‰ã®çµŒéç§’æ•°(fixedFreameã«æ›´æ–°)
+		static GetOnlyProperty<float> fixedDeltaTime;						//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“(fixed)
+		static GetOnlyProperty<float> unScaledFixedDeltaTime;		//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“(Scaleã‚’ã‹ã‘ãªã„, fixed)		
 		//TimeLayer[0]
 		static GetOnlyProperty<SharedPointer<TimeLayer>> rootTimeLayer;
 		//bool
-		static GetOnlyProperty<bool> isUpdateFreame;					//UpdateÀsƒtƒŒ[ƒ€‚©
-		static GetOnlyProperty<bool> isFixedUpdateFreame;			//FixedXVƒtƒŒ[ƒ€‚©
+		static GetOnlyProperty<bool> isUpdateFreame;					//Updateå®Ÿè¡Œãƒ•ãƒ¬ãƒ¼ãƒ ã‹
+		static GetOnlyProperty<bool> isFixedUpdateFreame;			//Fixedæ›´æ–°ãƒ•ãƒ¬ãƒ¼ãƒ ã‹
 
-		//TimeScale‚ÌLayer class
+		//TimeScaleã®Layer class
 		class TimeLayer final
 		{
 		public:
@@ -138,61 +138,61 @@ namespace SGFramework
 			//get num childrens property(read only)
 			SGF_FUNCTION_PROPERTY uint getNumChildrens() const { return static_cast<uint>(m_childrens.size()); }
 			//set this time scale property(set only)
-			//argument 1: İ’èƒXƒP[ƒ‹ (0~)
+			//argument 1: è¨­å®šã‚¹ã‚±ãƒ¼ãƒ« (0~)
 			SGF_FUNCTION_PROPERTY void setScale(float timeScale) { m_timeScale = timeScale; if (m_timeScale < 0.0f) m_timeScale = 0.0f; }
 			//set childrens time scale property(set only)
-			//argument 1: İ’èƒXƒP[ƒ‹ (0~)
+			//argument 1: è¨­å®šã‚¹ã‚±ãƒ¼ãƒ« (0~)
 			SGF_FUNCTION_PROPERTY void setScaleToChildrens(float timeScale) { for (auto& it : m_childrens) it->setScale(timeScale); }
 
 			static constexpr wchar cRootName[] = L"root";
 			static constexpr uint cInvaridID = VariableLimit::cUintMax;
 
-			GetOnlyProperty<float> timeScale;						//Œ»İ‚Ìƒ^ƒCƒ€ƒXƒP[ƒ‹, Root‚©‚ç©g‚Ü‚Å‚Ì‚·‚×‚Ä‚ÌsettingScale‚ğ‚©‚¯‚½’l‚É‚È‚é
-			GetOnlyProperty<float> settingScale;					//ƒ^ƒCƒ€ƒXƒP[ƒ‹İ’è’l
-			GetOnlyProperty<float> deltaTime;						//‚±‚ÌƒŒƒCƒ„[‚ÌdeltaTime
-			GetOnlyProperty<float> fixedDeltaTime;				//‚±‚ÌƒŒƒCƒ„[‚ÌfixedDeltaTime
+			GetOnlyProperty<float> timeScale;						//ç¾åœ¨ã®ã‚¿ã‚¤ãƒ ã‚¹ã‚±ãƒ¼ãƒ«, Rootã‹ã‚‰è‡ªèº«ã¾ã§ã®ã™ã¹ã¦ã®settingScaleã‚’ã‹ã‘ãŸå€¤ã«ãªã‚‹
+			GetOnlyProperty<float> settingScale;					//ã‚¿ã‚¤ãƒ ã‚¹ã‚±ãƒ¼ãƒ«è¨­å®šå€¤
+			GetOnlyProperty<float> deltaTime;						//ã“ã®ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®deltaTime
+			GetOnlyProperty<float> fixedDeltaTime;				//ã“ã®ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®fixedDeltaTime
 			GetOnlyProperty<float> unscaledDeltaTime;		//unscaledDeltaTime * this time scale
 			GetOnlyProperty<float> unscaledFixedDeltaTime;	//unscaledDeltaTime * this time scale
-			GetOnlyProperty<sgstring> layerName;				//ƒŒƒCƒ„[–¼
-			GetOnlyProperty<uint> layerID;							//ƒŒƒCƒ„[ID
+			GetOnlyProperty<sgstring> layerName;				//ãƒ¬ã‚¤ãƒ¤ãƒ¼å
+			GetOnlyProperty<uint> layerID;							//ãƒ¬ã‚¤ãƒ¤ãƒ¼ID
 
 		private:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 			inline TimeLayer();
 
 			//----------------------------------------------------------------------------------
 			//[InitRoot]
-			//RootƒŒƒCƒ„[—p, ‰Šúİ’è‚ğs‚¤
+			//Rootãƒ¬ã‚¤ãƒ¤ãƒ¼ç”¨, åˆæœŸè¨­å®šã‚’è¡Œã†
 			inline void InitRoot();
 			//----------------------------------------------------------------------------------
 			//[Init]
-			//RootˆÈŠO‚ÌƒŒƒCƒ„[—p, ‰Šúİ’è‚ğs‚¤
-			//ˆø”1: this Pointer
-			//ˆø”2: eƒŒƒCƒ„[
-			//ˆø”3: ƒŒƒCƒ„[–¼
-			//ˆø”4: İ’èƒXƒP[ƒ‹
-			//ˆø”5: ƒŒƒCƒ„[ID
+			//Rootä»¥å¤–ã®ãƒ¬ã‚¤ãƒ¤ãƒ¼ç”¨, åˆæœŸè¨­å®šã‚’è¡Œã†
+			//å¼•æ•°1: this Pointer
+			//å¼•æ•°2: è¦ªãƒ¬ã‚¤ãƒ¤ãƒ¼
+			//å¼•æ•°3: ãƒ¬ã‚¤ãƒ¤ãƒ¼å
+			//å¼•æ•°4: è¨­å®šã‚¹ã‚±ãƒ¼ãƒ«
+			//å¼•æ•°5: ãƒ¬ã‚¤ãƒ¤ãƒ¼ID
 			inline void Init(SharedPointer<TimeLayer>& thisPointer,
 				SharedPointer<TimeLayer>& parent, const sgstring& myLayerName, float settingScale, uint layerID);
 
 
 			//----------------------------------------------------------------------------------
 			//[Update]
-			//deltaTime‚ÌXV‚ğs‚¤
+			//deltaTimeã®æ›´æ–°ã‚’è¡Œã†
 			inline void Update();
 
-			//qƒŒƒCƒ„[
+			//å­ãƒ¬ã‚¤ãƒ¤ãƒ¼
 			std::vector<WeakPointer<TimeLayer>> m_childrens;
-			sgstring m_layerName;							//ƒŒƒCƒ„[–¼
-			WeakPointer<TimeLayer> m_parent;		//eƒŒƒCƒ„[
-			float m_timeScale;									//Œ»İƒXƒP[ƒ‹
-			float m_settingScale;								//İ’èƒXƒP[ƒ‹
+			sgstring m_layerName;							//ãƒ¬ã‚¤ãƒ¤ãƒ¼å
+			WeakPointer<TimeLayer> m_parent;		//è¦ªãƒ¬ã‚¤ãƒ¤ãƒ¼
+			float m_timeScale;									//ç¾åœ¨ã‚¹ã‚±ãƒ¼ãƒ«
+			float m_settingScale;								//è¨­å®šã‚¹ã‚±ãƒ¼ãƒ«
 			float m_deltaTime;									//deltaTime
 			float m_fixedDeltaTime;							//fixedDeltaTime
 			float m_unscaledDeltaTime;					//unscaledDeltaTime * this time scale
 			float m_unscaledFixedDeltaTime;				//unscaledDeltaTime * this time scale
-			uint m_layerID;										//ƒŒƒCƒ„[ID
+			uint m_layerID;										//ãƒ¬ã‚¤ãƒ¤ãƒ¼ID
 		};
 
 	private:
@@ -202,9 +202,9 @@ namespace SGFramework
 
 		//TimeGetter
 		static TimeProcessing::TimeGetterDouble m_timeGetter;
-		//FPS§ŒÀ
+		//FPSåˆ¶é™
 		static TimeProcessing::FPSLimiter m_fpsLimiter;
-		//FPSŒv‘ªŠÔ§ŒÀ
+		//FPSè¨ˆæ¸¬æ™‚é–“åˆ¶é™
 		static TimeProcessing::TimeLimiter m_fpsInstrumentationLimiter;
 		//rootLayer
 		static SharedPointer<TimeLayer> m_rootLayer;
@@ -213,41 +213,41 @@ namespace SGFramework
 
 
 		//double
-		static double m_frequencyTime;						//Œ»İŠÔ
-		static double m_startUpTime;							//StartÀs
-		static double m_updateStartTime;					//delta—p‘O‰ñƒtƒŒ[ƒ€‚©‚ç‚Ìƒ^ƒCƒ€
-		static double m_fixedInterval;							//FixedXVŠÔŠu(‰Šú’lƒvƒŠƒZƒbƒg)
-		static double m_fixedStartTime;						//FixedŠÄ‹ŠJn
+		static double m_frequencyTime;						//ç¾åœ¨æ™‚é–“
+		static double m_startUpTime;							//Startå®Ÿè¡Œæ™‚åˆ»
+		static double m_updateStartTime;					//deltaç”¨å‰å›ãƒ•ãƒ¬ãƒ¼ãƒ ã‹ã‚‰ã®ã‚¿ã‚¤ãƒ 
+		static double m_fixedInterval;							//Fixedæ›´æ–°é–“éš”(åˆæœŸå€¤ãƒ—ãƒªã‚»ãƒƒãƒˆ)
+		static double m_fixedStartTime;						//Fixedç›£è¦–é–‹å§‹æ™‚åˆ»
 
 		//float
-		static float m_fps;											//Œ»İFPS
-		static float m_worldTimeScale;						//ŠedeltaTime‚É‚©‚¯‚é”{—¦
-		static float m_refreshRate;								//‰æ–ÊXVŠÔŠu, ‰Šú‰»—p‚ÉŠ
+		static float m_fps;											//ç¾åœ¨FPS
+		static float m_worldTimeScale;						//å„deltaTimeã«ã‹ã‘ã‚‹å€ç‡
+		static float m_refreshRate;								//ç”»é¢æ›´æ–°é–“éš”, åˆæœŸåŒ–ç”¨ã«æ‰€æŒ
 		//float NotFixed
-		static float m_time;										//StartÀs‚©‚ç‚ÌŒo‰ß•b”
-		static float m_worldDeltaTime;						//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ
-		static float m_worldUnScaledDeltaTime;			//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ(Scale‚ğ‚©‚¯‚È‚¢)
+		static float m_time;										//Startå®Ÿè¡Œæ™‚ã‹ã‚‰ã®çµŒéç§’æ•°
+		static float m_worldDeltaTime;						//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“
+		static float m_worldUnScaledDeltaTime;			//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“(Scaleã‚’ã‹ã‘ãªã„)
 		//float Fixed
-		static float m_fixedTime;									//StartÀs‚©‚ç‚ÌŒo‰ß•b”(fixedFreame‚ÉXV)
-		static float m_fixedDeltaTime;							//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ(fixed)
-		static float m_unScaledFixedDeltaTime;			//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ(Scale‚ğ‚©‚¯‚È‚¢, fixed)
+		static float m_fixedTime;									//Startå®Ÿè¡Œæ™‚ã‹ã‚‰ã®çµŒéç§’æ•°(fixedFreameã«æ›´æ–°)
+		static float m_fixedDeltaTime;							//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“(fixed)
+		static float m_unScaledFixedDeltaTime;			//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“(Scaleã‚’ã‹ã‘ãªã„, fixed)
 		//uint
-		static uint m_frameCount;								//ƒtƒŒ[ƒ€”ƒJƒEƒ“ƒg
-		static uint m_fixedCount;								//FixedXV‰ñ”
-		static uint m_layerCount;								//ƒŒƒCƒ„[ƒJƒEƒ“ƒg
+		static uint m_frameCount;								//ãƒ•ãƒ¬ãƒ¼ãƒ æ•°ã‚«ã‚¦ãƒ³ãƒˆ
+		static uint m_fixedCount;								//Fixedæ›´æ–°å›æ•°
+		static uint m_layerCount;								//ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚«ã‚¦ãƒ³ãƒˆ
 		//bool
-		static bool m_isUpdateFreame;						//UpdateƒtƒŒ[ƒ€‚©
-		static bool m_isFixedUpdateFreame;				//FixedUpdateƒtƒŒ[ƒ€‚©
-		static bool m_isAllowUpdate;							//Update‚ğ‹–‰Â‚·‚é‚©
+		static bool m_isUpdateFreame;						//Updateãƒ•ãƒ¬ãƒ¼ãƒ ã‹
+		static bool m_isFixedUpdateFreame;				//FixedUpdateãƒ•ãƒ¬ãƒ¼ãƒ ã‹
+		static bool m_isAllowUpdate;							//Updateã‚’è¨±å¯ã™ã‚‹ã‹
 	};
 
 	//----------------------------------------------------------------------------------
 	//[Start]
-	//ƒ^ƒCƒ€ˆ—‚Ì‰Šú‰»‚ğs‚¤
+	//ã‚¿ã‚¤ãƒ å‡¦ç†ã®åˆæœŸåŒ–ã‚’è¡Œã†
 	inline void Time::StartTimeProcessing(const ReadElement::Pack& isNoRestrictionsFPS,
 		const ReadElement::Pack& fixedInterval, const ReadElement::Groop& layers, bool isRemote)
 	{
-		//ƒŠƒtƒŒƒbƒVƒ…ƒŒ[ƒgæ“¾
+		//ãƒªãƒ•ãƒ¬ãƒƒã‚·ãƒ¥ãƒ¬ãƒ¼ãƒˆå–å¾—
 		if (IS_FALSE(isRemote))
 		{
 			m_refreshRate = Administrator::GetRefreshRate(Window::HwndHolder::main);
@@ -259,10 +259,10 @@ namespace SGFramework
 
 		if (isNoRestrictionsFPS[0].valueInt)
 			m_refreshRate = VariableLimit::cFloatMax;
-		//Interval‘ã“ü
+		//Intervalä»£å…¥
 		m_fixedInterval = fixedInterval[0].valueFloat;
 
-		//RootLayerİ’è
+		//RootLayerè¨­å®š
 		m_rootLayer = SharedPointer<TimeLayer>(new TimeLayer());
 		m_rootLayer->InitRoot();
 		m_layerMap.try_emplace(0, m_rootLayer);
@@ -278,11 +278,11 @@ namespace SGFramework
 			m_layerMap.try_emplace(m_layerCount++, pointer);
 		}
 
-		m_fpsLimiter.Start(m_refreshRate);		//FPS§ŒÀŠJn
-		m_fpsInstrumentationLimiter.Start(1.0f);	//FPSŒv‘ª§ŒÀŠJn
+		m_fpsLimiter.Start(m_refreshRate);		//FPSåˆ¶é™é–‹å§‹
+		m_fpsInstrumentationLimiter.Start(1.0f);	//FPSè¨ˆæ¸¬åˆ¶é™é–‹å§‹
 
-		m_startUpTime = m_timeGetter();			//StartÀs
-		//‘ã“ü
+		m_startUpTime = m_timeGetter();			//Startå®Ÿè¡Œæ™‚åˆ»
+		//ä»£å…¥
 		m_frequencyTime = m_startUpTime;
 		m_updateStartTime = m_startUpTime;
 		m_fixedStartTime = m_startUpTime;
@@ -297,11 +297,11 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[FixedUpdate]
-	//Fixedƒ^ƒCƒ€ˆ—‚ÌXV‚ğs‚¤
-	//return: FixedXVƒtƒŒ[ƒ€‚©”Û‚©, n‰ñtrue‚ğŒJ‚è•Ô‚·
+	//Fixedã‚¿ã‚¤ãƒ å‡¦ç†ã®æ›´æ–°ã‚’è¡Œã†
+	//return: Fixedæ›´æ–°ãƒ•ãƒ¬ãƒ¼ãƒ ã‹å¦ã‹, nå›trueã‚’ç¹°ã‚Šè¿”ã™
 	inline bool Time::FixedUpdate()
 	{
-		static double delta = 0;	//IntervlŠm”Fƒ‹[ƒv—p
+		static double delta = 0;	//Intervlç¢ºèªãƒ«ãƒ¼ãƒ—ç”¨
 
 		//Get Time
 		m_frequencyTime = m_timeGetter();
@@ -321,59 +321,59 @@ namespace SGFramework
 
 		if (m_frequencyTime - m_fixedStartTime > m_fixedInterval * 3)
 		{
-			m_fpsLimiter.Start(m_refreshRate);		//FPS§ŒÀŠJn
-			m_fpsInstrumentationLimiter.Start(1.0f);	//FPSŒv‘ª§ŒÀŠJn
-			//fixedXV‹­§
+			m_fpsLimiter.Start(m_refreshRate);		//FPSåˆ¶é™é–‹å§‹
+			m_fpsInstrumentationLimiter.Start(1.0f);	//FPSè¨ˆæ¸¬åˆ¶é™é–‹å§‹
+			//fixedæ›´æ–°å¼·åˆ¶
 			m_fixedStartTime = m_frequencyTime - m_fixedInterval;
 			m_fixedCount = 0;
 		}
 
-		//FixedCount‚ª‚Ü‚¾c‚Á‚Ä‚¢‚é
+		//FixedCountãŒã¾ã æ®‹ã£ã¦ã„ã‚‹
 		if (m_fixedCount > 1)
 		{
-			--m_fixedCount;		//ƒJƒEƒ“ƒ^[Œ¸Z
-			//FixedXV‰ñ”‚ª‚Ü‚¾‚ ‚è—İŒvXVŠÔ‚ªFixedInterval‚ğ’´‰ß‚µ‚½ê‡XV‚ğ’ú‚ß‚é
+			--m_fixedCount;		//ã‚«ã‚¦ãƒ³ã‚¿ãƒ¼æ¸›ç®—
+			//Fixedæ›´æ–°å›æ•°ãŒã¾ã ã‚ã‚Šç´¯è¨ˆæ›´æ–°æ™‚é–“ãŒFixedIntervalã‚’è¶…éã—ãŸå ´åˆæ›´æ–°ã‚’è«¦ã‚ã‚‹
 			if (m_fixedCount > 1 && m_timeGetter() - m_fixedStartTime > m_fixedInterval)
 				m_fixedCount = 0;
-			//true•Ô‹p
+			//trueè¿”å´
 			return m_isFixedUpdateFreame = true;
 		}
 
-		//Œ»İ‚ÌFixed·•ªŠÔæ“¾
+		//ç¾åœ¨ã®Fixedå·®åˆ†æ™‚é–“å–å¾—
 		delta = m_frequencyTime - m_fixedStartTime;
-		//ƒJƒEƒ“ƒ^[‰Šú‰»
+		//ã‚«ã‚¦ãƒ³ã‚¿ãƒ¼åˆæœŸåŒ–
 		m_fixedCount = 0;
 
-		//IntervalŠm”Fƒ‹[ƒv
+		//Intervalç¢ºèªãƒ«ãƒ¼ãƒ—
 		while (delta > m_fixedInterval)
 		{
-			++m_fixedCount;				//ƒJƒEƒ“ƒ^[‰ÁZ
-			delta -= m_fixedInterval;	//deltaŒ¸Z
+			++m_fixedCount;				//ã‚«ã‚¦ãƒ³ã‚¿ãƒ¼åŠ ç®—
+			delta -= m_fixedInterval;	//deltaæ¸›ç®—
 		}
-		//ƒJƒEƒ“ƒ^[0’´‰ß -> Fixed Update Frame
+		//ã‚«ã‚¦ãƒ³ã‚¿ãƒ¼0è¶…é -> Fixed Update Frame
 		if (m_fixedCount > 0)
 		{
 			//Get FixedApplicationElapasedTime
 			m_fixedTime = static_cast<float>(m_frequencyTime - m_startUpTime);
 			//Get FixedDeltaTime
 			m_unScaledFixedDeltaTime = static_cast<float>(m_frequencyTime - m_fixedStartTime);
-			//deltaİ’è
+			//deltaè¨­å®š
 			m_fixedDeltaTime = m_unScaledFixedDeltaTime * m_worldTimeScale;
 
-			m_time = m_fixedTime;							//Time‘ã“ü
-			m_fixedStartTime += m_fixedInterval;	//StartTimeXV
-			return m_isFixedUpdateFreame = true;	//true•Ô‹p
+			m_time = m_fixedTime;							//Timeä»£å…¥
+			m_fixedStartTime += m_fixedInterval;	//StartTimeæ›´æ–°
+			return m_isFixedUpdateFreame = true;	//trueè¿”å´
 		}
 
-		//Update‚Í‹–‚·
+		//Updateã¯è¨±ã™
 		m_isAllowUpdate = true;
-		//false•Ô‹p
+		//falseè¿”å´
 		return m_isFixedUpdateFreame = false;
 	}
 	//----------------------------------------------------------------------------------
 	//[FixedLastUpdate]
-	//Fixedƒ^ƒCƒ€ˆ—‚ÌÅIXV‚ğs‚¤
-	//•â³ƒ‚[ƒh‚ÌŠm”F‚ğs‚¤‚½‚ßƒtƒŒ[ƒ€Àsˆ—‚Ì’†‚É“ü‚ê‚é‚±‚Æ
+	//Fixedã‚¿ã‚¤ãƒ å‡¦ç†ã®æœ€çµ‚æ›´æ–°ã‚’è¡Œã†
+	//è£œæ­£ãƒ¢ãƒ¼ãƒ‰ã®ç¢ºèªã‚’è¡Œã†ãŸã‚ãƒ•ãƒ¬ãƒ¼ãƒ å®Ÿè¡Œå‡¦ç†ã®ä¸­ã«å…¥ã‚Œã‚‹ã“ã¨
 	inline void Time::FixedLastUpdate()
 	{
 		//FPS Update
@@ -389,8 +389,8 @@ namespace SGFramework
 				m_fpsLimiter.ChangeFPS(m_refreshRate* 0.99f);
 		}
 
-		//FixedUpdateÀs•b”‚ªInterval’´‰ß->UpdateXV‚ğ‹–‰Â‚µ‚È‚¢
-		//’´‰ß‚µ‚Ä‚¢‚È‚¯‚ê‚ÎUpdateXV‚ğ‹–‰Â‚·‚é
+		//FixedUpdateå®Ÿè¡Œç§’æ•°ãŒIntervalè¶…é->Updateæ›´æ–°ã‚’è¨±å¯ã—ãªã„
+		//è¶…éã—ã¦ã„ãªã‘ã‚Œã°Updateæ›´æ–°ã‚’è¨±å¯ã™ã‚‹
 		if (m_timeGetter() - m_fixedStartTime < m_fixedInterval)
 			m_isAllowUpdate = true;
 		else
@@ -399,11 +399,11 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Update]
-	//ƒ^ƒCƒ€ˆ—‚ÌXV‚ğs‚¤
-	//return: XVƒtƒŒ[ƒ€‚©”Û‚©
+	//ã‚¿ã‚¤ãƒ å‡¦ç†ã®æ›´æ–°ã‚’è¡Œã†
+	//return: æ›´æ–°ãƒ•ãƒ¬ãƒ¼ãƒ ã‹å¦ã‹
 	inline bool Time::Update()
 	{
-		//UpdateXV‚ª‹–‰Â‚³‚ê‚Ä‚¢‚È‚¢ê‡‚Ífalse•Ô‹p
+		//Updateæ›´æ–°ãŒè¨±å¯ã•ã‚Œã¦ã„ãªã„å ´åˆã¯falseè¿”å´
 		if (m_isAllowUpdate ^ true) return m_isUpdateFreame = false;
 
 		//Get ApplicationElapasedTime
@@ -439,9 +439,9 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[FindTimeLayer]
-	//TimeLayer‚ğæ“¾‚·‚é
-	//return: layerName‚ÉŠY“–‚·‚éƒŒƒCƒ„[, Œ©‚Â‚©‚ç‚È‚¢ê‡‚Í‹óƒ|ƒCƒ“ƒ^
-	//ˆø”1: ƒŒƒCƒ„[–¼(getTimeLayer‚æ‚èd‚¢)
+	//TimeLayerã‚’å–å¾—ã™ã‚‹
+	//return: layerNameã«è©²å½“ã™ã‚‹ãƒ¬ã‚¤ãƒ¤ãƒ¼, è¦‹ã¤ã‹ã‚‰ãªã„å ´åˆã¯ç©ºãƒã‚¤ãƒ³ã‚¿
+	//å¼•æ•°1: ãƒ¬ã‚¤ãƒ¤ãƒ¼å(getTimeLayerã‚ˆã‚Šé‡ã„)
 	inline SharedPointer<Time::TimeLayer> Time::FindTimeLayer(const sgstring& layerName)
 	{
 		for (auto& it : m_layerMap)
@@ -451,28 +451,28 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[ResetWorldTimeScale]
-	//RootLayer‚Ìƒ^ƒCƒ€ƒXƒP[ƒ‹‚ğİ’è‚·‚é
-	//0‚É‚·‚é‚Æƒ^ƒCƒ€Œn•Ï”‚ªŠ®‘S‚ÉƒXƒgƒbƒv‚·‚é
-	//ˆø”1: İ’è‚·‚é’l(0~)
+	//RootLayerã®ã‚¿ã‚¤ãƒ ã‚¹ã‚±ãƒ¼ãƒ«ã‚’è¨­å®šã™ã‚‹
+	//0ã«ã™ã‚‹ã¨ã‚¿ã‚¤ãƒ ç³»å¤‰æ•°ãŒå®Œå…¨ã«ã‚¹ãƒˆãƒƒãƒ—ã™ã‚‹
+	//å¼•æ•°1: è¨­å®šã™ã‚‹å€¤(0~)
 	inline void Time::ResetWorldTimeScale(float value)
 	{
-		m_worldTimeScale = value;		//İ’è
+		m_worldTimeScale = value;		//è¨­å®š
 		if (m_worldTimeScale < 0.0f)	m_worldTimeScale = 0.0f;
 
 		//Delta Update
 		m_worldDeltaTime = m_worldUnScaledDeltaTime * m_worldTimeScale;
-		//Rootİ’è
+		//Rootè¨­å®š
 		m_rootLayer->Update();
 		//Update
 		for (auto& it : m_layerMap)
 			it.second->Update();
 
-		//Fixedİ’è
+		//Fixedè¨­å®š
 		m_fixedDeltaTime = static_cast<float>(m_fixedInterval) * m_worldTimeScale;
 	}
 	//----------------------------------------------------------------------------------
 	//[CurrentTimeToString]
-	//return: "[:•ª:•b]"
+	//return: "[æ™‚:åˆ†:ç§’]"
 	inline sgstring Time::CurrentTimeToString()
 	{
 		tm tm;
@@ -486,7 +486,7 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[CurrentTimeToStdString]
-	//return: "[:•ª:•b]"
+	//return: "[æ™‚:åˆ†:ç§’]"
 	inline std::string Time::CurrentTimeToStdString()
 	{
 		tm tm;
@@ -500,7 +500,7 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[CurrentTime]
-	//sec, min, hourŠeˆø”‚ªNULL‚Å‚È‚¯‚ê‚ÎŒ»İ‚ğ‘ã“ü‚·‚é
+	//sec, min, hourå„å¼•æ•°ãŒNULLã§ãªã‘ã‚Œã°ç¾åœ¨æ™‚åˆ»ã‚’ä»£å…¥ã™ã‚‹
 	inline void Time::CurrentTime(int * sec, int * min, int * hour)
 	{
 		tm t;
@@ -512,14 +512,14 @@ namespace SGFramework
 
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 	inline Time::TimeLayer::TimeLayer()
 		: timeScale(m_timeScale), settingScale(m_settingScale), deltaTime(m_deltaTime),
 		fixedDeltaTime(m_fixedDeltaTime), unscaledDeltaTime(m_unscaledDeltaTime),
 		unscaledFixedDeltaTime(m_unscaledFixedDeltaTime), layerName(m_layerName), layerID(m_layerID) {}
 	//----------------------------------------------------------------------------------
 	//[InitRoot]
-	//RootƒŒƒCƒ„[—p, ‰Šúİ’è‚ğs‚¤
+	//Rootãƒ¬ã‚¤ãƒ¤ãƒ¼ç”¨, åˆæœŸè¨­å®šã‚’è¡Œã†
 	inline void Time::TimeLayer::InitRoot()
 	{
 		m_layerName = cRootName;
@@ -535,12 +535,12 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[Init]
-	//RootˆÈŠO‚ÌƒŒƒCƒ„[—p, ‰Šúİ’è‚ğs‚¤
-	//ˆø”1: this Pointer
-	//ˆø”2: eƒŒƒCƒ„[
-	//ˆø”3: ƒŒƒCƒ„[–¼
-	//ˆø”4: İ’èƒXƒP[ƒ‹
-	//ˆø”5: ƒŒƒCƒ„[ID
+	//Rootä»¥å¤–ã®ãƒ¬ã‚¤ãƒ¤ãƒ¼ç”¨, åˆæœŸè¨­å®šã‚’è¡Œã†
+	//å¼•æ•°1: this Pointer
+	//å¼•æ•°2: è¦ªãƒ¬ã‚¤ãƒ¤ãƒ¼
+	//å¼•æ•°3: ãƒ¬ã‚¤ãƒ¤ãƒ¼å
+	//å¼•æ•°4: è¨­å®šã‚¹ã‚±ãƒ¼ãƒ«
+	//å¼•æ•°5: ãƒ¬ã‚¤ãƒ¤ãƒ¼ID
 	inline void Time::TimeLayer::Init(SharedPointer<TimeLayer>& thisPointer,
 		SharedPointer<TimeLayer>& parent, const sgstring & myLayerName, float settingScale, uint layerID)
 	{
@@ -566,32 +566,32 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Update]
-	//deltaTime‚ÌXV‚ğs‚¤
+	//deltaTimeã®æ›´æ–°ã‚’è¡Œã†
 	inline void Time::TimeLayer::Update()
 	{
-		//RootƒŒƒCƒ„[
+		//Rootãƒ¬ã‚¤ãƒ¤ãƒ¼
 		if (m_layerID == 0)
 		{
-			//world’l‚ğ‚»‚Ì‚Ü‚Üİ’è
+			//worldå€¤ã‚’ãã®ã¾ã¾è¨­å®š
 			m_deltaTime = Time::worldDeltaTime * m_timeScale;
 			m_fixedDeltaTime = Time::fixedDeltaTime * m_timeScale;
 			m_unscaledDeltaTime = Time::m_worldUnScaledDeltaTime * m_timeScale;
 			m_unscaledFixedDeltaTime = Time::m_unScaledFixedDeltaTime* m_timeScale;
 		}
-		//‚»‚êˆÈŠO
+		//ãã‚Œä»¥å¤–
 		else
 		{
-			//©g‚Ì‚à‚Ì‚ğ‚Ğ‚Æ‚Ü‚¸İ’è
+			//è‡ªèº«ã®ã‚‚ã®ã‚’ã²ã¨ã¾ãšè¨­å®š
 			m_timeScale = m_settingScale;
-			//e‚ğæ“¾(Root‚ª‚ ‚é‚Ì‚ÅƒGƒ‰[‚Í‹N‚«‚È‚¢)
+			//è¦ªã‚’å–å¾—(RootãŒã‚ã‚‹ã®ã§ã‚¨ãƒ©ãƒ¼ã¯èµ·ããªã„)
 			auto layer = m_parent.TryGetInstance();
-			//Š|‚¯Zƒ‹[ƒv, Root‚É‚½‚Ç‚è’…‚­‚Ü‚ÅI‚í‚ç‚È‚¢
+			//æ›ã‘ç®—ãƒ«ãƒ¼ãƒ—, Rootã«ãŸã©ã‚Šç€ãã¾ã§çµ‚ã‚ã‚‰ãªã„
 			do {
 				m_timeScale = m_timeScale * layer->settingScale;
 				layer = layer->m_parent.TryGetInstance();
 			} while (layer != nullptr);
 
-			//deltaTimeİ’è
+			//deltaTimeè¨­å®š
 			m_deltaTime = Time::worldDeltaTime * m_timeScale;
 			m_fixedDeltaTime = Time::fixedDeltaTime * m_timeScale;
 			m_unscaledDeltaTime = Time::m_worldUnScaledDeltaTime * m_timeScale;

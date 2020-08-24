@@ -8,8 +8,8 @@ Scene::SceneManager manager(std::move(Scene::SceneManager::InstantiateFirstScene
 
 //----------------------------------------------------------------------------------
 //[StartScene]
-//ƒV[ƒ“ì¬ŽžŽ©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-//ˆø”1: ‘OƒV[ƒ“‚©‚ç‚Ìˆø‚«Œp‚¬î•ñ
+//ã‚·ãƒ¼ãƒ³ä½œæˆæ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+//å¼•æ•°1: å‰ã‚·ãƒ¼ãƒ³ã‹ã‚‰ã®å¼•ãç¶™ãŽæƒ…å ±
 void DemoScene::StartScene(Scene::SceneBaton& nextBaton)
 {
 	Light::Directional::setParameter(0, Light::Directional::Element(Vector3(0.0f, -0.5f, 0.5f), Const::Color::white, 9.5f, true));
@@ -63,8 +63,8 @@ void DemoScene::StartScene(Scene::SceneBaton& nextBaton)
 
 //----------------------------------------------------------------------------------
 //[Update]
-//•À—ñXVŽžŽ©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-//‘¼‚ÌƒR[ƒ‹ƒoƒbƒN‚Æ“¯Žž‚É•À—ñŒÄ‚Ño‚µ‚³‚êAƒIƒuƒWƒFƒNƒg‚ÌXV“™‚ðs‚¤
+//ä¸¦åˆ—æ›´æ–°æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+//ä»–ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã¨åŒæ™‚ã«ä¸¦åˆ—å‘¼ã³å‡ºã—ã•ã‚Œã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ›´æ–°ç­‰ã‚’è¡Œã†
 void DemoScene::Update()
 {
 	if (Input::Keybord::GetKey(KeyCode::C) && Input::Keybord::GetKeyDown(KeyCode::Num1))
@@ -104,8 +104,8 @@ void DemoScene::Update()
 }
 //----------------------------------------------------------------------------------
 //[MakeDrawCommand]
-//•`‰æXVŽžŽ©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-//•`‰æ“o˜^“™‚ðs‚¤
+//æç”»æ›´æ–°æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+//æç”»ç™»éŒ²ç­‰ã‚’è¡Œã†
 void DemoScene::MakeDrawCommand()
 {
 	Graphics::SendDrawFunction(MAKE_COMMAND(m_pixelShaderPolygon->setShader()), 2);

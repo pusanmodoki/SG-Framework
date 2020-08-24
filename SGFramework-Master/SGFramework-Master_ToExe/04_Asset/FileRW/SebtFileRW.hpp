@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-“Æ©‚ÌSgframework  Encrypted Binary Text Locked file ‚ğˆµ‚¤SebtFileRW namespace
+ç‹¬è‡ªã®Sgframework  Encrypted Binary Text Locked file ã‚’æ‰±ã†SebtFileRW namespace
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_SEBT_FILE_RW_HPP_
 #define SGFRAMEWORK_HEADER_SEBT_FILE_RW_HPP_
@@ -23,169 +23,169 @@ namespace SGFramework
 		//Sgframework  Encrypted Binary Text Locked file
 		namespace SebtFileRW
 		{
-			//seclŠg’£q
+			//seclæ‹¡å¼µå­
 			constexpr wchar cSebtLockedExtension[] = L".sebtl";
-			//secŠg’£q
+			//secæ‹¡å¼µå­
 			constexpr wchar cSebtNotLockedExtension[] = L".sebt";
 
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//sec or seclƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//return: “Ç‚İ‚ñ‚¾“à—e
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
+			//sec or seclãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//return: èª­ã¿è¾¼ã‚“ã å†…å®¹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
 			inline sgstring Read(const sgstring& path);
 			//----------------------------------------------------------------------------------
 			//[ReadLocked]
-			//sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//return: “Ç‚İ‚ñ‚¾“à—e
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//return: èª­ã¿è¾¼ã‚“ã å†…å®¹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline sgstring ReadLocked(const sgstring& path, bool isCheckExtension = true);
 			//----------------------------------------------------------------------------------
 			//[ReadNotLocked]
-			//sebtƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//return: “Ç‚İ‚ñ‚¾“à—e
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//return: èª­ã¿è¾¼ã‚“ã å†…å®¹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline sgstring ReadNotLocked(const sgstring& path, bool isCheckExtension = true);
 
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//sebt or sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: “Ç‚İ‚ñ‚¾“à—e‚Ì‘ã“üæ
+			//sebt or sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: èª­ã¿è¾¼ã‚“ã å†…å®¹ã®ä»£å…¥å…ˆ
 			inline void Read(const sgstring& path, sgstring& write);
 			//----------------------------------------------------------------------------------
 			//[ReadLocked]
-			//sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: “Ç‚İ‚ñ‚¾“à—e‚Ì‘ã“üæ
-			//ˆø”3: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: èª­ã¿è¾¼ã‚“ã å†…å®¹ã®ä»£å…¥å…ˆ
+			//å¼•æ•°3: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline void ReadLocked(const sgstring& path, sgstring& write, bool isCheckExtension = true);
 			//----------------------------------------------------------------------------------
 			//[ReadNotLocked]
-			//sebtƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: “Ç‚İ‚ñ‚¾“à—e‚Ì‘ã“üæ
-			//ˆø”3: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: èª­ã¿è¾¼ã‚“ã å†…å®¹ã®ä»£å…¥å…ˆ
+			//å¼•æ•°3: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline void ReadNotLocked(const sgstring& path, sgstring& write, bool isCheckExtension = true);
 
 
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//sebt or sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//return: “Ç‚İ‚ñ‚¾“à—e
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
+			//sebt or sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//return: èª­ã¿è¾¼ã‚“ã å†…å®¹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
 			inline std::vector<byte> ReadBinary(const sgstring& path);
 			//----------------------------------------------------------------------------------
 			//[ReadLocked]
-			//sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//return: “Ç‚İ‚ñ‚¾“à—e
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//return: èª­ã¿è¾¼ã‚“ã å†…å®¹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline std::vector<byte> ReadBinaryLocked(const sgstring& path, bool isCheckExtension = true);
 			//----------------------------------------------------------------------------------
 			//[ReadNotLocked]
-			//sebtƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//return: “Ç‚İ‚ñ‚¾“à—e
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//return: èª­ã¿è¾¼ã‚“ã å†…å®¹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline std::vector<byte> ReadBinaryNotLocked(const sgstring& path, bool isCheckExtension = true);
 
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//sebt or sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: “Ç‚İ‚ñ‚¾“à—e‚Ì‘ã“üæ
+			//sebt or sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: èª­ã¿è¾¼ã‚“ã å†…å®¹ã®ä»£å…¥å…ˆ
 			inline void ReadBinary(const sgstring& path, std::vector<byte>& write);
 			//----------------------------------------------------------------------------------
 			//[ReadLocked]
-			//sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: “Ç‚İ‚ñ‚¾“à—e‚Ì‘ã“üæ
-			//ˆø”3: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: èª­ã¿è¾¼ã‚“ã å†…å®¹ã®ä»£å…¥å…ˆ
+			//å¼•æ•°3: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline void ReadBinaryLocked(const sgstring& path, std::vector<byte>& write, bool isCheckExtension = true);
 			//----------------------------------------------------------------------------------
 			//[ReadNotLocked]
-			//sebtƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: “Ç‚İ‚ñ‚¾“à—e‚Ì‘ã“üæ
-			//ˆø”3: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: èª­ã¿è¾¼ã‚“ã å†…å®¹ã®ä»£å…¥å…ˆ
+			//å¼•æ•°3: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline void ReadBinaryNotLocked(const sgstring& path, std::vector<byte>& write, bool isCheckExtension = true);
 
 			//----------------------------------------------------------------------------------
 			//[Write]
-			//sebt or sebtlƒtƒ@ƒCƒ‹‚ğ‘‚«‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ‘‚«‚Ş“à—e
-			//ˆø”3: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚È‚çtrue, default = false
+			//sebt or sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ãªã‚‰true, default = false
 			inline void Write(const sgstring& path, const sgstring& write, bool isAdd = false);
 			//----------------------------------------------------------------------------------
 			//[WriteLocked]
-			//sebtlƒtƒ@ƒCƒ‹‚ğ‘‚«‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ‘‚«‚Ş“à—e
-			//ˆø”3: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚È‚çtrue, default = false
-			//ˆø”4: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ãªã‚‰true, default = false
+			//å¼•æ•°4: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline void WriteLocked(const sgstring& path, const sgstring& write, bool isAdd = false, bool isCheckExtension = true);
 			//----------------------------------------------------------------------------------
 			//[WriteNotLocked]
-			//sebtƒtƒ@ƒCƒ‹‚ğ‘‚«‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ‘‚«‚Ş“à—e
-			//ˆø”3: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚È‚çtrue, default = false
-			//ˆø”4: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ãªã‚‰true, default = false
+			//å¼•æ•°4: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline void WriteNotLocked(const sgstring& path, const sgstring& write, bool isAdd = false, bool isCheckExtension = true);
 
 			//----------------------------------------------------------------------------------
 			//[WriteBinary]
-			//sebt or sebtlƒtƒ@ƒCƒ‹‚ğ‘‚«‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ‘‚«‚Ş“à—e
-			//ˆø”3: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚È‚çtrue, default = false
+			//sebt or sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ãªã‚‰true, default = false
 			inline void WriteBinary(const sgstring& path, const std::vector<byte>& write, bool isAdd = false);
 			//----------------------------------------------------------------------------------
 			//[WriteBinaryLocked]
-			//sebtlƒtƒ@ƒCƒ‹‚ğ‘‚«‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ‘‚«‚Ş“à—e
-			//ˆø”3: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚È‚çtrue, default = false
-			//ˆø”4: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ãªã‚‰true, default = false
+			//å¼•æ•°4: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline void WriteBinaryLocked(const sgstring& path, const std::vector<byte>& write, bool isAdd = false, bool isCheckExtension = true);
 			//----------------------------------------------------------------------------------
 			//[WriteBinaryNotLocked]
-			//sebtƒtƒ@ƒCƒ‹‚ğ‘‚«‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ‘‚«‚Ş“à—e
-			//ˆø”3: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚È‚çtrue, default = false
-			//ˆø”4: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ãªã‚‰true, default = false
+			//å¼•æ•°4: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline void WriteBinaryNotLocked(const sgstring& path, const std::vector<byte>& write, bool isAdd = false, bool isCheckExtension = true);
 		
 
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//sebt or sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//return: “Ç‚İ‚ñ‚¾“à—e
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
+			//sebt or sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//return: èª­ã¿è¾¼ã‚“ã å†…å®¹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
 			inline sgstring Read(const sgstring& path)
 			{
 				if (sgstring::functions::IsEndWith(path, cSebtLockedExtension))
@@ -197,47 +197,47 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ReadLocked]
-			//sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//return: “Ç‚İ‚ñ‚¾“à—e
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//return: èª­ã¿è¾¼ã‚“ã å†…å®¹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline sgstring ReadLocked(const sgstring& path, bool isCheckExtension)
 			{
-				FileReadStream frs;//ƒtƒ@ƒCƒ‹ƒXƒgƒŠ[ƒ€
+				FileReadStream frs;//ãƒ•ã‚¡ã‚¤ãƒ«ã‚¹ãƒˆãƒªãƒ¼ãƒ 
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cSebtLockedExtension))
 					throw InvalidArgument(L"Error!! SebtFileRW->ReadLocked",
 						L"Extension NotFound: " + path + L" Read extension sebtl");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { frs.Open(path, true); }
 				catch (...) { throw; }
 
-				//ˆÃ†‰»‰ğœŒã•¶š—ñ
+				//æš—å·åŒ–è§£é™¤å¾Œæ–‡å­—åˆ—
 				sgstring readUnlcok = frs.ReadUnite();
-				frs.Close();		//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
-				//‰ğœ
+				frs.Close();		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
+				//è§£é™¤
 				return EncryptionKey::Unlock(readUnlcok, EncryptionKey::DefaultKey());
 			}
 			//----------------------------------------------------------------------------------
 			//[ReadNotLocked]
-			//sebtƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//return: “Ç‚İ‚ñ‚¾“à—e
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//return: èª­ã¿è¾¼ã‚“ã å†…å®¹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline sgstring ReadNotLocked(const sgstring& path, bool isCheckExtension)
 			{
-				WFileReadStream frs;//ƒtƒ@ƒCƒ‹ƒXƒgƒŠ[ƒ€
+				WFileReadStream frs;//ãƒ•ã‚¡ã‚¤ãƒ«ã‚¹ãƒˆãƒªãƒ¼ãƒ 
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cSebtNotLockedExtension))
 					throw InvalidArgument(L"Error!! SebtFileRW->ReadNotLocked",
 						L"Extension NotFound: " + path + L" Read extension sebt");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { frs.Open(path); }
 				catch (...) { throw; }
 
@@ -246,10 +246,10 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//sec or seclƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: “Ç‚İ‚ñ‚¾“à—e‚Ì‘ã“üæ
+			//sec or seclãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: èª­ã¿è¾¼ã‚“ã å†…å®¹ã®ä»£å…¥å…ˆ
 			inline void Read(const sgstring& path, sgstring& write)
 			{
 				if (sgstring::functions::IsEndWith(path, cSebtLockedExtension))
@@ -261,48 +261,48 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ReadLocked]
-			//sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: “Ç‚İ‚ñ‚¾“à—e‚Ì‘ã“üæ
-			//ˆø”3: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: èª­ã¿è¾¼ã‚“ã å†…å®¹ã®ä»£å…¥å…ˆ
+			//å¼•æ•°3: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline void ReadLocked(const sgstring& path, sgstring& write, bool isCheckExtension)
 			{
-				FileReadStream frs;//ƒtƒ@ƒCƒ‹ƒXƒgƒŠ[ƒ€
+				FileReadStream frs;//ãƒ•ã‚¡ã‚¤ãƒ«ã‚¹ãƒˆãƒªãƒ¼ãƒ 
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cSebtLockedExtension))
 					throw InvalidArgument(L"Error!! SebtFileRW->ReadLocked",
 						L"Extension NotFound: " + path + L" Read extension sebtl");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { frs.Open(path, true); }
 				catch (...) { throw; }
 
-				//ˆÃ†‰»‰ğœŒã•¶š—ñ
+				//æš—å·åŒ–è§£é™¤å¾Œæ–‡å­—åˆ—
 				sgstring readUnlcok;
 				frs.ReadUnite(readUnlcok);
-				frs.Close();		//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
-				//‰ğœ
+				frs.Close();		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
+				//è§£é™¤
 				EncryptionKey::Unlock(write, readUnlcok, EncryptionKey::DefaultKey());
 			}
 			//----------------------------------------------------------------------------------
 			//[ReadNotLocked]
-			//sebtƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: “Ç‚İ‚ñ‚¾“à—e‚Ì‘ã“üæ
-			//ˆø”3: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: èª­ã¿è¾¼ã‚“ã å†…å®¹ã®ä»£å…¥å…ˆ
+			//å¼•æ•°3: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline void ReadNotLocked(const sgstring& path, sgstring& write, bool isCheckExtension)
 			{
-				WFileReadStream frs;//ƒtƒ@ƒCƒ‹ƒXƒgƒŠ[ƒ€
+				WFileReadStream frs;//ãƒ•ã‚¡ã‚¤ãƒ«ã‚¹ãƒˆãƒªãƒ¼ãƒ 
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cSebtNotLockedExtension))
 					throw InvalidArgument(L"Error!! SebtFileRW->ReadNotLocked",
 						L"Extension NotFound: " + path + L" Read extension sebt");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { frs.Open(path); }
 				catch (...) { throw; }
 
@@ -311,10 +311,10 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//sebt or sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//return: “Ç‚İ‚ñ‚¾“à—e
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
+			//sebt or sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//return: èª­ã¿è¾¼ã‚“ã å†…å®¹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
 			std::vector<byte> ReadBinary(const sgstring & path)
 			{				
 				if (sgstring::functions::IsEndWith(path, cSebtLockedExtension))
@@ -326,47 +326,47 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ReadLocked]
-			//sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//return: “Ç‚İ‚ñ‚¾“à—e
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//return: èª­ã¿è¾¼ã‚“ã å†…å®¹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			std::vector<byte> ReadBinaryLocked(const sgstring & path, bool isCheckExtension)
 			{
-				FileReadStream frs;//ƒtƒ@ƒCƒ‹ƒXƒgƒŠ[ƒ€
+				FileReadStream frs;//ãƒ•ã‚¡ã‚¤ãƒ«ã‚¹ãƒˆãƒªãƒ¼ãƒ 
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cSebtLockedExtension))
 					throw InvalidArgument(L"Error!! SebtFileRW->ReadBinaryLocked",
 						L"Extension NotFound: " + path + L" Read extension sebtl");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { frs.Open(path, true); }
 				catch (...) { throw; }
 
-				//ˆÃ†‰»‰ğœŒã•¶š—ñ
+				//æš—å·åŒ–è§£é™¤å¾Œæ–‡å­—åˆ—
 				std::vector<byte> readUnlcok = frs.ReadVector();
-				frs.Close();		//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
-				//‰ğœ
+				frs.Close();		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
+				//è§£é™¤
 				return EncryptionKey::UnlockBinary(readUnlcok, EncryptionKey::DefaultKey());
 			}
 			//----------------------------------------------------------------------------------
 			//[ReadNotLocked]
-			//sebtƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//return: “Ç‚İ‚ñ‚¾“à—e
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//return: èª­ã¿è¾¼ã‚“ã å†…å®¹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			std::vector<byte> ReadBinaryNotLocked(const sgstring & path, bool isCheckExtension)
 			{
-				FileReadStream frs;//ƒtƒ@ƒCƒ‹ƒXƒgƒŠ[ƒ€
+				FileReadStream frs;//ãƒ•ã‚¡ã‚¤ãƒ«ã‚¹ãƒˆãƒªãƒ¼ãƒ 
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cSebtNotLockedExtension))
 					throw InvalidArgument(L"Error!! SebtFileRW->ReadBinaryNotLocked",
 						L"Extension NotFound: " + path + L" Read extension sebt");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { frs.Open(path, true); }
 				catch (...) { throw; }
 
@@ -375,10 +375,10 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//sebt or sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: “Ç‚İ‚ñ‚¾“à—e‚Ì‘ã“üæ
+			//sebt or sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: èª­ã¿è¾¼ã‚“ã å†…å®¹ã®ä»£å…¥å…ˆ
 			void ReadBinary(const sgstring & path, std::vector<byte> & write)
 			{
 				if (sgstring::functions::IsEndWith(path, cSebtLockedExtension))
@@ -390,47 +390,47 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ReadLocked]
-			//sebtlƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: “Ç‚İ‚ñ‚¾“à—e‚Ì‘ã“üæ
-			//ˆø”3: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: èª­ã¿è¾¼ã‚“ã å†…å®¹ã®ä»£å…¥å…ˆ
+			//å¼•æ•°3: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			void ReadBinaryLocked(const sgstring & path, std::vector<byte> & write, bool isCheckExtension)
 			{
-				FileReadStream frs;//ƒtƒ@ƒCƒ‹ƒXƒgƒŠ[ƒ€
+				FileReadStream frs;//ãƒ•ã‚¡ã‚¤ãƒ«ã‚¹ãƒˆãƒªãƒ¼ãƒ 
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cSebtLockedExtension))
 					throw InvalidArgument(L"Error!! SebtFileRW->ReadBinaryLocked",
 						L"Extension NotFound: " + path + L" Read extension sebtl");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { frs.Open(path, true); }
 				catch (...) { throw; }
 
-				//ˆÃ†‰»‰ğœŒã•¶š—ñ
+				//æš—å·åŒ–è§£é™¤å¾Œæ–‡å­—åˆ—
 				std::vector<byte> readUnlcok = frs.ReadVector();
-				frs.Close();		//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
-				//‰ğœ
+				frs.Close();		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
+				//è§£é™¤
 				EncryptionKey::UnlockBinary(write, readUnlcok, EncryptionKey::DefaultKey());
 			}
 			//----------------------------------------------------------------------------------
 			//[ReadNotLocked]
-			//sebtƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: “Ç‚İ‚ñ‚¾“à—e‚Ì‘ã“üæ
-			//ˆø”3: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: èª­ã¿è¾¼ã‚“ã å†…å®¹ã®ä»£å…¥å…ˆ
+			//å¼•æ•°3: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			void ReadBinaryNotLocked(const sgstring & path, std::vector<byte> & write, bool isCheckExtension)
 			{
-				FileReadStream frs;//ƒtƒ@ƒCƒ‹ƒXƒgƒŠ[ƒ€
+				FileReadStream frs;//ãƒ•ã‚¡ã‚¤ãƒ«ã‚¹ãƒˆãƒªãƒ¼ãƒ 
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cSebtNotLockedExtension))
 					throw InvalidArgument(L"Error!! SebtFileRW->ReadNotLocked",
 						L"Extension NotFound: " + path + L" Read extension sebt");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { frs.Open(path, true); }
 				catch (...) { throw; }
 
@@ -439,11 +439,11 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Write]
-			//sebt or sebtlƒtƒ@ƒCƒ‹‚ğ‘‚«‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ‘‚«‚Ş“à—e
-			//ˆø”3: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚È‚çtrue, default = false
+			//sebt or sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ãªã‚‰true, default = false
 			inline void Write(const sgstring& path, const sgstring& write, bool isAdd)
 			{
 				if (sgstring::functions::IsEndWith(path, cSebtLockedExtension))
@@ -455,22 +455,22 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[WriteLocked]
-			//sebtlƒtƒ@ƒCƒ‹‚ğ‘‚«‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ‘‚«‚Ş“à—e
-			//ˆø”3: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚È‚çtrue, default = false
-			//ˆø”4: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ãªã‚‰true, default = false
+			//å¼•æ•°4: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline void WriteLocked(const sgstring& path, const sgstring& write, bool isAdd, bool isCheckExtension)
 			{
 				FileWriteStream fws;
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cSebtLockedExtension))
 					throw InvalidArgument(L"Error!! SecFileRW->WriteLocked",
 						L"Extension NotFound: " + path + L" Read extension secl");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { fws.Open(path, true, isAdd); }
 				catch (...) { throw; }
 				
@@ -479,36 +479,36 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[WriteNotLocked]
-			//sebtƒtƒ@ƒCƒ‹‚ğ‘‚«‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ‘‚«‚Ş“à—e
-			//ˆø”3: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚È‚çtrue, default = false
-			//ˆø”4: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ãªã‚‰true, default = false
+			//å¼•æ•°4: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			inline void WriteNotLocked(const sgstring& path, const sgstring& write, bool isAdd, bool isCheckExtension)
 			{
 				WFileWriteStream fws;
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cSebtNotLockedExtension))
 					throw InvalidArgument(L"Error!! SecFileRW->WriteNotLocked",
 						L"Extension NotFound: " + path + L" Read extension sec");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { fws.Open(path, false, isAdd); }
 				catch (...) { throw; }
 
 				fws.Write(write);
-				fws.Close();			//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+				fws.Close();			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 			}
 
 			//----------------------------------------------------------------------------------
 			//[WriteBinary]
-			//sebt or sebtlƒtƒ@ƒCƒ‹‚ğ‘‚«‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ‘‚«‚Ş“à—e
-			//ˆø”3: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚È‚çtrue, default = false
+			//sebt or sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ãªã‚‰true, default = false
 			void WriteBinary(const sgstring & path, const std::vector<byte> & write, bool isAdd)
 			{
 				if (sgstring::functions::IsEndWith(path, cSebtLockedExtension))
@@ -520,22 +520,22 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[WriteBinaryLocked]
-			//sebtlƒtƒ@ƒCƒ‹‚ğ‘‚«‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ‘‚«‚Ş“à—e
-			//ˆø”3: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚È‚çtrue, default = false
-			//ˆø”4: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtlãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ãªã‚‰true, default = false
+			//å¼•æ•°4: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			void WriteBinaryLocked(const sgstring & path, const std::vector<byte> & write, bool isAdd, bool isCheckExtension)
 			{
 				FileWriteStream fws;
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cSebtLockedExtension))
 					throw InvalidArgument(L"Error!! SecFileRW->WriteBinaryLocked",
 						L"Extension NotFound: " + path + L" Read extension secl");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { fws.Open(path, true, isAdd); }
 				catch (...) { throw; }
 
@@ -544,22 +544,22 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[WriteBinaryNotLocked]
-			//sebtƒtƒ@ƒCƒ‹‚ğ‘‚«‚Ş
-			//throw: Šg’£q‚ªˆÙ‚È‚éê‡ 
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ‘‚«‚Ş“à—e
-			//ˆø”3: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚È‚çtrue, default = false
-			//ˆø”4: Šg’£qƒ`ƒFƒbƒN‚ğs‚¤‚©”Û‚©, default = true
+			//sebtãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚€
+			//throw: æ‹¡å¼µå­ãŒç•°ãªã‚‹å ´åˆ 
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°3: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ãªã‚‰true, default = false
+			//å¼•æ•°4: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‹å¦ã‹, default = true
 			void WriteBinaryNotLocked(const sgstring & path, const std::vector<byte> & write, bool isAdd, bool isCheckExtension)
 			{
 				FileWriteStream fws;
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cSebtLockedExtension))
 					throw InvalidArgument(L"Error!! SecFileRW->WriteBinaryLocked",
 						L"Extension NotFound: " + path + L" Read extension secl");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { fws.Open(path, true, isAdd); }
 				catch (...) { throw; }
 

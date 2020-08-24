@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-¯•Êq‚Æ‚È‚éTag class
+è­˜åˆ¥å­ã¨ãªã‚‹Tag class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_TAG_HPP_
 #define SGFRAMEWORK_HEADER_TAG_HPP_
@@ -13,7 +13,7 @@ namespace SGFramework
 	//friend
 	class Application;
 	
-	//¯•Êq‚Æ‚È‚éTag class
+	//è­˜åˆ¥å­ã¨ãªã‚‹Tag class
 	class Tag
 	{
 	public:
@@ -21,14 +21,14 @@ namespace SGFramework
 		friend class Application;
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒ^ƒO‚ğ‰Šú‰»‚·‚é, ID = cMissingTag
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ã‚¿ã‚°ã‚’åˆæœŸåŒ–ã™ã‚‹, ID = cMissingTag
 		inline Tag() : m_id(cMissingTag) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒ^ƒO‚ğ‰Šú‰»‚·‚é
-		//throw: Name‚ª–³Œø‚Ìê‡
-		//ˆø”1: ƒ^ƒO–¼
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ã‚¿ã‚°ã‚’åˆæœŸåŒ–ã™ã‚‹
+		//throw: NameãŒç„¡åŠ¹ã®å ´åˆ
+		//å¼•æ•°1: ã‚¿ã‚°å
 		inline Tag(const sgstring& tagName) : m_tagName(L""), m_id(cMissingTag)
 		{
 			auto find = m_tags.find(tagName);
@@ -42,10 +42,10 @@ namespace SGFramework
 				throw InvalidArgument(L"Error! Tag->TagManagement", L"Missing Tag Name : " + tagName);
 		}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒ^ƒO‚ğ‰Šú‰»‚·‚é
-		//throw: ID‚ª–³Œø‚Ìê‡
-		//ˆø”1: ƒ^ƒOID
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ã‚¿ã‚°ã‚’åˆæœŸåŒ–ã™ã‚‹
+		//throw: IDãŒç„¡åŠ¹ã®å ´åˆ
+		//å¼•æ•°1: ã‚¿ã‚°ID
 		inline Tag(uint tagID) : m_tagName(L""), m_id(cMissingTag)
 		{
 			if (tagID < static_cast<uint>(m_tags.size()))
@@ -79,7 +79,7 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[SearchName]
-		//return: tagID‚Ìtag‚ª‚ ‚Á‚½ê‡: tag->getName(), tag‚ª‚È‚©‚Á‚½ê‡: L""
+		//return: tagIDã®tagãŒã‚ã£ãŸå ´åˆ: tag->getName(), tagãŒãªã‹ã£ãŸå ´åˆ: L""
 		inline static sgstring SearchName(uint tagID)
 		{
 			if (tagID < static_cast<uint>(m_tags.size()))
@@ -93,7 +93,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[SearchID]
-		//return: tagName‚Ìtag‚ª‚ ‚Á‚½ê‡: tag->getID(), tag‚ª‚È‚©‚Á‚½ê‡: cMissingTag
+		//return: tagNameã®tagãŒã‚ã£ãŸå ´åˆ: tag->getID(), tagãŒãªã‹ã£ãŸå ´åˆ: cMissingTag
 		inline static uint SearchID(const sgstring& tagName) 
 		{ 
 			auto find = m_tags.find(tagName);
@@ -120,41 +120,41 @@ namespace SGFramework
 		static constexpr wchar cDefaultTagName[] = L"Default";
 		//Default Tag ID
 		static constexpr uint cDefaultTagID = 0;
-		//SearchIDÀsƒ^ƒO‚ª‚È‚©‚Á‚½ê‡‚É•Ô‹p‚³‚ê‚é
+		//SearchIDå®Ÿè¡Œæ™‚ã‚¿ã‚°ãŒãªã‹ã£ãŸå ´åˆã«è¿”å´ã•ã‚Œã‚‹
 		static constexpr uint cMissingTag = VariableLimit::cUintMax;
 	
 	private:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒ^ƒO‚ğ‰Šú‰»‚·‚é
-		//ˆø”1: ƒ^ƒO–¼
-		//ˆø”2: ƒ^ƒOID
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ã‚¿ã‚°ã‚’åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: ã‚¿ã‚°å
+		//å¼•æ•°2: ã‚¿ã‚°ID
 		inline Tag(const sgstring& tagName, uint tagID) : m_tagName(tagName), m_id(tagID) {}
 
 		//----------------------------------------------------------------------------------
 		//[ReadTags]
-		//SettingFile‚©‚çTag‚ğ“Ç‚İ‚Ş
-		//ˆø”1: TagGroop
+		//SettingFileã‹ã‚‰Tagã‚’èª­ã¿è¾¼ã‚€
+		//å¼•æ•°1: TagGroop
 		inline static void ReadTags(const ReadElement::Groop& tags);
 
-		//ƒ^ƒO–¼ƒ}ƒbƒv
+		//ã‚¿ã‚°åãƒãƒƒãƒ—
 		static std::unordered_map<std::wstring, uint> m_tags;
-		sgstring m_tagName;	//ƒ^ƒO–¼
-		uint m_id;					//ƒ^ƒOID
+		sgstring m_tagName;	//ã‚¿ã‚°å
+		uint m_id;					//ã‚¿ã‚°ID
 	};
 	//----------------------------------------------------------------------------------
 	//[ReadTags]
-	//SettingFile‚©‚çTag‚ğ“Ç‚İ‚Ş
-	//ˆø”1: TagGroop
+	//SettingFileã‹ã‚‰Tagã‚’èª­ã¿è¾¼ã‚€
+	//å¼•æ•°1: TagGroop
 	inline void Tag::ReadTags(const ReadElement::Groop & tags)
 	{
 		//Tag ID
 		uint tagID = 1;
 
-		//Default“o˜^
+		//Defaultç™»éŒ²
 		m_tags.try_emplace(cDefaultTagName, cDefaultTagID);
 		
-		//“o˜^ƒ‹[ƒv
+		//ç™»éŒ²ãƒ«ãƒ¼ãƒ—
 		for (auto& e : tags.packs)
 			m_tags.try_emplace(e.header, tagID++);
 	}

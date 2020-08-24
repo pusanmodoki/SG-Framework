@@ -15,10 +15,10 @@ namespace SGFramework
 	//prototype
 	namespace Administrator { class GraphicsX11; }
 
-	//íœƒ|ƒCƒ“ƒg‚ğSync‚É‚·‚é->Releasevector‚É’Ç‰Á
-	//ƒJƒEƒ“ƒ^‚Éƒ[ƒJƒ‹AƒOƒ[ƒoƒ‹(ƒXƒŒƒbƒhƒ‰ƒCƒ“)‚ÌŠT”O‚ğ’Ç‰Á (mutex)
-	//Clone‚ğ©“®XV->CloneMode‚ÌŠT”O‚ğ’Ç‰Á, CloneMode‚ªƒXƒ}ƒ|‚È‚çƒŠƒXƒg‚É’Ç‰Á, ƒXƒ}ƒ|‚ğƒŠƒXƒg‚É“o˜^(íœ‚Æ‚Í•ÊAƒCƒ“ƒXƒ^ƒ“ƒXƒŠƒXƒg)‚µ‚ÄAŒŸõ‚ğ‚©‚¯‚é
-	//DeleteStack’Ç‰Á‚Éíœ‚·‚é‚±‚Æ‚ğ–¾¦‚·‚é‰½‚©‚µ‚ç‚ªƒ|ƒCƒ“ƒ^‘¤‚É•K—v
+	//å‰Šé™¤ãƒã‚¤ãƒ³ãƒˆã‚’Syncæ™‚ã«ã™ã‚‹->Releaseæ™‚vectorã«è¿½åŠ 
+	//ã‚«ã‚¦ãƒ³ã‚¿ã«ãƒ­ãƒ¼ã‚«ãƒ«ã€ã‚°ãƒ­ãƒ¼ãƒãƒ«(ã‚¹ãƒ¬ãƒƒãƒ‰ãƒ©ã‚¤ãƒ³)ã®æ¦‚å¿µã‚’è¿½åŠ  (mutex)
+	//Cloneã‚’è‡ªå‹•æ›´æ–°->CloneModeã®æ¦‚å¿µã‚’è¿½åŠ , CloneModeãŒã‚¹ãƒãƒãªã‚‰ãƒªã‚¹ãƒˆã«è¿½åŠ , ã‚¹ãƒãƒã‚’ãƒªã‚¹ãƒˆã«ç™»éŒ²(å‰Šé™¤ã¨ã¯åˆ¥ã€ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãƒªã‚¹ãƒˆ)ã—ã¦ã€æ¤œç´¢ã‚’ã‹ã‘ã‚‹
+	//DeleteStackè¿½åŠ æ™‚ã«å‰Šé™¤ã™ã‚‹ã“ã¨ã‚’æ˜ç¤ºã™ã‚‹ä½•ã‹ã—ã‚‰ãŒãƒã‚¤ãƒ³ã‚¿å´ã«å¿…è¦
 
 	class Application;
 	template<class PointerType>
@@ -32,7 +32,7 @@ namespace SGFramework
 	template<class PointerType>
 	class CloneWeakPointer;
 
-	//ƒXƒ}[ƒgƒ|ƒCƒ“ƒ^‚ÌDelete‚ğs‚¤GabageCollector class
+	//ã‚¹ãƒãƒ¼ãƒˆãƒã‚¤ãƒ³ã‚¿ã®Deleteã‚’è¡Œã†GabageCollector class
 	class GabageCollector
 	{
 	public:
@@ -50,7 +50,7 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[ReserveManualCollection]
-		//ManualDeleteİ’è‚Ìƒ|ƒCƒ“ƒ^‚ğŸƒtƒŒ[ƒ€‚ÅDelete‚·‚é‚æ‚¤‚É“o˜^‚·‚é
+		//ManualDeleteè¨­å®šã®ãƒã‚¤ãƒ³ã‚¿ã‚’æ¬¡ãƒ•ãƒ¬ãƒ¼ãƒ ã§Deleteã™ã‚‹ã‚ˆã†ã«ç™»éŒ²ã™ã‚‹
 		inline static void ReserveManualCollection() { AtomicOperation::LockAtomic(m_lock); m_isManualCollectionUsedNextFrame = true; AtomicOperation::UnlockAtomic(m_lock); }
 
 		//num stack delete pointer capacity (get function property)
@@ -59,7 +59,7 @@ namespace SGFramework
 		SGF_FUNCTION_PROPERTY static uint getNumDeleteOfOneFlame() { return m_numDeleteOfOneFlame; }
 
 	private:
-		//cloneShareds‚Ég—p‚·‚éCloneSharedInfos
+		//cloneSharedsã«ä½¿ç”¨ã™ã‚‹CloneSharedInfos
 		struct CloneSharedInfos
 		{
 			//Full setting constructor
@@ -84,18 +84,18 @@ namespace SGFramework
 		
 		//----------------------------------------------------------------------------------
 		//[StartUp]
-		//•Ï”‚Ìİ’è‚ğs‚¤
-		//ˆø”1: numDeleteCapacity
-		//ˆø”2: numDeleteofOneFrame
+		//å¤‰æ•°ã®è¨­å®šã‚’è¡Œã†
+		//å¼•æ•°1: numDeleteCapacity
+		//å¼•æ•°2: numDeleteofOneFrame
 		inline static void StartUp(const ReadElement::Pack& numDeleteCapacity, const ReadElement::Pack& numDeleteOfOneFlame);
 		//----------------------------------------------------------------------------------
 		//[ShutDown]
-		//ƒXƒ^ƒbƒN‚É‚ ‚éƒ|ƒCƒ“ƒ^‚ğ‘S‚ÄŠJ•ú‚µAˆÈ~‚Ìƒ|ƒCƒ“ƒ^”jŠü‚ğ‘¦‚É•ÏX
+		//ã‚¹ã‚¿ãƒƒã‚¯ã«ã‚ã‚‹ãƒã‚¤ãƒ³ã‚¿ã‚’å…¨ã¦é–‹æ”¾ã—ã€ä»¥é™ã®ãƒã‚¤ãƒ³ã‚¿ç ´æ£„ã‚’å³æ™‚ã«å¤‰æ›´
 		inline static void ShutDown();
 
 		//----------------------------------------------------------------------------------
 		//[GabageCollection]
-		//ƒ|ƒCƒ“ƒ^‚Ìíœ‚ğs‚¤, UpdateFlame‰Šú‚És‚¤‚±‚Æ
+		//ãƒã‚¤ãƒ³ã‚¿ã®å‰Šé™¤ã‚’è¡Œã†, UpdateFlameåˆæœŸã«è¡Œã†ã“ã¨
 		inline static void GabageCollection();
 		//----------------------------------------------------------------------------------
 		//[DeletePointers]
@@ -104,29 +104,29 @@ namespace SGFramework
 		//----------------------------------------------------------------------------------
 		//[RegisterUnique]
 		//Register Unique Pointer
-		//ˆø”1: getPointer()
-		//ˆø”2: this Deallocator
-		//ˆø”3: isAutoGabageCollection
+		//å¼•æ•°1: getPointer()
+		//å¼•æ•°2: this Deallocator
+		//å¼•æ•°3: isAutoGabageCollection
 		inline static void RegisterUnique(void* pointer, Detail::Pointer::BaseDeallocator* thisDeallocator, bool isAutoGabageCollection);
 		//----------------------------------------------------------------------------------
 		//[RegisterShared]
 		//Register Shared Pointer
-		//ˆø”1: getPointer()
-		//ˆø”2: this Deallocator
-		//ˆø”3: this Counter
-		//ˆø”4: isAutoGabageCollection
+		//å¼•æ•°1: getPointer()
+		//å¼•æ•°2: this Deallocator
+		//å¼•æ•°3: this Counter
+		//å¼•æ•°4: isAutoGabageCollection
 		inline static void RegisterShared(void* pointer,
 			Detail::Pointer::BaseDeallocator* thisDeallocator, Detail::Pointer::BaseCounter* thisCounter, bool isAutoGabageCollection);
 		//----------------------------------------------------------------------------------
 		//[RegisterCloneShared]
 		//Register Clone Shared Pointer
-		//ˆø”1: getPointer()
-		//ˆø”2: Clone source pointer
-		//ˆø”3: this Deallocator
-		//ˆø”4: this Counter
-		//ˆø”5: copySize
-		//ˆø”6: cloneMode
-		//ˆø”7: isAutoGabageCollection
+		//å¼•æ•°1: getPointer()
+		//å¼•æ•°2: Clone source pointer
+		//å¼•æ•°3: this Deallocator
+		//å¼•æ•°4: this Counter
+		//å¼•æ•°5: copySize
+		//å¼•æ•°6: cloneMode
+		//å¼•æ•°7: isAutoGabageCollection
 		inline static void RegisterCloneShared(void * pointer, void* cloneSource,
 			Detail::Pointer::BaseCloneCounter* thisCounter,  uint64 copySize, 
 			Pointer::CloneMode cloneMode, bool isAutoGabageCollection);
@@ -134,32 +134,32 @@ namespace SGFramework
 		//----------------------------------------------------------------------------------
 		//[DestroyUnique]
 		//Reserve Destroy Unique Pointer
-		//ˆø”1: getPointer()
-		//ˆø”2: this UniquePointer
+		//å¼•æ•°1: getPointer()
+		//å¼•æ•°2: this UniquePointer
 		inline static void DestroyUnique(void* pointer, Detail::Pointer::BasePointer* thisPointer);
 		//----------------------------------------------------------------------------------
 		//[DestroyShared]
 		//Reserve Destroy Shared Pointer
-		//ˆø”1: getPointer()
-		//ˆø”2: this SharedPointer
+		//å¼•æ•°1: getPointer()
+		//å¼•æ•°2: this SharedPointer
 		inline static void DestroyShared(void* pointer, Detail::Pointer::BaseCountPointer* thisPointer);
 		//----------------------------------------------------------------------------------
 		//[DestroyWeak]
 		//Reserve Destroy Weak Pointer
-		//ˆø”1: getPointer()
-		//ˆø”2: this WeakPointer
+		//å¼•æ•°1: getPointer()
+		//å¼•æ•°2: this WeakPointer
 		inline static void DestroyWeak(void* pointer, Detail::Pointer::BaseCountPointer* thisPointer);
 		//----------------------------------------------------------------------------------
 		//[DestroyCloneShared]
 		//Reserve Destroy Clone Shared Pointer
-		//ˆø”1: getPointer()
-		//ˆø”2: this CloneSharedPointer
+		//å¼•æ•°1: getPointer()
+		//å¼•æ•°2: this CloneSharedPointer
 		inline static void DestroyCloneShared(void* pointer, Detail::Pointer::BaseCountPointer* thisPointer);
 		//----------------------------------------------------------------------------------
 		//[DestroyCloneWeak]
 		//Reserve Destroy Clone Weak Pointer
-		//ˆø”1: getPointer()
-		//ˆø”2: this CloneWeakPointer
+		//å¼•æ•°1: getPointer()
+		//å¼•æ•°2: this CloneWeakPointer
 		inline static void DestroyCloneWeak(void* pointer, Detail::Pointer::BaseCountPointer* thisPointer);
 
 		//Delete Flag->AutoCollection Unique
@@ -222,9 +222,9 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[StartUp]
-	//•Ï”‚Ìİ’è‚ğs‚¤
-	//ˆø”1: numDeleteCapacity
-	//ˆø”2: numDeleteofOneFrame
+	//å¤‰æ•°ã®è¨­å®šã‚’è¡Œã†
+	//å¼•æ•°1: numDeleteCapacity
+	//å¼•æ•°2: numDeleteofOneFrame
 	inline void GabageCollector::StartUp(const ReadElement::Pack & numDeleteCapacity, const ReadElement::Pack & numDeleteOfOneFlame)
 	{
 		//setting values
@@ -233,7 +233,7 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ShutDown]
-	//ƒXƒ^ƒbƒN‚É‚ ‚éƒ|ƒCƒ“ƒ^‚ğ‘S‚ÄŠJ•ú‚µAˆÈ~‚Ìƒ|ƒCƒ“ƒ^”jŠü‚ğ‘¦‚É•ÏX
+	//ã‚¹ã‚¿ãƒƒã‚¯ã«ã‚ã‚‹ãƒã‚¤ãƒ³ã‚¿ã‚’å…¨ã¦é–‹æ”¾ã—ã€ä»¥é™ã®ãƒã‚¤ãƒ³ã‚¿ç ´æ£„ã‚’å³æ™‚ã«å¤‰æ›´
 	inline void GabageCollector::ShutDown()
 	{
 		//capacity and num delete objects -> Max
@@ -248,7 +248,7 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[GabageCollection]
-	//ƒ|ƒCƒ“ƒ^‚Ìíœ‚ğs‚¤, UpdateFlame‰Šú‚És‚¤‚±‚Æ
+	//ãƒã‚¤ãƒ³ã‚¿ã®å‰Šé™¤ã‚’è¡Œã†, UpdateFlameåˆæœŸã«è¡Œã†ã“ã¨
 	inline void GabageCollector::GabageCollection()
 	{
 		//Lock
@@ -307,7 +307,7 @@ namespace SGFramework
 				if (deleteCounter >= numDeleteMax) return;
 				void* back = *(--m_deleteAutoUniques.end());
 
-				//Clone‚ª‘¶İ->Release
+				//CloneãŒå­˜åœ¨->Release
 				auto find = m_cloneSharedReferences.find(back);
 				if (find != m_cloneSharedReferences.end())
 				{
@@ -322,14 +322,14 @@ namespace SGFramework
 				auto& at = m_uniques.at(back);
 				at.e1->DestoroyPointer(back);
 				delete at.e1;
-				//ƒJƒEƒ“ƒ^’²®
+				//ã‚«ã‚¦ãƒ³ã‚¿èª¿æ•´
 				--m_numDeleteObjects;
 				++deleteCounter;
 
 				m_uniques.erase(back);
 				m_deleteAutoUniques.erase(back);
 			}
-			//DeleteƒŠƒ~ƒbƒg’²®
+			//DeleteãƒªãƒŸãƒƒãƒˆèª¿æ•´
 			numDeleteMax = m_numDeleteOfOneFlame + ((m_numDeleteCapacity < deleteCounter + m_numDeleteObjects) ? deleteCounter + m_numDeleteObjects : 0);
 		}
 
@@ -343,7 +343,7 @@ namespace SGFramework
 				if (deleteCounter >= numDeleteMax) return;
 				void* back = *(--m_deleteAutoShareds.end());
 
-				//Clone‚ª‘¶İ->Release
+				//CloneãŒå­˜åœ¨->Release
 				auto find = m_cloneSharedReferences.find(back);
 				if (find != m_cloneSharedReferences.end())
 				{
@@ -361,17 +361,17 @@ namespace SGFramework
 				at.e1->DestoroyPointer(back);
 				at.e2->subShared();
 				delete at.e1;
-				//Weak‚ª‹‚È‚¢->Delete counter
+				//WeakãŒå±…ãªã„->Delete counter
 				if (IS_TRUE(at.e2->IsDestroyCounter()))
 					delete at.e2;
-				//ƒJƒEƒ“ƒ^’²®
+				//ã‚«ã‚¦ãƒ³ã‚¿èª¿æ•´
 				--m_numDeleteObjects;
 				++deleteCounter;
 
 				m_shareds.erase(back);
 				m_deleteAutoShareds.erase(back);
 			}
-			//DeleteƒŠƒ~ƒbƒg’²®
+			//DeleteãƒªãƒŸãƒƒãƒˆèª¿æ•´
 			numDeleteMax = m_numDeleteOfOneFlame + ((m_numDeleteCapacity < deleteCounter + m_numDeleteObjects) ? deleteCounter + m_numDeleteObjects : 0);
 		}
 
@@ -388,7 +388,7 @@ namespace SGFramework
 					if (deleteCounter >= numDeleteMax) return;
 					void* back = *(--m_deleteManualUniques.end());
 
-					//Clone‚ª‘¶İ->Release
+					//CloneãŒå­˜åœ¨->Release
 					auto find = m_cloneSharedReferences.find(back);
 					if (find != m_cloneSharedReferences.end())
 					{
@@ -403,14 +403,14 @@ namespace SGFramework
 					auto& at = m_uniques.at(back);
 					at.e1->DestoroyPointer(back);
 					delete at.e1;
-					//ƒJƒEƒ“ƒ^’²®
+					//ã‚«ã‚¦ãƒ³ã‚¿èª¿æ•´
 					--m_numDeleteObjects;
 					++deleteCounter;
 
 					m_uniques.erase(back);
 					m_deleteManualUniques.erase(back);
 				}
-				//DeleteƒŠƒ~ƒbƒg’²®
+				//DeleteãƒªãƒŸãƒƒãƒˆèª¿æ•´
 				numDeleteMax = m_numDeleteOfOneFlame + ((m_numDeleteCapacity < deleteCounter + m_numDeleteObjects) ? deleteCounter + m_numDeleteObjects : 0);
 			}
 
@@ -424,7 +424,7 @@ namespace SGFramework
 					if (deleteCounter >= numDeleteMax) return;
 					void* back = *(--m_deleteManualShareds.end());
 
-					//Clone‚ª‘¶İ->Release
+					//CloneãŒå­˜åœ¨->Release
 					auto find = m_cloneSharedReferences.find(back);
 					if (find != m_cloneSharedReferences.end())
 					{
@@ -440,17 +440,17 @@ namespace SGFramework
 					at.e2->subShared();
 					at.e1->DestoroyPointer(back);
 					delete at.e1;
-					//Weak‚ª‹‚È‚¢->Delete counter
+					//WeakãŒå±…ãªã„->Delete counter
 					if (IS_TRUE(at.e2->IsDestroyCounter()))
 						delete at.e2;
-					//ƒJƒEƒ“ƒ^’²®
+					//ã‚«ã‚¦ãƒ³ã‚¿èª¿æ•´
 					--m_numDeleteObjects;
 					++deleteCounter;
 
 					m_shareds.erase(back);
 					m_deleteManualShareds.erase(back);
 				}
-				//DeleteƒŠƒ~ƒbƒg’²®
+				//DeleteãƒªãƒŸãƒƒãƒˆèª¿æ•´
 				numDeleteMax = m_numDeleteOfOneFlame + ((m_numDeleteCapacity < deleteCounter + m_numDeleteObjects) ? deleteCounter + m_numDeleteObjects : 0);
 			}
 
@@ -471,10 +471,10 @@ namespace SGFramework
 					//free pointer
 					free(back);
 
-					//Weak‚ª‹‚È‚¢->Delete counter
+					//WeakãŒå±…ãªã„->Delete counter
 					if (IS_TRUE(at.counter->IsDestroyCounter()))
 						delete at.counter;
-					//ƒJƒEƒ“ƒ^’²®
+					//ã‚«ã‚¦ãƒ³ã‚¿èª¿æ•´
 					--m_numDeleteObjects;
 					++deleteCounter;
 
@@ -483,7 +483,7 @@ namespace SGFramework
 					m_cloneShareds.erase(back);
 					m_deleteManualCloneShareds.erase(back);
 				}
-				//DeleteƒŠƒ~ƒbƒg’²®
+				//DeleteãƒªãƒŸãƒƒãƒˆèª¿æ•´
 				numDeleteMax = m_numDeleteOfOneFlame + ((m_numDeleteCapacity < deleteCounter + m_numDeleteObjects) ? deleteCounter + m_numDeleteObjects : 0);
 			}
 		}
@@ -505,10 +505,10 @@ namespace SGFramework
 				//free pointer
 				free(back);
 
-				//Weak‚ª‹‚È‚¢->Delete counter
+				//WeakãŒå±…ãªã„->Delete counter
 				if (IS_TRUE(at.counter->IsDestroyCounter()))
 					delete at.counter;
-				//ƒJƒEƒ“ƒ^’²®
+				//ã‚«ã‚¦ãƒ³ã‚¿èª¿æ•´
 				--m_numDeleteObjects;
 				++deleteCounter;
 
@@ -517,7 +517,7 @@ namespace SGFramework
 				m_cloneShareds.erase(back);
 				m_deleteManualCloneShareds.erase(back);
 			}
-			//DeleteƒŠƒ~ƒbƒg’²®
+			//DeleteãƒªãƒŸãƒƒãƒˆèª¿æ•´
 			numDeleteMax = m_numDeleteOfOneFlame + ((m_numDeleteCapacity < deleteCounter + m_numDeleteObjects) ? deleteCounter + m_numDeleteObjects : 0);
 		}
 
@@ -533,13 +533,13 @@ namespace SGFramework
 
 				//Delete
 				delete back;
-				//ƒJƒEƒ“ƒ^’²®
+				//ã‚«ã‚¦ãƒ³ã‚¿èª¿æ•´
 				--m_numDeleteObjects;
 				++deleteCounter;
 
 				m_deleteWeaks.erase(back);
 			}
-			//DeleteƒŠƒ~ƒbƒg’²®
+			//DeleteãƒªãƒŸãƒƒãƒˆèª¿æ•´
 			numDeleteMax = m_numDeleteOfOneFlame + ((m_numDeleteCapacity < deleteCounter + m_numDeleteObjects) ? deleteCounter + m_numDeleteObjects : 0);
 		}
 	}
@@ -547,14 +547,14 @@ namespace SGFramework
 	//----------------------------------------------------------------------------------
 	//[RegisterUnique]
 	//Register Unique Pointer
-	//ˆø”1: getPointer()
-	//ˆø”2: this Deallocator
-	//ˆø”3: isAutoGabageCollection
+	//å¼•æ•°1: getPointer()
+	//å¼•æ•°2: this Deallocator
+	//å¼•æ•°3: isAutoGabageCollection
 	inline void GabageCollector::RegisterUnique(void* pointer, Detail::Pointer::BaseDeallocator* thisDeallocator, bool isAutoGabageCollection)
 	{
 		//lock mutex
 		AtomicOperation::LockAtomic(m_lock);
-		//ƒŠƒXƒg‚É‘¶İ‚µ‚È‚¯‚ê‚Îemplace
+		//ãƒªã‚¹ãƒˆã«å­˜åœ¨ã—ãªã‘ã‚Œã°emplace
 		if (m_uniques.find(pointer) == m_uniques.end())
 			m_uniques.try_emplace(pointer, Tuple::Two<Detail::Pointer::BaseDeallocator*, bool>(thisDeallocator, isAutoGabageCollection));
 		AtomicOperation::UnlockAtomic(m_lock);
@@ -562,16 +562,16 @@ namespace SGFramework
 	//----------------------------------------------------------------------------------
 	//[RegisterShared]
 	//Register Shared Pointer
-	//ˆø”1: getPointer()
-	//ˆø”2: this Deallocator
-	//ˆø”3: this Counter
-	//ˆø”4: isAutoGabageCollection
+	//å¼•æ•°1: getPointer()
+	//å¼•æ•°2: this Deallocator
+	//å¼•æ•°3: this Counter
+	//å¼•æ•°4: isAutoGabageCollection
 	inline void GabageCollector::RegisterShared(void* pointer, 
 		Detail::Pointer::BaseDeallocator* thisDeallocator, Detail::Pointer::BaseCounter* thisCounter, bool isAutoGabageCollection)
 	{
 		//lock mutex
 		AtomicOperation::LockAtomic(m_lock);
-		//ƒŠƒXƒg‚É‘¶İ‚µ‚È‚¯‚ê‚Îemplace
+		//ãƒªã‚¹ãƒˆã«å­˜åœ¨ã—ãªã‘ã‚Œã°emplace
 		if (m_shareds.find(pointer) == m_shareds.end())
 			m_shareds.try_emplace(pointer, Tuple::Three<Detail::Pointer::BaseDeallocator*, Detail::Pointer::BaseCounter*, bool>(
 				thisDeallocator, thisCounter, isAutoGabageCollection));
@@ -580,24 +580,24 @@ namespace SGFramework
 	//----------------------------------------------------------------------------------
 	//[RegisterCloneShared]
 	//Register Clone Shared Pointer
-	//ˆø”1: getPointer()
-	//ˆø”2: Clone source pointer
-	//ˆø”3: this Deallocator
-	//ˆø”4: this Counter
-	//ˆø”5: copySize
-	//ˆø”6: cloneMode
-	//ˆø”7: isAutoGabageCollection
+	//å¼•æ•°1: getPointer()
+	//å¼•æ•°2: Clone source pointer
+	//å¼•æ•°3: this Deallocator
+	//å¼•æ•°4: this Counter
+	//å¼•æ•°5: copySize
+	//å¼•æ•°6: cloneMode
+	//å¼•æ•°7: isAutoGabageCollection
 	inline void GabageCollector::RegisterCloneShared(void * pointer, void* cloneSource,
 		Detail::Pointer::BaseCloneCounter* thisCounter, uint64 copySize,
 		Pointer::CloneMode cloneMode, bool isAutoGabageCollection)
 	{
 		//lock mutex
 		AtomicOperation::LockAtomic(m_lock);
-		//ƒŠƒXƒg‚É‘¶İ‚µ‚È‚¯‚ê‚Îemplace
+		//ãƒªã‚¹ãƒˆã«å­˜åœ¨ã—ãªã‘ã‚Œã°emplace
 		if (m_cloneShareds.find(pointer) == m_cloneShareds.end())
 			m_cloneShareds.try_emplace(pointer, CloneSharedInfos(thisCounter,
 				cloneSource, copySize, static_cast<byte>(cloneMode), isAutoGabageCollection));
-	//ƒŠƒXƒg‚É‘¶İ‚µ‚È‚¯‚ê‚Îemplace (reference)
+	//ãƒªã‚¹ãƒˆã«å­˜åœ¨ã—ãªã‘ã‚Œã°emplace (reference)
 		if (m_cloneSharedReferences.find(cloneSource) == m_cloneSharedReferences.end())
 			m_cloneSharedReferences.try_emplace(cloneSource, std::unordered_set<void*>());
 		//Register Reference
@@ -609,13 +609,13 @@ namespace SGFramework
 	//----------------------------------------------------------------------------------
 	//[DestroyUnique]
 	//Reserve Destroy Unique Pointer
-	//ˆø”1: getPointer()
-	//ˆø”2: this UniquePointer
+	//å¼•æ•°1: getPointer()
+	//å¼•æ•°2: this UniquePointer
 	inline void GabageCollector::DestroyUnique(void* pointer, Detail::Pointer::BasePointer* thisPointer)
 	{
 		if (pointer == nullptr) return;
 	
-		//ShutdownÀsÏ‚İ‚È‚ç‘¦delete
+		//Shutdownå®Ÿè¡Œæ¸ˆã¿ãªã‚‰å³æ™‚delete
 		if (IS_TRUE(m_isShutDown))
 		{
 			AtomicOperation::LockGuard lock(m_lock);
@@ -625,7 +625,7 @@ namespace SGFramework
 			return;
 		}
 
-		//GabageCollectionÀs’†‚Å‚È‚¯‚ê‚ÎLock mutex
+		//GabageCollectionå®Ÿè¡Œä¸­ã§ãªã‘ã‚Œã°Lock mutex
 		if (IS_FALSE(m_isNowGabageCollection)) AtomicOperation::LockAtomic(m_lock);
 		
 		//AutoCollection
@@ -642,22 +642,22 @@ namespace SGFramework
 			m_deleteManualUniques.emplace(pointer);
 			m_deleteFlags |= m_cDeleteManualUnique;
 		}
-		//ƒJƒEƒ“ƒ^‰ÁZ
+		//ã‚«ã‚¦ãƒ³ã‚¿åŠ ç®—
 		++m_numDeleteObjects;
 
-		//GabageCollectionÀs’†‚Å‚È‚¯‚ê‚ÎUnlock mutex
+		//GabageCollectionå®Ÿè¡Œä¸­ã§ãªã‘ã‚Œã°Unlock mutex
 		if (IS_FALSE(m_isNowGabageCollection)) AtomicOperation::UnlockAtomic(m_lock);
 	}
 	//----------------------------------------------------------------------------------
 	//[DestroyShared]
 	//Reserve Destroy Shared Pointer
-	//ˆø”1: getPointer()
-	//ˆø”2: this SharedPointer
+	//å¼•æ•°1: getPointer()
+	//å¼•æ•°2: this SharedPointer
 	inline void GabageCollector::DestroyShared(void* pointer, Detail::Pointer::BaseCountPointer* thisPointer)
 	{
 		if (pointer == nullptr || thisPointer->m_counter == nullptr) return;
 		
-		//ShutdownÀsÏ‚İ‚È‚ç‘¦delete
+		//Shutdownå®Ÿè¡Œæ¸ˆã¿ãªã‚‰å³æ™‚delete
 		if (IS_TRUE(m_isShutDown))
 		{
 			AtomicOperation::LockGuard lock(m_lock);
@@ -699,7 +699,7 @@ namespace SGFramework
 			m_deleteManualShareds.emplace(pointer);
 			m_deleteFlags |= m_cDeleteManualShared;
 		}
-		//ƒJƒEƒ“ƒ^‰ÁZ
+		//ã‚«ã‚¦ãƒ³ã‚¿åŠ ç®—
 		++m_numDeleteObjects;
 		
 		//Unlock
@@ -708,13 +708,13 @@ namespace SGFramework
 	//----------------------------------------------------------------------------------
 	//[DestroyWeak]
 	//Reserve Destroy Weak Pointer
-	//ˆø”1: getPointer()
-	//ˆø”2: this WeakPointer
+	//å¼•æ•°1: getPointer()
+	//å¼•æ•°2: this WeakPointer
 	inline void GabageCollector::DestroyWeak(void * pointer, Detail::Pointer::BaseCountPointer * thisPointer)
 	{
 		if (pointer == nullptr || thisPointer->m_counter == nullptr) return;
 
-		//ShutdownÀsÏ‚İ‚È‚ç‘¦delete
+		//Shutdownå®Ÿè¡Œæ¸ˆã¿ãªã‚‰å³æ™‚delete
 		if (IS_TRUE(m_isShutDown))
 		{
 			AtomicOperation::LockGuard lock(m_lock);
@@ -740,19 +740,19 @@ namespace SGFramework
 		if (m_deleteWeaks.find(thisPointer->m_counter) == m_deleteWeaks.end())
 			m_deleteWeaks.emplace(thisPointer->m_counter);
 		m_deleteFlags |= m_cDeleteWeak;
-		//ƒJƒEƒ“ƒ^‰ÁZ
+		//ã‚«ã‚¦ãƒ³ã‚¿åŠ ç®—
 		++m_numDeleteObjects;
 	}
 	//----------------------------------------------------------------------------------
 	//[DestroyCloneShared]
 	//Reserve Destroy Clone Shared Pointer
-	//ˆø”1: getPointer()
-	//ˆø”2: this CloneSharedPointer
+	//å¼•æ•°1: getPointer()
+	//å¼•æ•°2: this CloneSharedPointer
 	inline void GabageCollector::DestroyCloneShared(void * pointer, Detail::Pointer::BaseCountPointer * thisPointer)
 	{
 		if (pointer == nullptr || thisPointer->m_counter == nullptr) return;
 
-		//ShutdownÀsÏ‚İ‚È‚ç‘¦delete
+		//Shutdownå®Ÿè¡Œæ¸ˆã¿ãªã‚‰å³æ™‚delete
 		if (IS_TRUE(m_isShutDown))
 		{
 			AtomicOperation::LockGuard lock(m_lock);
@@ -793,7 +793,7 @@ namespace SGFramework
 			m_deleteAutoCloneShareds.emplace(pointer);
 			m_deleteFlags |= m_cDeleteAutoCloneShared;
 		}
-		//ƒJƒEƒ“ƒ^‰ÁZ
+		//ã‚«ã‚¦ãƒ³ã‚¿åŠ ç®—
 		++m_numDeleteObjects;
 
 		//Unlock
@@ -802,13 +802,13 @@ namespace SGFramework
 	//----------------------------------------------------------------------------------
 	//[DestroyCloneWeak]
 	//Reserve Destroy Clone Weak Pointer
-	//ˆø”1: getPointer()
-	//ˆø”2: this CloneWeakPointer
+	//å¼•æ•°1: getPointer()
+	//å¼•æ•°2: this CloneWeakPointer
 	inline void GabageCollector::DestroyCloneWeak(void * pointer, Detail::Pointer::BaseCountPointer * thisPointer)
 	{
 		if (pointer == nullptr || thisPointer->m_counter == nullptr) return;
 	
-		//ShutdownÀsÏ‚İ‚È‚ç‘¦delete
+		//Shutdownå®Ÿè¡Œæ¸ˆã¿ãªã‚‰å³æ™‚delete
 		if (IS_TRUE(m_isShutDown))
 		{
 			AtomicOperation::LockGuard lock(m_lock);
@@ -833,7 +833,7 @@ namespace SGFramework
 		if (m_deleteWeaks.find(thisPointer->m_counter) == m_deleteWeaks.end())
 			m_deleteWeaks.emplace(thisPointer->m_counter);
 		m_deleteFlags |= m_cDeleteWeak;
-		//ƒJƒEƒ“ƒ^‰ÁZ
+		//ã‚«ã‚¦ãƒ³ã‚¿åŠ ç®—
 		++m_numDeleteObjects;
 	}
 }

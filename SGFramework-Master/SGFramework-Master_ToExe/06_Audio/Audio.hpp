@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ƒI[ƒfƒBƒI‚ğŠÇ—‚·‚éAudio class
+ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚’ç®¡ç†ã™ã‚‹Audio class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_AUDIO_HPP_
 #define SGFRAMEWORK_HEADER_AUDIO_HPP_
@@ -33,7 +33,7 @@ namespace SGFramework
 		class AudioAssetEffect3D;
 	}
 
-	//ƒI[ƒfƒBƒI‚ğŠÇ—‚·‚éAudio class
+	//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚’ç®¡ç†ã™ã‚‹Audio class
 	class Audio final
 	{
 	public:
@@ -52,9 +52,9 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[FindLayer]
-		//name‚ÌƒTƒuƒ~ƒbƒNƒXƒŒƒCƒ„[‚ğŒŸõ‚·‚é
-		//return: ‘¶İ‚µ‚Ä‚¢‚½ê‡layer‚Ìƒ|ƒCƒ“ƒ^, ‚È‚¢ê‡‚Í‹óƒ|ƒCƒ“ƒ^
-		//ˆø”1: ƒŒƒCƒ„[–¼
+		//nameã®ã‚µãƒ–ãƒŸãƒƒã‚¯ã‚¹ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’æ¤œç´¢ã™ã‚‹
+		//return: å­˜åœ¨ã—ã¦ã„ãŸå ´åˆlayerã®ãƒã‚¤ãƒ³ã‚¿, ãªã„å ´åˆã¯ç©ºãƒã‚¤ãƒ³ã‚¿
+		//å¼•æ•°1: ãƒ¬ã‚¤ãƒ¤ãƒ¼å
 		inline static SharedPointer<SubmixLayer> FindLayer(const sgstring& name);
 
 		//submix layer[id]<static>(get function property)
@@ -62,7 +62,7 @@ namespace SGFramework
 		//argument 1: id
 		SGF_FUNCTION_PROPERTY static SharedPointer<SubmixLayer> getLayer(uint id)
 		{
-			//root•ªŠò->‚ ‚ê‚Îreturn->‚È‚¯‚ê‚Î‹óƒ|ƒCƒ“ƒ^
+			//rootåˆ†å²->ã‚ã‚Œã°return->ãªã‘ã‚Œã°ç©ºãƒã‚¤ãƒ³ã‚¿
 			return id == 0 ? m_submixRootLayer :
 				id == 1 ? m_submixMonoralRootLayer :
 				id <= m_layerCounter ? 
@@ -72,9 +72,9 @@ namespace SGFramework
 		//master channels mask(used XAudio2)<static> (read only property)
 		SGF_FUNCTION_PROPERTY sgstring getMasterChannelsMask() const
 		{
-			//ƒ`ƒƒƒ“ƒlƒ‹ƒ}ƒXƒN
+			//ãƒãƒ£ãƒ³ãƒãƒ«ãƒã‚¹ã‚¯
 			uint channelMask = SPEAKER_MONO;
-			//ƒ`ƒƒƒ“ƒlƒ‹•ªŠò
+			//ãƒãƒ£ãƒ³ãƒãƒ«åˆ†å²
 			switch (m_masterChannels)
 			{
 			case 2:
@@ -96,7 +96,7 @@ namespace SGFramework
 		//accurate master channels<static> (read only property)
 		SGF_FUNCTION_PROPERTY static sgstring getChannelsString()
 		{
-			//ƒ`ƒƒƒ“ƒlƒ‹•ªŠò
+			//ãƒãƒ£ãƒ³ãƒãƒ«åˆ†å²
 			switch (m_masterChannels)
 			{
 			case 1:
@@ -127,14 +127,14 @@ namespace SGFramework
 		static PointerProperty<IXAudio2MasteringVoice*> masteringVoice;
 		//RootLayer
 		static GetOnlyProperty<SharedPointer<SubmixLayer>> submixRootLayer;
-		//MonoralRootLayer ‚±‚ÌƒŒƒCƒ„[‚ÌqƒŒƒCƒ„[‚Í‘S‚Äƒ`ƒƒƒ“ƒlƒ‹”‚ª1‚É‚È‚é
+		//MonoralRootLayer ã“ã®ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®å­ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¯å…¨ã¦ãƒãƒ£ãƒ³ãƒãƒ«æ•°ãŒ1ã«ãªã‚‹
 		static GetOnlyProperty<SharedPointer<SubmixLayer>> submixMonoralRootLayer;
-		//‹K’è‚Ìƒ`ƒƒƒ“ƒlƒ‹”
+		//è¦å®šã®ãƒãƒ£ãƒ³ãƒãƒ«æ•°
 		static GetOnlyProperty<uint> masterChannels;
-		//ƒ}ƒXƒ^[ƒTƒ“ƒvƒ‹ƒŒ[ƒg
+		//ãƒã‚¹ã‚¿ãƒ¼ã‚µãƒ³ãƒ—ãƒ«ãƒ¬ãƒ¼ãƒˆ
 		static GetOnlyProperty<uint> sampleRate;
 		
-		//SubmixAudio‚ğƒŒƒCƒ„[\‘¢‚Å’ñ‹Ÿ‚·‚éSubmixLayer class
+		//SubmixAudioã‚’ãƒ¬ã‚¤ãƒ¤ãƒ¼æ§‹é€ ã§æä¾›ã™ã‚‹SubmixLayer class
 		class SubmixLayer final
 		{
 		public:
@@ -147,15 +147,15 @@ namespace SGFramework
 			friend class Asset::AudioAssetEffect3D;
 			
 			//----------------------------------------------------------------------------------
-			//[ƒfƒXƒgƒ‰ƒNƒ^]
-			//DestroyVoice‚ğs‚¤
+			//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//DestroyVoiceã‚’è¡Œã†
 			~SubmixLayer();
 
 			//----------------------------------------------------------------------------------
 			//[ChangeVolumeSmoothly]
-			//Ä¶‰¹—Ê‚ğtarget‚Ü‚ÅŠŠ‚ç‚©‚É•ÏX‚·‚é
-			//ˆø”1: •ÏXtarget
-			//ˆø”2: •ÏX‚É‚©‚¯‚é•b”
+			//å†ç”ŸéŸ³é‡ã‚’targetã¾ã§æ»‘ã‚‰ã‹ã«å¤‰æ›´ã™ã‚‹
+			//å¼•æ•°1: å¤‰æ›´target
+			//å¼•æ•°2: å¤‰æ›´ã«ã‹ã‘ã‚‹ç§’æ•°
 			inline void ChangeVolumeSmoothly(float target, float seconds);
 
 			//parent layer (get function property)if null = not parent
@@ -176,15 +176,15 @@ namespace SGFramework
 			}
 			//volume (get function property)
 			//return : volume
-			//argument 1: volume magnification (”{—¦, ’Êí1)
+			//argument 1: volume magnification (å€ç‡, é€šå¸¸1)
 			SGF_FUNCTION_PROPERTY float setVolume(float magnification) { m_voice->SetVolume(magnification); return magnification; }
 
 			//master channels mask(used XAudio2)<static> (read only property)
 			SGF_FUNCTION_PROPERTY sgstring getChannelsMask() const
 			{
-				//ƒ`ƒƒƒ“ƒlƒ‹ƒ}ƒXƒN
+				//ãƒãƒ£ãƒ³ãƒãƒ«ãƒã‚¹ã‚¯
 				uint channelMask = SPEAKER_MONO;
-				//ƒ`ƒƒƒ“ƒlƒ‹•ªŠò
+				//ãƒãƒ£ãƒ³ãƒãƒ«åˆ†å²
 				switch (m_channels)
 				{
 				case 2:
@@ -206,7 +206,7 @@ namespace SGFramework
 			//accurate master channels<static> (read only property)
 			SGF_FUNCTION_PROPERTY sgstring getChannelsString() const
 			{
-				//ƒ`ƒƒƒ“ƒlƒ‹•ªŠò
+				//ãƒãƒ£ãƒ³ãƒãƒ«åˆ†å²
 				switch (m_channels)
 				{
 				case 1:
@@ -233,61 +233,61 @@ namespace SGFramework
 			//[] operator return childrebs[index]
 			inline const WeakPointer<SubmixLayer>& operator [] (uint index) { return m_childrens[index]; }
 
-			//SubmixRootLayer‚ÌID
+			//SubmixRootLayerã®ID
 			static constexpr uint cRootID = 0;
-			//SubmixRootLayer‚ÌName
+			//SubmixRootLayerã®Name
 			static constexpr wchar cRootName[] = L"root";
-			//SubmixMonoralRootLayer‚ÌID
+			//SubmixMonoralRootLayerã®ID
 			static constexpr uint cMonoralRootID = 1;
-			//SubmixMonoralRootLayer‚ÌName
+			//SubmixMonoralRootLayerã®Name
 			static constexpr wchar cMonoralRootName[] = L"monoralRoot";
 
 			GetOnlyProperty<IXAudio2SubmixVoice*> voice;	//Voice
-			GetOnlyProperty<sgstring> layerName;				//ƒŒƒCƒ„[–¼
-			GetOnlyProperty<uint> layerID;							//ƒŒƒCƒ„[ID
-			GetOnlyProperty<uint> processingStage;				//ƒŒƒCƒ„[‚ÌŠK‘w‚Ì[‚³
-			GetOnlyProperty<uint> channels;						//ƒŒƒCƒ„[‚Ìƒ`ƒƒƒ“ƒlƒ‹”
+			GetOnlyProperty<sgstring> layerName;				//ãƒ¬ã‚¤ãƒ¤ãƒ¼å
+			GetOnlyProperty<uint> layerID;							//ãƒ¬ã‚¤ãƒ¤ãƒ¼ID
+			GetOnlyProperty<uint> processingStage;				//ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®éšå±¤ã®æ·±ã•
+			GetOnlyProperty<uint> channels;						//ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ãƒãƒ£ãƒ³ãƒãƒ«æ•°
 		private:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//Root—p‰Šú‰»‚ğs‚¤
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//Rootç”¨åˆæœŸåŒ–ã‚’è¡Œã†
 			SubmixLayer();
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//”ñRoot—p‰Šú‰»‚ğs‚¤
-			//ˆø”1: ƒŒƒCƒ„[–¼
-			//ˆø”2: ƒŒƒCƒ„[ID
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//éRootç”¨åˆæœŸåŒ–ã‚’è¡Œã†
+			//å¼•æ•°1: ãƒ¬ã‚¤ãƒ¤ãƒ¼å
+			//å¼•æ•°2: ãƒ¬ã‚¤ãƒ¤ãƒ¼ID
 			SubmixLayer(const sgstring& name, uint id);
 			//----------------------------------------------------------------------------------
 			//[SettingRoot]
-			//Root—pİ’è‚ğs‚¤
-			//ˆø”1: ‰¹—Ê
+			//Rootç”¨è¨­å®šã‚’è¡Œã†
+			//å¼•æ•°1: éŸ³é‡
 			void SettingRoot(float volume);
 			//----------------------------------------------------------------------------------
 			//[SettingMonoralRoot]
-			//MonoralRoot—pİ’è‚ğs‚¤
-			//ˆø”1: ‰¹—Ê
+			//MonoralRootç”¨è¨­å®šã‚’è¡Œã†
+			//å¼•æ•°1: éŸ³é‡
 			void SettingMonoralRoot(float volume);
 			//----------------------------------------------------------------------------------
 			//[SettingSubmix]
-			//”ñRoot—pİ’è‚ğs‚¤
-			//ˆø”1: ‰¹—Ê
+			//éRootç”¨è¨­å®šã‚’è¡Œã†
+			//å¼•æ•°1: éŸ³é‡
 			void SettingSubmix(float volume);	
 			
-			std::vector<WeakPointer<SubmixLayer>> m_childrens;		//qƒŒƒCƒ„[
-			std::vector<XAUDIO2_SEND_DESCRIPTOR> m_sendVoices;	//VoiceSends—p
-			sgstring m_layerName;														//ƒŒƒCƒ„[–¼
+			std::vector<WeakPointer<SubmixLayer>> m_childrens;		//å­ãƒ¬ã‚¤ãƒ¤ãƒ¼
+			std::vector<XAUDIO2_SEND_DESCRIPTOR> m_sendVoices;	//VoiceSendsç”¨
+			sgstring m_layerName;														//ãƒ¬ã‚¤ãƒ¤ãƒ¼å
 			XAUDIO2_VOICE_SENDS m_sends;										//Sneds
-			WeakPointer<SubmixLayer> m_parent;								//eƒŒƒCƒ„[
+			WeakPointer<SubmixLayer> m_parent;								//è¦ªãƒ¬ã‚¤ãƒ¤ãƒ¼
 			IXAudio2SubmixVoice* m_voice;											//Voice
-			uint m_layerID;																	//ƒŒƒCƒ„[ID
-			uint m_processingStage;														//ƒŒƒCƒ„[‚ÌŠK‘w‚Ì[‚³
-			uint m_channels;																//ƒŒƒCƒ„[‚Ìƒ`ƒƒƒ“ƒlƒ‹”
+			uint m_layerID;																	//ãƒ¬ã‚¤ãƒ¤ãƒ¼ID
+			uint m_processingStage;														//ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®éšå±¤ã®æ·±ã•
+			uint m_channels;																//ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ãƒãƒ£ãƒ³ãƒãƒ«æ•°
 		};
 
 	private:
 
-		//ƒŠƒXƒi[İ’è—pƒoƒbƒtƒ@
+		//ãƒªã‚¹ãƒŠãƒ¼è¨­å®šç”¨ãƒãƒƒãƒ•ã‚¡
 		struct X3DAudioListenerBuffer
 		{
 			std::atomic_bool lock;					//lock
@@ -297,20 +297,20 @@ namespace SGFramework
 		{
 			inline SmoothSubmix(float now, float target, float speed)
 				: now(now), target(target), speed(speed) {}
-			float now = 0.0f;			//Œ»İ’l
-			float target = 0.0f;			//ƒ^[ƒQƒbƒg
-			float speed = 0.0f;			//•ÏXƒXƒs[ƒh (•b‘¬)
+			float now = 0.0f;			//ç¾åœ¨å€¤
+			float target = 0.0f;			//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆ
+			float speed = 0.0f;			//å¤‰æ›´ã‚¹ãƒ”ãƒ¼ãƒ‰ (ç§’é€Ÿ)
 		};
 		struct SmoothAudio
 		{
-			//ƒ^ƒCƒv‚²‚Æ‚Ì’l
+			//ã‚¿ã‚¤ãƒ—ã”ã¨ã®å€¤
 			struct Values
 			{
-				float now = 0.0f;			//Œ»İ’l
-				float target = 0.0f;			//ƒ^[ƒQƒbƒg
-				float speed = 0.0f;			//•ÏXƒXƒs[ƒh (•b‘¬)
-				bool isEnabled = false;	//—LŒøH
-				bool isStop = false;		//I—¹Œã’â~H
+				float now = 0.0f;			//ç¾åœ¨å€¤
+				float target = 0.0f;			//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆ
+				float speed = 0.0f;			//å¤‰æ›´ã‚¹ãƒ”ãƒ¼ãƒ‰ (ç§’é€Ÿ)
+				bool isEnabled = false;	//æœ‰åŠ¹ï¼Ÿ
+				bool isStop = false;		//çµ‚äº†å¾Œåœæ­¢ï¼Ÿ
 			};
 			
 			inline SmoothAudio(const WeakPointer<BaseClass::BaseAudioAsset>& asset)
@@ -338,37 +338,37 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[StartUp]
-		//‹N“®‰Šú‰»‚ğs‚¤
-		//ˆø”1: ƒ}ƒXƒ^[‰¹—Ê
-		//ˆø”2: ƒ`ƒƒƒ“ƒlƒ‹”
-		//ˆø”3: ƒTƒ“ƒvƒ‹ƒŒ[ƒg
-		//ˆø”4: ƒTƒuƒ~ƒbƒNƒXƒŒƒCƒ„[
+		//èµ·å‹•æ™‚åˆæœŸåŒ–ã‚’è¡Œã†
+		//å¼•æ•°1: ãƒã‚¹ã‚¿ãƒ¼éŸ³é‡
+		//å¼•æ•°2: ãƒãƒ£ãƒ³ãƒãƒ«æ•°
+		//å¼•æ•°3: ã‚µãƒ³ãƒ—ãƒ«ãƒ¬ãƒ¼ãƒˆ
+		//å¼•æ•°4: ã‚µãƒ–ãƒŸãƒƒã‚¯ã‚¹ãƒ¬ã‚¤ãƒ¤ãƒ¼
 		static void StartUp(const ReadElement::Pack& masterVolume, const ReadElement::Pack& masterChannels, 
 			const ReadElement::Pack& sampleRate, const ReadElement::Pack& audioUpdateInterval, 
 			const ReadElement::Pack& audioSmoothReserve, const ReadElement::Groop& submixLayers);
 		//----------------------------------------------------------------------------------
 		//[ShutDown]
-		//I—¹ˆ—‚ğs‚¤
+		//çµ‚äº†å‡¦ç†ã‚’è¡Œã†
 		static void ShutDown();
 		//----------------------------------------------------------------------------------
 		//[UpdateThread]
-		//ƒI[ƒfƒBƒI‚ÌXV‚ğs‚¤, •ÊƒXƒŒƒbƒh—pŠÖ”
+		//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã®æ›´æ–°ã‚’è¡Œã†, åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
 		static void UpdateThread();
 		//----------------------------------------------------------------------------------
 		//[ProcessingMessage]
-		//ƒƒbƒZ[ƒW‚ğˆ—‚·‚é
-		//ˆø”1: message
+		//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã™ã‚‹
+		//å¼•æ•°1: message
 		static void ProcessingMessage(const Detail::Audio::AudioMessage& message);
 		//----------------------------------------------------------------------------------
 		//[UpdateSmooth]
-		//ƒXƒ€[ƒX‚ÌXV‚ğs‚¤
-		//ˆø”1: delta time
+		//ã‚¹ãƒ ãƒ¼ã‚¹ã®æ›´æ–°ã‚’è¡Œã†
+		//å¼•æ•°1: delta time
 		static void UpdateSmooth(float deltaTime);
 
 		//----------------------------------------------------------------------------------
 		//[SendAudioMessage]
-		//ƒƒbƒZ[ƒW‚ğ‘—M‚·‚é
-		//ˆø”1: message
+		//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ä¿¡ã™ã‚‹
+		//å¼•æ•°1: message
 		static inline void SendAudioMessage(const Detail::Audio::AudioMessage& message);
 
 
@@ -392,7 +392,7 @@ namespace SGFramework
 		static std::vector<Detail::Audio::AudioMessage> m_messages;
 		//AudioMessages (use audio thread)
 		static std::vector<Detail::Audio::AudioMessage> m_useThreadMessages;
-		//ƒTƒuƒ~ƒbƒNƒXƒŒƒCƒ„[
+		//ã‚µãƒ–ãƒŸãƒƒã‚¯ã‚¹ãƒ¬ã‚¤ãƒ¤ãƒ¼
 		static std::vector<SharedPointer<SubmixLayer>> m_submixLayers;	
 		//Submix root
 		static SharedPointer<SubmixLayer> m_submixRootLayer;
@@ -400,46 +400,46 @@ namespace SGFramework
 		static SharedPointer<SubmixLayer> m_submixMonoralRootLayer;
 		//Audio thread
 		static std::thread m_audioThread;
-		//Audio threadXVŠÔŠu(chrono)
+		//Audio threadæ›´æ–°é–“éš”(chrono)
 		static std::chrono::milliseconds m_nowAudioUpdateInterval;
-		//Audio threadXVŠÔŠu(chrono)
+		//Audio threadæ›´æ–°é–“éš”(chrono)
 		static std::chrono::milliseconds m_audioUpdateIntervalForChrono;
-		//Audio threadXVŠÔŠu(float)
+		//Audio threadæ›´æ–°é–“éš”(float)
 		static float m_audioUpdateIntervalForFloat;
-		//‹K’è‚Ìƒ`ƒƒƒ“ƒlƒ‹”
+		//è¦å®šã®ãƒãƒ£ãƒ³ãƒãƒ«æ•°
 		static uint m_masterChannels;
-		//ƒ}ƒXƒ^[ƒTƒ“ƒvƒ‹ƒŒ[ƒg
+		//ãƒã‚¹ã‚¿ãƒ¼ã‚µãƒ³ãƒ—ãƒ«ãƒ¬ãƒ¼ãƒˆ
 		static uint m_sampleRate;
-		//ƒTƒuƒ~ƒbƒNƒXƒŒƒCƒ„[ƒJƒEƒ“ƒ^
+		//ã‚µãƒ–ãƒŸãƒƒã‚¯ã‚¹ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚«ã‚¦ãƒ³ã‚¿
 		static uint m_layerCounter;
 		//message lock
 		static std::atomic_bool m_lockMessages;
-		//audio thread I—¹ƒtƒ‰ƒO
+		//audio thread çµ‚äº†ãƒ•ãƒ©ã‚°
 		static std::atomic_bool m_isEndUpdate;
 	};
 
 
 	//----------------------------------------------------------------------------------
 	//[FindLayer]
-	//name‚ÌƒTƒuƒ~ƒbƒNƒXƒŒƒCƒ„[‚ğŒŸõ‚·‚é
-	//return: ‘¶İ‚µ‚Ä‚¢‚½ê‡layer‚Ìƒ|ƒCƒ“ƒ^, ‚È‚¢ê‡‚Í‹óƒ|ƒCƒ“ƒ^
-	//ˆø”1: ƒŒƒCƒ„[–¼
+	//nameã®ã‚µãƒ–ãƒŸãƒƒã‚¯ã‚¹ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’æ¤œç´¢ã™ã‚‹
+	//return: å­˜åœ¨ã—ã¦ã„ãŸå ´åˆlayerã®ãƒã‚¤ãƒ³ã‚¿, ãªã„å ´åˆã¯ç©ºãƒã‚¤ãƒ³ã‚¿
+	//å¼•æ•°1: ãƒ¬ã‚¤ãƒ¤ãƒ¼å
 	SharedPointer<Audio::SubmixLayer> Audio::FindLayer(const sgstring& name)
 	{
-		//Root•ªŠò
+		//Rootåˆ†å²
 		if (name == m_submixRootLayer->m_layerName) return m_submixRootLayer;
 		if (name == m_submixMonoralRootLayer->m_layerName) return m_submixRootLayer;
-		//ŒŸõ, ‚ ‚Á‚½‚çreturn
+		//æ¤œç´¢, ã‚ã£ãŸã‚‰return
 		for (auto& e : m_submixLayers)
 			if (name == e->m_layerName) return e;
-		//‚È‚¢‚Ì‚Å‹óƒ|ƒCƒ“ƒ^
+		//ãªã„ã®ã§ç©ºãƒã‚¤ãƒ³ã‚¿
 		return SharedPointer<Audio::SubmixLayer>();
 	}
 
 	//----------------------------------------------------------------------------------
 	//[SendAudioMessage]
-	//ƒƒbƒZ[ƒW‚ğ‘—M‚·‚é
-	//ˆø”1: message
+	//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ä¿¡ã™ã‚‹
+	//å¼•æ•°1: message
 	inline void Audio::SendAudioMessage(const Detail::Audio::AudioMessage& message)
 	{
 		AtomicOperation::LockAtomic(m_lockMessages);
@@ -449,25 +449,25 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[ChangeVolumeSmoothly]
-	//Ä¶‰¹—Ê‚ğtarget‚Ü‚ÅŠŠ‚ç‚©‚É•ÏX‚·‚é
-	//ˆø”1: •ÏXtarget
-	//ˆø”2: •ÏX‚É‚©‚¯‚é•b”
+	//å†ç”ŸéŸ³é‡ã‚’targetã¾ã§æ»‘ã‚‰ã‹ã«å¤‰æ›´ã™ã‚‹
+	//å¼•æ•°1: å¤‰æ›´target
+	//å¼•æ•°2: å¤‰æ›´ã«ã‹ã‘ã‚‹ç§’æ•°
 	inline void Audio::SubmixLayer::ChangeVolumeSmoothly(float target, float seconds)
 	{
 		using namespace Detail::Audio;
 
-		//Message—p
+		//Messageç”¨
 		AudioMessage message((MessageType::SmoothFlag | MessageType::AddSmoothSubmix));
-		//Œ»İ’l
+		//ç¾åœ¨å€¤
 		float volume = getVolume();
 
-		//Message‚Ì“Y•tî•ñ‚ğ‘ã“ü
+		//Messageã®æ·»ä»˜æƒ…å ±ã‚’ä»£å…¥
 		message.attachment.smoothSubmix.submixVoice = m_voice;
 		message.attachment.smoothSubmix.now = volume;
 		message.attachment.smoothSubmix.target = target;
 		message.attachment.smoothSubmix.speed = (target - volume) / seconds;
 		
-		//Message‘—M
+		//Messageé€ä¿¡
 		Audio::SendAudioMessage(message);
 	}
 }

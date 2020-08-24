@@ -12,7 +12,7 @@ namespace SGFramework
 	//BaseClasses
 	namespace BaseClass
 	{
-		//Polygon class‚ÌBase‚Æ‚È‚éBasePolygonX11 class
+		//Polygon classã®Baseã¨ãªã‚‹BasePolygonX11 class
 		class BasePolygonX11 : Administrator::GraphicsDetail::GraphicsObjectX11
 		{
 		public:
@@ -31,11 +31,11 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Sync]
-			//î•ñ‚ğ“¯Šú‚·‚é, ƒR[ƒ‹ƒoƒbƒNŠÖ”
+			//æƒ…å ±ã‚’åŒæœŸã™ã‚‹, ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 			inline void Sync() override;
 			//----------------------------------------------------------------------------------
 			//[CreateVertex]
-			//’¸“_ƒoƒbƒtƒ@‚ğì¬‚·‚é
+			//é ‚ç‚¹ãƒãƒƒãƒ•ã‚¡ã‚’ä½œæˆã™ã‚‹
 			inline void CreateVertex();
 	
 			//Vertex buffer
@@ -48,7 +48,7 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Sync]
-		//î•ñ‚ğ“¯Šú‚·‚é, ƒR[ƒ‹ƒoƒbƒNŠÖ”
+		//æƒ…å ±ã‚’åŒæœŸã™ã‚‹, ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 		inline void BasePolygonX11::Sync()
 		{
 			//Changed? -> Update Buffer
@@ -70,7 +70,7 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[CreateVertex]
-		//’¸“_ƒoƒbƒtƒ@‚ğì¬‚·‚é
+		//é ‚ç‚¹ãƒãƒƒãƒ•ã‚¡ã‚’ä½œæˆã™ã‚‹
 		inline void BasePolygonX11::CreateVertex()
 		{
 			//Init vertex position
@@ -103,7 +103,7 @@ namespace SGFramework
 		}
 	}
 
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		//GraphicsDetail namespace

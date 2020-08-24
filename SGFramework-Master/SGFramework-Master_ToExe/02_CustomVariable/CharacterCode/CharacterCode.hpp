@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ファイルの文字コード変換定数を列挙するCharacterCode namespace
+繝輔ぃ繧､繝ｫ縺ｮ譁�蟄励さ繝ｼ繝牙､画鋤螳壽焚繧貞�玲嫌縺吶ｋCharacterCode namespace
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_CHARACTER_CODE_HPP_
 #define SGFRAMEWORK_HEADER_CHARACTER_CODE_HPP_

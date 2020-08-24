@@ -8,29 +8,29 @@ public:
 
 	//----------------------------------------------------------------------------------
 	//[EnabledCallbacks]
-	//return: ©g‚ªCall‚³‚ê‚éCallback Flags, GameObject::CallbackFunctionsQÆ
+	//return: è‡ªèº«ãŒCallã•ã‚Œã‚‹Callback Flags, GameObject::CallbackFunctionså‚ç…§
 	inline uint EnableCallbacks() override { return CallbackFunctions::Awake | CallbackFunctions::MakeDrawCommand
 		| CallbackFunctions::Update | CallbackFunctions::FixedUpdate; }
 
 	//----------------------------------------------------------------------------------
 	//[Awake]
-	//ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½uŠÔ‚ÉŒÄ‚Î‚ê‚éCallbackŠÖ”
+	//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸç¬é–“ã«å‘¼ã°ã‚Œã‚‹Callbacké–¢æ•°
 	void Awake() override;
 
 	//----------------------------------------------------------------------------------
 	//[Update]
-	//–ˆƒtƒŒ[ƒ€UpdateƒuƒƒbƒN‚ÅCallback‚³‚ê‚éŠÖ”
+	//æ¯ãƒ•ãƒ¬ãƒ¼ãƒ Updateãƒ–ãƒ­ãƒƒã‚¯ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 	void Update();
 
 	//----------------------------------------------------------------------------------
 	//[FixedUpdate]
-	//’èŠú“I‚ÉŒÄ‚Î‚ê‚éFixedƒtƒŒ[ƒ€“à‚ÅUpdate‚Æ‚µ‚ÄCallback‚³‚ê‚éŠÖ”
+	//å®šæœŸçš„ã«å‘¼ã°ã‚Œã‚‹Fixedãƒ•ãƒ¬ãƒ¼ãƒ å†…ã§Updateã¨ã—ã¦Callbackã•ã‚Œã‚‹é–¢æ•°
 	void FixedUpdate() override;
 
 	//----------------------------------------------------------------------------------
 	//[MakeDrawCommand]
-	//Update, Sync, LateUpdate ƒuƒƒbƒNŒã‚ÉCallback‚³‚ê‚é,
-	//		DrawCommand‚ğì¬‚·‚é‚½‚ß‚ÌŠÖ”
+	//Update, Sync, LateUpdate ãƒ–ãƒ­ãƒƒã‚¯å¾Œã«Callbackã•ã‚Œã‚‹,
+	//		DrawCommandã‚’ä½œæˆã™ã‚‹ãŸã‚ã®é–¢æ•°
 	void MakeDrawCommand();
 
 private:

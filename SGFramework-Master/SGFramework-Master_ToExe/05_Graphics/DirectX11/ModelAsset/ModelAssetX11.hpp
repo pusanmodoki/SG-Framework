@@ -23,7 +23,7 @@ namespace SGFramework
 	class Animator;
 	class ModelNodeObject;
 
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ð‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		class AssetManager;
@@ -38,7 +38,7 @@ namespace SGFramework
 				friend SharedPointer<TAsset> Asset::InstantiateAsset(const sgstring& filePath, bool isRegisterSharedAsset);
 
 				//----------------------------------------------------------------------------------
-				//[ƒfƒXƒgƒ‰ƒNƒ^]
+				//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 				inline ~ModelAssetX11()
 				{
 					for (auto& e : m_meshs)
@@ -61,11 +61,11 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[Reload]
-				//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ðs‚¤
+				//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
 				void Reload() override;
 				//----------------------------------------------------------------------------------
 				//[Close]
-				//ƒtƒ@ƒCƒ‹‚ð•Â‚¶‚é
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 				void Close() override;
 
 				//get asset type (read function property)

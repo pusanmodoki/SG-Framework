@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-GUI‚ğŠÇ—‚·‚éGUI class
+GUIã‚’ç®¡ç†ã™ã‚‹GUI class
 ------------------------------------------------------------------------------------*/
 #include "GUI.hpp"
 #include "../08_Input/Input.hpp"
@@ -16,57 +16,57 @@ namespace SGFramework
 	//message color->FrameworkMessage
 	const ImColor GUI::m_cFrameworkMessageColor = { 0.1f, 0.9f, 0.9f, 1.0f };
 
-	//WindowProcedure—pğŒ•Ï”
+	//WindowProcedureç”¨æ¡ä»¶å¤‰æ•°
 	ConditionVariable::Auto GUI::m_copyCompletedCondition;
-	//Log—pDebugStream
+	//Logç”¨DebugStream
 	std::unordered_map<std::thread::id, GUI::DebugStream> GUI::m_debugStreams;
-	//Log—pConsoleMessage
+	//Logç”¨ConsoleMessage
 	std::vector<GUI::ConsoleMessage> GUI::m_drawConsoleMessages;
 	//Vertex shader
 	SharedPointer<Asset::VertexShaderAsset> GUI::m_vertexShader;
 	//Pixel shader
 	SharedPointer<Asset::PixelShaderAsset> GUI::m_pixelShader;
-	//WindowProcedure—p“ü—Íƒoƒbƒtƒ@
+	//WindowProcedureç”¨å…¥åŠ›ãƒãƒƒãƒ•ã‚¡
 	std::vector<uint> GUI::m_inputCharacters;
-	//ƒ}ƒEƒXƒJ[ƒ\ƒ‹•Ï”•Û‘¶ƒoƒbƒtƒ@
+	//ãƒã‚¦ã‚¹ã‚«ãƒ¼ã‚½ãƒ«å¤‰æ•°ä¿å­˜ãƒãƒƒãƒ•ã‚¡
 	ImGuiMouseCursor GUI::m_lastMouseCursor = ImGuiMouseCursor_COUNT;
-	//WindowProcedure—pƒzƒC[ƒ‹ƒoƒbƒtƒ@
+	//WindowProcedureç”¨ãƒ›ã‚¤ãƒ¼ãƒ«ãƒãƒƒãƒ•ã‚¡
 	float GUI::m_inputMouseWheel = 0.0f;
-	//true->•`‰æ
+	//true->æç”»
 	std::atomic_bool GUI::m_isDrawReady = false;
-	//true->ƒoƒbƒtƒ@ƒNƒŠƒA
+	//true->ãƒãƒƒãƒ•ã‚¡ã‚¯ãƒªã‚¢
 	std::atomic_bool GUI::m_isClearDebugStreams = false;
-	//true->GUI—LŒø
+	//true->GUIæœ‰åŠ¹
 	std::atomic_bool GUI::m_isUsing = false;
-	//WindowProcedure—pƒ}ƒEƒXƒ{ƒ^ƒ“ƒoƒbƒtƒ@
+	//WindowProcedureç”¨ãƒã‚¦ã‚¹ãƒœã‚¿ãƒ³ãƒãƒƒãƒ•ã‚¡
 	bool GUI::m_inputMouseDowns[5] = {};
-	//WindowProcedure—pƒL[ƒoƒbƒtƒ@
+	//WindowProcedureç”¨ã‚­ãƒ¼ãƒãƒƒãƒ•ã‚¡
 	bool GUI::m_inputKeyDowns[512] = {};
 
 
 	//----------------------------------------------------------------------------------
 	//[StratUp]
-	//‰Šú‰»‚·‚é
-	//ˆø”1: HWND
-	//ˆø”2: Load vertex shader path(Debug)
-	//ˆø”3: Load pixel shader path(Debug)
-	//ˆø”4: Load vertex shader path(Release)
-	//ˆø”5: Load pixel shader path(Release)
+	//åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: HWND
+	//å¼•æ•°2: Load vertex shader path(Debug)
+	//å¼•æ•°3: Load pixel shader path(Debug)
+	//å¼•æ•°4: Load vertex shader path(Release)
+	//å¼•æ•°5: Load pixel shader path(Release)
 	void GUI::StratUp(HWND hWnd, const ReadElement::Pack& vertexShaderDebugPath,
 		const ReadElement::Pack& pixelShaderDebugPath, const ReadElement::Pack& vertexShaderReleasePath,
 		const ReadElement::Pack& pixelShaderReleasePath, const ReadElement::Pack& isUsing,
 		const ReadElement::Pack& fontSizePerDpi)
 	{
-		//‰Šú‰»
+		//åˆæœŸåŒ–
 		m_isUsing = isUsing[0].valueInt != 0 ? true : false;
 
-		//Not Using->I—¹
+		//Not Using->çµ‚äº†
 		if (IS_FALSE(m_isUsing.load())) return;
 
-		//DebugStream“o˜^(Unknown)
+		//DebugStreamç™»éŒ²(Unknown)
 		RegisterDebugStream(L"UnknownThread of Framework", std::thread::id());
 
-		//ˆÈ‰º[End Pointe 1]‚Ü‚Åimgui-master->sumple‚ÌƒRƒs[
+		//ä»¥ä¸‹[End Pointe 1]ã¾ã§imgui-master->sumpleã®ã‚³ãƒ”ãƒ¼
 
 		IMGUI_CHECKVERSION();
 
@@ -106,13 +106,13 @@ namespace SGFramework
 
 		//[End Pointe 1]
 
-		//ƒtƒHƒ“ƒgƒTƒCƒY‚ÌŒvZ (scale * (dpi.x + dpi.y))
+		//ãƒ•ã‚©ãƒ³ãƒˆã‚µã‚¤ã‚ºã®è¨ˆç®— (scale * (dpi.x + dpi.y))
 		Vector2 toFloat = Graphics::screen.dpi->ToFloat();
 		float fontSize = fontSizePerDpi[0].valueFloat * ((toFloat.x + toFloat.y) * 0.5f);
-		//ƒƒCƒŠƒIİ’è
+		//ãƒ¡ã‚¤ãƒªã‚ªè¨­å®š
 		io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\meiryo.ttc", fontSize, nullptr, io.Fonts->GetGlyphRangesJapanese());
 
-		//StratUp Graphics (Debug or Release‚Åshader path‚ª•Ï‚í‚é‚Ì‚Å•ªŠò)
+		//StratUp Graphics (Debug or Releaseã§shader pathãŒå¤‰ã‚ã‚‹ã®ã§åˆ†å²)
 		try
 		{
 #if defined(DEBUG) || defined(_DEBUG)
@@ -128,19 +128,19 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ShutDown]
-	//I—¹ˆ—
+	//çµ‚äº†å‡¦ç†
 	void GUI::ShutDown()
 	{	
-		//Not Using->I—¹
+		//Not Using->çµ‚äº†
 		if (IS_FALSE(m_isUsing.load())) return;
 
-		//Update‚É“ü‚ç‚È‚­‚³‚¹‚é‚½‚ß‰Šú‰»
+		//Updateã«å…¥ã‚‰ãªãã•ã›ã‚‹ãŸã‚åˆæœŸåŒ–
 		AtomicOperation::Init(m_isDrawReady, false);
 		AtomicOperation::Init(m_isUsing, false);
-		//ƒXƒŒƒbƒhƒƒbƒN–h~‚Ì‚½‚ß‚±‚¿‚ç‚©‚ç‚àNotifyOne (GUI‚Ì‚İƒƒbƒN‚ª‘½”­‚µ‚½‚Ì‚Å‰‹}ˆ’u)
+		//ã‚¹ãƒ¬ãƒƒãƒ‰ãƒ­ãƒƒã‚¯é˜²æ­¢ã®ãŸã‚ã“ã¡ã‚‰ã‹ã‚‰ã‚‚NotifyOne (GUIã®ã¿ãƒ­ãƒƒã‚¯ãŒå¤šç™ºã—ãŸã®ã§å¿œæ€¥å‡¦ç½®)
 		m_copyCompletedCondition.NotifyOne();
 
-		//‚±‚±‚Å‚·‚®ƒRƒ“ƒeƒLƒXƒg‚ğÁ‚·‚ÆQÆƒGƒ‰[‚ğ‹N‚±‚·‰Â”\«‚ª‚ ‚é‚Ì‚Å­‚µ‘Ò‚Â
+		//ã“ã“ã§ã™ãã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã‚’æ¶ˆã™ã¨å‚ç…§ã‚¨ãƒ©ãƒ¼ã‚’èµ·ã“ã™å¯èƒ½æ€§ãŒã‚ã‚‹ã®ã§å°‘ã—å¾…ã¤
 		std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
 		//release shader
@@ -150,18 +150,18 @@ namespace SGFramework
 		//ShutDown Graphics 
 		ShutDownGraphicsX11();
 
-		//ƒRƒ“ƒeƒLƒXƒgíœ
+		//ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆå‰Šé™¤
 		ImGui::DestroyContext();
 	}
 
 	//----------------------------------------------------------------------------------
 	//[UpdateWindowProcedure]
-	//XV‚ğs‚¤ WindowProcedure ver
+	//æ›´æ–°ã‚’è¡Œã† WindowProcedure ver
 	void GUI::UpdateWindowProcedure()
 	{
 		ImGuiIO& io = ImGui::GetIO();
 
-		//ƒoƒbƒtƒ@‚©‚çImGui‚ÖƒRƒs[
+		//ãƒãƒƒãƒ•ã‚¡ã‹ã‚‰ImGuiã¸ã‚³ãƒ”ãƒ¼
 		io.MouseWheel = m_inputMouseWheel;
 		m_inputMouseWheel = 0.0f;
 		memcpy_s(io.MouseDown, 5, m_inputMouseDowns, 5);
@@ -170,21 +170,21 @@ namespace SGFramework
 			io.AddInputCharacter(e);
 		m_inputCharacters.clear();
 
-		//I—¹ƒCƒxƒ“ƒg
+		//çµ‚äº†ã‚¤ãƒ™ãƒ³ãƒˆ
 		m_copyCompletedCondition.NotifyOne();
 	}
 	//----------------------------------------------------------------------------------
 	//[ShutdownWindowProcedure]
-	//I—¹ˆ— (Window Procedure)
+	//çµ‚äº†å‡¦ç† (Window Procedure)
 	void GUI::ShutdownWindowProcedure()
 	{
-		//I—¹ƒCƒxƒ“ƒg, ƒƒCƒ“ƒXƒŒƒbƒh’â~–h~
+		//çµ‚äº†ã‚¤ãƒ™ãƒ³ãƒˆ, ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰åœæ­¢é˜²æ­¢
 		m_copyCompletedCondition.NotifyOne();
 	}
 
 	//----------------------------------------------------------------------------------
 	//[Sync]
-	//“¯Šú‚ğs‚¤
+	//åŒæœŸã‚’è¡Œã†
 	void GUI::Sync()
 	{
 		SyncDebugStream();
@@ -192,18 +192,18 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Update]
-	//XV‚ğs‚¤ (Graphics & Audio Thread)
+	//æ›´æ–°ã‚’è¡Œã† (Graphics & Audio Thread)
 	void GUI::Update()
 	{
-		//Not Using->I—¹
+		//Not Using->çµ‚äº†
 		if (IS_FALSE(m_isUsing)) return;
 		
-		//ˆÈ‰ºƒŠƒl[ƒ€‚âáŠ±‚ÌC³‚ª‚ ‚é‚à‚Ì‚ÌŠî–{“I‚É‚Íimgui-master->sumple‚ÌƒRƒs[
+		//ä»¥ä¸‹ãƒªãƒãƒ¼ãƒ ã‚„è‹¥å¹²ã®ä¿®æ­£ãŒã‚ã‚‹ã‚‚ã®ã®åŸºæœ¬çš„ã«ã¯imgui-master->sumpleã®ã‚³ãƒ”ãƒ¼
 
 		ImGuiIO& io = ImGui::GetIO();
 		IM_ASSERT(io.Fonts->IsBuilt() && "Font atlas not built! It is generally built by the renderer back-end. Missing call to renderer _NewFrame() function? e.g. ImGui_ImplOpenGL3_NewFrame().");
 
-		//XVƒƒbƒZ[ƒW‘—M
+		//æ›´æ–°ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡
 		SendNotifyMessage(SGFramework::Window::HwndHolder::main, WM_SGFRAMEWORK_UPDATE_GUI, 0, 0);
 
 		// Setup display size (every frame to accommodate for window resizing)
@@ -224,7 +224,7 @@ namespace SGFramework
 		//Update OS mouse position
 		UpdateMousePosition();
 
-		//Œ»İ‚Íg—p‚µ‚Ä‚¢‚È‚¢«
+		//ç¾åœ¨ã¯ä½¿ç”¨ã—ã¦ã„ãªã„â†“
 
 		// Update OS mouse cursor with the cursor requested by imgui
 		//ImGuiMouseCursor mouse_cursor = io.MouseDrawCursor ? ImGuiMouseCursor_None : ImGui::GetMouseCursor();
@@ -237,7 +237,7 @@ namespace SGFramework
 		//Update OS joystick
 		UpdateJoystick();
 
-		//WindowProcedure‚ÌXVI—¹‚ğ‘Ò‹@
+		//WindowProcedureã®æ›´æ–°çµ‚äº†ã‚’å¾…æ©Ÿ
 		m_copyCompletedCondition.Wait();
 
 		//gui new frame
@@ -248,10 +248,10 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[UpdateMousePosition]
-	//ƒ}ƒEƒXƒ|ƒWƒVƒ‡ƒ“‚ÌXV‚ğs‚¤
+	//ãƒã‚¦ã‚¹ãƒã‚¸ã‚·ãƒ§ãƒ³ã®æ›´æ–°ã‚’è¡Œã†
 	void GUI::UpdateMousePosition()
 	{
-		//ˆÈ‰ºƒŠƒl[ƒ€‚âáŠ±‚ÌC³‚ª‚ ‚é‚à‚Ì‚ÌŠî–{“I‚É‚Íimgui-master->sumple‚ÌƒRƒs[
+		//ä»¥ä¸‹ãƒªãƒãƒ¼ãƒ ã‚„è‹¥å¹²ã®ä¿®æ­£ãŒã‚ã‚‹ã‚‚ã®ã®åŸºæœ¬çš„ã«ã¯imgui-master->sumpleã®ã‚³ãƒ”ãƒ¼
 		ImGuiIO& io = ImGui::GetIO();
 
 		// Set OS mouse position if requested (rarely used, only when ImGuiConfigFlags_NavEnableSetMousePos is enabled by user)
@@ -272,10 +272,10 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[UpdateMouseCousor]
-	//ƒ}ƒEƒXƒJ[ƒ\ƒ‹‚ÌXV‚ğs‚¤
+	//ãƒã‚¦ã‚¹ã‚«ãƒ¼ã‚½ãƒ«ã®æ›´æ–°ã‚’è¡Œã†
 	bool GUI::UpdateMouseCousor()
 	{
-		//ˆÈ‰ºƒŠƒl[ƒ€‚âáŠ±‚ÌC³‚ª‚ ‚é‚à‚Ì‚ÌŠî–{“I‚É‚Íimgui-master->sumple‚ÌƒRƒs[
+		//ä»¥ä¸‹ãƒªãƒãƒ¼ãƒ ã‚„è‹¥å¹²ã®ä¿®æ­£ãŒã‚ã‚‹ã‚‚ã®ã®åŸºæœ¬çš„ã«ã¯imgui-master->sumpleã®ã‚³ãƒ”ãƒ¼
 		ImGuiIO& io = ImGui::GetIO();
 		if (io.ConfigFlags & ImGuiConfigFlags_NoMouseCursorChange)
 			return false;
@@ -308,10 +308,10 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[UpdateJoystick]
-	//Joystick‚ÌXV‚ğs‚¤
+	//Joystickã®æ›´æ–°ã‚’è¡Œã†
 	void GUI::UpdateJoystick()
 	{
-		//ˆÈ‰ºInput‚É‡‚í‚¹‚ÄC³‚ª‚ ‚é‚à‚Ì‚ÌŠî–{“I‚É‚Íimgui-master->sumple‚ÌƒRƒs[
+		//ä»¥ä¸‹Inputã«åˆã‚ã›ã¦ä¿®æ­£ãŒã‚ã‚‹ã‚‚ã®ã®åŸºæœ¬çš„ã«ã¯imgui-master->sumpleã®ã‚³ãƒ”ãƒ¼
 
 #ifndef IMGUI_IMPL_WIN32_DISABLE_GAMEPAD
 		if (IS_FALSE(Input::Joystick::isUseJoystick())) return;
@@ -360,10 +360,10 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[DrawGUI]
-	//•`‰æ‚ğs‚¤
+	//æç”»ã‚’è¡Œã†
 	void GUI::DrawGUI()
 	{
-		//Not Using or Not DrawReady->I—¹
+		//Not Using or Not DrawReady->çµ‚äº†
 		if (IS_FALSE(m_isUsing.load() & m_isDrawReady.load())) return;
 
 		DrawDebugStream();

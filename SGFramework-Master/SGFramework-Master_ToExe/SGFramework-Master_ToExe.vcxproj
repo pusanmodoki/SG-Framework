@@ -141,7 +141,6 @@
     <ClInclude Include="02_CustomVariable\Matrix\Matrix.hpp" />
     <ClInclude Include="02_CustomVariable\Object\Object.hpp" />
     <ClInclude Include="02_CustomVariable\PhysicsFlags\PhysicsFlags.hpp" />
-    <ClInclude Include="02_CustomVariable\Pointer\Allocator.hpp" />
     <ClInclude Include="02_CustomVariable\Pointer\BasePointer.hpp" />
     <ClInclude Include="02_CustomVariable\Pointer\ClonePointer.hpp" />
     <ClInclude Include="02_CustomVariable\Pointer\GarbageCollector.hpp" />

@@ -1,4 +1,4 @@
-RigidBody‚È‚ÇPhysics->OnEnable, Disable
+RigidBodyãªã©Physics->OnEnable, Disable
 
 
 
@@ -10,10 +10,10 @@ RigidBody‚È‚ÇPhysics->OnEnable, Disable
 SyncObject, SyncSystem
 
 Sync Callback
-Sync Value -> static—p, sync“¯Šú
+Sync Value -> staticç”¨, syncæ™‚åŒæœŸ
 
 
-collider->rigid bodyŒŸõ & addchildren‘Îô
+collider->rigid bodyæ¤œç´¢ & addchildrenå¯¾ç­–
 addchirdren callback
 comment
 
@@ -22,16 +22,16 @@ comment
 Time tm
 AssetPackageClass
 
-Vector, Quaternion‚È‚Çˆê•”ŠÖ”’¼‘‚«
+Vector, Quaternionãªã©ä¸€éƒ¨é–¢æ•°ç›´æ›¸ã
 
 
 Polygon
 ClonePointer
 Transform->ClonePointer
 
-Transform“®ìŠm”F‚Ü‚¾
-WinMain‚ÉModel‚¿‚å‚Á‚Æ‘‚¢‚Ä‚é
-Node‚É’¼ÚMeshRendrer“I‚È‚Ì‚­‚Á‚Â‚¯‚é‚©”Û‚©
+Transformå‹•ä½œç¢ºèªã¾ã 
+WinMainã«Modelã¡ã‚‡ã£ã¨æ›¸ã„ã¦ã‚‹
+Nodeã«ç›´æ¥MeshRendrerçš„ãªã®ãã£ã¤ã‘ã‚‹ã‹å¦ã‹
 
 01_LibraryImport
 02_CustomVariable
@@ -49,17 +49,17 @@ Node‚É’¼ÚMeshRendrer“I‚È‚Ì‚­‚Á‚Â‚¯‚é‚©”Û‚©
 14_GameObject
 
 
-ƒXƒŒƒbƒhŠ„“–
+ã‚¹ãƒ¬ãƒƒãƒ‰å‰²å½“
 
-1-WinMainƒXƒŒƒbƒh & Audio, Graphicsˆ—ƒXƒŒƒbƒh
+1-WinMainã‚¹ãƒ¬ãƒƒãƒ‰ & Audio, Graphicså‡¦ç†ã‚¹ãƒ¬ãƒƒãƒ‰
 2-AppMain
-c‚è-”Ä—p
+æ®‹ã‚Š-æ±ç”¨
 
-d‚Ë‚ÄŠ„“–->‡”Ô‚ÉŠ„“–
-Debugê—p->AssetManager
+é‡ã­ã¦å‰²å½“->é †ç•ªã«å‰²å½“
+Debugå°‚ç”¨->AssetManager
 Audio->Streaming
 
-//Rendrer‚Éƒoƒbƒtƒ@‚½‚¹‚æ‚¤
+//Rendrerã«ãƒãƒƒãƒ•ã‚¡æŒãŸã›ã‚ˆã†
 
 
 //		uint sceneID;

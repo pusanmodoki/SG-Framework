@@ -1,7 +1,7 @@
 /*----------------------------------------------------------------------------------
-4‚Â‚Ìint’l‚ğˆµ‚¦‚éVector4Int \‘¢‘Ì
-Å‚à‘½—p‚·‚é\‘¢‘ÌƒVƒŠ[ƒY‚Ì1‚Â‚È‚Ì‚Å•Ê©ìVector‚ªŠÖŒW‚È‚¢‚à‚Ì‚Í‘S‚ÄinlineÀ‘•
-	¨ŠÖ”‚ğ‹Lq‚µ‚½Vector4Int.cpp
+4ã¤ã®intå€¤ã‚’æ‰±ãˆã‚‹Vector4Int æ§‹é€ ä½“
+æœ€ã‚‚å¤šç”¨ã™ã‚‹æ§‹é€ ä½“ã‚·ãƒªãƒ¼ã‚ºã®1ã¤ãªã®ã§åˆ¥è‡ªä½œVectorãŒé–¢ä¿‚ãªã„ã‚‚ã®ã¯å…¨ã¦inlineå®Ÿè£…
+	â†’é–¢æ•°ã‚’è¨˜è¿°ã—ãŸVector4Int.cpp
 ------------------------------------------------------------------------------------*/
 #include "Vector4Int.hpp"
 #include "../../Vector2/Int/Vector2Int.hpp"
@@ -13,9 +13,9 @@
 namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: Vector4
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: Vector4
 	Vector4Int::Vector4Int(const Vector4 & vec)
 	{
 		this->x = static_cast<int>(vec.x);		this->y = static_cast<int>(vec.y);
@@ -24,41 +24,41 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[ToFloat]
-	//Vector4‚É•ÏŠ·‚ğs‚¤
-	//return: Vector4‚É•ÏŠ·‚µ‚½this
+	//Vector4ã«å¤‰æ›ã‚’è¡Œã†
+	//return: Vector4ã«å¤‰æ›ã—ãŸthis
 	Vector4 Vector4Int::ToFloat() const
 	{
 		return Vector4(static_cast<float>(x), static_cast<float>(y),
 			static_cast<float>(z), static_cast<float>(w));
 	}
 
-	//Vector2IntƒIƒyƒŒ[ƒ^[
+	//Vector2Intã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector4Int::operator Vector2Int() const { return Vector2Int(x, y); }
-	//Vector3IntƒIƒyƒŒ[ƒ^[
+	//Vector3Intã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector4Int::operator Vector3Int() const { return Vector3Int(x, y, z); }
 
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector4Int& Vector4Int::operator=(const Vector2Int& vec)
 	{
 		this->x = vec.x;		this->y = vec.y;
 		this->z = 0;		this->w = 0;
 		return *this;
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector4Int& Vector4Int::operator=(const Vector3Int& vec)
 	{
 		this->x = vec.x;		this->y = vec.y;
 		this->z = vec.z;		this->w = 0;
 		return *this;
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector4Int& Vector4Int::operator = (const Vector4& vec)
 	{
 		this->x = static_cast<int>(vec.x); this->y = static_cast<int>(vec.y);
 		this->z = static_cast<int>(vec.z); this->w = static_cast<int>(vec.w);
 		return *this;
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector4Int & Vector4Int::operator=(const Vector4Ref & vec)
 	{
 		this->x = static_cast<int>(vec.x); this->y = static_cast<int>(vec.y);

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-std namespace‚Éstring‚ğ‘€ì‚·‚éŠÖ”‚ğ’Ç‰Á‚·‚éStdStringFunction.h
+std namespaceã«stringã‚’æ“ä½œã™ã‚‹é–¢æ•°ã‚’è¿½åŠ ã™ã‚‹StdStringFunction.h
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_STD_STRING_FUNCTION_HPP_
 #define SGFRAMEWORK_HEADER_STD_STRING_FUNCTION_HPP_
@@ -9,28 +9,28 @@ std namespace‚Éstring‚ğ‘€ì‚·‚éŠÖ”‚ğ’Ç‰Á‚·‚éStdStringFunction.h
 #include <ostream>
 #include <sstream>
 
-//stdƒNƒ‰ƒXŠg’£
+//stdã‚¯ãƒ©ã‚¹æ‹¡å¼µ
 namespace std_expansion
 {
 	//----------------------------------------------------------------------------------
 	//[split]
-	//string•Ï”‚©‚ç•¡”‚Ì—v‘f‚ğ•ªŠ„‚·‚é
-	//•ªŠ„‚µ‚½Œ‹‰Ê‚ğ•Ô‚è’l‚Å•Ô‹p,QÆ“n‚µ‚Å•ÏX‚·‚éƒI[ƒo[ƒ[ƒh‚ ‚è
-	//ˆø”1: •ªŠ„‚·‚éstring
-	//ˆø”2: •ªŠ„‚·‚é‹æØ‚è•¶š
-	//ˆø”3: ‰üs‚ğíœ‚·‚é‚©
+	//stringå¤‰æ•°ã‹ã‚‰è¤‡æ•°ã®è¦ç´ ã‚’åˆ†å‰²ã™ã‚‹
+	//åˆ†å‰²ã—ãŸçµæœã‚’è¿”ã‚Šå€¤ã§è¿”å´,å‚ç…§æ¸¡ã—ã§å¤‰æ›´ã™ã‚‹ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰ã‚ã‚Š
+	//å¼•æ•°1: åˆ†å‰²ã™ã‚‹string
+	//å¼•æ•°2: åˆ†å‰²ã™ã‚‹åŒºåˆ‡ã‚Šæ–‡å­—
+	//å¼•æ•°3: æ”¹è¡Œã‚’å‰Šé™¤ã™ã‚‹ã‹
 	inline std::vector<std::string> split(const std::string& splitString, char delimiter, bool isNewLineDelete)
 	{
-		std::vector<std::string> ret;					//•Ô‚è’l
-		std::string getString = splitString;			//•ªŠ„‚·‚éstring
-		std::string buf;									//getline—p‚Ìƒoƒbƒtƒ@
-		std::stringstream sStream(getString);	//getline—p‚Ìstream
+		std::vector<std::string> ret;					//è¿”ã‚Šå€¤
+		std::string getString = splitString;			//åˆ†å‰²ã™ã‚‹string
+		std::string buf;									//getlineç”¨ã®ãƒãƒƒãƒ•ã‚¡
+		std::stringstream sStream(getString);	//getlineç”¨ã®stream
 
-		//‰üsíœ = true ‚ÅÅŒã‚Ì•¶š‚ª‰üs‚È‚çíœ
+		//æ”¹è¡Œå‰Šé™¤ = true ã§æœ€å¾Œã®æ–‡å­—ãŒæ”¹è¡Œãªã‚‰å‰Šé™¤
 		if (isNewLineDelete && getString[getString.size() - 1] == '\n')
 			getString[getString.size() - 1] = '\0';
 
-		//‹æØ‚è•¶š‚ğ‚à‚Æ‚É—v‘fæ“¾‚ğs‚¢—v‘f‚ğstring vector‚É’Ç‰Á
+		//åŒºåˆ‡ã‚Šæ–‡å­—ã‚’ã‚‚ã¨ã«è¦ç´ å–å¾—ã‚’è¡Œã„è¦ç´ ã‚’string vectorã«è¿½åŠ 
 		while (std::getline(sStream, buf, delimiter))
 		{
 			ret.emplace_back(buf);
@@ -40,23 +40,23 @@ namespace std_expansion
 	}
 	//----------------------------------------------------------------------------------
 	//[split]
-	//string•Ï”‚©‚ç•¡”‚Ì—v‘f‚ğ•ªŠ„‚·‚é
-	//QÆ“n‚µ‚Ìˆø”2‚É‘‚«‚Ş,•Ô‚è’l‚É‚·‚éƒI[ƒo[ƒ[ƒh‚ ‚è
-	//ˆø”1: •ªŠ„‚·‚éstring
-	//ˆø”2: Œ‹‰Ê‚ğ‘‚«‚Şstring vector
-	//ˆø”2: •ªŠ„‚·‚é‹æØ‚è•¶š
-	//ˆø”3: ‰üs‚ğíœ‚·‚é‚©
+	//stringå¤‰æ•°ã‹ã‚‰è¤‡æ•°ã®è¦ç´ ã‚’åˆ†å‰²ã™ã‚‹
+	//å‚ç…§æ¸¡ã—ã®å¼•æ•°2ã«æ›¸ãè¾¼ã‚€,è¿”ã‚Šå€¤ã«ã™ã‚‹ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰ã‚ã‚Š
+	//å¼•æ•°1: åˆ†å‰²ã™ã‚‹string
+	//å¼•æ•°2: çµæœã‚’æ›¸ãè¾¼ã‚€string vector
+	//å¼•æ•°2: åˆ†å‰²ã™ã‚‹åŒºåˆ‡ã‚Šæ–‡å­—
+	//å¼•æ•°3: æ”¹è¡Œã‚’å‰Šé™¤ã™ã‚‹ã‹
 	inline void split(const std::string& splitString, std::vector<std::string>& compString, char delimiter, bool isNewLineDelete)
 	{
-		std::string getString = splitString;		//•ªŠ„‚·‚éstring
-		std::string buf;									//getline—p‚Ìƒoƒbƒtƒ@
-		std::stringstream sStream(getString);	//getline—p‚Ìstream
+		std::string getString = splitString;		//åˆ†å‰²ã™ã‚‹string
+		std::string buf;									//getlineç”¨ã®ãƒãƒƒãƒ•ã‚¡
+		std::stringstream sStream(getString);	//getlineç”¨ã®stream
 
-		//‰üsíœ = true ‚ÅÅŒã‚Ì•¶š‚ª‰üs‚È‚çíœ
+		//æ”¹è¡Œå‰Šé™¤ = true ã§æœ€å¾Œã®æ–‡å­—ãŒæ”¹è¡Œãªã‚‰å‰Šé™¤
 		if (isNewLineDelete && getString[getString.size() - 1] == '\n')
 			getString[getString.size() - 1] = '\0';
 
-		//‹æØ‚è•¶š‚ğ‚à‚Æ‚É—v‘fæ“¾‚ğs‚¢—v‘f‚ğstring vector‚É’Ç‰Á
+		//åŒºåˆ‡ã‚Šæ–‡å­—ã‚’ã‚‚ã¨ã«è¦ç´ å–å¾—ã‚’è¡Œã„è¦ç´ ã‚’string vectorã«è¿½åŠ 
 		while (std::getline(sStream, buf, delimiter))
 		{
 			compString.emplace_back(buf);
@@ -64,68 +64,68 @@ namespace std_expansion
 	}
 	//----------------------------------------------------------------------------------
 	//[join]
-	//string vector‚Ì•¡”‚Ì—v‘f‚ğ1‚Â‚Ìstring˜AŒ‹‚·‚é
-	//•ªŠ„‚µ‚½Œ‹‰Ê‚ğ•Ô‚è’l‚Å•Ô‹p,QÆ“n‚µ‚Å•ÏX‚·‚éƒI[ƒo[ƒ[ƒh‚ ‚è
-	//ˆø”1: ˜AŒ‹‚·‚éstring vector
-	//ˆø”2: —v‘f‚²‚Æ‚Ì‹æØ‚è•¶š
-	//ˆø”3: Œ‹‰Ê‚ÌÅŒã‚É‰üs‚ğ’Ç‰Á‚·‚é‚©
+	//string vectorã®è¤‡æ•°ã®è¦ç´ ã‚’1ã¤ã®stringé€£çµã™ã‚‹
+	//åˆ†å‰²ã—ãŸçµæœã‚’è¿”ã‚Šå€¤ã§è¿”å´,å‚ç…§æ¸¡ã—ã§å¤‰æ›´ã™ã‚‹ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰ã‚ã‚Š
+	//å¼•æ•°1: é€£çµã™ã‚‹string vector
+	//å¼•æ•°2: è¦ç´ ã”ã¨ã®åŒºåˆ‡ã‚Šæ–‡å­—
+	//å¼•æ•°3: çµæœã®æœ€å¾Œã«æ”¹è¡Œã‚’è¿½åŠ ã™ã‚‹ã‹
 	inline std::string join(std::vector<std::string>& joinString, char delimiter, bool isNewLine)
 	{
-		std::ostringstream oString;		//getline—p‚Ìstream
-		//stream‚É—v‘f + ‹æØ‚è•¶š‚Å˜AŒ‹
+		std::ostringstream oString;		//getlineç”¨ã®stream
+		//streamã«è¦ç´  + åŒºåˆ‡ã‚Šæ–‡å­—ã§é€£çµ
 		std::copy(joinString.begin(), joinString.end(), std::ostream_iterator<std::string>(oString, &delimiter));
-		std::string ret = oString.str();	//•Ô‚è’l‚É‘ã“ü
+		std::string ret = oString.str();	//è¿”ã‚Šå€¤ã«ä»£å…¥
 
-		//ret‚ª—v‘f‚ ‚è‚È‚çÅŒã‚Ì‹æØ‚è•¶šíœ
+		//retãŒè¦ç´ ã‚ã‚Šãªã‚‰æœ€å¾Œã®åŒºåˆ‡ã‚Šæ–‡å­—å‰Šé™¤
 		if (ret.size())		ret.erase(ret.size() - std::char_traits<char>::length(&delimiter));
-		//ret‚ª—v‘f‚ ‚è & Œ‹‰Ê‚ÌÅŒã‚É‰üs = true‚È‚çÅŒã‚É‰üs’Ç‰Á
+		//retãŒè¦ç´ ã‚ã‚Š & çµæœã®æœ€å¾Œã«æ”¹è¡Œ = trueãªã‚‰æœ€å¾Œã«æ”¹è¡Œè¿½åŠ 
 		if (ret.size() && isNewLine) ret.push_back('\n');
 		return ret;
 	}
 	//----------------------------------------------------------------------------------
 	//[join]
-	//string vector‚Ì•¡”‚Ì—v‘f‚ğ1‚Â‚Ìstring˜AŒ‹‚·‚é
-	//QÆ“n‚µ‚Ìˆø”2‚É‘‚«‚Ş,•Ô‚è’l‚É‚·‚éƒI[ƒo[ƒ[ƒh‚ ‚è
-	//ˆø”1: ˜AŒ‹‚·‚éstring vector
-	//ˆø”2: Œ‹‰Ê‚ğ‘‚«‚Şstring
-	//ˆø”3: —v‘f‚²‚Æ‚Ì‹æØ‚è•¶š
-	//ˆø”4: Œ‹‰Ê‚ÌÅŒã‚É‰üs‚ğ’Ç‰Á‚·‚é‚©
+	//string vectorã®è¤‡æ•°ã®è¦ç´ ã‚’1ã¤ã®stringé€£çµã™ã‚‹
+	//å‚ç…§æ¸¡ã—ã®å¼•æ•°2ã«æ›¸ãè¾¼ã‚€,è¿”ã‚Šå€¤ã«ã™ã‚‹ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰ã‚ã‚Š
+	//å¼•æ•°1: é€£çµã™ã‚‹string vector
+	//å¼•æ•°2: çµæœã‚’æ›¸ãè¾¼ã‚€string
+	//å¼•æ•°3: è¦ç´ ã”ã¨ã®åŒºåˆ‡ã‚Šæ–‡å­—
+	//å¼•æ•°4: çµæœã®æœ€å¾Œã«æ”¹è¡Œã‚’è¿½åŠ ã™ã‚‹ã‹
 	inline void join(std::vector<std::string>& joinString, std::string & compString,
 		char delimiter, bool isNewLine)
 	{
-		std::ostringstream oString;		//getline—p‚Ìstream
-		//stream‚É—v‘f + ‹æØ‚è•¶š‚Å˜AŒ‹
+		std::ostringstream oString;		//getlineç”¨ã®stream
+		//streamã«è¦ç´  + åŒºåˆ‡ã‚Šæ–‡å­—ã§é€£çµ
 		std::copy(joinString.begin(), joinString.end(), std::ostream_iterator<std::string>(oString, &delimiter));
-		//Œ‹‰Ê‘ã“ü‘O‚ÉƒTƒCƒY‚ ‚è‚È‚çƒNƒŠƒA
+		//çµæœä»£å…¥å‰ã«ã‚µã‚¤ã‚ºã‚ã‚Šãªã‚‰ã‚¯ãƒªã‚¢
 		if (compString.size())	compString.clear();
-		compString = oString.str();		//Œ‹‰Ê‚ğ‘ã“ü
+		compString = oString.str();		//çµæœã‚’ä»£å…¥
 
-		//Œ‹‰Ê‚ª—v‘f‚ ‚è‚È‚çÅŒã‚Ì‹æØ‚è•¶šíœ
+		//çµæœãŒè¦ç´ ã‚ã‚Šãªã‚‰æœ€å¾Œã®åŒºåˆ‡ã‚Šæ–‡å­—å‰Šé™¤
 		if (compString.size())	compString.erase(compString.size() - std::char_traits<char>::length(&delimiter));
-		//ret‚ª—v‘f‚ ‚è & Œ‹‰Ê‚ÌÅŒã‚É‰üs = true‚È‚çÅŒã‚É‰üs’Ç‰Á	
+		//retãŒè¦ç´ ã‚ã‚Š & çµæœã®æœ€å¾Œã«æ”¹è¡Œ = trueãªã‚‰æœ€å¾Œã«æ”¹è¡Œè¿½åŠ 	
 		if (compString.size() && isNewLine) compString.push_back('\n');
 	}
 
 
 	//----------------------------------------------------------------------------------
 	//[split]
-	//string•Ï”‚©‚ç•¡”‚Ì—v‘f‚ğ•ªŠ„‚·‚é
-	//•ªŠ„‚µ‚½Œ‹‰Ê‚ğ•Ô‚è’l‚Å•Ô‹p,QÆ“n‚µ‚Å•ÏX‚·‚éƒI[ƒo[ƒ[ƒh‚ ‚è
-	//ˆø”1: •ªŠ„‚·‚éstring
-	//ˆø”2: •ªŠ„‚·‚é‹æØ‚è•¶š
-	//ˆø”3: ‰üs‚ğíœ‚·‚é‚©
+	//stringå¤‰æ•°ã‹ã‚‰è¤‡æ•°ã®è¦ç´ ã‚’åˆ†å‰²ã™ã‚‹
+	//åˆ†å‰²ã—ãŸçµæœã‚’è¿”ã‚Šå€¤ã§è¿”å´,å‚ç…§æ¸¡ã—ã§å¤‰æ›´ã™ã‚‹ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰ã‚ã‚Š
+	//å¼•æ•°1: åˆ†å‰²ã™ã‚‹string
+	//å¼•æ•°2: åˆ†å‰²ã™ã‚‹åŒºåˆ‡ã‚Šæ–‡å­—
+	//å¼•æ•°3: æ”¹è¡Œã‚’å‰Šé™¤ã™ã‚‹ã‹
 	inline std::vector<std::wstring> split(const std::wstring& splitString, wchar_t delimiter, bool isNewLineDelete)
 	{
-		std::vector<std::wstring> ret;				//•Ô‚è’l
-		std::wstring getString = splitString;			//•ªŠ„‚·‚éstring
-		std::wstring buf;									//getline—p‚Ìƒoƒbƒtƒ@
-		std::wstringstream sStream(getString);	//getline—p‚Ìstream
+		std::vector<std::wstring> ret;				//è¿”ã‚Šå€¤
+		std::wstring getString = splitString;			//åˆ†å‰²ã™ã‚‹string
+		std::wstring buf;									//getlineç”¨ã®ãƒãƒƒãƒ•ã‚¡
+		std::wstringstream sStream(getString);	//getlineç”¨ã®stream
 
-		//‰üsíœ = true ‚ÅÅŒã‚Ì•¶š‚ª‰üs‚È‚çíœ
+		//æ”¹è¡Œå‰Šé™¤ = true ã§æœ€å¾Œã®æ–‡å­—ãŒæ”¹è¡Œãªã‚‰å‰Šé™¤
 		if (isNewLineDelete && getString[getString.size() - 1] == '\n')
 			getString[getString.size() - 1] = '\0';
 
-		//‹æØ‚è•¶š‚ğ‚à‚Æ‚É—v‘fæ“¾‚ğs‚¢—v‘f‚ğstring vector‚É’Ç‰Á
+		//åŒºåˆ‡ã‚Šæ–‡å­—ã‚’ã‚‚ã¨ã«è¦ç´ å–å¾—ã‚’è¡Œã„è¦ç´ ã‚’string vectorã«è¿½åŠ 
 		while (std::getline(sStream, buf, delimiter))
 		{
 			ret.emplace_back(buf);
@@ -135,23 +135,23 @@ namespace std_expansion
 	}
 	//----------------------------------------------------------------------------------
 	//[split]
-	//string•Ï”‚©‚ç•¡”‚Ì—v‘f‚ğ•ªŠ„‚·‚é
-	//QÆ“n‚µ‚Ìˆø”2‚É‘‚«‚Ş,•Ô‚è’l‚É‚·‚éƒI[ƒo[ƒ[ƒh‚ ‚è
-	//ˆø”1: •ªŠ„‚·‚éstring
-	//ˆø”2: Œ‹‰Ê‚ğ‘‚«‚Şstring vector
-	//ˆø”2: •ªŠ„‚·‚é‹æØ‚è•¶š
-	//ˆø”3: ‰üs‚ğíœ‚·‚é‚©
+	//stringå¤‰æ•°ã‹ã‚‰è¤‡æ•°ã®è¦ç´ ã‚’åˆ†å‰²ã™ã‚‹
+	//å‚ç…§æ¸¡ã—ã®å¼•æ•°2ã«æ›¸ãè¾¼ã‚€,è¿”ã‚Šå€¤ã«ã™ã‚‹ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰ã‚ã‚Š
+	//å¼•æ•°1: åˆ†å‰²ã™ã‚‹string
+	//å¼•æ•°2: çµæœã‚’æ›¸ãè¾¼ã‚€string vector
+	//å¼•æ•°2: åˆ†å‰²ã™ã‚‹åŒºåˆ‡ã‚Šæ–‡å­—
+	//å¼•æ•°3: æ”¹è¡Œã‚’å‰Šé™¤ã™ã‚‹ã‹
 	inline void split(const std::wstring& splitString, std::vector<std::wstring>& compString, wchar_t delimiter, bool isNewLineDelete)
 	{
-		std::wstring getString = splitString;			//•ªŠ„‚·‚éstring
-		std::wstring buf;									//getline—p‚Ìƒoƒbƒtƒ@
-		std::wstringstream sStream(getString);	//getline—p‚Ìstream
+		std::wstring getString = splitString;			//åˆ†å‰²ã™ã‚‹string
+		std::wstring buf;									//getlineç”¨ã®ãƒãƒƒãƒ•ã‚¡
+		std::wstringstream sStream(getString);	//getlineç”¨ã®stream
 
-		//‰üsíœ = true ‚ÅÅŒã‚Ì•¶š‚ª‰üs‚È‚çíœ
+		//æ”¹è¡Œå‰Šé™¤ = true ã§æœ€å¾Œã®æ–‡å­—ãŒæ”¹è¡Œãªã‚‰å‰Šé™¤
 		if (isNewLineDelete && getString[getString.size() - 1] == '\n')
 			getString[getString.size() - 1] = '\0';
 
-		//‹æØ‚è•¶š‚ğ‚à‚Æ‚É—v‘fæ“¾‚ğs‚¢—v‘f‚ğstring vector‚É’Ç‰Á
+		//åŒºåˆ‡ã‚Šæ–‡å­—ã‚’ã‚‚ã¨ã«è¦ç´ å–å¾—ã‚’è¡Œã„è¦ç´ ã‚’string vectorã«è¿½åŠ 
 		while (std::getline(sStream, buf, delimiter))
 		{
 			compString.emplace_back(buf);
@@ -159,45 +159,45 @@ namespace std_expansion
 	}
 	//----------------------------------------------------------------------------------
 	//[join]
-	//string vector‚Ì•¡”‚Ì—v‘f‚ğ1‚Â‚Ìstring˜AŒ‹‚·‚é
-	//•ªŠ„‚µ‚½Œ‹‰Ê‚ğ•Ô‚è’l‚Å•Ô‹p,QÆ“n‚µ‚Å•ÏX‚·‚éƒI[ƒo[ƒ[ƒh‚ ‚è
-	//ˆø”1: ˜AŒ‹‚·‚éstring vector
-	//ˆø”2: —v‘f‚²‚Æ‚Ì‹æØ‚è•¶š
-	//ˆø”3: Œ‹‰Ê‚ÌÅŒã‚É‰üs‚ğ’Ç‰Á‚·‚é‚©
+	//string vectorã®è¤‡æ•°ã®è¦ç´ ã‚’1ã¤ã®stringé€£çµã™ã‚‹
+	//åˆ†å‰²ã—ãŸçµæœã‚’è¿”ã‚Šå€¤ã§è¿”å´,å‚ç…§æ¸¡ã—ã§å¤‰æ›´ã™ã‚‹ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰ã‚ã‚Š
+	//å¼•æ•°1: é€£çµã™ã‚‹string vector
+	//å¼•æ•°2: è¦ç´ ã”ã¨ã®åŒºåˆ‡ã‚Šæ–‡å­—
+	//å¼•æ•°3: çµæœã®æœ€å¾Œã«æ”¹è¡Œã‚’è¿½åŠ ã™ã‚‹ã‹
 	inline std::wstring join(std::vector<std::wstring>& joinString, wchar_t delimiter, bool isNewLine)
 	{
-		std::wostringstream oString;		//getline—p‚Ìstream
-		//stream‚É—v‘f + ‹æØ‚è•¶š‚Å˜AŒ‹
+		std::wostringstream oString;		//getlineç”¨ã®stream
+		//streamã«è¦ç´  + åŒºåˆ‡ã‚Šæ–‡å­—ã§é€£çµ
 		std::copy(joinString.begin(), joinString.end(), std::ostream_iterator<std::wstring, wchar_t>(oString, &delimiter));
-		std::wstring ret = oString.str();	//•Ô‚è’l‚É‘ã“ü
+		std::wstring ret = oString.str();	//è¿”ã‚Šå€¤ã«ä»£å…¥
 
-		//ret‚ª—v‘f‚ ‚è‚È‚çÅŒã‚Ì‹æØ‚è•¶šíœ
+		//retãŒè¦ç´ ã‚ã‚Šãªã‚‰æœ€å¾Œã®åŒºåˆ‡ã‚Šæ–‡å­—å‰Šé™¤
 		if (ret.size())		ret.erase(ret.size() - std::char_traits<wchar_t>::length(&delimiter));
-		//ret‚ª—v‘f‚ ‚è & Œ‹‰Ê‚ÌÅŒã‚É‰üs = true‚È‚çÅŒã‚É‰üs’Ç‰Á
+		//retãŒè¦ç´ ã‚ã‚Š & çµæœã®æœ€å¾Œã«æ”¹è¡Œ = trueãªã‚‰æœ€å¾Œã«æ”¹è¡Œè¿½åŠ 
 		if (ret.size() && isNewLine) ret.push_back('\n');
 		return ret;
 	}
 	//----------------------------------------------------------------------------------
 	//[join]
-	//string vector‚Ì•¡”‚Ì—v‘f‚ğ1‚Â‚Ìstring˜AŒ‹‚·‚é
-	//QÆ“n‚µ‚Ìˆø”2‚É‘‚«‚Ş,•Ô‚è’l‚É‚·‚éƒI[ƒo[ƒ[ƒh‚ ‚è
-	//ˆø”1: ˜AŒ‹‚·‚éstring vector
-	//ˆø”2: Œ‹‰Ê‚ğ‘‚«‚Şstring
-	//ˆø”3: —v‘f‚²‚Æ‚Ì‹æØ‚è•¶š
-	//ˆø”4: Œ‹‰Ê‚ÌÅŒã‚É‰üs‚ğ’Ç‰Á‚·‚é‚©
+	//string vectorã®è¤‡æ•°ã®è¦ç´ ã‚’1ã¤ã®stringé€£çµã™ã‚‹
+	//å‚ç…§æ¸¡ã—ã®å¼•æ•°2ã«æ›¸ãè¾¼ã‚€,è¿”ã‚Šå€¤ã«ã™ã‚‹ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰ã‚ã‚Š
+	//å¼•æ•°1: é€£çµã™ã‚‹string vector
+	//å¼•æ•°2: çµæœã‚’æ›¸ãè¾¼ã‚€string
+	//å¼•æ•°3: è¦ç´ ã”ã¨ã®åŒºåˆ‡ã‚Šæ–‡å­—
+	//å¼•æ•°4: çµæœã®æœ€å¾Œã«æ”¹è¡Œã‚’è¿½åŠ ã™ã‚‹ã‹
 	inline void join(std::vector<std::wstring>& joinString, std::wstring & compString,
 		wchar_t delimiter, bool isNewLine)
 	{
-		std::wostringstream oString;		//getline—p‚Ìstream
-		//stream‚É—v‘f + ‹æØ‚è•¶š‚Å˜AŒ‹
+		std::wostringstream oString;		//getlineç”¨ã®stream
+		//streamã«è¦ç´  + åŒºåˆ‡ã‚Šæ–‡å­—ã§é€£çµ
 		std::copy(joinString.begin(), joinString.end(), std::ostream_iterator<std::wstring, wchar_t>(oString, &delimiter));
-		//Œ‹‰Ê‘ã“ü‘O‚ÉƒTƒCƒY‚ ‚è‚È‚çƒNƒŠƒA
+		//çµæœä»£å…¥å‰ã«ã‚µã‚¤ã‚ºã‚ã‚Šãªã‚‰ã‚¯ãƒªã‚¢
 		if (compString.size())	compString.clear();
-		compString = oString.str();		//Œ‹‰Ê‚ğ‘ã“ü
+		compString = oString.str();		//çµæœã‚’ä»£å…¥
 
-		//Œ‹‰Ê‚ª—v‘f‚ ‚è‚È‚çÅŒã‚Ì‹æØ‚è•¶šíœ
+		//çµæœãŒè¦ç´ ã‚ã‚Šãªã‚‰æœ€å¾Œã®åŒºåˆ‡ã‚Šæ–‡å­—å‰Šé™¤
 		if (compString.size())	compString.erase(compString.size() - std::char_traits<wchar_t>::length(&delimiter));
-		//ret‚ª—v‘f‚ ‚è & Œ‹‰Ê‚ÌÅŒã‚É‰üs = true‚È‚çÅŒã‚É‰üs’Ç‰Á	
+		//retãŒè¦ç´ ã‚ã‚Š & çµæœã®æœ€å¾Œã«æ”¹è¡Œ = trueãªã‚‰æœ€å¾Œã«æ”¹è¡Œè¿½åŠ 	
 		if (compString.size() && isNewLine) compString.push_back('\n');
 	}
 }

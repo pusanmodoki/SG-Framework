@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-GUI‚ğŠÇ—‚·‚éGUI class
+GUIã‚’ç®¡ç†ã™ã‚‹GUI class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_GUI_HPP_
 #define SGFRAMEWORK_HEADER_GUI_HPP_
@@ -20,11 +20,11 @@ namespace SGFramework
 	class Thread;
 	class Input;
 
-	//GUI‚ğŠÇ—‚·‚éGUI class
+	//GUIã‚’ç®¡ç†ã™ã‚‹GUI class
 	class GUI final
 	{
 	private:
-		//Log header‚ÌƒTƒCƒY
+		//Log headerã®ã‚µã‚¤ã‚º
 		static constexpr size_t m_cLogIdentificationSize = 23;
 
 	public:
@@ -38,7 +38,7 @@ namespace SGFramework
 		DELETE_ALL_DEFAULT_CLASS_FUNCTIONS(GUI);
 
 		//debug log stream<static> (reference property)
-		//(frameworkŠÇŠŠO‚©‚çŒÄ‚Ô‚Æ‘S‚Ä“¯ˆê‚ÌƒXƒgƒŠ[ƒ€‚ğ•Ô‹p‚·‚é‚Ì‚Å”r‘¼ˆ—‚É’ˆÓ)
+		//(frameworkç®¡è½„å¤–ã‹ã‚‰å‘¼ã¶ã¨å…¨ã¦åŒä¸€ã®ã‚¹ãƒˆãƒªãƒ¼ãƒ ã‚’è¿”å´ã™ã‚‹ã®ã§æ’ä»–å‡¦ç†ã«æ³¨æ„)
 		SGF_FUNCTION_PROPERTY static std::wstringstream& getLogStream();
 
 		//Log->Error message header (GUI::getLogStream() << this << message)
@@ -69,9 +69,9 @@ namespace SGFramework
 		static constexpr wchar m_cLogHerderInfo = { 'I' };
 		//log identification header->Framework Message
 		static constexpr wchar m_cLogHerderFramework = { L'F' };
-		//ŠeDebugStream‚Ìreserve size
+		//å„DebugStreamã®reserve size
 		static constexpr size_t m_cDebugDrawReserveSize = 300;
-		//SyncŠÖ”‚Åg—p‚·‚éƒoƒbƒtƒ@[’·
+		//Syncé–¢æ•°ã§ä½¿ç”¨ã™ã‚‹ãƒãƒƒãƒ•ã‚¡ãƒ¼é•·
 		static constexpr size_t m_cBufferLength = 2000;
 		//message color->Error
 		static const ImColor m_cErrorColor;
@@ -82,7 +82,7 @@ namespace SGFramework
 		//message color->FrameworkMessage
 		static const ImColor m_cFrameworkMessageColor;
 
-		//Debug—pStream‚ğŠ‚·‚éDebugStream structure
+		//Debugç”¨Streamã‚’æ‰€æŒã™ã‚‹DebugStream structure
 		struct DebugStream
 		{
 		public:
@@ -90,10 +90,10 @@ namespace SGFramework
 			//[Constructor]
 			DebugStream(const std::string& threadName) : threadName(threadName), stream() { }
 			
-			std::string threadName;		//ƒXƒŒƒbƒh–¼ (ƒƒbƒZ[ƒW‚Ég—p)
-			std::wstringstream stream;	//ƒXƒgƒŠ[ƒ€
+			std::string threadName;		//ã‚¹ãƒ¬ãƒƒãƒ‰å (ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã«ä½¿ç”¨)
+			std::wstringstream stream;	//ã‚¹ãƒˆãƒªãƒ¼ãƒ 
 		};
-		//ConsoleWindow‚É•`‰æ‚·‚éMessage‚ğŠi”[‚·‚éConsoleMessage structure
+		//ConsoleWindowã«æç”»ã™ã‚‹Messageã‚’æ ¼ç´ã™ã‚‹ConsoleMessage structure
 		struct ConsoleMessage
 		{
 		public:
@@ -113,55 +113,55 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[StratUp]
-		//‰Šú‰»‚·‚é
-		//ˆø”1: HWND
-		//ˆø”2: Load vertex shader path(Debug)
-		//ˆø”3: Load pixel shader path(Debug)
-		//ˆø”4: Load vertex shader path(Release)
-		//ˆø”5: Load pixel shader path(Release)
+		//åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: HWND
+		//å¼•æ•°2: Load vertex shader path(Debug)
+		//å¼•æ•°3: Load pixel shader path(Debug)
+		//å¼•æ•°4: Load vertex shader path(Release)
+		//å¼•æ•°5: Load pixel shader path(Release)
 		static void StratUp(HWND hWnd, const ReadElement::Pack& vertexShaderDebugPath,
 			const ReadElement::Pack& pixelShaderDebugPath, const ReadElement::Pack& vertexShaderReleasePath,
 			const ReadElement::Pack& pixelShaderReleasePath, const ReadElement::Pack& isUsing,
 			const ReadElement::Pack& fontSizePerDpi);
 		//----------------------------------------------------------------------------------
 		//[ShutDown]
-		//I—¹ˆ—
+		//çµ‚äº†å‡¦ç†
 		static void ShutDown();
 
 		//----------------------------------------------------------------------------------
 		//[UpdateWindowProcedure]
-		//XV‚ğs‚¤ WindowProcedure ver
+		//æ›´æ–°ã‚’è¡Œã† WindowProcedure ver
 		static void UpdateWindowProcedure();
 		//----------------------------------------------------------------------------------
 		//[ShutdownWindowProcedure]
-		//I—¹ˆ— (Window Procedure)
+		//çµ‚äº†å‡¦ç† (Window Procedure)
 		static void ShutdownWindowProcedure();
 		
 		//----------------------------------------------------------------------------------
 		//[Sync]
-		//“¯Šú‚ğs‚¤
+		//åŒæœŸã‚’è¡Œã†
 		static void Sync();
 		
 		//----------------------------------------------------------------------------------
 		//[Update]
-		//XV‚ğs‚¤ (Graphics & Audio Thread)
+		//æ›´æ–°ã‚’è¡Œã† (Graphics & Audio Thread)
 		static void Update();
 		//----------------------------------------------------------------------------------
 		//[UpdateMousePosition]
-		//ƒ}ƒEƒXƒ|ƒWƒVƒ‡ƒ“‚ÌXV‚ğs‚¤
+		//ãƒã‚¦ã‚¹ãƒã‚¸ã‚·ãƒ§ãƒ³ã®æ›´æ–°ã‚’è¡Œã†
 		static void UpdateMousePosition();
 		//----------------------------------------------------------------------------------
 		//[UpdateMouseCousor]
-		//ƒ}ƒEƒXƒJ[ƒ\ƒ‹‚ÌXV‚ğs‚¤
+		//ãƒã‚¦ã‚¹ã‚«ãƒ¼ã‚½ãƒ«ã®æ›´æ–°ã‚’è¡Œã†
 		static bool UpdateMouseCousor();
 		//----------------------------------------------------------------------------------
 		//[UpdateJoystick]
-		//Joystick‚ÌXV‚ğs‚¤
+		//Joystickã®æ›´æ–°ã‚’è¡Œã†
 		static void UpdateJoystick();
 
 		//----------------------------------------------------------------------------------
 		//[DrawGUI]
-		//•`‰æ‚ğs‚¤
+		//æç”»ã‚’è¡Œã†
 		static void DrawGUI();
 
 
@@ -170,21 +170,21 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[RegisterDebugStream]
-		//ƒXƒŒƒbƒh‚ÖDebugStream‚ğ“o˜^
-		//ˆø”1: thread name
-		//ˆø”2: this_thread::get_id() or thread.get_id()
+		//ã‚¹ãƒ¬ãƒƒãƒ‰ã¸DebugStreamã‚’ç™»éŒ²
+		//å¼•æ•°1: thread name
+		//å¼•æ•°2: this_thread::get_id() or thread.get_id()
 		inline static void RegisterDebugStream(const sgstring& threadName, std::thread::id key);
 		//----------------------------------------------------------------------------------
 		//[BuildDebugStream]
-		//DebugStream‚ğ“o˜^î•ñ‚ğŠî‚É\’z‚·‚é
+		//DebugStreamã‚’ç™»éŒ²æƒ…å ±ã‚’åŸºã«æ§‹ç¯‰ã™ã‚‹
 		static void BuildDebugStream();
 		//----------------------------------------------------------------------------------
 		//[SyncDebugStream]
-		//DebugStream‚©‚çConsoleMessage‚Ö•ÏŠ·‚µ•Û‘¶‚·‚é
+		//DebugStreamã‹ã‚‰ConsoleMessageã¸å¤‰æ›ã—ä¿å­˜ã™ã‚‹
 		static void SyncDebugStream();
 		//----------------------------------------------------------------------------------
 		//[DrawDebugStream]
-		//DebugStream(ConsoleMessage)‚ğ•`‰æ‚·‚é
+		//DebugStream(ConsoleMessage)ã‚’æç”»ã™ã‚‹
 		static void DrawDebugStream();
 
 		//----------------------------------------------------------------------------------
@@ -203,22 +203,22 @@ namespace SGFramework
 		//----------------------------------------------------------------------------------
 		//[ShowTimeLayers]
 		//DebugStream->Draw Time Layers
-		//ˆø”1: draw layer
+		//å¼•æ•°1: draw layer
 		static void ShowTimeLayers(const WeakPointer<Time::TimeLayer>& layer);
 		//----------------------------------------------------------------------------------
 		//[ShowAudioLayers]
 		//DebugStream->Draw Audio Submix Layers
-		//ˆø”1: draw layer
+		//å¼•æ•°1: draw layer
 		static void ShowAudioLayers(const WeakPointer<Audio::SubmixLayer>& layer);
 		//----------------------------------------------------------------------------------
 		//[ShowScene]
 		//DebugStream->Draw Sub Scenes
-		//ˆø”1: draw scene
+		//å¼•æ•°1: draw scene
 		static void ShowScene(const UniquePointer<Scene::BaseScene>& scene);
 		//----------------------------------------------------------------------------------
 		//[ShowTransform]
 		//DebugStream->Draw Transforms
-		//ˆø”1: draw transform
+		//å¼•æ•°1: draw transform
 		static void ShowTransform(Transform* transform);
 
 		
@@ -227,18 +227,18 @@ namespace SGFramework
 		
 		//----------------------------------------------------------------------------------
 		//[StratUpGraphicsX11]
-		//DirectX11‚ğg—p‚·‚é‰Šú‰»‚ğs‚¤
-		//ˆø”1: vertex shader path
-		//ˆø”1: pixel shader path
+		//DirectX11ã‚’ä½¿ç”¨ã™ã‚‹åˆæœŸåŒ–ã‚’è¡Œã†
+		//å¼•æ•°1: vertex shader path
+		//å¼•æ•°1: pixel shader path
 		static void StratUpGraphicsX11(const sgstring& vertexShaderName,
 			const sgstring& pixelShaderName);
 		//----------------------------------------------------------------------------------
 		//[ShutDownGraphicsX11]
-		//DirectX11‚ğg—p‚·‚éI—¹ˆ—‚ğs‚¤
+		//DirectX11ã‚’ä½¿ç”¨ã™ã‚‹çµ‚äº†å‡¦ç†ã‚’è¡Œã†
 		static void ShutDownGraphicsX11();
 		//----------------------------------------------------------------------------------
 		//[DrawGraphicsX11]
-		//ImGui::RenderŒã‚Ì•`‰æˆ—‚ğs‚¤
+		//ImGui::Renderå¾Œã®æç”»å‡¦ç†ã‚’è¡Œã†
 		static void DrawGraphicsX11();
 		//----------------------------------------------------------------------------------
 		//[SetRendererStatesX11]
@@ -246,36 +246,36 @@ namespace SGFramework
 		static void SetRendererStatesX11(ImDrawData* drawData);
 
 
-		//WindowProcedure—pğŒ•Ï”
+		//WindowProcedureç”¨æ¡ä»¶å¤‰æ•°
 		static ConditionVariable::Auto m_copyCompletedCondition;
-		//Log—pDebugStream
+		//Logç”¨DebugStream
 		static std::unordered_map<std::thread::id, DebugStream> m_debugStreams;
-		//Log—pConsoleMessage
+		//Logç”¨ConsoleMessage
 		static std::vector<GUI::ConsoleMessage> m_drawConsoleMessages;
 		//Vertex shader
 		static SharedPointer<Asset::VertexShaderAsset> m_vertexShader;
 		//Pixel shader
 		static SharedPointer<Asset::PixelShaderAsset> m_pixelShader;
-		//WindowProcedure—p“ü—Íƒoƒbƒtƒ@
+		//WindowProcedureç”¨å…¥åŠ›ãƒãƒƒãƒ•ã‚¡
 		static std::vector<uint> m_inputCharacters;
-		//ƒ}ƒEƒXƒJ[ƒ\ƒ‹•Ï”•Û‘¶ƒoƒbƒtƒ@
+		//ãƒã‚¦ã‚¹ã‚«ãƒ¼ã‚½ãƒ«å¤‰æ•°ä¿å­˜ãƒãƒƒãƒ•ã‚¡
 		static ImGuiMouseCursor	 m_lastMouseCursor;
-		//WindowProcedure—pƒzƒC[ƒ‹ƒoƒbƒtƒ@
+		//WindowProcedureç”¨ãƒ›ã‚¤ãƒ¼ãƒ«ãƒãƒƒãƒ•ã‚¡
 		static float m_inputMouseWheel;
-		//true->•`‰æ
+		//true->æç”»
 		static std::atomic_bool m_isDrawReady;
-		//true->ƒoƒbƒtƒ@ƒNƒŠƒA
+		//true->ãƒãƒƒãƒ•ã‚¡ã‚¯ãƒªã‚¢
 		static std::atomic_bool m_isClearDebugStreams;
-		//true->GUI—LŒø
+		//true->GUIæœ‰åŠ¹
 		static std::atomic_bool m_isUsing;
-		//WindowProcedure—pƒ}ƒEƒXƒ{ƒ^ƒ“ƒoƒbƒtƒ@
+		//WindowProcedureç”¨ãƒã‚¦ã‚¹ãƒœã‚¿ãƒ³ãƒãƒƒãƒ•ã‚¡
 		static bool m_inputMouseDowns[5];
-		//WindowProcedure—pƒL[ƒoƒbƒtƒ@
+		//WindowProcedureç”¨ã‚­ãƒ¼ãƒãƒƒãƒ•ã‚¡
 		static bool m_inputKeyDowns[512];
 	};
 
 	//debug log stream<static> (reference property)
-	//(frameworkŠÇŠŠO‚©‚çŒÄ‚Ô‚Æ‘S‚Ä“¯ˆê‚ÌƒXƒgƒŠ[ƒ€‚ğ•Ô‹p‚·‚é‚Ì‚Å”r‘¼ˆ—‚É’ˆÓ)
+	//(frameworkç®¡è½„å¤–ã‹ã‚‰å‘¼ã¶ã¨å…¨ã¦åŒä¸€ã®ã‚¹ãƒˆãƒªãƒ¼ãƒ ã‚’è¿”å´ã™ã‚‹ã®ã§æ’ä»–å‡¦ç†ã«æ³¨æ„)
 	SGF_FUNCTION_PROPERTY std::wstringstream& GUI::getLogStream()
 	{
 		auto find = m_debugStreams.find(std::this_thread::get_id());
@@ -285,9 +285,9 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[RegisterDebugStream]
-	//ƒXƒŒƒbƒh‚ÖDebugStream‚ğ“o˜^
-	//ˆø”1: thread name
-	//ˆø”2: this_thread::get_id() or thread.get_id()
+	//ã‚¹ãƒ¬ãƒƒãƒ‰ã¸DebugStreamã‚’ç™»éŒ²
+	//å¼•æ•°1: thread name
+	//å¼•æ•°2: this_thread::get_id() or thread.get_id()
 	inline void GUI::RegisterDebugStream(const sgstring& threadName, std::thread::id key)
 	{
 		static std::atomic_bool lock = false;
@@ -301,7 +301,7 @@ namespace SGFramework
 	//create message
 	inline GUI::ConsoleMessage::ConsoleMessage(const std::string& header, const sgstring& message) : message()
 	{
-		//Header‚ ‚èƒƒbƒZ[ƒW->Color & Header‚ğmessage‚Æ‡¬‚µconsole messageì¬
+		//Headerã‚ã‚Šãƒ¡ãƒƒã‚»ãƒ¼ã‚¸->Color & Headerã‚’messageã¨åˆæˆã—console messageä½œæˆ
 		if (sgstring::functions::IsContains(message, m_cLogHerderIdentification))
 		{
 			//Error
@@ -333,7 +333,7 @@ namespace SGFramework
 				isUsingColor = true;
 			}
 		}
-		//Header‚È‚µƒƒbƒZ[ƒW->message‚Ì‚İ‚Åconsole messageì¬
+		//Headerãªã—ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸->messageã®ã¿ã§console messageä½œæˆ
 		else
 		{
 			this->message = header + message.to_std_string();

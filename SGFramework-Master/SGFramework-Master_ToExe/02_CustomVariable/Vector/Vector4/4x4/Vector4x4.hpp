@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-4x4‚Ì’l‚ğˆµ‚¦‚éVector4x4 \‘¢‘Ì
-Å‚à‘½—p‚·‚é\‘¢‘ÌƒVƒŠ[ƒY‚Ì1‚Â‚È‚Ì‚Å•Ê©ìVector‚ªŠÖŒW‚È‚¢‚à‚Ì‚Í‘S‚ÄinlineÀ‘•
+4x4ã®å€¤ã‚’æ‰±ãˆã‚‹Vector4x4 æ§‹é€ ä½“
+æœ€ã‚‚å¤šç”¨ã™ã‚‹æ§‹é€ ä½“ã‚·ãƒªãƒ¼ã‚ºã®1ã¤ãªã®ã§åˆ¥è‡ªä½œVectorãŒé–¢ä¿‚ãªã„ã‚‚ã®ã¯å…¨ã¦inlineå®Ÿè£…
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_VECTOR_VECTOR4X4_HPP_
 #define SGFRAMEWORK_HEADER_VECTOR_VECTOR4X4_HPP_
@@ -15,88 +15,88 @@
 //Framework namespace
 namespace SGFramework
 {
-	//ƒvƒƒgƒ^ƒCƒvéŒ¾
+	//ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—å®£è¨€
 	struct Matrix;
 	struct Quaternion;
 
-	//4x4‚Ì’l‚ğˆµ‚¦‚éVector4x4 \‘¢‘Ì
-	//Matrix‚Íƒƒ“ƒo•Ï”‚É‚µ‚Ä‚Í‚¢‚¯‚È‚¢‚Ì‚ÅA‚»‚Ìê‡‚Í‚±‚¿‚ç‚ğ‚Ç‚¤‚¼
+	//4x4ã®å€¤ã‚’æ‰±ãˆã‚‹Vector4x4 æ§‹é€ ä½“
+	//Matrixã¯ãƒ¡ãƒ³ãƒå¤‰æ•°ã«ã—ã¦ã¯ã„ã‘ãªã„ã®ã§ã€ãã®å ´åˆã¯ã“ã¡ã‚‰ã‚’ã©ã†ã
 	struct Vector4x4 final : public DirectX::XMFLOAT4X4
 	{
 		//----------------------------------------------------------------------------------
-		//inlneÀ‘•
+		//inlneå®Ÿè£…
 
 		
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//identity‚Éİ’è‚³‚ê‚é
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//identityã«è¨­å®šã•ã‚Œã‚‹
 		inline constexpr Vector4x4();
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1:XMFLOAT4x4
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1:XMFLOAT4x4
 		inline constexpr Vector4x4(const DirectX::XMFLOAT4X4& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1:PxMat33
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1:PxMat33
 		inline constexpr Vector4x4(const physx::PxMat33& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1:PxMat44
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1:PxMat44
 		inline constexpr Vector4x4(const physx::PxMat44& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1:aiMatrix3x3
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1:aiMatrix3x3
 		inline constexpr Vector4x4(const aiMatrix3x3& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1:aiMatrix4x4
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1:aiMatrix4x4
 		inline constexpr Vector4x4(const aiMatrix4x4& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: Copy
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Copy
 		inline constexpr Vector4x4(const Vector4x4& copy);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: Move
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Move
 		inline constexpr Vector4x4(Vector4x4&& move);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: Vector4_1
-		//ˆø”2: Vector4_2
-		//ˆø”3: Vector4_3
-		//ˆø”4: Vector4_4
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Vector4_1
+		//å¼•æ•°2: Vector4_2
+		//å¼•æ•°3: Vector4_3
+		//å¼•æ•°4: Vector4_4
 		inline constexpr Vector4x4(const Vector4& value1, const Vector4& value2,
 			const Vector4& value3, const Vector4& value4);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1 ~ 16: value
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1 ~ 16: value
 		inline constexpr Vector4x4(float _11, float _12, float _13, float _14,
 			float _21, float _22, float _23, float _24,
 			float _31, float _32, float _33, float _34,
 			float _41, float _42, float _43, float _44);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: XMMATRIX
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: XMMATRIX
 		inline Vector4x4(const DirectX::XMMATRIX& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: float*
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: float*
 		inline Vector4x4(const float* array);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: double*
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: double*
 		inline Vector4x4(const double* array);
 
 		//----------------------------------------------------------------------------------
@@ -126,35 +126,35 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[ToMatrix]
-		//ˆø”1: apply
+		//å¼•æ•°1: apply
 		inline void ToMatrix(XmMatrix& apply) const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ToQuaternion]
-		//ˆø”1: apply
+		//å¼•æ•°1: apply
 		inline void ToQuaternion(XmVector& apply) const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ToPhysXMat33]
-		//ˆø”1: apply
+		//å¼•æ•°1: apply
 		inline void ToPhysXMat33(physx::PxMat33& apply) const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ToPhysXMat44]
-		//ˆø”1: apply
+		//å¼•æ•°1: apply
 		inline void ToPhysXMat44(physx::PxMat44& apply) const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ToAssimpMat33]
-		//ˆø”1: apply
+		//å¼•æ•°1: apply
 		inline void ToAssimpMat33(aiMatrix3x3& apply) const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ToAssimpMat44]
-		//ˆø”1: apply
+		//å¼•æ•°1: apply
 		inline void ToAssimpMat44(aiMatrix4x4& apply) const noexcept;
 
 		//----------------------------------------------------------------------------------
 		//[Decompose]
-		//s—ñî•ñ‚ğ’Šo‚µAnullptr‚Å‚È‚¯‚ê‚ÎŠeˆø”‚É‘ã“ü
-		//ˆø”1: position (Vector3)
-		//ˆø”1: scale (Vector3)
-		//ˆø”1: rotation (Quaternion)
+		//è¡Œåˆ—æƒ…å ±ã‚’æŠ½å‡ºã—ã€nullptrã§ãªã‘ã‚Œã°å„å¼•æ•°ã«ä»£å…¥
+		//å¼•æ•°1: position (Vector3)
+		//å¼•æ•°1: scale (Vector3)
+		//å¼•æ•°1: rotation (Quaternion)
 		inline void Decompose(DirectX::XMFLOAT3* position, DirectX::XMFLOAT3* scale, DirectX::XMFLOAT4* rotation) const;
 
 		//inverse matrix(matrix convert) (get function property)
@@ -228,69 +228,69 @@ namespace SGFramework
 			return value;
 		}
 
-		//float*ƒIƒyƒŒ[ƒ^[
+		//float*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator float*();
-		//const float*ƒIƒyƒŒ[ƒ^[
+		//const float*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator const float*() const;
-		//XmMatrix ƒIƒyƒŒ[ƒ^[
+		//XmMatrix ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator XmMatrix() const noexcept;
 
-		//copy ƒIƒyƒŒ[ƒ^[
+		//copy ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector4x4& operator=(const Vector4x4& copy);
-		//move ƒIƒyƒŒ[ƒ^[
+		//move ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector4x4& operator=(Vector4x4&& move);
-		// = ƒIƒyƒŒ[ƒ^[
+		// = ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector4x4& operator = (const DirectX::XMMATRIX& matrix);
 
-		// () ƒIƒyƒŒ[ƒ^[
+		// () ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline float & operator ()(int y, int x);
-		// + ƒIƒyƒŒ[ƒ^[
+		// + ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector4x4 operator +() const;
-		// - ƒIƒyƒŒ[ƒ^[
+		// - ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector4x4 operator -() const;
 
-		// + ƒIƒyƒŒ[ƒ^[
+		// + ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector4x4 operator +(const Vector4x4& vec) const;
-		// - ƒIƒyƒŒ[ƒ^[
+		// - ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector4x4 operator -(const Vector4x4& vec) const;
-		// * ƒIƒyƒŒ[ƒ^[
+		// * ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector4x4 operator *(const Vector4x4& vec) const;
-		// / ƒIƒyƒŒ[ƒ^[
+		// / ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector4x4 operator /(const Vector4x4& vec) const;
 		
-		// += ƒIƒyƒŒ[ƒ^[
+		// += ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector4x4& operator +=(const Vector4x4& vec);
-		// -= ƒIƒyƒŒ[ƒ^[
+		// -= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector4x4& operator -=(const Vector4x4& vec);
-		// *= ƒIƒyƒŒ[ƒ^[
+		// *= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector4x4& operator *=(const Vector4x4& vec);
-		// /= ƒIƒyƒŒ[ƒ^[
+		// /= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector4x4& operator /=(const Vector4x4& vec);
 
-		// * ƒIƒyƒŒ[ƒ^[
+		// * ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector4x4 operator *(float value) const;
-		// *= ƒIƒyƒŒ[ƒ^[
+		// *= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector4x4& operator *=(float value);
-		// / ƒIƒyƒŒ[ƒ^[
+		// / ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector4x4 operator /(float value) const;
-		// /= ƒIƒyƒŒ[ƒ^[
+		// /= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector4x4& operator /=(float value);
 	};
 
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//identity‚Éİ’è‚³‚ê‚é
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//identityã«è¨­å®šã•ã‚Œã‚‹
 	inline constexpr Vector4x4::Vector4x4() : DirectX::XMFLOAT4X4(1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f) { }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1:XMFLOAT4x4
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1:XMFLOAT4x4
 	inline constexpr Vector4x4::Vector4x4(const DirectX::XMFLOAT4X4& value) : DirectX::XMFLOAT4X4(value) { }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1:PxMat33
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1:PxMat33
 	inline constexpr Vector4x4::Vector4x4(const physx::PxMat33 & value)
 		: DirectX::XMFLOAT4X4(
 			value(0, 0), value(1, 0), value(2, 0), 0.0f,
@@ -298,9 +298,9 @@ namespace SGFramework
 			value(0, 2), value(1, 2), value(2, 2), 0.0f, 
 			0.0f, 0.0f, 0.0f, 1.0f) { }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1:PxMat33
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1:PxMat33
 	inline constexpr Vector4x4::Vector4x4(const physx::PxMat44 & value)
 		: DirectX::XMFLOAT4X4(
 			value(0, 0), value(1, 0), value(2, 0), value(3, 0),
@@ -308,9 +308,9 @@ namespace SGFramework
 			value(0, 2), value(1, 2), value(2, 2), value(3, 2),
 			value(0, 3), value(1, 3), value(2, 3), value(3, 3)) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1:aiMatrix3x3
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1:aiMatrix3x3
 	inline constexpr Vector4x4::Vector4x4(const aiMatrix3x3 & value)
 		: DirectX::XMFLOAT4X4(
 			value.a1, value.b1, value.c1, 0.0f,
@@ -318,9 +318,9 @@ namespace SGFramework
 			value.a3, value.b3, value.c3, 0.0f,
 			0.0f, 0.0f, 0.0f, 1.0f) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1:aiMatrix4x4
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1:aiMatrix4x4
 	inline constexpr Vector4x4::Vector4x4(const aiMatrix4x4 & value)
 		: DirectX::XMFLOAT4X4(
 			value.a1, value.b1, value.c1, value.d1,
@@ -328,22 +328,22 @@ namespace SGFramework
 			value.a3, value.b3, value.c3, value.d3,
 			value.a4, value.b4, value.c4, value.d4) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: Copy
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: Copy
 	inline constexpr Vector4x4::Vector4x4(const Vector4x4 & copy) : DirectX::XMFLOAT4X4(copy) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: Move
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: Move
 	inline constexpr Vector4x4::Vector4x4(Vector4x4 && move) : DirectX::XMFLOAT4X4(move) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: Vector4_1
-	//ˆø”2: Vector4_2
-	//ˆø”3: Vector4_3
-	//ˆø”4: Vector4_4
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: Vector4_1
+	//å¼•æ•°2: Vector4_2
+	//å¼•æ•°3: Vector4_3
+	//å¼•æ•°4: Vector4_4
 	inline constexpr Vector4x4::Vector4x4(const Vector4& value1, const Vector4& value2,
 		const Vector4& value3, const Vector4& value4)
 	{
@@ -356,34 +356,34 @@ namespace SGFramework
 		}
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1 ~ 16: value
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1 ~ 16: value
 	inline constexpr Vector4x4::Vector4x4(float _11, float _12, float _13, float _14,
 		float _21, float _22, float _23, float _24,
 		float _31, float _32, float _33, float _34,
 		float _41, float _42, float _43, float _44)
 		: DirectX::XMFLOAT4X4(_11, _12, _13, _14, _21, _22, _23, _24, _31, _32, _33, _34, _41, _42, _43, _44) { }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: XMMATRIX
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: XMMATRIX
 	inline Vector4x4::Vector4x4(const DirectX::XMMATRIX& value)
 	{
 		DirectX::XMStoreFloat4x4(this, value);
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: float*
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: float*
 	inline Vector4x4::Vector4x4(const float * array) 
 	{
 		memcpy_s(this, sizeof(Vector4x4), array, sizeof(DirectX::XMFLOAT4X4));
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: double*
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: double*
 	inline Vector4x4::Vector4x4(const double * array)
 	{
 		for (int i = 0; i < 4; i++)
@@ -400,7 +400,7 @@ namespace SGFramework
 	//return: Matrix
 	XmMatrix Vector4x4::ToMatrix() const noexcept
 	{
-		//Matrix‚É•ÏŠ·
+		//Matrixã«å¤‰æ›
 		return std::move(DirectX::XMLoadFloat4x4(this));
 	}
 	//----------------------------------------------------------------------------------
@@ -455,22 +455,22 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[ToMatrix]
-	//ˆø”1: apply
+	//å¼•æ•°1: apply
 	inline void Vector4x4::ToMatrix(XmMatrix & apply) const noexcept
 	{
-		//Matrix‚É•ÏŠ·
+		//Matrixã«å¤‰æ›
 		apply = DirectX::XMLoadFloat4x4(this);
 	}
 	//----------------------------------------------------------------------------------
 	//[ToQuaternion]
-	//ˆø”1: apply
+	//å¼•æ•°1: apply
 	inline void Vector4x4::ToQuaternion(XmVector & apply) const noexcept
 	{
 		apply = DirectX::XMQuaternionRotationMatrix(DirectX::XMLoadFloat4x4(this));
 	}
 	//----------------------------------------------------------------------------------
 	//[ToPhysXMat33]
-	//ˆø”1: apply
+	//å¼•æ•°1: apply
 	inline void Vector4x4::ToPhysXMat33(physx::PxMat33 & apply) const noexcept
 	{
 		apply.column0 = physx::PxVec3(m[0][0], m[0][1], m[0][2]);
@@ -479,7 +479,7 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ToPhysXMat44]
-	//ˆø”1: apply
+	//å¼•æ•°1: apply
 	inline void Vector4x4::ToPhysXMat44(physx::PxMat44 & apply) const noexcept
 	{
 		apply.column0 = physx::PxVec4(m[0][0], m[0][1], m[0][2], m[0][3]);
@@ -489,7 +489,7 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ToAssimpMat33]
-	//ˆø”1: apply
+	//å¼•æ•°1: apply
 	inline void Vector4x4::ToAssimpMat33(aiMatrix3x3 & apply) const noexcept
 	{
 		apply.a1 = m[0][0]; apply.a2 = m[1][0]; apply.a3 = m[2][0]; 
@@ -498,7 +498,7 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ToAssimpMat44]
-	//ˆø”1: apply
+	//å¼•æ•°1: apply
 	inline void Vector4x4::ToAssimpMat44(aiMatrix4x4 & apply) const noexcept
 	{
 		apply.a1 = m[0][0]; apply.a2 = m[1][0]; apply.a3 = m[2][0]; apply.a4 = m[3][0];
@@ -509,10 +509,10 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Decompose]
-	//s—ñî•ñ‚ğ’Šo‚µAnullptr‚Å‚È‚¯‚ê‚ÎŠeˆø”‚É‘ã“ü
-	//ˆø”1: position (Vector3)
-	//ˆø”1: scale (Vector3)
-	//ˆø”1: rotation (Quaternion)
+	//è¡Œåˆ—æƒ…å ±ã‚’æŠ½å‡ºã—ã€nullptrã§ãªã‘ã‚Œã°å„å¼•æ•°ã«ä»£å…¥
+	//å¼•æ•°1: position (Vector3)
+	//å¼•æ•°1: scale (Vector3)
+	//å¼•æ•°1: rotation (Quaternion)
 	inline void Vector4x4::Decompose(DirectX::XMFLOAT3 * position, DirectX::XMFLOAT3 * scale, DirectX::XMFLOAT4 * rotation) const
 	{
 		Vector4x4 copy(*this);
@@ -533,40 +533,40 @@ namespace SGFramework
 		if (rotation != nullptr) DirectX::XMStoreFloat4(rotation, DirectX::XMQuaternionRotationMatrix(copy));
 	}
 
-	//float*ƒIƒyƒŒ[ƒ^[
+	//float*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4x4::operator float*() { return (float*)this; }
-	//const float*ƒIƒyƒŒ[ƒ^[
+	//const float*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4x4::operator const float*() const { return (float*)this; }
-	//XmMatrix ƒIƒyƒŒ[ƒ^[
+	//XmMatrix ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4x4::operator XmMatrix() const noexcept
 	{
 		return DirectX::XMLoadFloat4x4(this);
 	}
 	
-	//copy ƒIƒyƒŒ[ƒ^[
+	//copy ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector4x4 & Vector4x4::operator=(const Vector4x4 & copy)
 	{
 		memcpy_s(this, sizeof(Vector4x4), &copy, sizeof(Vector4x4));
 		return *this;
 	}
-	//move ƒIƒyƒŒ[ƒ^[
+	//move ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector4x4 & Vector4x4::operator=(Vector4x4 && move)
 	{
 		memcpy_s(this, sizeof(Vector4x4), &move, sizeof(Vector4x4));
 		return *this;
 	}
-	// = ƒIƒyƒŒ[ƒ^[
+	// = ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector4x4 & Vector4x4::operator=(const DirectX::XMMATRIX& matrix)
 	{
 		DirectX::XMStoreFloat4x4(this, matrix);
 		return *this;
 	}
 
-	// () ƒIƒyƒŒ[ƒ^[
+	// () ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline float & Vector4x4::operator()(int y, int x) { return m[y][x];}
-	// + ƒIƒyƒŒ[ƒ^[
+	// + ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4x4 Vector4x4::operator+() const { return *this; }
-	// - ƒIƒyƒŒ[ƒ^[
+	// - ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4x4 Vector4x4::operator-() const
 	{
 		XmMatrix matrix = DirectX::XMLoadFloat4x4(this);
@@ -574,28 +574,28 @@ namespace SGFramework
 	}
 
 
-	// + ƒIƒyƒŒ[ƒ^[
+	// + ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4x4 Vector4x4::operator+(const Vector4x4& vec) const
 	{
 		XmMatrix left = DirectX::XMLoadFloat4x4(this),
 			right = DirectX::XMLoadFloat4x4(&vec);
 		return left + right;
 	}
-	// - ƒIƒyƒŒ[ƒ^[
+	// - ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4x4 Vector4x4::operator-(const Vector4x4& vec) const
 	{
 		XmMatrix left = DirectX::XMLoadFloat4x4(this),
 			right = DirectX::XMLoadFloat4x4(&vec);
 		return left - right;
 	}
-	// * ƒIƒyƒŒ[ƒ^[
+	// * ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4x4 Vector4x4::operator*(const Vector4x4& vec) const
 	{
 		XmMatrix left = DirectX::XMLoadFloat4x4(this),
 			right = DirectX::XMLoadFloat4x4(&vec);
 		return left * right;
 	}
-	// / ƒIƒyƒŒ[ƒ^[
+	// / ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4x4 Vector4x4::operator/(const Vector4x4& vec) const
 	{
 		Vector4x4 ret;
@@ -606,7 +606,7 @@ namespace SGFramework
 	}
 
 
-	// += ƒIƒyƒŒ[ƒ^[
+	// += ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector4x4& Vector4x4::operator+=(const Vector4x4& vec)
 	{
 		XmMatrix left = DirectX::XMLoadFloat4x4(this),
@@ -614,7 +614,7 @@ namespace SGFramework
 		*this = left + right;
 		return *this;
 	}
-	// -= ƒIƒyƒŒ[ƒ^[
+	// -= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector4x4& Vector4x4::operator-=(const Vector4x4& vec)
 	{
 		XmMatrix left = DirectX::XMLoadFloat4x4(this),
@@ -622,7 +622,7 @@ namespace SGFramework
 		*this = left - right;
 		return *this;
 	}
-	// *= ƒIƒyƒŒ[ƒ^[
+	// *= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector4x4& Vector4x4::operator*=(const Vector4x4& vec)
 	{
 		XmMatrix left = DirectX::XMLoadFloat4x4(this),
@@ -630,7 +630,7 @@ namespace SGFramework
 		*this = left * right;
 		return *this;
 	}
-	// /= ƒIƒyƒŒ[ƒ^[
+	// /= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector4x4& Vector4x4::operator/=(const Vector4x4& vec)
 	{
 		for (int i = 0; i < 4; i++)
@@ -640,26 +640,26 @@ namespace SGFramework
 	}
 
 
-	// * ƒIƒyƒŒ[ƒ^[
+	// * ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4x4 Vector4x4::operator*(float value) const
 	{
 		XmMatrix left = DirectX::XMLoadFloat4x4(this);
 		return left * value;
 	}
-	// *= ƒIƒyƒŒ[ƒ^[
+	// *= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector4x4& Vector4x4::operator*=(float value)
 	{
 		XmMatrix left = DirectX::XMLoadFloat4x4(this);
 		*this = left * value;
 		return *this;
 	}
-	// / ƒIƒyƒŒ[ƒ^[
+	// / ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4x4 Vector4x4::operator/(float value) const
 	{
 		XmMatrix left = DirectX::XMLoadFloat4x4(this);
 		return left / value;
 	}
-	// /= ƒIƒyƒŒ[ƒ^[
+	// /= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector4x4& Vector4x4::operator/=(float value)
 	{
 		XmMatrix left = DirectX::XMLoadFloat4x4(this);

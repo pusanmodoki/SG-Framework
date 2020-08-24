@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-•¨—ƒGƒ“ƒWƒ“(PhysX)‚ðŠÇ—‚·‚éPhysics class
-	¨RaycastŒnŠÖ”‚ð’è‹`‚·‚éPhysicsRaycast.cpp
+ç‰©ç†ã‚¨ãƒ³ã‚¸ãƒ³(PhysX)ã‚’ç®¡ç†ã™ã‚‹Physics class
+	â†’Raycastç³»é–¢æ•°ã‚’å®šç¾©ã™ã‚‹PhysicsRaycast.cpp
 ------------------------------------------------------------------------------------*/
 #include "../07_Thread/Thread.hpp"
 #include "Physics.hpp"
@@ -23,13 +23,13 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Raycast]
-	//Ray‚Å“–‚½‚è”»’è‚ðs‚¤
-	//ˆø”1: Œ´“_
-	//ˆø”2: •ûŒü
-	//ˆø”3: ‹——£, default = infinity
-	//ˆø”4: RaycastHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ð‘ã“ü‚·‚é, default = nullptr
-	//ˆø”4: LayerMask, default = all layer mask
-	//ˆø”5: true = ray‚É“–‚½‚Á‚½î•ñ‚ð‘S‚Ä•Ô‹p
+	//Rayã§å½“ãŸã‚Šåˆ¤å®šã‚’è¡Œã†
+	//å¼•æ•°1: åŽŸç‚¹
+	//å¼•æ•°2: æ–¹å‘
+	//å¼•æ•°3: è·é›¢, default = infinity
+	//å¼•æ•°4: RaycastHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+	//å¼•æ•°4: LayerMask, default = all layer mask
+	//å¼•æ•°5: true = rayã«å½“ãŸã£ãŸæƒ…å ±ã‚’å…¨ã¦è¿”å´
 	bool Physics::Raycast(const Vector3& origin, const Vector3& direction, float distance,
 		RaycastHit* raycastHit, const LayerMask& layerMask, bool isMultiHit)
 	{
@@ -45,7 +45,7 @@ namespace SGFramework
 			physx::PxQueryFilterData(physx::PxFilterData(layerMask(), isMultiHit ? 1 : 0, 0, 0),
 				(physx::PxQueryFlag::eDYNAMIC | physx::PxQueryFlag::ePREFILTER | physx::PxQueryFlag::eSTATIC)), &m_queryCallback)))
 		{
-			//raycastHit‘ã“ü
+			//raycastHitä»£å…¥
 			if (raycastHit != nullptr) raycastHit->Init(buffer);
 			return true;
 		}
@@ -54,14 +54,14 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[BoxCast]
-	//BoxRay‚Å“–‚½‚è”»’è‚ðs‚¤
-	//ˆø”1: Œ´“_
-	//ˆø”2: •ûŒü
-	//ˆø”3: ƒTƒCƒY
-	//ˆø”4: ‰ñ“]
-	//ˆø”5: ‹——£, default = infinity
-	//ˆø”6: SweepHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ð‘ã“ü‚·‚é, default = nullptr
-	//ˆø”7: LayerMask, default = all layer mask
+	//BoxRayã§å½“ãŸã‚Šåˆ¤å®šã‚’è¡Œã†
+	//å¼•æ•°1: åŽŸç‚¹
+	//å¼•æ•°2: æ–¹å‘
+	//å¼•æ•°3: ã‚µã‚¤ã‚º
+	//å¼•æ•°4: å›žè»¢
+	//å¼•æ•°5: è·é›¢, default = infinity
+	//å¼•æ•°6: SweepHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+	//å¼•æ•°7: LayerMask, default = all layer mask
 	bool Physics::BoxCast(const Vector3 & origin, const Vector3 & direction, const Vector3 & size, 
 		const Quaternion& rotation, float distance, SweepHit* hit, const LayerMask& layerMask)
 	{
@@ -73,7 +73,7 @@ namespace SGFramework
 			physx::PxQueryFilterData(physx::PxFilterData(layerMask(), 0, 0, 0),
 				physx::PxQueryFlag::ePREFILTER | physx::PxQueryFlag::eDYNAMIC | physx::PxQueryFlag::eSTATIC), &m_queryCallback)))
 		{
-			//sweepHit‘ã“ü
+			//sweepHitä»£å…¥
 			if (hit != nullptr) hit->Init(buffer);
 			return true;
 		}
@@ -81,13 +81,13 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[SphereCast]
-	//SphereRay‚Å“–‚½‚è”»’è‚ðs‚¤
-	//ˆø”1: Œ´“_
-	//ˆø”2: •ûŒü
-	//ˆø”3: ”¼Œa
-	//ˆø”4: ‹——£, default = infinity
-	//ˆø”5: SweepHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ð‘ã“ü‚·‚é, default = nullptr
-	//ˆø”6: LayerMask, default = all layer mask
+	//SphereRayã§å½“ãŸã‚Šåˆ¤å®šã‚’è¡Œã†
+	//å¼•æ•°1: åŽŸç‚¹
+	//å¼•æ•°2: æ–¹å‘
+	//å¼•æ•°3: åŠå¾„
+	//å¼•æ•°4: è·é›¢, default = infinity
+	//å¼•æ•°5: SweepHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+	//å¼•æ•°6: LayerMask, default = all layer mask
 	bool Physics::SphereCast(const Vector3& origin, const Vector3& direction, float radius,
 		float distance, SweepHit* hit, const LayerMask& layerMask)
 	{
@@ -99,7 +99,7 @@ namespace SGFramework
 			physx::PxQueryFilterData(physx::PxFilterData(layerMask(), 0, 0, 0),
 				physx::PxQueryFlag::ePREFILTER | physx::PxQueryFlag::eDYNAMIC | physx::PxQueryFlag::eSTATIC), &m_queryCallback)))
 		{
-			//sweepHit‘ã“ü
+			//sweepHitä»£å…¥
 			if (hit != nullptr) hit->Init(buffer);
 			return true;
 		}
@@ -107,15 +107,15 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[CapsuleCast]
-	//CapsuleRay‚Å“–‚½‚è”»’è‚ðs‚¤
-	//ˆø”1: Œ´“_
-	//ˆø”2: •ûŒü
-	//ˆø”3: ”¼Œa
-	//ˆø”4: ‚‚³
-	//ˆø”5: ‰ñ“]
-	//ˆø”6: ‹——£, default = infinity
-	//ˆø”7: SweepHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ð‘ã“ü‚·‚é, default = nullptr
-	//ˆø”8: LayerMask, default = all layer mask
+	//CapsuleRayã§å½“ãŸã‚Šåˆ¤å®šã‚’è¡Œã†
+	//å¼•æ•°1: åŽŸç‚¹
+	//å¼•æ•°2: æ–¹å‘
+	//å¼•æ•°3: åŠå¾„
+	//å¼•æ•°4: é«˜ã•
+	//å¼•æ•°5: å›žè»¢
+	//å¼•æ•°6: è·é›¢, default = infinity
+	//å¼•æ•°7: SweepHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+	//å¼•æ•°8: LayerMask, default = all layer mask
 	bool Physics::CapsuleCast(const Vector3& origin, const Vector3& direction, float radius, 
 		float height, const Quaternion& rotation, float distance, SweepHit* hit, const LayerMask& layerMask)
 	{
@@ -127,7 +127,7 @@ namespace SGFramework
 			physx::PxQueryFilterData(physx::PxFilterData(layerMask(), 0, 0, 0),
 				physx::PxQueryFlag::ePREFILTER | physx::PxQueryFlag::eDYNAMIC | physx::PxQueryFlag::eSTATIC), &m_queryCallback)))
 		{
-			//sweepHit‘ã“ü
+			//sweepHitä»£å…¥
 			if (hit != nullptr) hit->Init(buffer);
 			return true;
 		}
@@ -135,12 +135,12 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[OverlapBox]
-	//Box‚ÉƒIƒuƒWƒFƒNƒg‚ªÚG‚µ‚Ä‚¢‚é‚©Šm”F‚·‚é
-	//ˆø”1: À•W
-	//ˆø”2: ‰ñ“]
-	//ˆø”3: ƒTƒCƒY
-	//ˆø”4: OverlapHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ð‘ã“ü‚·‚é, default = nullptr
-	//ˆø”5: LayerMask, default = all layer mask
+	//Boxã«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒæŽ¥è§¦ã—ã¦ã„ã‚‹ã‹ç¢ºèªã™ã‚‹
+	//å¼•æ•°1: åº§æ¨™
+	//å¼•æ•°2: å›žè»¢
+	//å¼•æ•°3: ã‚µã‚¤ã‚º
+	//å¼•æ•°4: OverlapHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+	//å¼•æ•°5: LayerMask, default = all layer mask
 	bool Physics::OverlapBox(const Vector3& position, const Quaternion& rotation,
 		const Vector3& size, OverlapHit* hit, const LayerMask& layerMask)
 	{
@@ -152,7 +152,7 @@ namespace SGFramework
 			physx::PxQueryFilterData(physx::PxFilterData(layerMask(), 0, 0, 0),
 				physx::PxQueryFlag::ePREFILTER | physx::PxQueryFlag::eDYNAMIC | physx::PxQueryFlag::eSTATIC), &m_queryCallback)))
 		{
-			//overlapHit‘ã“ü
+			//overlapHitä»£å…¥
 			if (hit != nullptr) hit->Init(buffer);
 			return true;
 		}
@@ -160,11 +160,11 @@ namespace SGFramework
 	}		
 	//----------------------------------------------------------------------------------
 	//[OverlapSphere]
-	//Sphere‚ÉƒIƒuƒWƒFƒNƒg‚ªÚG‚µ‚Ä‚¢‚é‚©Šm”F‚·‚é
-	//ˆø”1: À•W
-	//ˆø”2: radius
-	//ˆø”3: OverlapHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ð‘ã“ü‚·‚é, default = nullptr
-	//ˆø”4: LayerMask, default = all layer mask
+	//Sphereã«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒæŽ¥è§¦ã—ã¦ã„ã‚‹ã‹ç¢ºèªã™ã‚‹
+	//å¼•æ•°1: åº§æ¨™
+	//å¼•æ•°2: radius
+	//å¼•æ•°3: OverlapHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+	//å¼•æ•°4: LayerMask, default = all layer mask
 	bool Physics::OverlapSphere(const Vector3 & position, float radius, 
 		OverlapHit * hit, const LayerMask& layerMask)
 	{
@@ -176,7 +176,7 @@ namespace SGFramework
 			physx::PxQueryFilterData(physx::PxFilterData(layerMask(), 0, 0, 0),
 				physx::PxQueryFlag::ePREFILTER | physx::PxQueryFlag::eDYNAMIC | physx::PxQueryFlag::eSTATIC), &m_queryCallback)))
 		{
-			//overlapHit‘ã“ü
+			//overlapHitä»£å…¥
 			if (hit != nullptr) hit->Init(buffer);
 			return true;
 		}
@@ -184,13 +184,13 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[OverlapCapsule]
-	//Capsule‚ÉƒIƒuƒWƒFƒNƒg‚ªÚG‚µ‚Ä‚¢‚é‚©Šm”F‚·‚é
-	//ˆø”1: À•W
-	//ˆø”2: ‰ñ“]
-	//ˆø”3: radius
-	//ˆø”4: height
-	//ˆø”5: OverlapHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ð‘ã“ü‚·‚é, default = nullptr
-	//ˆø”6: LayerMask, default = all layer mask
+	//Capsuleã«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒæŽ¥è§¦ã—ã¦ã„ã‚‹ã‹ç¢ºèªã™ã‚‹
+	//å¼•æ•°1: åº§æ¨™
+	//å¼•æ•°2: å›žè»¢
+	//å¼•æ•°3: radius
+	//å¼•æ•°4: height
+	//å¼•æ•°5: OverlapHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+	//å¼•æ•°6: LayerMask, default = all layer mask
 	bool Physics::OverlapCapsule(const Vector3 & position, const Quaternion & rotation, 
 		float radius, float height, OverlapHit * hit, const LayerMask& layerMask)
 	{
@@ -202,7 +202,7 @@ namespace SGFramework
 			physx::PxQueryFilterData(physx::PxFilterData(layerMask(), 0, 0, 0),
 				physx::PxQueryFlag::ePREFILTER | physx::PxQueryFlag::eDYNAMIC | physx::PxQueryFlag::eSTATIC), &m_queryCallback)))
 		{
-			//overlapHit‘ã“ü
+			//overlapHitä»£å…¥
 			if (hit != nullptr) hit->Init(buffer);
 			return true;
 		}

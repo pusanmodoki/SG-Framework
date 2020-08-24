@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-std::atomic‚ğ‘€ì‚·‚éAtomic namespace‚ğ‹Lq‚µ‚½Atomic.hpp
+std::atomicã‚’æ“ä½œã™ã‚‹Atomic namespaceã‚’è¨˜è¿°ã—ãŸAtomic.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_ATOMIC_HPP_
 #define SGFRAMEWORK_HEADER_ATOMIC_HPP_
@@ -18,7 +18,7 @@ std::atomic‚ğ‘€ì‚·‚éAtomic namespace‚ğ‹Lq‚µ‚½Atomic.hpp
 //Framework namespace
 namespace SGFramework
 {
-	//std::atomic‚ğ‘€ì‚·‚éAtomic namespace
+	//std::atomicã‚’æ“ä½œã™ã‚‹Atomic namespace
 	namespace Atomic
 	{
 		//----------------------------------------------------------------------------------
@@ -27,11 +27,11 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Init]
-		//atomic<T>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚Ä‰Šú‰»‚·‚é
+		//atomic<T>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦åˆæœŸåŒ–ã™ã‚‹
 		//template: atomic type
-		//return: ‘ã“üŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (atomic type)
-		//ˆø”2: ‰Šú‰»‚·‚é’l
+		//return: ä»£å…¥çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (atomic type)
+		//å¼•æ•°2: åˆæœŸåŒ–ã™ã‚‹å€¤
 		template <class T>
 		inline T Init(std::atomic<T>& atomic, T init)
 		{
@@ -43,11 +43,11 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Init]
-		//atomic<T>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚Ä‰Šú‰»‚·‚é
+		//atomic<T>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦åˆæœŸåŒ–ã™ã‚‹
 		//template: atomic type
-		//return: ‘ã“üŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (atomic type)
-		//ˆø”2: ‰Šú‰»‚·‚é’l
+		//return: ä»£å…¥çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (atomic type)
+		//å¼•æ•°2: åˆæœŸåŒ–ã™ã‚‹å€¤
 		template <class T, class CastType>
 		inline T Init(std::atomic<T>& atomic, CastType init)
 		{
@@ -65,9 +65,9 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[And]
-		//atomic<bool>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄAND‰‰Z‚·‚é
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (bool)
+		//atomic<bool>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦ANDæ¼”ç®—ã™ã‚‹
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (bool)
 		inline bool And(std::atomic<bool>& atomicBoolean, bool andFlag)
 		{
 			bool expected = atomicBoolean.load();
@@ -78,9 +78,9 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Or]
-		//atomic<bool>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄOR‰‰Z‚·‚é
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (bool)
+		//atomic<bool>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦ORæ¼”ç®—ã™ã‚‹
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (bool)
 		inline bool Or(std::atomic<bool>& atomicBoolean, bool orFlag)
 		{
 			bool expected = atomicBoolean.load();
@@ -91,9 +91,9 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Xor]
-		//atomic<bool>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄOR‰‰Z‚·‚é
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (bool)
+		//atomic<bool>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦ORæ¼”ç®—ã™ã‚‹
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (bool)
 		inline bool Xor(std::atomic<bool>& atomicBoolean, bool xorFlag)
 		{
 			bool expected = atomicBoolean.load();
@@ -104,9 +104,9 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[BitInversion]
-		//atomic<bool>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚Äƒrƒbƒg”½“]‚³‚¹‚é
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (bool)
+		//atomic<bool>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦ãƒ“ãƒƒãƒˆåè»¢ã•ã›ã‚‹
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (bool)
 		inline bool BitInversion(std::atomic<bool>& atomicBoolean)
 		{
 			bool expected = atomicBoolean.load();
@@ -125,8 +125,8 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[LockAtomic]
-		//atomic<bool>‚ğ—p‚¢‚ÄLock‚·‚é
-		//ˆø”1: atomic (bool)
+		//atomic<bool>ã‚’ç”¨ã„ã¦Lockã™ã‚‹
+		//å¼•æ•°1: atomic (bool)
 		inline void LockAtomic(std::atomic<bool>& atomicBoolean)
 		{
 			bool expected = false;
@@ -135,9 +135,9 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[TryLockAtomic]
-		//atomic<bool>‚ğ—p‚¢‚ÄLock‚ğ‚·
-		//return: Lock‚É¬Œ÷‚µ‚½ê‡true
-		//ˆø”1: atomic (bool)
+		//atomic<bool>ã‚’ç”¨ã„ã¦Lockã‚’è©¦ã™
+		//return: Lockã«æˆåŠŸã—ãŸå ´åˆtrue
+		//å¼•æ•°1: atomic (bool)
 		inline bool TryLockAtomic(std::atomic<bool>& atomicBoolean)
 		{
 			bool expected = false;
@@ -146,10 +146,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[TryCycleLockAtomic]
-		//atomic<bool>‚ğ—p‚¢‚ÄLock‚ğcycle‰ñ”‚·
-		//return: Lock‚É¬Œ÷‚µ‚½ê‡true
-		//ˆø”1: atomic (bool)
-		//ˆø”2: cycle, forƒ‹[ƒv‰ñ”
+		//atomic<bool>ã‚’ç”¨ã„ã¦Lockã‚’cycleå›æ•°è©¦ã™
+		//return: Lockã«æˆåŠŸã—ãŸå ´åˆtrue
+		//å¼•æ•°1: atomic (bool)
+		//å¼•æ•°2: cycle, forãƒ«ãƒ¼ãƒ—å›æ•°
 		inline bool TryCycleLockAtomic(std::atomic<bool>& atomicBoolean, unsigned int cycle)
 		{
 			bool expected = false;
@@ -165,15 +165,15 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[UnlockAtomic]
-		//atomic<bool>‚ğ—p‚¢‚ÄUnlock‚·‚é
-		//ˆø”1: atomic (bool)
+		//atomic<bool>ã‚’ç”¨ã„ã¦Unlockã™ã‚‹
+		//å¼•æ•°1: atomic (bool)
 		inline void UnlockAtomic(std::atomic<bool>& atomicBoolean)
 		{
 			bool expected = true;
 
 			while (1 ^ atomicBoolean.compare_exchange_weak(expected, false)) { expected = true; }
 		}
-		//Atomic”ÅLockGuard
+		//Atomicç‰ˆLockGuard
 		class LockGuard
 		{
 		public:
@@ -185,7 +185,7 @@ namespace SGFramework
 		private:
 			std::atomic<bool>& m_atomic;
 		};
-		//Atomic”ÅTryLockGuard
+		//Atomicç‰ˆTryLockGuard
 		class TryLockGuard
 		{
 		public:
@@ -207,11 +207,11 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Add]
-		//atomic<T>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚Ä‰ÁZ‚·‚é
+		//atomic<T>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦åŠ ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
-		//ˆø”2: ‰ÁZ‚·‚é’l
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
+		//å¼•æ•°2: åŠ ç®—ã™ã‚‹å€¤
 		template <class T>
 		inline T Add(std::atomic<T>& atomicIntegral, T add)
 		{
@@ -225,11 +225,11 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Subtract]
-		//atomic<T>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄŒ¸Z‚·‚é
+		//atomic<T>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦æ¸›ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
-		//ˆø”2: Œ¸Z‚·‚é’l
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
+		//å¼•æ•°2: æ¸›ç®—ã™ã‚‹å€¤
 		template <class T>
 		inline T Subtract(std::atomic<T>& atomicIntegral, T sub)
 		{
@@ -243,11 +243,11 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Subtract]
-		//atomic<T>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄæZ‚·‚é
+		//atomic<T>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦ä¹—ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
-		//ˆø”2: æZ‚·‚é’l
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
+		//å¼•æ•°2: ä¹—ç®—ã™ã‚‹å€¤
 		template <class T>
 		inline T Multiply(std::atomic<T>& atomicIntegral, T multi)
 		{
@@ -261,11 +261,11 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Divide]
-		//atomic<T>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄœZ‚·‚é
+		//atomic<T>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦é™¤ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
-		//ˆø”2: œZ‚·‚é’l
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
+		//å¼•æ•°2: é™¤ç®—ã™ã‚‹å€¤
 		template <class T>
 		inline T Divide(std::atomic<T>& atomicIntegral, T div)
 		{
@@ -283,10 +283,10 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[And]
-		//atomic<integral type>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄAND‰‰Z‚·‚é
+		//atomic<integral type>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦ANDæ¼”ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
 		template <class T>
 		inline T And(std::atomic<T>& atomicIntegral, T andFlag)
 		{
@@ -300,10 +300,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Or]
-		//atomic<integral type>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄOR‰‰Z‚·‚é
+		//atomic<integral type>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦ORæ¼”ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
 		template <class T>
 		inline T Or(std::atomic<T>& atomicIntegral, T orFlag)
 		{
@@ -317,10 +317,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Xor]
-		//atomic<integral type>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄOR‰‰Z‚·‚é
+		//atomic<integral type>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦ORæ¼”ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
 		template <class T>
 		inline T Xor(std::atomic<T>& atomicIntegral, T xorFlag)
 		{
@@ -334,10 +334,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[BitInversion]
-		//atomic<integral type>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚Äƒrƒbƒg”½“]‚³‚¹‚é
+		//atomic<integral type>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦ãƒ“ãƒƒãƒˆåè»¢ã•ã›ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
 		template <class T>
 		inline T BitInversion(std::atomic<T>& atomicIntegral)
 		{
@@ -353,11 +353,11 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Add]
-		//atomic<T>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚Ä‰ÁZ‚·‚é
+		//atomic<T>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦åŠ ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
-		//ˆø”2: ‰ÁZ‚·‚é’l
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
+		//å¼•æ•°2: åŠ ç®—ã™ã‚‹å€¤
 		template <class T, class CastType>
 		inline T Add(std::atomic<T>& atomicIntegral, CastType add)
 		{
@@ -367,11 +367,11 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Subtract]
-		//atomic<T>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄŒ¸Z‚·‚é
+		//atomic<T>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦æ¸›ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
-		//ˆø”2: Œ¸Z‚·‚é’l
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
+		//å¼•æ•°2: æ¸›ç®—ã™ã‚‹å€¤
 		template <class T, class CastType>
 		inline T Subtract(std::atomic<T>& atomicIntegral, CastType sub)
 		{
@@ -381,11 +381,11 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Subtract]
-		//atomic<T>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄæZ‚·‚é
+		//atomic<T>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦ä¹—ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
-		//ˆø”2: æZ‚·‚é’l
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
+		//å¼•æ•°2: ä¹—ç®—ã™ã‚‹å€¤
 		template <class T, class CastType>
 		inline T Multiply(std::atomic<T>& atomicIntegral, CastType multi)
 		{
@@ -395,11 +395,11 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Divide]
-		//atomic<T>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄœZ‚·‚é
+		//atomic<T>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦é™¤ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
-		//ˆø”2: œZ‚·‚é’l
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
+		//å¼•æ•°2: é™¤ç®—ã™ã‚‹å€¤
 		template <class T, class CastType>
 		inline T Divide(std::atomic<T>& atomicIntegral, CastType div)
 		{
@@ -410,10 +410,10 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[And]
-		//atomic<integral type>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄAND‰‰Z‚·‚é
+		//atomic<integral type>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦ANDæ¼”ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
 		template <class T, class CastType>
 		inline T And(std::atomic<T>& atomicIntegral, CastType andFlag)
 		{
@@ -423,10 +423,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Or]
-		//atomic<integral type>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄOR‰‰Z‚·‚é
+		//atomic<integral type>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦ORæ¼”ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
 		template <class T, class CastType>
 		inline T Or(std::atomic<T>& atomicIntegral, CastType orFlag)
 		{
@@ -436,10 +436,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Xor]
-		//atomic<integral type>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄOR‰‰Z‚·‚é
+		//atomic<integral type>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦ORæ¼”ç®—ã™ã‚‹
 		//template: integral type
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
-		//ˆø”1: atomic (integral type)
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
+		//å¼•æ•°1: atomic (integral type)
 		template <class T, class CastType>
 		inline T Xor(std::atomic<T>& atomicIntegral, CastType xorFlag)
 		{
@@ -457,11 +457,11 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Add]
-		//atomic<T*>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚Ä‰ÁZ‚·‚é
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
+		//atomic<T*>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦åŠ ç®—ã™ã‚‹
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
 		//template: integral type
-		//ˆø”1: atomic (integral type)
-		//ˆø”2: ‰ÁZ‚·‚é’l
+		//å¼•æ•°1: atomic (integral type)
+		//å¼•æ•°2: åŠ ç®—ã™ã‚‹å€¤
 		template <class T>
 		inline T* Add(std::atomic<T*>& atomicPointer, int add)
 		{
@@ -475,11 +475,11 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Subtract]
-		//atomic<T>‚ğƒƒbƒNƒtƒŠ[ƒAƒ‹ƒSƒŠƒYƒ€‚ğ—p‚¢‚ÄŒ¸Z‚·‚é
-		//return: ŒvZŒ‹‰Ê (atomic‚É‘ã“üÏ‚İ)
+		//atomic<T>ã‚’ãƒ­ãƒƒã‚¯ãƒ•ãƒªãƒ¼ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’ç”¨ã„ã¦æ¸›ç®—ã™ã‚‹
+		//return: è¨ˆç®—çµæœ (atomicã«ä»£å…¥æ¸ˆã¿)
 		//template: integral type
-		//ˆø”1: atomic (integral type)
-		//ˆø”2: Œ¸Z‚·‚é’l
+		//å¼•æ•°1: atomic (integral type)
+		//å¼•æ•°2: æ¸›ç®—ã™ã‚‹å€¤
 		template <class T>
 		inline T* Subtract(std::atomic<T*>& atomicPointer, int sub)
 		{

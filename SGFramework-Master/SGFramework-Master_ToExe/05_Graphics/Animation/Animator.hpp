@@ -16,11 +16,11 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[EnabledCallbacks]
-		//return: 自身がCallされるCallback Flags, Component::CallbackFunctions参照
+		//return: 閾ｪ霄ｫ縺靴all縺輔ｌ繧気allback Flags, Component::CallbackFunctions蜿ら�ｧ
 		inline virtual uint EnableCallbacks() { return CallbackFunctions::Update | CallbackFunctions::MakeDrawCommand; }
 		//----------------------------------------------------------------------------------
 		//[Update]
-		//毎フレームUpdateブロックでCallbackされる関数
+		//豈弱ヵ繝ｬ繝ｼ繝Update繝悶Ο繝�繧ｯ縺ｧCallback縺輔ｌ繧矩未謨ｰ
 		inline virtual void Update() 
 		{
 			if (m_player)

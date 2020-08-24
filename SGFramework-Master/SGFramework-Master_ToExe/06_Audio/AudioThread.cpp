@@ -9,69 +9,69 @@ namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
 	//[UpdateThread]
-	//ƒI[ƒfƒBƒI‚ÌXV‚ğs‚¤, •ÊƒXƒŒƒbƒh—pŠÖ”
+	//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã®æ›´æ–°ã‚’è¡Œã†, åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
 	void Audio::UpdateThread()
 	{
-		//1ƒ~ƒŠ•b
+		//1ãƒŸãƒªç§’
 		static const std::chrono::milliseconds cOneMilliSeconds(1);
-		//deltaŒvZ—p
+		//deltaè¨ˆç®—ç”¨
 		static TimeProcessing::TimeGetterDouble s_timeGetter;
-		static double s_nowTime = 0;								//Œ»İæ“¾—p
-		static double s_oldFlameTime = s_timeGetter();	//deltaŒvZ—p
+		static double s_nowTime = 0;								//ç¾åœ¨æ™‚åˆ»å–å¾—ç”¨
+		static double s_oldFlameTime = s_timeGetter();	//deltaè¨ˆç®—ç”¨
 		static float s_deltaTime = 0.0f;							//delta time
 
 		while (true)
 		{
 			if (IS_TRUE(m_isEndUpdate)) return;
-			//Œ»İ‚Ì‚ğæ“¾
+			//ç¾åœ¨ã®æ™‚åˆ»ã‚’å–å¾—
 			s_nowTime = s_timeGetter();
-			//deltaTimeæ“¾
+			//deltaTimeå–å¾—
 			s_deltaTime = static_cast<float>(s_nowTime - s_oldFlameTime);
-			//oldTimeXV
+			//oldTimeæ›´æ–°
 			s_oldFlameTime = s_nowTime;
 
-			//delta‚ğŠî‚ÉXVŠÔŠu‚ğ’²®
+			//deltaã‚’åŸºã«æ›´æ–°é–“éš”ã‚’èª¿æ•´
 			if (s_deltaTime > m_audioUpdateIntervalForFloat && m_nowAudioUpdateInterval > cOneMilliSeconds)
 				m_nowAudioUpdateInterval -= cOneMilliSeconds;
 			else if (s_deltaTime < m_audioUpdateIntervalForFloat)
 				m_nowAudioUpdateInterval += cOneMilliSeconds;
 
-			//Ÿ‰ñƒXƒŒƒbƒh‹N“®ŠÔİ’è
+			//æ¬¡å›ã‚¹ãƒ¬ãƒƒãƒ‰èµ·å‹•æ™‚é–“è¨­å®š
 			auto nextWakeTime =
 				std::chrono::system_clock::now() + m_nowAudioUpdateInterval;
 
-			//MessageƒŠƒXƒg‚ğswap
+			//Messageãƒªã‚¹ãƒˆã‚’swap
 			AtomicOperation::LockAtomic(m_lockMessages);
 			std::swap(m_messages, m_useThreadMessages);
 			AtomicOperation::UnlockAtomic(m_lockMessages);
 
-			//Listeneræ“¾
+			//Listenerå–å¾—
 			AudioListener::getListener(m_x3dListener, s_deltaTime);
 
-			//MessageXVƒ‹[ƒv
+			//Messageæ›´æ–°ãƒ«ãƒ¼ãƒ—
 			for (auto& e : m_useThreadMessages)
 			{
-				//Messageˆ—
+				//Messageå‡¦ç†
 				ProcessingMessage(e);
 				//Release
 				e.Release();
 			}
 
-			//g—p’†‚ÌƒƒbƒZ[ƒWƒŠƒXƒg‚ğ‰Šú‰»
+			//ä½¿ç”¨ä¸­ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒªã‚¹ãƒˆã‚’åˆæœŸåŒ–
 			m_useThreadMessages.clear();
 
-			//SmoothXV
+			//Smoothæ›´æ–°
 			UpdateSmooth(s_deltaTime);
 
-			//w’è•b”Œo‰ß‚·‚é‚Ü‚ÅƒƒbƒN
+			//æŒ‡å®šç§’æ•°çµŒéã™ã‚‹ã¾ã§ãƒ­ãƒƒã‚¯
 			std::this_thread::sleep_until(nextWakeTime);
 		}
 	}
 
 	//----------------------------------------------------------------------------------
 	//[ProcessingMessage]
-	//ƒƒbƒZ[ƒW‚ğˆ—‚·‚é
-	//ˆø”1: message
+	//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã™ã‚‹
+	//å¼•æ•°1: message
 	void Audio::ProcessingMessage(const Detail::Audio::AudioMessage & message)
 	{
 		using namespace Detail::Audio;

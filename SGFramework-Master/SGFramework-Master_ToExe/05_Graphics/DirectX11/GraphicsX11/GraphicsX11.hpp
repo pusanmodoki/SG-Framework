@@ -26,7 +26,7 @@ namespace SGFramework
 	{
 		class BasePolygonX11;
 	}
-	//�t���[�����[�N�̊Ǘ�������Administrator namespace
+	//フレームワークの管理をするAdministrator namespace
 	namespace Administrator
 	{
 		//GraphicsDetail namespace
@@ -94,9 +94,9 @@ namespace SGFramework
 				bool isChange = false;
 			};
 
-			//GraphicsUpdate�Ŏg�p
+			//GraphicsUpdateで使用
 			static constexpr uint m_cGraphicsThreadState = 0;
-			//GraphicsUpdate�ȊO�̃X���b�h�Ŏg�p
+			//GraphicsUpdate以外のスレッドで使用
 			static constexpr uint m_UpdateThreadState = 1;
 			static constexpr uint m_cConstantBufferSceneSlot = 0;
 			static constexpr uint m_cConstantBufferLightSlot = 1;

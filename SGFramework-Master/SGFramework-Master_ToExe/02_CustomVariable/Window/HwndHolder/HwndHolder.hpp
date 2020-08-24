@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-hWnd‚ğŠÇ—‚·‚éHwndHolder class
+hWndã‚’ç®¡ç†ã™ã‚‹HwndHolder class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_HWND_HOLDER_HPP_
 #define SGFRAMEWORK_HEADER_HWND_HOLDER_HPP_
@@ -13,18 +13,18 @@ hWnd‚ğŠÇ—‚·‚éHwndHolder class
 //Framework namespace
 namespace SGFramework
 {
-	//WindowŠÇ—
+	//Windowç®¡ç†
 	namespace Window
 	{
-		//hWnd‚ğŠÇ—‚·‚éHwndHolder class
+		//hWndã‚’ç®¡ç†ã™ã‚‹HwndHolder class
 		class HwndHolder final
 		{
 		public:
 			//----------------------------------------------------------------------------------
 			//[AddHwnd]
-			//ƒEƒBƒ“ƒhƒEƒnƒ“ƒhƒ‹‚ğ“o˜^
+			//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ãƒãƒ³ãƒ‰ãƒ«ã‚’ç™»éŒ²
 			//return: i, error = VariableLimit::cUintMax
-			//ˆø”1: ƒEƒBƒ“ƒhƒEƒnƒ“ƒhƒ‹
+			//å¼•æ•°1: ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ãƒãƒ³ãƒ‰ãƒ«
 			inline static uint AddHwnd(const HWND hWnd) 
 			{ 
 				if (hWnd == nullptr) return VariableLimit::cUintMax; 
@@ -38,8 +38,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[Hwnds]
-			//return: “o˜^ƒŠƒXƒg.size > i‚Ìê‡“o˜^ƒŠƒXƒg[i]‚ğ•Ô‹p, ‚È‚¢‚È‚çnull
-			//ˆø”1: i
+			//return: ç™»éŒ²ãƒªã‚¹ãƒˆ.size > iã®å ´åˆç™»éŒ²ãƒªã‚¹ãƒˆ[i]ã‚’è¿”å´, ãªã„ãªã‚‰null
+			//å¼•æ•°1: i
 			inline static HWND Hwnds(const uint i) 
 			{ 
 				std::lock_guard<std::mutex> lock(m_mutex);
@@ -47,13 +47,13 @@ namespace SGFramework
 				else return nullptr; 
 			}
 
-			//‹N“®ƒEƒBƒ“ƒhƒE‚Ìƒnƒ“ƒhƒ‹
+			//èµ·å‹•ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®ãƒãƒ³ãƒ‰ãƒ«
 			static PointerProperty<HWND> main;
 
 		private:
 			//hWnds[0]
 			static HWND m_main;
-			//hWndƒŠƒXƒg
+			//hWndãƒªã‚¹ãƒˆ
 			static std::vector<HWND> m_hwnds;
 			//mutex
 			static std::mutex m_mutex;

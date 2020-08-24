@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Hit Callback時に使用するContactInfo structure
+Hit Callback譎ゅ↓菴ｿ逕ｨ縺吶ｋContactInfo structure
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_CONTACT_INFO_HPP_
 #define SGFRAMEWORK_HEADER_CONTACT_INFO_HPP_
@@ -11,7 +11,7 @@ Hit Callback時に使用するContactInfo structure
 //Framework namespace
 namespace SGFramework
 {
-	//Hit Callback時に使用するContactInfo structure
+	//Hit Callback譎ゅ↓菴ｿ逕ｨ縺吶ｋContactInfo structure
 	struct ContactInfo final
 	{
 	public:

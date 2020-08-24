@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-”Ä—pXVƒXƒŒƒbƒh‚ðŠÇ—‚·‚éThread class
+æ±Žç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’ç®¡ç†ã™ã‚‹Thread class
 ------------------------------------------------------------------------------------*/
 #include "Thread.hpp"
 #include "../05_Graphics/Graphics.hpp"
@@ -11,170 +11,170 @@ namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
 	//[MainThreadUpdate]
-	//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-	//”Ä—pXVƒXƒŒƒbƒh‚Ì‘Ò‹@ó‘Ô‚ð‰ðœ‚µAŠÖ”ƒLƒ…[‚ÌÁ‰»‚ð•À—ñ‚Ås‚¤
-	//ˆø”1: callbackType
+	//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+	//æ±Žç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã®å¾…æ©ŸçŠ¶æ…‹ã‚’è§£é™¤ã—ã€é–¢æ•°ã‚­ãƒ¥ãƒ¼ã®æ¶ˆåŒ–ã‚’ä¸¦åˆ—ã§è¡Œã†
+	//å¼•æ•°1: callbackType
 	void Thread::MainThreadSingleUpdate(uint callbackType)
 	{
-		//CallbackXV‚Å‚·
+		//Callbackæ›´æ–°ã§ã™
 		m_updateType = m_UpdateDefault;
-		//ƒR[ƒ‹ƒoƒbƒN‚ðŽw’è
+		//ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã‚’æŒ‡å®š
 		m_callbackType = callbackType;
-		//XV
+		//æ›´æ–°
 		Transform::UpdateForSingleThread(callbackType);
-		//I—¹ˆ—
+		//çµ‚äº†å‡¦ç†
 		Transform::EndUpdateForMultiThread();
 	}
 	//----------------------------------------------------------------------------------
 	//[MainThreadUpdate]
-	//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-	//”Ä—pXVƒXƒŒƒbƒh‚Ì‘Ò‹@ó‘Ô‚ð‰ðœ‚µAŠÖ”ƒLƒ…[‚ÌÁ‰»‚ð•À—ñ‚Ås‚¤
+	//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+	//æ±Žç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã®å¾…æ©ŸçŠ¶æ…‹ã‚’è§£é™¤ã—ã€é–¢æ•°ã‚­ãƒ¥ãƒ¼ã®æ¶ˆåŒ–ã‚’ä¸¦åˆ—ã§è¡Œã†
 	void Thread::MainThreadUpdate()
 	{
-		//’ÊíXV‚Å‚·
+		//é€šå¸¸æ›´æ–°ã§ã™
 		m_updateType = m_UpdateNotCallback;
-		//ƒR[ƒ‹ƒoƒbƒN‚ðŽw’è
+		//ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã‚’æŒ‡å®š
 		m_callbackType = 0;
-		//XVŠJŽn‚ð‹–‰Â‚·‚é
+		//æ›´æ–°é–‹å§‹ã‚’è¨±å¯ã™ã‚‹
 		for (auto& e : m_startUpdateConditions)
 			e.NotifyOne();
 
-		//XV
+		//æ›´æ–°
 		Transform::UpdateForMultiThread1();
 
-		//‘S‚Ä‚ÌƒXƒŒƒbƒh‚ÅXV‚ªI‚í‚é‚Ü‚Å‘Ò‹@
+		//å…¨ã¦ã®ã‚¹ãƒ¬ãƒƒãƒ‰ã§æ›´æ–°ãŒçµ‚ã‚ã‚‹ã¾ã§å¾…æ©Ÿ
 		for (auto& e : m_endUpdateConditions)
 			e.Wait();
 
-		//I—¹ˆ—
+		//çµ‚äº†å‡¦ç†
 		Transform::EndUpdateForMultiThread();
 	}
 	//----------------------------------------------------------------------------------
 	//[MainThreadUpdate]
-	//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-	//”Ä—pXVƒXƒŒƒbƒh‚Ì‘Ò‹@ó‘Ô‚ð‰ðœ‚µAŠÖ”ƒLƒ…[‚ÌÁ‰»‚ð•À—ñ‚Ås‚¤
-	//ˆø”1: callbackType
+	//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+	//æ±Žç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã®å¾…æ©ŸçŠ¶æ…‹ã‚’è§£é™¤ã—ã€é–¢æ•°ã‚­ãƒ¥ãƒ¼ã®æ¶ˆåŒ–ã‚’ä¸¦åˆ—ã§è¡Œã†
+	//å¼•æ•°1: callbackType
 	void Thread::MainThreadUpdate(uint callbackType)
 	{
-		//’ÊíXV‚Å‚·
+		//é€šå¸¸æ›´æ–°ã§ã™
 		m_updateType = m_UpdateDefault;
-		//ƒR[ƒ‹ƒoƒbƒN‚ðŽw’è
+		//ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã‚’æŒ‡å®š
 		m_callbackType = callbackType;
-		//XVŠJŽn‚ð‹–‰Â‚·‚é
+		//æ›´æ–°é–‹å§‹ã‚’è¨±å¯ã™ã‚‹
 		for (auto& e : m_startUpdateConditions)
 			e.NotifyOne();
 
-		//XV
+		//æ›´æ–°
 		Transform::UpdateForMultiThread1(callbackType);
 
-		//‘S‚Ä‚ÌƒXƒŒƒbƒh‚ÅXV‚ªI‚í‚é‚Ü‚Å‘Ò‹@
+		//å…¨ã¦ã®ã‚¹ãƒ¬ãƒƒãƒ‰ã§æ›´æ–°ãŒçµ‚ã‚ã‚‹ã¾ã§å¾…æ©Ÿ
 		for (auto& e : m_endUpdateConditions)
 			e.Wait();
 		
-		//I—¹ˆ—
+		//çµ‚äº†å‡¦ç†
 		Transform::EndUpdateForMultiThread();
 	}
 	//----------------------------------------------------------------------------------
 	//[MainThreadInvokeCallbacks]
-	//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-	//”Ä—pXVƒXƒŒƒbƒh‚Ì‘Ò‹@ó‘Ô‚ð‰ðœ‚µAƒR[ƒ‹ƒoƒbƒNŒÄ‚Ño‚µ‚ð•À—ñ‚Ås‚¤
-	//ˆø”1: callbackType
+	//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+	//æ±Žç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã®å¾…æ©ŸçŠ¶æ…‹ã‚’è§£é™¤ã—ã€ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯å‘¼ã³å‡ºã—ã‚’ä¸¦åˆ—ã§è¡Œã†
+	//å¼•æ•°1: callbackType
 	void Thread::MainThreadInvokeCallbacks(uint callbackType)
 	{
-		//CallbackXV‚Å‚·
+		//Callbackæ›´æ–°ã§ã™
 		m_updateType = m_cInvokeCallbacks;
-		//ƒR[ƒ‹ƒoƒbƒN‚ðŽw’è
+		//ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã‚’æŒ‡å®š
 		m_callbackType = callbackType;
-		//XVŠJŽn‚ð‹–‰Â‚·‚é
+		//æ›´æ–°é–‹å§‹ã‚’è¨±å¯ã™ã‚‹
 		for (auto& e : m_startUpdateConditions)
 			e.NotifyOne();
 
-		//XV
+		//æ›´æ–°
 		Transform::InvokeCallbackForMultiThread1(callbackType);
 
-		//‘S‚Ä‚ÌƒXƒŒƒbƒh‚ÅXV‚ªI‚í‚é‚Ü‚Å‘Ò‹@
+		//å…¨ã¦ã®ã‚¹ãƒ¬ãƒƒãƒ‰ã§æ›´æ–°ãŒçµ‚ã‚ã‚‹ã¾ã§å¾…æ©Ÿ
 		for (auto& e : m_endUpdateConditions)
 			e.Wait();
 
-		//I—¹ˆ—
+		//çµ‚äº†å‡¦ç†
 		Transform::EndUpdateForMultiThread();
 	}
 	//----------------------------------------------------------------------------------
 	//[MainThreadSingleInvokeCallbacks]
-	//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-	//ƒR[ƒ‹ƒoƒbƒNŒÄ‚Ño‚µ‚ðƒVƒ“ƒOƒ‹ƒXƒŒƒbƒh‚Ås‚¤
-	//ˆø”1: callbackType
+	//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+	//ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯å‘¼ã³å‡ºã—ã‚’ã‚·ãƒ³ã‚°ãƒ«ã‚¹ãƒ¬ãƒƒãƒ‰ã§è¡Œã†
+	//å¼•æ•°1: callbackType
 	void Thread::MainThreadSingleInvokeCallbacks(uint callbackType)
 	{
-		//CallbackXV‚Å‚·
+		//Callbackæ›´æ–°ã§ã™
 		m_updateType = m_cInvokeCallbacks;
-		//ƒR[ƒ‹ƒoƒbƒN‚ðŽw’è
+		//ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã‚’æŒ‡å®š
 		m_callbackType = callbackType;
-		//XV
+		//æ›´æ–°
 		Transform::InvokeCallbackForSingleThread(callbackType);
-		//I—¹ˆ—
+		//çµ‚äº†å‡¦ç†
 		Transform::EndUpdateForMultiThread();
 	}
 	//----------------------------------------------------------------------------------
 	//[MainThreadBeginUpdate]
-	//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-	//”Ä—pXVƒXƒŒƒbƒh‚Ì‘Ò‹@ó‘Ô‚ð‰ðœ‚µA‰ŠúXV‚ð•À—ñŽÀs‚·‚é
+	//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+	//æ±Žç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã®å¾…æ©ŸçŠ¶æ…‹ã‚’è§£é™¤ã—ã€åˆæœŸæ›´æ–°ã‚’ä¸¦åˆ—å®Ÿè¡Œã™ã‚‹
 	void Thread::MainThreadBeginUpdate()
 	{		
-		//‰ŠúXV‚Å‚·
+		//åˆæœŸæ›´æ–°ã§ã™
 		m_updateType = m_UpdateBeginFunction;
-		//XVŠJŽn‚ð‹–‰Â‚·‚é
+		//æ›´æ–°é–‹å§‹ã‚’è¨±å¯ã™ã‚‹
 		for (auto& e : m_startUpdateConditions)
 			e.NotifyOne();
 
-		//XV
+		//æ›´æ–°
 		Transform::SyncForMultiThread1(Component::CallbackFunctions::Update);
 
 
-		//‘S‚Ä‚ÌƒXƒŒƒbƒh‚ÅXV‚ªI‚í‚é‚Ü‚Å‘Ò‹@
+		//å…¨ã¦ã®ã‚¹ãƒ¬ãƒƒãƒ‰ã§æ›´æ–°ãŒçµ‚ã‚ã‚‹ã¾ã§å¾…æ©Ÿ
 		for (auto& e : m_endUpdateConditions)
 			e.Wait();
 
 		AtomicOperation::Init(m_beginCounter, 0);
 
-		//I—¹ˆ—
+		//çµ‚äº†å‡¦ç†
 		Transform::EndUpdateForMultiThread();
 	}
 	//----------------------------------------------------------------------------------
 	//[MainThreadGraphicsUpdate]
-	//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-	//”Ä—pXVƒXƒŒƒbƒh‚Ì‘Ò‹@ó‘Ô‚ð‰ðœ‚µA•`‰æƒŠƒXƒg‚Ìì¬•ƒ\[ƒg‚ð•À—ñ‚Ås‚¤
+	//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+	//æ±Žç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã®å¾…æ©ŸçŠ¶æ…‹ã‚’è§£é™¤ã—ã€æç”»ãƒªã‚¹ãƒˆã®ä½œæˆï¼†ã‚½ãƒ¼ãƒˆã‚’ä¸¦åˆ—ã§è¡Œã†
 	void Thread::MainThreadGraphicsUpdate()
 	{
-		//•`‰æƒŠƒXƒgì¬
+		//æç”»ãƒªã‚¹ãƒˆä½œæˆ
 		MainThreadInvokeCallbacks(Component::CallbackFunctions::MakeDrawCommand);
 
-		//ƒ\[ƒgˆ—‚Å‚·
+		//ã‚½ãƒ¼ãƒˆå‡¦ç†ã§ã™
 		m_updateType = m_UpdateSortGraphics;
-		//XVŠJŽn‚ð‹–‰Â‚·‚é
+		//æ›´æ–°é–‹å§‹ã‚’è¨±å¯ã™ã‚‹
 		for (auto& e : m_startUpdateConditions)
 			e.NotifyOne();
 
-		//ƒ\[ƒg
+		//ã‚½ãƒ¼ãƒˆ
 		Graphics::SortList();
 
-		//‘S‚Ä‚ÌƒXƒŒƒbƒh‚ÅXV‚ªI‚í‚é‚Ü‚Å‘Ò‹@
+		//å…¨ã¦ã®ã‚¹ãƒ¬ãƒƒãƒ‰ã§æ›´æ–°ãŒçµ‚ã‚ã‚‹ã¾ã§å¾…æ©Ÿ
 		for (auto& e : m_endUpdateConditions)
 			e.Wait();
 	}
 
 	void Thread::MainThreadBeginBeforeSync()
 	{
-		//‰ŠúXV‚Å‚·
+		//åˆæœŸæ›´æ–°ã§ã™
 		m_updateType = m_cUpdateModeBeforeSync;
-		//XVŠJŽn‚ð‹–‰Â‚·‚é
+		//æ›´æ–°é–‹å§‹ã‚’è¨±å¯ã™ã‚‹
 		for (auto& e : m_startUpdateConditions)
 			e.NotifyOne();
 	}
 	
 	void Thread::MainThreadEndBeforeSync()
 	{
-		//‘S‚Ä‚ÌƒXƒŒƒbƒh‚ÅXV‚ªI‚í‚é‚Ü‚Å‘Ò‹@
+		//å…¨ã¦ã®ã‚¹ãƒ¬ãƒƒãƒ‰ã§æ›´æ–°ãŒçµ‚ã‚ã‚‹ã¾ã§å¾…æ©Ÿ
 		for (auto& e : m_endUpdateConditions)
 			e.Wait();
 
@@ -183,47 +183,47 @@ namespace SGFramework
 
 	void Thread::MainThreadBeginAfterSync()
 	{
-		//SyncŒãXV‚Å‚·
+		//Syncå¾Œæ›´æ–°ã§ã™
 		m_updateType = m_cUpdateModeAfterSync;
-		//XVŠJŽn‚ð‹–‰Â‚·‚é
+		//æ›´æ–°é–‹å§‹ã‚’è¨±å¯ã™ã‚‹
 		for (auto& e : m_startUpdateConditions)
 			e.NotifyOne();
 	}
 
 	void Thread::MainThreadEndAfterSync()
 	{
-		//ƒ\[ƒg
+		//ã‚½ãƒ¼ãƒˆ
 		Graphics::SortList();
 
-		//‘S‚Ä‚ÌƒXƒŒƒbƒh‚ÅXV‚ªI‚í‚é‚Ü‚Å‘Ò‹@
+		//å…¨ã¦ã®ã‚¹ãƒ¬ãƒƒãƒ‰ã§æ›´æ–°ãŒçµ‚ã‚ã‚‹ã¾ã§å¾…æ©Ÿ
 		for (auto& e : m_endUpdateConditions)
 			e.Wait();
 	}
 
 	void Thread::MainThreadBeginFixed()
 	{
-		//FixedXV‚Å‚·
+		//Fixedæ›´æ–°ã§ã™
 		m_updateType = m_cUpdateModeFixed;
-		//XVŠJŽn‚ð‹–‰Â‚·‚é
+		//æ›´æ–°é–‹å§‹ã‚’è¨±å¯ã™ã‚‹
 		for (auto& e : m_startUpdateConditions)
 			e.NotifyOne();
 	}
 
 	void Thread::MainThreadEndFixed()
 	{
-		//‘S‚Ä‚ÌƒXƒŒƒbƒh‚ÅXV‚ªI‚í‚é‚Ü‚Å‘Ò‹@
+		//å…¨ã¦ã®ã‚¹ãƒ¬ãƒƒãƒ‰ã§æ›´æ–°ãŒçµ‚ã‚ã‚‹ã¾ã§å¾…æ©Ÿ
 		for (auto& e : m_endUpdateConditions)
 			e.Wait();
 	}
 
 	//----------------------------------------------------------------------------------
 	//[UpdateThread]
-	//”Ä—pXVƒXƒŒƒbƒh—pŠÖ”
-	//ŠÖ”ƒLƒ…[‚ÌÁ‰»‚ÆŽÀs‘Ò‹@‚ðƒ‹[ƒv‚·‚é
-	//ˆø”1: ŽÀsƒXƒŒƒbƒh‚Ì—v‘f”Ô†
+	//æ±Žç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+	//é–¢æ•°ã‚­ãƒ¥ãƒ¼ã®æ¶ˆåŒ–ã¨å®Ÿè¡Œå¾…æ©Ÿã‚’ãƒ«ãƒ¼ãƒ—ã™ã‚‹
+	//å¼•æ•°1: å®Ÿè¡Œã‚¹ãƒ¬ãƒƒãƒ‰ã®è¦ç´ ç•ªå·
 	void Thread::UpdateThread(uint myThreadNumber)
 	{
-		//XVƒ‹[ƒv
+		//æ›´æ–°ãƒ«ãƒ¼ãƒ—
 		while (true)
 		{
 			//Wait
@@ -274,23 +274,23 @@ namespace SGFramework
 			else if (m_updateType & m_cUpdateModeQuit)
 				break;
 
-			//XVI—¹
+			//æ›´æ–°çµ‚äº†
 			m_endUpdateConditions[myThreadNumber].NotifyOne();
 		}
 
-		//XVI—¹
+		//æ›´æ–°çµ‚äº†
 		m_endUpdateConditions[myThreadNumber].NotifyOne();
 	}
 
 	//----------------------------------------------------------------------------------
 	//[ThreadUpdate1]
-	//”Ä—pXVƒXƒŒƒbƒh—pŠÖ”
-	//ŠÖ”ƒLƒ…[‚ÌÁ‰»‚ÆŽÀs‘Ò‹@‚ðƒ‹[ƒv‚·‚é
-	//ˆø”1: ŽÀsƒXƒŒƒbƒh‚Ì—v‘f”Ô†
-	//ˆø”2: —áŠOƒ|ƒCƒ“ƒ^
+	//æ±Žç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+	//é–¢æ•°ã‚­ãƒ¥ãƒ¼ã®æ¶ˆåŒ–ã¨å®Ÿè¡Œå¾…æ©Ÿã‚’ãƒ«ãƒ¼ãƒ—ã™ã‚‹
+	//å¼•æ•°1: å®Ÿè¡Œã‚¹ãƒ¬ãƒƒãƒ‰ã®è¦ç´ ç•ªå·
+	//å¼•æ•°2: ä¾‹å¤–ãƒã‚¤ãƒ³ã‚¿
 	void Thread::ThreadUpdate1(uint myThreadNumber)
 	{
-		//XVƒ‹[ƒv
+		//æ›´æ–°ãƒ«ãƒ¼ãƒ—
 		while (true)
 		{
 			//Wait
@@ -326,38 +326,38 @@ namespace SGFramework
 			else if(m_updateType & m_UpdateQuit)
 				return;
 
-			//XVI—¹
+			//æ›´æ–°çµ‚äº†
 			m_endUpdateConditions[myThreadNumber].NotifyOne();
 		}
 	}
 	//----------------------------------------------------------------------------------
 	//[StartAudioGraphicsUpdate]
-	//ƒI[ƒfƒBƒIƒOƒ‰ƒtƒBƒbƒNƒAƒbƒvƒf[ƒg‚ðŠJŽn‚·‚é
+	//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã‚’é–‹å§‹ã™ã‚‹
 	void Thread::StartAudioGraphicsUpdate()
 	{
-		//UpdateŠJŽn
+		//Updateé–‹å§‹
 		m_startAudioGraphicsCondition->NotifyOne();
 	}		
 	//----------------------------------------------------------------------------------
 	//[WaitAudioGraphicsUpdate]
-	//ƒI[ƒfƒBƒIƒOƒ‰ƒtƒBƒbƒNƒAƒbƒvƒf[ƒg‚ÌI—¹‚Ü‚Å‘Ò‹@‚·‚é
+	//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã®çµ‚äº†ã¾ã§å¾…æ©Ÿã™ã‚‹
 	void Thread::WaitAudioGraphicsUpdate()
 	{
-		//UpdateI—¹‘Ò‹@
+		//Updateçµ‚äº†å¾…æ©Ÿ
 		m_endAudioGraphicsCondition->Wait();
 	}
 
 	//----------------------------------------------------------------------------------
 	//[AudioGraphicsUpdate]
-	//ƒI[ƒfƒBƒIƒOƒ‰ƒtƒBƒbƒN—Dæˆ—ƒXƒŒƒbƒh—pŠÖ”
-	//1ƒtƒŒ[ƒ€‘O‚Ìî•ñ‚ðŠî‚ÉŒvŽZ, •`‰æ‚âÄ¶‚ðs‚¤
-	//ˆø”1: —áŠOƒ|ƒCƒ“ƒ^
+	//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯å„ªå…ˆå‡¦ç†ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+	//1ãƒ•ãƒ¬ãƒ¼ãƒ å‰ã®æƒ…å ±ã‚’åŸºã«è¨ˆç®—, æç”»ã‚„å†ç”Ÿã‚’è¡Œã†
+	//å¼•æ•°1: ä¾‹å¤–ãƒã‚¤ãƒ³ã‚¿
 	void Thread::AudioGraphicsUpdate()
 	{
-		//XVƒ‹[ƒv
+		//æ›´æ–°ãƒ«ãƒ¼ãƒ—
 		while (true)
 		{
-			//UpdateŠJŽn‘Ò‹@
+			//Updateé–‹å§‹å¾…æ©Ÿ
 			m_startAudioGraphicsCondition->Wait();
 			
 			//Quit->Return
@@ -366,7 +366,7 @@ namespace SGFramework
 			//Update
 			Graphics::UpdateGraphics();
 
-			//UpdateI—¹ 
+			//Updateçµ‚äº† 
 			m_endAudioGraphicsCondition->NotifyOne();
 		}
 	}

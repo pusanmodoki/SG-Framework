@@ -10,7 +10,7 @@ namespace SGFramework
 	//Scene
 	namespace Scene
 	{
-		//ƒV[ƒ“ˆø‚«Œp‚¬î•ñ‚ğŠi”[‚·‚éSceneBaton
+		//ã‚·ãƒ¼ãƒ³å¼•ãç¶™ãæƒ…å ±ã‚’æ ¼ç´ã™ã‚‹SceneBaton
 		struct SceneBaton
 		{
 			std::vector<int> valueInts;
@@ -20,10 +20,10 @@ namespace SGFramework
 			std::vector<SharedPointer<Object>> valueObjects;
 		};
 
-		class BaseScene;	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÅŠÇ—‚·‚éƒV[ƒ“‚Ìƒx[ƒX‚Æ‚È‚éBaseScene class
-		class SubScene;		//ƒtƒŒ[ƒ€ƒ[ƒN‚ÅŠÇ—‚·‚éƒTƒuƒV[ƒ“‚Ìƒx[ƒX‚Æ‚È‚éSubBaseScene class
+		class BaseScene;	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã§ç®¡ç†ã™ã‚‹ã‚·ãƒ¼ãƒ³ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseScene class
+		class SubScene;		//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã§ç®¡ç†ã™ã‚‹ã‚µãƒ–ã‚·ãƒ¼ãƒ³ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹SubBaseScene class
 		
-		//ƒtƒŒ[ƒ€ƒ[ƒN‚ÅŠÇ—‚·‚éƒV[ƒ“‚Ìƒx[ƒX‚Æ‚È‚éBaseScene class
+		//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã§ç®¡ç†ã™ã‚‹ã‚·ãƒ¼ãƒ³ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseScene class
 		class BaseScene
 		{
 		public:
@@ -32,81 +32,81 @@ namespace SGFramework
 			friend class GUI;
 
 			//----------------------------------------------------------------------------------
-			//[ƒfƒXƒgƒ‰ƒNƒ^]
-			//“Á‚É‰½‚à‚µ‚È‚¢
+			//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ç‰¹ã«ä½•ã‚‚ã—ãªã„
 			inline virtual ~BaseScene(){}
 
 			//----------------------------------------------------------------------------------
 			//[StartScene]
-			//ƒV[ƒ“ì¬©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-			//ˆø”1: ‘OƒV[ƒ“‚©‚ç‚Ìˆø‚«Œp‚¬î•ñ
+			//ã‚·ãƒ¼ãƒ³ä½œæˆæ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+			//å¼•æ•°1: å‰ã‚·ãƒ¼ãƒ³ã‹ã‚‰ã®å¼•ãç¶™ãæƒ…å ±
 			virtual void StartScene(SceneBaton& nextBaton) = 0;
 
 			//----------------------------------------------------------------------------------
 			//[EndScene]
-			//ƒV[ƒ“I—¹©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”, I—¹ˆ—‚ğs‚¤
-			//•Ô‚è’l‚ªnullƒ|ƒCƒ“ƒ^‚¾‚Á‚½ê‡AƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ªI—¹‚·‚é
-			//ˆø”1: ŸƒV[ƒ“‚Öˆø‚«Œp‚®î•ñ, Start‚ÅŒÄ‚Ño‚³‚ê‚é
-			//ˆø”2: true‚ğ‘ã“ü‚·‚é‚ÆŸƒV[ƒ“ˆÈŠO‚ÌƒXƒ^ƒbƒN‚ğ–{ƒV[ƒ“ŠÜ‚ß‚ÄƒXƒ^ƒbƒN‚©‚çƒNƒŠƒA‚·‚é
-			//ˆø”2: true‚ğ‘ã“ü‚·‚é‚Æ–{ƒV[ƒ“‚ğƒXƒ^ƒbƒN‚©‚ç‚·‚é
+			//ã‚·ãƒ¼ãƒ³çµ‚äº†æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°, çµ‚äº†å‡¦ç†ã‚’è¡Œã†
+			//è¿”ã‚Šå€¤ãŒnullãƒã‚¤ãƒ³ã‚¿ã ã£ãŸå ´åˆã€ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ãŒçµ‚äº†ã™ã‚‹
+			//å¼•æ•°1: æ¬¡ã‚·ãƒ¼ãƒ³ã¸å¼•ãç¶™ãæƒ…å ±, Startã§å‘¼ã³å‡ºã•ã‚Œã‚‹
+			//å¼•æ•°2: trueã‚’ä»£å…¥ã™ã‚‹ã¨æ¬¡ã‚·ãƒ¼ãƒ³ä»¥å¤–ã®ã‚¹ã‚¿ãƒƒã‚¯ã‚’æœ¬ã‚·ãƒ¼ãƒ³å«ã‚ã¦ã‚¹ã‚¿ãƒƒã‚¯ã‹ã‚‰ã‚¯ãƒªã‚¢ã™ã‚‹
+			//å¼•æ•°2: trueã‚’ä»£å…¥ã™ã‚‹ã¨æœ¬ã‚·ãƒ¼ãƒ³ã‚’ã‚¹ã‚¿ãƒƒã‚¯ã‹ã‚‰ã™ã‚‹
 			virtual UniquePointer<BaseScene> EndScene(SceneBaton& nextBaton, bool& isStackClear, bool& isStackPop) = 0;
 
 			//----------------------------------------------------------------------------------
 			//[RewindScene]
-			//ƒV[ƒ“‚ªI—¹‚µŸƒV[ƒ“‚È‚µ & isPop‚Å–{ƒV[ƒ“‚É–ß‚Á‚Ä‚«‚½ê‡‚É
-			//©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-			//ˆø”1: ŸƒV[ƒ“‚©‚ç‚Ìˆø‚«Œp‚®î•ñ
+			//ã‚·ãƒ¼ãƒ³ãŒçµ‚äº†ã—æ¬¡ã‚·ãƒ¼ãƒ³ãªã— & isPopã§æœ¬ã‚·ãƒ¼ãƒ³ã«æˆ»ã£ã¦ããŸå ´åˆã«
+			//è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+			//å¼•æ•°1: æ¬¡ã‚·ãƒ¼ãƒ³ã‹ã‚‰ã®å¼•ãç¶™ãæƒ…å ±
 			inline virtual void RewindScene(SceneBaton& nextBaton) {}
 			
 			//----------------------------------------------------------------------------------
 			//[Update]
-			//•À—ñXV©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-			//‘¼‚ÌƒR[ƒ‹ƒoƒbƒN‚ğ‚·‚×‚ÄŒÄ‚Ño‚µ‚½ŒãŒÄ‚Ño‚µ‚³‚êAƒIƒuƒWƒFƒNƒg‚ÌXV“™‚ğs‚¤
+			//ä¸¦åˆ—æ›´æ–°æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+			//ä»–ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã‚’ã™ã¹ã¦å‘¼ã³å‡ºã—ãŸå¾Œå‘¼ã³å‡ºã—ã•ã‚Œã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ›´æ–°ç­‰ã‚’è¡Œã†
 			inline virtual void Update() {}
 			//----------------------------------------------------------------------------------
 			//[Sync]
-			//“¯ŠúXV©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-			//UpdateŒã‚ÉƒVƒ“ƒOƒ‹ƒXƒŒƒbƒh‚ÅŒÄ‚Ño‚³‚êA•Ï”‚Ì‹¤—L‚â“¯Šú‚ğs‚¤
-			//return: ƒV[ƒ“‘±s -> true
+			//åŒæœŸæ›´æ–°æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+			//Updateå¾Œã«ã‚·ãƒ³ã‚°ãƒ«ã‚¹ãƒ¬ãƒƒãƒ‰ã§å‘¼ã³å‡ºã•ã‚Œã€å¤‰æ•°ã®å…±æœ‰ã‚„åŒæœŸã‚’è¡Œã†
+			//return: ã‚·ãƒ¼ãƒ³ç¶šè¡Œ -> true
 			virtual bool Sync() = 0;
 
 			//----------------------------------------------------------------------------------
 			//[LateUpdate]
-			//Update & SyncI—¹Œã‚Ì•À—ñXV©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-			//‘¼‚ÌƒR[ƒ‹ƒoƒbƒN‚Æ“¯‚É•À—ñŒÄ‚Ño‚µ‚³‚êAƒIƒuƒWƒFƒNƒg‚ÌXV“™‚ğs‚¤
+			//Update & Syncçµ‚äº†å¾Œã®ä¸¦åˆ—æ›´æ–°æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+			//ä»–ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã¨åŒæ™‚ã«ä¸¦åˆ—å‘¼ã³å‡ºã—ã•ã‚Œã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ›´æ–°ç­‰ã‚’è¡Œã†
 			inline virtual void LateUpdate() {}
 
 			//----------------------------------------------------------------------------------
 			//[FixedUpdate]
-			//FixedƒtƒŒ[ƒ€‚Å‚Ì•À—ñXV©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-			//‘¼‚ÌƒR[ƒ‹ƒoƒbƒN‚Æ“¯‚É•À—ñŒÄ‚Ño‚µ‚³‚êAƒIƒuƒWƒFƒNƒg‚ÌXV“™‚ğs‚¤
+			//Fixedãƒ•ãƒ¬ãƒ¼ãƒ ã§ã®ä¸¦åˆ—æ›´æ–°æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+			//ä»–ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã¨åŒæ™‚ã«ä¸¦åˆ—å‘¼ã³å‡ºã—ã•ã‚Œã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ›´æ–°ç­‰ã‚’è¡Œã†
 			inline virtual void FixedUpdate() {}			
 
 			//----------------------------------------------------------------------------------
 			//[MakeDrawCommand]
-			//•`‰æXV©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-			//•`‰æ“o˜^“™‚ğs‚¤
+			//æç”»æ›´æ–°æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+			//æç”»ç™»éŒ²ç­‰ã‚’è¡Œã†
 			inline virtual void MakeDrawCommand() {}
 
 			//----------------------------------------------------------------------------------
 			//[FindSubScene]
-			//SubScene‚ğŒŸõ‚·‚é
-			//return: Œ©‚Â‚©‚ê‚ÎsubScene‚ÌWeakƒ|ƒCƒ“ƒ^, Œ©‚Â‚©‚ç‚ñ‚©‚Á‚½‚çnull
-			//ˆø”1: SubScene ID(ƒV[ƒ“”Ô† << 16 | ƒTƒuƒV[ƒ“”Ô†)
+			//SubSceneã‚’æ¤œç´¢ã™ã‚‹
+			//return: è¦‹ã¤ã‹ã‚Œã°subSceneã®Weakãƒã‚¤ãƒ³ã‚¿, è¦‹ã¤ã‹ã‚‰ã‚“ã‹ã£ãŸã‚‰null
+			//å¼•æ•°1: SubScene ID(ã‚·ãƒ¼ãƒ³ç•ªå· << 16 | ã‚µãƒ–ã‚·ãƒ¼ãƒ³ç•ªå·)
 			inline WeakPointer<SubScene> FindSubScene(uint subSceneID);
 			//----------------------------------------------------------------------------------
 			//[FindSubScene]
-			//SubScene‚ğŒŸõ‚·‚é
-			//return: Œ©‚Â‚©‚ê‚ÎsubScene‚ÌWeakƒ|ƒCƒ“ƒ^, Œ©‚Â‚©‚ç‚ñ‚©‚Á‚½‚çnull
-			//ˆø”1: SubScene Name
+			//SubSceneã‚’æ¤œç´¢ã™ã‚‹
+			//return: è¦‹ã¤ã‹ã‚Œã°subSceneã®Weakãƒã‚¤ãƒ³ã‚¿, è¦‹ã¤ã‹ã‚‰ã‚“ã‹ã£ãŸã‚‰null
+			//å¼•æ•°1: SubScene Name
 			inline WeakPointer<SubScene> FindSubScene(const sgstring& sceneName);
 			//----------------------------------------------------------------------------------
 			//[SubSceneBegin]
-			//return: SubScene->Begin(”ñƒXƒŒƒbƒhƒZ[ƒt)
+			//return: SubScene->Begin(éã‚¹ãƒ¬ãƒƒãƒ‰ã‚»ãƒ¼ãƒ•)
 			inline auto SubSceneBegin();
 			//----------------------------------------------------------------------------------
 			//[SubSceneEnd]
-			//return: SubScene->End(”ñƒXƒŒƒbƒhƒZ[ƒt)
+			//return: SubScene->End(éã‚¹ãƒ¬ãƒƒãƒ‰ã‚»ãƒ¼ãƒ•)
 			inline auto SubSceneEnd();
 
 			//scene name (read function property)
@@ -117,102 +117,102 @@ namespace SGFramework
 
 		protected:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//ƒJƒEƒ“ƒ^[‚ğ‰Šú‰»‚·‚é
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ã‚«ã‚¦ãƒ³ã‚¿ãƒ¼ã‚’åˆæœŸåŒ–ã™ã‚‹
 			BaseScene() : m_subIDCounter(0), sceneID(m_sceneID), numSubScenes(m_subIDCounter) {}
 			
 			//----------------------------------------------------------------------------------
 			//[OpenSubScene]
-			//SubƒV[ƒ“‚ğŠJ‚­
-			//return: ì¬‚µ‚½ƒTƒuƒV[ƒ“‚ÌƒVƒFƒA[ƒhƒ|ƒCƒ“ƒ^(ƒV[ƒ“ŠO‚É‚¿o‚µŒµ‹Ö)
-			//ˆø”1: SubƒV[ƒ“‚Ö‚Ìƒoƒgƒ“ƒ|ƒCƒ“ƒ^, nullptr‘ã“ü‰Â”\
-			//ˆø”2: ì¬‚³‚ê‚éSubƒV[ƒ“‚ÌID‚ª‘ã“ü‚³‚ê‚é, nullptr‘ã“ü‰Â”\
+			//Subã‚·ãƒ¼ãƒ³ã‚’é–‹ã
+			//return: ä½œæˆã—ãŸã‚µãƒ–ã‚·ãƒ¼ãƒ³ã®ã‚·ã‚§ã‚¢ãƒ¼ãƒ‰ãƒã‚¤ãƒ³ã‚¿(ã‚·ãƒ¼ãƒ³å¤–ã«æŒã¡å‡ºã—å³ç¦)
+			//å¼•æ•°1: Subã‚·ãƒ¼ãƒ³ã¸ã®ãƒãƒˆãƒ³ãƒã‚¤ãƒ³ã‚¿, nullpträ»£å…¥å¯èƒ½
+			//å¼•æ•°2: ä½œæˆã•ã‚Œã‚‹Subã‚·ãƒ¼ãƒ³ã®IDãŒä»£å…¥ã•ã‚Œã‚‹, nullpträ»£å…¥å¯èƒ½
 			template<class SceneClass>
 			inline SharedPointer<SubScene> OpenSubScene(SceneBaton* baton, uint* id);
 			//----------------------------------------------------------------------------------
 			//[CloseSubScene]
-			//SubƒV[ƒ“‚ğ•Â‚¶‚é
-			//ˆø”1: SubƒV[ƒ“‚ÌID
+			//Subã‚·ãƒ¼ãƒ³ã‚’é–‰ã˜ã‚‹
+			//å¼•æ•°1: Subã‚·ãƒ¼ãƒ³ã®ID
 			inline void CloseSubScene(uint id);
 			//----------------------------------------------------------------------------------
 			//[CloseSubSceneAll]
-			//SubƒV[ƒ“‚ğ‘S‚Ä•Â‚¶‚é
+			//Subã‚·ãƒ¼ãƒ³ã‚’å…¨ã¦é–‰ã˜ã‚‹
 			inline void CloseSubSceneAll();
 
 	private:
 			//----------------------------------------------------------------------------------
 			//[UpdateSubScene]
-			//SubScene‚Ì•À—ñXV‚ğs‚¤
+			//SubSceneã®ä¸¦åˆ—æ›´æ–°ã‚’è¡Œã†
 			inline void UpdateSubScene();
 			//----------------------------------------------------------------------------------
 			//[SyncSubScene]
-			//SubScene‚Ì“¯ŠúXV‚ğs‚¤
+			//SubSceneã®åŒæœŸæ›´æ–°ã‚’è¡Œã†
 			inline void SyncSubScene();
 			//----------------------------------------------------------------------------------
 			//[LateUpdateSubScene]
-			//SubScene‚Ì•À—ñXV‚ğs‚¤
+			//SubSceneã®ä¸¦åˆ—æ›´æ–°ã‚’è¡Œã†
 			inline void LateUpdateSubScene();
 			//----------------------------------------------------------------------------------
 			//[SubSceneFixedParallelUpdate]
-			//SubScene‚ÌFixed•À—ñXV‚ğs‚¤
+			//SubSceneã®Fixedä¸¦åˆ—æ›´æ–°ã‚’è¡Œã†
 			inline void FixedUpdateSubScene();
 			//----------------------------------------------------------------------------------
 			//[MakeDrawCommand]
-			//SubScene‚Ì•À—ñ•`‰æ“o˜^‚ğs‚¤
+			//SubSceneã®ä¸¦åˆ—æç”»ç™»éŒ²ã‚’è¡Œã†
 			inline void MakeDrawCommandSubScene();
 			
-			//SubScene‚½‚¿
+			//SubSceneãŸã¡
 			std::unordered_map<uint, SharedPointer<SubScene>> m_subScenes;
 			//mutex
 			std::mutex m_mutex;
-			//SubƒV[ƒ“‚ÌIDƒJƒEƒ“ƒ^[
+			//Subã‚·ãƒ¼ãƒ³ã®IDã‚«ã‚¦ãƒ³ã‚¿ãƒ¼
 			ushort m_subIDCounter;
-			//ƒV[ƒ“”Ô†, ƒTƒuƒV[ƒ“”Ô†‚ÍƒV[ƒ“”Ô† << 16 | ƒTƒuƒV[ƒ“”Ô†
+			//ã‚·ãƒ¼ãƒ³ç•ªå·, ã‚µãƒ–ã‚·ãƒ¼ãƒ³ç•ªå·ã¯ã‚·ãƒ¼ãƒ³ç•ªå· << 16 | ã‚µãƒ–ã‚·ãƒ¼ãƒ³ç•ªå·
 			uint m_sceneID;
 		};
 
-		//ƒtƒŒ[ƒ€ƒ[ƒN‚ÅŠÇ—‚·‚éƒTƒuƒV[ƒ“‚Ìƒx[ƒX‚Æ‚È‚éSubBaseScene class
+		//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã§ç®¡ç†ã™ã‚‹ã‚µãƒ–ã‚·ãƒ¼ãƒ³ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹SubBaseScene class
 		class SubScene
 		{
 		public:
 			//----------------------------------------------------------------------------------
-			//[ƒfƒXƒgƒ‰ƒNƒ^]
-			//“Á‚É‰½‚à‚µ‚È‚¢
+			//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ç‰¹ã«ä½•ã‚‚ã—ãªã„
 			inline virtual ~SubScene() {}
 			//----------------------------------------------------------------------------------
 			//[Start]
-			//ƒV[ƒ“ì¬©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-			//ˆø”1: eƒV[ƒ“‚©‚ç‚Ìˆø‚«Œp‚¬î•ñ(nullptr‚È‰Â”\«‚ ‚è)
+			//ã‚·ãƒ¼ãƒ³ä½œæˆæ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+			//å¼•æ•°1: è¦ªã‚·ãƒ¼ãƒ³ã‹ã‚‰ã®å¼•ãç¶™ãæƒ…å ±(nullptrãªå¯èƒ½æ€§ã‚ã‚Š)
 			virtual void StartScene(SceneBaton* parentBaton) = 0;
 			//----------------------------------------------------------------------------------
 			//[EndScene]
-			//ƒV[ƒ“I—¹©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”, I—¹ˆ—‚ğs‚¤
+			//ã‚·ãƒ¼ãƒ³çµ‚äº†æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°, çµ‚äº†å‡¦ç†ã‚’è¡Œã†
 			virtual void EndScene() {};
 			//----------------------------------------------------------------------------------
 			//[Update]
-			//•À—ñXV©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-			//‘¼‚ÌƒR[ƒ‹ƒoƒbƒN‚ğ‚·‚×‚ÄŒÄ‚Ño‚µ‚½ŒãŒÄ‚Ño‚µ‚³‚êAƒIƒuƒWƒFƒNƒg‚ÌXV“™‚ğs‚¤
+			//ä¸¦åˆ—æ›´æ–°æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+			//ä»–ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã‚’ã™ã¹ã¦å‘¼ã³å‡ºã—ãŸå¾Œå‘¼ã³å‡ºã—ã•ã‚Œã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ›´æ–°ç­‰ã‚’è¡Œã†
 			inline virtual void Update() {};
 			//----------------------------------------------------------------------------------
 			//[Sync]
-			//“¯ŠúXV©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-			//UpdateŒã‚ÉŒÄ‚Ño‚³‚êA•Ï”‚Ì‹¤—L‚â“¯Šú‚ğs‚¤
-			//return: ƒV[ƒ“‘±s -> true
+			//åŒæœŸæ›´æ–°æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+			//Updateå¾Œã«å‘¼ã³å‡ºã•ã‚Œã€å¤‰æ•°ã®å…±æœ‰ã‚„åŒæœŸã‚’è¡Œã†
+			//return: ã‚·ãƒ¼ãƒ³ç¶šè¡Œ -> true
 			virtual bool Sync() = 0;
 			//----------------------------------------------------------------------------------
 			//[LateUpdate]
-			//Update & SyncI—¹Œã‚Ì•À—ñXV©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-			//‘¼‚ÌƒR[ƒ‹ƒoƒbƒN‚Æ“¯‚É•À—ñŒÄ‚Ño‚µ‚³‚êAƒIƒuƒWƒFƒNƒg‚ÌXV“™‚ğs‚¤
+			//Update & Syncçµ‚äº†å¾Œã®ä¸¦åˆ—æ›´æ–°æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+			//ä»–ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã¨åŒæ™‚ã«ä¸¦åˆ—å‘¼ã³å‡ºã—ã•ã‚Œã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ›´æ–°ç­‰ã‚’è¡Œã†
 			inline virtual void LateUpdate() {}
 			//----------------------------------------------------------------------------------
 			//[FixedUpdate]
-			//FixedƒtƒŒ[ƒ€‚Å‚Ì•À—ñXV©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-			//ƒIƒuƒWƒFƒNƒg‚ÌXV“o˜^, ‰Šúî•ñ“o˜^“™‚ğs‚¤
+			//Fixedãƒ•ãƒ¬ãƒ¼ãƒ ã§ã®ä¸¦åˆ—æ›´æ–°æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+			//ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ›´æ–°ç™»éŒ², åˆæœŸæƒ…å ±ç™»éŒ²ç­‰ã‚’è¡Œã†
 			inline virtual void FixedUpdate() {}
 			//----------------------------------------------------------------------------------
 			//[MakeDrawCommand]
-			//•`‰æXV©“®‚ÅŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
-			//•`‰æ“o˜^“™‚ğs‚¤
+			//æç”»æ›´æ–°æ™‚è‡ªå‹•ã§å‘¼ã³å‡ºã•ã‚Œã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
+			//æç”»ç™»éŒ²ç­‰ã‚’è¡Œã†
 			virtual void MakeDrawCommand() {}
 
 			//set scene isActive property (set only)
@@ -222,15 +222,15 @@ namespace SGFramework
 			//scene name (read function property)
 			SGF_FUNCTION_PROPERTY virtual sgstring getSceneName() const = 0;
 			
-			GetOnlyProperty<ushort> subID;		//ƒTƒuƒV[ƒ“ID
-			GetOnlyProperty<uint> sceneID;		//ƒV[ƒ“ID
+			GetOnlyProperty<ushort> subID;		//ã‚µãƒ–ã‚·ãƒ¼ãƒ³ID
+			GetOnlyProperty<uint> sceneID;		//ã‚·ãƒ¼ãƒ³ID
 			GetOnlyProperty<bool> isActive;		//Active
 
 		protected:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‘ã“ü‰Šú‰»
-			//ˆø”1: ƒTƒuƒV[ƒ“ID
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ä»£å…¥åˆæœŸåŒ–
+			//å¼•æ•°1: ã‚µãƒ–ã‚·ãƒ¼ãƒ³ID
 			SubScene(ushort id, uint parentID) : sceneID(m_sceneID), subID(m_subID), isActive(m_isActive), m_sceneID((parentID << 16) | id), m_subID(id), m_isActive(true) {}
 		
 		private:
@@ -241,9 +241,9 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[FindSubScene]
-		//SubScene‚ğŒŸõ‚·‚é
-		//return: Œ©‚Â‚©‚ê‚ÎsubScene‚ÌWeakƒ|ƒCƒ“ƒ^, Œ©‚Â‚©‚ç‚ñ‚©‚Á‚½‚çnull
-		//ˆø”1: SubScene ID (ƒV[ƒ“”Ô† << 16 | ƒTƒuƒV[ƒ“”Ô†)
+		//SubSceneã‚’æ¤œç´¢ã™ã‚‹
+		//return: è¦‹ã¤ã‹ã‚Œã°subSceneã®Weakãƒã‚¤ãƒ³ã‚¿, è¦‹ã¤ã‹ã‚‰ã‚“ã‹ã£ãŸã‚‰null
+		//å¼•æ•°1: SubScene ID (ã‚·ãƒ¼ãƒ³ç•ªå· << 16 | ã‚µãƒ–ã‚·ãƒ¼ãƒ³ç•ªå·)
 		inline WeakPointer<SubScene> BaseScene::FindSubScene(uint subSceneID)
 		{
 			std::lock_guard<std::mutex> guard(m_mutex);
@@ -257,9 +257,9 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[FindSubScene]
-		//SubScene‚ğŒŸõ‚·‚é
-		//return: Œ©‚Â‚©‚ê‚ÎsubScene‚ÌWeakƒ|ƒCƒ“ƒ^, Œ©‚Â‚©‚ç‚ñ‚©‚Á‚½‚çnull
-		//ˆø”1: SubScene Name
+		//SubSceneã‚’æ¤œç´¢ã™ã‚‹
+		//return: è¦‹ã¤ã‹ã‚Œã°subSceneã®Weakãƒã‚¤ãƒ³ã‚¿, è¦‹ã¤ã‹ã‚‰ã‚“ã‹ã£ãŸã‚‰null
+		//å¼•æ•°1: SubScene Name
 		inline WeakPointer<SubScene> BaseScene::FindSubScene(const sgstring & sceneName)
 		{
 			std::lock_guard<std::mutex> guard(m_mutex);
@@ -274,14 +274,14 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[SubSceneBegin]
-		//return: SubScene->Begin(”ñƒXƒŒƒbƒhƒZ[ƒt)
+		//return: SubScene->Begin(éã‚¹ãƒ¬ãƒƒãƒ‰ã‚»ãƒ¼ãƒ•)
 		inline auto BaseScene::SubSceneBegin()
 		{
 			return m_subScenes.begin();
 		}
 		//----------------------------------------------------------------------------------
 		//[SubSceneEnd]
-		//return: SubScene->End(”ñƒXƒŒƒbƒhƒZ[ƒt)
+		//return: SubScene->End(éã‚¹ãƒ¬ãƒƒãƒ‰ã‚»ãƒ¼ãƒ•)
 		inline auto BaseScene::SubSceneEnd()
 		{
 			return m_subScenes.end();
@@ -289,10 +289,10 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[OpenSubScene]
-		//SubƒV[ƒ“‚ğŠJ‚­
-		//return: ì¬‚µ‚½ƒTƒuƒV[ƒ“‚ÌƒVƒFƒA[ƒhƒ|ƒCƒ“ƒ^(ƒV[ƒ“ŠO‚É‚¿o‚µŒµ‹Ö)
-		//ˆø”1: SubƒV[ƒ“‚Ö‚Ìƒoƒgƒ“ƒ|ƒCƒ“ƒ^, nullptr‘ã“ü‰Â”\
-		//ˆø”2: ì¬‚³‚ê‚éSubƒV[ƒ“‚ÌID‚ª‘ã“ü‚³‚ê‚é, nullptr‘ã“ü‰Â”\
+		//Subã‚·ãƒ¼ãƒ³ã‚’é–‹ã
+		//return: ä½œæˆã—ãŸã‚µãƒ–ã‚·ãƒ¼ãƒ³ã®ã‚·ã‚§ã‚¢ãƒ¼ãƒ‰ãƒã‚¤ãƒ³ã‚¿(ã‚·ãƒ¼ãƒ³å¤–ã«æŒã¡å‡ºã—å³ç¦)
+		//å¼•æ•°1: Subã‚·ãƒ¼ãƒ³ã¸ã®ãƒãƒˆãƒ³ãƒã‚¤ãƒ³ã‚¿, nullpträ»£å…¥å¯èƒ½
+		//å¼•æ•°2: ä½œæˆã•ã‚Œã‚‹Subã‚·ãƒ¼ãƒ³ã®IDãŒä»£å…¥ã•ã‚Œã‚‹, nullpträ»£å…¥å¯èƒ½
 		template<class SceneClass>
 		inline SharedPointer<SubScene> BaseScene::OpenSubScene(SceneBaton* baton, uint * id)
 		{
@@ -311,22 +311,22 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[CloseSubScene]
-		//SubƒV[ƒ“‚ğ•Â‚¶‚é
-		//ˆø”1: SubƒV[ƒ“‚ÌID
+		//Subã‚·ãƒ¼ãƒ³ã‚’é–‰ã˜ã‚‹
+		//å¼•æ•°1: Subã‚·ãƒ¼ãƒ³ã®ID
 		inline void BaseScene::CloseSubScene(uint id)
 		{
 			std::lock_guard<std::mutex> guard(m_mutex);
 			
-			//ƒV[ƒ“ID
+			//ã‚·ãƒ¼ãƒ³ID
 			auto find = m_subScenes.find(id);
 			
-			//íœ‚µ‚ÄI—¹
+			//å‰Šé™¤ã—ã¦çµ‚äº†
 			if (find != m_subScenes.end())
 				m_subScenes.erase(id);
 		}
 		//----------------------------------------------------------------------------------
 		//[CloseSubSceneAll]
-		//SubƒV[ƒ“‚ğ‘S‚Ä•Â‚¶‚é
+		//Subã‚·ãƒ¼ãƒ³ã‚’å…¨ã¦é–‰ã˜ã‚‹
 		inline void BaseScene::CloseSubSceneAll()
 		{
 			std::lock_guard<std::mutex> guard(m_mutex);
@@ -336,7 +336,7 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[UpdateSubScene]
-		//SubScene‚Ì•À—ñXV‚ğs‚¤
+		//SubSceneã®ä¸¦åˆ—æ›´æ–°ã‚’è¡Œã†
 		inline void BaseScene::UpdateSubScene()
 		{
 			for (auto& e : m_subScenes)
@@ -344,7 +344,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[SyncSubScene]
-		//SubScene‚Ì“¯ŠúXV‚ğs‚¤
+		//SubSceneã®åŒæœŸæ›´æ–°ã‚’è¡Œã†
 		inline void BaseScene::SyncSubScene()
 		{
 			for (auto it = m_subScenes.begin(); it != m_subScenes.end();)
@@ -361,7 +361,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[LateUpdateSubScene]
-		//SubScene‚Ì•À—ñXV‚ğs‚¤
+		//SubSceneã®ä¸¦åˆ—æ›´æ–°ã‚’è¡Œã†
 		inline void BaseScene::LateUpdateSubScene()
 		{
 			for (auto& e : m_subScenes)
@@ -369,7 +369,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[FixedUpdateSubScene]
-		//SubScene‚ÌFixed•À—ñXV‚ğs‚¤
+		//SubSceneã®Fixedä¸¦åˆ—æ›´æ–°ã‚’è¡Œã†
 		inline void BaseScene::FixedUpdateSubScene()
 		{
 			for (auto& e : m_subScenes)
@@ -377,7 +377,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[MakeDrawCommandSubScene]
-		//SubScene‚Ì•À—ñ•`‰æXV‚ğs‚¤
+		//SubSceneã®ä¸¦åˆ—æç”»æ›´æ–°ã‚’è¡Œã†
 		inline void BaseScene::MakeDrawCommandSubScene()
 		{
 			for (auto& e : m_subScenes)

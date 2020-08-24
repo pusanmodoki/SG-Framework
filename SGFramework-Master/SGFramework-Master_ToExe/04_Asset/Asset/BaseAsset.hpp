@@ -1,7 +1,7 @@
 /*----------------------------------------------------------------------------------
-SYSTEMTIME‚ğŠg’£‚µ‚½SystemTime class,
-FILETIME‚ğŠg’£‚µ‚½FileTime class,
-AssetŒnƒNƒ‰ƒX‚Ìƒx[ƒX‚Æ‚È‚éBaseAsset class
+SYSTEMTIMEã‚’æ‹¡å¼µã—ãŸSystemTime class,
+FILETIMEã‚’æ‹¡å¼µã—ãŸFileTime class,
+Assetç³»ã‚¯ãƒ©ã‚¹ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseAsset class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_BASE_ASSET_HPP_
 #define SGFRAMEWORK_HEADER_BASE_ASSET_HPP_
@@ -13,63 +13,63 @@ AssetŒnƒNƒ‰ƒX‚Ìƒx[ƒX‚Æ‚È‚éBaseAsset class
 //Framework namespace
 namespace SGFramework
 {
-	//SYSTEMTIME‚ğŠg’£‚µ‚½SystemTime class
+	//SYSTEMTIMEã‚’æ‹¡å¼µã—ãŸSystemTime class
 	class SystemTime : public SYSTEMTIME 
 	{ 
 	public: 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//0‰Šú‰»
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//0åˆæœŸåŒ–
 		inline SystemTime();
 		//----------------------------------------------------------------------------------
 		//[ToString]
-		//”N/Œ/“ú :•ª:•b ‚ÌŒ`®‚Å•¶šo—Í‚·‚é
-		//return: •¶š—ñ
-		//ˆø”1: ”NŒ“ú‚Ìo—Í—L–³, default = true
-		//ˆø”2: •ª•b‚Ìo—Í—L–³, default = true
+		//å¹´/æœˆ/æ—¥ æ™‚:åˆ†:ç§’ ã®å½¢å¼ã§æ–‡å­—å‡ºåŠ›ã™ã‚‹
+		//return: æ–‡å­—åˆ—
+		//å¼•æ•°1: å¹´æœˆæ—¥ã®å‡ºåŠ›æœ‰ç„¡, default = true
+		//å¼•æ•°2: æ™‚åˆ†ç§’ã®å‡ºåŠ›æœ‰ç„¡, default = true
 		inline sgstring ToString(bool isDate = true, bool isTime = true) const;
 		//----------------------------------------------------------------------------------
 		//[ToString]
-		//:•ª:•b Œ/“ú/”N ‚ÌŒ`®‚Å•¶šo—Í‚·‚é
-		//return: •¶š—ñ
-		//ˆø”1: •ª•b‚Ìo—Í—L–³, default = true
-		//ˆø”2: Œ“ú”N‚Ìo—Í—L–³, default = true
+		//æ™‚:åˆ†:ç§’ æœˆ/æ—¥/å¹´ ã®å½¢å¼ã§æ–‡å­—å‡ºåŠ›ã™ã‚‹
+		//return: æ–‡å­—åˆ—
+		//å¼•æ•°1: æ™‚åˆ†ç§’ã®å‡ºåŠ›æœ‰ç„¡, default = true
+		//å¼•æ•°2: æœˆæ—¥å¹´ã®å‡ºåŠ›æœ‰ç„¡, default = true
 		inline sgstring ToStringUsStyle(bool isTime = true, bool isDate = true) const;
 	};
 
 
-	//FILETIME‚ğŠg’£‚µ‚½FileTime class 
+	//FILETIMEã‚’æ‹¡å¼µã—ãŸFileTime class 
 	class FileTime : public FILETIME
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//0‰Šú‰»
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//0åˆæœŸåŒ–
 		inline FileTime() { this->dwLowDateTime = 0; this->dwHighDateTime = 0; }
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»
-		//ˆø”1: dwLowDateTime
-		//ˆø”2: dwHighDateTime
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–
+		//å¼•æ•°1: dwLowDateTime
+		//å¼•æ•°2: dwHighDateTime
 		inline FileTime(ulong _dwLowDateTime, ulong _dwHighDateTime) { this->dwLowDateTime = _dwLowDateTime; this->dwHighDateTime = _dwHighDateTime; }
 		//----------------------------------------------------------------------------------
 		//[ToSystemTime]
-		//SystemTimeŒ`®‚É•ÏŠ·
-		//return: SystemTime(¸”s‚µ‚½ê‡‚Í‘S‚Ä‚Ì’l‚ª0)
+		//SystemTimeå½¢å¼ã«å¤‰æ›
+		//return: SystemTime(å¤±æ•—ã—ãŸå ´åˆã¯å…¨ã¦ã®å€¤ãŒ0)
 		inline SystemTime ToSystemTime() const;
 		//----------------------------------------------------------------------------------
 		//[ToString]
-		//”N/Œ/“ú :•ª:•b ‚ÌŒ`®‚Å•¶šo—Í‚·‚é
-		//return: •¶š—ñ
-		//ˆø”1: ”NŒ“ú‚Ìo—Í—L–³, default = true
-		//ˆø”2: •ª•b‚Ìo—Í—L–³, default = true
+		//å¹´/æœˆ/æ—¥ æ™‚:åˆ†:ç§’ ã®å½¢å¼ã§æ–‡å­—å‡ºåŠ›ã™ã‚‹
+		//return: æ–‡å­—åˆ—
+		//å¼•æ•°1: å¹´æœˆæ—¥ã®å‡ºåŠ›æœ‰ç„¡, default = true
+		//å¼•æ•°2: æ™‚åˆ†ç§’ã®å‡ºåŠ›æœ‰ç„¡, default = true
 		inline sgstring ToString(bool isDate = true, bool isTime = true) const;
 		//----------------------------------------------------------------------------------
 		//[ToString]
-		//:•ª:•b Œ/“ú/”N ‚ÌŒ`®‚Å•¶šo—Í‚·‚é
-		//return: •¶š—ñ
-		//ˆø”1: •ª•b‚Ìo—Í—L–³, default = true
-		//ˆø”2: Œ“ú”N‚Ìo—Í—L–³, default = true
+		//æ™‚:åˆ†:ç§’ æœˆ/æ—¥/å¹´ ã®å½¢å¼ã§æ–‡å­—å‡ºåŠ›ã™ã‚‹
+		//return: æ–‡å­—åˆ—
+		//å¼•æ•°1: æ™‚åˆ†ç§’ã®å‡ºåŠ›æœ‰ç„¡, default = true
+		//å¼•æ•°2: æœˆæ—¥å¹´ã®å‡ºåŠ›æœ‰ç„¡, default = true
 		inline sgstring ToStringUsStyle(bool isTime = true, bool isDate = true) const;
 		//== operator
 		inline bool operator == (const FileTime& fileTime) const;
@@ -100,7 +100,7 @@ namespace SGFramework
 		//----------------------------------------------------------------------------------
 		//[StringForAssetType]
 		//return: string(asset type)
-		//ˆø”1: Asset Type
+		//å¼•æ•°1: Asset Type
 		inline sgstring StringForAssetType(AssetType type)
 		{
 			switch (type)
@@ -130,7 +130,7 @@ namespace SGFramework
 		//----------------------------------------------------------------------------------
 		//[StdStringForAssetType]
 		//return: string(asset type)
-		//ˆø”1: Asset Type
+		//å¼•æ•°1: Asset Type
 		inline std::string StdStringForAssetType(AssetType type)
 		{
 			switch (type)
@@ -166,9 +166,9 @@ namespace SGFramework
 	//Base Classes
 	namespace BaseClass
 	{
-		//AssetŒnƒNƒ‰ƒX‚Ìƒx[ƒX‚Æ‚È‚éBaseAsset class
-		//ˆø”‚ªˆÙ‚È‚é‚±‚Æ‚ª—\‘z‚³‚ê‚é‚½‚ßOpenŠÖ”‚Í‹Lq‚µ‚Ä‚¢‚È‚¢
-		//Object class‚ğŒp³, Object->name = File Path
+		//Assetç³»ã‚¯ãƒ©ã‚¹ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseAsset class
+		//å¼•æ•°ãŒç•°ãªã‚‹ã“ã¨ãŒäºˆæƒ³ã•ã‚Œã‚‹ãŸã‚Opené–¢æ•°ã¯è¨˜è¿°ã—ã¦ã„ãªã„
+		//Object classã‚’ç¶™æ‰¿, Object->name = File Path
 		class BaseAsset : public Object
 		{
 		public:
@@ -176,7 +176,7 @@ namespace SGFramework
 			template <typename TAsset>
 			friend SharedPointer<TAsset> Asset::InstantiateAsset(const sgstring& filePath, bool isRegisterSharedAsset);
 
-			//FileSize‚ğ•Ô‹p‚·‚éFileSizeWith class
+			//FileSizeã‚’è¿”å´ã™ã‚‹FileSizeWith class
 			struct FileSizeWith
 			{
 				friend BaseAsset;
@@ -193,8 +193,8 @@ namespace SGFramework
 			private:
 				//----------------------------------------------------------------------------------
 				//[FileSizeWith]
-				//‰Šú‰»
-				//ˆø”1: ƒTƒCƒY
+				//åˆæœŸåŒ–
+				//å¼•æ•°1: ã‚µã‚¤ã‚º
 				inline FileSizeWith(uint64 size) : m_size(static_cast<float>(size)) {}
 
 				float m_size;
@@ -202,25 +202,25 @@ namespace SGFramework
 
 
 			//----------------------------------------------------------------------------------
-			//[ƒfƒXƒgƒ‰ƒNƒ^]
-			//ƒtƒ@ƒCƒ‹ƒnƒ“ƒhƒ‹‚ÌŠJ•ú‚ğs‚¤
+			//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ãƒ•ã‚¡ã‚¤ãƒ«ãƒãƒ³ãƒ‰ãƒ«ã®é–‹æ”¾ã‚’è¡Œã†
 			inline virtual ~BaseAsset() {}
 
 			//----------------------------------------------------------------------------------
 			//[Reload]
-			//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
 			virtual void Reload() = 0;
 			//----------------------------------------------------------------------------------
 			//[Close]
-			//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 			virtual void Close() = 0;
 
 
 			//----------------------------------------------------------------------------------
 			//[WaitLoading]
-			//ƒ[ƒhŠ®—¹‚·‚é‚Ü‚Å‘Ò‹@‚·‚é, Šù‚Éƒ[ƒh‚ªI‚í‚Á‚Ä‚¢‚½ê‡‘¦‚ÉI—¹‚·‚é
+			//ãƒ­ãƒ¼ãƒ‰å®Œäº†ã™ã‚‹ã¾ã§å¾…æ©Ÿã™ã‚‹, æ—¢ã«ãƒ­ãƒ¼ãƒ‰ãŒçµ‚ã‚ã£ã¦ã„ãŸå ´åˆå³æ™‚ã«çµ‚äº†ã™ã‚‹
 			//throw: open failed OR time out
-			//ˆø”1: time out seconds, default = 15.0f
+			//å¼•æ•°1: time out seconds, default = 15.0f
 			inline void WaitLoading(float timeOutSeconds = 15.0f);
 
 			//asset type (read function property)
@@ -232,28 +232,28 @@ namespace SGFramework
 			//this shared asset? (read function property)
 			SGF_FUNCTION_PROPERTY bool getIsSharedAsset() const { return m_isSharedAsset; }
 
-			//XVŠÔ
+			//æ›´æ–°æ™‚é–“
 			GetOnlyProperty<FileTime> lastWriteTime = m_lastWriteTime;
-			//ƒtƒ@ƒCƒ‹ƒTƒCƒY
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚º
 			GetOnlyProperty<FileSizeWith> fileSizes = m_fileSize;
 
 		protected:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//0‰Šú‰»
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//0åˆæœŸåŒ–
 			inline BaseAsset() : Object(L"") {}
 			//----------------------------------------------------------------------------------
 			//[OpenBaseAsset]
-			//ƒtƒ@ƒCƒ‹‚ğƒI[ƒvƒ“‚µBaseAsset‚Ì•Ï”‚ğ‰Šú‰»‚·‚é
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚ªãƒ¼ãƒ—ãƒ³ã—BaseAssetã®å¤‰æ•°ã‚’åˆæœŸåŒ–ã™ã‚‹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹
 			inline void OpenBaseAsset();
 			//----------------------------------------------------------------------------------
 			//[ReloadBaseAsset]
-			//ƒtƒ@ƒCƒ‹‚ğƒŠƒ[ƒh‚µBaseAsset‚Ì•Ï”‚ğXV‚·‚é
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒªãƒ­ãƒ¼ãƒ‰ã—BaseAssetã®å¤‰æ•°ã‚’æ›´æ–°ã™ã‚‹
 			inline void ReloadBaseAsset();
 			//----------------------------------------------------------------------------------
 			//[CloseBaseAsset]
-			//BaseAsset‘¤‚ÅŠJ‚¢‚Ä‚¢‚éƒtƒ@ƒCƒ‹ƒnƒ“ƒhƒ‹‚ğ•Â‚¶‚é
+			//BaseAssetå´ã§é–‹ã„ã¦ã„ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ãƒãƒ³ãƒ‰ãƒ«ã‚’é–‰ã˜ã‚‹
 			void CloseBaseAsset(Asset::AssetType type, bool isDestructor);
 			//----------------------------------------------------------------------------------
 			//[ExtractionForObjectName]
@@ -269,13 +269,13 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[CheckForUpdates]
-			//ƒtƒ@ƒCƒ‹XVŠÔ‚ÌŠm”F‚ğs‚¤
-			//return: Œ»İ•Û‘¶‚µ‚Ä‚¢‚é’l‚ÆXVŠÔ‚ªˆÙ‚È‚éê‡‚Ítrue
+			//ãƒ•ã‚¡ã‚¤ãƒ«æ›´æ–°æ™‚é–“ã®ç¢ºèªã‚’è¡Œã†
+			//return: ç¾åœ¨ä¿å­˜ã—ã¦ã„ã‚‹å€¤ã¨æ›´æ–°æ™‚é–“ãŒç•°ãªã‚‹å ´åˆã¯true
 			inline bool CheckForUpdates() const;
 			
-			FileTime m_lastWriteTime = { 0, 0 };						//XVŠÔ
-			FileSizeWith m_fileSize = 0;									//ƒtƒ@ƒCƒ‹ƒTƒCƒY
-			HANDLE m_fileHandle = nullptr;								//ƒtƒ@ƒCƒ‹ƒnƒ“ƒhƒ‹
+			FileTime m_lastWriteTime = { 0, 0 };						//æ›´æ–°æ™‚é–“
+			FileSizeWith m_fileSize = 0;									//ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚º
+			HANDLE m_fileHandle = nullptr;								//ãƒ•ã‚¡ã‚¤ãƒ«ãƒãƒ³ãƒ‰ãƒ«
 			std::atomic_bool m_isOpened = false;						//open?
 			std::atomic_bool m_isOpeneFailed = false;				//open failed?
 			bool m_isSharedAsset = false;									//shared asset?
@@ -290,8 +290,8 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[wostream operator]
-	//ˆø”1: stream
-	//ˆø”2: this
+	//å¼•æ•°1: stream
+	//å¼•æ•°2: this
 	inline std::wostream& operator<<(std::wostream& stream, const SystemTime & value)
 	{
 		const wchar* string = value.ToString();
@@ -299,8 +299,8 @@ namespace SGFramework
 		return stream;
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//0‰Šú‰»
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//0åˆæœŸåŒ–
 	inline SystemTime::SystemTime()
 	{
 		wYear = 0; wMonth = 0; wDayOfWeek = 0;
@@ -309,10 +309,10 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ToString]
-	//”N/Œ/“ú :•ª:•b ‚ÌŒ`®‚Å•¶šo—Í‚·‚é
-	//return: •¶š—ñ
-	//ˆø”1: ”NŒ“ú‚Ìo—Í—L–³, default = true
-	//ˆø”2: •ª•b‚Ìo—Í—L–³, default = true
+	//å¹´/æœˆ/æ—¥ æ™‚:åˆ†:ç§’ ã®å½¢å¼ã§æ–‡å­—å‡ºåŠ›ã™ã‚‹
+	//return: æ–‡å­—åˆ—
+	//å¼•æ•°1: å¹´æœˆæ—¥ã®å‡ºåŠ›æœ‰ç„¡, default = true
+	//å¼•æ•°2: æ™‚åˆ†ç§’ã®å‡ºåŠ›æœ‰ç„¡, default = true
 	inline sgstring SystemTime::ToString(bool isDate, bool isTime) const
 	{
 		sgstring result = L"";
@@ -333,10 +333,10 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ToString]
-	//:•ª:•b Œ/“ú/”N ‚ÌŒ`®‚Å•¶šo—Í‚·‚é
-	//return: •¶š—ñ
-	//ˆø”1: •ª•b‚Ìo—Í—L–³, default = true
-	//ˆø”2: Œ“ú”N‚Ìo—Í—L–³, default = true
+	//æ™‚:åˆ†:ç§’ æœˆ/æ—¥/å¹´ ã®å½¢å¼ã§æ–‡å­—å‡ºåŠ›ã™ã‚‹
+	//return: æ–‡å­—åˆ—
+	//å¼•æ•°1: æ™‚åˆ†ç§’ã®å‡ºåŠ›æœ‰ç„¡, default = true
+	//å¼•æ•°2: æœˆæ—¥å¹´ã®å‡ºåŠ›æœ‰ç„¡, default = true
 	inline sgstring SystemTime::ToStringUsStyle(bool isTime, bool isDate) const
 	{
 		sgstring result = L"";
@@ -364,8 +364,8 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[wostream operator]
-	//ˆø”1: stream
-	//ˆø”2: this
+	//å¼•æ•°1: stream
+	//å¼•æ•°2: this
 	inline std::wostream& operator<<(std::wostream& stream, const FileTime & value)
 	{
 		const wchar* string = value.ToString();
@@ -374,8 +374,8 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ToSystemTime]
-	//SystemTimeŒ`®‚É•ÏŠ·
-	//return: SystemTime(¸”s‚µ‚½ê‡‚Í‘S‚Ä‚Ì’l‚ª0)
+	//SystemTimeå½¢å¼ã«å¤‰æ›
+	//return: SystemTime(å¤±æ•—ã—ãŸå ´åˆã¯å…¨ã¦ã®å€¤ãŒ0)
 	inline SystemTime FileTime::ToSystemTime() const
 	{
 		SystemTime systemTime;
@@ -384,10 +384,10 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ToString]
-	//”N/Œ/“ú :•ª:•b ‚ÌŒ`®‚Å•¶šo—Í‚·‚é
-	//return: •¶š—ñ
-	//ˆø”1: ”NŒ“ú‚Ìo—Í—L–³, default = true
-	//ˆø”2: •ª•b‚Ìo—Í—L–³, default = true
+	//å¹´/æœˆ/æ—¥ æ™‚:åˆ†:ç§’ ã®å½¢å¼ã§æ–‡å­—å‡ºåŠ›ã™ã‚‹
+	//return: æ–‡å­—åˆ—
+	//å¼•æ•°1: å¹´æœˆæ—¥ã®å‡ºåŠ›æœ‰ç„¡, default = true
+	//å¼•æ•°2: æ™‚åˆ†ç§’ã®å‡ºåŠ›æœ‰ç„¡, default = true
 	inline sgstring FileTime::ToString(bool isDate, bool isTime) const
 	{
 		SystemTime systemTime;
@@ -398,10 +398,10 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ToString]
-	//:•ª:•b Œ/“ú/”N ‚ÌŒ`®‚Å•¶šo—Í‚·‚é
-	//return: •¶š—ñ
-	//ˆø”1: •ª•b‚Ìo—Í—L–³, default = true
-	//ˆø”2: Œ“ú”N‚Ìo—Í—L–³, default = true
+	//æ™‚:åˆ†:ç§’ æœˆ/æ—¥/å¹´ ã®å½¢å¼ã§æ–‡å­—å‡ºåŠ›ã™ã‚‹
+	//return: æ–‡å­—åˆ—
+	//å¼•æ•°1: æ™‚åˆ†ç§’ã®å‡ºåŠ›æœ‰ç„¡, default = true
+	//å¼•æ•°2: æœˆæ—¥å¹´ã®å‡ºåŠ›æœ‰ç„¡, default = true
 	inline sgstring FileTime::ToStringUsStyle(bool isTime, bool isDate) const
 	{
 		SystemTime systemTime;
@@ -434,22 +434,22 @@ namespace SGFramework
 	{
 		//----------------------------------------------------------------------------------
 		//[OpenBaseAsset]
-		//ƒtƒ@ƒCƒ‹‚ğƒI[ƒvƒ“‚µBaseAsset‚Ì•Ï”‚ğ‰Šú‰»‚·‚é
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚ªãƒ¼ãƒ—ãƒ³ã—BaseAssetã®å¤‰æ•°ã‚’åˆæœŸåŒ–ã™ã‚‹
 		inline void BaseAsset::OpenBaseAsset()
 		{
 			//open?
 			if (IS_TRUE(getIsFileOpened())) return;
 
-			//ŠJ‚­
+			//é–‹ã
 			m_fileHandle = CreateFile(m_name.c_str(), GENERIC_READ, FILE_SHARE_READ | FILE_SHARE_WRITE, nullptr, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 
-			ulong high, low;	//ãˆÊ, ‰ºˆÊ32ƒrƒbƒg
-			//ƒQƒbƒg
+			ulong high, low;	//ä¸Šä½, ä¸‹ä½32ãƒ“ãƒƒãƒˆ
+			//ã‚²ãƒƒãƒˆ
 			low = GetFileSize(m_fileHandle, &high);
-			//‡¬
+			//åˆæˆ
 			m_fileSize.m_size = static_cast<float>(((int64)high << 32) | low);
 
-			//ƒQƒbƒg
+			//ã‚²ãƒƒãƒˆ
 			GetFileTime(m_fileHandle, nullptr, nullptr, &m_lastWriteTime);
 
 			AtomicOperation::Init(m_isOpened, true);
@@ -457,27 +457,27 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[ReloadBaseAsset]
-		//ƒtƒ@ƒCƒ‹‚ğƒŠƒ[ƒh‚µBaseAsset‚Ì•Ï”‚ğXV‚·‚é
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒªãƒ­ãƒ¼ãƒ‰ã—BaseAssetã®å¤‰æ•°ã‚’æ›´æ–°ã™ã‚‹
 		inline void BaseAsset::ReloadBaseAsset()
 		{
-			//ŠJ‚¢‚Ä‚È‚©‚Á‚½‚çI—¹
+			//é–‹ã„ã¦ãªã‹ã£ãŸã‚‰çµ‚äº†
 			if (IS_FALSE(getIsFileOpened())) return;
 
-			ulong high, low;	//ãˆÊ, ‰ºˆÊ32ƒrƒbƒg
-			//ƒQƒbƒg
+			ulong high, low;	//ä¸Šä½, ä¸‹ä½32ãƒ“ãƒƒãƒˆ
+			//ã‚²ãƒƒãƒˆ
 			low = GetFileSize(m_fileHandle, &high);
-			//‡¬
+			//åˆæˆ
 			m_fileSize.m_size = static_cast<float>(((int64)high << 32) | low);
 
-			//ƒQƒbƒg
+			//ã‚²ãƒƒãƒˆ
 			GetFileTime(m_fileHandle, nullptr, nullptr, &m_lastWriteTime);
 		}
 
 		//----------------------------------------------------------------------------------
 		//[WaitLoading]
-		//ƒ[ƒhŠ®—¹‚·‚é‚Ü‚Å‘Ò‹@‚·‚é, Šù‚Éƒ[ƒh‚ªI‚í‚Á‚Ä‚¢‚½ê‡‘¦‚ÉI—¹‚·‚é
+		//ãƒ­ãƒ¼ãƒ‰å®Œäº†ã™ã‚‹ã¾ã§å¾…æ©Ÿã™ã‚‹, æ—¢ã«ãƒ­ãƒ¼ãƒ‰ãŒçµ‚ã‚ã£ã¦ã„ãŸå ´åˆå³æ™‚ã«çµ‚äº†ã™ã‚‹
 		//throw: open failed OR time out
-		//ˆø”1: time out seconds, default = 15.0f
+		//å¼•æ•°1: time out seconds, default = 15.0f
 		inline void BaseAsset::WaitLoading(float timeOutSeconds)
 		{
 			TimeProcessing::TimeCounter counter;
@@ -501,22 +501,22 @@ namespace SGFramework
 		{
 			if (IS_FALSE(getIsFileOpened())) return L"";
 
-			//‹æØ‚éêŠ‚ğŒŸõ
+			//åŒºåˆ‡ã‚‹å ´æ‰€ã‚’æ¤œç´¢
 			size_t slash = m_name.find_last_of(L'/');
 			size_t dot = m_name.find_last_of(L'.');
 	
-			//npos‚È‚çæ“ª
+			//nposãªã‚‰å…ˆé ­
 			if (slash == sgstring::npos) slash = 0;
-			//ÅŒã‚¶‚á‚È‚¯‚ê‚Îˆê‚Â‚·‚·‚ß‚é
+			//æœ€å¾Œã˜ã‚ƒãªã‘ã‚Œã°ä¸€ã¤ã™ã™ã‚ã‚‹
 			else if (slash != m_name.length() - 1) ++slash;
 
-			//’Šo
+			//æŠ½å‡º
 			return std::move(m_name.substr(slash, dot - slash));
 		}
 		//----------------------------------------------------------------------------------
 		//[CheckForUpdates]
-		//ƒtƒ@ƒCƒ‹XVŠÔ‚ÌŠm”F‚ğs‚¤
-		//return: Œ»İ•Û‘¶‚µ‚Ä‚¢‚é’l‚ÆXVŠÔ‚ªˆÙ‚È‚éê‡‚Ítrue
+		//ãƒ•ã‚¡ã‚¤ãƒ«æ›´æ–°æ™‚é–“ã®ç¢ºèªã‚’è¡Œã†
+		//return: ç¾åœ¨ä¿å­˜ã—ã¦ã„ã‚‹å€¤ã¨æ›´æ–°æ™‚é–“ãŒç•°ãªã‚‹å ´åˆã¯true
 		inline bool BaseAsset::CheckForUpdates() const
 		{
 			FileTime check;

@@ -7,9 +7,9 @@ float4 main(VSOutputStandard input) : SV_Target
     
     color.rgb = g_textureSlot0.Sample(g_samplerSlot0, input.textureUV).rgb;
 	
-	//ƒOƒŒ[ƒXƒP[ƒ‹‰»
+	//ã‚°ãƒ¬ãƒ¼ã‚¹ã‚±ãƒ¼ãƒ«åŒ–
 	color.rgb = color.r * 0.3f + color.g * 0.6f + color.b * 0.1f;
-	//ƒZƒsƒA‰»
+	//ã‚»ãƒ”ã‚¢åŒ–
 	color.rgb *= sepiaScale;
 	color.a = input.color.a;// * cMaterialBuffer2D.color.a;
     

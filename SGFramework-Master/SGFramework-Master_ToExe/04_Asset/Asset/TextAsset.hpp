@@ -1,7 +1,7 @@
 /*----------------------------------------------------------------------------------
-TextŒ`®‚Ìƒtƒ@ƒCƒ‹‚ğˆµ‚¦‚éTextAsset class
-‘Î‰Šg’£q (Arrayƒ‚[ƒh): sec, secl, csv 
-‘Î‰Šg’£q (NotArrayƒ‚[ƒh): sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt
+Textå½¢å¼ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ‰±ãˆã‚‹TextAsset class
+å¯¾å¿œæ‹¡å¼µå­ (Arrayãƒ¢ãƒ¼ãƒ‰): sec, secl, csv 
+å¯¾å¿œæ‹¡å¼µå­ (NotArrayãƒ¢ãƒ¼ãƒ‰): sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_TEXT_ASSET_HPP_
 #define SGFRAMEWORK_HEADER_TEXT_ASSET_HPP_
@@ -13,12 +13,12 @@ TextŒ`®‚Ìƒtƒ@ƒCƒ‹‚ğˆµ‚¦‚éTextAsset class
 // Framework namespace
 namespace SGFramework
 {
-	//AssetŠÖ˜A‚ğŠi”[‚µ‚½Asset namespace
+	//Asseté–¢é€£ã‚’æ ¼ç´ã—ãŸAsset namespace
 	namespace Asset
 	{
-		//TextŒ`®‚Ìƒtƒ@ƒCƒ‹‚ğˆµ‚¦‚éTextAsset class
-		//‘Î‰Šg’£q (Arrayƒ‚[ƒh): sec, secl, csv 
-		//‘Î‰Šg’£q (NotArrayƒ‚[ƒh): sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt
+		//Textå½¢å¼ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ‰±ãˆã‚‹TextAsset class
+		//å¯¾å¿œæ‹¡å¼µå­ (Arrayãƒ¢ãƒ¼ãƒ‰): sec, secl, csv 
+		//å¯¾å¿œæ‹¡å¼µå­ (NotArrayãƒ¢ãƒ¼ãƒ‰): sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt
 		class TextAsset final : public BaseClass::BaseAsset
 		{
 		public:
@@ -30,82 +30,82 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Open]
-			//ƒtƒ@ƒCƒ‹‚ğŠJ‚­
-			//throw: ‘Î‰‚µ‚Ä‚¢‚È‚¢Šg’£q‚¾‚Á‚½ê‡
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã
+			//throw: å¯¾å¿œã—ã¦ã„ãªã„æ‹¡å¼µå­ã ã£ãŸå ´åˆ
 			inline void Open();
 
 			//----------------------------------------------------------------------------------
 			//[Write]
-			//ƒtƒ@ƒCƒ‹‚É‘‚«‚Ş, OpenÀsŒã‚É‰Â”\
-			//‚±‚ÌŠÖ”‚ÍNotArrayƒ‚[ƒh‚ÅŠJ‚¢‚½ê‡‚Ì‚İ—LŒø (‘Î‰Šg’£q: sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt)
-			//throw: ŠJ‚¢‚½ƒtƒ@ƒCƒ‹‚ªArrayƒ‚[ƒh‚¾‚Á‚½ê‡(sec, secl, csv)
-			//ˆø”1: ‘‚«‚Ş“à—e
-			//ˆø”2: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚ÅŠJ‚­‚©, default = false
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
+			//ã“ã®é–¢æ•°ã¯NotArrayãƒ¢ãƒ¼ãƒ‰ã§é–‹ã„ãŸå ´åˆã®ã¿æœ‰åŠ¹ (å¯¾å¿œæ‹¡å¼µå­: sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt)
+			//throw: é–‹ã„ãŸãƒ•ã‚¡ã‚¤ãƒ«ãŒArrayãƒ¢ãƒ¼ãƒ‰ã ã£ãŸå ´åˆ(sec, secl, csv)
+			//å¼•æ•°1: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°2: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ã§é–‹ãã‹, default = false
 			inline void Write(const sgstring& typeTextNotArray, bool isAppend = false);
 			//----------------------------------------------------------------------------------
 			//[Write]
-			//ƒtƒ@ƒCƒ‹‚É‘‚«‚Ş, OpenÀsŒã‚É‰Â”\
-			//‚±‚ÌŠÖ”‚ÍArrayƒ‚[ƒh‚ÅŠJ‚¢‚½ê‡‚Ì‚İ—LŒø (‘Î‰Šg’£q: sec, secl, csv)
-			//throw: ŠJ‚¢‚½ƒtƒ@ƒCƒ‹‚ªNotArrayƒ‚[ƒh‚¾‚Á‚½ê‡(sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt)
-			//ˆø”1: ‘‚«‚Ş“à—e
-			//ˆø”2: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚ÅŠJ‚­‚©, default = false
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
+			//ã“ã®é–¢æ•°ã¯Arrayãƒ¢ãƒ¼ãƒ‰ã§é–‹ã„ãŸå ´åˆã®ã¿æœ‰åŠ¹ (å¯¾å¿œæ‹¡å¼µå­: sec, secl, csv)
+			//throw: é–‹ã„ãŸãƒ•ã‚¡ã‚¤ãƒ«ãŒNotArrayãƒ¢ãƒ¼ãƒ‰ã ã£ãŸå ´åˆ(sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt)
+			//å¼•æ•°1: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°2: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ã§é–‹ãã‹, default = false
 			inline void Write(const File::FileText& typeTextArray, bool isAppend = false);
 			//----------------------------------------------------------------------------------
 			//[Reload]
-			//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤, OpenÀsŒã‚É‰Â”\
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
 			inline void Reload() override;
 			//----------------------------------------------------------------------------------
 			//[Close]
-			//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é, OpenÀsŒã‚É‰Â”\
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
 			inline void Close() override;
 
 			//----------------------------------------------------------------------------------
 			//[ReadArray]
-			//return: ƒAƒZƒbƒg‚Ì’†g, NotArrayƒ‚[ƒh‚ÅŠJ‚¢‚½ê‡•Ô‚è’l‚Í‹ó‚Æ‚È‚é
+			//return: ã‚¢ã‚»ãƒƒãƒˆã®ä¸­èº«, NotArrayãƒ¢ãƒ¼ãƒ‰ã§é–‹ã„ãŸå ´åˆè¿”ã‚Šå€¤ã¯ç©ºã¨ãªã‚‹
 			inline const File::FileText& ReadArray();
 			//----------------------------------------------------------------------------------
 			//[ReadNotArray]
-			//return: ƒAƒZƒbƒg‚Ì’†g, Arrayƒ‚[ƒh‚ÅŠJ‚¢‚½ê‡•Ô‚è’l‚Í‹ó‚Æ‚È‚é
+			//return: ã‚¢ã‚»ãƒƒãƒˆã®ä¸­èº«, Arrayãƒ¢ãƒ¼ãƒ‰ã§é–‹ã„ãŸå ´åˆè¿”ã‚Šå€¤ã¯ç©ºã¨ãªã‚‹
 			inline const sgstring& ReadNotArray();
 
 			//get asset type (read function property)
 			SGF_FUNCTION_PROPERTY Asset::AssetType getType() override { return Asset::AssetType::Text; }
 
-			GetOnlyProperty<File::FileText> textArray;	//ƒAƒZƒbƒg‚Ì’†g (Arrayƒ‚[ƒh)
-			GetOnlyProperty<sgstring> textNotArray;	//ƒAƒZƒbƒg‚Ì’†g (NotArrayƒ‚[ƒh)
+			GetOnlyProperty<File::FileText> textArray;	//ã‚¢ã‚»ãƒƒãƒˆã®ä¸­èº« (Arrayãƒ¢ãƒ¼ãƒ‰)
+			GetOnlyProperty<sgstring> textNotArray;	//ã‚¢ã‚»ãƒƒãƒˆã®ä¸­èº« (NotArrayãƒ¢ãƒ¼ãƒ‰)
 		private:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//0‰Šú‰»‚ğs‚¤
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//0åˆæœŸåŒ–ã‚’è¡Œã†
 			inline TextAsset() : textArray(m_textArray), textNotArray(m_textNotArray), m_fileType(0) {}
 
-			static constexpr int m_cFlagSec = 0x1;		//¯•Êƒtƒ‰ƒO sec
-			static constexpr int m_cFlagSecl = 0x2;		//¯•Êƒtƒ‰ƒO secl
-			static constexpr int m_cFlagSebt = 0x4;		//¯•Êƒtƒ‰ƒO sebtl
-			static constexpr int m_cFlagSebtl = 0x8;		//¯•Êƒtƒ‰ƒO sebt
-			static constexpr int m_cFlagCsv = 0x10;		//¯•Êƒtƒ‰ƒO csv
-			static constexpr int m_cFlagOthers = 0x20;	//¯•Êƒtƒ‰ƒO ‚»‚Ì‘¼
+			static constexpr int m_cFlagSec = 0x1;		//è­˜åˆ¥ãƒ•ãƒ©ã‚° sec
+			static constexpr int m_cFlagSecl = 0x2;		//è­˜åˆ¥ãƒ•ãƒ©ã‚° secl
+			static constexpr int m_cFlagSebt = 0x4;		//è­˜åˆ¥ãƒ•ãƒ©ã‚° sebtl
+			static constexpr int m_cFlagSebtl = 0x8;		//è­˜åˆ¥ãƒ•ãƒ©ã‚° sebt
+			static constexpr int m_cFlagCsv = 0x10;		//è­˜åˆ¥ãƒ•ãƒ©ã‚° csv
+			static constexpr int m_cFlagOthers = 0x20;	//è­˜åˆ¥ãƒ•ãƒ©ã‚° ãã®ä»–
 
-			//Šg’£q•¶š—ñ sec,secl
+			//æ‹¡å¼µå­æ–‡å­—åˆ— sec,secl
 			static constexpr wchar m_cIdentificationSecOrSecl[2][6] = { L".sec", L".secl" };
-			//Šg’£q•¶š—ñ sebt, sebtl
+			//æ‹¡å¼µå­æ–‡å­—åˆ— sebt, sebtl
 			static constexpr wchar m_cIdentificationSebtOrSebtl[2][7] = { L".sebt", L".sebtl" };
-			//Šg’£q•¶š—ñ csv
+			//æ‹¡å¼µå­æ–‡å­—åˆ— csv
 			static constexpr wchar m_cIdentificationCsv[5] = { L".csv" };
-			//Šg’£q•¶š—ñ ‚»‚Ì‘¼
+			//æ‹¡å¼µå­æ–‡å­—åˆ— ãã®ä»–
 			static constexpr wchar m_cIdentificationOthers[9][6] = { L".txt", L".cpp", L".hpp", L".html", L".htm", L".json", L".xml", L".yaml", L".fnt" };
 
 			std::mutex  m_mutex;		//mutex
-			File::FileText m_textArray;	//ƒeƒLƒXƒg“à—e (Arrayƒ‚[ƒh)
-			sgstring m_textNotArray;	//ƒeƒLƒXƒg“à—e (NotArrayƒ‚[ƒh)
-			byte m_fileType;					//ƒtƒ@ƒCƒ‹¯•Êƒtƒ‰ƒO
+			File::FileText m_textArray;	//ãƒ†ã‚­ã‚¹ãƒˆå†…å®¹ (Arrayãƒ¢ãƒ¼ãƒ‰)
+			sgstring m_textNotArray;	//ãƒ†ã‚­ã‚¹ãƒˆå†…å®¹ (NotArrayãƒ¢ãƒ¼ãƒ‰)
+			byte m_fileType;					//ãƒ•ã‚¡ã‚¤ãƒ«è­˜åˆ¥ãƒ•ãƒ©ã‚°
 		};
 
 
 		//----------------------------------------------------------------------------------
 		//[Open]
-		//ƒtƒ@ƒCƒ‹‚ğŠJ‚­
-		//throw: ‘Î‰‚µ‚Ä‚¢‚È‚¢Šg’£q‚¾‚Á‚½ê‡
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã
+		//throw: å¯¾å¿œã—ã¦ã„ãªã„æ‹¡å¼µå­ã ã£ãŸå ´åˆ
 		inline void TextAsset::Open()
 		{
 			//open?
@@ -116,7 +116,7 @@ namespace SGFramework
 			//mutex guard
 			std::lock_guard<std::mutex> guard(m_mutex);
 
-			//‚È‚¢‚©‚à‚µ‚ç‚ñ‚©‚ç‚Æ‚è‚ ‚¦‚¸ŠJ‚¢‚Æ‚­
+			//ãªã„ã‹ã‚‚ã—ã‚‰ã‚“ã‹ã‚‰ã¨ã‚Šã‚ãˆãšé–‹ã„ã¨ã
 			File::FileWriteStream fws;
 			fws.Open(name(), false, true);
 			fws.Close();
@@ -171,7 +171,7 @@ namespace SGFramework
 
 			//BaseAsset
 			if (isOpened) OpenBaseAsset();
-			//Šg’£qƒGƒ‰[
+			//æ‹¡å¼µå­ã‚¨ãƒ©ãƒ¼
 			else
 			{
 				setIsOpenFailed(true);
@@ -183,14 +183,14 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Write]
-		//ƒtƒ@ƒCƒ‹‚É‘‚«‚Ş, OpenÀsŒã‚É‰Â”\
-		//‚±‚ÌŠÖ”‚ÍNotArrayƒ‚[ƒh‚ÅŠJ‚¢‚½ê‡‚Ì‚İ—LŒø (‘Î‰Šg’£q: sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt)
-		//throw: ŠJ‚¢‚½ƒtƒ@ƒCƒ‹‚ªArrayƒ‚[ƒh‚¾‚Á‚½ê‡(sec, secl, csv)
-		//ˆø”1: ‘‚«‚Ş“à—e
-		//ˆø”2: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚ÅŠJ‚­‚©, default = false
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
+		//ã“ã®é–¢æ•°ã¯NotArrayãƒ¢ãƒ¼ãƒ‰ã§é–‹ã„ãŸå ´åˆã®ã¿æœ‰åŠ¹ (å¯¾å¿œæ‹¡å¼µå­: sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt)
+		//throw: é–‹ã„ãŸãƒ•ã‚¡ã‚¤ãƒ«ãŒArrayãƒ¢ãƒ¼ãƒ‰ã ã£ãŸå ´åˆ(sec, secl, csv)
+		//å¼•æ•°1: æ›¸ãè¾¼ã‚€å†…å®¹
+		//å¼•æ•°2: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ã§é–‹ãã‹, default = false
 		inline void TextAsset::Write(const sgstring & typeTextNotArray, bool isAppend)
 		{
-			//ŠJ‚¢‚Ä‚È‚¢
+			//é–‹ã„ã¦ãªã„
 			if (IS_FALSE(getIsFileOpened())) return;
 
 			//mutex guard
@@ -205,7 +205,7 @@ namespace SGFramework
 			//others
 			else if ((m_fileType & m_cFlagOthers) != 0)
 				File::TextFileRW::Write(name, typeTextNotArray);
-			//Šg’£qƒGƒ‰[
+			//æ‹¡å¼µå­ã‚¨ãƒ©ãƒ¼
 			else
 				throw InvalidArgument(L"Error!! TextAsset->Write",
 					L"Extension NotSupported: " + name.getValue());
@@ -217,14 +217,14 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Write]
-		//ƒtƒ@ƒCƒ‹‚É‘‚«‚Ş, OpenÀsŒã‚É‰Â”\
-		//‚±‚ÌŠÖ”‚ÍArrayƒ‚[ƒh‚ÅŠJ‚¢‚½ê‡‚Ì‚İ—LŒø (‘Î‰Šg’£q: sec, secl, csv)
-		//throw: ŠJ‚¢‚½ƒtƒ@ƒCƒ‹‚ªNotArrayƒ‚[ƒh‚¾‚Á‚½ê‡(sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt)
-		//ˆø”1: ‘‚«‚Ş“à—e
-		//ˆø”2: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚ÅŠJ‚­‚©, default = false
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
+		//ã“ã®é–¢æ•°ã¯Arrayãƒ¢ãƒ¼ãƒ‰ã§é–‹ã„ãŸå ´åˆã®ã¿æœ‰åŠ¹ (å¯¾å¿œæ‹¡å¼µå­: sec, secl, csv)
+		//throw: é–‹ã„ãŸãƒ•ã‚¡ã‚¤ãƒ«ãŒNotArrayãƒ¢ãƒ¼ãƒ‰ã ã£ãŸå ´åˆ(sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt)
+		//å¼•æ•°1: æ›¸ãè¾¼ã‚€å†…å®¹
+		//å¼•æ•°2: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ã§é–‹ãã‹, default = false
 		inline void TextAsset::Write(const File::FileText & typeTextArray, bool isAppend)
 		{
-			//ŠJ‚¢‚Ä‚È‚¢
+			//é–‹ã„ã¦ãªã„
 			if (IS_FALSE(getIsFileOpened())) return;
 
 			//mutex guard
@@ -239,7 +239,7 @@ namespace SGFramework
 			//csv
 			else if ((m_fileType & m_cFlagCsv) != 0)
 				File::CsvFileRW::Write(name, typeTextArray, isAppend, false);
-			//Šg’£qƒGƒ‰[
+			//æ‹¡å¼µå­ã‚¨ãƒ©ãƒ¼
 			else
 				throw InvalidArgument(L"Error!! TextAsset->Write",
 					L"Extension NotSupported: " + name.getValue());
@@ -252,10 +252,10 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Reload]
-		//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤, OpenÀsŒã‚É‰Â”\
+		//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
 		inline void TextAsset::Reload()
 		{
-			//ŠJ‚¢‚Ä‚È‚¢
+			//é–‹ã„ã¦ãªã„
 			if (IS_FALSE(getIsFileOpened())) return;
 
 			try
@@ -290,7 +290,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Close]
-		//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é, OpenÀsŒã‚É‰Â”\
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
 		inline void TextAsset::Close()
 		{
 			if (IS_FALSE(getIsFileOpened())) return;
@@ -301,11 +301,11 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[ReadArray]
-		//return: ƒAƒZƒbƒg‚Ì’†g, NotArrayƒ‚[ƒh‚ÅŠJ‚¢‚½ê‡•Ô‚è’l‚Í‹ó‚Æ‚È‚é
+		//return: ã‚¢ã‚»ãƒƒãƒˆã®ä¸­èº«, NotArrayãƒ¢ãƒ¼ãƒ‰ã§é–‹ã„ãŸå ´åˆè¿”ã‚Šå€¤ã¯ç©ºã¨ãªã‚‹
 		inline const File::FileText & TextAsset::ReadArray() { return m_textArray; }
 		//----------------------------------------------------------------------------------
 		//[ReadNotArray]
-		//return: ƒAƒZƒbƒg‚Ì’†g, Arrayƒ‚[ƒh‚ÅŠJ‚¢‚½ê‡•Ô‚è’l‚Í‹ó‚Æ‚È‚é
+		//return: ã‚¢ã‚»ãƒƒãƒˆã®ä¸­èº«, Arrayãƒ¢ãƒ¼ãƒ‰ã§é–‹ã„ãŸå ´åˆè¿”ã‚Šå€¤ã¯ç©ºã¨ãªã‚‹
 		inline const sgstring & TextAsset::ReadNotArray() { return m_textNotArray; }
 	}
 }

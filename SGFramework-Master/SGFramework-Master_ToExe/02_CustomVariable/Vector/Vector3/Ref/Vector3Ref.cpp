@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-3‚Â‚Ì’l‚ğˆµ‚¦‚éVector3Ref (Ref) \‘¢‘Ì
-Å‚à‘½—p‚·‚é\‘¢‘ÌƒVƒŠ[ƒY‚Ì1‚Â‚È‚Ì‚Å•Ê©ìVector‚ªŠÖŒW‚È‚¢‚à‚Ì‚Í‘S‚ÄinlineÀ‘•
+3ã¤ã®å€¤ã‚’æ‰±ãˆã‚‹Vector3Ref (Ref) æ§‹é€ ä½“
+æœ€ã‚‚å¤šç”¨ã™ã‚‹æ§‹é€ ä½“ã‚·ãƒªãƒ¼ã‚ºã®1ã¤ãªã®ã§åˆ¥è‡ªä½œVectorãŒé–¢ä¿‚ãªã„ã‚‚ã®ã¯å…¨ã¦inlineå®Ÿè£…
 ------------------------------------------------------------------------------------*/
 #include "Vector3Ref.hpp"
 #include "../Int/Vector3Int.hpp"
@@ -10,36 +10,36 @@
 //Framework namespace
 namespace SGFramework
 {
-	//Vector2ƒIƒyƒŒ[ƒ^[
+	//Vector2ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector3Ref::operator Vector2() const
 	{
 		return Vector2(x, y);
 	}
-	//Vector4ƒIƒyƒŒ[ƒ^[
+	//Vector4ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector3Ref::operator Vector4() const
 	{
 		return Vector4(x, y, z, 0.0f);
 	}
-	//Vector3IntƒIƒyƒŒ[ƒ^[
+	//Vector3Intã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector3Ref::operator Vector3Int() const
 	{
 		return Vector3Int(static_cast<int>(x), static_cast<int>(y), static_cast<int>(z));
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector3Ref & Vector3Ref::operator=(const Vector2 & vec)
 	{
 		x = vec.x; y = vec.y;
 		z = 0.0f;
 		return *this;
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector3Ref & Vector3Ref::operator=(const Vector4 & vec)
 	{
 		x = vec.x; y = vec.y;
 		z = vec.z;
 		return *this;
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector3Ref & Vector3Ref::operator=(const Vector3Int & vec)
 	{
 		x = static_cast<float>(vec.x); y = static_cast<float>(vec.y);

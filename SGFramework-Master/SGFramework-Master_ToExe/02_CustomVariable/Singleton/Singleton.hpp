@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-インスタンスを一つに限定するSingleton class
+繧､繝ｳ繧ｹ繧ｿ繝ｳ繧ｹ繧剃ｸ縺､縺ｫ髯仙ｮ壹☆繧鬼ingleton class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_SINGLETON_HPP_
 #define SGFRAMEWORK_HEADER_SINGLETON_HPP_
@@ -10,7 +10,7 @@
 //Framework namespace
 namespace SGFramework
 {
-	//インスタンスを一つに限定するSingleton class
+	//繧､繝ｳ繧ｹ繧ｿ繝ｳ繧ｹ繧剃ｸ縺､縺ｫ髯仙ｮ壹☆繧鬼ingleton class
 	template <class TKey>
 	class Singleton
 	{
@@ -26,7 +26,7 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Instance]
-		//return: インスタンス
+		//return: 繧､繝ｳ繧ｹ繧ｿ繝ｳ繧ｹ
 		inline static TKey& Instance()
 		{
 			static UniquePointer<TKey> ptr = TKey::CreateInstance();
@@ -35,12 +35,12 @@ namespace SGFramework
 
 	protected:
 		//----------------------------------------------------------------------------------
-		//[コンストラクタ]
+		//[繧ｳ繝ｳ繧ｹ繝医Λ繧ｯ繧ｿ]
 		inline Singleton() {};
 	private:
 		//----------------------------------------------------------------------------------
 		//[CreateInstance]
-		//return: インスタンス
+		//return: 繧､繝ｳ繧ｹ繧ｿ繝ｳ繧ｹ
 		inline static UniquePointer<TKey> CreateInstance() {return std::move(Pointer::MakeUnique::Auto<TKey>());}
 	};
 }

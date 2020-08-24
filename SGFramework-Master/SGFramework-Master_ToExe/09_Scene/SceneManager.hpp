@@ -13,8 +13,8 @@ namespace SGFramework
 	//Scene
 	namespace Scene
 	{
-		//Scene‚ğŠÇ—‚·‚éSceneManager class
-		//‚±‚ÌƒNƒ‰ƒX‚ÌŠÖ”‚Í‘S‚Ä”ñƒXƒŒƒbƒhƒZ[ƒt‚Å‚·
+		//Sceneã‚’ç®¡ç†ã™ã‚‹SceneManager class
+		//ã“ã®ã‚¯ãƒ©ã‚¹ã®é–¢æ•°ã¯å…¨ã¦éã‚¹ãƒ¬ãƒƒãƒ‰ã‚»ãƒ¼ãƒ•ã§ã™
 		class SceneManager final
 		{
 		public:
@@ -23,44 +23,44 @@ namespace SGFramework
 			friend class GUI;
 
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//ƒV[ƒ“ƒ}ƒl[ƒWƒƒ[‚Ì“o˜^‚ğs‚¤
-			//ˆø”1: Å‰‚É“Ç‚İ‚ŞƒV[ƒ“, InstantiateFirstScene‚Åw’è‚·‚é 
-			//ˆø”2: ƒfƒoƒbƒOƒ‚[ƒh
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ã‚·ãƒ¼ãƒ³ãƒãƒãƒ¼ã‚¸ãƒ£ãƒ¼ã®ç™»éŒ²ã‚’è¡Œã†
+			//å¼•æ•°1: æœ€åˆã«èª­ã¿è¾¼ã‚€ã‚·ãƒ¼ãƒ³, InstantiateFirstSceneã§æŒ‡å®šã™ã‚‹ 
+			//å¼•æ•°2: ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰
 			inline SceneManager(UniquePointer<BaseScene>&& FirstScene, bool isDebugMode);
 			//----------------------------------------------------------------------------------
-			//[ƒfƒXƒgƒ‰ƒNƒ^]
-			//ƒV[ƒ“ŠJ•ú‚ğs‚¤
+			//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ã‚·ãƒ¼ãƒ³é–‹æ”¾ã‚’è¡Œã†
 			inline ~SceneManager();
 			//----------------------------------------------------------------------------------
 			//[InstantiateFirstScene]
-			//Å‰‚ÌƒV[ƒ“ƒCƒ“ƒXƒ^ƒ“ƒX‚ğì¬‚·‚é
+			//æœ€åˆã®ã‚·ãƒ¼ãƒ³ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’ä½œæˆã™ã‚‹
 			template<class SceneClass>
 			inline static UniquePointer<BaseScene> InstantiateFirstScene();
 
 			//----------------------------------------------------------------------------------
 			//[RegisterUnloadSharedPointer]
-			//UnloadPointer‚ğ“o˜^‚·‚é, “o˜^‚µ‚½Pointer‚ÍƒV[ƒ“íœŒã‚àŠJ•ú‚³‚ê‚È‚¢
+			//UnloadPointerã‚’ç™»éŒ²ã™ã‚‹, ç™»éŒ²ã—ãŸPointerã¯ã‚·ãƒ¼ãƒ³å‰Šé™¤å¾Œã‚‚é–‹æ”¾ã•ã‚Œãªã„
 			//template: shared pointer type
-			//return: ¬Œ÷‚µ‚½‚çture, ¸”s(‚·‚Å‚Ékey‚ª‘¶İ)‚µ‚½ê‡false
-			//ˆø”1: pointer
-			//ˆø”2: key
+			//return: æˆåŠŸã—ãŸã‚‰ture, å¤±æ•—(ã™ã§ã«keyãŒå­˜åœ¨)ã—ãŸå ´åˆfalse
+			//å¼•æ•°1: pointer
+			//å¼•æ•°2: key
 			template<class PointerType>
 			inline static bool RegisterUnloadSharedPointer(SharedPointer<PointerType> pointer, const sgstring& key);
 
 			//----------------------------------------------------------------------------------
 			//[FindUnloadSharedPointer]
-			//template: ƒLƒƒƒXƒg‚µ‚½SharedPointer, dynamic_cast‚È‚Ç‚ÅŠm”F‚ğs‚í‚È‚¢‚Ì‚Å’ˆÓ
-			//return: “o˜^‚µ‚½UnloadSharedPointer, key‚ª–³Œø‚Èê‡null pointer
-			//ˆø”1: key
+			//template: ã‚­ãƒ£ã‚¹ãƒˆã—ãŸSharedPointer, dynamic_castãªã©ã§ç¢ºèªã‚’è¡Œã‚ãªã„ã®ã§æ³¨æ„
+			//return: ç™»éŒ²ã—ãŸUnloadSharedPointer, keyãŒç„¡åŠ¹ãªå ´åˆnull pointer
+			//å¼•æ•°1: key
 			template<class PointerType>
 			inline static SharedPointer<PointerType> FindUnloadSharedPointer(const sgstring& key);
 			
 			//----------------------------------------------------------------------------------
 			//[UnregisterUnloadSharedPointer]
-			//UnloadSharedPointer‚ğ“o˜^‰ğœ‚·‚é
-			//return: ¬Œ÷‚µ‚½ê‡true, ¸”s‚µ‚½ê‡false
-			//ˆø”1: key
+			//UnloadSharedPointerã‚’ç™»éŒ²è§£é™¤ã™ã‚‹
+			//return: æˆåŠŸã—ãŸå ´åˆtrue, å¤±æ•—ã—ãŸå ´åˆfalse
+			//å¼•æ•°1: key
 			inline static bool UnregisterUnloadSharedPointer(const sgstring& key);
 
 			//now scene (read function property)
@@ -77,36 +77,36 @@ namespace SGFramework
 		private:
 			//----------------------------------------------------------------------------------
 			//[GameStart]
-			//Å‰‚ÌƒV[ƒ“‚ÌStartˆ—‚ğs‚¤
+			//æœ€åˆã®ã‚·ãƒ¼ãƒ³ã®Startå‡¦ç†ã‚’è¡Œã†
 			inline static void GameStart();
 			//----------------------------------------------------------------------------------
 			//[Update]
-			//ƒV[ƒ“‚ÌXV‚ğs‚¤
+			//ã‚·ãƒ¼ãƒ³ã®æ›´æ–°ã‚’è¡Œã†
 			inline static void Update();
 			//----------------------------------------------------------------------------------
 			//[Sync]
-			//ƒV[ƒ“‚Ì“¯ŠúXV‚ğs‚¤
-			//return: Scene‚Ì‘±s‰Â”Û
+			//ã‚·ãƒ¼ãƒ³ã®åŒæœŸæ›´æ–°ã‚’è¡Œã†
+			//return: Sceneã®ç¶šè¡Œå¯å¦
 			inline static bool Sync();
 			//----------------------------------------------------------------------------------
 			//[LateUpdate]
-			//ƒV[ƒ“‚Ì“¯ŠúXV‚ğs‚¤
+			//ã‚·ãƒ¼ãƒ³ã®åŒæœŸæ›´æ–°ã‚’è¡Œã†
 			inline static void LateUpdate();
 			//----------------------------------------------------------------------------------
 			//[FixedUpdate]
-			//ƒV[ƒ“‚ÌFixed•À—ñXV‚ğs‚¤
+			//ã‚·ãƒ¼ãƒ³ã®Fixedä¸¦åˆ—æ›´æ–°ã‚’è¡Œã†
 			inline static void FixedUpdate();
 			//----------------------------------------------------------------------------------
 			//[MakeDrawCommand]
-			//ƒV[ƒ“‚Ì•`‰æ‚ğs‚¤
+			//ã‚·ãƒ¼ãƒ³ã®æç”»ã‚’è¡Œã†
 			inline static void MakeDrawCommand();
 			//----------------------------------------------------------------------------------
 			//[Release]
-			//ƒV[ƒ“‚Ì‘SŠJ•ú‚ğs‚¤
+			//ã‚·ãƒ¼ãƒ³ã®å…¨é–‹æ”¾ã‚’è¡Œã†
 			inline static void Release();
 			//----------------------------------------------------------------------------------
 			//[LoadScene]
-			//ŸƒV[ƒ“‚Ì“Ç‚İ‚İ‚ğs‚¤
+			//æ¬¡ã‚·ãƒ¼ãƒ³ã®èª­ã¿è¾¼ã¿ã‚’è¡Œã†
 			inline static bool LoadScene();
 
 			//Scenes
@@ -114,48 +114,48 @@ namespace SGFramework
 			//unload pointers
 			static std::unordered_map<std::wstring, Detail::Pointer::BaseCountPointer*> m_unloadSharedPointers;
 			static std::mutex m_mutex;		//mutex
-			//Unload pointer ƒJƒEƒ“ƒg
+			//Unload pointer ã‚«ã‚¦ãƒ³ãƒˆ
 			static std::atomic<ushort> m_unloadCounter;	
-			static bool m_isEndUpdate;			//XVI—¹ƒtƒ‰ƒO
-			static bool m_isInstantiate;			//ƒCƒ“ƒXƒ^ƒ“ƒX‚ ‚é‚©‚Èƒtƒ‰ƒO
+			static bool m_isEndUpdate;			//æ›´æ–°çµ‚äº†ãƒ•ãƒ©ã‚°
+			static bool m_isInstantiate;			//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚ã‚‹ã‹ãªãƒ•ãƒ©ã‚°
 		};
 
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ƒV[ƒ“ƒ}ƒl[ƒWƒƒ[‚Ì“o˜^‚ğs‚¤
-		//ˆø”1: Å‰‚É“Ç‚İ‚ŞƒV[ƒ“, InstantiateFirstScene‚Åw’è‚·‚é 
-		//ˆø”2: ƒfƒoƒbƒOƒ‚[ƒh
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ã‚·ãƒ¼ãƒ³ãƒãƒãƒ¼ã‚¸ãƒ£ãƒ¼ã®ç™»éŒ²ã‚’è¡Œã†
+		//å¼•æ•°1: æœ€åˆã«èª­ã¿è¾¼ã‚€ã‚·ãƒ¼ãƒ³, InstantiateFirstSceneã§æŒ‡å®šã™ã‚‹ 
+		//å¼•æ•°2: ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰
 		inline SceneManager::SceneManager(UniquePointer<BaseScene>&& FirstScene, bool isDebugMode)
 		{
-			//ƒCƒ“ƒXƒ^ƒ“ƒXì¬‚µ‚Ä‚¢‚È‚¢ && ƒ|ƒCƒ“ƒ^‚ª—LŒø
+			//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ä½œæˆã—ã¦ã„ãªã„ && ãƒã‚¤ãƒ³ã‚¿ãŒæœ‰åŠ¹
 			if (IS_FALSE(m_isInstantiate) & FirstScene.getIsOwned())
 			{
-				m_isInstantiate = true;						//‘ã“ü
-				IsDebug::m_isValue = isDebugMode;	//ƒfƒoƒbƒOƒ‚[ƒh
+				m_isInstantiate = true;						//ä»£å…¥
+				IsDebug::m_isValue = isDebugMode;	//ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰
 
-				//’Ç‰Á
+				//è¿½åŠ 
 				m_scenes.emplace(std::move(FirstScene));
 			}
 		}
 		//----------------------------------------------------------------------------------
-		//[ƒfƒXƒgƒ‰ƒNƒ^]
-		//ƒV[ƒ“ŠJ•ú‚ğs‚¤
+		//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ã‚·ãƒ¼ãƒ³é–‹æ”¾ã‚’è¡Œã†
 		inline SceneManager::~SceneManager()
 		{
-			Release();	//ŠJ•ú
+			Release();	//é–‹æ”¾
 		}
 		//----------------------------------------------------------------------------------
 		//[InstantiateFirstScene]
-		//Å‰‚ÌƒV[ƒ“ƒCƒ“ƒXƒ^ƒ“ƒX‚ğì¬‚·‚é
-		//throw: Šù‚ÉƒCƒ“ƒXƒ^ƒ“ƒX‚ª‚ ‚éê‡
-		//return: ì¬‚µ‚½ƒV[ƒ“
+		//æœ€åˆã®ã‚·ãƒ¼ãƒ³ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’ä½œæˆã™ã‚‹
+		//throw: æ—¢ã«ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒã‚ã‚‹å ´åˆ
+		//return: ä½œæˆã—ãŸã‚·ãƒ¼ãƒ³
 		template<class SceneClass>
 		inline UniquePointer<BaseScene> SceneManager::InstantiateFirstScene()
 		{
-			//BaseScene‚ªŠî’êƒNƒ‰ƒX‚Å‚È‚¢‚È‚çError
+			//BaseSceneãŒåŸºåº•ã‚¯ãƒ©ã‚¹ã§ãªã„ãªã‚‰Error
 			static_assert(std::is_base_of_v<BaseScene, SceneClass>, L"InstantiateFirstScene template should be the Base of BaseScene class");
-			//ƒCƒ“ƒXƒ^ƒ“ƒX‚ª‚à‚¤‚ ‚é
+			//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒã‚‚ã†ã‚ã‚‹
 			if (IS_TRUE(m_isInstantiate))
 			{
 				//ErrorMessage
@@ -172,10 +172,10 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[RegisterUnloadSharedPointer]
-		//UnloadPointer‚ğ“o˜^‚·‚é, “o˜^‚µ‚½Pointer‚ÍƒV[ƒ“íœŒã‚àŠJ•ú‚³‚ê‚È‚¢
-		//return: ¬Œ÷‚µ‚½‚çture, ¸”s(‚·‚Å‚Ékey‚ª‘¶İ)‚µ‚½ê‡false
-		//ˆø”1: pointer
-		//ˆø”2: key
+		//UnloadPointerã‚’ç™»éŒ²ã™ã‚‹, ç™»éŒ²ã—ãŸPointerã¯ã‚·ãƒ¼ãƒ³å‰Šé™¤å¾Œã‚‚é–‹æ”¾ã•ã‚Œãªã„
+		//return: æˆåŠŸã—ãŸã‚‰ture, å¤±æ•—(ã™ã§ã«keyãŒå­˜åœ¨)ã—ãŸå ´åˆfalse
+		//å¼•æ•°1: pointer
+		//å¼•æ•°2: key
 		template<class PointerType>
 		inline bool SceneManager::RegisterUnloadSharedPointer(SharedPointer<PointerType> pointer, const sgstring & key)
 		{
@@ -193,9 +193,9 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[FindUnloadSharedPointer]
-		//template: ƒLƒƒƒXƒg‚µ‚½SharedPointer, dynamic_cast‚È‚Ç‚ÅŠm”F‚ğs‚í‚È‚¢‚Ì‚Å’ˆÓ
-		//return: “o˜^‚µ‚½UnloadSharedPointer, key‚ª–³Œø‚Èê‡null pointer
-		//ˆø”1: key
+		//template: ã‚­ãƒ£ã‚¹ãƒˆã—ãŸSharedPointer, dynamic_castãªã©ã§ç¢ºèªã‚’è¡Œã‚ãªã„ã®ã§æ³¨æ„
+		//return: ç™»éŒ²ã—ãŸUnloadSharedPointer, keyãŒç„¡åŠ¹ãªå ´åˆnull pointer
+		//å¼•æ•°1: key
 		template<class PointerType>
 		inline SharedPointer<PointerType> SceneManager::FindUnloadSharedPointer(const sgstring & key)
 		{
@@ -208,9 +208,9 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[UnregisterUnloadSharedPointer]
-		//UnloadSharedPointer‚ğ“o˜^‰ğœ‚·‚é
-		//return: ¬Œ÷‚µ‚½ê‡true, ¸”s‚µ‚½ê‡false
-		//ˆø”1: key
+		//UnloadSharedPointerã‚’ç™»éŒ²è§£é™¤ã™ã‚‹
+		//return: æˆåŠŸã—ãŸå ´åˆtrue, å¤±æ•—ã—ãŸå ´åˆfalse
+		//å¼•æ•°1: key
 		inline bool SceneManager::UnregisterUnloadSharedPointer(const sgstring & key)
 		{
 			std::lock_guard<std::mutex> guard(m_mutex);
@@ -227,7 +227,7 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[GameStart]
-		//Å‰‚ÌƒV[ƒ“‚ÌStartˆ—‚ğs‚¤
+		//æœ€åˆã®ã‚·ãƒ¼ãƒ³ã®Startå‡¦ç†ã‚’è¡Œã†
 		inline void SceneManager::GameStart()
 		{
 			SceneBaton batton;
@@ -235,7 +235,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Update]
-		//ƒV[ƒ“‚Ì•À—ñXV‚ğs‚¤
+		//ã‚·ãƒ¼ãƒ³ã®ä¸¦åˆ—æ›´æ–°ã‚’è¡Œã†
 		inline void SceneManager::Update()
 		{
 			//if ((m_scenes.empty() ^ true) ^ m_isEndUpdate)
@@ -246,7 +246,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Sync]
-		//ƒV[ƒ“‚Ì“¯ŠúXV‚ğs‚¤
+		//ã‚·ãƒ¼ãƒ³ã®åŒæœŸæ›´æ–°ã‚’è¡Œã†
 		inline bool SceneManager::Sync()
 		{
 			//if ((m_scenes.empty() ^ true) ^ m_isEndUpdate)
@@ -260,7 +260,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[LateUpdate]
-		//ƒV[ƒ“‚Ì“¯ŠúXV‚ğs‚¤
+		//ã‚·ãƒ¼ãƒ³ã®åŒæœŸæ›´æ–°ã‚’è¡Œã†
 		inline void SceneManager::LateUpdate()
 		{
 			//if ((m_scenes.empty() ^ true) ^ m_isEndUpdate)
@@ -271,7 +271,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[FixedUpdate]
-		//ƒV[ƒ“‚ÌFixed•À—ñXV‚ğs‚¤
+		//ã‚·ãƒ¼ãƒ³ã®Fixedä¸¦åˆ—æ›´æ–°ã‚’è¡Œã†
 		inline void SceneManager::FixedUpdate()
 		{
 			//if ((m_scenes.empty() ^ true) ^ m_isEndUpdate)
@@ -282,7 +282,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[MakeDrawCommand]
-		//ƒV[ƒ“‚Ì•`‰æ‚ğs‚¤
+		//ã‚·ãƒ¼ãƒ³ã®æç”»ã‚’è¡Œã†
 		inline void SceneManager::MakeDrawCommand()
 		{
 			//if ((m_scenes.empty() ^ true) ^ m_isEndUpdate)
@@ -293,7 +293,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Release]
-		//ƒV[ƒ“‚Ì‘SŠJ•ú‚ğs‚¤
+		//ã‚·ãƒ¼ãƒ³ã®å…¨é–‹æ”¾ã‚’è¡Œã†
 		inline void SceneManager::Release()
 		{
 			std::lock_guard<std::mutex> guard(m_mutex);
@@ -315,15 +315,15 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[LoadScene]
-		//ŸƒV[ƒ“‚Ì“Ç‚İ‚İ‚ğs‚¤
+		//æ¬¡ã‚·ãƒ¼ãƒ³ã®èª­ã¿è¾¼ã¿ã‚’è¡Œã†
 		inline bool SceneManager::LoadScene()
 		{
 			std::lock_guard<std::mutex> guard(m_mutex);
 	
-			//End‚ÅŠi”[‚³‚ê‚éî•ñ
+			//Endã§æ ¼ç´ã•ã‚Œã‚‹æƒ…å ±
 			SceneBaton baton = {};
 			bool isClear = false, isPop = false;
-			//End, ŸƒV[ƒ“ƒ|ƒCƒ“ƒ^ƒQƒbƒg
+			//End, æ¬¡ã‚·ãƒ¼ãƒ³ãƒã‚¤ãƒ³ã‚¿ã‚²ãƒƒãƒˆ
 			auto ptr = m_scenes.top()->EndScene(baton, isClear, isPop);
 
 			//Pop
@@ -338,23 +338,23 @@ namespace SGFramework
 				Release();
 			}
 
-			//ƒ|ƒCƒ“ƒ^—LŒø
+			//ãƒã‚¤ãƒ³ã‚¿æœ‰åŠ¹
 			if (IS_TRUE(ptr.getIsOwned()))
 			{
-				//ƒV[ƒ“’Ç‰Á
+				//ã‚·ãƒ¼ãƒ³è¿½åŠ 
 				m_scenes.emplace(std::move(ptr));
 				//Start
 				ptr->StartScene(baton);
 				return true;
 			}
-			//ŸƒV[ƒ“ƒ|ƒCƒ“ƒ^–³Œø&‚Ü‚¾ƒV[ƒ“‚ª‚ ‚èPop‚µ‚½->ˆê‚Â–ß‚é
+			//æ¬¡ã‚·ãƒ¼ãƒ³ãƒã‚¤ãƒ³ã‚¿ç„¡åŠ¹&ã¾ã ã‚·ãƒ¼ãƒ³ãŒã‚ã‚ŠPopã—ãŸ->ä¸€ã¤æˆ»ã‚‹
 			else if (IS_FALSE(m_scenes.empty()) & IS_TRUE(isPop))
 			{
 				//Rewind
 				m_scenes.top()->RewindScene(baton);
 				return true;
 			}
-			//‚»‚êˆÈŠO‚ÍI—¹‚”‚İ‚È‚·
+			//ãã‚Œä»¥å¤–ã¯çµ‚äº†ï½”ã¿ãªã™
 			else
 			{
 				m_isEndUpdate = true;

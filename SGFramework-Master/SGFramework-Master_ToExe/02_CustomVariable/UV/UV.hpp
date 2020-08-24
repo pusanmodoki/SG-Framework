@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-2‚Â‚Ì’l‚ğˆµ‚¦‚éUV \‘¢‘Ì
+2ã¤ã®å€¤ã‚’æ‰±ãˆã‚‹UV æ§‹é€ ä½“
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_UV_HPP_
 #define SGFRAMEWORK_HEADER_UV_HPP_
@@ -14,36 +14,36 @@
 //Framework namespace
 namespace SGFramework
 {
-	//2‚Â‚Ì’l‚ğˆµ‚¦‚éUV \‘¢‘Ì
+	//2ã¤ã®å€¤ã‚’æ‰±ãˆã‚‹UV æ§‹é€ ä½“
 	struct UV final
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//inlneÀ‘•
+		//inlneå®Ÿè£…
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘S‚Ä0‚Éİ’è‚³‚ê‚é
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å…¨ã¦0ã«è¨­å®šã•ã‚Œã‚‹
 		inline constexpr UV() : u(0.0f), v(0.0f) {};
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1:x
-		//ˆø”2:y
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1:x
+		//å¼•æ•°2:y
 		inline constexpr UV(float u, float v) : u(u), v(v) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: XMFLOAT2
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: XMFLOAT2
 		inline constexpr UV(const Vector2& value) : u(value.x), v(value.y) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: float*
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: float*
 		inline constexpr UV(const float* array) : u(array[0]), v(array[1]) {}
 
 		//----------------------------------------------------------------------------------
-		//•Ï”
+		//å¤‰æ•°
 		union
 		{
 			struct
@@ -56,95 +56,95 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Absolute]
-		//return: â‘Î’l
+		//return: çµ¶å¯¾å€¤
 		inline UV Absolute() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[Magnitude]
-		//return: ©g‚ÆVector(0,0)‚Ì‹——£
+		//return: è‡ªèº«ã¨Vector(0,0)ã®è·é›¢
 		inline constexpr float Magnitude() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ExactMagnitude]
-		//return: ©g‚ÆVector(0,0,0,0)‚Ì‹——£ (³Šm‚È’l‚¾‚ª•‰‰×‚ª‚‚¢)
+		//return: è‡ªèº«ã¨Vector(0,0,0,0)ã®è·é›¢ (æ­£ç¢ºãªå€¤ã ãŒè² è·ãŒé«˜ã„)
 		inline float ExactMagnitude() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[Normalize]
-		//return: ©g‚Ì³‹K‰»ƒxƒNƒgƒ‹
+		//return: è‡ªèº«ã®æ­£è¦åŒ–ãƒ™ã‚¯ãƒˆãƒ«
 		inline UV Normalized() const noexcept;
 
-		//float*ƒIƒyƒŒ[ƒ^[
+		//float*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator float*() { return (float*)this->value; }
-		//const float*ƒIƒyƒŒ[ƒ^[
+		//const float*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator const float*() const { return (const float*)this->value; }
-		//Vector2ƒIƒyƒŒ[ƒ^[
+		//Vector2ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator Vector2() const { return Vector2(u, v); }
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator = (const Vector2& vec) { this->u = vec.x; this->v = vec.y; }
-		//+ƒIƒyƒŒ[ƒ^[  
+		//+ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 		inline UV operator +() const { return UV(+u, +v); }
-		//-ƒIƒyƒŒ[ƒ^[  
+		//-ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 		inline UV operator -() const { return UV(-u, -v); }
-		//==ƒIƒyƒŒ[ƒ^[
+		//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator ==(const UV& uv) const
 		{
 			return (fabsf(u - uv.u) <= MathAF::cEpsilon
 				&& fabsf(v - uv.v) <= MathAF::cEpsilon);
 		}
-		//!=ƒIƒyƒŒ[ƒ^[
+		//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator !=(const UV& uv) const
 		{
 			return (fabsf(u - uv.u) > MathAF::cEpsilon
 				&& fabsf(v - uv.v) > MathAF::cEpsilon);
 		}
 
-		//‰ÁZƒIƒyƒŒ[ƒ^[
+		//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline UV operator +(const UV& uv) const { return UV(u + uv.u, v + uv.v); }
-		//Œ¸ZƒIƒyƒŒ[ƒ^[
+		//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline UV operator -(const UV& uv) const { return UV(u - uv.v, v - uv.v); }
-		//æZƒIƒyƒŒ[ƒ^[
+		//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline UV operator *(const UV& uv) const { return UV(u * uv.v, v * uv.v); }
-		//æZƒIƒyƒŒ[ƒ^[(float)
+		//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 		inline UV operator *(const float value) const { return UV(u * value, v * value); }
-		//œZƒIƒyƒŒ[ƒ^[
+		//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline UV operator /(const UV& uv) const { return UV(u / uv.v, v / uv.v); }
-		//œZƒIƒyƒŒ[ƒ^[(float)
+		//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 		inline UV operator /(const float value) const { return UV(u / value, v / value); }
 
-		//+=ƒIƒyƒŒ[ƒ^[
+		//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const UV &operator +=(const UV& uv) { this->u += uv.u; this->v += uv.v; return *this; }
-		//-=ƒIƒyƒŒ[ƒ^[
+		//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const UV &operator -=(const UV& uv) { this->u -= uv.u; this->v -= uv.v; return *this; }
-		//*=ƒIƒyƒŒ[ƒ^[
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const UV &operator *=(const UV& uv) { this->u *= uv.u; this->v *= uv.v; return *this; }
-		//*=ƒIƒyƒŒ[ƒ^[(float)
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 		inline const UV &operator *=(const float value) { this->u *= value; this->v *= value; return *this; }
-		// /=ƒIƒyƒŒ[ƒ^[
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const UV &operator /=(const UV& uv) { this->u /= u; this->v /= v; return *this; }
-		// /=ƒIƒyƒŒ[ƒ^[(float)
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 		inline const UV &operator /=(const float value) { this->u /= value; this->v /= value; return *this; }
 
 		//sgstring operator
 		inline operator sgstring() const { return ToString(); }
 		//----------------------------------------------------------------------------------
 		//[ToString]
-		//sgstringŒ`®‚Åo—Í‚·‚é
-		//return: sgstring•\Œ»‚µ‚½this
+		//sgstringå½¢å¼ã§å‡ºåŠ›ã™ã‚‹
+		//return: sgstringè¡¨ç¾ã—ãŸthis
 		inline sgstring ToString() const { return (L"(" + std::to_wstring(u) + L", " + std::to_wstring(v) + L")"); }
 		//----------------------------------------------------------------------------------
 		//[ToStdString]
-		//std::stringŒ`®‚Åo—Í‚·‚é
-		//return: std::string•\Œ»‚µ‚½this
+		//std::stringå½¢å¼ã§å‡ºåŠ›ã™ã‚‹
+		//return: std::stringè¡¨ç¾ã—ãŸthis
 		inline std::string ToStdString() const { return ("(" + std::to_string(u) + ", " + std::to_string(v) + ")"); }
 
 
-		//ŒvZƒ‰ƒCƒuƒ‰ƒŠ
+		//è¨ˆç®—ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 
 
 		//----------------------------------------------------------------------------------
 		//[Distance]<Calculation Library Function>
-		//from‚©‚çto‚Ì‹——£‚ğ‘ª‚é
-		//return: from-to‚Ì‹——£
-		//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-		//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+		//fromã‹ã‚‰toã®è·é›¢ã‚’æ¸¬ã‚‹
+		//return: from-toã®è·é›¢
+		//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+		//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 		inline constexpr float Distance(const UV& from, const UV& to) noexcept
 		{
 			float f = (from.u - to.u) * (from.u - to.u)
@@ -157,30 +157,30 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[ExactDistance]<Calculation Library Function>
-		//from‚©‚çto‚Ì‹——£‚ğ‘ª‚é, Distance‚æ‚è³Šm‚È’l‚¾‚ªŒvZ•‰‰×‚ª‚‚¢
-		//return: from-to‚Ì‹——£
-		//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-		//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+		//fromã‹ã‚‰toã®è·é›¢ã‚’æ¸¬ã‚‹, Distanceã‚ˆã‚Šæ­£ç¢ºãªå€¤ã ãŒè¨ˆç®—è² è·ãŒé«˜ã„
+		//return: from-toã®è·é›¢
+		//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+		//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 		inline float ExactDistance(const UV& from, const UV& to) noexcept
 		{
 			return std::sqrtf((to.u - from.u) * (to.u - from.u) + (to.v - from.v) * (to.v - from.v));
 		}
 		//----------------------------------------------------------------------------------
 		//[Direction]<Calculation Library Function>
-		//from‚©‚çto‚Ö‚Ì³‹K‰»Ï•ûŒüƒxƒNƒgƒ‹‚ğæ“¾‚·‚é
-		//return: ³‹K‰»Ï•ûŒüƒxƒNƒgƒ‹
-		//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-		//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+		//fromã‹ã‚‰toã¸ã®æ­£è¦åŒ–æ¸ˆæ–¹å‘ãƒ™ã‚¯ãƒˆãƒ«ã‚’å–å¾—ã™ã‚‹
+		//return: æ­£è¦åŒ–æ¸ˆæ–¹å‘ãƒ™ã‚¯ãƒˆãƒ«
+		//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+		//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 		inline UV Direction(const UV& from, const UV& to) noexcept
 		{
 			return std::move((to - from).Normalized());
 		}
 		//----------------------------------------------------------------------------------
 		//[Max]<Calculation Library Function>
-		//2‚Â‚ÌUV‚ÌŠe¬•ª‚Ìˆê”Ô‘å‚«‚È’l‚ğg‚Á‚ÄUV‚ğì¬
-		//return: Å‘åUV
-		//ˆø”1: ‘ÎÛUV1
-		//ˆø”2: ‘ÎÛUV2
+		//2ã¤ã®UVã®å„æˆåˆ†ã®ä¸€ç•ªå¤§ããªå€¤ã‚’ä½¿ã£ã¦UVã‚’ä½œæˆ
+		//return: æœ€å¤§UV
+		//å¼•æ•°1: å¯¾è±¡UV1
+		//å¼•æ•°2: å¯¾è±¡UV2
 		inline static UV Max(const UV& uv1, const UV& uv2)
 		{
 			UV ret;
@@ -190,10 +190,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Min]<Calculation Library Function>
-		//2‚Â‚ÌUV‚ÌŠe¬•ª‚Ìˆê”Ô¬‚³‚¢’l‚ğg‚Á‚ÄUV‚ğì¬
-		//return: Å¬ƒxƒNƒgƒ‹
-		//ˆø”1: ‘ÎÛUV1
-		//ˆø”2: ‘ÎÛUV2
+		//2ã¤ã®UVã®å„æˆåˆ†ã®ä¸€ç•ªå°ã•ã„å€¤ã‚’ä½¿ã£ã¦UVã‚’ä½œæˆ
+		//return: æœ€å°ãƒ™ã‚¯ãƒˆãƒ«
+		//å¼•æ•°1: å¯¾è±¡UV1
+		//å¼•æ•°2: å¯¾è±¡UV2
 		inline static UV Min(const UV& uv1, const UV& uv2)
 		{
 			UV ret;
@@ -207,8 +207,8 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[wostream operator]
-	//ˆø”1: stream
-	//ˆø”2: this
+	//å¼•æ•°1: stream
+	//å¼•æ•°2: this
 	inline std::wostream& operator<<(std::wostream& stream, const UV& value)
 	{
 		const wchar* string = value.ToString();
@@ -219,14 +219,14 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Absolute]
-	//return: â‘Î’l
+	//return: çµ¶å¯¾å€¤
 	inline UV UV::Absolute() const noexcept
 	{
 		return UV(u < 0.0f ? -u : u, v < 0.0f ? -v : v);
 	}
 	//----------------------------------------------------------------------------------
 	//[Magnitude]
-	//return: ©g‚ÆVector(0,0)‚Ì‹——£
+	//return: è‡ªèº«ã¨Vector(0,0)ã®è·é›¢
 	inline constexpr float UV::Magnitude() const  noexcept
 	{
 		float f = u * u + v * v;
@@ -238,14 +238,14 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ExactMagnitude]
-	//return: ©g‚ÆVector(0,0,0,0)‚Ì‹——£ (³Šm‚È’l‚¾‚ª•‰‰×‚ª‚‚¢)
+	//return: è‡ªèº«ã¨Vector(0,0,0,0)ã®è·é›¢ (æ­£ç¢ºãªå€¤ã ãŒè² è·ãŒé«˜ã„)
 	inline float UV::ExactMagnitude() const noexcept
 	{
 		return std::sqrtf(u * u + v * v);
 	}
 	//----------------------------------------------------------------------------------
 	//[Normalize]
-	//return: ©g‚Ì³‹K‰»ƒxƒNƒgƒ‹
+	//return: è‡ªèº«ã®æ­£è¦åŒ–ãƒ™ã‚¯ãƒˆãƒ«
 	inline UV UV::Normalized() const noexcept
 	{
 		float divLength = 1.0f / ExactMagnitude();

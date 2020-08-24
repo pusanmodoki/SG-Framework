@@ -8,24 +8,24 @@ namespace SGFramework
 	{
 		//----------------------------------------------------------------------------------
 		//[LoadFile]
-		//ƒAƒZƒbƒg‚Ìƒ[ƒh‚ğs‚¤
-		//ˆø”1: ‰¹º‚ªŠ‘®‚·‚éSubmixLayer, default = not monoral root layer
-		//ˆø”2: ƒ\[ƒX‚Ì” (Å‘å“¯Ä¶”)
-		//ˆø”3: Ä¶ŠÔŠu
-		//ˆø”4: Ä¶ŠJn•b”, default = cDefault (Begin)
-		//ˆø”5: ƒ‹[ƒvŠJn•b”, default = cDefault (Begin)
-		//ˆø”6: Ä¶I—¹•b”, default = cDefault (End)
+		//ã‚¢ã‚»ãƒƒãƒˆã®ãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
+		//å¼•æ•°1: éŸ³å£°ãŒæ‰€å±ã™ã‚‹SubmixLayer, default = not monoral root layer
+		//å¼•æ•°2: ã‚½ãƒ¼ã‚¹ã®æ•° (æœ€å¤§åŒæ™‚å†ç”Ÿæ•°)
+		//å¼•æ•°3: å†ç”Ÿé–“éš”
+		//å¼•æ•°4: å†ç”Ÿé–‹å§‹ç§’æ•°, default = cDefault (Begin)
+		//å¼•æ•°5: ãƒ«ãƒ¼ãƒ—æ™‚é–‹å§‹ç§’æ•°, default = cDefault (Begin)
+		//å¼•æ•°6: å†ç”Ÿçµ‚äº†ç§’æ•°, default = cDefault (End)
 		void BaseAudioSEAsset::LoadFile(const WeakPointer<Audio::SubmixLayer>& submixLayer, 
 			uint amountOfSource, float playbackInterval, float setPlayBeginSeconds, 
 			float setLoopBeginSeconds, float setPlayEndSeconds)
 		{
-			//XAudio–¢‰Šú‰»‚ÅI—¹
+			//XAudioæœªåˆæœŸåŒ–ã§çµ‚äº†
 			if (Audio::m_xaudio2 == nullptr)
 			{
 				setIsOpenFailed(true);
 				throw InvalidArgument(L"Error!! AudioAssetMusic->Open", L"XAudio2 == nullptr");
 			}
-			//ƒ\[ƒX”0‚Åthrow
+			//ã‚½ãƒ¼ã‚¹æ•°0ã§throw
 			if (amountOfSource == 0)
 			{
 				setIsOpenFailed(true);
@@ -76,7 +76,7 @@ namespace SGFramework
 
 			CloseHandle(fileHandle);
 
-			//‘ã“ü
+			//ä»£å…¥
 			m_playbackInterval = playbackInterval;
 			m_amountOfSource = amountOfSource;
 			m_playEndSeconds = setPlayEndSeconds;
@@ -84,28 +84,28 @@ namespace SGFramework
 			m_channels = format.Format.nChannels;
 			m_submixLayerID = submixLayer->m_layerID;
 
-			//•b”‘ã“ü
+			//ç§’æ•°ä»£å…¥
 			m_audioSeconds =
 				static_cast<float>((chunkSize / static_cast<ulong>(format.Format.nBlockAlign)) / format.Format.nSamplesPerSec);
 
-			//ƒfƒtƒHƒ‹ƒg‚©”Û‚©‚Å•ªŠò‚µAƒfƒtƒHƒ‹ƒg‚Ìê‡‚Í0‚ğ‘ã“ü‚·‚é
+			//ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‹å¦ã‹ã§åˆ†å²ã—ã€ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®å ´åˆã¯0ã‚’ä»£å…¥ã™ã‚‹
 			if (IS_FALSE(MathAF::IsMinusSign(setPlayBeginSeconds))) m_playBeginSeconds = setPlayBeginSeconds;
 			else m_playBeginSeconds = 0.0f;
 			if (IS_FALSE(MathAF::IsMinusSign(setLoopBeginSeconds))) m_loopBeginSeconds = setLoopBeginSeconds;
 			else m_loopBeginSeconds = 0.0f;
 
-			//ƒfƒtƒHƒ‹ƒg‚©‚¢‚È‚©‚Å•ªŠò‚µAƒfƒtƒHƒ‹ƒg‚Å‚È‚¢ê‡endPoint•ÏX
+			//ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‹ã„ãªã‹ã§åˆ†å²ã—ã€ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ãªã„å ´åˆendPointå¤‰æ›´
 			if (m_playEndSeconds == cDefault)
 				m_playEndSeconds = m_audioSeconds;
 			else
 				chunkSize = chunkSize - (chunkSize - static_cast<ulong>(static_cast<float>(format.Format.nAvgBytesPerSec) * m_playEndSeconds));
 
-			//Ä¶î•ñ‚ğİ’è
+			//å†ç”Ÿæƒ…å ±ã‚’è¨­å®š
 			m_bufferInfo.AudioBytes = chunkSize;
 			m_bufferInfo.pAudioData = m_buffer();
 			m_bufferInfo.Flags = XAUDIO2_END_OF_STREAM;
 
-			//ƒ\[ƒXƒ{ƒCƒXì¬
+			//ã‚½ãƒ¼ã‚¹ãƒœã‚¤ã‚¹ä½œæˆ
 			IXAudio2SourceVoice* voice = nullptr;
 			result = Audio::m_xaudio2->CreateSourceVoice(&voice, &format.Format, XAUDIO2_VOICE_NOPITCH,
 				XAUDIO2_DEFAULT_FREQ_RATIO, nullptr, &submixLayer->m_sends, nullptr);
@@ -116,7 +116,7 @@ namespace SGFramework
 			}
 			m_voice.Init(voice, &IXAudio2SourceVoice::DestroyVoice);
 
-			//ƒ\[ƒX”‚ª1’´‰ß‚Èê‡’Ç‰Á‚Åƒ\[ƒXƒ{ƒCƒXì¬
+			//ã‚½ãƒ¼ã‚¹æ•°ãŒ1è¶…éãªå ´åˆè¿½åŠ ã§ã‚½ãƒ¼ã‚¹ãƒœã‚¤ã‚¹ä½œæˆ
 			if (amountOfSource > 1)
 			{
 				m_subVoices.resize(amountOfSource - 1);
@@ -137,19 +137,19 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[ReleaseBaseVoice]
-		//‰¹º‚ğŠJ•ú‚·‚é
+		//éŸ³å£°ã‚’é–‹æ”¾ã™ã‚‹
 		void BaseAudioSEAsset::ReleaseBaseVoice()
 		{
-			//ƒ{ƒCƒXíœ
+			//ãƒœã‚¤ã‚¹å‰Šé™¤
 			m_voice.Release(true);
 			for (auto& e : m_subVoices)
 				e.Release(true);
 
-			//ƒƒ‚ƒŠ‰ğ•ú
+			//ãƒ¡ãƒ¢ãƒªè§£æ”¾
 			m_buffer.Release(true, true);
 			m_x3dBuffer.Release(true, true);
 	
-			//‰Šú’l‚É‚·‚×‚Ä‰Šú‰»
+			//åˆæœŸå€¤ã«ã™ã¹ã¦åˆæœŸåŒ–
 			m_audioSeconds = 0.0f;
 			m_playBeginSeconds = 0.0f;
 			m_loopBeginSeconds = 0.0f;
@@ -165,11 +165,11 @@ namespace SGFramework
 			m_useVoice = -1;
 		}
 		//----------------------------------------------------------------------------------
-		//[FindChunkŠÖ”]
-		//Chunk‚ğ’T‚·,ƒTƒ“ƒvƒ‹‚©‚ç‚¢‚½‚¾‚¢‚½
+		//[FindChunké–¢æ•°]
+		//Chunkã‚’æ¢ã™,ã‚µãƒ³ãƒ—ãƒ«ã‹ã‚‰ã„ãŸã ã„ãŸ
 		inline bool BaseAudioSEAsset::FindChunk(const HANDLE hFile, const DWORD fourcc, DWORD & dwChunkSize, DWORD & dwChunkDataPosition)
 		{
-			//‘å•”•ª‚ğƒTƒ“ƒvƒ‹‚©‚ç—¬—p
+			//å¤§éƒ¨åˆ†ã‚’ã‚µãƒ³ãƒ—ãƒ«ã‹ã‚‰æµç”¨
 			HRESULT hr = S_OK;
 			if (INVALID_SET_FILE_POINTER == SetFilePointer(hFile, 0, NULL, FILE_BEGIN))
 			{
@@ -216,11 +216,11 @@ namespace SGFramework
 		}
 
 		//----------------------------------------------------------------------------------
-		//[ReadChunkDataŠÖ”]
-		//Chunk‚ğ“Ç‚İ‚Ş,ƒTƒ“ƒvƒ‹‚©‚ç‚¢‚½‚¾‚¢‚½
+		//[ReadChunkDataé–¢æ•°]
+		//Chunkã‚’èª­ã¿è¾¼ã‚€,ã‚µãƒ³ãƒ—ãƒ«ã‹ã‚‰ã„ãŸã ã„ãŸ
 		inline bool BaseAudioSEAsset::ReadChunkData(const HANDLE hFile, void * buffer, const DWORD buffersize, const DWORD bufferoffset)
 		{
-			//‘å•”•ª‚ğƒTƒ“ƒvƒ‹‚©‚ç—¬—p
+			//å¤§éƒ¨åˆ†ã‚’ã‚µãƒ³ãƒ—ãƒ«ã‹ã‚‰æµç”¨
 			HRESULT hr = S_OK;
 			if (INVALID_SET_FILE_POINTER == SetFilePointer(hFile, bufferoffset, NULL, FILE_BEGIN))
 				return false;

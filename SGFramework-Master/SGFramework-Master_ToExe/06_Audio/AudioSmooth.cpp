@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-ƒI[ƒfƒBƒI‚ğŠÇ—‚·‚éAudio class
-	->UpdateSmooth‚ğ‹Lq‚·‚éAudioSmooth.cpp
+ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚’ç®¡ç†ã™ã‚‹Audio class
+	->UpdateSmoothã‚’è¨˜è¿°ã™ã‚‹AudioSmooth.cpp
 ------------------------------------------------------------------------------------*/
 #include "Audio.hpp"
 #include "AudioAsset/AudioAsset.hpp"
@@ -13,11 +13,11 @@ namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
 	//[UpdateSmooth]
-	//ƒXƒ€[ƒX‚ÌXV‚ğs‚¤
-	//ˆø”1: delta time
+	//ã‚¹ãƒ ãƒ¼ã‚¹ã®æ›´æ–°ã‚’è¡Œã†
+	//å¼•æ•°1: delta time
 	void Audio::UpdateSmooth(float deltaTime)
 	{
-		//–¼‘OÈ—ª—p
+		//åå‰çœç•¥ç”¨
 		static Audio::SmoothAudio::Values* s_value = nullptr;
 		//result
 		static float s_result = 0.0f;
@@ -28,12 +28,12 @@ namespace SGFramework
 			//volume update
 			if (IS_TRUE(it->second.volume.isEnabled))
 			{
-				//valueæ“¾
+				//valueå–å¾—
 				s_value = &it->second.volume;
 
-				//ƒXƒs[ƒh‰ÁZ
+				//ã‚¹ãƒ”ãƒ¼ãƒ‰åŠ ç®—
 				s_result = s_value->now + s_value->speed * deltaTime;
-				//’´‰ßİ’è
+				//è¶…éè¨­å®š
 				if ((s_value->now > s_value->target && s_result < s_value->target)
 					|| (s_value->now < s_value->target && s_result > s_value->target))
 					s_result = s_value->target;
@@ -42,7 +42,7 @@ namespace SGFramework
 				it->second.asset->setVolume(s_result);
 				s_value->now = s_result;
 
-				//Target“’B‚Å–³Œø‰»
+				//Targetåˆ°é”ã§ç„¡åŠ¹åŒ–
 				if (s_result == s_value->target)
 				{
 					s_value->isEnabled = false;
@@ -53,12 +53,12 @@ namespace SGFramework
 			//speed update
 			if (IS_TRUE(it->second.speed.isEnabled))
 			{
-				//valueæ“¾
+				//valueå–å¾—
 				s_value = &it->second.speed;
 
-				//ƒXƒs[ƒh‰ÁZ
+				//ã‚¹ãƒ”ãƒ¼ãƒ‰åŠ ç®—
 				s_result = s_value->now + s_value->speed * deltaTime;
-				//’´‰ßİ’è
+				//è¶…éè¨­å®š
 				if ((s_value->now > s_value->target && s_result < s_value->target)
 					|| (s_value->now < s_value->target && s_result > s_value->target))
 					s_result = s_value->target;
@@ -67,7 +67,7 @@ namespace SGFramework
 				it->second.asset->setPlayBackSpeed(s_result);
 				s_value->now = s_result;
 
-				//Target“’B‚Å–³Œø‰»
+				//Targetåˆ°é”ã§ç„¡åŠ¹åŒ–
 				if (s_result == s_value->target)
 				{
 					s_value->isEnabled = false;
@@ -76,7 +76,7 @@ namespace SGFramework
 				}
 			}
 
-			//ƒCƒeƒŒ[ƒ^‚ği‚ß‚é or íœ
+			//ã‚¤ãƒ†ãƒ¬ãƒ¼ã‚¿ã‚’é€²ã‚ã‚‹ or å‰Šé™¤
 			if ((it->second.volume.isEnabled | it->second.speed.isEnabled))
 				++it;
 			else
@@ -86,9 +86,9 @@ namespace SGFramework
 		//smooth submix
 		for (auto it = m_smoothSubmixes.begin(); it != m_smoothSubmixes.end();)
 		{
-			//ƒXƒs[ƒh‰ÁZ
+			//ã‚¹ãƒ”ãƒ¼ãƒ‰åŠ ç®—
 			s_result = it->second.now + it->second.speed * deltaTime;
-			//’´‰ßİ’è
+			//è¶…éè¨­å®š
 			if ((it->second.now > it->second.target && s_result < it->second.target)
 				|| (it->second.now < it->second.target && s_result > it->second.target))
 				s_result = it->second.target;
@@ -97,7 +97,7 @@ namespace SGFramework
 			it->first->SetVolume(s_result);
 			it->second.now = s_result;
 
-			//ƒCƒeƒŒ[ƒ^‚ği‚ß‚é or íœ
+			//ã‚¤ãƒ†ãƒ¬ãƒ¼ã‚¿ã‚’é€²ã‚ã‚‹ or å‰Šé™¤
 			if (s_result < it->second.target) ++it;
 			else it = m_smoothSubmixes.erase(it);
 		}

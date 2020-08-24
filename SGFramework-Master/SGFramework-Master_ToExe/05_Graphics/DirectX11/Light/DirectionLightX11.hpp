@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-DirectX11 DirectionalLight‚ğˆµ‚¤DirectionalLightX11 class
+DirectX11 DirectionalLightã‚’æ‰±ã†DirectionalLightX11 class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_DIRECTION_LIGHT_X11_HPP_
 #define SGFRAMEWORK_HEADER_DIRECTION_LIGHT_X11_HPP_
@@ -9,7 +9,7 @@ DirectX11 DirectionalLight‚ğˆµ‚¤DirectionalLightX11 class
 // Framework namespace
 namespace SGFramework
 {
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		//friend
@@ -18,8 +18,8 @@ namespace SGFramework
 		//GraphicsDetail namespace
 		namespace GraphicsDetail
 		{
-			//DirectX11 DirectionalLight‚ğˆµ‚¤DirectionalLightX11 class
-			//mutex‚É‚æ‚é•ÛŒì‚Ís‚í‚È‚¢‚Ì‚Å’ˆÓ
+			//DirectX11 DirectionalLightã‚’æ‰±ã†DirectionalLightX11 class
+			//mutexã«ã‚ˆã‚‹ä¿è­·ã¯è¡Œã‚ãªã„ã®ã§æ³¨æ„
 			class DirectionalLightX11 final : public BaseClass::BaseLightX11
 			{
 			public:
@@ -28,25 +28,25 @@ namespace SGFramework
 				
 				DELETE_ALL_DEFAULT_CLASS_FUNCTIONS(DirectionalLightX11);
 
-				//ƒZƒbƒg‚·‚é—v‘f‚ğ“à•ï‚·‚éElement class
+				//ã‚»ãƒƒãƒˆã™ã‚‹è¦ç´ ã‚’å†…åŒ…ã™ã‚‹Element class
 				struct Element
 				{
 					//default
 					Element() = default;
 					//----------------------------------------------------------------------------------
-					//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-					//‘ã“ü‰Šú‰»‚·‚é
-					//ˆø”1: ƒ‰ƒCƒg‚Ì•ûŒü
-					//ˆø”2: ƒ‰ƒCƒg‚ÌF
-					//ˆø”3: ƒ‰ƒCƒg‚Ì–¾‚é‚³”{—¦
-					//ˆø”4: ƒ‰ƒCƒg‚ª—LŒø‚©”Û‚©
+					//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+					//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+					//å¼•æ•°1: ãƒ©ã‚¤ãƒˆã®æ–¹å‘
+					//å¼•æ•°2: ãƒ©ã‚¤ãƒˆã®è‰²
+					//å¼•æ•°3: ãƒ©ã‚¤ãƒˆã®æ˜ã‚‹ã•å€ç‡
+					//å¼•æ•°4: ãƒ©ã‚¤ãƒˆãŒæœ‰åŠ¹ã‹å¦ã‹
 					Element(const Vector3& direction, const Color& color, float power, bool isEnabled)
 						: direction(direction), color(color), power(power), isEnabled(isEnabled) {}
 
-					Vector3 direction = Const::Vector3::zero;	//ƒ‰ƒCƒg‚Ì•ûŒü
-					Color color = Const::Color::white;				//ƒ‰ƒCƒg‚ÌF
-					float power = 1.0f;										//ƒ‰ƒCƒg‚Ì–¾‚é‚³”{—¦
-					bool isEnabled = true;								//ƒ‰ƒCƒg‚ª—LŒø‚©”Û‚©
+					Vector3 direction = Const::Vector3::zero;	//ãƒ©ã‚¤ãƒˆã®æ–¹å‘
+					Color color = Const::Color::white;				//ãƒ©ã‚¤ãƒˆã®è‰²
+					float power = 1.0f;										//ãƒ©ã‚¤ãƒˆã®æ˜ã‚‹ã•å€ç‡
+					bool isEnabled = true;								//ãƒ©ã‚¤ãƒˆãŒæœ‰åŠ¹ã‹å¦ã‹
 				};
 
 
@@ -62,10 +62,10 @@ namespace SGFramework
 				//set parameters[index] <static>(set function property)
 				//return: set complete = true, failed (index < cDirectionalLightMax) = false
 				//argument 1: index (index < cDirectionalLightMax)
-				//argument 2: ƒ‰ƒCƒg‚Ì•ûŒü
-				//argument 3: ƒ‰ƒCƒg‚ÌF
-				//argument 4: ƒ‰ƒCƒg‚Ì–¾‚é‚³”{—¦
-				//argument 5: ƒ‰ƒCƒg‚ª—LŒø‚©”Û‚©, default = true
+				//argument 2: ãƒ©ã‚¤ãƒˆã®æ–¹å‘
+				//argument 3: ãƒ©ã‚¤ãƒˆã®è‰²
+				//argument 4: ãƒ©ã‚¤ãƒˆã®æ˜ã‚‹ã•å€ç‡
+				//argument 5: ãƒ©ã‚¤ãƒˆãŒæœ‰åŠ¹ã‹å¦ã‹, default = true
 				SGF_FUNCTION_PROPERTY static bool setParameter(uint index, const Vector3& direction, const Color& color, float power, bool isEnabled = true)
 				{
 					if (index < cDirectionalLightMax)
@@ -136,20 +136,20 @@ namespace SGFramework
 					m_pack.isEnableds[index] = IS_TRUE(isEnabled) ? 1.0f : 0.0f;
 				}
 
-				//DirectionalLightÅ‘å”
+				//DirectionalLightæœ€å¤§æ•°
 				static constexpr uint cDirectionalLightMax = 4;
 
 			private:
-				//“n‚µ‚â‚·‚¢‚æ‚¤‚É
+				//æ¸¡ã—ã‚„ã™ã„ã‚ˆã†ã«
 				struct Pack
 				{
-					//ƒ‰ƒCƒg‚Ì•ûŒü
+					//ãƒ©ã‚¤ãƒˆã®æ–¹å‘
 					Vector4 directions[cDirectionalLightMax];
-					//ƒ‰ƒCƒg‚ÌF
+					//ãƒ©ã‚¤ãƒˆã®è‰²
 					Color colors[cDirectionalLightMax];
-					//ƒ‰ƒCƒg‚Ì–¾‚é‚³”{—¦
+					//ãƒ©ã‚¤ãƒˆã®æ˜ã‚‹ã•å€ç‡
 					float powers[cDirectionalLightMax];
-					//ƒ‰ƒCƒg‚ª—LŒø‚©”Û‚©
+					//ãƒ©ã‚¤ãƒˆãŒæœ‰åŠ¹ã‹å¦ã‹
 					float isEnableds[cDirectionalLightMax];
 				};
 

@@ -4,10 +4,10 @@
 //Framework namespace
 namespace SGFramework
 {
-	//friend用
+	//friend逕ｨ
 	class Thread;
 
-	//フレームワークの管理をするAdministrator namespace
+	//繝輔Ξ繝ｼ繝繝ｯ繝ｼ繧ｯ縺ｮ邂｡逅�繧偵☆繧帰dministrator namespace
 	namespace Administrator
 	{
 		//GraphicsDetail namespace

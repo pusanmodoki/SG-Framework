@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Šî–{•Ï”Œ^‚ÌÅ¬,Å‘å’l‚ğéŒ¾‚·‚éVariableLimitLimit.h
+åŸºæœ¬å¤‰æ•°å‹ã®æœ€å°,æœ€å¤§å€¤ã‚’å®£è¨€ã™ã‚‹VariableLimitLimit.h
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_VARIABLE_LIMIT_HPP_
 #define SGFRAMEWORK_HEADER_VARIABLE_LIMIT_HPP_
@@ -16,7 +16,7 @@ namespace SGFramework
 	namespace VariableLimit
 	{
 		//------------------------------------------------------------------------------------
-		//signed•Ï”
+		//signedå¤‰æ•°
 		constexpr char cCharMin = std::numeric_limits<char>::min();							//char Min
 		constexpr char cCharMax = std::numeric_limits<char>::max();						//char Max 
 		constexpr short cShortMin = std::numeric_limits<short>::min();						//short Min 
@@ -31,7 +31,7 @@ namespace SGFramework
 		constexpr int64 cInt64Max = std::numeric_limits<int64>::max();						//int64 Max
 
 		//------------------------------------------------------------------------------------
-		//unsigned•Ï”
+		//unsignedå¤‰æ•°
 
 		//unsigned char Min
 		constexpr unsigned char cUnsignedCharMin = std::numeric_limits<unsigned char>::min();		
@@ -69,7 +69,7 @@ namespace SGFramework
 		constexpr uint64 cUint64Max = std::numeric_limits<uint64>::max();					//uint Miax
 		
 		//------------------------------------------------------------------------------------
-		//•‚“®¬”“_•Ï”
+		//æµ®å‹•å°æ•°ç‚¹å¤‰æ•°
 		constexpr float cFloatMin = std::numeric_limits<float>::min();							//float Min
 		constexpr float cFloatMax = std::numeric_limits<float>::max();							//float Max
 		constexpr double cDoubleMin = std::numeric_limits<double>::min();					//double Min

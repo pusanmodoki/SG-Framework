@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-DirectX11 HemiSphereLight‚ğˆµ‚¤HemiSphereX11 class
+DirectX11 HemiSphereLightã‚’æ‰±ã†HemiSphereX11 class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_HEMI_SPHERE_LIGHT_X11_HPP_
 #define SGFRAMEWORK_HEADER_HEMI_SPHERE_LIGHT_X11_HPP_
@@ -9,7 +9,7 @@ DirectX11 HemiSphereLight‚ğˆµ‚¤HemiSphereX11 class
 // Framework namespace
 namespace SGFramework
 {
-		//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+		//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		//friend
@@ -18,8 +18,8 @@ namespace SGFramework
 		//GraphicsDetail namespace
 		namespace GraphicsDetail
 		{
-			//DirectX11 HemiSphereLight‚ğˆµ‚¤HemiSphereX11 class
-			//mutex‚É‚æ‚é•ÛŒì‚Ís‚í‚È‚¢‚Ì‚Å’ˆÓ
+			//DirectX11 HemiSphereLightã‚’æ‰±ã†HemiSphereX11 class
+			//mutexã«ã‚ˆã‚‹ä¿è­·ã¯è¡Œã‚ãªã„ã®ã§æ³¨æ„
 			class HemiSphereLightX11 final : public SGFramework::BaseClass::BaseLightX11
 			{
 			public:
@@ -28,31 +28,31 @@ namespace SGFramework
 
 				DELETE_ALL_DEFAULT_CLASS_FUNCTIONS(HemiSphereLightX11);
 
-				//ƒZƒbƒg‚·‚é—v‘f‚ğ“à•ï‚·‚éElement class
+				//ã‚»ãƒƒãƒˆã™ã‚‹è¦ç´ ã‚’å†…åŒ…ã™ã‚‹Element class
 				struct Element
 				{
 					//default
 					Element() = default;
 					//----------------------------------------------------------------------------------
-					//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-					//‘ã“ü‰Šú‰»‚·‚é
-					//ˆø”1: ƒ‰ƒCƒg‚ÌˆÊ’u
-					//ˆø”2: ƒ‰ƒCƒg‚ÌF (‹ó‘¤)
-					//ˆø”3: ƒ‰ƒCƒg‚ÌF (’n–Ê‘¤)
-					//ˆø”4: ƒ‰ƒCƒg‚Ì–¾‚é‚³”{—¦ (‹ó‘¤)
-					//ˆø”5: ƒ‰ƒCƒg‚Ì–¾‚é‚³”{—¦ (’n–Ê‘¤)
-					//ˆø”6: ƒ‰ƒCƒg‚ª—LŒø‚©”Û‚©
+					//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+					//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+					//å¼•æ•°1: ãƒ©ã‚¤ãƒˆã®ä½ç½®
+					//å¼•æ•°2: ãƒ©ã‚¤ãƒˆã®è‰² (ç©ºå´)
+					//å¼•æ•°3: ãƒ©ã‚¤ãƒˆã®è‰² (åœ°é¢å´)
+					//å¼•æ•°4: ãƒ©ã‚¤ãƒˆã®æ˜ã‚‹ã•å€ç‡ (ç©ºå´)
+					//å¼•æ•°5: ãƒ©ã‚¤ãƒˆã®æ˜ã‚‹ã•å€ç‡ (åœ°é¢å´)
+					//å¼•æ•°6: ãƒ©ã‚¤ãƒˆãŒæœ‰åŠ¹ã‹å¦ã‹
 					Element(const Vector3& direction, const Color& colorSky, const Color& colorGround,
 						float powerSky, float powerGround, bool isEnabled)
 						: direction(direction), colorSky(colorSky), colorGround(colorGround),
 						powerSky(powerSky), powerGround(powerGround), isEnabled(isEnabled) {}
 
 					Vector3 direction = Const::Vector3::zero;
-					Color colorSky = Const::Color::white;			//ƒ‰ƒCƒg‚ÌF (Sky)
-					Color colorGround = Const::Color::white;	//ƒ‰ƒCƒg‚ÌF (Ground)
-					float powerSky = 1.0f;									//ƒ‰ƒCƒg‚Ì–¾‚é‚³”{—¦ (Sky)
-					float powerGround = 1.0f;							//ƒ‰ƒCƒg‚Ì–¾‚é‚³”{—¦ (Ground)
-					bool isEnabled = true;								//ƒ‰ƒCƒg‚ª—LŒø‚©”Û‚©
+					Color colorSky = Const::Color::white;			//ãƒ©ã‚¤ãƒˆã®è‰² (Sky)
+					Color colorGround = Const::Color::white;	//ãƒ©ã‚¤ãƒˆã®è‰² (Ground)
+					float powerSky = 1.0f;									//ãƒ©ã‚¤ãƒˆã®æ˜ã‚‹ã•å€ç‡ (Sky)
+					float powerGround = 1.0f;							//ãƒ©ã‚¤ãƒˆã®æ˜ã‚‹ã•å€ç‡ (Ground)
+					bool isEnabled = true;								//ãƒ©ã‚¤ãƒˆãŒæœ‰åŠ¹ã‹å¦ã‹
 				};
 
 
@@ -66,12 +66,12 @@ namespace SGFramework
 				//set parameters[index] <static>(set function property)
 				//return: set complete = true, failed (index < cHemiSphereLightMax) = false
 				//argument 1: index (index < cHemiSphereLightMax)
-				//ˆø”2: ƒ‰ƒCƒg‚ÌˆÊ’u
-				//ˆø”3: ƒ‰ƒCƒg‚ÌF (‹ó‘¤)
-				//ˆø”4: ƒ‰ƒCƒg‚ÌF (’n–Ê‘¤)
-				//ˆø”5: ƒ‰ƒCƒg‚Ì–¾‚é‚³”{—¦ (‹ó‘¤)
-				//ˆø”6: ƒ‰ƒCƒg‚Ì–¾‚é‚³”{—¦ (’n–Ê‘¤)
-				//ˆø”7: ƒ‰ƒCƒg‚ª—LŒø‚©”Û‚©, default = true
+				//å¼•æ•°2: ãƒ©ã‚¤ãƒˆã®ä½ç½®
+				//å¼•æ•°3: ãƒ©ã‚¤ãƒˆã®è‰² (ç©ºå´)
+				//å¼•æ•°4: ãƒ©ã‚¤ãƒˆã®è‰² (åœ°é¢å´)
+				//å¼•æ•°5: ãƒ©ã‚¤ãƒˆã®æ˜ã‚‹ã•å€ç‡ (ç©ºå´)
+				//å¼•æ•°6: ãƒ©ã‚¤ãƒˆã®æ˜ã‚‹ã•å€ç‡ (åœ°é¢å´)
+				//å¼•æ•°7: ãƒ©ã‚¤ãƒˆãŒæœ‰åŠ¹ã‹å¦ã‹, default = true
 				SGF_FUNCTION_PROPERTY static bool setParameter(uint index, const Vector3& direction, const Color& colorSky,
 					const Color& colorGround, float powerSky, float powerGround, bool isEnabled = true)
 				{
@@ -149,24 +149,24 @@ namespace SGFramework
 					return m_pack.isEnableds[index] = IS_TRUE(isEnabled) ? 1.0f : 0.0f;
 				}
 
-				//PointLightÅ‘å”
+				//PointLightæœ€å¤§æ•°
 				static constexpr uint cHemiSphereLightMax = 1;
 
 			private:
-				//“n‚µ‚â‚·‚¢‚æ‚¤‚É
+				//æ¸¡ã—ã‚„ã™ã„ã‚ˆã†ã«
 				struct Pack
 				{
-					//ƒ‰ƒCƒg‚ÌˆÊ’u
+					//ãƒ©ã‚¤ãƒˆã®ä½ç½®
 					Vector4 directions[cHemiSphereLightMax];
-					//ƒ‰ƒCƒg‚ÌF (Sky)
+					//ãƒ©ã‚¤ãƒˆã®è‰² (Sky)
 					Color colorSkys[cHemiSphereLightMax];
-					//ƒ‰ƒCƒg‚ÌF (Ground)
+					//ãƒ©ã‚¤ãƒˆã®è‰² (Ground)
 					Color colorGrounds[cHemiSphereLightMax];
-					//ƒ‰ƒCƒg‚Ì–¾‚é‚³”{—¦ (Sky)
+					//ãƒ©ã‚¤ãƒˆã®æ˜ã‚‹ã•å€ç‡ (Sky)
 					float powerSkys[cHemiSphereLightMax];
-					//ƒ‰ƒCƒg‚Ì–¾‚é‚³”{—¦ (Ground)
+					//ãƒ©ã‚¤ãƒˆã®æ˜ã‚‹ã•å€ç‡ (Ground)
 					float powerGrounds[cHemiSphereLightMax];
-					//ƒ‰ƒCƒg‚ª—LŒø‚©”Û‚©
+					//ãƒ©ã‚¤ãƒˆãŒæœ‰åŠ¹ã‹å¦ã‹
 					float isEnableds[cHemiSphereLightMax];
 				};
 

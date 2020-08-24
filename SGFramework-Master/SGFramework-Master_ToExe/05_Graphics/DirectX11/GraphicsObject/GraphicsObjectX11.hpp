@@ -5,7 +5,7 @@
 // Framework namespace
 namespace SGFramework
 {
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		class GraphicsX11;
@@ -13,7 +13,7 @@ namespace SGFramework
 		//GraphicsDetail namespace
 		namespace GraphicsDetail
 		{
-			//GraphicsŒnƒNƒ‰ƒX‚ÌŠî’ê‚Æ‚È‚éGraphicsObjectX11 class
+			//Graphicsç³»ã‚¯ãƒ©ã‚¹ã®åŸºåº•ã¨ãªã‚‹GraphicsObjectX11 class
 			class GraphicsObjectX11
 			{
 			public:
@@ -22,8 +22,8 @@ namespace SGFramework
 
 			protected:
 				//----------------------------------------------------------------------------------
-				//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-				//ƒŠƒXƒg“o˜^
+				//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+				//ãƒªã‚¹ãƒˆç™»éŒ²
 				inline GraphicsObjectX11()
 				{
 					AtomicOperation::LockAtomic(SGFramework::Administrator::GraphicsX11::m_graphicsObjectsLock);
@@ -31,8 +31,8 @@ namespace SGFramework
 					AtomicOperation::UnlockAtomic(SGFramework::Administrator::GraphicsX11::m_graphicsObjectsLock);
 				};
 				//----------------------------------------------------------------------------------
-				//[ƒfƒXƒgƒ‰ƒNƒ^]
-				//ƒŠƒXƒgæ‚èÁ‚µ
+				//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+				//ãƒªã‚¹ãƒˆå–ã‚Šæ¶ˆã—
 				inline virtual ~GraphicsObjectX11()
 				{
 					AtomicOperation::LockAtomic(SGFramework::Administrator::GraphicsX11::m_graphicsObjectsLock);
@@ -42,7 +42,7 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[Sync]
-				//î•ñ‚ğ“¯Šú‚·‚é, ƒR[ƒ‹ƒoƒbƒNŠÖ”
+				//æƒ…å ±ã‚’åŒæœŸã™ã‚‹, ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 				virtual void Sync() = 0;
 			};
 		}

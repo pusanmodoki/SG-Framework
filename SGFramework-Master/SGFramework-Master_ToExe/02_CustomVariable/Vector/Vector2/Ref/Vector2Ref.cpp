@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-2‚Â‚Ì’l‚ğˆµ‚¦‚éVector2Ref (QÆ)\‘¢‘Ì
-Å‚à‘½—p‚·‚é\‘¢‘ÌƒVƒŠ[ƒY‚Ì1‚Â‚È‚Ì‚Å•Ê©ìVector‚ªŠÖŒW‚È‚¢‚à‚Ì‚Í‘S‚ÄinlineÀ‘•
+2ã¤ã®å€¤ã‚’æ‰±ãˆã‚‹Vector2Ref (å‚ç…§)æ§‹é€ ä½“
+æœ€ã‚‚å¤šç”¨ã™ã‚‹æ§‹é€ ä½“ã‚·ãƒªãƒ¼ã‚ºã®1ã¤ãªã®ã§åˆ¥è‡ªä½œVectorãŒé–¢ä¿‚ãªã„ã‚‚ã®ã¯å…¨ã¦inlineå®Ÿè£…
 ------------------------------------------------------------------------------------*/
 #include "Vector2Ref.hpp"
 #include "../Int/Vector2Int.hpp"
@@ -10,34 +10,34 @@
 //Framework namespace
 namespace SGFramework
 {
-	//Vector3ƒIƒyƒŒ[ƒ^[
+	//Vector3ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2Ref::operator Vector3() const
 	{
 		return Vector3(x, y, 0.0f);
 	}
-	//Vector4ƒIƒyƒŒ[ƒ^[
+	//Vector4ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector2Ref::operator Vector4() const
 	{
 		return Vector4(x, y, 0.0f, 0.0f);
 	}
-	//Vector2IntƒIƒyƒŒ[ƒ^[
+	//Vector2Intã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector2Ref::operator Vector2Int() const
 	{
 		return Vector2Int(static_cast<int>(x), static_cast<int>(y));
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector2Ref & Vector2Ref::operator=(const Vector3 & vec)
 	{
 		x = vec.x; y = vec.y;
 		return *this;
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector2Ref & Vector2Ref::operator=(const Vector4 & vec)
 	{
 		x = vec.x; y = vec.y;
 		return *this;
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector2Ref & Vector2Ref::operator=(const Vector2Int & vec)
 	{
 		x = static_cast<float>(vec.x);		y = static_cast<float>(vec.y);

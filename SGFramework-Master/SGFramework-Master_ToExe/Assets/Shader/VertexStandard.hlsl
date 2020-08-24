@@ -13,7 +13,7 @@ VSOutputStandard main(float4 position : POSITION0,
 	output.drawPosition = mul(output.drawPosition, cSceneBuffer.projectionMatrix);
 	output.textureUV = textureUV;
 
-	//input.normal.w = 0.0f;					// –@ü‚ÍƒxƒNƒgƒ‹‚È‚Ì‚Å‚v‚Ì’l‚ğ‚O‚É‚·‚éB
+	//input.normal.w = 0.0f;					// æ³•ç·šã¯ãƒ™ã‚¯ãƒˆãƒ«ãªã®ã§ï¼·ã®å€¤ã‚’ï¼ã«ã™ã‚‹ã€‚
 
 	output.normal = normal;
 	output.normal.w = 0.0f;

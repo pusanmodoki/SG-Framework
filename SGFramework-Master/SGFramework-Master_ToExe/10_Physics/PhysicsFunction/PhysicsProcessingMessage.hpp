@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-•¨—ƒGƒ“ƒWƒ“(PhysX)‚ðŠÇ—‚·‚éPhysics class
-	¨ProcessingMessageŒnŠÖ”‚ð’è‹`‚·‚éPhysicsProcessingMessage.hpp
+ç‰©ç†ã‚¨ãƒ³ã‚¸ãƒ³(PhysX)ã‚’ç®¡ç†ã™ã‚‹Physics class
+	â†’ProcessingMessageç³»é–¢æ•°ã‚’å®šç¾©ã™ã‚‹PhysicsProcessingMessage.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_PHYSICS_PROCESSING_MESSAGE_HPP_
 #define SGFRAMEWORK_HEADER_PHYSICS_PROCESSING_MESSAGE_HPP_
@@ -13,13 +13,13 @@ namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
 	//[ProcessingMessage]
-	//ƒƒbƒZ[ƒW‚ðˆ—‚·‚é
-	//ˆø”1: message
+	//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã™ã‚‹
+	//å¼•æ•°1: message
 	inline void Physics::ProcessingMessage(const Detail::Physics::PhysicsMessage & message)
 	{
 		using namespace Detail::Physics;
 
-		//‚©‚È‚è‚Ì”ŽQÆ‚·‚é‚Ì‚Å‚Æ‚è‚ ‚¦‚¸•Û‘¶‚µ‚ÄŽg‚Á‚Ä‚Ý‚é
+		//ã‹ãªã‚Šã®æ•°å‚ç…§ã™ã‚‹ã®ã§ã¨ã‚Šã‚ãˆãšä¿å­˜ã—ã¦ä½¿ã£ã¦ã¿ã‚‹
 		uint messageType = message.type;
 
 		//-------------------------------------------------------------------------------
@@ -45,9 +45,9 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[ProcessingRigidBodyDynamicMessage]
-	//ƒƒbƒZ[ƒW‚ðˆ—‚·‚é (RigidBodyDynamic)
-	//ˆø”1: message
-		//ˆø”1: message type
+	//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã™ã‚‹ (RigidBodyDynamic)
+	//å¼•æ•°1: message
+		//å¼•æ•°1: message type
 	inline void Physics::ProcessingRigidBodyDynamicMessage(const Detail::Physics::PhysicsMessage & message, uint messageType)
 	{
 		using namespace Detail::Physics;
@@ -146,7 +146,7 @@ namespace SGFramework
 			//set Is Kinematic
 			else if (messageType & MessageType::RigidSetKinematicBO)
 			{
-				//CCD‚Æ‚Í•¹—p‚Å‚«‚È‚¢
+				//CCDã¨ã¯ä½µç”¨ã§ããªã„
 				if (IS_TRUE(message.attachment.booleanData))
 					dynamic->setRigidBodyFlag(physx::PxRigidBodyFlag::eENABLE_CCD, false);
 
@@ -156,7 +156,7 @@ namespace SGFramework
 			//set Is CCD
 			else if (messageType & MessageType::RigidSetCcdBO)
 			{
-				//Kinematic‚Æ‚Í•¹—p‚Å‚«‚È‚¢
+				//Kinematicã¨ã¯ä½µç”¨ã§ããªã„
 				if (IS_TRUE(message.attachment.booleanData))
 					dynamic->setRigidBodyFlag(physx::PxRigidBodyFlag::eKINEMATIC, false);
 
@@ -166,7 +166,7 @@ namespace SGFramework
 			//set Is Sleep
 			else if (messageType & MessageType::RigidSetSleepBO)
 			{
-				//kinematic‚É‚Í–³Œø
+				//kinematicã«ã¯ç„¡åŠ¹
 				if (IS_TRUE(dynamic->getRigidBodyFlags().isSet(physx::PxRigidBodyFlag::eKINEMATIC)))
 					return;
 
@@ -190,9 +190,9 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[ProcessingPointerMessage]
-	//ƒƒbƒZ[ƒW‚ðˆ—‚·‚é (Pointer)
-	//ˆø”1: message
-		//ˆø”1: message type
+	//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã™ã‚‹ (Pointer)
+	//å¼•æ•°1: message
+		//å¼•æ•°1: message type
 	inline void Physics::ProcessingPointerMessage(const Detail::Physics::PhysicsMessage & message, uint messageType)
 	{
 		using namespace Detail::Physics;
@@ -203,7 +203,7 @@ namespace SGFramework
 			auto pointer = message.attachment.rigidBody;
 			if (IS_TRUE(pointer.getIsRevocatoin())) return;
 
-			//Actor‚ð’Ç‰Á
+			//Actorã‚’è¿½åŠ 
 			pointer->BuildRigidBody();
 			if (pointer->getBaseActor() == nullptr)
 				return;
@@ -224,7 +224,7 @@ namespace SGFramework
 			auto pointer = message.attachment.collider;
 			if (IS_TRUE(pointer.getIsRevocatoin())) return;
 
-			//Collider‚ð’Ç‰Á
+			//Colliderã‚’è¿½åŠ 
 			pointer->GetActor();
 			pointer->CreateShape();
 			if (pointer->m_shape == nullptr)
@@ -240,7 +240,7 @@ namespace SGFramework
 
 			auto& at = m_actors.at(message.instanceID);
 
-			//releaseŒãƒ}ƒbƒv‚©‚çíœ
+			//releaseå¾Œãƒžãƒƒãƒ—ã‹ã‚‰å‰Šé™¤
 			at.actor->release();
 			if (IS_TRUE(at.isDynamic)) m_dynamicActors.erase(message.instanceID);
 			m_actors.erase(message.instanceID);
@@ -253,7 +253,7 @@ namespace SGFramework
 			
 			auto& at = m_colliders.at(message.instanceID);
 
-			//releaseŒãƒ}ƒbƒv‚©‚çíœ
+			//releaseå¾Œãƒžãƒƒãƒ—ã‹ã‚‰å‰Šé™¤
 			if (at.shape->getActor())
 				at.shape->getActor()->detachShape(*at.shape);
 
@@ -265,14 +265,14 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[ProcessingOtherMessage]
-	//ƒƒbƒZ[ƒW‚ðˆ—‚·‚é (Other)
-	//ˆø”1: message
-	//ˆø”1: message type
+	//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã™ã‚‹ (Other)
+	//å¼•æ•°1: message
+	//å¼•æ•°1: message type
 	inline void Physics::ProcessingOtherMessage(const Detail::Physics::PhysicsMessage & message, uint messageType)
 	{
 		using namespace Detail::Physics;
 	
-		//‚±‚±‚©‚çæ¡‚Í1‚Â‚µ‚©ƒƒbƒZ[ƒW‚ª‚È‚¢‚Ì‚Å’¼‚ÉŽÀ‘•, ‰º‚Ì•û‚É«—ˆ‚Ì‚½‚ß–{—ˆ‚ÌŽÀ‘•‚ðƒRƒƒ“ƒgƒAƒEƒg
+		//ã“ã“ã‹ã‚‰å…ˆä»Šã¯1ã¤ã—ã‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒãªã„ã®ã§ç›´ã«å®Ÿè£…, ä¸‹ã®æ–¹ã«å°†æ¥ã®ãŸã‚æœ¬æ¥ã®å®Ÿè£…ã‚’ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆ
 		//-------------------------------------------------------------------------------
 		//base rigid body or collider message
 		if (messageType & (MessageType::BaseRigidBodyMessageFlag | MessageType::BaseColliderMessageFlag))
@@ -300,7 +300,7 @@ namespace SGFramework
 				if (IS_FALSE(at.collider.LockShared()))
 					return;
 
-				//simulation shape‚Ætrigger‚Í‹¤‘¶‚Å‚«‚È‚¢
+				//simulation shapeã¨triggerã¯å…±å­˜ã§ããªã„
 				if (IS_TRUE(message.attachment.booleanData))
 				{
 					at.shape->setFlag(physx::PxShapeFlag::eSIMULATION_SHAPE, false);
@@ -316,13 +316,13 @@ namespace SGFramework
 			//transfer rigid body
 			else if (messageType == (MessageType::BaseColliderMessageFlag | MessageType::TransferRigidBodyTR))
 			{
-				//ŽQÆ’Ç‰Á
+				//å‚ç…§è¿½åŠ 
 				message.attachment.transferRigidBody.shape->acquireReference();
 				//detach
 				message.attachment.transferRigidBody.oldActor->detachShape(*message.attachment.transferRigidBody.shape);
 				//attach
 				message.attachment.transferRigidBody.newActor->attachShape(*message.attachment.transferRigidBody.shape);
-				//ŽQÆŒ¸ŽZ
+				//å‚ç…§æ¸›ç®—
 				message.attachment.transferRigidBody.shape->release();
 			}
 		}
@@ -380,7 +380,7 @@ namespace SGFramework
 		//		if (IS_FALSE(at.collider.LockShared()))
 		//			return;
 
-		//		//simulation shape‚Ætrigger‚Í‹¤‘¶‚Å‚«‚È‚¢
+		//		//simulation shapeã¨triggerã¯å…±å­˜ã§ããªã„
 		//		if (IS_TRUE(message.attachment.booleanData))
 		//		{
 		//			at.shape->setFlag(physx::PxShapeFlag::eSIMULATION_SHAPE, false);

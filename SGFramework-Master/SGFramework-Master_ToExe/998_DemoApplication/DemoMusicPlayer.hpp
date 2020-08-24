@@ -10,12 +10,12 @@ public:
 
 	//----------------------------------------------------------------------------------
 	//[EnabledCallbacks]
-	//return: ©g‚ªCall‚³‚ê‚éCallback Flags, Component::CallbackFunctionsQÆ
+	//return: è‡ªèº«ãŒCallã•ã‚Œã‚‹Callback Flags, Component::CallbackFunctionså‚ç…§
 	inline virtual uint EnableCallbacks() { return CallbackFunctions::Awake | CallbackFunctions::Update | CallbackFunctions::OnDestroy;}
 	
 	//----------------------------------------------------------------------------------
 	//[Awake]
-	//ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½uŠÔ‚ÉŒÄ‚Î‚ê‚éCallbackŠÖ”
+	//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸç¬é–“ã«å‘¼ã°ã‚Œã‚‹Callbacké–¢æ•°
 	inline virtual void Awake() 
 	{
 		m_musicAssets[0] = Asset::InstantiateAsset<Asset::AudioAssetMusic>(L"Assets/Audio/BGM01.wav");
@@ -36,16 +36,16 @@ public:
 
 	//----------------------------------------------------------------------------------
 	//[Update]
-	//–ˆƒtƒŒ[ƒ€UpdateƒuƒƒbƒN‚ÅCallback‚³‚ê‚éŠÖ”
+	//æ¯ãƒ•ãƒ¬ãƒ¼ãƒ Updateãƒ–ãƒ­ãƒƒã‚¯ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 	inline virtual void Update()
 	{
-		//MKey + NumKey‚Å–½—ßÀs
+		//MKey + NumKeyã§å‘½ä»¤å®Ÿè¡Œ
 		bool isPushMKey = Input::Keybord::GetKey(KeyCode::M);
 
 		//Play Music
 		if (isPushMKey && Input::Keybord::GetKeyDown(KeyCode::Num1))
 		{
-			//Play‚·‚éMusic‚ğØ‚è‘Ö‚¦
+			//Playã™ã‚‹Musicã‚’åˆ‡ã‚Šæ›¿ãˆ
 			m_playMusicAsset = m_musicAssets[static_cast<int>(m_isPlayIndex)];
 			m_isPlayIndex = !m_isPlayIndex;
 		
@@ -105,7 +105,7 @@ public:
 		{
 			m_playMusicAsset->Stop();
 			
-			//Play‚·‚éMusic‚ğØ‚è‘Ö‚¦
+			//Playã™ã‚‹Musicã‚’åˆ‡ã‚Šæ›¿ãˆ
 			m_playMusicAsset = m_musicAssets[static_cast<int>(m_isPlayIndex)];
 			m_isPlayIndex = !m_isPlayIndex;
 			

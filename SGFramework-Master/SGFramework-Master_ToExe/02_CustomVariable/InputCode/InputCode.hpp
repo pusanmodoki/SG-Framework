@@ -1,21 +1,21 @@
 /*----------------------------------------------------------------------------------
-“ü—Í‚ğ‘S‚Ä’S“–‚·‚éInput Class“àŠÖ”‚Å‚Ìˆø”‚Ég‚¤A
-enum‚âtypedef‚ğ“Z‚ß‚½InputCode.h
+å…¥åŠ›ã‚’å…¨ã¦æ‹…å½“ã™ã‚‹Input Classå†…é–¢æ•°ã§ã®å¼•æ•°ã«ä½¿ã†ã€
+enumã‚„typedefã‚’çºã‚ãŸInputCode.h
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_INPUTCODE_INPUTCODE_HPP_
 #define SGFRAMEWORK_HEADER_INPUTCODE_INPUTCODE_HPP_
-#include "JoyStickCode.hpp"	//ƒWƒ‡ƒCƒpƒbƒh—pƒR[ƒh
-#include "KeyBordCode.hpp"	//ƒL[ƒ{[ƒh—pƒR[ƒh
-#include "MouseCode.hpp"		//ƒ}ƒEƒX—pƒR[ƒh
+#include "JoyStickCode.hpp"	//ã‚¸ãƒ§ã‚¤ãƒ‘ãƒƒãƒ‰ç”¨ã‚³ãƒ¼ãƒ‰
+#include "KeyBordCode.hpp"	//ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ç”¨ã‚³ãƒ¼ãƒ‰
+#include "MouseCode.hpp"		//ãƒã‚¦ã‚¹ç”¨ã‚³ãƒ¼ãƒ‰
 
 //Framework namespace
 namespace SGFramework
 {
-	//friend—p
+	//friendç”¨
 	class Input;
 
 	//----------------------------------------------------------------------------------
-	//AxisPack->AxisUser‚Ég—p‚·‚éAxisCode
+	//AxisPack->AxisUserã«ä½¿ç”¨ã™ã‚‹AxisCode
 	struct AxisCode
 	{
 	public:
@@ -24,32 +24,32 @@ namespace SGFramework
 
 		enum Enum : short
 		{
-			MouseAccelerationX = 0x101,		//ƒ}ƒEƒX‰Á‘¬“xX
-			MouseAccelerationY = 0x102,		//ƒ}ƒEƒX‰Á‘¬“xY
-			JoystickLTrigger = 0x201,			//ƒWƒ‡ƒCƒXƒeƒBƒbƒNƒgƒŠƒK[L
-			JoystickRTrigger = 0x202,			//ƒWƒ‡ƒCƒXƒeƒBƒbƒNƒgƒŠƒK[R
-			JoystickLStickX = 0x204,				//ƒWƒ‡ƒCƒXƒeƒBƒbƒNLƒXƒeƒBƒbƒNX
-			JoystickLStickY = 0x208,				//ƒWƒ‡ƒCƒXƒeƒBƒbƒNLƒXƒeƒBƒbƒNY
-			JoystickRStickX = 0x210,			//ƒWƒ‡ƒCƒXƒeƒBƒbƒNRƒXƒeƒBƒbƒNX
-			JoystickRStickY = 0x220,			//ƒWƒ‡ƒCƒXƒeƒBƒbƒNRƒXƒeƒBƒbƒNY
-			WindowAccelerationX = 0x401,	//ƒEƒBƒ“ƒhƒEˆÚ“®X
-			WindowAccelerationY = 0x402,	//ƒEƒBƒ“ƒhƒEˆÚ“®Y
+			MouseAccelerationX = 0x101,		//ãƒã‚¦ã‚¹åŠ é€Ÿåº¦X
+			MouseAccelerationY = 0x102,		//ãƒã‚¦ã‚¹åŠ é€Ÿåº¦Y
+			JoystickLTrigger = 0x201,			//ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯ãƒˆãƒªã‚¬ãƒ¼L
+			JoystickRTrigger = 0x202,			//ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯ãƒˆãƒªã‚¬ãƒ¼R
+			JoystickLStickX = 0x204,				//ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯Lã‚¹ãƒ†ã‚£ãƒƒã‚¯X
+			JoystickLStickY = 0x208,				//ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯Lã‚¹ãƒ†ã‚£ãƒƒã‚¯Y
+			JoystickRStickX = 0x210,			//ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯Rã‚¹ãƒ†ã‚£ãƒƒã‚¯X
+			JoystickRStickY = 0x220,			//ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯Rã‚¹ãƒ†ã‚£ãƒƒã‚¯Y
+			WindowAccelerationX = 0x401,	//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ç§»å‹•X
+			WindowAccelerationY = 0x402,	//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ç§»å‹•Y
 		};
 
 	private:
-		static constexpr short m_cUpperBitMouse = 0x0100;					//ƒ}ƒEƒX
-		static constexpr short m_cUpperBitJoystick = 0x0200;					//ƒWƒ‡ƒCƒXƒeƒBƒbƒN
-		static constexpr short m_cUpperBitWindow = 0x0400;					//ƒEƒBƒ“ƒhƒE
-		static constexpr short m_cLowerBitMouseAccelerationX = 0x01;	//ƒ}ƒEƒX‰Á‘¬“xX
-		static constexpr short m_cLowerBitMouseAccelerationY = 0x02;	//ƒ}ƒEƒX‰Á‘¬“xY
-		static constexpr short m_cLowerBitJoystickLTrigger = 0x01;			//ƒWƒ‡ƒCƒXƒeƒBƒbƒNƒgƒŠƒK[L
-		static constexpr short m_cLowerBitJoystickRTrigger = 0x02;			//ƒWƒ‡ƒCƒXƒeƒBƒbƒNƒgƒŠƒK[R
-		static constexpr short m_cLowerBitJoystickLStickX = 0x04;			//ƒWƒ‡ƒCƒXƒeƒBƒbƒNLƒXƒeƒBƒbƒNX
-		static constexpr short m_cLowerBitJoystickLStickY = 0x08;			//ƒWƒ‡ƒCƒXƒeƒBƒbƒNLƒXƒeƒBƒbƒNY
-		static constexpr short m_cLowerBitJoystickRStickX = 0x10;			//ƒWƒ‡ƒCƒXƒeƒBƒbƒNRƒXƒeƒBƒbƒNX
-		static constexpr short m_cLowerBitJoystickRStickY = 0x20;			//ƒWƒ‡ƒCƒXƒeƒBƒbƒNRƒXƒeƒBƒbƒNY
-		static constexpr short m_cLowerBitWindowAccelerationX = 0x01;	//ƒEƒBƒ“ƒhƒEˆÚ“®X
-		static constexpr short m_cLowerBitWindowAccelerationY = 0x32;	//ƒEƒBƒ“ƒhƒEˆÚ“®Y
+		static constexpr short m_cUpperBitMouse = 0x0100;					//ãƒã‚¦ã‚¹
+		static constexpr short m_cUpperBitJoystick = 0x0200;					//ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯
+		static constexpr short m_cUpperBitWindow = 0x0400;					//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦
+		static constexpr short m_cLowerBitMouseAccelerationX = 0x01;	//ãƒã‚¦ã‚¹åŠ é€Ÿåº¦X
+		static constexpr short m_cLowerBitMouseAccelerationY = 0x02;	//ãƒã‚¦ã‚¹åŠ é€Ÿåº¦Y
+		static constexpr short m_cLowerBitJoystickLTrigger = 0x01;			//ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯ãƒˆãƒªã‚¬ãƒ¼L
+		static constexpr short m_cLowerBitJoystickRTrigger = 0x02;			//ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯ãƒˆãƒªã‚¬ãƒ¼R
+		static constexpr short m_cLowerBitJoystickLStickX = 0x04;			//ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯Lã‚¹ãƒ†ã‚£ãƒƒã‚¯X
+		static constexpr short m_cLowerBitJoystickLStickY = 0x08;			//ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯Lã‚¹ãƒ†ã‚£ãƒƒã‚¯Y
+		static constexpr short m_cLowerBitJoystickRStickX = 0x10;			//ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯Rã‚¹ãƒ†ã‚£ãƒƒã‚¯X
+		static constexpr short m_cLowerBitJoystickRStickY = 0x20;			//ã‚¸ãƒ§ã‚¤ã‚¹ãƒ†ã‚£ãƒƒã‚¯Rã‚¹ãƒ†ã‚£ãƒƒã‚¯Y
+		static constexpr short m_cLowerBitWindowAccelerationX = 0x01;	//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ç§»å‹•X
+		static constexpr short m_cLowerBitWindowAccelerationY = 0x32;	//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ç§»å‹•Y
 	};
 }
 #endif // !SGFRAMEWORK_HEADER_INPUTCODE_INPUTCODE_HPP_

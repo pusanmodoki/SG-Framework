@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-ƒ}ƒEƒX“ü—Í‚ğ’S“–‚·‚éMouseInput Class“àŠÖ”‚Å‚Ìˆø”‚Ég‚¤A
-ƒ}ƒEƒXæ“¾—penum‚ğ“Z‚ß‚½MouseCode.h
+ãƒã‚¦ã‚¹å…¥åŠ›ã‚’æ‹…å½“ã™ã‚‹MouseInput Classå†…é–¢æ•°ã§ã®å¼•æ•°ã«ä½¿ã†ã€
+ãƒã‚¦ã‚¹å–å¾—ç”¨enumã‚’çºã‚ãŸMouseCode.h
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_INPUTCODE_MOUSECODE_HPP_
 #define SGFRAMEWORK_HEADER_INPUTCODE_MOUSECODE_HPP_
@@ -15,18 +15,18 @@
 namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
-	//ƒ}ƒEƒX”»’è‚Åƒ{ƒ^ƒ“‚Ìw’è‚ğs‚¤MouseCode
+	//ãƒã‚¦ã‚¹åˆ¤å®šã§ãƒœã‚¿ãƒ³ã®æŒ‡å®šã‚’è¡Œã†MouseCode
 	struct MouseCode
 	{
 		enum Enum : int
 		{
 			//Windows button list
 #if defined(SGF_PLATFORM_WINDOWS)
-			Left = VK_LBUTTON,			//¶ƒ{ƒ^ƒ“
-			Right = VK_RBUTTON,		//‰Eƒ{ƒ^ƒ“
-			Center = VK_MBUTTON,		//’†‰›ƒ{ƒ^ƒ“
-			Button4 = VK_XBUTTON1,	//ƒ{ƒ^ƒ“4
-			Button5 = VK_XBUTTON2,	//ƒ{ƒ^ƒ“5
+			Left = VK_LBUTTON,			//å·¦ãƒœã‚¿ãƒ³
+			Right = VK_RBUTTON,		//å³ãƒœã‚¿ãƒ³
+			Center = VK_MBUTTON,		//ä¸­å¤®ãƒœã‚¿ãƒ³
+			Button4 = VK_XBUTTON1,	//ãƒœã‚¿ãƒ³4
+			Button5 = VK_XBUTTON2,	//ãƒœã‚¿ãƒ³5
 #endif//SGF_PLATFORM_WINDOWS
 		};
 	};

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-DirectX11 ShaderAsset‚Ìƒx[ƒX‚Æ‚È‚éBaseShaderAssetX11 class
+DirectX11 ShaderAssetã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseShaderAssetX11 class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_SHADER_ASSET_X11_HPP_
 #define SGFRAMEWORK_HEADER_SHADER_ASSET_X11_HPP_
@@ -14,7 +14,7 @@ namespace SGFramework
 	//Base Classes
 	namespace BaseClass
 	{
-		//DirectX11 ShaderAsset‚Ìƒx[ƒX‚Æ‚È‚éBaseShaderAssetX11 class
+		//DirectX11 ShaderAssetã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseShaderAssetX11 class
 		class BaseShaderAssetX11 : public BaseClass::BaseAsset
 		{
 		public:
@@ -23,11 +23,11 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Reload]
-			//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ðs‚¤
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
 			virtual void Reload() = 0;
 			//----------------------------------------------------------------------------------
 			//[Close]
-			//ƒtƒ@ƒCƒ‹‚ð•Â‚¶‚é
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 			virtual void Close() = 0;
 			
 			//set shader graphics (draw function only property)
@@ -38,16 +38,16 @@ namespace SGFramework
 			inline BaseShaderAssetX11() : BaseAsset() {}
 			//----------------------------------------------------------------------------------
 			//[Compile]
-			//ƒVƒF[ƒ_[‚ðƒRƒ“ƒpƒCƒ‹‚·‚é
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒl[ƒ€
-			//ˆø”2: blob
-			//ˆø”3: ƒVƒF[ƒ_[ƒ‚ƒfƒ‹
-			//ˆø”4: ƒGƒ“ƒgƒŠ[ƒ|ƒCƒ“ƒg
+			//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã™ã‚‹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒãƒ¼ãƒ 
+			//å¼•æ•°2: blob
+			//å¼•æ•°3: ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒ¢ãƒ‡ãƒ«
+			//å¼•æ•°4: ã‚¨ãƒ³ãƒˆãƒªãƒ¼ãƒã‚¤ãƒ³ãƒˆ
 			inline void Compile(const sgstring& filePath, const std::string& shaderModel, const std::string& entryPoint = "main");
 
 			//----------------------------------------------------------------------------------
 			//[ReleaseShader]
-			//ƒVƒF[ƒ_[‚ðŠJ•ú‚·‚é
+			//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’é–‹æ”¾ã™ã‚‹
 			virtual void ReleaseShader() = 0;
 
 			static constexpr uint m_cReadBlob = 0x1;
@@ -61,11 +61,11 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Compile]
-		//ƒVƒF[ƒ_[‚ðƒRƒ“ƒpƒCƒ‹‚·‚é
-		//ˆø”1: ƒtƒ@ƒCƒ‹ƒl[ƒ€
-		//ˆø”2: blob
-		//ˆø”3: ƒVƒF[ƒ_[ƒ‚ƒfƒ‹
-		//ˆø”4: ƒGƒ“ƒgƒŠ[ƒ|ƒCƒ“ƒg
+		//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã™ã‚‹
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒãƒ¼ãƒ 
+		//å¼•æ•°2: blob
+		//å¼•æ•°3: ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒ¢ãƒ‡ãƒ«
+		//å¼•æ•°4: ã‚¨ãƒ³ãƒˆãƒªãƒ¼ãƒã‚¤ãƒ³ãƒˆ
 		inline void BaseShaderAssetX11::Compile(const sgstring& filePath, const std::string& shaderModel, const std::string& entryPoint)
 		{
 			sgstring find = filePath.my_functions.FindExtension();
@@ -86,20 +86,20 @@ namespace SGFramework
 			//hlsl or fx
 			else if (find == L".hlsl" || find == L"fx")
 			{
-				//ƒGƒ‰[—p
+				//ã‚¨ãƒ©ãƒ¼ç”¨
 				ID3DBlob* error = nullptr;
 
-				//ƒtƒ‰ƒO
+				//ãƒ•ãƒ©ã‚°
 				uint flag = D3DCOMPILE_ENABLE_STRICTNESS;
 #ifdef DEBUG
 				flag |= D3DCOMPILE_DEBUG;
 #endif // DEBUG
 
-				//ƒRƒ“ƒpƒCƒ‹
+				//ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«
 				auto result = D3DCompileFromFile(filePath.c_str(), nullptr, D3D_COMPILE_STANDARD_FILE_INCLUDE,
 					entryPoint.c_str(), shaderModel.c_str(), flag, 0, &m_blob, &error);
 
-				//Ž¸”s
+				//å¤±æ•—
 				if (FAILED(result))
 				{
 					InvalidArgument errorResult = InvalidArgument(L"Error!! ShaderAssetX11->Compile", (error->GetBufferPointer()) ? reinterpret_cast<wchar*>(error->GetBufferPointer()) : 0);
@@ -107,7 +107,7 @@ namespace SGFramework
 					throw errorResult;
 				}
 
-				//ŠJ•ú
+				//é–‹æ”¾
 				COM_RELEASE(error);
 			}
 			else

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-hInstance‚ğŠÇ—‚·‚éHinstanceHolder class
+hInstanceã‚’ç®¡ç†ã™ã‚‹HinstanceHolder class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_HINSTANCE_HOLDER_HPP_
 #define SGFRAMEWORK_HEADER_HINSTANCE_HOLDER_HPP_
@@ -13,18 +13,18 @@ hInstance‚ğŠÇ—‚·‚éHinstanceHolder class
 //Framework namespace
 namespace SGFramework
 {
-	//WindowŠÇ—
+	//Windowç®¡ç†
 	namespace Window
 	{
-		//hInstance‚ğŠÇ—‚·‚éHinstanceHolder class
+		//hInstanceã‚’ç®¡ç†ã™ã‚‹HinstanceHolder class
 		class HinstanceHolder final
 		{
 		public:
 			//----------------------------------------------------------------------------------
 			//[AddHinstance]
-			//ƒEƒBƒ“ƒhƒEƒnƒ“ƒhƒ‹‚ğ“o˜^
+			//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ãƒãƒ³ãƒ‰ãƒ«ã‚’ç™»éŒ²
 			//return: i, error = VariableLimit::cUintMax
-			//ˆø”1: ƒEƒBƒ“ƒhƒEƒnƒ“ƒhƒ‹
+			//å¼•æ•°1: ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ãƒãƒ³ãƒ‰ãƒ«
 			inline static uint AddHinstance(const HINSTANCE hInstance)
 			{
 				if (hInstance == nullptr) return VariableLimit::cUintMax;
@@ -38,8 +38,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[Hinstances]
-			//return: “o˜^ƒŠƒXƒg.size > i‚Ìê‡“o˜^ƒŠƒXƒg[i]‚ğ•Ô‹p, ‚È‚¢‚È‚çnull
-			//ˆø”1: i
+			//return: ç™»éŒ²ãƒªã‚¹ãƒˆ.size > iã®å ´åˆç™»éŒ²ãƒªã‚¹ãƒˆ[i]ã‚’è¿”å´, ãªã„ãªã‚‰null
+			//å¼•æ•°1: i
 			inline static HINSTANCE Hinstances(const uint i)
 			{
 				std::lock_guard<std::mutex> lock(m_mutex);
@@ -47,13 +47,13 @@ namespace SGFramework
 				else return nullptr;
 			}
 
-			//‹N“®ƒEƒBƒ“ƒhƒE‚Ìƒnƒ“ƒhƒ‹
+			//èµ·å‹•ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®ãƒãƒ³ãƒ‰ãƒ«
 			static PointerProperty<HINSTANCE> main;
 
 		private:
 			//hInstances[0]
 			static HINSTANCE m_main;
-			//hInstancesƒŠƒXƒg
+			//hInstancesãƒªã‚¹ãƒˆ
 			static std::vector<HINSTANCE> m_hInstances;
 			//mutex
 			static std::mutex m_mutex;

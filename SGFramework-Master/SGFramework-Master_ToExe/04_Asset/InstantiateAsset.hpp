@@ -10,17 +10,17 @@
 // Framework namespace
 namespace SGFramework
 {
-	//AssetŠÖ˜A‚ğŠi”[‚µ‚½Asset namespace
+	//Asseté–¢é€£ã‚’æ ¼ç´ã—ãŸAsset namespace
 	namespace Asset
 	{
 		//----------------------------------------------------------------------------------
 		//[InstantiateAsset]
-		//ƒAƒZƒbƒgƒNƒ‰ƒX‚ğ¶¬‚·‚é, (Open‚Í•Ê“rŠÖ”‚ğÀs)
+		//ã‚¢ã‚»ãƒƒãƒˆã‚¯ãƒ©ã‚¹ã‚’ç”Ÿæˆã™ã‚‹, (Openã¯åˆ¥é€”é–¢æ•°ã‚’å®Ÿè¡Œ)
 		//template: asset class
 		//return: make_shared pointer
-		//ˆø”1: file path
-		//ˆø”2: asset is register shared? 
-		//			(Šù‚ÉSharedİ’è‚Ì“¯–¼“¯Œ^ƒ|ƒCƒ“ƒ^‚ª‚ ‚Á‚½ê‡‚»‚ê‚ğ•Ô‹p‚·‚é), default = true
+		//å¼•æ•°1: file path
+		//å¼•æ•°2: asset is register shared? 
+		//			(æ—¢ã«Sharedè¨­å®šã®åŒååŒå‹ãƒã‚¤ãƒ³ã‚¿ãŒã‚ã£ãŸå ´åˆãã‚Œã‚’è¿”å´ã™ã‚‹), default = true
 		template <typename TAsset>
 		inline SharedPointer<TAsset> InstantiateAsset(const sgstring& filePath, bool isRegisterSharedAsset = true)
 		{
@@ -30,7 +30,7 @@ namespace SGFramework
 			//type
 			AssetType type = FindAssetType<TAsset>();
 
-			//Šù‚É“o˜^‚ª‚ ‚é‚©Šm”F
+			//æ—¢ã«ç™»éŒ²ãŒã‚ã‚‹ã‹ç¢ºèª
 			if (IS_TRUE(isRegisterSharedAsset))
 			{
 				SharedPointer<BaseClass::BaseAsset> result = Administrator::AssetManager::FindAsset(filePath, type);
@@ -42,12 +42,12 @@ namespace SGFramework
 			{
 				//make_shared
 				auto result = SharedPointer<TAsset>(new TAsset());
-				//name“o˜^
+				//nameç™»éŒ²
 				result->setName(filePath);
-				//ƒ|ƒCƒ“ƒ^“o˜^
+				//ãƒã‚¤ãƒ³ã‚¿ç™»éŒ²
 				result->m_thisPointer = result.DownCast<BaseClass::BaseAsset>();
 
-				//ŠÄ‹ƒŠƒXƒg‚É“o˜^
+				//ç›£è¦–ãƒªã‚¹ãƒˆã«ç™»éŒ²
 				Administrator::AssetManager::RegisterAsset(result->m_thisPointer, type, isRegisterSharedAsset);
 		
 				//return

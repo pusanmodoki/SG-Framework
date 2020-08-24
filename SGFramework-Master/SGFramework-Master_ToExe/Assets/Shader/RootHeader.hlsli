@@ -5,15 +5,15 @@ static const int g_cNumMaxOneModelBones = 1000;
 static const int g_cIdentityBoneIndex = 999;
 static const int g_cNumMaxVertexBones = 8;
 
-Texture2D g_textureSlot0: register(t0);             // ƒeƒNƒXƒ`ƒƒ
-Texture2D g_textureSlot1 : register(t1);            // ƒeƒNƒXƒ`ƒƒ
-Texture2D g_textureNormalMap : register(t2);   // ƒeƒNƒXƒ`ƒƒ
-Texture2D g_textureHeightMap : register(t3);    // ƒeƒNƒXƒ`ƒƒ
+Texture2D g_textureSlot0: register(t0);             // ãƒ†ã‚¯ã‚¹ãƒãƒ£
+Texture2D g_textureSlot1 : register(t1);            // ãƒ†ã‚¯ã‚¹ãƒãƒ£
+Texture2D g_textureNormalMap : register(t2);   // ãƒ†ã‚¯ã‚¹ãƒãƒ£
+Texture2D g_textureHeightMap : register(t3);    // ãƒ†ã‚¯ã‚¹ãƒãƒ£
 
-SamplerState g_samplerSlot0 : register(s0);     // ƒTƒ“ƒvƒ‰[
-SamplerState g_samplerSlot1 : register(s1);     // ƒTƒ“ƒvƒ‰[
-SamplerState g_samplerNormalMap : register(s2); // ƒTƒ“ƒvƒ‰[
-SamplerState g_samplerHeightMap : register(s3); // ƒTƒ“ƒvƒ‰[
+SamplerState g_samplerSlot0 : register(s0);     // ã‚µãƒ³ãƒ—ãƒ©ãƒ¼
+SamplerState g_samplerSlot1 : register(s1);     // ã‚µãƒ³ãƒ—ãƒ©ãƒ¼
+SamplerState g_samplerNormalMap : register(s2); // ã‚µãƒ³ãƒ—ãƒ©ãƒ¼
+SamplerState g_samplerHeightMap : register(s3); // ã‚µãƒ³ãƒ—ãƒ©ãƒ¼
 
 struct LightBuffer
 {
@@ -95,7 +95,7 @@ cbuffer ConstantBufferModel : register(b5)
     ModelBuffer cModelBuffer;
 };
 
-//“P‹—\’è
+//æ’¤å»äºˆå®š
 struct VSInputStandard
 {
 	float4 position : POSITION0;
@@ -103,7 +103,7 @@ struct VSInputStandard
 	float2 textureUV : TEXCOORD0;
 };
 
-//“P‹—\’è
+//æ’¤å»äºˆå®š
 struct VSOutputStandard
 {
 

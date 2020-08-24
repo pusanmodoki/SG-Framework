@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-4x4‚Ì’l‚ğˆµ‚¦‚éMatrix \‘¢‘Ì
-Å‚à‘½—p‚·‚é\‘¢‘ÌƒVƒŠ[ƒY‚Ì1‚Â‚È‚Ì‚Å‘S‚ÄinlineÀ‘•
+4x4ã®å€¤ã‚’æ‰±ãˆã‚‹Matrix æ§‹é€ ä½“
+æœ€ã‚‚å¤šç”¨ã™ã‚‹æ§‹é€ ä½“ã‚·ãƒªãƒ¼ã‚ºã®1ã¤ãªã®ã§å…¨ã¦inlineå®Ÿè£…
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_MATRIX_HPP_
 #define SGFRAMEWORK_HEADER_MATRIX_HPP_
@@ -14,71 +14,71 @@
 //Framework namespace
 namespace SGFramework
 {
-	//4x4‚Ì’l‚ğˆµ‚¦‚éMatrix \‘¢‘Ì
-	//ƒNƒ‰ƒX‚Ìƒƒ“ƒo•Ï”‚É‚·‚é‚±‚Æ‚Í”ñ„§I
+	//4x4ã®å€¤ã‚’æ‰±ãˆã‚‹Matrix æ§‹é€ ä½“
+	//ã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒå¤‰æ•°ã«ã™ã‚‹ã“ã¨ã¯éæ¨å¥¨ï¼
 	struct Matrix final : public DirectX::XMMATRIX
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//identity‚Éİ’è‚³‚ê‚é
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//identityã«è¨­å®šã•ã‚Œã‚‹
 		inline Matrix();
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: Vector4x4
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Vector4x4
 		inline Matrix(const Vector4x4& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: Vector4(_1›)
-		//ˆø”2: Vector4(_2›)
-		//ˆø”3: Vector4(_3›)
-		//ˆø”4: Vector4(_4›)
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Vector4(_1â—‹)
+		//å¼•æ•°2: Vector4(_2â—‹)
+		//å¼•æ•°3: Vector4(_3â—‹)
+		//å¼•æ•°4: Vector4(_4â—‹)
 		inline Matrix(const Vector4& value1, const Vector4& value2,
 			const Vector4& value3, const Vector4& value4);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: XMMATRIX
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: XMMATRIX
 		inline Matrix(const DirectX::XMMATRIX value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: XMFLOAT4X4
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: XMFLOAT4X4
 		inline Matrix(const DirectX::XMFLOAT4X4& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1:PxMat33
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1:PxMat33
 		inline Matrix(const physx::PxMat33& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1:PxMat44
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1:PxMat44
 		inline Matrix(const physx::PxMat44& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1:aiMatrix3x3
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1:aiMatrix3x3
 		inline Matrix(const aiMatrix3x3& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1:aiMatrix4x4
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1:aiMatrix4x4
 		inline Matrix(const aiMatrix4x4& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1 ~ 16: value
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1 ~ 16: value
 		inline Matrix(float _11, float _12, float _13, float _14, 
 			float _21, float _22, float _23, float _24, 
 			float _31, float _32, float _33, float _34, 
 			float _41, float _42, float _43, float _44);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: float*
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: float*
 		inline Matrix(float* array);
 		
 		DEFAULT_COPY_MOVE_FUNCTIONS(Matrix);
@@ -110,35 +110,35 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[ToVector4x4]
-		//ˆø”1: apply
+		//å¼•æ•°1: apply
 		inline void ToVector4x4(Vector4x4& apply) const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ToQuaternion]
-		//ˆø”1: apply
+		//å¼•æ•°1: apply
 		inline void ToQuaternion(XmVector& apply) const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ToPhysXMat33]
-		//ˆø”1: apply
+		//å¼•æ•°1: apply
 		inline void ToPhysXMat33(physx::PxMat33& apply) const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ToPhysXMat44]
-		//ˆø”1: apply
+		//å¼•æ•°1: apply
 		inline void ToPhysXMat44(physx::PxMat44& apply) const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ToAssimpMat33]
-		//ˆø”1: apply
+		//å¼•æ•°1: apply
 		inline void ToAssimpMat33(aiMatrix3x3& apply) const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ToAssimpMat44]
-		//ˆø”1: apply
+		//å¼•æ•°1: apply
 		inline void ToAssimpMat44(aiMatrix4x4& apply) const noexcept;
 
 		//----------------------------------------------------------------------------------
 		//[Decompose]
-		//s—ñî•ñ‚ğ’Šo‚µAnullptr‚Å‚È‚¯‚ê‚ÎŠeˆø”‚É‘ã“ü
-		//ˆø”1: position (Vector3)
-		//ˆø”1: scale (Vector3)
-		//ˆø”1: rotation (Quaternion)
+		//è¡Œåˆ—æƒ…å ±ã‚’æŠ½å‡ºã—ã€nullptrã§ãªã‘ã‚Œã°å„å¼•æ•°ã«ä»£å…¥
+		//å¼•æ•°1: position (Vector3)
+		//å¼•æ•°1: scale (Vector3)
+		//å¼•æ•°1: rotation (Quaternion)
 		inline void Decompose(DirectX::XMFLOAT3* position, DirectX::XMFLOAT3* scale, DirectX::XMFLOAT4* rotation) const;
 
 
@@ -218,28 +218,28 @@ namespace SGFramework
 			return setValue;
 		}
 
-		//= ƒIƒyƒŒ[ƒ^[
+		//= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Matrix& operator =(const Vector4x4& value);
-		//= ƒIƒyƒŒ[ƒ^[
+		//= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Matrix& operator =(const DirectX::XMFLOAT4X4& value);
 
 		//() operator
-		//ˆø”1: ƒZƒbƒg‚·‚éVector4x4
+		//å¼•æ•°1: ã‚»ãƒƒãƒˆã™ã‚‹Vector4x4
 		inline const Vector4x4& operator ()(const Vector4x4& setValue);
 		//() operator
-		//ˆø”1: y
+		//å¼•æ•°1: y
 		inline Vector4 operator ()(int y);
 		//() operator
-		//ˆø”1: y
-		//ˆø”2: ƒZƒbƒg‚·‚éVector4
+		//å¼•æ•°1: y
+		//å¼•æ•°2: ã‚»ãƒƒãƒˆã™ã‚‹Vector4
 		inline const Vector4& operator ()(int y, const Vector4& setValue);
 		//() operator
-		//ˆø”1: y
-		//ˆø”2: ƒZƒbƒg‚·‚éVector3(Vector4(x,y,z,0))
+		//å¼•æ•°1: y
+		//å¼•æ•°2: ã‚»ãƒƒãƒˆã™ã‚‹Vector3(Vector4(x,y,z,0))
 		inline Vector3 operator ()(int y, const Vector3& setValue);
 
 
-		//ŒvZƒ‰ƒCƒuƒ‰ƒŠ
+		//è¨ˆç®—ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 
 
 		//----------------------------------------------------------------------------------
@@ -257,78 +257,78 @@ namespace SGFramework
 		//----------------------------------------------------------------------------------
 		//[Inverse]<Calculation Library Function>
 		//return: Inverse Matrix
-		//ˆø”1: Šî‚Æ‚È‚éMatrix
+		//å¼•æ•°1: åŸºã¨ãªã‚‹Matrix
 		inline static Matrix Inverse(const Matrix& matrix) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Transpose]<Calculation Library Function>
 		//return: Transpose Matrix
-		//ˆø”1: “]’u‚·‚ématrix
+		//å¼•æ•°1: è»¢ç½®ã™ã‚‹matrix
 		inline static Matrix Transpose(const Matrix& transpose) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Scaleing]<Calculation Library Function>
 		//return: Scaleing Matrix
-		//ˆø”1: scale
+		//å¼•æ•°1: scale
 		inline static Matrix Scaleing(const Vector3 & scale) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Translate]<Calculation Library Function>
 		//return: Translate Matrix
-		//ˆø”1: ˆÚ“®—Ê
+		//å¼•æ•°1: ç§»å‹•é‡
 		inline static Matrix Translate(const Vector3 & trans) noexcept;
 		//----------------------------------------------------------------------------------
 		//[LookForward]<Calculation Library Function>
-		//return: w’è•ûŒü‚ğŒü‚­‰ñ“]Matrix
-		//ˆø”1: EyePosition
-		//ˆø”2: LookPosition
-		//ˆø”3: Upwards, default = up
+		//return: æŒ‡å®šæ–¹å‘ã‚’å‘ãå›è»¢Matrix
+		//å¼•æ•°1: EyePosition
+		//å¼•æ•°2: LookPosition
+		//å¼•æ•°3: Upwards, default = up
 		inline static Matrix LookForward(const Vector3 & forward, const Vector3 & upwards = Const::Vector3::up) noexcept;
 		//----------------------------------------------------------------------------------
 		//[LookAt]<Calculation Library Function>
-		//return: w’è•ûŒü‚ğŒü‚­‰ñ“]Matrix
-		//ˆø”1: forward
-		//ˆø”2: Upwards, default = up
+		//return: æŒ‡å®šæ–¹å‘ã‚’å‘ãå›è»¢Matrix
+		//å¼•æ•°1: forward
+		//å¼•æ•°2: Upwards, default = up
 		inline static Matrix LookAt(const Vector3 & position, const Vector3 & target, const Vector3 & upwards = Const::Vector3::up) noexcept;
 		//----------------------------------------------------------------------------------
 		//[ViewMatrix]<Calculation Library Function>
-		//return: ƒJƒƒ‰—pViewMatrix
-		//ˆø”1: EyePosition
-		//ˆø”2: LookPosition
-		//ˆø”3: Upwards, default = up
+		//return: ã‚«ãƒ¡ãƒ©ç”¨ViewMatrix
+		//å¼•æ•°1: EyePosition
+		//å¼•æ•°2: LookPosition
+		//å¼•æ•°3: Upwards, default = up
 		inline static Matrix ViewMatrix(const Vector3&  eyePosition,
 			const Vector3&  lookAtPosition, const Vector3&  upwards = Const::Vector3::up) noexcept;
 		//----------------------------------------------------------------------------------
 		//[ViewMatrixForDirection]<Calculation Library Function>
-		//return: ƒJƒƒ‰—pViewMatrix
-		//ˆø”1: EyePosition
-		//ˆø”2: Direction
-		//ˆø”3: Upwards, default = up
+		//return: ã‚«ãƒ¡ãƒ©ç”¨ViewMatrix
+		//å¼•æ•°1: EyePosition
+		//å¼•æ•°2: Direction
+		//å¼•æ•°3: Upwards, default = up
 		inline static Matrix ViewMatrixForDirection(const Vector3&  eyePosition,
 			const Vector3&  direction, const Vector3&  upwards = Const::Vector3::up) noexcept;
 		//----------------------------------------------------------------------------------
 		//[ProjectionMatrix]<Calculation Library Function>
-		//return: ƒJƒƒ‰—pProjectionMatrix
-		//ˆø”1: Fov
-		//ˆø”2: Aspect
-		//ˆø”3: NearClip
-		//ˆø”4: FarClip
+		//return: ã‚«ãƒ¡ãƒ©ç”¨ProjectionMatrix
+		//å¼•æ•°1: Fov
+		//å¼•æ•°2: Aspect
+		//å¼•æ•°3: NearClip
+		//å¼•æ•°4: FarClip
 		inline static Matrix ProjectionMatrix(float fov, float aspect, float nearClip, float farClip) noexcept;
 	};
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//identity‚Éİ’è‚³‚ê‚é
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//identityã«è¨­å®šã•ã‚Œã‚‹
 	inline Matrix::Matrix() { *this = DirectX::XMMatrixIdentity(); }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: Vector4x4
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: Vector4x4
 	inline Matrix::Matrix(const Vector4x4 & value) { *this = DirectX::XMLoadFloat4x4(&value); }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: Vector4(_1›)
-	//ˆø”2: Vector4(_2›)
-	//ˆø”3: Vector4(_3›)
-	//ˆø”4: Vector4(_4›)
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: Vector4(_1â—‹)
+	//å¼•æ•°2: Vector4(_2â—‹)
+	//å¼•æ•°3: Vector4(_3â—‹)
+	//å¼•æ•°4: Vector4(_4â—‹)
 	inline Matrix::Matrix(const Vector4 & value1, const Vector4 & value2,
 		const Vector4 & value3, const Vector4 & value4)
 	{
@@ -338,39 +338,39 @@ namespace SGFramework
 		r[3] = DirectX::XMLoadFloat4(&value4);
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: XMMATRIX
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: XMMATRIX
 	inline Matrix::Matrix(DirectX::XMMATRIX value) : XMMATRIX(value) { }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: XMFLOAT4X4
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: XMFLOAT4X4
 	inline Matrix::Matrix(const DirectX::XMFLOAT4X4 & value) { *this = DirectX::XMLoadFloat4x4(&value); }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1:PxMat33
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1:PxMat33
 	inline Matrix::Matrix(const physx::PxMat33 & value) { *this = Vector4x4(value); }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1:PxMat44
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1:PxMat44
 	inline Matrix::Matrix(const physx::PxMat44 & value) { *this = Vector4x4(value); }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1:aiMatrix3x3
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1:aiMatrix3x3
 	inline Matrix::Matrix(const aiMatrix3x3 & value) { *this = Vector4x4(value); }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1:aiMatrix4x4
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1:aiMatrix4x4
 	inline Matrix::Matrix(const aiMatrix4x4 & value) { *this = Vector4x4(value); }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1 ~ 16: value
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1 ~ 16: value
 	inline Matrix::Matrix(float _11, float _12, float _13, float _14,
 		float _21, float _22, float _23, float _24, 
 		float _31, float _32, float _33, float _34, 
@@ -380,9 +380,9 @@ namespace SGFramework
 			_21, _22, _23, _24, _31, _32, _33, _34, _41, _42, _43, _44));
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: float*
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: float*
 	inline Matrix::Matrix(float * array) { *this = DirectX::XMLoadFloat4x4(&DirectX::XMFLOAT4X4(array)); }
 
 	//----------------------------------------------------------------------------------
@@ -411,35 +411,35 @@ namespace SGFramework
 	inline aiMatrix4x4 Matrix::ToAssimpMat44() const noexcept { return std::move(ToVector4x4().ToAssimpMat44()); }
 	//----------------------------------------------------------------------------------
 	//[ToVector4x4]
-	//ˆø”1: apply
+	//å¼•æ•°1: apply
 	inline void Matrix::ToVector4x4(Vector4x4 & apply) const noexcept { apply = std::move(ToVector4x4()); }
 	//----------------------------------------------------------------------------------
 	//[ToQuaternion]
-	//ˆø”1: apply
+	//å¼•æ•°1: apply
 	inline void Matrix::ToQuaternion(XmVector & apply) const noexcept { apply = std::move(DirectX::XMQuaternionRotationMatrix(*this)); }
 	//----------------------------------------------------------------------------------
 	//[ToPhysXMat33]
-	//ˆø”1: apply
+	//å¼•æ•°1: apply
 	inline void Matrix::ToPhysXMat33(physx::PxMat33 & apply) const noexcept { apply = std::move(ToVector4x4().ToPhysXMat33()); }
 	//----------------------------------------------------------------------------------
 	//[ToPhysXMat44]
-	//ˆø”1: apply
+	//å¼•æ•°1: apply
 	inline void Matrix::ToPhysXMat44(physx::PxMat44 & apply) const noexcept { apply = std::move(ToVector4x4().ToPhysXMat44()); }
 	//----------------------------------------------------------------------------------
 	//[ToAssimpMat33]
-	//ˆø”1: apply
+	//å¼•æ•°1: apply
 	inline void Matrix::ToAssimpMat33(aiMatrix3x3 & apply) const noexcept { apply = std::move(ToVector4x4().ToAssimpMat33()); }
 	//----------------------------------------------------------------------------------
 	//[ToAssimpMat44]
-	//ˆø”1: apply
+	//å¼•æ•°1: apply
 	inline void Matrix::ToAssimpMat44(aiMatrix4x4 & apply) const noexcept { apply = std::move(ToVector4x4().ToAssimpMat44()); }
 
 	//----------------------------------------------------------------------------------
 	//[Decompose]
-	//s—ñî•ñ‚ğ’Šo‚µAnullptr‚Å‚È‚¯‚ê‚ÎŠeˆø”‚É‘ã“ü
-	//ˆø”1: position (Vector3)
-	//ˆø”1: scale (Vector3)
-	//ˆø”1: rotation (Quaternion)
+	//è¡Œåˆ—æƒ…å ±ã‚’æŠ½å‡ºã—ã€nullptrã§ãªã‘ã‚Œã°å„å¼•æ•°ã«ä»£å…¥
+	//å¼•æ•°1: position (Vector3)
+	//å¼•æ•°1: scale (Vector3)
+	//å¼•æ•°1: rotation (Quaternion)
 	inline void Matrix::Decompose(DirectX::XMFLOAT3 * position, DirectX::XMFLOAT3 * scale, DirectX::XMFLOAT4 * rotation) const
 	{
 		Vector4x4 copy(*this);
@@ -460,13 +460,13 @@ namespace SGFramework
 		if (rotation != nullptr) DirectX::XMStoreFloat4(rotation, DirectX::XMQuaternionRotationMatrix(copy));
 	}
 
-	//= ƒIƒyƒŒ[ƒ^[
+	//= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Matrix& Matrix::operator=(const Vector4x4 & value)
 	{
 		*this = DirectX::XMLoadFloat4x4(&value);
 		return *this;
 	}
-	//= ƒIƒyƒŒ[ƒ^[
+	//= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Matrix& Matrix::operator=(const DirectX::XMFLOAT4X4 & value)
 	{
 		*this = DirectX::XMLoadFloat4x4(&value);
@@ -474,26 +474,26 @@ namespace SGFramework
 	}
 
 	//() operator
-	//ˆø”1: ƒZƒbƒg‚·‚éVector4x4
+	//å¼•æ•°1: ã‚»ãƒƒãƒˆã™ã‚‹Vector4x4
 	inline const Vector4x4& Matrix::operator()(const Vector4x4& setValue)
 	{
 		*this = setValue;
 		return setValue;
 	}
 	//() operator
-	//ˆø”1: y
+	//å¼•æ•°1: y
 	inline Vector4 Matrix::operator()(int y) { return Vector4(this->r[y]);}
 	//() operator
-	//ˆø”1: y
-	//ˆø”2: ƒZƒbƒg‚·‚éVector4
+	//å¼•æ•°1: y
+	//å¼•æ•°2: ã‚»ãƒƒãƒˆã™ã‚‹Vector4
 	inline const Vector4& Matrix::operator()(int y, const Vector4& setValue)
 	{
 		this->r[y] = setValue;
 		return setValue;
 	}	
 	//() operator
-	//ˆø”1: y
-	//ˆø”2: ƒZƒbƒg‚·‚éVector3(Vector4(x,y,z,0))
+	//å¼•æ•°1: y
+	//å¼•æ•°2: ã‚»ãƒƒãƒˆã™ã‚‹Vector3(Vector4(x,y,z,0))
 	inline Vector3 Matrix::operator()(int y, const Vector3& setValue)
 	{
 		r[y] = DirectX::XMLoadFloat4(&Vector4(setValue.x, setValue.y, setValue.z, 0.0f));
@@ -515,28 +515,28 @@ namespace SGFramework
 	//----------------------------------------------------------------------------------
 	//[Inverse]<Calculation Library Function>
 	//return: Inverse Matrix
-	//ˆø”1: Šî‚Æ‚È‚éMatrix
+	//å¼•æ•°1: åŸºã¨ãªã‚‹Matrix
 	inline Matrix Matrix::Inverse(const Matrix& matrix) noexcept { return std::move(DirectX::XMMatrixInverse(nullptr, matrix)); }
 	//----------------------------------------------------------------------------------
 	//[Transpose]<Calculation Library Function>
 	//return: Transpose Matrix
-	//ˆø”1: “]’u‚·‚ématrix
+	//å¼•æ•°1: è»¢ç½®ã™ã‚‹matrix
 	inline Matrix Matrix::Transpose(const Matrix& transpose) noexcept { return std::move(DirectX::XMMatrixTranspose(transpose)); }
 	//----------------------------------------------------------------------------------
 	//[Scaleing]<Calculation Library Function>
 	//return: Scaleing Matrix
-	//ˆø”1: scale
+	//å¼•æ•°1: scale
 	inline Matrix Matrix::Scaleing(const Vector3 & scale) noexcept { return std::move(DirectX::XMMatrixScaling(scale.x, scale.y, scale.z)); }
 	//----------------------------------------------------------------------------------
 	//[Translate]<Calculation Library Function>
 	//return: Translate Matrix
-	//ˆø”1: ˆÚ“®—Ê
+	//å¼•æ•°1: ç§»å‹•é‡
 	inline Matrix Matrix::Translate(const Vector3 & trans) noexcept { return std::move(DirectX::XMMatrixTranslation(trans.x, trans.y, trans.z)); }
 	//----------------------------------------------------------------------------------
 	//[LookForward]<Calculation Library Function>
-	//return: w’è•ûŒü‚ğŒü‚­‰ñ“]Matrix
-	//ˆø”1: forward
-	//ˆø”2: Upwards, default = up
+	//return: æŒ‡å®šæ–¹å‘ã‚’å‘ãå›è»¢Matrix
+	//å¼•æ•°1: forward
+	//å¼•æ•°2: Upwards, default = up
 	inline Matrix Matrix::LookForward(const Vector3 & forward, const Vector3 & upwards) noexcept
 	{
 		Matrix result;
@@ -556,10 +556,10 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[LookAt]<Calculation Library Function>
-	//return: w’è•ûŒü‚ğŒü‚­‰ñ“]Matrix
-	//ˆø”1: EyePosition
-	//ˆø”2: LookPosition
-	//ˆø”3: UpDirection, default = up
+	//return: æŒ‡å®šæ–¹å‘ã‚’å‘ãå›è»¢Matrix
+	//å¼•æ•°1: EyePosition
+	//å¼•æ•°2: LookPosition
+	//å¼•æ•°3: UpDirection, default = up
 	inline Matrix Matrix::LookAt(const Vector3 & position, const Vector3 & target, const Vector3 & upwards) noexcept
 	{
 		Matrix result;
@@ -579,27 +579,27 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ViewMatrix]<Calculation Library Function>
-	//return: ƒJƒƒ‰—pViewMatrix
-	//ˆø”1: EyePosition
-	//ˆø”2: LookPosition
-	//ˆø”3: UpDirection, default = up
+	//return: ã‚«ãƒ¡ãƒ©ç”¨ViewMatrix
+	//å¼•æ•°1: EyePosition
+	//å¼•æ•°2: LookPosition
+	//å¼•æ•°3: UpDirection, default = up
 	inline Matrix Matrix::ViewMatrix(const Vector3&  eyePosition,
 		const Vector3&  lookAtPosition, const Vector3&  upwards) noexcept { return std::move(DirectX::XMMatrixLookAtLH(eyePosition, lookAtPosition, upwards)); }
 	//----------------------------------------------------------------------------------
 	//[ViewMatrixForDirection]<Calculation Library Function>
-	//return: ƒJƒƒ‰—pViewMatrix
-	//ˆø”1: EyePosition
-	//ˆø”2: Direction
-	//ˆø”3: Upwards, default = up
+	//return: ã‚«ãƒ¡ãƒ©ç”¨ViewMatrix
+	//å¼•æ•°1: EyePosition
+	//å¼•æ•°2: Direction
+	//å¼•æ•°3: Upwards, default = up
 	inline Matrix Matrix::ViewMatrixForDirection(const Vector3&  eyePosition,
 		const Vector3&  direction, const Vector3&  upwards) noexcept { return std::move(DirectX::XMMatrixLookToLH(eyePosition, direction, upwards)); }
 	//----------------------------------------------------------------------------------
 	//[ProjectionMatrix]<Calculation Library Function>
-	//return: ƒJƒƒ‰—pProjectionMatrix
-	//ˆø”1: Fov
-	//ˆø”2: Aspect
-	//ˆø”3: NearClip
-	//ˆø”4: FarClip
+	//return: ã‚«ãƒ¡ãƒ©ç”¨ProjectionMatrix
+	//å¼•æ•°1: Fov
+	//å¼•æ•°2: Aspect
+	//å¼•æ•°3: NearClip
+	//å¼•æ•°4: FarClip
 	inline Matrix Matrix::ProjectionMatrix(float fov, float aspect, float nearClip, float farClip) noexcept { return std::move(DirectX::XMMatrixPerspectiveFovLH(fov, aspect, nearClip, farClip)); }
 }
 #endif // !SGFRAMEWORK_HEADER_MATRIX_HPP_

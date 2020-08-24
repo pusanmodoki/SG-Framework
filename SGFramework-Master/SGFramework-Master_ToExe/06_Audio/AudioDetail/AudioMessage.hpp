@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Audio Message‚ğˆµ‚¤AudioMessage structure
+Audio Messageã‚’æ‰±ã†AudioMessage structure
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_AUDIO_MESSAGE_HPP_
 #define SGFRAMEWORK_HEADER_AUDIO_MESSAGE_HPP_
@@ -23,16 +23,16 @@ namespace SGFramework
 		class AudioAssetEffect3D;
 	}
 
-	//ƒp[ƒc
+	//ãƒ‘ãƒ¼ãƒ„
 	namespace Detail
 	{
 		//Audio
 		namespace Audio
 		{
-			//Audio Message‚ğˆµ‚¤AudioMessage structure
+			//Audio Messageã‚’æ‰±ã†AudioMessage structure
 			struct AudioMessage
 			{
-				//•t‘Ñî•ñ‚ğŠi”[‚·‚éAttachment union
+				//ä»˜å¸¯æƒ…å ±ã‚’æ ¼ç´ã™ã‚‹Attachment union
 				union Attachment
 				{
 					inline Attachment() { ZeroMemory(this, sizeof(Attachment)); }
@@ -48,28 +48,28 @@ namespace SGFramework
 					struct { byte byteData[56]; };
 				};
 
-				//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
+				//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 				inline AudioMessage(uint messageType)
 					: attachment(), type(messageType) {}
-				//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]->memcpy
+				//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]->memcpy
 				inline AudioMessage(const AudioMessage& copy)
 				{
 					memcpy_s(this, sizeof(AudioMessage), &copy, sizeof(AudioMessage));
 				}
 				//----------------------------------------------------------------------------------
 				//[Release]
-				//Pointer‚È‚Ç‚ª•t‘Ñ‚³‚ê‚Ä‚¢‚éê‡ŠJ•ú‚·‚é
+				//Pointerãªã©ãŒä»˜å¸¯ã•ã‚Œã¦ã„ã‚‹å ´åˆé–‹æ”¾ã™ã‚‹
 				inline void Release();
 
-				Attachment attachment;		//•t‘Ñî•ñ
+				Attachment attachment;		//ä»˜å¸¯æƒ…å ±
 				uint type;							//message type
 			};
-			//58ƒoƒCƒg‚Éû‚ß‚½‚¢B‚Å‚à–³—‚Å‚µ‚½B64ƒoƒCƒgB
+			//58ãƒã‚¤ãƒˆã«åã‚ãŸã„ã€‚ã§ã‚‚ç„¡ç†ã§ã—ãŸã€‚64ãƒã‚¤ãƒˆã€‚
 			static constexpr size_t cMessageSize = sizeof(AudioMessage);
 
 			//----------------------------------------------------------------------------------
 			//[Release]
-			//Pointer‚È‚Ç‚ª•t‘Ñ‚³‚ê‚Ä‚¢‚éê‡ŠJ•ú‚·‚é
+			//Pointerãªã©ãŒä»˜å¸¯ã•ã‚Œã¦ã„ã‚‹å ´åˆé–‹æ”¾ã™ã‚‹
 			inline void AudioMessage::Release()
 			{
 				if ((type == (MessageType::EffectFlag | MessageType::AddEffect))

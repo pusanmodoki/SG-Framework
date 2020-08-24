@@ -1,7 +1,7 @@
 /*----------------------------------------------------------------------------------
-2‚Â‚Ì’l‚ğˆµ‚¦‚éVector2 \‘¢‘Ì
-Å‚à‘½—p‚·‚é\‘¢‘ÌƒVƒŠ[ƒY‚Ì1‚Â‚È‚Ì‚Å•Ê©ìVector‚ªŠÖŒW‚È‚¢‚à‚Ì‚Í‘S‚ÄinlineÀ‘•
-	¨ŠÖ”‚ğ‹LÚ‚µ‚½Vector2.cpp
+2ã¤ã®å€¤ã‚’æ‰±ãˆã‚‹Vector2 æ§‹é€ ä½“
+æœ€ã‚‚å¤šç”¨ã™ã‚‹æ§‹é€ ä½“ã‚·ãƒªãƒ¼ã‚ºã®1ã¤ãªã®ã§åˆ¥è‡ªä½œVectorãŒé–¢ä¿‚ãªã„ã‚‚ã®ã¯å…¨ã¦inlineå®Ÿè£…
+	â†’é–¢æ•°ã‚’è¨˜è¼‰ã—ãŸVector2.cpp
 ------------------------------------------------------------------------------------*/
 #include <math.h>
 #include "Vector2.hpp"
@@ -14,35 +14,35 @@
 namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: Vector2Int
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: Vector2Int
 	//----------------------------------------------------------------------------------
 	Vector2::Vector2(const Vector2Int & vec)
 	{
 		this->x = static_cast<float>(vec.x);		this->y = static_cast<float>(vec.y);
 	}
 
-	//Vector3ƒIƒyƒŒ[ƒ^[
+	//Vector3ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector2::operator Vector3() const { return Vector3(x, y, 0.0f); }
-	//Vector4ƒIƒyƒŒ[ƒ^[
+	//Vector4ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector2::operator Vector4() const { return Vector4(x, y, 0.0f, 0.0f); }
-	//Vector2IntƒIƒyƒŒ[ƒ^[
+	//Vector2Intã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector2::operator Vector2Int() const { return Vector2Int(static_cast<int>(x), static_cast<int>(y)); }
 
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector2& Vector2::operator=(const Vector3& vec)
 	{
 		this->x = vec.x;		this->y = vec.y;
 		return *this;
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector2& Vector2::operator=(const Vector4& vec)
 	{
 		this->x = vec.x;		this->y = vec.y;
 		return *this;
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector2& Vector2::operator = (const Vector2Int& vec)
 	{
 		this->x = static_cast<float>(vec.x);		this->y = static_cast<float>(vec.y);
@@ -54,12 +54,12 @@ namespace SGFramework
 	//Vector2Ref
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: Vector2Ref
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: Vector2Ref
 	Vector2::Vector2(const Vector2Ref & value) : DirectX::XMFLOAT2(value.x, value.y) {}
 
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector2 & Vector2::operator=(const Vector2Ref & vec)
 	{
 		x = vec.x; y = vec.y;
@@ -67,59 +67,59 @@ namespace SGFramework
 	}
 
 
-	//==ƒIƒyƒŒ[ƒ^[
+	//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	bool Vector2::operator ==(const Vector2Ref& vec) const 
 	{
 		return (fabsf(x - vec.x) <= MathAF::cEpsilon
 			&& fabsf(y - vec.y) <= MathAF::cEpsilon);
 	}
-	//!=ƒIƒyƒŒ[ƒ^[
+	//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	bool Vector2::operator !=(const Vector2Ref& vec) const
 	{
 		return (fabsf(x - vec.x) <= MathAF::cEpsilon
 			&& fabsf(y - vec.y) <= MathAF::cEpsilon);
 	}
 
-	//‰ÁZƒIƒyƒŒ[ƒ^[
+	//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector2 Vector2::operator +(const Vector2Ref& vec) const
 	{
 		return Vector2(x + vec.x, y + vec.y);
 	}
-	//Œ¸ZƒIƒyƒŒ[ƒ^[
+	//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector2 Vector2::operator -(const Vector2Ref& vec) const
 	{
 		return Vector2(x - vec.x, y - vec.y);
 	}
-	//æZƒIƒyƒŒ[ƒ^[
+	//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector2 Vector2::operator *(const Vector2Ref& vec) const 
 	{
 		return Vector2(x * vec.x, y * vec.y);
 	}
-	//œZƒIƒyƒŒ[ƒ^[
+	//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector2 Vector2::operator /(const Vector2Ref& vec) const
 	{
 		return Vector2(x / vec.x, y / vec.y);
 	}
 
-	//+=ƒIƒyƒŒ[ƒ^[
+	//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector2& Vector2::operator +=(const Vector2Ref& vec)
 	{
 		this->x += vec.x;		this->y += vec.y;
 		return *this;
 	}
-	//-=ƒIƒyƒŒ[ƒ^[
+	//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector2& Vector2::operator -=(const Vector2Ref& vec)
 	{
 		this->x -= vec.x;		this->y -= vec.y;
 		return *this;
 	}
-	//*=ƒIƒyƒŒ[ƒ^[
+	//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector2& Vector2::operator *=(const Vector2Ref& vec)
 	{
 		this->x *= vec.x;		this->y *= vec.y;
 		return *this;
 	}
-	// /=ƒIƒyƒŒ[ƒ^[
+	// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector2& Vector2::operator /=(const Vector2Ref& vec)
 	{
 		this->x /= vec.x;		this->y /= vec.y;

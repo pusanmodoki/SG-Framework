@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-2‚Â‚Ì’l‚ğˆµ‚¦‚éVector2 \‘¢‘Ì
-Å‚à‘½—p‚·‚é\‘¢‘ÌƒVƒŠ[ƒY‚Ì1‚Â‚È‚Ì‚Å•Ê©ìVector‚ªŠÖŒW‚È‚¢‚à‚Ì‚Í‘S‚ÄinlineÀ‘•
+2ã¤ã®å€¤ã‚’æ‰±ãˆã‚‹Vector2 æ§‹é€ ä½“
+æœ€ã‚‚å¤šç”¨ã™ã‚‹æ§‹é€ ä½“ã‚·ãƒªãƒ¼ã‚ºã®1ã¤ãªã®ã§åˆ¥è‡ªä½œVectorãŒé–¢ä¿‚ãªã„ã‚‚ã®ã¯å…¨ã¦inlineå®Ÿè£…
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_VECTOR_VECTOR2_HPP_
 #define SGFRAMEWORK_HEADER_VECTOR_VECTOR2_HPP_
@@ -16,58 +16,58 @@
 //Framework namespace
 namespace SGFramework
 {
-	//ƒvƒƒgƒ^ƒCƒvéŒ¾
+	//ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—å®£è¨€
 	struct Vector3;
 	struct Vector4;
 	struct Vector2Int;
 	struct Vector2Ref;
 
-	//2‚Â‚Ì’l‚ğˆµ‚¦‚éVector2 \‘¢‘Ì
+	//2ã¤ã®å€¤ã‚’æ‰±ãˆã‚‹Vector2 æ§‹é€ ä½“
 	struct Vector2 final: public DirectX::XMFLOAT2
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//inlneÀ‘•
+		//inlneå®Ÿè£…
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘S‚Ä0‚Éİ’è‚³‚ê‚é
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å…¨ã¦0ã«è¨­å®šã•ã‚Œã‚‹
 		inline constexpr Vector2();
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1:x
-		//ˆø”2:y
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1:x
+		//å¼•æ•°2:y
 		inline constexpr Vector2(float x, float y);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: XMFLOAT2
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: XMFLOAT2
 		inline constexpr Vector2(const DirectX::XMFLOAT2& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: PxVec2
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: PxVec2
 		inline constexpr Vector2(const physx::PxVec2& vec);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: aiVector2D
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: aiVector2D
 		inline constexpr Vector2(const aiVector2D& vec);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: ImVec2
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: ImVec2
 		inline constexpr Vector2(const ImVec2& vec);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: XMVECTOR
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: XMVECTOR
 		inline Vector2(const XmVector& value);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: float*
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: float*
 		inline Vector2(const float* array);
 
 		//----------------------------------------------------------------------------------
@@ -95,224 +95,224 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[CreateWithInt]
-		//int‚ÅVector2‚ğì¬
-		//ˆø”1:x
-		//ˆø”2:y
+		//intã§Vector2ã‚’ä½œæˆ
+		//å¼•æ•°1:x
+		//å¼•æ•°2:y
 		inline static constexpr Vector2 CreateWithInt(int x, int y);
 
 		//----------------------------------------------------------------------------------
 		//[Absolute]
-		//return: â‘Î’l
+		//return: çµ¶å¯¾å€¤
 		inline Vector2 Absolute() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[Magnitude]
-		//return: ©g‚ÆVector(0,0)‚Ì‹——£
+		//return: è‡ªèº«ã¨Vector(0,0)ã®è·é›¢
 		inline constexpr float Magnitude() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ExactMagnitude]
-		//return: ©g‚ÆVector(0,0)‚Ì‹——£ (³Šm‚È’l‚¾‚ª•‰‰×‚ª‚‚¢)
+		//return: è‡ªèº«ã¨Vector(0,0)ã®è·é›¢ (æ­£ç¢ºãªå€¤ã ãŒè² è·ãŒé«˜ã„)
 		inline float ExactMagnitude() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ClampMagnitude]
-		//Length‚ğmaxLength‚É§ŒÀ‚·‚é
-		//return: §ŒÀ‚µ‚½vector
-		//ˆø”1: §ŒÀLength
+		//Lengthã‚’maxLengthã«åˆ¶é™ã™ã‚‹
+		//return: åˆ¶é™ã—ãŸvector
+		//å¼•æ•°1: åˆ¶é™Length
 		inline Vector2 ClampMagnitude(const float maxLength) const noexcept;
 		//----------------------------------------------------------------------------------
 		//[Normalize]
-		//return: ©g‚Ì³‹K‰»ƒxƒNƒgƒ‹
+		//return: è‡ªèº«ã®æ­£è¦åŒ–ãƒ™ã‚¯ãƒˆãƒ«
 		inline Vector2 Normalized() const noexcept;
 
-		//XMVECTORƒIƒyƒŒ[ƒ^[
+		//XMVECTORã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator XmVector() const noexcept;
-		//float*ƒIƒyƒŒ[ƒ^[
+		//float*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator float*();
-		//const float*ƒIƒyƒŒ[ƒ^[
+		//const float*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator const float*() const;
 
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline XmVector operator = (const XmVector& vec) noexcept;
 
-		//+ƒIƒyƒŒ[ƒ^[  
+		//+ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 		inline Vector2 operator +() const;
-		//-ƒIƒyƒŒ[ƒ^[  
+		//-ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 		inline Vector2 operator -() const;
-		//==ƒIƒyƒŒ[ƒ^[
+		//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator ==(const Vector2& vec) const;
-		//!=ƒIƒyƒŒ[ƒ^[
+		//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator !=(const Vector2& vec) const;
 
-		//‰ÁZƒIƒyƒŒ[ƒ^[
+		//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator +(const Vector2& vec) const;
-		//Œ¸ZƒIƒyƒŒ[ƒ^[
+		//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator -(const Vector2& vec) const;
-		//æZƒIƒyƒŒ[ƒ^[
+		//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator *(const Vector2& vec) const;
-		//æZƒIƒyƒŒ[ƒ^[(float)
+		//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 		inline Vector2 operator *(float value) const;
-		//œZƒIƒyƒŒ[ƒ^[
+		//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator /(const Vector2& vec) const;
-		//œZƒIƒyƒŒ[ƒ^[(float)
+		//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 		inline Vector2 operator /(float value) const;
 
-		//+=ƒIƒyƒŒ[ƒ^[
+		//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2 &operator +=(const Vector2& vec);
-		//-=ƒIƒyƒŒ[ƒ^[
+		//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2 &operator -=(const Vector2& vec);
-		//*=ƒIƒyƒŒ[ƒ^[
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2 &operator *=(const Vector2& vec);
-		//*=ƒIƒyƒŒ[ƒ^[(float)
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 		inline const Vector2 &operator *=(float value);
-		// /=ƒIƒyƒŒ[ƒ^[
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2 &operator /=(const Vector2& vec);
-		// /=ƒIƒyƒŒ[ƒ^[(float)
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 		inline const Vector2 &operator /=(float value);
 
 		//sgstring operator
 		inline operator sgstring() const { return ToString(); }
 		//----------------------------------------------------------------------------------
 		//[ToString]
-		//sgstringŒ`®‚Åo—Í‚·‚é
-		//return: sgstring•\Œ»‚µ‚½this
+		//sgstringå½¢å¼ã§å‡ºåŠ›ã™ã‚‹
+		//return: sgstringè¡¨ç¾ã—ãŸthis
 		inline sgstring ToString() const { return (L"(" + std::to_wstring(x) + L", " + std::to_wstring(y) + L")"); }
 		//----------------------------------------------------------------------------------
 		//[ToStdString]
-		//std::stringŒ`®‚Åo—Í‚·‚é
-		//return: std::string•\Œ»‚µ‚½this
+		//std::stringå½¢å¼ã§å‡ºåŠ›ã™ã‚‹
+		//return: std::stringè¡¨ç¾ã—ãŸthis
 		inline std::string ToStdString() const { return ("(" + std::to_string(x) + ", " + std::to_string(y) + ")"); }
 		
 		//----------------------------------------------------------------------------------
-		//cppÀ‘•
+		//cppå®Ÿè£…
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: Vector2Int
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Vector2Int
 		Vector2(const Vector2Int& value);
 
-		//Vector3ƒIƒyƒŒ[ƒ^[
+		//Vector3ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		operator Vector3() const;
-		//Vector4ƒIƒyƒŒ[ƒ^[
+		//Vector4ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		operator Vector4() const;
-		//Vector2IntƒIƒyƒŒ[ƒ^[
+		//Vector2Intã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		operator Vector2Int() const;
 
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector2& operator = (const Vector3& vec);
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector2& operator = (const Vector4& vec);
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector2& operator = (const Vector2Int& vec);
 
 		//----------------------------------------------------------------------------------
 		//Vector2Ref
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: Vector2Ref
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Vector2Ref
 		Vector2(const Vector2Ref& value);
 
-		// =ƒIƒyƒŒ[ƒ^[
+		// =ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector2 &operator =(const Vector2Ref & vec);
 
-		//==ƒIƒyƒŒ[ƒ^[
+		//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		bool operator ==(const Vector2Ref& vec) const;
-		//!=ƒIƒyƒŒ[ƒ^[
+		//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		bool operator !=(const Vector2Ref& vec) const;
 
-		//‰ÁZƒIƒyƒŒ[ƒ^[
+		//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		Vector2 operator +(const Vector2Ref& vec) const;
-		//Œ¸ZƒIƒyƒŒ[ƒ^[
+		//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		Vector2 operator -(const Vector2Ref& vec) const;
-		//æZƒIƒyƒŒ[ƒ^[
+		//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		Vector2 operator *(const Vector2Ref& vec) const;
-		//œZƒIƒyƒŒ[ƒ^[
+		//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		Vector2 operator /(const Vector2Ref& vec) const;
 
-		//+=ƒIƒyƒŒ[ƒ^[
+		//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector2& operator +=(const Vector2Ref& vec);
-		//-=ƒIƒyƒŒ[ƒ^[
+		//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector2& operator -=(const Vector2Ref& vec);
-		//*=ƒIƒyƒŒ[ƒ^[
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector2& operator *=(const Vector2Ref& vec);
-		// /=ƒIƒyƒŒ[ƒ^[
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector2& operator /=(const Vector2Ref& vec);
 
 
-		//ŒvZƒ‰ƒCƒuƒ‰ƒŠ
+		//è¨ˆç®—ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 
 
 		//----------------------------------------------------------------------------------
 		//[Dot]<Calculation Library Function>
-		//“àÏ‚ğs‚¤
-		//return: “àÏ‚ÌŒ‹‰Ê
-		//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-		//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+		//å†…ç©ã‚’è¡Œã†
+		//return: å†…ç©ã®çµæœ
+		//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+		//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 		inline static float Dot(const Vector2& vec1, const Vector2& vec2) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Cross]<Calculation Library Function>
-		//ŠOÏ‚ğs‚¤
-		//return: ŠOÏ‚ÌŒ‹‰Ê
-		//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-		//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+		//å¤–ç©ã‚’è¡Œã†
+		//return: å¤–ç©ã®çµæœ
+		//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+		//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 		inline static float Cross(const Vector2& vec1, const Vector2& vec2) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Angle]<Calculation Library Function>
-		//2“_ŠÔ‚ÌŠp“x‚ğ‘ª‚é
-		//return: 2“_ŠÔ‚ÌŠp“x
-		//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-		//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+		//2ç‚¹é–“ã®è§’åº¦ã‚’æ¸¬ã‚‹
+		//return: 2ç‚¹é–“ã®è§’åº¦
+		//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+		//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 		inline static float Angle(const Vector2& from, const Vector2& to) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Distance]<Calculation Library Function>
-		//from‚©‚çto‚Ì‹——£‚ğ‘ª‚é
-		//return: from-to‚Ì‹——£
-		//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-		//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+		//fromã‹ã‚‰toã®è·é›¢ã‚’æ¸¬ã‚‹
+		//return: from-toã®è·é›¢
+		//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+		//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 		inline static constexpr float Distance(const Vector2& from, const Vector2& to) noexcept;
 		//----------------------------------------------------------------------------------
 		//[ExactDistance]<Calculation Library Function>
-		//from‚©‚çto‚Ì‹——£‚ğ‘ª‚é, Distance‚æ‚è³Šm‚È’l‚¾‚ªŒvZ•‰‰×‚ª‚‚¢
-		//return: from-to‚Ì‹——£
-		//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-		//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+		//fromã‹ã‚‰toã®è·é›¢ã‚’æ¸¬ã‚‹, Distanceã‚ˆã‚Šæ­£ç¢ºãªå€¤ã ãŒè¨ˆç®—è² è·ãŒé«˜ã„
+		//return: from-toã®è·é›¢
+		//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+		//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 		inline static float ExactDistance(const Vector2& from, const Vector2& to) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Direction]<Calculation Library Function>
-		//from‚©‚çto‚Ö‚Ì³‹K‰»Ï•ûŒüƒxƒNƒgƒ‹‚ğæ“¾‚·‚é
-		//return: ³‹K‰»Ï•ûŒüƒxƒNƒgƒ‹
-		//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-		//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+		//fromã‹ã‚‰toã¸ã®æ­£è¦åŒ–æ¸ˆæ–¹å‘ãƒ™ã‚¯ãƒˆãƒ«ã‚’å–å¾—ã™ã‚‹
+		//return: æ­£è¦åŒ–æ¸ˆæ–¹å‘ãƒ™ã‚¯ãƒˆãƒ«
+		//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+		//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 		inline static Vector2 Direction(const Vector2& from, const Vector2& to) noexcept;
 		//----------------------------------------------------------------------------------
 		//[TransformCoord]<Calculation Library Function>
-		//Matrix‚ğ•t—^‚µ‚½’l‚É•ÏŠ·‚·‚é
-		//return: Matrix‚ğ•t—^‚µ‚½ƒxƒNƒgƒ‹
-		//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹
-		//ˆø”2: ‘ÎÛMatrix
+		//Matrixã‚’ä»˜ä¸ã—ãŸå€¤ã«å¤‰æ›ã™ã‚‹
+		//return: Matrixã‚’ä»˜ä¸ã—ãŸãƒ™ã‚¯ãƒˆãƒ«
+		//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«
+		//å¼•æ•°2: å¯¾è±¡Matrix
 		inline static Vector2 TransformCoord(const Vector2& vec, const DirectX::XMMATRIX& matrix) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Max]<Calculation Library Function>
-		//2‚Â‚ÌƒxƒNƒgƒ‹‚ÌŠe¬•ª‚Ìˆê”Ô‘å‚«‚È’l‚ğg‚Á‚ÄVector‚ğì¬
-		//return: Å‘åƒxƒNƒgƒ‹
-		//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-		//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+		//2ã¤ã®ãƒ™ã‚¯ãƒˆãƒ«ã®å„æˆåˆ†ã®ä¸€ç•ªå¤§ããªå€¤ã‚’ä½¿ã£ã¦Vectorã‚’ä½œæˆ
+		//return: æœ€å¤§ãƒ™ã‚¯ãƒˆãƒ«
+		//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+		//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 		inline static constexpr Vector2 Max(const Vector2& vec1, const Vector2& vec2) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Min]<Calculation Library Function>
-		//2‚Â‚ÌƒxƒNƒgƒ‹‚ÌŠe¬•ª‚Ìˆê”Ô¬‚³‚¢’l‚ğg‚Á‚ÄVector‚ğì¬
-		//return: Å¬ƒxƒNƒgƒ‹
-		//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-		//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+		//2ã¤ã®ãƒ™ã‚¯ãƒˆãƒ«ã®å„æˆåˆ†ã®ä¸€ç•ªå°ã•ã„å€¤ã‚’ä½¿ã£ã¦Vectorã‚’ä½œæˆ
+		//return: æœ€å°ãƒ™ã‚¯ãƒˆãƒ«
+		//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+		//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 		inline static constexpr Vector2 Min(const Vector2& vec1, const Vector2& vec2) noexcept;
 	};
 
 
 	//----------------------------------------------------------------------------------
 	//[wostream operator]
-	//ˆø”1: stream
-	//ˆø”2: this
+	//å¼•æ•°1: stream
+	//å¼•æ•°2: this
 	inline std::wostream& operator<<(std::wostream& stream, const Vector2& value)
 	{
 		const wchar* string = value.ToString();
@@ -321,68 +321,68 @@ namespace SGFramework
 	}
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘S‚Ä0‚Éİ’è‚³‚ê‚é
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//å…¨ã¦0ã«è¨­å®šã•ã‚Œã‚‹
 	inline constexpr Vector2::Vector2() : XMFLOAT2(0.0f, 0.0f) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: x
-	//ˆø”2: y
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: x
+	//å¼•æ•°2: y
 	inline constexpr Vector2::Vector2(float x, float y) : XMFLOAT2(x, y) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: XMFLOAT2
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: XMFLOAT2
 	inline constexpr Vector2::Vector2(const DirectX::XMFLOAT2 & vec) : XMFLOAT2(vec) { }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: PxVec2
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: PxVec2
 	inline constexpr Vector2::Vector2(const physx::PxVec2 & vec) : XMFLOAT2(vec.x, vec.y) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: aiVector2D
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: aiVector2D
 	inline constexpr Vector2::Vector2(const aiVector2D & vec) : XMFLOAT2(vec.x, vec.y) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: ImVec2
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: ImVec2
 	inline constexpr Vector2::Vector2(const ImVec2 & vec) : XMFLOAT2(vec.x, vec.y) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: XMVECTOR
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: XMVECTOR
 	inline Vector2::Vector2(const XmVector & vec)
 	{
 		DirectX::XMStoreFloat2(this, vec);
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: float*
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: float*
 	inline Vector2::Vector2(const float * array) : DirectX::XMFLOAT2(array) {}
 
 	//----------------------------------------------------------------------------------
 	//[CreateWithInt]
-	//int‚ÅVector2‚ğì¬
-	//ˆø”1:x
-	//ˆø”2:y
+	//intã§Vector2ã‚’ä½œæˆ
+	//å¼•æ•°1:x
+	//å¼•æ•°2:y
 	inline constexpr Vector2 Vector2::CreateWithInt(int x, int y)
 	{
 		return Vector2(static_cast<float>(x), static_cast<float>(y));
 	}
 	//----------------------------------------------------------------------------------
 	//[Absolute]
-	//return: â‘Î’l
+	//return: çµ¶å¯¾å€¤
 	inline Vector2 Vector2::Absolute() const noexcept
 	{
 		return Vector2(x < 0.0f ? -x : x, y < 0.0f ? -y : y);
 	}
 	//----------------------------------------------------------------------------------
 	//[Magnitude]
-	//return: ©g‚ÆVector(0,0)‚Ì‹——£
+	//return: è‡ªèº«ã¨Vector(0,0)ã®è·é›¢
 	inline constexpr float Vector2::Magnitude() const noexcept
 	{
 		float f = x * x + y * y;
@@ -394,104 +394,104 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ExactMagnitude]
-	//return: ©g‚ÆVector(0,0)‚Ì‹——£ (³Šm‚È’l‚¾‚ª•‰‰×‚ª‚‚¢)
+	//return: è‡ªèº«ã¨Vector(0,0)ã®è·é›¢ (æ­£ç¢ºãªå€¤ã ãŒè² è·ãŒé«˜ã„)
 	inline float Vector2::ExactMagnitude() const noexcept
 	{		
 		return std::sqrtf(x * x + y * y);
 	}
 	//----------------------------------------------------------------------------------
 	//[ClampMagnitude]
-	//vec‚ÌLength‚ğmaxLength‚É§ŒÀ‚·‚é
-	//return: §ŒÀ‚µ‚½vector
-	//ˆø”2: §ŒÀLength
+	//vecã®Lengthã‚’maxLengthã«åˆ¶é™ã™ã‚‹
+	//return: åˆ¶é™ã—ãŸvector
+	//å¼•æ•°2: åˆ¶é™Length
 	inline Vector2 Vector2::ClampMagnitude(const float maxLength) const noexcept
 	{
 		return std::move(DirectX::XMVector2ClampLength(*this, 0.0f, maxLength));
 	}
 	//----------------------------------------------------------------------------------
 	//[Normalize]
-	//return: ©g‚Ì³‹K‰»ƒxƒNƒgƒ‹
+	//return: è‡ªèº«ã®æ­£è¦åŒ–ãƒ™ã‚¯ãƒˆãƒ«
 	inline Vector2 Vector2::Normalized() const noexcept
 	{
 		float divLength = 1.0f / ExactMagnitude();
 		return std::move(Vector2(x * divLength, y * divLength));
 	}
 
-	//XMVECTORƒIƒyƒŒ[ƒ^[
+	//XMVECTORã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2::operator XmVector() const noexcept { return DirectX::XMLoadFloat2(this); }
-	//float*ƒIƒyƒŒ[ƒ^[
+	//float*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2::operator float*() { return (float*)this; }
-	//const float*ƒIƒyƒŒ[ƒ^[
+	//const float*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2::operator const float*() const { return (float*)this; }
 
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline XmVector Vector2::operator=(const XmVector& vec) noexcept
 	{
 		DirectX::XMStoreFloat2(this, vec);
 		return vec;
 	}
 
-	//+ƒIƒyƒŒ[ƒ^[  
+	//+ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 	inline Vector2 Vector2::operator+() const { return Vector2(+this->x, +this->y); }
-	//-ƒIƒyƒŒ[ƒ^[  
+	//-ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 	inline Vector2 Vector2::operator-() const { return Vector2(-this->x, -this->y); }
-	//==ƒIƒyƒŒ[ƒ^[
+	//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline bool Vector2::operator==(const Vector2& vec) const
 	{
 		return (fabsf(x - vec.x) <= MathAF::cEpsilon
 			&& fabsf(y - vec.y) <= MathAF::cEpsilon);
 	}
-	//!=ƒIƒyƒŒ[ƒ^[
+	//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline bool Vector2::operator!=(const Vector2& vec) const
 	{
 		return (fabsf(x - vec.x) > MathAF::cEpsilon
 			&& fabsf(y - vec.y) > MathAF::cEpsilon);
 	}
 
-	//‰ÁZƒIƒyƒŒ[ƒ^[
+	//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2::operator+(const Vector2& vec) const { return Vector2(x + vec.x, y + vec.y); }
-	//Œ¸ZƒIƒyƒŒ[ƒ^[
+	//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2::operator-(const Vector2& vec) const { return Vector2(x - vec.x, y - vec.y); }
-	//æZƒIƒyƒŒ[ƒ^[
+	//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2::operator*(const Vector2& vec) const { return Vector2(x * vec.x, y * vec.y); }
-	//æZƒIƒyƒŒ[ƒ^[(float)
+	//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 	inline Vector2 Vector2::operator*(const float value) const { return Vector2(x * value, y * value); }
-	//œZƒIƒyƒŒ[ƒ^[
+	//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2::operator/(const Vector2& vec) const { return Vector2(x / vec.x, y / vec.y); }
-	//œZƒIƒyƒŒ[ƒ^[(float)
+	//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 	inline Vector2 Vector2::operator/(const float value) const { return Vector2(x / value, y / value); }
 
-	//+=ƒIƒyƒŒ[ƒ^[
+	//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector2 & Vector2::operator+=(const Vector2& vec)
 	{
 		this->x += vec.x;		this->y += vec.y;
 		return *this;
 	}
-	//-=ƒIƒyƒŒ[ƒ^[
+	//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector2 & Vector2::operator-=(const Vector2& vec)
 	{
 		this->x -= vec.x;		this->y -= vec.y;
 		return *this;
 	}
-	//*=ƒIƒyƒŒ[ƒ^[
+	//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector2 & Vector2::operator*=(const Vector2& vec)
 	{
 		this->x *= vec.x;		this->y *= vec.y;
 		return *this;
 	}
-	//*=ƒIƒyƒŒ[ƒ^[(float)
+	//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 	inline const Vector2 & Vector2::operator*=(const float value)
 	{
 		this->x *= value;		this->y *= value;
 		return *this;
 	}
-	// /=ƒIƒyƒŒ[ƒ^[
+	// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector2 & Vector2::operator/=(const Vector2& vec)
 	{
 		this->x /= vec.x;		this->y /= vec.y;
 		return *this;
 	}
-	// /=ƒIƒyƒŒ[ƒ^[(float)
+	// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 	inline const Vector2 & Vector2::operator/=(const float value)
 	{
 		this->x /= value;		this->y /= value;
@@ -503,31 +503,31 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Dot]<Calculation Library Function>
-	//“àÏ‚ğs‚¤
-	//return: “àÏ‚ÌŒ‹‰Ê
-	//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-	//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+	//å†…ç©ã‚’è¡Œã†
+	//return: å†…ç©ã®çµæœ
+	//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+	//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 	inline float Vector2::Dot(const Vector2& vec1, const Vector2& vec2) noexcept
 	{
 		return vec1.x * vec2.x + vec1.y * vec2.y;
 	}
 	//----------------------------------------------------------------------------------
 	//[Cross]<Calculation Library Function>
-	//ŠOÏ‚ğs‚¤
-	//return: ŠOÏ‚ÌŒ‹‰Ê
-	//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-	//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+	//å¤–ç©ã‚’è¡Œã†
+	//return: å¤–ç©ã®çµæœ
+	//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+	//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 	inline float Vector2::Cross(const Vector2& vec1, const Vector2& vec2) noexcept
 	{
-		//x1 * y2 - x2 * y1 = |v1||v2|sin(ƒÆ)
+		//x1 * y2 - x2 * y1 = |v1||v2|sin(Î¸)
 		return vec1.x * vec2.y + vec2.x * vec1.y;
 	}
 	//----------------------------------------------------------------------------------
 	//[Angle]<Calculation Library Function>
-	//2“_ŠÔ‚ÌŠp“x‚ğ‘ª‚é
-	//return: 2“_ŠÔ‚ÌŠp“x
-	//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-	//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+	//2ç‚¹é–“ã®è§’åº¦ã‚’æ¸¬ã‚‹
+	//return: 2ç‚¹é–“ã®è§’åº¦
+	//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+	//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 	inline float Vector2::Angle(const Vector2& from, const Vector2& to) noexcept
 	{
 		float cosSita = Dot(from, to) / (from.Magnitude() * to.Magnitude());
@@ -538,10 +538,10 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[Distance]<Calculation Library Function>
-	//from‚©‚çto‚Ì‹——£‚ğ‘ª‚é
-	//return: from-to‚Ì‹——£
-	//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-	//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+	//fromã‹ã‚‰toã®è·é›¢ã‚’æ¸¬ã‚‹
+	//return: from-toã®è·é›¢
+	//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+	//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 	inline constexpr float Vector2::Distance(const Vector2& from, const Vector2& to) noexcept
 	{
 		float f = (from.x - to.x) * (from.x - to.x)
@@ -554,40 +554,40 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ExactDistance]<Calculation Library Function>
-	//from‚©‚çto‚Ì‹——£‚ğ‘ª‚é, Distance‚æ‚è³Šm‚È’l‚¾‚ªŒvZ•‰‰×‚ª‚‚¢
-	//return: from-to‚Ì‹——£
-	//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-	//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+	//fromã‹ã‚‰toã®è·é›¢ã‚’æ¸¬ã‚‹, Distanceã‚ˆã‚Šæ­£ç¢ºãªå€¤ã ãŒè¨ˆç®—è² è·ãŒé«˜ã„
+	//return: from-toã®è·é›¢
+	//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+	//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 	inline float Vector2::ExactDistance(const Vector2 & from, const Vector2 & to) noexcept
 	{
 		return std::sqrtf((to.x - from.x) * (to.x - from.x) + (to.y - from.y) * (to.y - from.y));
 	}
 	//----------------------------------------------------------------------------------
 	//[Direction]<Calculation Library Function>
-	//from‚©‚çto‚Ö‚Ì³‹K‰»Ï•ûŒüƒxƒNƒgƒ‹‚ğæ“¾‚·‚é
-	//return: ³‹K‰»Ï•ûŒüƒxƒNƒgƒ‹
-	//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-	//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+	//fromã‹ã‚‰toã¸ã®æ­£è¦åŒ–æ¸ˆæ–¹å‘ãƒ™ã‚¯ãƒˆãƒ«ã‚’å–å¾—ã™ã‚‹
+	//return: æ­£è¦åŒ–æ¸ˆæ–¹å‘ãƒ™ã‚¯ãƒˆãƒ«
+	//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+	//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 	inline Vector2 Vector2::Direction(const Vector2& from, const Vector2& to) noexcept
 	{
 		return std::move((to - from).Normalized());
 	}
 	//----------------------------------------------------------------------------------
 	//[TransformCoord]<Calculation Library Function>
-	//Matrix‚ğ•t—^‚µ‚½’l‚É•ÏŠ·‚·‚é
-	//return: Matrix‚ğ•t—^‚µ‚½ƒxƒNƒgƒ‹
-	//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹
-	//ˆø”2: ‘ÎÛMatrix
+	//Matrixã‚’ä»˜ä¸ã—ãŸå€¤ã«å¤‰æ›ã™ã‚‹
+	//return: Matrixã‚’ä»˜ä¸ã—ãŸãƒ™ã‚¯ãƒˆãƒ«
+	//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«
+	//å¼•æ•°2: å¯¾è±¡Matrix
 	inline Vector2 Vector2::TransformCoord(const Vector2& vec, const DirectX::XMMATRIX& matrix) noexcept
 	{
 		return std::move(DirectX::XMVector2TransformCoord(vec, matrix));
 	}
 	//----------------------------------------------------------------------------------
 	//[Max]<Calculation Library Function>
-	//2‚Â‚ÌƒxƒNƒgƒ‹‚ÌŠe¬•ª‚Ìˆê”Ô‘å‚«‚È’l‚ğg‚Á‚ÄVector‚ğì¬
-	//return: Å‘åƒxƒNƒgƒ‹
-	//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-	//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+	//2ã¤ã®ãƒ™ã‚¯ãƒˆãƒ«ã®å„æˆåˆ†ã®ä¸€ç•ªå¤§ããªå€¤ã‚’ä½¿ã£ã¦Vectorã‚’ä½œæˆ
+	//return: æœ€å¤§ãƒ™ã‚¯ãƒˆãƒ«
+	//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+	//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 	inline constexpr Vector2 Vector2::Max(const Vector2& vec1, const Vector2& vec2) noexcept
 	{
 		Vector2 ret;
@@ -597,10 +597,10 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[Min]<Calculation Library Function>
-	//2‚Â‚ÌƒxƒNƒgƒ‹‚ÌŠe¬•ª‚Ìˆê”Ô¬‚³‚¢’l‚ğg‚Á‚ÄVector‚ğì¬
-	//return: Å¬ƒxƒNƒgƒ‹
-	//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹1
-	//ˆø”2: ‘ÎÛƒxƒNƒgƒ‹2
+	//2ã¤ã®ãƒ™ã‚¯ãƒˆãƒ«ã®å„æˆåˆ†ã®ä¸€ç•ªå°ã•ã„å€¤ã‚’ä½¿ã£ã¦Vectorã‚’ä½œæˆ
+	//return: æœ€å°ãƒ™ã‚¯ãƒˆãƒ«
+	//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«1
+	//å¼•æ•°2: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«2
 	inline constexpr Vector2 Vector2::Min(const Vector2& vec1, const Vector2& vec2) noexcept
 	{
 		Vector2 ret;

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ƒI[ƒfƒBƒI‚ğŠÇ—‚·‚éAudio class
+ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚’ç®¡ç†ã™ã‚‹Audio class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_AUDIO_LISTENER_HPP_
 #define SGFRAMEWORK_HEADER_AUDIO_LISTENER_HPP_
@@ -15,34 +15,34 @@ namespace SGFramework
 	public:
 		friend class Audio;
 
-		//Listener—pƒTƒEƒ“ƒhƒR[ƒ“, ŒvZ‚ÌÚ×‚Í‰º‹L‚ğQÆ
+		//Listenerç”¨ã‚µã‚¦ãƒ³ãƒ‰ã‚³ãƒ¼ãƒ³, è¨ˆç®—ã®è©³ç´°ã¯ä¸‹è¨˜ã‚’å‚ç…§
 		//https://docs.microsoft.com/ja-jp/windows/win32/xaudio2/sound-cones
 		//https://docs.microsoft.com/ja-jp/windows/win32/api/x3daudio/ns-x3daudio-x3daudio_cone
 		struct ListenerCone
 		{
-			//“à‘¤‚Ì‰~Šp“x, 0.03f ~ MathAF::cPix2‚Ì’l‚É§ŒÀ‚³‚ê‚é
+			//å†…å´ã®å††éŒè§’åº¦, 0.03f ~ MathAF::cPix2ã®å€¤ã«åˆ¶é™ã•ã‚Œã‚‹
 			//default = MathAF::cPix2
 			float innerConeAngle = MathAF::cPix2;
-			//“à‘¤‚Ì‰~Šp“x, innerConeAngle  ~ MathAF::cPix2‚Ì’l‚É§ŒÀ‚³‚ê‚é
+			//å†…å´ã®å††éŒè§’åº¦, innerConeAngle  ~ MathAF::cPix2ã®å€¤ã«åˆ¶é™ã•ã‚Œã‚‹
 			//default = MathAF::cPix2
 			float outerAngle = MathAF::cPix2;
 
-			//“à‘¤‚Ì‰~“à, ŠO‘¤‚Ì‰~‚Æ‚ÌŠÔ‚É“K—p‚³‚ê‚éƒ{ƒŠƒ…[ƒ€ƒXƒP[ƒ‹, 0.0f ~ 2.0f‚Ì’l‚É§ŒÀ‚³‚ê‚é
+			//å†…å´ã®å††éŒå†…, å¤–å´ã®å††éŒã¨ã®é–“ã«é©ç”¨ã•ã‚Œã‚‹ãƒœãƒªãƒ¥ãƒ¼ãƒ ã‚¹ã‚±ãƒ¼ãƒ«, 0.0f ~ 2.0fã®å€¤ã«åˆ¶é™ã•ã‚Œã‚‹
 			//default = 1.0f
 			float innerVolumeScaler = 1.0f;
-			//ŠO‘¤‚Ì‰~“à(“à‘¤‚Ì‰~‚ÌŠO), ‰~ŠO‚É“K—p‚³‚ê‚éƒ{ƒŠƒ…[ƒ€ƒXƒP[ƒ‹, 0.0f ~ 2.0f‚Ì’l‚É§ŒÀ‚³‚ê‚é
+			//å¤–å´ã®å††éŒå†…(å†…å´ã®å††éŒã®å¤–), å††éŒå¤–ã«é©ç”¨ã•ã‚Œã‚‹ãƒœãƒªãƒ¥ãƒ¼ãƒ ã‚¹ã‚±ãƒ¼ãƒ«, 0.0f ~ 2.0fã®å€¤ã«åˆ¶é™ã•ã‚Œã‚‹
 			//default = 1.0f
 			float outerVolumeScaler = 1.0f;
-			//“à‘¤‚Ì‰~“à, ŠO‘¤‚Ì‰~‚Æ‚ÌŠÔ‚É“K—p‚³‚ê‚éƒ[ƒpƒXƒtƒBƒ‹ƒ^[ŒW”, 0.0f ~ 1.0f‚Ì’l‚É§ŒÀ‚³‚ê‚é
+			//å†…å´ã®å††éŒå†…, å¤–å´ã®å††éŒã¨ã®é–“ã«é©ç”¨ã•ã‚Œã‚‹ãƒ­ãƒ¼ãƒ‘ã‚¹ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ä¿‚æ•°, 0.0f ~ 1.0fã®å€¤ã«åˆ¶é™ã•ã‚Œã‚‹
 			//default = 1.0f
 			float innerLowPassScaler = 1.0f;
-			//ŠO‘¤‚Ì‰~“à(“à‘¤‚Ì‰~‚ÌŠO), ‰~ŠO‚É“K—p‚³‚ê‚éƒ[ƒpƒXƒtƒBƒ‹ƒ^[ŒW”, 0.0f ~ 1.0f‚Ì’l‚É§ŒÀ‚³‚ê‚é
+			//å¤–å´ã®å††éŒå†…(å†…å´ã®å††éŒã®å¤–), å††éŒå¤–ã«é©ç”¨ã•ã‚Œã‚‹ãƒ­ãƒ¼ãƒ‘ã‚¹ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ä¿‚æ•°, 0.0f ~ 1.0fã®å€¤ã«åˆ¶é™ã•ã‚Œã‚‹
 			//default = 1.0f
 			float outerLowPassScaler = 1.0f;
-			//“à‘¤‚Ì‰~“à, ŠO‘¤‚Ì‰~‚Æ‚ÌŠÔ‚É“K—p‚³‚ê‚éƒŠƒo[ƒu‘—MƒŒƒxƒ‹ŒW”, 0.0f ~ 2.0f‚Ì’l‚É§ŒÀ‚³‚ê‚é
+			//å†…å´ã®å††éŒå†…, å¤–å´ã®å††éŒã¨ã®é–“ã«é©ç”¨ã•ã‚Œã‚‹ãƒªãƒãƒ¼ãƒ–é€ä¿¡ãƒ¬ãƒ™ãƒ«ä¿‚æ•°, 0.0f ~ 2.0fã®å€¤ã«åˆ¶é™ã•ã‚Œã‚‹
 			//default = 1.0f
 			float innerReverbLevelScale = 1.0f;
-			//ŠO‘¤‚Ì‰~“à(“à‘¤‚Ì‰~‚ÌŠO), ‰~ŠO‚É“K—p‚³‚ê‚éƒŠƒo[ƒu‘—MƒŒƒxƒ‹ŒW”, 0.0f ~ 2.0f‚Ì’l‚É§ŒÀ‚³‚ê‚é
+			//å¤–å´ã®å††éŒå†…(å†…å´ã®å††éŒã®å¤–), å††éŒå¤–ã«é©ç”¨ã•ã‚Œã‚‹ãƒªãƒãƒ¼ãƒ–é€ä¿¡ãƒ¬ãƒ™ãƒ«ä¿‚æ•°, 0.0f ~ 2.0fã®å€¤ã«åˆ¶é™ã•ã‚Œã‚‹
 			//default = 1.0f
 			float outerReverbLevelScaler = 1.0f;
 		};
@@ -50,24 +50,24 @@ namespace SGFramework
 	private:
 		//----------------------------------------------------------------------------------
 		//[EnabledCallbacks]
-		//return: ©g‚ªCall‚³‚ê‚éCallback Flags, Component::CallbackFunctionsQÆ
+		//return: è‡ªèº«ãŒCallã•ã‚Œã‚‹Callback Flags, Component::CallbackFunctionså‚ç…§
 		inline uint EnableCallbacks() override { return CallbackFunctions::Awake 
 			| CallbackFunctions::Update | CallbackFunctions::OnDestroy; }
 		//----------------------------------------------------------------------------------
 		//[Awake]
-		//ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½uŠÔ‚ÉŒÄ‚Î‚ê‚éCallbackŠÖ”
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸç¬é–“ã«å‘¼ã°ã‚Œã‚‹Callbacké–¢æ•°
 		inline void Awake() override;
 		//----------------------------------------------------------------------------------
 		//[Update]
-		//–ˆƒtƒŒ[ƒ€UpdateƒuƒƒbƒN‚ÅCallback‚³‚ê‚éŠÖ”
+		//æ¯ãƒ•ãƒ¬ãƒ¼ãƒ Updateãƒ–ãƒ­ãƒƒã‚¯ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 		inline void Update() override;
 		//----------------------------------------------------------------------------------
 		//[OnDestroy]
-		//ƒCƒ“ƒXƒ^ƒ“ƒX‚ªíœ‚³‚ê‚éuŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒå‰Šé™¤ã•ã‚Œã‚‹ç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
 		inline void OnDestroy() override;
 		//----------------------------------------------------------------------------------
 		//[LateUpdate]
-		//Update, SyncŒã‚ÉŒÄ‚Î‚ê‚éXVƒuƒƒbƒN (LateUpdate) ‚ÅCallback‚³‚ê‚éŠÖ”
+		//Update, Syncå¾Œã«å‘¼ã°ã‚Œã‚‹æ›´æ–°ãƒ–ãƒ­ãƒƒã‚¯ (LateUpdate) ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 		inline void LateUpdate() override;
 	
 		//listener(singleton instance)<static> (read only property)
@@ -108,18 +108,18 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Awake]
-	//ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½uŠÔ‚ÉŒÄ‚Î‚ê‚éCallbackŠÖ”
+	//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸç¬é–“ã«å‘¼ã°ã‚Œã‚‹Callbacké–¢æ•°
 	inline void AudioListener::Awake()
 	{
 		AtomicOperation::LockGuard guard(m_lock);
 
-		//ƒCƒ“ƒXƒ^ƒ“ƒX“o˜^
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ç™»éŒ²
 		if (IS_FALSE(m_instance.getIsValid()))
 		{
 			m_instance = m_thisPointer.DynamicCast<AudioListener>();
 			m_isThisInstance = true;
 		}
-		//“o˜^Ï‚İ‚È‚çthrow
+		//ç™»éŒ²æ¸ˆã¿ãªã‚‰throw
 		else
 		{
 			m_isThisInstance = false;
@@ -128,12 +128,12 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[Update]
-	//–ˆƒtƒŒ[ƒ€UpdateƒuƒƒbƒN‚ÅCallback‚³‚ê‚éŠÖ”
+	//æ¯ãƒ•ãƒ¬ãƒ¼ãƒ Updateãƒ–ãƒ­ãƒƒã‚¯ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 	inline void AudioListener::Update()
 	{
 		if (IS_FALSE(m_isThisInstance)) return;
 
-		//XV
+		//æ›´æ–°
 		m_forward = transform->getForward();
 		m_up = transform->getUp();
 		m_position = transform->getWorldPosition();
@@ -141,21 +141,21 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[OnDestroy]
-	//ƒCƒ“ƒXƒ^ƒ“ƒX‚ªíœ‚³‚ê‚éuŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
+	//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒå‰Šé™¤ã•ã‚Œã‚‹ç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
 	inline void AudioListener::OnDestroy()
 	{
-		//©g‚ªƒCƒ“ƒXƒ^ƒ“ƒX‚È‚çŠJ•ú
+		//è‡ªèº«ãŒã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãªã‚‰é–‹æ”¾
 		if (IS_TRUE(m_isThisInstance))
 			m_instance.Reset();
 	}
 	//----------------------------------------------------------------------------------
 	//[LateUpdate]
-	//Update, SyncŒã‚ÉŒÄ‚Î‚ê‚éXVƒuƒƒbƒN (LateUpdate) ‚ÅCallback‚³‚ê‚éŠÖ”
+	//Update, Syncå¾Œã«å‘¼ã°ã‚Œã‚‹æ›´æ–°ãƒ–ãƒ­ãƒƒã‚¯ (LateUpdate) ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 	inline void AudioListener::LateUpdate()
 	{
 		if (IS_FALSE(m_isThisInstance)) return;
 
-		//XV
+		//æ›´æ–°
 		m_oldPosition = transform->getWorldPosition();
 	}
 
@@ -164,7 +164,7 @@ namespace SGFramework
 	{
 		AtomicOperation::LockGuard guard(m_lock);
 
-		//instance“o˜^Ï‚İ‚È‚çinstance‚ğcopy, ‚»‚¤‚Å‚È‚¢‚È‚çdefault listener‚ğcopy
+		//instanceç™»éŒ²æ¸ˆã¿ãªã‚‰instanceã‚’copy, ãã†ã§ãªã„ãªã‚‰default listenerã‚’copy
 		if (IS_TRUE(m_instance.LockShared()))
 		{
 			memcpy_s(&apply, sizeof(X3DAUDIO_LISTENER), &m_instance->m_forward, sizeof(X3DAUDIO_LISTENER));

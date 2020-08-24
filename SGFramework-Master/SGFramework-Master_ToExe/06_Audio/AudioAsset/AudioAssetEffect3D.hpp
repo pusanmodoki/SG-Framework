@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-3DSE‚ğˆµ‚¤AudioAssetEffect3D class
+3DSEã‚’æ‰±ã†AudioAssetEffect3D class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_AUDIO_ASSET_EFFECT_3D_HPP_
 #define SGFRAMEWORK_HEADER_AUDIO_ASSET_EFFECT_3D_HPP_
@@ -20,10 +20,10 @@ namespace SGFramework
 	class Audio::SubmixLayer;
 	class AssetManager;
 
-	//AssetŠÖ˜A‚ğŠi”[‚µ‚½Asset namespace
+	//Asseté–¢é€£ã‚’æ ¼ç´ã—ãŸAsset namespace
 	namespace Asset
 	{
-		//3DSE‚ğˆµ‚¤AudioAssetEffect3D class
+		//3DSEã‚’æ‰±ã†AudioAssetEffect3D class
 		class AudioAssetEffect3D final : public BaseClass::BaseAudioSEAsset
 		{
 		public:
@@ -34,23 +34,23 @@ namespace SGFramework
 			friend SharedPointer<TAsset> Asset::InstantiateAsset(const sgstring& filePath, bool isRegisterSharedAsset);
 
 			//----------------------------------------------------------------------------------
-			//[ƒfƒXƒgƒ‰ƒNƒ^]
-			//ƒAƒZƒbƒg‚ÌŠJ•ú‚ğs‚¤
+			//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ã‚¢ã‚»ãƒƒãƒˆã®é–‹æ”¾ã‚’è¡Œã†
 			inline ~AudioAssetEffect3D() { ReleaseVoice(); CloseBaseAsset(getType(), true); }
 
 			//----------------------------------------------------------------------------------
 			//[Open]
-			//ƒAƒZƒbƒg‚Ìƒ[ƒh‚ğs‚¤
-			//ˆø”1: ‰¹º‚ªŠ‘®‚·‚éSubmixLayer, default = monoral root layer
-			//ˆø”2: ƒ\[ƒX‚Ì” (Å‘å“¯Ä¶”)
-			//ˆø”3: Ä¶ŠÔŠu
-			//ˆø”4: ƒXƒ€[ƒY‚É•·‚±‚¦‚é”ÍˆÍ
-			//ˆø”5: ˆø”5‚ÌŠp“x
-			//ˆø”6: ‰¹—ÊƒJ[ƒu‹——£‚ÌƒXƒP[ƒ‰[ 
-			//ˆø”7: ƒhƒbƒvƒ‰[Œø‰Ê‚ÌƒXƒP[ƒ‰[
-			//ˆø”8: Ä¶ŠJn•b”, default = cDefault (Begin)
-			//ˆø”9: ƒ‹[ƒvŠJn•b”, default = cDefault (Begin)
-			//ˆø”10: Ä¶I—¹•b”, default = cDefault (End)
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
+			//å¼•æ•°1: éŸ³å£°ãŒæ‰€å±ã™ã‚‹SubmixLayer, default = monoral root layer
+			//å¼•æ•°2: ã‚½ãƒ¼ã‚¹ã®æ•° (æœ€å¤§åŒæ™‚å†ç”Ÿæ•°)
+			//å¼•æ•°3: å†ç”Ÿé–“éš”
+			//å¼•æ•°4: ã‚¹ãƒ ãƒ¼ã‚ºã«èã“ãˆã‚‹ç¯„å›²
+			//å¼•æ•°5: å¼•æ•°5ã®è§’åº¦
+			//å¼•æ•°6: éŸ³é‡ã‚«ãƒ¼ãƒ–è·é›¢ã®ã‚¹ã‚±ãƒ¼ãƒ©ãƒ¼ 
+			//å¼•æ•°7: ãƒ‰ãƒƒãƒ—ãƒ©ãƒ¼åŠ¹æœã®ã‚¹ã‚±ãƒ¼ãƒ©ãƒ¼
+			//å¼•æ•°8: å†ç”Ÿé–‹å§‹ç§’æ•°, default = cDefault (Begin)
+			//å¼•æ•°9: ãƒ«ãƒ¼ãƒ—æ™‚é–‹å§‹ç§’æ•°, default = cDefault (Begin)
+			//å¼•æ•°10: å†ç”Ÿçµ‚äº†ç§’æ•°, default = cDefault (End)
 			void Open(WeakPointer<Audio::SubmixLayer> submixLayer = Audio::submixMonoralRootLayer(),
 				uint amountOfSource = 1, float playbackInterval = 0.0f, float innerRadius = 0.0f, 
 				float innerRadiusAngle = 0.0f, float curveDistanceScaler = 50.0f, float dopplerScaler = 50.0f,
@@ -58,29 +58,29 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Reload]
-			//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
 			void Reload() override;
 			//----------------------------------------------------------------------------------
 			//[Close]
-			//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 			void Close()  override;
 
 
 
 			//----------------------------------------------------------------------------------
 			//[Play]
-			//Ä¶‚ğs‚¤, ÀÛ‚ÉÄ¶‚³‚ê‚é‚Ì‚Í1ƒtƒŒ[ƒ€Œã‚Æ‚È‚é
-			//ˆø”1: ‰¹Œ¹‚ÌÀ•W
-			//ˆø”2: ‰¹Œ¹‚ÌˆÚ“®—Ê (•b‘¬)
-			//ˆø”3: ‰¹Œ¹‚Ì‰ñ“]
-			//ˆø”4: ƒ‹[ƒv‰ñ”, default = 0
+			//å†ç”Ÿã‚’è¡Œã†, å®Ÿéš›ã«å†ç”Ÿã•ã‚Œã‚‹ã®ã¯1ãƒ•ãƒ¬ãƒ¼ãƒ å¾Œã¨ãªã‚‹
+			//å¼•æ•°1: éŸ³æºã®åº§æ¨™
+			//å¼•æ•°2: éŸ³æºã®ç§»å‹•é‡ (ç§’é€Ÿ)
+			//å¼•æ•°3: éŸ³æºã®å›è»¢
+			//å¼•æ•°4: ãƒ«ãƒ¼ãƒ—å›æ•°, default = 0
 			inline void Play(const Vector3 & position, const Vector3 & velocityPerSec,
 					const Quaternion & rotation, uint loopCount = 0)
 			{
 				using namespace Detail::Audio;
 				XmVector quaternion = rotation;
 
-				//Messageì¬
+				//Messageä½œæˆ
 				AudioMessage message(MessageType::Effect3DFlag | MessageType::PlayEffect3D);
 				message.attachment.playEffect3D.position = position;
 				message.attachment.playEffect3D.velocity = velocityPerSec;
@@ -88,23 +88,23 @@ namespace SGFramework
 				message.attachment.playEffect3D.up = Vector3::Rotate(Const::Vector3::up, quaternion);
 				message.attachment.playEffect3D.loopCount = loopCount;
 				message.attachment.playEffect3D.instanceID = instanceID();
-				//Message‘—M
+				//Messageé€ä¿¡
 				Audio::SendAudioMessage(message);
 			}
 			//----------------------------------------------------------------------------------
 			//[Play]
-			//Ä¶‚ğs‚¤, ÀÛ‚ÉÄ¶‚³‚ê‚é‚Ì‚Í1ƒtƒŒ[ƒ€Œã‚Æ‚È‚é
-			//ˆø”1: ‰¹Œ¹‚ÌÀ•W
-			//ˆø”2: ‰¹Œ¹‚ÌˆÚ“®—Ê (•b‘¬)
-			//ˆø”3: ‰¹Œ¹‚Ì‘O•ûŒüƒxƒNƒgƒ‹
-			//ˆø”4: ‰¹Œ¹‚Ìã•ûŒüƒxƒNƒgƒ‹
-			//ˆø”5: ƒ‹[ƒv‰ñ”, default = 0
+			//å†ç”Ÿã‚’è¡Œã†, å®Ÿéš›ã«å†ç”Ÿã•ã‚Œã‚‹ã®ã¯1ãƒ•ãƒ¬ãƒ¼ãƒ å¾Œã¨ãªã‚‹
+			//å¼•æ•°1: éŸ³æºã®åº§æ¨™
+			//å¼•æ•°2: éŸ³æºã®ç§»å‹•é‡ (ç§’é€Ÿ)
+			//å¼•æ•°3: éŸ³æºã®å‰æ–¹å‘ãƒ™ã‚¯ãƒˆãƒ«
+			//å¼•æ•°4: éŸ³æºã®ä¸Šæ–¹å‘ãƒ™ã‚¯ãƒˆãƒ«
+			//å¼•æ•°5: ãƒ«ãƒ¼ãƒ—å›æ•°, default = 0
 			inline void Play(const Vector3 & position, const Vector3 & velocityPerSec,
 				const Vector3 & forward, const Vector3 & up, uint loopCount = 0)
 			{
 				using namespace Detail::Audio;
 
-				//Messageì¬
+				//Messageä½œæˆ
 				AudioMessage message(MessageType::Effect3DFlag | MessageType::PlayEffect3D);
 				message.attachment.playEffect3D.position = position;
 				message.attachment.playEffect3D.velocity = velocityPerSec;
@@ -112,30 +112,30 @@ namespace SGFramework
 				message.attachment.playEffect3D.up = up;
 				message.attachment.playEffect3D.loopCount = loopCount;
 				message.attachment.playEffect3D.instanceID = instanceID();
-				//Message‘—M
+				//Messageé€ä¿¡
 				Audio::SendAudioMessage(message);
 			}
 			//----------------------------------------------------------------------------------
 			//[Stop]
-			//Ä¶‚ğ‘S‚Ä’â~‚·‚é, ÀÛ‚É’â~‚³‚ê‚é‚Ì‚Í1ƒtƒŒ[ƒ€Œã‚Æ‚È‚é
+			//å†ç”Ÿã‚’å…¨ã¦åœæ­¢ã™ã‚‹, å®Ÿéš›ã«åœæ­¢ã•ã‚Œã‚‹ã®ã¯1ãƒ•ãƒ¬ãƒ¼ãƒ å¾Œã¨ãªã‚‹
 			inline void Stop()
 			{
 				using namespace Detail::Audio;
 
-				//Messageì¬
+				//Messageä½œæˆ
 				AudioMessage message(MessageType::Effect3DFlag | MessageType::StopEffect3D);
 				message.attachment.onlyInstanceID = instanceID();
-				//Message‘—M
+				//Messageé€ä¿¡
 				Audio::SendAudioMessage(message);
 			}
 
 
 			//----------------------------------------------------------------------------------
 			//[Reset3DInformation]
-			//ˆø”1: ƒXƒ€[ƒY‚É•·‚±‚¦‚é”ÍˆÍ, default = 0
-			//ˆø”2: ˆø”5‚ÌŠp“x, default = 0
-			//ˆø”3: ‰¹—ÊƒJ[ƒu‹——£‚ÌƒXƒP[ƒ‰[, default = 50 ˆø”
-			//ˆø”4: ƒhƒbƒvƒ‰[Œø‰Ê‚ÌƒXƒP[ƒ‰[, default = 50
+			//å¼•æ•°1: ã‚¹ãƒ ãƒ¼ã‚ºã«èã“ãˆã‚‹ç¯„å›², default = 0
+			//å¼•æ•°2: å¼•æ•°5ã®è§’åº¦, default = 0
+			//å¼•æ•°3: éŸ³é‡ã‚«ãƒ¼ãƒ–è·é›¢ã®ã‚¹ã‚±ãƒ¼ãƒ©ãƒ¼, default = 50 å¼•æ•°
+			//å¼•æ•°4: ãƒ‰ãƒƒãƒ—ãƒ©ãƒ¼åŠ¹æœã®ã‚¹ã‚±ãƒ¼ãƒ©ãƒ¼, default = 50
 			inline void Reset3DInformation(float innerRadius = 0.0f, float innerRadiusAngle = 0.0f,
 				float curveDistanceScaler = 50.0f, float dopplerScaler = 50.0f)
 			{
@@ -148,12 +148,12 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ManualSetCurve]
-			//‰¹Œ¹‚ÌƒJ[ƒu‚ğè“®‚Åİ’è‚·‚é (default = nullptr, ‹K’èİ’è)
-			//ˆø”1: ƒ{ƒŠƒ…[ƒ€ƒJ[ƒu, default = nullptr
-			//ˆø”2: LFEƒJ[ƒu, default = nullptr
-			//ˆø”3: LPFƒJ[ƒu, default = nullptr
-			//ˆø”4: LPFƒŠƒo[ƒuƒJ[ƒu, default = nullptr
-			//ˆø”5: ƒŠƒo[ƒuƒJ[ƒu, default = nullptr
+			//éŸ³æºã®ã‚«ãƒ¼ãƒ–ã‚’æ‰‹å‹•ã§è¨­å®šã™ã‚‹ (default = nullptr, è¦å®šè¨­å®š)
+			//å¼•æ•°1: ãƒœãƒªãƒ¥ãƒ¼ãƒ ã‚«ãƒ¼ãƒ–, default = nullptr
+			//å¼•æ•°2: LFEã‚«ãƒ¼ãƒ–, default = nullptr
+			//å¼•æ•°3: LPFã‚«ãƒ¼ãƒ–, default = nullptr
+			//å¼•æ•°4: LPFãƒªãƒãƒ¼ãƒ–ã‚«ãƒ¼ãƒ–, default = nullptr
+			//å¼•æ•°5: ãƒªãƒãƒ¼ãƒ–ã‚«ãƒ¼ãƒ–, default = nullptr
 			inline void ManualSetCurve(X3DAUDIO_DISTANCE_CURVE* volumeCurve = nullptr, X3DAUDIO_DISTANCE_CURVE* lfeCurve = nullptr,
 				X3DAUDIO_DISTANCE_CURVE* lpfDirectCurve = nullptr, X3DAUDIO_DISTANCE_CURVE* lpfRevertCurve = nullptr,
 				X3DAUDIO_DISTANCE_CURVE* reverbCurve = nullptr)
@@ -167,9 +167,9 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ResetChannelInfomation]
-			//Open‚Éw’è‚µ‚½’l‚ğÄİ’è‚·‚é (default = 0 & nullptr, ‹K’èİ’è)
-			//ˆø”1: •¡”ƒ`ƒƒƒ“ƒlƒ‹‚Ì‰¹Œ¹‚ğ’u‚­‹——£, default = 0
-			//ˆø”2: Channel Azimuths, default = nullptr
+			//Openæ™‚ã«æŒ‡å®šã—ãŸå€¤ã‚’å†è¨­å®šã™ã‚‹ (default = 0 & nullptr, è¦å®šè¨­å®š)
+			//å¼•æ•°1: è¤‡æ•°ãƒãƒ£ãƒ³ãƒãƒ«æ™‚ã®éŸ³æºã‚’ç½®ãè·é›¢, default = 0
+			//å¼•æ•°2: Channel Azimuths, default = nullptr
 			inline void ResetChannelInfomation(float channelRadius = 0.0f, float* channelAzimuths = nullptr)
 			{
 				AtomicOperation::LockAtomic(m_lock);
@@ -179,8 +179,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ResetCone]
-			//Open‚Éw’è‚µ‚½’l‚ğÄİ’è‚·‚é (default = nullptr, ‹K’èİ’è)
-			//ˆø”1: ƒI[ƒfƒBƒIƒR[ƒ“
+			//Openæ™‚ã«æŒ‡å®šã—ãŸå€¤ã‚’å†è¨­å®šã™ã‚‹ (default = nullptr, è¦å®šè¨­å®š)
+			//å¼•æ•°1: ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚³ãƒ¼ãƒ³
 			inline void ResetCone(X3DAUDIO_CONE * cone = nullptr)
 			{
 				AtomicOperation::LockAtomic(m_lock);
@@ -189,9 +189,9 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ResetCalculateFlag]
-			//Open‚Éw’è‚µ‚½’l‚ğÄİ’è‚·‚é (default = X3DAUDIO_CALCULATE_MATRIX | X3DAUDIO_CALCULATE_DOPPLER
+			//Openæ™‚ã«æŒ‡å®šã—ãŸå€¤ã‚’å†è¨­å®šã™ã‚‹ (default = X3DAUDIO_CALCULATE_MATRIX | X3DAUDIO_CALCULATE_DOPPLER
 			//		| X3DAUDIO_CALCULATE_LPF_DIRECT | X3DAUDIO_CALCULATE_REVERB | X3DAUDIO_CALCULATE_EMITTER_ANGLE)
-			//ˆø”1: ŒvZ‚Ég—p‚·‚éƒtƒ‰ƒO
+			//å¼•æ•°1: è¨ˆç®—æ™‚ã«ä½¿ç”¨ã™ã‚‹ãƒ•ãƒ©ã‚°
 			inline void ResetCalculateFlag(uint flags)
 			{
 				AtomicOperation::LockAtomic(m_lock);
@@ -213,31 +213,31 @@ namespace SGFramework
 		private:
 
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»‚ğs‚¤
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//åˆæœŸåŒ–ã‚’è¡Œã†
 			inline AudioAssetEffect3D() : BaseAudioSEAsset() {}\
 
-			//ƒfƒtƒHƒ‹ƒgŒvZƒtƒ‰ƒO
+			//ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆè¨ˆç®—ãƒ•ãƒ©ã‚°
 			static constexpr uint m_cDefaultFlags = X3DAUDIO_CALCULATE_MATRIX | X3DAUDIO_CALCULATE_DOPPLER
 				| X3DAUDIO_CALCULATE_LPF_DIRECT | X3DAUDIO_CALCULATE_REVERB | X3DAUDIO_CALCULATE_EMITTER_ANGLE;
 			
-			X3DAUDIO_EMITTER m_emitter = {};				//ƒGƒ~ƒbƒ^[
-			X3DAUDIO_EMITTER m_emitterBuffer = {};	//•ÏXƒGƒ~ƒbƒ^[
-			uint m_flagsBuffer = m_cDefaultFlags;			//X3DAudioŒvZƒtƒ‰ƒO•ÏX—p
-			uint m_flags = m_cDefaultFlags;						//X3DAudioŒvZƒtƒ‰ƒO
+			X3DAUDIO_EMITTER m_emitter = {};				//ã‚¨ãƒŸãƒƒã‚¿ãƒ¼
+			X3DAUDIO_EMITTER m_emitterBuffer = {};	//å¤‰æ›´ã‚¨ãƒŸãƒƒã‚¿ãƒ¼
+			uint m_flagsBuffer = m_cDefaultFlags;			//X3DAudioè¨ˆç®—ãƒ•ãƒ©ã‚°å¤‰æ›´ç”¨
+			uint m_flags = m_cDefaultFlags;						//X3DAudioè¨ˆç®—ãƒ•ãƒ©ã‚°
 			
 			//----------------------------------------------------------------------------------
 			//[PlayExecution]
-			//ÀÛ‚ÉÄ¶‚ğs‚¤
+			//å®Ÿéš›ã«å†ç”Ÿã‚’è¡Œã†
 			void PlayExecution(const Vector3 & position, const Vector3 & velocityPerSec,
 				const Vector3 & forward, const Vector3 & up, uint loopCount);
 			//----------------------------------------------------------------------------------
 			//[StopExecution]
-			//ÀÛ‚É’â~‚ğs‚¤
+			//å®Ÿéš›ã«åœæ­¢ã‚’è¡Œã†
 			void StopExecution();
 			//----------------------------------------------------------------------------------
 			//[ReleaseVoice]
-			//‰¹º‚ğŠJ•ú‚·‚é
+			//éŸ³å£°ã‚’é–‹æ”¾ã™ã‚‹
 			void ReleaseVoice();
 		};		
 	}

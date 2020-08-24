@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-std::wstring‚ğŠg’£‚µ‚½sgstring class
-SGFramework‚Ì•¶š—ñŒ^‚Ísgstring‚Å“ˆê‚³‚ê‚é
+std::wstringã‚’æ‹¡å¼µã—ãŸsgstring class
+SGFrameworkã®æ–‡å­—åˆ—å‹ã¯sgstringã§çµ±ä¸€ã•ã‚Œã‚‹
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_SSF_STRING_HPP_
 #define SGFRAMEWORK_HEADER_SSF_STRING_HPP_
@@ -17,50 +17,50 @@ SGFramework‚Ì•¶š—ñŒ^‚Ísgstring‚Å“ˆê‚³‚ê‚é
 //Framework namespace
 namespace SGFramework
 {
-	//std::wstring‚ğŠg’£‚µ‚½sgstring class
-	//SGFramework‚Ì•¶š—ñŒ^‚Ísgstring‚Å“ˆê‚³‚ê‚é
+	//std::wstringã‚’æ‹¡å¼µã—ãŸsgstring class
+	//SGFrameworkã®æ–‡å­—åˆ—å‹ã¯sgstringã§çµ±ä¸€ã•ã‚Œã‚‹
 	class sgstring final : public std::wstring
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//u""v‚ğƒZƒbƒg
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ã€Œ""ã€ã‚’ã‚»ãƒƒãƒˆ
 		inline sgstring() : my_functions(*this) , std::wstring(L""){}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”•¶š—ñ‚ğƒZƒbƒg, wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß
-		//ˆø”1: char•¶š—ñ
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ–‡å­—åˆ—ã‚’ã‚»ãƒƒãƒˆ, wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚
+		//å¼•æ•°1: charæ–‡å­—åˆ—
 		inline sgstring(const char* string) : my_functions(*this), std::wstring(to_unicode(string)) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”•¶š—ñ‚ğƒZƒbƒg
-		//ˆø”1: wchar•¶š—ñ
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ–‡å­—åˆ—ã‚’ã‚»ãƒƒãƒˆ
+		//å¼•æ•°1: wcharæ–‡å­—åˆ—
 		inline sgstring(const wchar* string) : my_functions(*this), std::wstring(string) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”•¶š—ñ‚ğƒZƒbƒg, wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß
-		//ˆø”1: string•¶š—ñ
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ–‡å­—åˆ—ã‚’ã‚»ãƒƒãƒˆ, wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚
+		//å¼•æ•°1: stringæ–‡å­—åˆ—
 		inline sgstring(const std::string& string) : my_functions(*this), std::wstring(to_unicode(string)) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”•¶š—ñ‚ğƒZƒbƒg
-		//ˆø”1: wstring•¶š—ñ
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ–‡å­—åˆ—ã‚’ã‚»ãƒƒãƒˆ
+		//å¼•æ•°1: wstringæ–‡å­—åˆ—
 		inline sgstring(const std::wstring& string) : my_functions(*this), std::wstring(string) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”•¶š—ñ‚ğƒZƒbƒg
-		//ˆø”1: sgstring•¶š—ñ
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ–‡å­—åˆ—ã‚’ã‚»ãƒƒãƒˆ
+		//å¼•æ•°1: sgstringæ–‡å­—åˆ—
 		inline sgstring(const sgstring& string) : my_functions(*this), std::wstring(string) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”•¶š—ñ‚ğƒZƒbƒg
-		//ˆø”1: sgstring•¶š—ñ
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ–‡å­—åˆ—ã‚’ã‚»ãƒƒãƒˆ
+		//å¼•æ•°1: sgstringæ–‡å­—åˆ—
 		inline sgstring(sgstring&& string) noexcept : my_functions(*this), std::wstring(std::move(string)) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚µ‚ÄƒZƒbƒg
-		//ˆø”1: int®”
-		//ˆø”2: 16i”•\‹L‚É‚·‚é‚©”Û‚©, default = false
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã—ã¦ã‚»ãƒƒãƒˆ
+		//å¼•æ•°1: intæ•´æ•°
+		//å¼•æ•°2: 16é€²æ•°è¡¨è¨˜ã«ã™ã‚‹ã‹å¦ã‹, default = false
 		inline sgstring(int value, bool isHexadecimal = false) : my_functions(*this)
 		{
 			if (!isHexadecimal) this->assign(std::to_wstring(value)); 
@@ -73,10 +73,10 @@ namespace SGFramework
 			}
 		}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚µ‚ÄƒZƒbƒg
-		//ˆø”1: uint®”
-		//ˆø”2: 16i”•\‹L‚É‚·‚é‚©”Û‚©, default = false
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã—ã¦ã‚»ãƒƒãƒˆ
+		//å¼•æ•°1: uintæ•´æ•°
+		//å¼•æ•°2: 16é€²æ•°è¡¨è¨˜ã«ã™ã‚‹ã‹å¦ã‹, default = false
 		inline sgstring(uint value, bool isHexadecimal = false) : my_functions(*this)
 		{
 			if (!isHexadecimal) this->assign(std::to_wstring(value));
@@ -89,10 +89,10 @@ namespace SGFramework
 			}
 		}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚µ‚ÄƒZƒbƒg
-		//ˆø”1: long®”
-		//ˆø”2: 16i”•\‹L‚É‚·‚é‚©”Û‚©, default = false
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã—ã¦ã‚»ãƒƒãƒˆ
+		//å¼•æ•°1: longæ•´æ•°
+		//å¼•æ•°2: 16é€²æ•°è¡¨è¨˜ã«ã™ã‚‹ã‹å¦ã‹, default = false
 		inline sgstring(long value, bool isHexadecimal = false) : my_functions(*this)
 		{
 			if (!isHexadecimal) this->assign(std::to_wstring(value));
@@ -105,10 +105,10 @@ namespace SGFramework
 			}
 		}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚µ‚ÄƒZƒbƒg
-		//ˆø”1: ulong®”
-		//ˆø”2: 16i”•\‹L‚É‚·‚é‚©”Û‚©, default = false
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã—ã¦ã‚»ãƒƒãƒˆ
+		//å¼•æ•°1: ulongæ•´æ•°
+		//å¼•æ•°2: 16é€²æ•°è¡¨è¨˜ã«ã™ã‚‹ã‹å¦ã‹, default = false
 		inline sgstring(ulong value, bool isHexadecimal = false) : my_functions(*this)
 		{
 			if (!isHexadecimal) this->assign(std::to_wstring(value));
@@ -121,10 +121,10 @@ namespace SGFramework
 			}
 		}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚µ‚ÄƒZƒbƒg
-		//ˆø”1: int64®”
-		//ˆø”2: 16i”•\‹L‚É‚·‚é‚©”Û‚©, default = false
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã—ã¦ã‚»ãƒƒãƒˆ
+		//å¼•æ•°1: int64æ•´æ•°
+		//å¼•æ•°2: 16é€²æ•°è¡¨è¨˜ã«ã™ã‚‹ã‹å¦ã‹, default = false
 		inline sgstring(int64 value, bool isHexadecimal = false) : my_functions(*this)
 		{
 			if (!isHexadecimal) this->assign(std::to_wstring(value));
@@ -137,10 +137,10 @@ namespace SGFramework
 			}
 		}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚µ‚ÄƒZƒbƒg
-		//ˆø”1: uint64®”
-		//ˆø”2: 16i”•\‹L‚É‚·‚é‚©”Û‚©, default = false
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã—ã¦ã‚»ãƒƒãƒˆ
+		//å¼•æ•°1: uint64æ•´æ•°
+		//å¼•æ•°2: 16é€²æ•°è¡¨è¨˜ã«ã™ã‚‹ã‹å¦ã‹, default = false
 		inline sgstring(uint64 value, bool isHexadecimal = false) : my_functions(*this)
 		{
 			if (!isHexadecimal) this->assign(std::to_wstring(value));
@@ -153,21 +153,21 @@ namespace SGFramework
 			}
 		}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚µ‚ÄƒZƒbƒg
-		//ˆø”1: floatÀ”
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã—ã¦ã‚»ãƒƒãƒˆ
+		//å¼•æ•°1: floatå®Ÿæ•°
 		inline sgstring(float value) : my_functions(*this),  std::wstring(std::to_wstring(value)) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚µ‚ÄƒZƒbƒg
-		//ˆø”1: floatÀ”
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã—ã¦ã‚»ãƒƒãƒˆ
+		//å¼•æ•°1: floatå®Ÿæ•°
 		inline sgstring(double value) : my_functions(*this), std::wstring(std::to_wstring(value)) {}
 
 		//----------------------------------------------------------------------------------
 		//[to_unicode]
-		//char•¶š—ñ‚ğwcharŒ`®‚É•ÏŠ·
-		//return: •ÏŠ·•¶š—ñ
-		//ˆø”1: char•¶š—ñ
+		//charæ–‡å­—åˆ—ã‚’wcharå½¢å¼ã«å¤‰æ›
+		//return: å¤‰æ›æ–‡å­—åˆ—
+		//å¼•æ•°1: charæ–‡å­—åˆ—
 		inline static sgstring to_unicode(const char* string)
 		{
 			std::string toStd = string;
@@ -179,9 +179,9 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[to_unicode]
-		//char•¶š—ñ‚ğwcharŒ`®‚É•ÏŠ·
-		//return: •ÏŠ·•¶š—ñ
-		//ˆø”1: char•¶š—ñ
+		//charæ–‡å­—åˆ—ã‚’wcharå½¢å¼ã«å¤‰æ›
+		//return: å¤‰æ›æ–‡å­—åˆ—
+		//å¼•æ•°1: charæ–‡å­—åˆ—
 		inline static sgstring to_unicode(const std::string& string)
 		{
 			int inLength = static_cast<int>(string.length());
@@ -193,66 +193,66 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[to_sgstring]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚·‚é
-		//return: •ÏŠ·•¶š—ñ
-		//ˆø”1: int®”
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã™ã‚‹
+		//return: å¤‰æ›æ–‡å­—åˆ—
+		//å¼•æ•°1: intæ•´æ•°
 		inline static sgstring to_sgstring(int value) { return std::to_wstring(value); }
 		//----------------------------------------------------------------------------------
 		//[to_sgstring]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚·‚é
-		//return: •ÏŠ·•¶š—ñ
-		//ˆø”1: uint®”
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã™ã‚‹
+		//return: å¤‰æ›æ–‡å­—åˆ—
+		//å¼•æ•°1: uintæ•´æ•°
 		inline static sgstring to_sgstring(uint value) { return std::to_wstring(value); }
 		//----------------------------------------------------------------------------------
 		//[to_sgstring]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚·‚é
-		//return: •ÏŠ·•¶š—ñ
-		//ˆø”1: long®”
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã™ã‚‹
+		//return: å¤‰æ›æ–‡å­—åˆ—
+		//å¼•æ•°1: longæ•´æ•°
 		inline static sgstring to_sgstring(long value) { return std::to_wstring(value); }
 		//----------------------------------------------------------------------------------
 		//[to_sgstring]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚·‚é
-		//return: •ÏŠ·•¶š—ñ
-		//ˆø”1: ulong®”
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã™ã‚‹
+		//return: å¤‰æ›æ–‡å­—åˆ—
+		//å¼•æ•°1: ulongæ•´æ•°
 		inline static sgstring to_sgstring(ulong value) { return std::to_wstring(value); }
 		//----------------------------------------------------------------------------------
 		//[to_sgstring]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚·‚é
-		//return: •ÏŠ·•¶š—ñ
-		//ˆø”1: int64®”
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã™ã‚‹
+		//return: å¤‰æ›æ–‡å­—åˆ—
+		//å¼•æ•°1: int64æ•´æ•°
 		inline static sgstring to_sgstring(int64 value) { return std::to_wstring(value); }
 		//----------------------------------------------------------------------------------
 		//[to_sgstring]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚·‚é
-		//return: •ÏŠ·•¶š—ñ
-		//ˆø”1: uint64®”
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã™ã‚‹
+		//return: å¤‰æ›æ–‡å­—åˆ—
+		//å¼•æ•°1: uint64æ•´æ•°
 		inline static sgstring to_sgstring(uint64 value) { return std::to_wstring(value); }
 		//----------------------------------------------------------------------------------
 		//[to_sgstring]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚·‚é
-		//return: •ÏŠ·•¶š—ñ
-		//ˆø”1: float®”
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã™ã‚‹
+		//return: å¤‰æ›æ–‡å­—åˆ—
+		//å¼•æ•°1: floatæ•´æ•°
 		inline static sgstring to_sgstring(float value) { return std::to_wstring(value); }
 		//----------------------------------------------------------------------------------
 		//[to_sgstring]
-		//ˆø””š‚ğ•¶š—ñ•ÏŠ·‚·‚é
-		//return: •ÏŠ·•¶š—ñ
-		//ˆø”1: double®”
+		//å¼•æ•°æ•°å­—ã‚’æ–‡å­—åˆ—å¤‰æ›ã™ã‚‹
+		//return: å¤‰æ›æ–‡å­—åˆ—
+		//å¼•æ•°1: doubleæ•´æ•°
 		inline static sgstring to_sgstring(double value) { return std::to_wstring(value); }
 
 
 		//----------------------------------------------------------------------------------
 		//[to_std_string]
-		//©g‚ğstd::2string‚É•ÏŠ·
-		//return: •ÏŠ·•¶š—ñ
+		//è‡ªèº«ã‚’std::2stringã«å¤‰æ›
+		//return: å¤‰æ›æ–‡å­—åˆ—
 		inline std::wstring to_std_wstring() const
 		{
 			return *this;
 		}
 		//----------------------------------------------------------------------------------
 		//[to_std_string]
-		//©g‚ğstd::string‚É•ÏŠ·
-		//return: •ÏŠ·•¶š—ñ
+		//è‡ªèº«ã‚’std::stringã«å¤‰æ›
+		//return: å¤‰æ›æ–‡å­—åˆ—
 		inline std::string to_std_string() const
 		{
 			int inLength = static_cast<int>(this->length());
@@ -272,45 +272,45 @@ namespace SGFramework
 		inline std::wstring  operator = (const std::wstring&& string) { return (this->assign(string)); }
 		//= operator
 		inline sgstring& operator = (sgstring&& string) = default;
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (const char* string) { return (this->assign(to_unicode(string))); }
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (const wchar* string) { return (this->assign(string)); }
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (const wchar string) { this->clear(); this->push_back(string); return *this; }
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (const std::string& string) { return (this->assign(to_unicode(string))); }
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (const std::wstring& string) { return (this->assign(string)); }
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (const sgstring& string) { return (this->assign(string)); }
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (int value) { return (this->assign(std::to_wstring(value))); }
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (uint value) { return (this->assign(std::to_wstring(value))); }
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (long value) { return (this->assign(std::to_wstring(value))); }
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (ulong value) { return (this->assign(std::to_wstring(value))); }
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (int64 value) { return (this->assign(std::to_wstring(value))); }
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (uint64 value) { return (this->assign(std::to_wstring(value))); }
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (float value) { return (this->assign(std::to_wstring(value))); }
-		//= operator(‚È‚é‚×‚éwcahr‚ğg‚¤‚±‚Æ)
+		//= operator(ãªã‚‹ã¹ã‚‹wcahrã‚’ä½¿ã†ã“ã¨)
 		inline std::wstring  operator = (double value) { return (this->assign(std::to_wstring(value))); }
 
-		//+ operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+ operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring  operator + (const char* string) const { return (*this + to_unicode(string)); }
-		//+ operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+ operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring  operator + (const std::string& string) const { return (*this + to_unicode(string)); }
 		//+ operator
 		inline std::wstring  operator + (wchar string) const { wchar add[] = { string, L'\0' }; return (*this + string); }
 
-		//+= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator += (const char* string) { return (this->append(to_unicode(string))); }
-		//+= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator += (const std::string& string) { return (this->append(to_unicode(string))); }
 		//+= operator
 		inline std::wstring operator += (const wchar* string) { return (this->append(string)); }
@@ -321,48 +321,48 @@ namespace SGFramework
 		//+= operator
 		inline std::wstring operator += (const sgstring& string) { return (this->append(string)); }
 
-		//+ operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+ operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator + (int value) const { return *this + std::to_wstring(value); }
-		//+ operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+ operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator + (uint value) const { return *this + std::to_wstring(value); };
-		//+ operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+ operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator + (long value) const { return *this + std::to_wstring(value); };
-		//+ operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+ operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator + (ulong value) const { return *this + std::to_wstring(value); };
-		//+ operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+ operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator + (int64 value) const { return *this + std::to_wstring(value); };
-		//+ operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+ operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator + (uint64 value) const { return *this + std::to_wstring(value); };
-		//+ operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+ operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator + (float value) const { return *this + std::to_wstring(value); };
-		//+ operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+ operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator + (double value) const { return *this + std::to_wstring(value); };
 
-		//+= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator += (int value) { return (this->append(std::to_wstring(value))); }
-		//+= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator += (uint value) { return (this->append(std::to_wstring(value))); }
-		//+= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator += (long value) { return (this->append(std::to_wstring(value))); }
-		//+= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator += (ulong value) { return (this->append(std::to_wstring(value))); }
-		//+= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator += (int64 value) { return (this->append(std::to_wstring(value))); }
-		//+= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator += (uint64 value) { return (this->append(std::to_wstring(value))); }
-		//+= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator += (float value) { return (this->append(std::to_wstring(value))); }
-		//+= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//+= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline std::wstring operator += (double value) { return (this->append(std::to_wstring(value))); }
 
-		//= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//ï¼= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline bool operator == (const char* string) const { return (*this == to_unicode(string)); }
-		//= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//ï¼= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline bool operator == (const std::string& string) const { return (*this == to_unicode(string)); }
 		
-		//!= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//!= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline bool operator != (const char* string) const { return (*this != to_unicode(string)); }
-		//!= operator(wcharŒ`®‚É•ÏŠ·‚ğs‚¤‚Ì‚Åd‚ß)
+		//!= operator(wcharå½¢å¼ã«å¤‰æ›ã‚’è¡Œã†ã®ã§é‡ã‚)
 		inline bool operator != (const std::string& string) const { return (*this != to_unicode(string)); }
 	
 
@@ -378,25 +378,25 @@ namespace SGFramework
 			public:
 				//----------------------------------------------------------------------------------
 				//[Split]
-				//•¶š—ñ‚ğdellimiter‚ğ‹æØ‚è‚Æ‚µ‚Ä•ªŠ„‚·‚é
-				//return: •ªŠ„‚µ‚½•¶š—ñ‚ğ‘ã“ü‚µ‚½vector
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2 : delimiter = Default: ','
-				//ˆø”3 : \0œ‚­ÅŒã‚Ì—v‘f‚ª\n‚¾‚Á‚½ê‡true‚È‚çíœ = Default: false 
+				//æ–‡å­—åˆ—ã‚’dellimiterã‚’åŒºåˆ‡ã‚Šã¨ã—ã¦åˆ†å‰²ã™ã‚‹
+				//return: åˆ†å‰²ã—ãŸæ–‡å­—åˆ—ã‚’ä»£å…¥ã—ãŸvector
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2 : delimiter = Default: ','
+				//å¼•æ•°3 : \0é™¤ãæœ€å¾Œã®è¦ç´ ãŒ\nã ã£ãŸå ´åˆtrueãªã‚‰å‰Šé™¤ = Default: false 
 				inline static std::vector<sgstring> Split(const sgstring& string, wchar delimiter = L',', bool isNewLineDelete = false)
 				{
 					if (string.empty()) return std::vector<sgstring>();
 
-					std::vector<sgstring> ret;						//•Ô‚è’l
-					std::wstring getString = string;				//•ªŠ„‚·‚éstring
-					std::wstring buf;									//getline—p‚Ìƒoƒbƒtƒ@
-					std::wstringstream sStream(getString);	//getline—p‚Ìstream
+					std::vector<sgstring> ret;						//è¿”ã‚Šå€¤
+					std::wstring getString = string;				//åˆ†å‰²ã™ã‚‹string
+					std::wstring buf;									//getlineç”¨ã®ãƒãƒƒãƒ•ã‚¡
+					std::wstringstream sStream(getString);	//getlineç”¨ã®stream
 
-					//‰üsíœ = true ‚ÅÅŒã‚Ì•¶š‚ª‰üs‚È‚çíœ
+					//æ”¹è¡Œå‰Šé™¤ = true ã§æœ€å¾Œã®æ–‡å­—ãŒæ”¹è¡Œãªã‚‰å‰Šé™¤
 					if (isNewLineDelete && getString[getString.size() - 1] == L'\n')
 						getString.erase(getString.size() - 1);
 
-					//‹æØ‚è•¶š‚ğ‚à‚Æ‚É—v‘fæ“¾‚ğs‚¢—v‘f‚ğstring vector‚É’Ç‰Á
+					//åŒºåˆ‡ã‚Šæ–‡å­—ã‚’ã‚‚ã¨ã«è¦ç´ å–å¾—ã‚’è¡Œã„è¦ç´ ã‚’string vectorã«è¿½åŠ 
 					while (std::getline(sStream, buf, delimiter))
 						ret.emplace_back(buf);
 
@@ -404,55 +404,55 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[Split]
-				//•¶š—ñ‚ğdellimiter‚ğ‹æØ‚è‚Æ‚µ‚Ä•ªŠ„‚·‚é
-				//ˆø”1: •ªŠ„‚µ‚½•¶š—ñ‚ğ‘ã“ü‚·‚évector
-				//ˆø”2: ‘ÎÛ•¶š—ñ
-				//ˆø”3: delimiter = Default: ','
-				//ˆø”4: \0œ‚­ÅŒã‚Ì—v‘f‚ª\n‚¾‚Á‚½ê‡true‚È‚çíœ = Default: false 
+				//æ–‡å­—åˆ—ã‚’dellimiterã‚’åŒºåˆ‡ã‚Šã¨ã—ã¦åˆ†å‰²ã™ã‚‹
+				//å¼•æ•°1: åˆ†å‰²ã—ãŸæ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹vector
+				//å¼•æ•°2: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°3: delimiter = Default: ','
+				//å¼•æ•°4: \0é™¤ãæœ€å¾Œã®è¦ç´ ãŒ\nã ã£ãŸå ´åˆtrueãªã‚‰å‰Šé™¤ = Default: false 
 				inline static void Split(std::vector<sgstring>& write, const sgstring& string, wchar delimiter = L',', bool isNewLineDelete = false)
 				{
-					std::wstring getString = string;				//•ªŠ„‚·‚éstring
-					std::wstring buf;									//getline—p‚Ìƒoƒbƒtƒ@
-					std::wstringstream sStream(getString);	//getline—p‚Ìstream
+					std::wstring getString = string;				//åˆ†å‰²ã™ã‚‹string
+					std::wstring buf;									//getlineç”¨ã®ãƒãƒƒãƒ•ã‚¡
+					std::wstringstream sStream(getString);	//getlineç”¨ã®stream
 
-					//‰üsíœ = true ‚ÅÅŒã‚Ì•¶š‚ª‰üs‚È‚çíœ
+					//æ”¹è¡Œå‰Šé™¤ = true ã§æœ€å¾Œã®æ–‡å­—ãŒæ”¹è¡Œãªã‚‰å‰Šé™¤
 					if (isNewLineDelete && getString[getString.size() - 1] == L'\n')
 						getString.erase(getString.size() - 1);
 
-					//‹æØ‚è•¶š‚ğ‚à‚Æ‚É—v‘fæ“¾‚ğs‚¢—v‘f‚ğstring vector‚É’Ç‰Á
+					//åŒºåˆ‡ã‚Šæ–‡å­—ã‚’ã‚‚ã¨ã«è¦ç´ å–å¾—ã‚’è¡Œã„è¦ç´ ã‚’string vectorã«è¿½åŠ 
 					while (std::getline(sStream, buf, delimiter))
 						write.emplace_back(buf);
 				}
 
 				//----------------------------------------------------------------------------------
 				//[Join]
-				//joinstring‚ğdelimiter‚ğ‹æØ‚è‚Æ‚µ˜AŒ‹‚·‚é
-				//return: ˜AŒ‹‚µ‚½sgstring
-				//ˆø”1: ‘ÎÛ•¶š—ñvector
-				//ˆø”2 : delimiter = Default: ','
-				//ˆø”3: Œ‹‰Ê‚ÌÅŒã‚É‰üs‚ğ’Ç‰Á‚·‚é‚©
+				//joinstringã‚’delimiterã‚’åŒºåˆ‡ã‚Šã¨ã—é€£çµã™ã‚‹
+				//return: é€£çµã—ãŸsgstring
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—vector
+				//å¼•æ•°2 : delimiter = Default: ','
+				//å¼•æ•°3: çµæœã®æœ€å¾Œã«æ”¹è¡Œã‚’è¿½åŠ ã™ã‚‹ã‹
 				inline static sgstring Join(const std::vector<sgstring>& joinString, wchar delimiter, bool isNewLine)
 				{
-					sgstring result;	 //•Ô‚è’l
+					sgstring result;	 //è¿”ã‚Šå€¤
 					for (const auto& e : joinString)
 					{
 						result.append(e);
 						result.push_back(delimiter);
 					}
 
-					//ret‚ª—v‘f‚ ‚è‚È‚çÅŒã‚Ì‹æØ‚è•¶šíœ
+					//retãŒè¦ç´ ã‚ã‚Šãªã‚‰æœ€å¾Œã®åŒºåˆ‡ã‚Šæ–‡å­—å‰Šé™¤
 					if (result.size())		result.erase(result.end() - 1);
-					//ret‚ª—v‘f‚ ‚è & Œ‹‰Ê‚ÌÅŒã‚É‰üs = true‚È‚çÅŒã‚É‰üs’Ç‰Á
+					//retãŒè¦ç´ ã‚ã‚Š & çµæœã®æœ€å¾Œã«æ”¹è¡Œ = trueãªã‚‰æœ€å¾Œã«æ”¹è¡Œè¿½åŠ 
 					if (result.size() && isNewLine) result.push_back(L'\n');
 					return std::move(result);
 				}
 				//----------------------------------------------------------------------------------
 				//[Join]
-				//joinstring‚ğdelimiter‚ğ‹æØ‚è‚Æ‚µ˜AŒ‹‚·‚é
-				//ˆø”1: ˜AŒ‹‘ã“ü‚·‚ésgstring
-				//ˆø”2: ‘ÎÛ•¶š—ñvector
-				//ˆø”3: delimiter = Default: ','
-				//ˆø”4: Œ‹‰Ê‚ÌÅŒã‚É‰üs‚ğ’Ç‰Á‚·‚é‚©
+				//joinstringã‚’delimiterã‚’åŒºåˆ‡ã‚Šã¨ã—é€£çµã™ã‚‹
+				//å¼•æ•°1: é€£çµä»£å…¥ã™ã‚‹sgstring
+				//å¼•æ•°2: å¯¾è±¡æ–‡å­—åˆ—vector
+				//å¼•æ•°3: delimiter = Default: ','
+				//å¼•æ•°4: çµæœã®æœ€å¾Œã«æ”¹è¡Œã‚’è¿½åŠ ã™ã‚‹ã‹
 				inline static void Join(sgstring& write, const std::vector<sgstring>& joinString, wchar delimiter, bool isNewLine)
 				{
 					for (const auto& e : joinString)
@@ -461,17 +461,17 @@ namespace SGFramework
 						write.push_back(delimiter);
 					}
 
-					//ret‚ª—v‘f‚ ‚è‚È‚çÅŒã‚Ì‹æØ‚è•¶šíœ
+					//retãŒè¦ç´ ã‚ã‚Šãªã‚‰æœ€å¾Œã®åŒºåˆ‡ã‚Šæ–‡å­—å‰Šé™¤
 					if (write.size())		write.erase(write.end() - 1);
-					//ret‚ª—v‘f‚ ‚è & Œ‹‰Ê‚ÌÅŒã‚É‰üs = true‚È‚çÅŒã‚É‰üs’Ç‰Á
+					//retãŒè¦ç´ ã‚ã‚Š & çµæœã®æœ€å¾Œã«æ”¹è¡Œ = trueãªã‚‰æœ€å¾Œã«æ”¹è¡Œè¿½åŠ 
 					if (write.size() && isNewLine) write.push_back(L'\n');
 				}
 
 				//----------------------------------------------------------------------------------
 				//[ToUnicode]
-				//char•¶š—ñ‚ğwcharŒ`®‚É•ÏŠ·
-				//return: •ÏŠ·•¶š—ñ
-				//ˆø”1: char•¶š—ñ
+				//charæ–‡å­—åˆ—ã‚’wcharå½¢å¼ã«å¤‰æ›
+				//return: å¤‰æ›æ–‡å­—åˆ—
+				//å¼•æ•°1: charæ–‡å­—åˆ—
 				inline static sgstring ToUnicode(const char* string)
 				{
 					std::string toStd = string;
@@ -483,9 +483,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToUnicode]
-				//char•¶š—ñ‚ğwcharŒ`®‚É•ÏŠ·
-				//return: •ÏŠ·•¶š—ñ
-				//ˆø”1: char•¶š—ñ
+				//charæ–‡å­—åˆ—ã‚’wcharå½¢å¼ã«å¤‰æ›
+				//return: å¤‰æ›æ–‡å­—åˆ—
+				//å¼•æ•°1: charæ–‡å­—åˆ—
 				inline static sgstring ToUnicode(const std::string& string)
 				{
 					int inLength = static_cast<int>(string.length());
@@ -496,55 +496,55 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[IndexOf]
-				//©g‚Ì•¶š—ñ‚Ìæ“ª‚©‚çstring‚ğŒŸõ‚·‚é, IndexOf == find
-				//return: ‚ ‚Á‚½ê‡‚Íæ“ª‚Ì“Yš, ‚È‚¯‚ê‚Înpos
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: ŒŸõ•¶š—ñ
+				//è‡ªèº«ã®æ–‡å­—åˆ—ã®å…ˆé ­ã‹ã‚‰stringã‚’æ¤œç´¢ã™ã‚‹, IndexOf == find
+				//return: ã‚ã£ãŸå ´åˆã¯å…ˆé ­ã®æ·»å­—, ãªã‘ã‚Œã°npos
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: æ¤œç´¢æ–‡å­—åˆ—
 				inline static size_t IndexOf(const sgstring& string1, const sgstring& string2) { return string1.find_first_of(string2); }
 				//----------------------------------------------------------------------------------
 				//[IndexFirstOf]
-				//©g‚Ì•¶š—ñ‚Ìæ“ª‚©‚çstring‚ğŒŸõ‚·‚é, IndexFirstOf == find
-				//return: ‚ ‚Á‚½ê‡‚Íæ“ª‚Ì“Yš, ‚È‚¯‚ê‚Înpos
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: ŒŸõ•¶š—ñ
+				//è‡ªèº«ã®æ–‡å­—åˆ—ã®å…ˆé ­ã‹ã‚‰stringã‚’æ¤œç´¢ã™ã‚‹, IndexFirstOf == find
+				//return: ã‚ã£ãŸå ´åˆã¯å…ˆé ­ã®æ·»å­—, ãªã‘ã‚Œã°npos
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: æ¤œç´¢æ–‡å­—åˆ—
 				inline static size_t IndexFirstOf(const sgstring& string1, const sgstring& string2) { return string1.find(string2); }
 				//----------------------------------------------------------------------------------
 				//[IndexLastOf]
-				//©g‚Ì•¶š—ñ‚ÌÅŒã‚©‚çstring‚ğŒŸõ‚·‚é, IndexLastOf == rfind
-				//return: ‚ ‚Á‚½ê‡‚Íæ“ª‚Ì“Yš, ‚È‚¯‚ê‚Înpos
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: ŒŸõ•¶š—ñ
+				//è‡ªèº«ã®æ–‡å­—åˆ—ã®æœ€å¾Œã‹ã‚‰stringã‚’æ¤œç´¢ã™ã‚‹, IndexLastOf == rfind
+				//return: ã‚ã£ãŸå ´åˆã¯å…ˆé ­ã®æ·»å­—, ãªã‘ã‚Œã°npos
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: æ¤œç´¢æ–‡å­—åˆ—
 				inline static size_t IndexLastOf(const sgstring& string1, const sgstring& string2) { return string1.rfind(string2); }
 				//----------------------------------------------------------------------------------
 				//[IsStartWith]
-				//©g‚Ì•¶š—ñ‚ÌÅ‰‚Æstring‚ğ”äŠr‚·‚é
-				//return: ©g‚Ì•¶š—ñ‚ªstring‚©‚çn‚Ü‚Á‚Ä‚¢‚ê‚Îtrue
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: ŒŸõ•¶š—ñ
+				//è‡ªèº«ã®æ–‡å­—åˆ—ã®æœ€åˆã¨stringã‚’æ¯”è¼ƒã™ã‚‹
+				//return: è‡ªèº«ã®æ–‡å­—åˆ—ãŒstringã‹ã‚‰å§‹ã¾ã£ã¦ã„ã‚Œã°true
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: æ¤œç´¢æ–‡å­—åˆ—
 				inline static bool IsStartWith(const sgstring& string1, const sgstring& string2) { return (string1.length() >= string2.length() && std::equal(string2.begin(), string2.end(), string1.begin())); }
 				//----------------------------------------------------------------------------------
 				//[IsEndWith]
-				//©g‚Ì•¶š—ñ‚ÌÅŒã‚Æstring‚ğ”äŠr‚·‚é
-				//return: ©g‚Ì•¶š—ñ‚ªstring‚ÅI‚í‚Á‚Ä‚¢‚ê‚Îtrue
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: ŒŸõ•¶š—ñ
+				//è‡ªèº«ã®æ–‡å­—åˆ—ã®æœ€å¾Œã¨stringã‚’æ¯”è¼ƒã™ã‚‹
+				//return: è‡ªèº«ã®æ–‡å­—åˆ—ãŒstringã§çµ‚ã‚ã£ã¦ã„ã‚Œã°true
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: æ¤œç´¢æ–‡å­—åˆ—
 				inline static bool IsEndWith(const sgstring& string1, const sgstring& string2) { return (string1.length() >= string2.length() && std::equal(string2.rbegin(), string2.rend(), string1.rbegin())); }
 				//----------------------------------------------------------------------------------
 				//[IsContains]
-				//©g‚Ì•¶š—ñ‚Éstring‚ª‚ ‚é‚©Šm”F‚·‚é
-				//return: ©g‚Ì•¶š—ñ‚Éstring‚ªŠÜ‚Ü‚ê‚Ä‚¢‚ê‚Îtrue
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: ŒŸõ•¶š—ñ
+				//è‡ªèº«ã®æ–‡å­—åˆ—ã«stringãŒã‚ã‚‹ã‹ç¢ºèªã™ã‚‹
+				//return: è‡ªèº«ã®æ–‡å­—åˆ—ã«stringãŒå«ã¾ã‚Œã¦ã„ã‚Œã°true
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: æ¤œç´¢æ–‡å­—åˆ—
 				inline static bool IsContains(const sgstring& string1, const sgstring& string2) {
 					auto result = (string1.find(string2));
 					return (result >= 0 && result != sgstring::npos);
 				}
 				//----------------------------------------------------------------------------------
 				//[IsFirstOfNumbers]
-				//string‚Ì•¶š—ñ‚Ìæ“ª‚ª”š•¶š—ñ‚©Šm”F‚·‚é
-				//return: string‚Ìæ“ª•¶š‚ª”š‚È‚ç‚Îtrue
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: ‹ó”’•¶š‚ªæ“ª‚É‚ ‚èA‚»‚ÌŒã‚ª”š•¶š—ñ‚Ìê‡‹ó”’íœ‚µ‚Ätrue?, default = true
+				//stringã®æ–‡å­—åˆ—ã®å…ˆé ­ãŒæ•°å­—æ–‡å­—åˆ—ã‹ç¢ºèªã™ã‚‹
+				//return: stringã®å…ˆé ­æ–‡å­—ãŒæ•°å­—ãªã‚‰ã°true
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: ç©ºç™½æ–‡å­—ãŒå…ˆé ­ã«ã‚ã‚Šã€ãã®å¾ŒãŒæ•°å­—æ–‡å­—åˆ—ã®å ´åˆç©ºç™½å‰Šé™¤ã—ã¦true?, default = true
 				inline static bool IsFirstOfNumbers(sgstring& string, bool ifBlankDelete = true)
 				{
 					if (string.empty()) return false;
@@ -583,38 +583,38 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[ToX16]
-				//”š•¶š—ñ‚ğ16i”•\‹L‚É•ÏŠ·‚·‚é
-				//throw: ”š‚É•ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ•¶š—ñ
+				//æ•°å­—æ–‡å­—åˆ—ã‚’16é€²æ•°è¡¨è¨˜ã«å¤‰æ›ã™ã‚‹
+				//throw: æ•°å­—ã«å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
 				static sgstring ToX16(const sgstring& string);
 				//----------------------------------------------------------------------------------
 				//[ToX10]
-				//”š•¶š—ñ‚ğ10i”•\‹L‚É•ÏŠ·‚·‚é
-				//throw: ”š‚É•ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ•¶š—ñ
+				//æ•°å­—æ–‡å­—åˆ—ã‚’10é€²æ•°è¡¨è¨˜ã«å¤‰æ›ã™ã‚‹
+				//throw: æ•°å­—ã«å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
 				static sgstring ToX10(const sgstring& string);
 				//----------------------------------------------------------------------------------
 				//[ToX8]
-				//”š•¶š—ñ‚ğ8i”•\‹L‚É•ÏŠ·‚·‚é
-				//throw: ”š‚É•ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ•¶š—ñ
+				//æ•°å­—æ–‡å­—åˆ—ã‚’8é€²æ•°è¡¨è¨˜ã«å¤‰æ›ã™ã‚‹
+				//throw: æ•°å­—ã«å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
 				static sgstring ToX8(const sgstring& string);
 				//----------------------------------------------------------------------------------
 				//[ToX2]
-				//”š•¶š—ñ‚ğ2i”•\‹L‚É•ÏŠ·‚·‚é
-				//throw: ”š‚É•ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ•¶š—ñ
+				//æ•°å­—æ–‡å­—åˆ—ã‚’2é€²æ•°è¡¨è¨˜ã«å¤‰æ›ã™ã‚‹
+				//throw: æ•°å­—ã«å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
 				static sgstring ToX2(const sgstring& string);
 
 				//----------------------------------------------------------------------------------
 				//[ToX16String]
-				//”š‚ğ16i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’16é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX16String(int value)
 				{
 					std::wstringstream stream;
@@ -624,9 +624,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX16String]
-				//”š‚ğ16i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’16é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX16String(uint value)
 				{
 					std::wstringstream stream;
@@ -636,9 +636,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX16String]
-				//”š‚ğ16i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’16é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX16String(long value)
 				{
 					std::wstringstream stream;
@@ -648,9 +648,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX16String]
-				//”š‚ğ16i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’16é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX16String(ulong value)
 				{
 					std::wstringstream stream;
@@ -660,9 +660,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX16String]
-				//”š‚ğ16i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’16é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX16String(int64 value)
 				{
 					std::wstringstream stream;
@@ -672,9 +672,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX16String]
-				//”š‚ğ16i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’16é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX16String(uint64 value)
 				{
 					std::wstringstream stream;
@@ -685,9 +685,9 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[ToX8String]
-				//”š‚ğ8i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’8é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX8String(int value)
 				{
 					std::wstringstream stream;
@@ -697,9 +697,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX8String]
-				//”š‚ğ8i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’8é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX8String(uint value)
 				{
 					std::wstringstream stream;
@@ -709,9 +709,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX8String]
-				//”š‚ğ8i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’8é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX8String(long value)
 				{
 					std::wstringstream stream;
@@ -721,9 +721,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX8String]
-				//”š‚ğ8i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’8é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX8String(ulong value)
 				{
 					std::wstringstream stream;
@@ -733,9 +733,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX8String]
-				//”š‚ğ8i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’8é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX8String(int64 value)
 				{
 					std::wstringstream stream;
@@ -745,9 +745,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX8String]
-				//”š‚ğ8i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’8é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX8String(uint64 value)
 				{
 					std::wstringstream stream;
@@ -758,9 +758,9 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[ToX2String]
-				//”š‚ğ2i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’2é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX2String(int value)
 				{
 					std::wstringstream stream;
@@ -770,9 +770,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX2String]
-				//”š‚ğ2i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’2é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX2String(uint value)
 				{
 					std::wstringstream stream;
@@ -782,9 +782,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX2String]
-				//”š‚ğ2i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’2é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX2String(long value)
 				{
 					std::wstringstream stream;
@@ -794,9 +794,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX2String]
-				//”š‚ğ2i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’2é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX2String(ulong value)
 				{
 					std::wstringstream stream;
@@ -806,9 +806,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX2String]
-				//”š‚ğ2i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’2é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX2String(int64 value)
 				{
 					std::wstringstream stream;
@@ -818,9 +818,9 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToX2String]
-				//”š‚ğ2i”•\‹L•¶š—ñ‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’2é€²æ•°è¡¨è¨˜æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToX2String(uint64 value)
 				{
 					std::wstringstream stream;
@@ -832,111 +832,111 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[ToInt]
-				//•¶š—ñ‚ğint‚É•ÏŠ·‚·‚é
-				//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-				//return: •ÏŠ·‚µ‚½’l
-				//ˆø”1: ‘ÎÛ•¶š—ñ
+				//æ–‡å­—åˆ—ã‚’intã«å¤‰æ›ã™ã‚‹
+				//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+				//return: å¤‰æ›ã—ãŸå€¤
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
 				static int ToInt(const sgstring& string);
 				//----------------------------------------------------------------------------------
 				//[ToLong]
-				//•¶š—ñ‚ğlong‚É•ÏŠ·‚·‚é
-				//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-				//return: •ÏŠ·‚µ‚½’l
-				//ˆø”1: ‘ÎÛ•¶š—ñ
+				//æ–‡å­—åˆ—ã‚’longã«å¤‰æ›ã™ã‚‹
+				//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+				//return: å¤‰æ›ã—ãŸå€¤
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
 				static long ToLong(const sgstring& string);
 				//----------------------------------------------------------------------------------
 				//[ToUlong]
-				//•¶š—ñ‚ğulong‚É•ÏŠ·‚·‚é
-				//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-				//return: •ÏŠ·‚µ‚½’l
-				//ˆø”1: ‘ÎÛ•¶š—ñ
+				//æ–‡å­—åˆ—ã‚’ulongã«å¤‰æ›ã™ã‚‹
+				//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+				//return: å¤‰æ›ã—ãŸå€¤
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
 				static ulong ToUlong(const sgstring& string);
 				//----------------------------------------------------------------------------------
 				//[ToInt64]
-				//•¶š—ñ‚ğint64‚É•ÏŠ·‚·‚é
-				//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-				//return: •ÏŠ·‚µ‚½’l
-				//ˆø”1: ‘ÎÛ•¶š—ñ
+				//æ–‡å­—åˆ—ã‚’int64ã«å¤‰æ›ã™ã‚‹
+				//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+				//return: å¤‰æ›ã—ãŸå€¤
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
 				static int64 ToInt64(const sgstring& string);
 				//----------------------------------------------------------------------------------
 				//[ToUint64]
-				//•¶š—ñ‚ğuint64‚É•ÏŠ·‚·‚é
-				//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-				//return: •ÏŠ·‚µ‚½’l
-				//ˆø”1: ‘ÎÛ•¶š—ñ
+				//æ–‡å­—åˆ—ã‚’uint64ã«å¤‰æ›ã™ã‚‹
+				//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+				//return: å¤‰æ›ã—ãŸå€¤
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
 				static uint64 ToUint64(const sgstring& string);
 				//----------------------------------------------------------------------------------
 				//[ToFloat]
-				//•¶š—ñ‚ğfloat‚É•ÏŠ·‚·‚é
-				//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-				//return: •ÏŠ·‚µ‚½’l
-				//ˆø”1: ‘ÎÛ•¶š—ñ
+				//æ–‡å­—åˆ—ã‚’floatã«å¤‰æ›ã™ã‚‹
+				//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+				//return: å¤‰æ›ã—ãŸå€¤
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
 				static float ToFloat(const sgstring& string);
 				//----------------------------------------------------------------------------------
 				//[ToDouble]
-				//•¶š—ñ‚ğdouble‚É•ÏŠ·‚·‚é
-				//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-				//return: •ÏŠ·‚µ‚½’l
-				//ˆø”1: ‘ÎÛ•¶š—ñ
+				//æ–‡å­—åˆ—ã‚’doubleã«å¤‰æ›ã™ã‚‹
+				//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+				//return: å¤‰æ›ã—ãŸå€¤
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
 				static double ToDouble(const sgstring& string);
 
 
 				//----------------------------------------------------------------------------------
 				//[ToString]
-				//”š‚ğstring‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’stringã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToString(int value) { return std::to_wstring(value); }
 				//----------------------------------------------------------------------------------
 				//[ToString]
-				//”š‚ğstring‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’stringã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToString(uint value) { return std::to_wstring(value); }
 				//----------------------------------------------------------------------------------
 				//[ToString]
-				//”š‚ğstring‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’stringã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToString(long value) { return std::to_wstring(value); }
 				//----------------------------------------------------------------------------------
 				//[ToString]
-				//”š‚ğstring‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’stringã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToString(ulong value) { return std::to_wstring(value); }
 				//----------------------------------------------------------------------------------
 				//[ToString]
-				//”š‚ğstring‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’stringã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToString(int64 value) { return std::to_wstring(value); }
 				//----------------------------------------------------------------------------------
 				//[ToString]
-				//”š‚ğstring‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’stringã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToString(uint64 value) { return std::to_wstring(value); }
 				//----------------------------------------------------------------------------------
 				//[ToString]
-				//”š‚ğstring‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’stringã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToString(float value) { return std::to_wstring(value); }
 				//----------------------------------------------------------------------------------
 				//[ToString]
-				//”š‚ğstring‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½•¶š—ñ
-				//ˆø”1: ‘ÎÛ”š
+				//æ•°å­—ã‚’stringã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
+				//å¼•æ•°1: å¯¾è±¡æ•°å­—
 				inline static sgstring ToString(double value) { return std::to_wstring(value); }
 
 
 				//----------------------------------------------------------------------------------
 				//[ToArrayInt]
-				//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: delimiter = default L','
+				//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: delimiter = default L','
 				inline static std::vector<int> ToArrayInt(const sgstring& string, wchar delimiter = L',')
 				{
 					std::vector<sgstring> vec = Split(string, delimiter, true);
@@ -950,10 +950,10 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToArrayLong]
-				//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: delimiter = default L','
+				//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: delimiter = default L','
 				inline static std::vector<long> ToArrayLong(const sgstring& string, wchar delimiter = L',')
 				{
 					std::vector<sgstring> vec = Split(string, delimiter, true);
@@ -967,10 +967,10 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToArrayUlong]
-				//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: delimiter = default L','
+				//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: delimiter = default L','
 				inline static std::vector<ulong> ToArrayUlong(const sgstring& string, wchar delimiter = L',')
 				{
 					std::vector<sgstring> vec = Split(string, delimiter, true);
@@ -984,10 +984,10 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToArrayInt64]
-				//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: delimiter = default L','
+				//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: delimiter = default L','
 				inline static std::vector<int64> ToArrayInt64(const sgstring& string, wchar delimiter = L',')
 				{
 					std::vector<sgstring> vec = Split(string, delimiter, true);
@@ -1001,10 +1001,10 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToArrayUInt64]
-				//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: delimiter = default L','
+				//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: delimiter = default L','
 				inline static std::vector<uint64> ToArrayUint64(const sgstring& string, wchar delimiter = L',')
 				{
 					std::vector<sgstring> vec = Split(string, delimiter, true);
@@ -1018,10 +1018,10 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToArrayFloat]
-				//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: delimiter = default L','
+				//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: delimiter = default L','
 				inline static std::vector<float> ToArrayFloat(const sgstring& string, wchar delimiter = L',')
 				{
 					std::vector<sgstring> vec = Split(string, delimiter, true);
@@ -1035,10 +1035,10 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[ToArrayDouble]
-				//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-				//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-				//ˆø”1: ‘ÎÛ•¶š—ñ
-				//ˆø”2: delimiter = default L','
+				//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+				//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+				//å¼•æ•°1: å¯¾è±¡æ–‡å­—åˆ—
+				//å¼•æ•°2: delimiter = default L','
 				inline static std::vector<double> ToArrayDouble(const sgstring& string, wchar delimiter = L',')
 				{
 					std::vector<sgstring> vec = Split(string, delimiter, true);
@@ -1054,38 +1054,38 @@ namespace SGFramework
 
 	private:
 
-		//string’Ç‰ÁŠÖ”ŒSÀ‘Ì”Å
+		//stringè¿½åŠ é–¢æ•°éƒ¡å®Ÿä½“ç‰ˆ
 		class MyFunctions
 		{
 		public:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//QÆ‚ğƒZƒbƒg
-			//ˆø”1: this
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//å‚ç…§ã‚’ã‚»ãƒƒãƒˆ
+			//å¼•æ•°1: this
 			inline MyFunctions(sgstring& string) : m_string(string) { }
 
 			//----------------------------------------------------------------------------------
 			//[Clear]
-			//•¶š—ñƒNƒŠƒA, Clear() == wstring::clear()
+			//æ–‡å­—åˆ—ã‚¯ãƒªã‚¢, Clear() == wstring::clear()
 			inline void Clear() { m_string.clear(); }
 			//----------------------------------------------------------------------------------
 			//[Split]
-			//©g‚Ì•¶š—ñ‚ğdellimiter‚ğ‹æØ‚è‚Æ‚µ‚Ä•ªŠ„‚·‚é
-			//return: •ªŠ„‚µ‚½•¶š—ñ‚ğ‘ã“ü‚µ‚½vector
-			//ˆø”1 : delimiter = Default: ','
-			//ˆø”2 : \0œ‚­ÅŒã‚Ì—v‘f‚ª\n‚¾‚Á‚½ê‡true‚È‚çíœ = Default: false 
+			//è‡ªèº«ã®æ–‡å­—åˆ—ã‚’dellimiterã‚’åŒºåˆ‡ã‚Šã¨ã—ã¦åˆ†å‰²ã™ã‚‹
+			//return: åˆ†å‰²ã—ãŸæ–‡å­—åˆ—ã‚’ä»£å…¥ã—ãŸvector
+			//å¼•æ•°1 : delimiter = Default: ','
+			//å¼•æ•°2 : \0é™¤ãæœ€å¾Œã®è¦ç´ ãŒ\nã ã£ãŸå ´åˆtrueãªã‚‰å‰Šé™¤ = Default: false 
 			inline std::vector<sgstring> Split(wchar delimiter = L',', bool isNewLineDelete = false) const
 			{
-				std::vector<sgstring> ret;						//•Ô‚è’l
-				std::wstring getString = m_string;			//•ªŠ„‚·‚éstring
-				std::wstring buf;									//getline—p‚Ìƒoƒbƒtƒ@
-				std::wstringstream sStream(getString);	//getline—p‚Ìstream
+				std::vector<sgstring> ret;						//è¿”ã‚Šå€¤
+				std::wstring getString = m_string;			//åˆ†å‰²ã™ã‚‹string
+				std::wstring buf;									//getlineç”¨ã®ãƒãƒƒãƒ•ã‚¡
+				std::wstringstream sStream(getString);	//getlineç”¨ã®stream
 
-				//‰üsíœ = true ‚ÅÅŒã‚Ì•¶š‚ª‰üs‚È‚çíœ
+				//æ”¹è¡Œå‰Šé™¤ = true ã§æœ€å¾Œã®æ–‡å­—ãŒæ”¹è¡Œãªã‚‰å‰Šé™¤
 				if (isNewLineDelete && getString[getString.size() - 1] == L'\n')
 					getString.erase(getString.size() - 1);
 
-				//‹æØ‚è•¶š‚ğ‚à‚Æ‚É—v‘fæ“¾‚ğs‚¢—v‘f‚ğstring vector‚É’Ç‰Á
+				//åŒºåˆ‡ã‚Šæ–‡å­—ã‚’ã‚‚ã¨ã«è¦ç´ å–å¾—ã‚’è¡Œã„è¦ç´ ã‚’string vectorã«è¿½åŠ 
 				while (std::getline(sStream, buf, delimiter))
 					ret.emplace_back(buf);
 
@@ -1093,77 +1093,77 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[Split]
-			//©g‚Ì•¶š—ñ‚ğdellimiter‚ğ‹æØ‚è‚Æ‚µ‚Ä•ªŠ„‚·‚é
-			//ˆø”1: •ªŠ„‚µ‚½•¶š—ñ‚ğ‘ã“ü‚·‚évector
-			//ˆø”2: delimiter = Default: ','
-			//ˆø”3: \0œ‚­ÅŒã‚Ì—v‘f‚ª\n‚¾‚Á‚½ê‡true‚È‚çíœ = Default: false 
+			//è‡ªèº«ã®æ–‡å­—åˆ—ã‚’dellimiterã‚’åŒºåˆ‡ã‚Šã¨ã—ã¦åˆ†å‰²ã™ã‚‹
+			//å¼•æ•°1: åˆ†å‰²ã—ãŸæ–‡å­—åˆ—ã‚’ä»£å…¥ã™ã‚‹vector
+			//å¼•æ•°2: delimiter = Default: ','
+			//å¼•æ•°3: \0é™¤ãæœ€å¾Œã®è¦ç´ ãŒ\nã ã£ãŸå ´åˆtrueãªã‚‰å‰Šé™¤ = Default: false 
 			inline void Split(std::vector<sgstring>& write, wchar delimiter = L',', bool isNewLineDelete = false) const
 			{
 				if (this->IsEmpty()) return;
 
-				std::wstring getString = m_string;			//•ªŠ„‚·‚éstring
-				std::wstring buf;									//getline—p‚Ìƒoƒbƒtƒ@
-				std::wstringstream sStream(getString);	//getline—p‚Ìstream
+				std::wstring getString = m_string;			//åˆ†å‰²ã™ã‚‹string
+				std::wstring buf;									//getlineç”¨ã®ãƒãƒƒãƒ•ã‚¡
+				std::wstringstream sStream(getString);	//getlineç”¨ã®stream
 
-				//ƒNƒŠƒA
+				//ã‚¯ãƒªã‚¢
 				write.clear();
 
-				//‰üsíœ = true ‚ÅÅŒã‚Ì•¶š‚ª‰üs‚È‚çíœ
+				//æ”¹è¡Œå‰Šé™¤ = true ã§æœ€å¾Œã®æ–‡å­—ãŒæ”¹è¡Œãªã‚‰å‰Šé™¤
 				if (isNewLineDelete && getString[getString.size() - 1] == L'\n')
 					getString.erase(getString.size() - 1);
 
-				//‹æØ‚è•¶š‚ğ‚à‚Æ‚É—v‘fæ“¾‚ğs‚¢—v‘f‚ğstring vector‚É’Ç‰Á
+				//åŒºåˆ‡ã‚Šæ–‡å­—ã‚’ã‚‚ã¨ã«è¦ç´ å–å¾—ã‚’è¡Œã„è¦ç´ ã‚’string vectorã«è¿½åŠ 
 				while (std::getline(sStream, buf, delimiter))
 					write.emplace_back(buf);
 			}
 			//----------------------------------------------------------------------------------
 			//[IndexOf]
-			//©g‚Ì•¶š—ñ‚Ìæ“ª‚©‚çstring‚ğŒŸõ‚·‚é, IndexOf == find
-			//return: ‚ ‚Á‚½ê‡‚Íæ“ª‚Ì“Yš, ‚È‚¯‚ê‚Î-1
-			//ˆø”1: ŒŸõ•¶š—ñ
+			//è‡ªèº«ã®æ–‡å­—åˆ—ã®å…ˆé ­ã‹ã‚‰stringã‚’æ¤œç´¢ã™ã‚‹, IndexOf == find
+			//return: ã‚ã£ãŸå ´åˆã¯å…ˆé ­ã®æ·»å­—, ãªã‘ã‚Œã°-1
+			//å¼•æ•°1: æ¤œç´¢æ–‡å­—åˆ—
 			inline size_t IndexOf(const sgstring& string) const { return m_string.find(string); }
 			//----------------------------------------------------------------------------------
 			//[IndexFirstOf]
-			//©g‚Ì•¶š—ñ‚Ìæ“ª‚©‚çstring‚ğŒŸõ‚·‚é, IndexFirstOf == find
-			//return: ‚ ‚Á‚½ê‡‚Íæ“ª‚Ì“Yš, ‚È‚¯‚ê‚Î-1
-			//ˆø”1: ŒŸõ•¶š—ñ
+			//è‡ªèº«ã®æ–‡å­—åˆ—ã®å…ˆé ­ã‹ã‚‰stringã‚’æ¤œç´¢ã™ã‚‹, IndexFirstOf == find
+			//return: ã‚ã£ãŸå ´åˆã¯å…ˆé ­ã®æ·»å­—, ãªã‘ã‚Œã°-1
+			//å¼•æ•°1: æ¤œç´¢æ–‡å­—åˆ—
 			inline size_t IndexFirstOf(const sgstring& string) const { return m_string.find(string); }
 			//----------------------------------------------------------------------------------
 			//[IndexLastOf]
-			//©g‚Ì•¶š—ñ‚ÌÅŒã‚©‚çstring‚ğŒŸõ‚·‚é, IndexLastOf == rfind
-			//return: ‚ ‚Á‚½ê‡‚Íæ“ª‚Ì“Yš, ‚È‚¯‚ê‚Î-1
-			//ˆø”1: ŒŸõ•¶š—ñ
+			//è‡ªèº«ã®æ–‡å­—åˆ—ã®æœ€å¾Œã‹ã‚‰stringã‚’æ¤œç´¢ã™ã‚‹, IndexLastOf == rfind
+			//return: ã‚ã£ãŸå ´åˆã¯å…ˆé ­ã®æ·»å­—, ãªã‘ã‚Œã°-1
+			//å¼•æ•°1: æ¤œç´¢æ–‡å­—åˆ—
 			inline size_t IndexLastOf(const sgstring& string) const { return m_string.rfind(string); }
 			//----------------------------------------------------------------------------------
 			//[IsStartWith]
-			//©g‚Ì•¶š—ñ‚ÌÅ‰‚Æstring‚ğ”äŠr‚·‚é
-			//return: ©g‚Ì•¶š—ñ‚ªstring‚©‚çn‚Ü‚Á‚Ä‚¢‚ê‚Îtrue
-			//ˆø”1: ŒŸõ•¶š—ñ
+			//è‡ªèº«ã®æ–‡å­—åˆ—ã®æœ€åˆã¨stringã‚’æ¯”è¼ƒã™ã‚‹
+			//return: è‡ªèº«ã®æ–‡å­—åˆ—ãŒstringã‹ã‚‰å§‹ã¾ã£ã¦ã„ã‚Œã°true
+			//å¼•æ•°1: æ¤œç´¢æ–‡å­—åˆ—
 			inline bool IsStartWith(const sgstring& string) const { return (m_string.length() >= string.length() && std::equal(string.begin(), string.end(), m_string.begin())); }
 			//----------------------------------------------------------------------------------
 			//[IsEndWith]
-			//©g‚Ì•¶š—ñ‚ÌÅŒã‚Æstring‚ğ”äŠr‚·‚é
-			//return: ©g‚Ì•¶š—ñ‚ªstring‚ÅI‚í‚Á‚Ä‚¢‚ê‚Îtrue
-			//ˆø”1: ŒŸõ•¶š—ñ
+			//è‡ªèº«ã®æ–‡å­—åˆ—ã®æœ€å¾Œã¨stringã‚’æ¯”è¼ƒã™ã‚‹
+			//return: è‡ªèº«ã®æ–‡å­—åˆ—ãŒstringã§çµ‚ã‚ã£ã¦ã„ã‚Œã°true
+			//å¼•æ•°1: æ¤œç´¢æ–‡å­—åˆ—
 			inline bool IsEndWith(const sgstring& string) const { return (m_string.length() >= string.length() && std::equal(string.rbegin(), string.rend(), m_string.rbegin())); }
 			//----------------------------------------------------------------------------------
 			//[IsContains]
-			//©g‚Ì•¶š—ñ‚Éstring‚ª‚ ‚é‚©Šm”F‚·‚é
-			//return: ©g‚Ì•¶š—ñ‚Éstring‚ªŠÜ‚Ü‚ê‚Ä‚¢‚ê‚Îtrue
-			//ˆø”1: ŒŸõ•¶š—ñ
+			//è‡ªèº«ã®æ–‡å­—åˆ—ã«stringãŒã‚ã‚‹ã‹ç¢ºèªã™ã‚‹
+			//return: è‡ªèº«ã®æ–‡å­—åˆ—ã«stringãŒå«ã¾ã‚Œã¦ã„ã‚Œã°true
+			//å¼•æ•°1: æ¤œç´¢æ–‡å­—åˆ—
 			inline bool IsContains(const sgstring& string) const {
 				auto result = (m_string.find(string));
 				return (result >= 0 && result != sgstring::npos); }
 			//----------------------------------------------------------------------------------
 			//[IsEmpty]
-			//©g‚ª‹ó‚©Šm”F‚·‚é, IsEnpty == empty
-			//return: ‹ó‚È‚çtrue
+			//è‡ªèº«ãŒç©ºã‹ç¢ºèªã™ã‚‹, IsEnpty == empty
+			//return: ç©ºãªã‚‰true
 			inline bool IsEmpty() const { return m_string.empty(); }
 			//----------------------------------------------------------------------------------
 			//[IsFirstOfNumbers]
-			//©g‚Ì‚Ì•¶š—ñ‚Ìæ“ª‚ª”š•¶š—ñ‚©Šm”F‚·‚é
-			//ˆø”1: ‹ó”’•¶š‚ªæ“ª‚É‚ ‚èA‚»‚ÌŒã‚ª”š•¶š—ñ‚Ìê‡‹ó”’íœ‚µ‚Ätrue?, default = true
-			//return: ©g‚Ì‚Ìæ“ª•¶š‚ª”š‚È‚ç‚Îtrue
+			//è‡ªèº«ã®ã®æ–‡å­—åˆ—ã®å…ˆé ­ãŒæ•°å­—æ–‡å­—åˆ—ã‹ç¢ºèªã™ã‚‹
+			//å¼•æ•°1: ç©ºç™½æ–‡å­—ãŒå…ˆé ­ã«ã‚ã‚Šã€ãã®å¾ŒãŒæ•°å­—æ–‡å­—åˆ—ã®å ´åˆç©ºç™½å‰Šé™¤ã—ã¦true?, default = true
+			//return: è‡ªèº«ã®ã®å…ˆé ­æ–‡å­—ãŒæ•°å­—ãªã‚‰ã°true
 			inline bool IsFirstOfNumbers(bool ifBlankDelete = true)
 			{
 				if (m_string.empty()) return false;
@@ -1211,7 +1211,7 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[FindExtension]
-			//return: Šg’£q‚ğ”­Œ©‚µ‚½ê‡‚ÍŠg’£q( . ŠÜ‚Ş), ‚»‚¤‚ê‚È‚¯‚ê‚Î ""
+			//return: æ‹¡å¼µå­ã‚’ç™ºè¦‹ã—ãŸå ´åˆã¯æ‹¡å¼µå­( . å«ã‚€), ãã†ã‚Œãªã‘ã‚Œã° ""
 			inline sgstring FindExtension() const 
 			{
 				size_t find = m_string.rfind(L'.');
@@ -1225,77 +1225,77 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[ToX16]
-			//”š•¶š—ñ‚ğ16i”•\‹L‚É•ÏŠ·‚·‚é
-			//throw: ”š‚É•ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-			//return: •ÏŠ·‚µ‚½•¶š—ñ
+			//æ•°å­—æ–‡å­—åˆ—ã‚’16é€²æ•°è¡¨è¨˜ã«å¤‰æ›ã™ã‚‹
+			//throw: æ•°å­—ã«å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+			//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
 			sgstring ToX16() const;
 			//----------------------------------------------------------------------------------
 			//[ToX10]
-			//”š•¶š—ñ‚ğ10i”•\‹L‚É•ÏŠ·‚·‚é
-			//throw: ”š‚É•ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-			//return: •ÏŠ·‚µ‚½•¶š—ñ
+			//æ•°å­—æ–‡å­—åˆ—ã‚’10é€²æ•°è¡¨è¨˜ã«å¤‰æ›ã™ã‚‹
+			//throw: æ•°å­—ã«å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+			//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
 			sgstring ToX10() const;
 			//----------------------------------------------------------------------------------
 			//[ToX8]
-			//”š•¶š—ñ‚ğ8i”•\‹L‚É•ÏŠ·‚·‚é
-			//throw: ”š‚É•ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-			//return: •ÏŠ·‚µ‚½•¶š—ñ
+			//æ•°å­—æ–‡å­—åˆ—ã‚’8é€²æ•°è¡¨è¨˜ã«å¤‰æ›ã™ã‚‹
+			//throw: æ•°å­—ã«å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+			//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
 			sgstring ToX8() const;
 			//----------------------------------------------------------------------------------
 			//[ToX2]
-			//”š•¶š—ñ‚ğ2i”•\‹L‚É•ÏŠ·‚·‚é
-			//throw: ”š‚É•ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-			//return: •ÏŠ·‚µ‚½•¶š—ñ
+			//æ•°å­—æ–‡å­—åˆ—ã‚’2é€²æ•°è¡¨è¨˜ã«å¤‰æ›ã™ã‚‹
+			//throw: æ•°å­—ã«å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+			//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
 			sgstring ToX2() const;
 
 			//----------------------------------------------------------------------------------
 			//[ToInt]
-			//•¶š—ñ‚ğint‚É•ÏŠ·‚·‚é
-			//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-			//return: •ÏŠ·‚µ‚½’l
+			//æ–‡å­—åˆ—ã‚’intã«å¤‰æ›ã™ã‚‹
+			//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+			//return: å¤‰æ›ã—ãŸå€¤
 			int ToInt() const;
 			//----------------------------------------------------------------------------------
 			//[ToLong]
-			//•¶š—ñ‚ğlong‚É•ÏŠ·‚·‚é
-			//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-			//return: •ÏŠ·‚µ‚½’l
+			//æ–‡å­—åˆ—ã‚’longã«å¤‰æ›ã™ã‚‹
+			//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+			//return: å¤‰æ›ã—ãŸå€¤
 			long ToLong() const;
 			//----------------------------------------------------------------------------------
 			//[ToUlong]
-			//•¶š—ñ‚ğulong‚É•ÏŠ·‚·‚é
-			//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-			//return: •ÏŠ·‚µ‚½’l
+			//æ–‡å­—åˆ—ã‚’ulongã«å¤‰æ›ã™ã‚‹
+			//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+			//return: å¤‰æ›ã—ãŸå€¤
 			ulong ToUlong() const;
 			//----------------------------------------------------------------------------------
 			//[ToInt64]
-			//•¶š—ñ‚ğint64‚É•ÏŠ·‚·‚é
-			//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-			//return: •ÏŠ·‚µ‚½’l
+			//æ–‡å­—åˆ—ã‚’int64ã«å¤‰æ›ã™ã‚‹
+			//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+			//return: å¤‰æ›ã—ãŸå€¤
 			int64 ToInt64() const;
 			//----------------------------------------------------------------------------------
 			//[ToUint64]
-			//•¶š—ñ‚ğuint64‚É•ÏŠ·‚·‚é
-			//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-			//return: •ÏŠ·‚µ‚½’l
+			//æ–‡å­—åˆ—ã‚’uint64ã«å¤‰æ›ã™ã‚‹
+			//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+			//return: å¤‰æ›ã—ãŸå€¤
 			uint64 ToUint64() const;
 			//----------------------------------------------------------------------------------
 			//[ToFloat]
-			//•¶š—ñ‚ğfloat‚É•ÏŠ·‚·‚é
-			//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-			//return: •ÏŠ·‚µ‚½’l
+			//æ–‡å­—åˆ—ã‚’floatã«å¤‰æ›ã™ã‚‹
+			//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+			//return: å¤‰æ›ã—ãŸå€¤
 			float ToFloat() const;
 			//----------------------------------------------------------------------------------
 			//[ToDouble]
-			//•¶š—ñ‚ğdouble‚É•ÏŠ·‚·‚é
-			//throw: •ÏŠ·‚Å‚«‚È‚©‚Á‚½ê‡
-			//return: •ÏŠ·‚µ‚½’l
+			//æ–‡å­—åˆ—ã‚’doubleã«å¤‰æ›ã™ã‚‹
+			//throw: å¤‰æ›ã§ããªã‹ã£ãŸå ´åˆ
+			//return: å¤‰æ›ã—ãŸå€¤
 			double ToDouble() const;
 
 			//----------------------------------------------------------------------------------
 			//[ToArrayInt]
-			//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-			//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-			//ˆø”1: delimiter = default L','
+			//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+			//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+			//å¼•æ•°1: delimiter = default L','
 			inline std::vector<int> ToArrayInt(wchar delimiter = L',') const
 			{
 				std::vector<sgstring> vec = Split(delimiter, true);
@@ -1309,9 +1309,9 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ToArrayLong]
-			//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-			//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-			//ˆø”1: delimiter = default L','
+			//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+			//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+			//å¼•æ•°1: delimiter = default L','
 			inline std::vector<long> ToArrayLong(wchar delimiter = L',') const
 			{
 				std::vector<sgstring> vec = Split(delimiter, true);
@@ -1325,9 +1325,9 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ToArrayUlong]
-			//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-			//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-			//ˆø”1: delimiter = default L','
+			//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+			//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+			//å¼•æ•°1: delimiter = default L','
 			inline std::vector<ulong> ToArrayUlong(wchar delimiter = L',') const
 			{
 				std::vector<sgstring> vec = Split(delimiter, true);
@@ -1341,9 +1341,9 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ToArrayInt64]
-			//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-			//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-			//ˆø”1: delimiter = default L','
+			//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+			//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+			//å¼•æ•°1: delimiter = default L','
 			inline std::vector<int64> ToArrayInt64(wchar delimiter = L',') const
 			{
 				std::vector<sgstring> vec = Split(delimiter, true);
@@ -1357,9 +1357,9 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ToArrayUInt64]
-			//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-			//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-			//ˆø”1: delimiter = default L','
+			//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+			//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+			//å¼•æ•°1: delimiter = default L','
 			inline std::vector<uint64> ToArrayUint64(wchar delimiter = L',') const
 			{
 				std::vector<sgstring> vec = Split(delimiter, true);
@@ -1373,9 +1373,9 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ToArrayFloat]
-			//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-			//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-			//ˆø”1: delimiter = default L','
+			//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+			//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+			//å¼•æ•°1: delimiter = default L','
 			inline std::vector<float> ToArrayFloat(wchar delimiter = L',') const
 			{
 				std::vector<sgstring> vec = Split(delimiter, true);
@@ -1389,9 +1389,9 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ToArrayDouble]
-			//•¶š—ñ‚ğdelimiter‚Å•ªŠ„‚µ‚½vector‚É•ÏŠ·‚·‚é
-			//return: •ÏŠ·‚µ‚½vector, –³Œø‚È‚çsize = 0
-			//ˆø”1: delimiter = default L','
+			//æ–‡å­—åˆ—ã‚’delimiterã§åˆ†å‰²ã—ãŸvectorã«å¤‰æ›ã™ã‚‹
+			//return: å¤‰æ›ã—ãŸvector, ç„¡åŠ¹ãªã‚‰size = 0
+			//å¼•æ•°1: delimiter = default L','
 			inline std::vector<double> ToArrayDouble(wchar delimiter = L',') const
 			{
 				std::vector<sgstring> vec = Split(delimiter, true);

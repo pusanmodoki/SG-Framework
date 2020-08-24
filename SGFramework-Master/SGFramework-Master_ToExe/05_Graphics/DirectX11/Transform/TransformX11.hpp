@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Œ»İ‚Ìs—ñî•ñ‚ğ•Û‘¶‚·‚éTransformX11 class
+ç¾åœ¨ã®è¡Œåˆ—æƒ…å ±ã‚’ä¿å­˜ã™ã‚‹TransformX11 class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_TRANSFORM_X11_HPP_
 #define SGFRAMEWORK_HEADER_TRANSFORM_X11_HPP_
@@ -11,7 +11,7 @@
 //Framework namespace
 namespace SGFramework
 {
-	//friend—p
+	//friendç”¨
 	class Thread;
 	class Application;
 	class GameObject;
@@ -24,26 +24,26 @@ namespace SGFramework
 
 	struct ContactInfo;
 
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		//GraphicsDetail namespace
 		namespace GraphicsDetail
 		{
-			//friend—p
+			//friendç”¨
 			class CameraX11;
 			class PolygonSquareX11;
 			class ComponentX11;
 			template<class MeshVertexType, class MeshMaterialPointerType>
 			class MeshRendererX11;
 
-			//Œ»İ‚Ìs—ñî•ñ‚ğ•Û‘¶‚·‚éTransformX11 class
-			//<’ˆÓ!!>eqŠÖŒW‚Ì‚ ‚éTransformX11‚Í•K‚¸•ÊƒXƒŒƒbƒh(Thread::FunctionLine)‚ÅXV‚³‚¹‚Ä‚Í‚È‚ç‚È‚¢
-			//<’ˆÓ!!>e‚Ì‹‚È‚¢ƒIƒuƒWƒFƒNƒg‚ÍworldZZ‚Ì’l‚ÅXV‚ğs‚¢, qƒIƒuƒWƒFƒNƒg‚ÍworldZZ‚ÍQÆê—p, localZZ‚Ì’l‚ÅXV‚ğs‚¤
+			//ç¾åœ¨ã®è¡Œåˆ—æƒ…å ±ã‚’ä¿å­˜ã™ã‚‹TransformX11 class
+			//<æ³¨æ„!!>è¦ªå­é–¢ä¿‚ã®ã‚ã‚‹TransformX11ã¯å¿…ãšåˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰(Thread::FunctionLine)ã§æ›´æ–°ã•ã›ã¦ã¯ãªã‚‰ãªã„
+			//<æ³¨æ„!!>è¦ªã®å±…ãªã„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¯worldã€‡ã€‡ã®å€¤ã§æ›´æ–°ã‚’è¡Œã„, å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¯worldã€‡ã€‡ã¯å‚ç…§å°‚ç”¨, localã€‡ã€‡ã®å€¤ã§æ›´æ–°ã‚’è¡Œã†
 			class TransformX11 final : public Object
 			{
 			private:
-				//LockGuard—pValue
+				//LockGuardç”¨Value
 				struct Lock
 				{
 					inline Lock() : id(std::thread::id()), counter(0) {}
@@ -99,7 +99,7 @@ namespace SGFramework
 				public:
 					friend class TransformX11;
 
-					//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+					//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 					inline LockGuardTransform(SharedPointer<TransformX11> transform) 
 						: m_lock(const_cast<TransformX11*>(transform.getPointer())->m_lock)
 					{
@@ -107,7 +107,7 @@ namespace SGFramework
 						Lock newLock, oldLock;
 						bool result = false;
 
-						//“¯‚¶ƒXƒŒƒbƒh‚ªƒƒbƒN‚µ‚Ä‚¢‚È‚¯‚ê‚ÎƒƒbƒN‚·‚é‚Ü‚Å‘Ò‹@
+						//åŒã˜ã‚¹ãƒ¬ãƒƒãƒ‰ãŒãƒ­ãƒƒã‚¯ã—ã¦ã„ãªã‘ã‚Œã°ãƒ­ãƒƒã‚¯ã™ã‚‹ã¾ã§å¾…æ©Ÿ
 						newLock.id = thisID;
 						do
 						{
@@ -125,14 +125,14 @@ namespace SGFramework
 							}
 						} while (IS_FALSE(result));
 					}
-					//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+					//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 					inline LockGuardTransform(std::atomic<Lock>& lock) : m_lock(lock)
 					{
 						std::thread::id thisID = std::this_thread::get_id();
 						Lock newLock, oldLock;
 						bool result = false;
 
-						//“¯‚¶ƒXƒŒƒbƒh‚ªƒƒbƒN‚µ‚Ä‚¢‚È‚¯‚ê‚ÎƒƒbƒN‚·‚é‚Ü‚Å‘Ò‹@
+						//åŒã˜ã‚¹ãƒ¬ãƒƒãƒ‰ãŒãƒ­ãƒƒã‚¯ã—ã¦ã„ãªã‘ã‚Œã°ãƒ­ãƒƒã‚¯ã™ã‚‹ã¾ã§å¾…æ©Ÿ
 						newLock.id = thisID;
 						do
 						{
@@ -150,12 +150,12 @@ namespace SGFramework
 							}
 						} while (IS_FALSE(result));
 					}
-					//ƒfƒXƒgƒ‰ƒNƒ^
+					//ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 					inline ~LockGuardTransform()
 					{
 						Lock newLock, oldLock;
 
-						//“¯‚¶ƒXƒŒƒbƒh‚ªƒƒbƒN‚µ‚Ä‚¢‚È‚¯‚ê‚ÎƒƒbƒN‚·‚é‚Ü‚Å‘Ò‹@
+						//åŒã˜ã‚¹ãƒ¬ãƒƒãƒ‰ãŒãƒ­ãƒƒã‚¯ã—ã¦ã„ãªã‘ã‚Œã°ãƒ­ãƒƒã‚¯ã™ã‚‹ã¾ã§å¾…æ©Ÿ
 						do
 						{
 							oldLock = m_lock.load();
@@ -176,18 +176,18 @@ namespace SGFramework
 				
 				//----------------------------------------------------------------------------------
 				//[Instantiate]
-				//Transform‚ğÀ‘Ì‰»‚·‚é, •K‚¸ƒVƒ“ƒOƒ‹ƒXƒŒƒbƒhó‘Ô‚Ì‚ÉÀ‘Ì‰»‚·‚é‚±‚Æ
+				//Transformã‚’å®Ÿä½“åŒ–ã™ã‚‹, å¿…ãšã‚·ãƒ³ã‚°ãƒ«ã‚¹ãƒ¬ãƒƒãƒ‰çŠ¶æ…‹ã®æ™‚ã«å®Ÿä½“åŒ–ã™ã‚‹ã“ã¨
 				//return: transform
-				//ˆø”1: position, default = zero
-				//ˆø”2: scale, default = one
-				//ˆø”3: rotation, default = identity
-				//ˆø”4: name, default = "Transform only object"
-				//ˆø”5: use function line if root transform, default = auto
-				//ˆø”6: isStatic, default = false
-				//ˆø”7: layer, default = Default Layer
-				//ˆø”8: tag, default = Default Tag
-				//ˆø”9: SharedPointer->isUsedMutexCounter, default = ture
-				//ˆø”10: SharedPointer->isAutoGabageCollection, default = ture
+				//å¼•æ•°1: position, default = zero
+				//å¼•æ•°2: scale, default = one
+				//å¼•æ•°3: rotation, default = identity
+				//å¼•æ•°4: name, default = "Transform only object"
+				//å¼•æ•°5: use function line if root transform, default = auto
+				//å¼•æ•°6: isStatic, default = false
+				//å¼•æ•°7: layer, default = Default Layer
+				//å¼•æ•°8: tag, default = Default Tag
+				//å¼•æ•°9: SharedPointer->isUsedMutexCounter, default = ture
+				//å¼•æ•°10: SharedPointer->isAutoGabageCollection, default = ture
 				inline static SharedPointer<TransformX11> Instantiate(const Vector3& position = Const::Vector3::zero,
 					const Vector3& scale = Const::Vector3::one, const Quaternion& rotation = Const::Quaternion::identity,
 					const sgstring& name = L"Transform only object", int functionLineAtRoot = cAutoSelectFunctionLine,
@@ -195,21 +195,21 @@ namespace SGFramework
 					bool isUsedMutexCounter = true, bool isAutoGabageCollection = true);
 				//----------------------------------------------------------------------------------
 				//[Instantiate]
-				//Transform‚ğÀ‘Ì‰»‚·‚é, •K‚¸ƒVƒ“ƒOƒ‹ƒXƒŒƒbƒhó‘Ô‚Ì‚ÉÀ‘Ì‰»‚·‚é‚±‚Æ
+				//Transformã‚’å®Ÿä½“åŒ–ã™ã‚‹, å¿…ãšã‚·ãƒ³ã‚°ãƒ«ã‚¹ãƒ¬ãƒƒãƒ‰çŠ¶æ…‹ã®æ™‚ã«å®Ÿä½“åŒ–ã™ã‚‹ã“ã¨
 				//position = zero, scale = one, rotation = identity
-				//return: transform, parent‚ª–³Œø‚Èƒ|ƒCƒ“ƒ^‚¾‚Á‚½ê‡Nullƒ|ƒCƒ“ƒ^
-				//ˆø”1: eTransform
-				//ˆø”2: position, rotation, scale -> true = world : false = local 
-				//ˆø”3: position, default = zero
-				//ˆø”4: scale, default = one
-				//ˆø”5: rotation, default = identity
-				//ˆø”6: name, default = "Transform only object"
-				//ˆø”7: use function line if root transform, default = auto
-				//ˆø”8: isStatic, default = false
-				//ˆø”9: layer, default = Default Layer
-				//ˆø”10: tag, default = Default Tag
-				//ˆø”11: SharedPointer->isUsedMutexCounter, default = ture
-				//ˆø”12: SharedPointer->isAutoGabageCollection, default = ture
+				//return: transform, parentãŒç„¡åŠ¹ãªãƒã‚¤ãƒ³ã‚¿ã ã£ãŸå ´åˆNullãƒã‚¤ãƒ³ã‚¿
+				//å¼•æ•°1: è¦ªTransform
+				//å¼•æ•°2: position, rotation, scale -> true = world : false = local 
+				//å¼•æ•°3: position, default = zero
+				//å¼•æ•°4: scale, default = one
+				//å¼•æ•°5: rotation, default = identity
+				//å¼•æ•°6: name, default = "Transform only object"
+				//å¼•æ•°7: use function line if root transform, default = auto
+				//å¼•æ•°8: isStatic, default = false
+				//å¼•æ•°9: layer, default = Default Layer
+				//å¼•æ•°10: tag, default = Default Tag
+				//å¼•æ•°11: SharedPointer->isUsedMutexCounter, default = ture
+				//å¼•æ•°12: SharedPointer->isAutoGabageCollection, default = ture
 				inline static SharedPointer<TransformX11> Instantiate(SharedPointer<TransformX11> parent,
 					bool isInstantiateInWorldSpace, const Vector3& position = Const::Vector3::zero,
 					const Vector3& scale = Const::Vector3::one, const Quaternion& rotation = Const::Quaternion::identity, 
@@ -218,15 +218,15 @@ namespace SGFramework
 					bool isUsedMutexCounter = true, bool isAutoGabageCollection = true);
 
 				//----------------------------------------------------------------------------------
-				//[ƒfƒXƒgƒ‰ƒNƒ^]
-				//qƒIƒuƒWƒFƒNƒg‚ÌŠJ•ú
+				//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+				//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®é–‹æ”¾
 				inline ~TransformX11();
 
 				//----------------------------------------------------------------------------------
 				//[Translate]
 				//worldPosition + translate
 				//return: new worldPosition
-				//ˆø”1: translate vec
+				//å¼•æ•°1: translate vec
 				inline Vector3 Translate(const Vector3& translate)
 				{
 					LockGuardTransform guard(m_lock);
@@ -243,9 +243,9 @@ namespace SGFramework
 					}
 					else
 					{
-						//Worldİ’è
+						//Worldè¨­å®š
 						m_variables.worldPosition += translate;
-						//Local•ÏŠ·‚µ‚½’l‚ğ‘ã“ü
+						//Localå¤‰æ›ã—ãŸå€¤ã‚’ä»£å…¥
 						m_variables.localPosition = m_variables.worldPosition - m_parent->getWorldPosition();
 
 						if (m_childrens.size() > 0)
@@ -260,7 +260,7 @@ namespace SGFramework
 				//[TranslateLocal]
 				//localPosition + translate
 				//return: new localPosition
-				//ˆø”1: translate vec
+				//å¼•æ•°1: translate vec
 				inline Vector3 TranslateLocal(const Vector3& translate)
 				{
 					LockGuardTransform guard(m_lock);
@@ -292,7 +292,7 @@ namespace SGFramework
 				//[Rotate]
 				//worldRotation * quaternion
 				//return: new worldRotation
-				//ˆø”1: Rotate quaternion
+				//å¼•æ•°1: Rotate quaternion
 				inline Quaternion Rotate(const Quaternion& quaternion)
 				{
 					LockGuardTransform guard(m_lock);
@@ -309,9 +309,9 @@ namespace SGFramework
 					}
 					else
 					{
-						//Worldİ’è
+						//Worldè¨­å®š
 						XmVector vec = DirectX::XMQuaternionMultiply(m_variables.worldRotation, quaternion); 
-						//Local•ÏŠ·‚µ‚½’l‚ğ‘ã“ü
+						//Localå¤‰æ›ã—ãŸå€¤ã‚’ä»£å…¥
 						m_variables.localRotation = vec * m_parent->getWorldRotation().getInverse();
 
 						if (m_childrens.size() > 0)
@@ -325,7 +325,7 @@ namespace SGFramework
 				//[RotateLocal]
 				//localRotation * quaternion
 				//return: new localRotation
-				//ˆø”1: Rotate quaternion
+				//å¼•æ•°1: Rotate quaternion
 				inline Quaternion RotateLocal(const Quaternion& quaternion)
 				{
 					LockGuardTransform guard(m_lock);
@@ -357,7 +357,7 @@ namespace SGFramework
 				//[Resize]
 				//worldScale * magnification
 				//return: new worldScale
-				//ˆø”1: Scale magnification
+				//å¼•æ•°1: Scale magnification
 				inline Vector3 Resize(const Vector3& magnification)
 				{
 					LockGuardTransform guard(m_lock);
@@ -374,9 +374,9 @@ namespace SGFramework
 					}
 					else
 					{
-						//Worldİ’è
+						//Worldè¨­å®š
 						m_variables.worldScale *= magnification;
-						//Local•ÏŠ·‚µ‚½’l‚ğ‘ã“ü
+						//Localå¤‰æ›ã—ãŸå€¤ã‚’ä»£å…¥
 						m_variables.localScale = m_variables.worldScale / m_parent->getWorldScale();
 
 						if (m_childrens.size() > 0)
@@ -391,7 +391,7 @@ namespace SGFramework
 				//[ResizeLocal]
 				//localScale * magnification
 				//return: new localScale
-				//ˆø”1: Scale magnification
+				//å¼•æ•°1: Scale magnification
 				inline Vector3 ResizeLocal(const Vector3& magnification)
 				{
 					LockGuardTransform guard(m_lock);
@@ -422,210 +422,210 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[FindRoot]
-				//reutrn: rootƒ|ƒCƒ“ƒ^, ‚¢‚È‚¢ê‡‚ÍNullƒ|ƒCƒ“ƒ^ (’ˆÓ!Às‚É’T¸‚ğs‚¢‚Ü‚·)
+				//reutrn: rootãƒã‚¤ãƒ³ã‚¿, ã„ãªã„å ´åˆã¯Nullãƒã‚¤ãƒ³ã‚¿ (æ³¨æ„!å®Ÿè¡Œæ™‚ã«æ¢æŸ»ã‚’è¡Œã„ã¾ã™)
 				inline WeakPointer<TransformX11> FindRoot();
 				//----------------------------------------------------------------------------------
 				//[IsTargetMyUpperHierarchy]
-				//return: ŒŸõ‘ÎÛ‚ª©g‚ÌãˆÊŠK‘w‚É‚¢‚éê‡true
-				//ˆø”1: ŒŸõ‘ÎÛ 
+				//return: æ¤œç´¢å¯¾è±¡ãŒè‡ªèº«ã®ä¸Šä½éšå±¤ã«ã„ã‚‹å ´åˆtrue
+				//å¼•æ•°1: æ¤œç´¢å¯¾è±¡ 
 				inline bool IsTargetMyUpperHierarchy(const SharedPointer<TransformX11>& target);
 				//----------------------------------------------------------------------------------
 				//[IsTargetMyUpperHierarchy]
-				//return: ŒŸõ‘ÎÛ‚ª©g‚ÌãˆÊŠK‘w‚É‚¢‚éê‡true
-				//ˆø”1: ŒŸõ‘ÎÛ 
+				//return: æ¤œç´¢å¯¾è±¡ãŒè‡ªèº«ã®ä¸Šä½éšå±¤ã«ã„ã‚‹å ´åˆtrue
+				//å¼•æ•°1: æ¤œç´¢å¯¾è±¡ 
 				inline bool IsTargetMyUpperHierarchy(const WeakPointer<TransformX11>& target);
 				//----------------------------------------------------------------------------------
 				//[RegisterParent]
-				//e‚ğ“o˜^‚·‚é, ƒ|ƒCƒ“ƒ^‚ª—LŒø‚Èê‡‚Ì‚İ¬Œ÷‚·‚é
-				//reutrn: ¬Œ÷‚µ‚½ê‡->true
-				//ˆø”1: parentƒ|ƒCƒ“ƒ^
+				//è¦ªã‚’ç™»éŒ²ã™ã‚‹, ãƒã‚¤ãƒ³ã‚¿ãŒæœ‰åŠ¹ãªå ´åˆã®ã¿æˆåŠŸã™ã‚‹
+				//reutrn: æˆåŠŸã—ãŸå ´åˆ->true
+				//å¼•æ•°1: parentãƒã‚¤ãƒ³ã‚¿
 				inline bool RegisterParent(SharedPointer<TransformX11> parent);
 
 				//----------------------------------------------------------------------------------
 				//[RegisterChildren]
-				//q‚ğ“o˜^‚·‚é, ƒ|ƒCƒ“ƒ^‚ª—LŒø‚Èê‡‚Ì‚İ¬Œ÷‚·‚é
-				//reutrn: ¬Œ÷‚µ‚½ê‡->true
-				//ˆø”1: childrenƒ|ƒCƒ“ƒ^
+				//å­ã‚’ç™»éŒ²ã™ã‚‹, ãƒã‚¤ãƒ³ã‚¿ãŒæœ‰åŠ¹ãªå ´åˆã®ã¿æˆåŠŸã™ã‚‹
+				//reutrn: æˆåŠŸã—ãŸå ´åˆ->true
+				//å¼•æ•°1: childrenãƒã‚¤ãƒ³ã‚¿
 				inline bool RegisterChildren(SharedPointer<TransformX11> children);
 
 				//----------------------------------------------------------------------------------
 				//[FindChildren]
-				//qtransform‚ğŒŸõ‚·‚é, index = 0‚©‚ç‘–¸‚·‚é‚Ì‚Å“¯–¼TransformX11‚Í’ˆÓ
-				//reutrn: ¬Œ÷‚µ‚½ê‡->qƒ|ƒCƒ“ƒ^, ¸”s‚µ‚½ê‡->Nullƒ|ƒCƒ“ƒ^
-				//ˆø”1: transform->name
+				//å­transformã‚’æ¤œç´¢ã™ã‚‹, index = 0ã‹ã‚‰èµ°æŸ»ã™ã‚‹ã®ã§åŒåTransformX11ã¯æ³¨æ„
+				//reutrn: æˆåŠŸã—ãŸå ´åˆ->å­ãƒã‚¤ãƒ³ã‚¿, å¤±æ•—ã—ãŸå ´åˆ->Nullãƒã‚¤ãƒ³ã‚¿
+				//å¼•æ•°1: transform->name
 				inline WeakPointer<TransformX11> FindChildren(const sgstring& name);
 				//----------------------------------------------------------------------------------
 				//[FindChildrenEx]
-				//qtransform‚ğŒŸõ‚·‚é, index = 0‚©‚ç‘–¸‚µ“¯–¼TransformX11‚ğ‘S‚Ä•Ô‹p‚·‚é
-				//reutrn: ŒŸõŒ‹‰Êvector
-				//ˆø”1: transform->name
+				//å­transformã‚’æ¤œç´¢ã™ã‚‹, index = 0ã‹ã‚‰èµ°æŸ»ã—åŒåTransformX11ã‚’å…¨ã¦è¿”å´ã™ã‚‹
+				//reutrn: æ¤œç´¢çµæœvector
+				//å¼•æ•°1: transform->name
 				inline std::vector<WeakPointer<TransformX11>> FindChildrenEx(const sgstring& name);
 				//----------------------------------------------------------------------------------
 				//[FindChildrenIndex]
-				//qtransform‚ğŒŸõ‚·‚é, index = 0‚©‚ç‘–¸‚·‚é‚Ì‚Å“¯–¼TransformX11‚Í’ˆÓ
-				//reutrn: ¬Œ÷‚µ‚½ê‡->Œ»İ‚Ìindex, ¸”s‚µ‚½ê‡->VariableLimit::cUintMax
-				//ˆø”1: transform->name
+				//å­transformã‚’æ¤œç´¢ã™ã‚‹, index = 0ã‹ã‚‰èµ°æŸ»ã™ã‚‹ã®ã§åŒåTransformX11ã¯æ³¨æ„
+				//reutrn: æˆåŠŸã—ãŸå ´åˆ->ç¾åœ¨ã®index, å¤±æ•—ã—ãŸå ´åˆ->VariableLimit::cUintMax
+				//å¼•æ•°1: transform->name
 				inline uint FindChildrenIndex(const sgstring& name);
 				//----------------------------------------------------------------------------------
 				//[FindChildrenIndexEx]
-				//qtransform‚ğŒŸõ‚·‚é, index = 0‚©‚ç‘–¸‚µ“¯–¼TransformX11‚ğ‘S‚Ä•Ô‹p‚·‚é
-				//reutrn: ŒŸõŒ‹‰Êvector
-				//ˆø”1: transform->name
+				//å­transformã‚’æ¤œç´¢ã™ã‚‹, index = 0ã‹ã‚‰èµ°æŸ»ã—åŒåTransformX11ã‚’å…¨ã¦è¿”å´ã™ã‚‹
+				//reutrn: æ¤œç´¢çµæœvector
+				//å¼•æ•°1: transform->name
 				inline std::vector<uint> FindChildrenIndexEx(const sgstring& name);
 
 				//----------------------------------------------------------------------------------
 				//[UnderTakeChildren]
-				//q‚ğ•Ê‚Ìtransform‚Ìq‚ÉˆÚ“®‚³‚¹‚é, •K‚¸“¯ˆêƒXƒŒƒbƒhã‚ÅÀs‚·‚é‚±‚Æ
-				//index‚ª—LŒø & ˆø”1‚ª—LŒø‚Èê‡‚Ì‚İ¬Œ÷‚·‚é
-				//reutrn: ¬Œ÷‚µ‚½ê‡->true
-				//ˆø”1: V‚µ‚¢etransfrom
-				//ˆø”2: ˆÚ‚·qTransformIndex
+				//å­ã‚’åˆ¥ã®transformã®å­ã«ç§»å‹•ã•ã›ã‚‹, å¿…ãšåŒä¸€ã‚¹ãƒ¬ãƒƒãƒ‰ä¸Šã§å®Ÿè¡Œã™ã‚‹ã“ã¨
+				//indexãŒæœ‰åŠ¹ & å¼•æ•°1ãŒæœ‰åŠ¹ãªå ´åˆã®ã¿æˆåŠŸã™ã‚‹
+				//reutrn: æˆåŠŸã—ãŸå ´åˆ->true
+				//å¼•æ•°1: æ–°ã—ã„è¦ªtransfrom
+				//å¼•æ•°2: ç§»ã™å­TransformIndex
 				inline bool UnderTakeChildren(SharedPointer<TransformX11> transform, uint index);
 				//----------------------------------------------------------------------------------
 				//[UnderTakeChildren]
-				//q‚ğ•Ê‚Ìtransform‚Ìq‚ÉˆÚ“®‚³‚¹‚é, •K‚¸“¯ˆêƒXƒŒƒbƒhã‚ÅÀs‚·‚é‚±‚Æ
-				//name‚ª—LŒø & ˆø”1‚ª—LŒø‚Èê‡‚Ì‚İ¬Œ÷‚·‚é
-				//reutrn: ¬Œ÷‚µ‚½ê‡->true
-				//ˆø”1: V‚µ‚¢etransfrom
-				//ˆø”2: ˆÚ‚·qTransform->name
+				//å­ã‚’åˆ¥ã®transformã®å­ã«ç§»å‹•ã•ã›ã‚‹, å¿…ãšåŒä¸€ã‚¹ãƒ¬ãƒƒãƒ‰ä¸Šã§å®Ÿè¡Œã™ã‚‹ã“ã¨
+				//nameãŒæœ‰åŠ¹ & å¼•æ•°1ãŒæœ‰åŠ¹ãªå ´åˆã®ã¿æˆåŠŸã™ã‚‹
+				//reutrn: æˆåŠŸã—ãŸå ´åˆ->true
+				//å¼•æ•°1: æ–°ã—ã„è¦ªtransfrom
+				//å¼•æ•°2: ç§»ã™å­Transform->name
 				inline bool UnderTakeChildren(SharedPointer<TransformX11> transform, const sgstring& name);
 				//----------------------------------------------------------------------------------
 				//[UnderTakeChildrenEx]
-				//name‚Ìq‚ğ‘S‚Ä•Ê‚Ìtransform‚Ìq‚ÉˆÚ“®‚³‚¹‚é, •K‚¸“¯ˆêƒXƒŒƒbƒhã‚ÅÀs‚·‚é‚±‚Æ
-				//name‚ª—LŒø & ˆø”1‚ª—LŒø‚Èê‡‚Ì‚İ¬Œ÷‚·‚é
-				//reutrn: ¬Œ÷‚µ‚½ê‡->true
-				//ˆø”1: V‚µ‚¢etransfrom
-				//ˆø”2: ˆÚ‚·qTransform->name
+				//nameã®å­ã‚’å…¨ã¦åˆ¥ã®transformã®å­ã«ç§»å‹•ã•ã›ã‚‹, å¿…ãšåŒä¸€ã‚¹ãƒ¬ãƒƒãƒ‰ä¸Šã§å®Ÿè¡Œã™ã‚‹ã“ã¨
+				//nameãŒæœ‰åŠ¹ & å¼•æ•°1ãŒæœ‰åŠ¹ãªå ´åˆã®ã¿æˆåŠŸã™ã‚‹
+				//reutrn: æˆåŠŸã—ãŸå ´åˆ->true
+				//å¼•æ•°1: æ–°ã—ã„è¦ªtransfrom
+				//å¼•æ•°2: ç§»ã™å­Transform->name
 				inline bool UnderTakeChildrenEx(SharedPointer<TransformX11> transform, const sgstring& name);
 
 				//----------------------------------------------------------------------------------
 				//[IndependentChildren]
-				//qƒIƒuƒWƒFƒNƒg‚ğeqŠÖŒW‚©‚çØ‚è—£‚µ“Æ—§‚³‚¹‚é
-				//return: ¬Œ÷‚µ‚½ê‡->“Æ—§‚µ‚½ƒ|ƒCƒ“ƒ^, ¸”s‚µ‚½ê‡->Nullƒ|ƒCƒ“ƒ^
-				//ˆø”1: index
+				//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¦ªå­é–¢ä¿‚ã‹ã‚‰åˆ‡ã‚Šé›¢ã—ç‹¬ç«‹ã•ã›ã‚‹
+				//return: æˆåŠŸã—ãŸå ´åˆ->ç‹¬ç«‹ã—ãŸãƒã‚¤ãƒ³ã‚¿, å¤±æ•—ã—ãŸå ´åˆ->Nullãƒã‚¤ãƒ³ã‚¿
+				//å¼•æ•°1: index
 				inline SharedPointer<TransformX11> IndependentChildren(uint index);
 				//----------------------------------------------------------------------------------
 				//[IndependentChildren]
-				//qƒIƒuƒWƒFƒNƒg‚ğeqŠÖŒW‚©‚çØ‚è—£‚µ“Æ—§‚³‚¹‚é
-				//index = 0‚©‚ç‘–¸‚µÅ‰‚ÉŒ©‚Â‚©‚Á‚½name‚Æ‡’v‚·‚étransform‚ğ“Æ—§‚³‚¹‚é
-				//return: ¬Œ÷‚µ‚½ê‡->“Æ—§‚µ‚½ƒ|ƒCƒ“ƒ^, ¸”s‚µ‚½ê‡->Nullƒ|ƒCƒ“ƒ^
-				//ˆø”1: name
+				//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¦ªå­é–¢ä¿‚ã‹ã‚‰åˆ‡ã‚Šé›¢ã—ç‹¬ç«‹ã•ã›ã‚‹
+				//index = 0ã‹ã‚‰èµ°æŸ»ã—æœ€åˆã«è¦‹ã¤ã‹ã£ãŸnameã¨åˆè‡´ã™ã‚‹transformã‚’ç‹¬ç«‹ã•ã›ã‚‹
+				//return: æˆåŠŸã—ãŸå ´åˆ->ç‹¬ç«‹ã—ãŸãƒã‚¤ãƒ³ã‚¿, å¤±æ•—ã—ãŸå ´åˆ->Nullãƒã‚¤ãƒ³ã‚¿
+				//å¼•æ•°1: name
 				inline SharedPointer<TransformX11> IndependentChildren(const sgstring& name);
 				//----------------------------------------------------------------------------------
 				//[IndependentChildren]
-				//qƒIƒuƒWƒFƒNƒg‚ğeqŠÖŒW‚©‚çØ‚è—£‚µ“Æ—§‚³‚¹‚é, name‚Æ‡’v‚·‚étransform‚ğ‘S‚Ä“Æ—§‚³‚¹‚é
-				//return: Œ‹‰Ê‚ğŠi”[‚µ‚½vector, ¬Œ÷‚µ‚½ê‡->“Æ—§‚µ‚½ƒ|ƒCƒ“ƒ^, ¸”s‚µ‚½ê‡->Nullƒ|ƒCƒ“ƒ^
-				//ˆø”1: index
+				//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¦ªå­é–¢ä¿‚ã‹ã‚‰åˆ‡ã‚Šé›¢ã—ç‹¬ç«‹ã•ã›ã‚‹, nameã¨åˆè‡´ã™ã‚‹transformã‚’å…¨ã¦ç‹¬ç«‹ã•ã›ã‚‹
+				//return: çµæœã‚’æ ¼ç´ã—ãŸvector, æˆåŠŸã—ãŸå ´åˆ->ç‹¬ç«‹ã—ãŸãƒã‚¤ãƒ³ã‚¿, å¤±æ•—ã—ãŸå ´åˆ->Nullãƒã‚¤ãƒ³ã‚¿
+				//å¼•æ•°1: index
 				inline std::vector<SharedPointer<TransformX11>> IndependentChildrenEx(const sgstring& name);
 
 				//----------------------------------------------------------------------------------
 				//[DestroyChildren]
-				//qƒIƒuƒWƒFƒNƒg‚ğíœ‚·‚é, index‚ª—LŒø‚Èê‡‚Ì‚İ¬Œ÷‚·‚é
-				//return: ¬Œ÷‚µ‚½‚©”Û‚©
-				//ˆø”1: index
+				//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å‰Šé™¤ã™ã‚‹, indexãŒæœ‰åŠ¹ãªå ´åˆã®ã¿æˆåŠŸã™ã‚‹
+				//return: æˆåŠŸã—ãŸã‹å¦ã‹
+				//å¼•æ•°1: index
 				inline bool DestroyChildren(uint index);
 				//----------------------------------------------------------------------------------
 				//[DestroyChildren]
-				//qƒIƒuƒWƒFƒNƒg‚ğíœ‚·‚é, index = 0‚©‚ç‘–¸‚µÅ‰‚ÉŒ©‚Â‚©‚Á‚½name‚Æ‡’v‚·‚étransform‚ğíœ‚·‚é
-				//return: ¬Œ÷‚µ‚½‚©”Û‚©
-				//ˆø”1: transform->name
+				//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å‰Šé™¤ã™ã‚‹, index = 0ã‹ã‚‰èµ°æŸ»ã—æœ€åˆã«è¦‹ã¤ã‹ã£ãŸnameã¨åˆè‡´ã™ã‚‹transformã‚’å‰Šé™¤ã™ã‚‹
+				//return: æˆåŠŸã—ãŸã‹å¦ã‹
+				//å¼•æ•°1: transform->name
 				inline bool DestroyChildren(const sgstring& name);
 				//----------------------------------------------------------------------------------
 				//[DestroyChildren]
-				//qƒIƒuƒWƒFƒNƒg‚ğíœ‚·‚é, name‚Æ‡’v‚·‚étransform‚ğ‘S‚Äíœ‚·‚é
-				//return: ¬Œ÷‚µ‚½‚©”Û‚©
-				//ˆø”1: transform->name
+				//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å‰Šé™¤ã™ã‚‹, nameã¨åˆè‡´ã™ã‚‹transformã‚’å…¨ã¦å‰Šé™¤ã™ã‚‹
+				//return: æˆåŠŸã—ãŸã‹å¦ã‹
+				//å¼•æ•°1: transform->name
 				inline bool DestroyChildrenEx(const sgstring& name);
 				//----------------------------------------------------------------------------------
 				//[DestroyAllChildren]
-				//qƒIƒuƒWƒFƒNƒg‚ğ‘S‚Äíœ‚·‚é
+				//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å…¨ã¦å‰Šé™¤ã™ã‚‹
 				inline void DestroyAllChildren();
 
 				//----------------------------------------------------------------------------------
 				//[AddComponent]
-				//Component‚ğ’Ç‰Á‚·‚é (ƒfƒB[ƒvƒRƒs[)
-				//ˆø”1: componentŒp³ƒIƒuƒWƒFƒNƒg
+				//Componentã‚’è¿½åŠ ã™ã‚‹ (ãƒ‡ã‚£ãƒ¼ãƒ—ã‚³ãƒ”ãƒ¼)
+				//å¼•æ•°1: componentç¶™æ‰¿ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 				template <class ComponentClass>
 				inline WeakPointer<ComponentClass> AddComponent(SharedPointer<ComponentClass> component);
 				//----------------------------------------------------------------------------------
 				//[AddComponent]
-				//Component‚ğ’Ç‰Á‚·‚é (Instantiate)
-				//return: ’Ç‰Á‚µ‚½Component
-				//ˆø”1: Callback—LŒø‰»ƒtƒ‰ƒO, default = true
+				//Componentã‚’è¿½åŠ ã™ã‚‹ (Instantiate)
+				//return: è¿½åŠ ã—ãŸComponent
+				//å¼•æ•°1: Callbackæœ‰åŠ¹åŒ–ãƒ•ãƒ©ã‚°, default = true
 				template <class ComponentClass>
 				inline WeakPointer<ComponentClass> AddComponent(bool isEnabled = true);
 
 
 				//----------------------------------------------------------------------------------
 				//[FindComponent]
-				//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : Å‚àŒÃ‚¢ƒRƒ“ƒ|[ƒlƒ“ƒg
-				//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
+				//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : æœ€ã‚‚å¤ã„ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+				//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
 				template <class ComponentClass>
 				inline WeakPointer<ComponentClass> FindComponent();
 				//----------------------------------------------------------------------------------
 				//[FindComponentInParent]
-				//ComponentClassŒ^ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğthis‚©‚çParent‚Ö‚Æ’T¸‚·‚é
-				//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : Å‰‚ÉŒ©‚Â‚©‚Á‚½ƒRƒ“ƒ|[ƒlƒ“ƒg
-				//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
-				//ˆø”1: ©g‚àŠÜ‚ß‚é‚©, default = true
+				//ComponentClasså‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’thisã‹ã‚‰Parentã¸ã¨æ¢æŸ»ã™ã‚‹
+				//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : æœ€åˆã«è¦‹ã¤ã‹ã£ãŸã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+				//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
+				//å¼•æ•°1: è‡ªèº«ã‚‚å«ã‚ã‚‹ã‹, default = true
 				template <class ComponentClass>
 				inline WeakPointer<ComponentClass> FindComponentInParent(bool isIncludeYourself = true);
 				//----------------------------------------------------------------------------------
 				//[FindComponentInChildren]
-				//ComponentClassŒ^ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğChildren‚©‚ç’T¸‚·‚é
-				//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : Å‰‚ÉŒ©‚Â‚©‚Á‚½ƒRƒ“ƒ|[ƒlƒ“ƒg
-				//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
-				//ˆø”1: ©g‚àŠÜ‚ß‚é‚©, default = true
+				//ComponentClasså‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’Childrenã‹ã‚‰æ¢æŸ»ã™ã‚‹
+				//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : æœ€åˆã«è¦‹ã¤ã‹ã£ãŸã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+				//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
+				//å¼•æ•°1: è‡ªèº«ã‚‚å«ã‚ã‚‹ã‹, default = true
 				template <class ComponentClass>
 				inline WeakPointer<ComponentClass> FindComponentInChildren(bool isIncludeYourself = true);
 				//----------------------------------------------------------------------------------
 				//[FindComponentEx]
-				//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : ‘S‚Ä‚Ì“¯Œ^ƒRƒ“ƒ|[ƒlƒ“ƒg
-				//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
+				//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : å…¨ã¦ã®åŒå‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+				//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
 				template <class ComponentClass>
 				inline std::vector<WeakPointer<ComponentClass>> FindComponentEx();
 				//----------------------------------------------------------------------------------
 				//[FindComponentInParentEx]
-				//ComponentClassŒ^ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğthis‚©‚çParent‚Ö‚Æ’T¸‚·‚é
-				//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : ‘S‚Ä‚Ì“¯Œ^ƒRƒ“ƒ|[ƒlƒ“ƒg
-				//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
-				//ˆø”1: ©g‚àŠÜ‚ß‚é‚©, default = true
+				//ComponentClasså‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’thisã‹ã‚‰Parentã¸ã¨æ¢æŸ»ã™ã‚‹
+				//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : å…¨ã¦ã®åŒå‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+				//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
+				//å¼•æ•°1: è‡ªèº«ã‚‚å«ã‚ã‚‹ã‹, default = true
 				template <class ComponentClass>
 				inline std::vector<WeakPointer<ComponentClass>> FindComponentInParentEx(bool isIncludeYourself = true);
 				//----------------------------------------------------------------------------------
 				//[FindComponentInChildrenEx]
-				//ComponentClassŒ^ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğChildren‚©‚ç’T¸‚·‚é
-				//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : ‘S‚Ä‚Ì“¯Œ^ƒRƒ“ƒ|[ƒlƒ“ƒg
-				//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
-				//ˆø”1: ©g‚àŠÜ‚ß‚é‚©, default = true
+				//ComponentClasså‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’Childrenã‹ã‚‰æ¢æŸ»ã™ã‚‹
+				//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : å…¨ã¦ã®åŒå‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+				//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
+				//å¼•æ•°1: è‡ªèº«ã‚‚å«ã‚ã‚‹ã‹, default = true
 				template <class ComponentClass>
 				inline std::vector<WeakPointer<ComponentClass>> FindComponentInChildrenEx(bool isIncludeYourself = true);
 
 				//----------------------------------------------------------------------------------
 				//[RemoveComponent]
-				//Component‚ğíœ‚·‚é (templateŒ^‚É‘Î‰‚µ‚½Å‚àŒÃ‚¢ƒRƒ“ƒ|[ƒlƒ“ƒg)
+				//Componentã‚’å‰Šé™¤ã™ã‚‹ (templateå‹ã«å¯¾å¿œã—ãŸæœ€ã‚‚å¤ã„ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ)
 				template <class ComponentClass>
 				inline void RemoveComponent();
 				//----------------------------------------------------------------------------------
 				//[RemoveComponentEx]
-				//Component‚ğíœ‚·‚é (templateŒ^‚É‘Î‰‚µ‚½‘S‚Ä‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg)
+				//Componentã‚’å‰Šé™¤ã™ã‚‹ (templateå‹ã«å¯¾å¿œã—ãŸå…¨ã¦ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ)
 				template <class ComponentClass>
 				inline void RemoveComponentEx();
 				//----------------------------------------------------------------------------------
 				//[RemoveComponentAll]
-				//Component‚ğ‘S‚Äíœ‚·‚é
+				//Componentã‚’å…¨ã¦å‰Šé™¤ã™ã‚‹
 				inline void RemoveComponentAll();
 
-				//ƒvƒƒpƒeƒBˆµ‚¢‚Æ‚µ‚Ä“Á—á‚Å•Ï”‚Ì–½–¼‹K–ñ‚ğg‚¢‚Ü‚·
+				//ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£æ‰±ã„ã¨ã—ã¦ç‰¹ä¾‹ã§å¤‰æ•°ã®å‘½åè¦ç´„ã‚’ä½¿ã„ã¾ã™
 
 				//auto select function line
 				static constexpr int cAutoSelectFunctionLine = VariableLimit::cIntMin;
 
 				//transform
 				WeakPointer<TransformX11> transform;
-				//game object (GameObject->Instantiate‚©‚ç¶¬‚µ‚È‚©‚Á‚½ê‡‚Ínull)
+				//game object (GameObject->Instantiateã‹ã‚‰ç”Ÿæˆã—ãªã‹ã£ãŸå ´åˆã¯null)
 				WeakPointer<GameObject> gameObject;
-				//time layer (GameObject->Instantiate‚©‚ç¶¬‚µ‚È‚©‚Á‚½ê‡‚Ínull)
+				//time layer (GameObject->Instantiateã‹ã‚‰ç”Ÿæˆã—ãªã‹ã£ãŸå ´åˆã¯null)
 				WeakPointer<Time::TimeLayer> timeLayer;
 
 				//set world matrix graphics (draw function only property)
@@ -638,7 +638,7 @@ namespace SGFramework
 				SGF_FUNCTION_PROPERTY WeakPointer<TransformX11> getChildren(uint index)
 				{ 
 					LockGuardTransform guard(m_lock); 
-					//Index‚ª—LŒø‚È‚ç•Ô‹p	
+					//IndexãŒæœ‰åŠ¹ãªã‚‰è¿”å´	
 					return m_childrens.size() > index ? WeakPointer<TransformX11>(m_childrens[index]) : std::move(WeakPointer<TransformX11>());
 				}
 				
@@ -665,9 +665,9 @@ namespace SGFramework
 					}
 					else
 					{
-						//Local•ÏŠ·‚µ‚½’l‚ğ‘ã“ü
+						//Localå¤‰æ›ã—ãŸå€¤ã‚’ä»£å…¥
 						m_variables.localPosition = set - m_parent->getWorldPosition();
-						//Worldİ’è
+						//Worldè¨­å®š
 						m_variables.worldPosition = set;
 
 						if (m_childrens.size() > 0)
@@ -699,9 +699,9 @@ namespace SGFramework
 					}
 					else
 					{
-						//Local•ÏŠ·‚µ‚½’l‚ğ‘ã“ü
+						//Localå¤‰æ›ã—ãŸå€¤ã‚’ä»£å…¥
 						m_variables.localRotation = set * m_parent->getWorldRotation().getInverse();
-						//Worldİ’è
+						//Worldè¨­å®š
 						m_variables.worldRotation = set;
 
 						if (m_childrens.size() > 0)
@@ -733,9 +733,9 @@ namespace SGFramework
 					}
 					else
 					{
-						//Local•ÏŠ·‚µ‚½’l‚ğ‘ã“ü
+						//Localå¤‰æ›ã—ãŸå€¤ã‚’ä»£å…¥
 						m_variables.localScale = set / m_parent->getWorldScale();
-						//Worldİ’è
+						//Worldè¨­å®š
 						m_variables.worldScale = set;
 
 						if (m_childrens.size() > 0)
@@ -868,9 +868,9 @@ namespace SGFramework
 					{
 						Quaternion look = Quaternion::LookForward(set);
 					
-						//Local•ÏŠ·‚µ‚½’l‚ğ‘ã“ü
+						//Localå¤‰æ›ã—ãŸå€¤ã‚’ä»£å…¥
 						m_variables.localRotation = look * m_parent->getWorldRotation().getInverse();
-						//Worldİ’è
+						//Worldè¨­å®š
 						m_variables.worldRotation = look;
 						if (m_childrens.size() > 0)
 						{
@@ -956,7 +956,7 @@ namespace SGFramework
 				SGF_FUNCTION_PROPERTY bool getIsDestroy() { LockGuardTransform guard(m_lock); return m_flags & m_cIsDestroyFlag ? true : false; }
 				
 			private:
-				//RootList—p
+				//RootListç”¨
 				struct RootList
 				{
 				public:
@@ -972,7 +972,7 @@ namespace SGFramework
 
 					//----------------------------------------------------------------------------------
 					//[AcquisitionFunctionLineIndex]
-					//Indexæ“¾
+					//Indexå–å¾—
 					inline bool AcquisitionFunctionLineIndex(int& index)
 					{
 						int oldCounter = 0, newCounter = 0;
@@ -992,7 +992,7 @@ namespace SGFramework
 					}
 					//----------------------------------------------------------------------------------
 					//[AcquisitionFunctionLineIndexForSingleThread]
-					//Indexæ“¾
+					//Indexå–å¾—
 					inline bool AcquisitionFunctionLineIndexForSingleThread(int& index)
 					{
 						int result = ++m_counter;
@@ -1005,11 +1005,11 @@ namespace SGFramework
 					}
 					//----------------------------------------------------------------------------------
 					//[ResetFunctionLineIndex]
-					//IndexƒJƒEƒ“ƒ^[‰Šú‰»
+					//Indexã‚«ã‚¦ãƒ³ã‚¿ãƒ¼åˆæœŸåŒ–
 					inline void ResetFunctionLineIndex() { m_counter = -1; }
 					//----------------------------------------------------------------------------------
 					//[Add]
-					//RootƒŠƒXƒg‚É’Ç‰Á
+					//Rootãƒªã‚¹ãƒˆã«è¿½åŠ 
 					inline void Add(TransformX11* transform)
 					{
 						AtomicOperation::LockAtomic(m_lock);
@@ -1018,7 +1018,7 @@ namespace SGFramework
 					}
 					//----------------------------------------------------------------------------------
 					//[Erase]
-					//RootƒŠƒXƒg‚©‚çíœ
+					//Rootãƒªã‚¹ãƒˆã‹ã‚‰å‰Šé™¤
 					inline void Erase(TransformX11* transform)
 					{
 						AtomicOperation::LockAtomic(m_lock);
@@ -1027,7 +1027,7 @@ namespace SGFramework
 					}
 					//----------------------------------------------------------------------------------
 					//[Shutdown]
-					//I—¹
+					//çµ‚äº†
 					inline void Shutdown()
 					{
 						AtomicOperation::LockAtomic(m_lock);
@@ -1040,15 +1040,15 @@ namespace SGFramework
 					std::vector<std::unordered_map<uint, TransformX11*>> m_list;
 					//lock
 					std::atomic<bool> m_lock = false;
-					//ƒJƒEƒ“ƒ^
+					//ã‚«ã‚¦ãƒ³ã‚¿
 					std::atomic<int> m_counter;
-					//line”
+					//lineæ•°
 					int m_numLines;
 				};
 
 				//----------------------------------------------------------------------------------
-				//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-				//‘ã“ü‰Šú‰»‚·‚é
+				//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+				//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
 				inline TransformX11(const sgstring& name, const Vector3& position,
 					const Vector3& scale, const Quaternion& rotation, int functionLine, bool isStatic, Layer layer, 
 					const Tag& tag, bool isUsedMutexCounter, bool isAutoGabageCollection);
@@ -1114,20 +1114,20 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[UpdateForRoot]
-				//BackGroundUpdate (Parent‚ª‚¢‚È‚¢TransformX11”Å)
+				//BackGroundUpdate (ParentãŒã„ãªã„TransformX11ç‰ˆ)
 				inline void UpdateForRoot();
 				//----------------------------------------------------------------------------------
 				//[UpdateForChildren]
-				//BackGroundUpdate (Parent‚ª‚¢‚éTransformX11”Å)
+				//BackGroundUpdate (ParentãŒã„ã‚‹TransformX11ç‰ˆ)
 				inline void UpdateForChildren(Matrix& parentMatrix, Quaternion& rotation,
 					Vector3& scale, Vector3& position, bool isActive, bool isStatic, bool isChanged);
 				//----------------------------------------------------------------------------------
 				//[UpdateForRoot]
-				//BackGroundUpdate (Parent‚ª‚¢‚È‚¢TransformX11”Å)
+				//BackGroundUpdate (ParentãŒã„ãªã„TransformX11ç‰ˆ)
 				inline void UpdateForRoot(uint callbackType);
 				//----------------------------------------------------------------------------------
 				//[UpdateForChildren]
-				//BackGroundUpdate (Parent‚ª‚¢‚éTransformX11”Å)
+				//BackGroundUpdate (ParentãŒã„ã‚‹TransformX11ç‰ˆ)
 				inline void UpdateForChildren(uint callbackType, Matrix& parentMatrix, Quaternion& rotation, 
 					Vector3& scale, Vector3& position, bool isActive, bool isStatic, bool isChanged);
 				//----------------------------------------------------------------------------------
@@ -1140,16 +1140,16 @@ namespace SGFramework
 				inline void SyncForBackGround1();
 				//----------------------------------------------------------------------------------
 				//[InitLocal]
-				//LocalSync‚ğs‚¤
-				//ˆø”1: world->local?
+				//LocalSyncã‚’è¡Œã†
+				//å¼•æ•°1: world->local?
 				inline void InitLocal(bool isUseWorldInfo);
 				//----------------------------------------------------------------------------------
 				//[SyncDrawMatrix]
-				//GraphicsUpdate—pMatrix‚ğ“¯Šú‚·‚é
+				//GraphicsUpdateç”¨Matrixã‚’åŒæœŸã™ã‚‹
 				inline void SyncDrawMatrix();
 				//----------------------------------------------------------------------------------
 				//[AllocateCallback]
-				//m_callbackIndexs‚ğİ’è
+				//m_callbackIndexsã‚’è¨­å®š
 				inline void AllocateCallback();
 				//----------------------------------------------------------------------------------
 				//[InvokeCallback]
@@ -1181,7 +1181,7 @@ namespace SGFramework
 				inline void VariablesUpdateChildren(Vector3& position, XmVector& quaternion, Vector3& scale);
 				//----------------------------------------------------------------------------------
 				//[ParentSettings]
-				//CopyInstantiate—p, parent‚ğİ’è‚µ’¼‚·
+				//CopyInstantiateç”¨, parentã‚’è¨­å®šã—ç›´ã™
 				inline void ParentSettings(WeakPointer<TransformX11> parent);
 				
 				//flags
@@ -1193,31 +1193,31 @@ namespace SGFramework
 				//root list
 				static RootList m_rootList;
 
-				//ParentTransformX11ƒ|ƒCƒ“ƒ^
+				//ParentTransformX11ãƒã‚¤ãƒ³ã‚¿
 				WeakPointer<TransformX11> m_parent;
 				//ChildrenTransformX11 Venctor
 				std::vector<SharedPointer<TransformX11>> m_childrens;
 				//Components
 				std::vector<SharedPointer<ComponentX11>> m_components;
-				//ˆ—ŒyŒ¸—pƒR[ƒ‹ƒoƒbƒNindexƒŠƒXƒg
+				//å‡¦ç†è»½æ¸›ç”¨ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯indexãƒªã‚¹ãƒˆ
 				std::unordered_map<uint, std::vector<uint>> m_callbackIndexs;
 				
 				TransformVariables m_variables;				//public variables
-				Vector4x4 m_updateMatrix;					//Update—pMatrix
-				Vector4x4 m_drawMatrix;						//Draw—pMatrix
-				Vector4x4* m_staticMatrix;						//Staticê—p->Bake‚·‚é
+				Vector4x4 m_updateMatrix;					//Updateç”¨Matrix
+				Vector4x4 m_drawMatrix;						//Drawç”¨Matrix
+				Vector4x4* m_staticMatrix;						//Staticæ™‚å°‚ç”¨->Bakeã™ã‚‹
 				Tag m_tag;											//Tag
 				Layer m_layer;										//Layer
 				std::atomic<Lock> m_lock;					//lock atomic
 				uint m_callbackEnabledFlags;					//callback flags
-				int m_functionLineAtRoot;						//Root‚Ç‚±‚ÌFunctionLine‚É‘®‚·‚é‚©
+				int m_functionLineAtRoot;						//Rootæ™‚ã©ã“ã®FunctionLineã«å±ã™ã‚‹ã‹
 				byte m_flags;											//flags
 				bool m_isActive;										//isActive
 				bool m_isActivePublic;							//public isActive
-				bool m_isNotify;										//access—p
+				bool m_isNotify;										//accessç”¨
 			};
 
-			//ComponentŒnƒNƒ‰ƒX‚ÌBase‚Æ‚È‚éComponentX11 class
+			//Componentç³»ã‚¯ãƒ©ã‚¹ã®Baseã¨ãªã‚‹ComponentX11 class
 			class ComponentX11 : public Object
 			{
 			public:
@@ -1230,7 +1230,7 @@ namespace SGFramework
 				ComponentX11& operator = (const ComponentX11&) = delete;
 				ComponentX11& operator = (ComponentX11&&) = delete;
 
-				//Callback‚ğw’è‚·‚éƒtƒ‰ƒO‚ğ’è‹`‚µ‚½CallbackFunctions
+				//Callbackã‚’æŒ‡å®šã™ã‚‹ãƒ•ãƒ©ã‚°ã‚’å®šç¾©ã—ãŸCallbackFunctions
 				struct CallbackFunctions
 				{
 					friend ComponentX11;
@@ -1297,127 +1297,127 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[Instantiate]
-				//ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é
-				//ˆø”1: copy
-				//ˆø”2: “o˜^‚·‚éTransform
-				//ˆø”3: Used mutex counter (Required for Multi thread), default = true
-				//ˆø”4: Auto gabage collection?, default = true
+				//ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹
+				//å¼•æ•°1: copy
+				//å¼•æ•°2: ç™»éŒ²ã™ã‚‹Transform
+				//å¼•æ•°3: Used mutex counter (Required for Multi thread), default = true
+				//å¼•æ•°4: Auto gabage collection?, default = true
 				template <class ComponentClass>
 				inline static SharedPointer<ComponentClass> Instantiate(SharedPointer<ComponentClass> copy, SharedPointer<TransformX11> transform,
 					bool isUsedMutexCounter = true, bool isAutoGabageCollection = true);
 				//----------------------------------------------------------------------------------
 				//[Instantiate]
-				//ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é
-				//ˆø”1: “o˜^‚·‚éTransform
-				//ˆø”2: is Enabled, default = true
-				//ˆø”3: Used mutex counter (Required for Multi thread), default = true
-				//ˆø”4: Auto gabage collection?, default = true
+				//ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹
+				//å¼•æ•°1: ç™»éŒ²ã™ã‚‹Transform
+				//å¼•æ•°2: is Enabled, default = true
+				//å¼•æ•°3: Used mutex counter (Required for Multi thread), default = true
+				//å¼•æ•°4: Auto gabage collection?, default = true
 				template <class ComponentClass>
 				inline static SharedPointer<ComponentClass> Instantiate(SharedPointer<TransformX11> transform, bool isEnabled = true,
 					bool isUsedMutexCounter = true, bool isAutoGabageCollection = true);
 
 				//----------------------------------------------------------------------------------
 				//[EnabledCallbacks]
-				//return: ©g‚ªCall‚³‚ê‚éCallback Flags, Component::CallbackFunctionsQÆ
+				//return: è‡ªèº«ãŒCallã•ã‚Œã‚‹Callback Flags, Component::CallbackFunctionså‚ç…§
 				inline virtual uint EnableCallbacks() { return 0; }
 				//----------------------------------------------------------------------------------
 				//[Awake]
-				//ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½uŠÔ‚ÉŒÄ‚Î‚ê‚éCallbackŠÖ”
+				//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸç¬é–“ã«å‘¼ã°ã‚Œã‚‹Callbacké–¢æ•°
 				inline virtual void Awake() {}
 				//----------------------------------------------------------------------------------
 				//[OnEnable]
-				//ƒCƒ“ƒXƒ^ƒ“ƒX‰»ŒãisEnabled‚ªtrue‚É‚È‚Á‚½uŠÔ‚ÉŒÄ‚Î‚ê‚éCallbackŠÖ”
+				//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–å¾ŒisEnabledãŒtrueã«ãªã£ãŸç¬é–“ã«å‘¼ã°ã‚Œã‚‹Callbacké–¢æ•°
 				inline virtual void OnEnable() {}
 				//----------------------------------------------------------------------------------
 				//[Start]
-				//ƒCƒ“ƒXƒ^ƒ“ƒX‰»Œã“¯ŠúƒtƒŒ[ƒ€‚ÅCallback‚³‚ê‚éŠÖ”
+				//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–å¾ŒåŒæœŸãƒ•ãƒ¬ãƒ¼ãƒ ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 				inline virtual void Start() {}
 
 				//----------------------------------------------------------------------------------
 				//[Update]
-				//–ˆƒtƒŒ[ƒ€UpdateƒuƒƒbƒN‚ÅCallback‚³‚ê‚éŠÖ”
+				//æ¯ãƒ•ãƒ¬ãƒ¼ãƒ Updateãƒ–ãƒ­ãƒƒã‚¯ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 				inline virtual void Update() {}
 				//----------------------------------------------------------------------------------
 				//[Sync]
-				//–ˆƒtƒŒ[ƒ€UpdateŒã‚Ì“®‹@ƒuƒƒbƒN (Sync) ‚ÅCallback‚³‚ê‚éŠÖ”
+				//æ¯ãƒ•ãƒ¬ãƒ¼ãƒ Updateå¾Œã®å‹•æ©Ÿãƒ–ãƒ­ãƒƒã‚¯ (Sync) ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 				inline virtual void Sync() {}
 				//----------------------------------------------------------------------------------
 				//[LateUpdate]
-				//Update, SyncŒã‚ÉŒÄ‚Î‚ê‚éXVƒuƒƒbƒN (LateUpdate) ‚ÅCallback‚³‚ê‚éŠÖ”
+				//Update, Syncå¾Œã«å‘¼ã°ã‚Œã‚‹æ›´æ–°ãƒ–ãƒ­ãƒƒã‚¯ (LateUpdate) ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 				inline virtual void LateUpdate() {}
 				//----------------------------------------------------------------------------------
 				//[FixedUpdate]
-				//’èŠú“I‚ÉŒÄ‚Î‚ê‚éFixedƒtƒŒ[ƒ€“à‚ÅUpdate‚Æ‚µ‚ÄCallback‚³‚ê‚éŠÖ”
+				//å®šæœŸçš„ã«å‘¼ã°ã‚Œã‚‹Fixedãƒ•ãƒ¬ãƒ¼ãƒ å†…ã§Updateã¨ã—ã¦Callbackã•ã‚Œã‚‹é–¢æ•°
 				inline virtual void FixedUpdate() {}
 				//----------------------------------------------------------------------------------
 				//[MakeDrawCommand]
-				//Update, Sync, LateUpdate ƒuƒƒbƒNŒã‚ÉCallback‚³‚ê‚é,
-				//		DrawCommand‚ğì¬‚·‚é‚½‚ß‚ÌŠÖ”
+				//Update, Sync, LateUpdate ãƒ–ãƒ­ãƒƒã‚¯å¾Œã«Callbackã•ã‚Œã‚‹,
+				//		DrawCommandã‚’ä½œæˆã™ã‚‹ãŸã‚ã®é–¢æ•°
 				inline virtual void MakeDrawCommand() {}
 
 				//----------------------------------------------------------------------------------
 				//[OnDisable]
-				//isEnabled‚ªfalse‚É‚È‚Á‚½uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
+				//isEnabledãŒfalseã«ãªã£ãŸç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
 				inline virtual void OnDisable() {}
 				//----------------------------------------------------------------------------------
 				//[OnDestroy]
-				//ƒCƒ“ƒXƒ^ƒ“ƒX‚ªíœ‚³‚ê‚éuŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
+				//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒå‰Šé™¤ã•ã‚Œã‚‹ç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
 				inline virtual void OnDestroy() {}
 
 				//----------------------------------------------------------------------------------
 				//[OnCollisionEnter]
-				//Collider‚ª“–‚½‚Á‚½uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
-				//ˆø”1: ÚGƒIƒuƒWƒFƒNƒg‚Ìî•ñ
+				//ColliderãŒå½“ãŸã£ãŸç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
+				//å¼•æ•°1: æ¥è§¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æƒ…å ±
 				inline virtual void OnCollisionEnter(const ContactInfo& contactInfo) {}
 				//----------------------------------------------------------------------------------
 				//[OnCollisionStay]
-				//Collider‚ª“–‚½‚Á‚Ä‚¢‚éŠÔCallback‚³‚ê‚éŠÖ”
-				//ˆø”1: ÚGƒIƒuƒWƒFƒNƒg‚Ìî•ñ
+				//ColliderãŒå½“ãŸã£ã¦ã„ã‚‹é–“Callbackã•ã‚Œã‚‹é–¢æ•°
+				//å¼•æ•°1: æ¥è§¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æƒ…å ±
 				inline virtual void OnCollisionStay(const ContactInfo& contactInfo) {}
 				//----------------------------------------------------------------------------------
 				//[OnCollisionExit]
-				//Collider‚ª—£‚ê‚½uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
-				//ˆø”1: ÚGƒIƒuƒWƒFƒNƒg‚Ìî•ñ (ƒIƒuƒWƒFƒNƒg‚ªíœ‚³‚ê‚Ä‚¢‚½ê‡Aƒ|ƒCƒ“ƒ^‚ÍNull->isValid)
+				//ColliderãŒé›¢ã‚ŒãŸç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
+				//å¼•æ•°1: æ¥è§¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æƒ…å ± (ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå‰Šé™¤ã•ã‚Œã¦ã„ãŸå ´åˆã€ãƒã‚¤ãƒ³ã‚¿ã¯Null->isValid)
 				inline virtual void OnCollisionExit(const ContactInfo& contactInfo) {}
 
 				//----------------------------------------------------------------------------------
 				//[OnTriggerEnter]
-				//Trigger‚ª“–‚½‚Á‚½uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
-				//ˆø”1: ÚGƒIƒuƒWƒFƒNƒg‚Ìî•ñ
+				//TriggerãŒå½“ãŸã£ãŸç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
+				//å¼•æ•°1: æ¥è§¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æƒ…å ±
 				inline virtual void OnTriggerEnter(const ContactInfo& contactInfo) {}
 				//----------------------------------------------------------------------------------
 				//[OnTriggerStay]
-				//Trigger‚ª“–‚½‚Á‚Ä‚¢‚éŠÔCallback‚³‚ê‚éŠÖ”
-				//ˆø”1: ÚGƒIƒuƒWƒFƒNƒg‚Ìî•ñ
+				//TriggerãŒå½“ãŸã£ã¦ã„ã‚‹é–“Callbackã•ã‚Œã‚‹é–¢æ•°
+				//å¼•æ•°1: æ¥è§¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æƒ…å ±
 				inline virtual void OnTriggerStay(const ContactInfo& contactInfo) {}
 				//----------------------------------------------------------------------------------
 				//[OnTriggerExit]
-				//Trigger‚ª—£‚ê‚½uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
-				//ˆø”1: ÚGƒIƒuƒWƒFƒNƒg‚Ìî•ñ (ƒIƒuƒWƒFƒNƒg‚ªíœ‚³‚ê‚Ä‚¢‚½ê‡Aƒ|ƒCƒ“ƒ^‚ÍNull->isValid)
+				//TriggerãŒé›¢ã‚ŒãŸç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
+				//å¼•æ•°1: æ¥è§¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æƒ…å ± (ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå‰Šé™¤ã•ã‚Œã¦ã„ãŸå ´åˆã€ãƒã‚¤ãƒ³ã‚¿ã¯Null->isValid)
 				inline virtual void OnTriggerExit(const ContactInfo& contactInfo) {}
 
 				//----------------------------------------------------------------------------------
 				//[ChangeUpperHierarchy]
-				//parentˆÈã‚ÌŠK‘wŠÖŒW‚É•ÏX‚ªs‚í‚ê‚½(parent‚Ì•ÏX‚È‚Ç)uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
-				//d—lãUpdateFlame‚ÅŒÄ‚Ño‚³‚ê‚é‰Â”\«‚ª‚ ‚é‚±‚Æ‚É—¯ˆÓ‚·‚é‚±‚Æ (parent‚Ì•ÏX‚È‚Ç‚ğs‚Á‚½ƒXƒŒƒbƒh‚ÅŒÄ‚Ño‚µ)
-				//ˆø”1: new parent (null‚Ì‰Â”\«‚ ‚è, ’¼ã‚Ìe‚Å‚Í‚È‚¢‰Â”\«‚ª‚ ‚è)
-				//ˆø”2: old parent (null‚Ì‰Â”\«‚ ‚è, ’¼ã‚Ìe‚Å‚Í‚È‚¢‰Â”\«‚ª‚ ‚è)
+				//parentä»¥ä¸Šã®éšå±¤é–¢ä¿‚ã«å¤‰æ›´ãŒè¡Œã‚ã‚ŒãŸ(parentã®å¤‰æ›´ãªã©)ç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
+				//ä»•æ§˜ä¸ŠUpdateFlameã§å‘¼ã³å‡ºã•ã‚Œã‚‹å¯èƒ½æ€§ãŒã‚ã‚‹ã“ã¨ã«ç•™æ„ã™ã‚‹ã“ã¨ (parentã®å¤‰æ›´ãªã©ã‚’è¡Œã£ãŸã‚¹ãƒ¬ãƒƒãƒ‰ã§å‘¼ã³å‡ºã—)
+				//å¼•æ•°1: new parent (nullã®å¯èƒ½æ€§ã‚ã‚Š, ç›´ä¸Šã®è¦ªã§ã¯ãªã„å¯èƒ½æ€§ãŒã‚ã‚Š)
+				//å¼•æ•°2: old parent (nullã®å¯èƒ½æ€§ã‚ã‚Š, ç›´ä¸Šã®è¦ªã§ã¯ãªã„å¯èƒ½æ€§ãŒã‚ã‚Š)
 				inline virtual void ChangeUpperHierarchy(WeakPointer<TransformX11> newParent, WeakPointer<TransformX11> oldParent) {}
 
 
 				//----------------------------------------------------------------------------------
 				//[ChangeCallbackFlag]
-				//CallbackEnabledFlags‚Ì’l‚ğ•ÏX‚·‚é, Awake‚È‚Ç‚ÍÄ“xŒÄ‚Ño‚·‚æ‚¤‚Éİ’è‚·‚é‚Æ‘¦ŒÄ‚Î‚ê‚é
-				//Copy Instantiate‚ğs‚¤‚ÆCopyæ‚Í‰Šúó‘Ô‚Æ‚È‚é
-				//ˆø”1: flag
-				//ˆø”2: set value
+				//CallbackEnabledFlagsã®å€¤ã‚’å¤‰æ›´ã™ã‚‹, Awakeãªã©ã¯å†åº¦å‘¼ã³å‡ºã™ã‚ˆã†ã«è¨­å®šã™ã‚‹ã¨å³æ™‚å‘¼ã°ã‚Œã‚‹
+				//Copy Instantiateã‚’è¡Œã†ã¨Copyå…ˆã¯åˆæœŸçŠ¶æ…‹ã¨ãªã‚‹
+				//å¼•æ•°1: flag
+				//å¼•æ•°2: set value
 				inline void ChangeCallbackFlags(uint flags, bool setValue);
 
 				//transform
 				WeakPointer<TransformX11> transform;
-				//game object (Transform‚ğGameObject->Instantiate‚©‚ç¶¬‚µ‚È‚©‚Á‚½ê‡‚Ínull)
+				//game object (Transformã‚’GameObject->Instantiateã‹ã‚‰ç”Ÿæˆã—ãªã‹ã£ãŸå ´åˆã¯null)
 				WeakPointer<GameObject> gameObject;
-				//time layer (Transform‚ğGameObject->Instantiate‚©‚ç¶¬‚µ‚È‚©‚Á‚½ê‡‚Ínull)
+				//time layer (Transformã‚’GameObject->Instantiateã‹ã‚‰ç”Ÿæˆã—ãªã‹ã£ãŸå ´åˆã¯null)
 				WeakPointer<Time::TimeLayer> timeLayer;
 				
 				//transform->isActiveSelf & this isEnabled (read function property)
@@ -1430,7 +1430,7 @@ namespace SGFramework
 
 			protected:
 				//----------------------------------------------------------------------------------
-				//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
+				//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 				inline ComponentX11() : Object(""), transform(), m_isEnabled(false), 
 					m_callbackEnabledFlags(0), m_saveCallbackEnabledFlags(0), m_isOldEnabled(false) {}
 				
@@ -1442,11 +1442,11 @@ namespace SGFramework
 			private:
 				//----------------------------------------------------------------------------------
 				//[AllocateCallback]
-				//callback table‚ğì¬‚·‚é
+				//callback tableã‚’ä½œæˆã™ã‚‹
 				inline static void AllocateCallback();
 				//----------------------------------------------------------------------------------
 				//[RefreshCallbackFlags]
-				//Callback Flags‚ğ‰Šúó‘Ô‚É‚·‚é
+				//Callback Flagsã‚’åˆæœŸçŠ¶æ…‹ã«ã™ã‚‹
 				inline void RefreshCallbackFlags();
 				//----------------------------------------------------------------------------------
 				//[BackGroundSync]
@@ -1454,15 +1454,15 @@ namespace SGFramework
 				inline void BackGroundSync();
 				//----------------------------------------------------------------------------------
 				//[InvokeCallback]
-				//Callback‚ğŒÄ‚Ño‚·
+				//Callbackã‚’å‘¼ã³å‡ºã™
 				inline void InvokeCallback(uint callbackType);
 				//----------------------------------------------------------------------------------
 				//[InvokeCallbackPhysics]
-				//Callback‚ğŒÄ‚Ño‚· (Physics)
+				//Callbackã‚’å‘¼ã³å‡ºã™ (Physics)
 				inline void InvokeCallbackPhysics(uint callbackType, const ContactInfo& info);
 				//----------------------------------------------------------------------------------
 				//[InvokeCallbackPointer]
-				//Callback‚ğŒÄ‚Ño‚· (Pointer)
+				//Callbackã‚’å‘¼ã³å‡ºã™ (Pointer)
 				inline void InvokeCallbackPointer(uint callbackType, const WeakPointer<TransformX11>& pointer0, const WeakPointer<TransformX11>& pointer1);
 
 				//Callback Table
@@ -1480,18 +1480,18 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Instantiate]
-			//Transform‚ğÀ‘Ì‰»‚·‚é, •K‚¸ƒVƒ“ƒOƒ‹ƒXƒŒƒbƒhó‘Ô‚Ì‚ÉÀ‘Ì‰»‚·‚é‚±‚Æ
+			//Transformã‚’å®Ÿä½“åŒ–ã™ã‚‹, å¿…ãšã‚·ãƒ³ã‚°ãƒ«ã‚¹ãƒ¬ãƒƒãƒ‰çŠ¶æ…‹ã®æ™‚ã«å®Ÿä½“åŒ–ã™ã‚‹ã“ã¨
 			//return: transform
-			//ˆø”1: position, default = zero
-			//ˆø”2: scale, default = one
-			//ˆø”3: rotation, default = identity
-			//ˆø”4: name, default = "Transform only object"
-			//ˆø”5: use function line if root transform, default = auto
-			//ˆø”6: isStatic, default = false
-			//ˆø”7: layer, default = Default Layer
-			//ˆø”8: tag, default = Default Tag
-			//ˆø”9: SharedPointer->isUsedMutexCounter, default = ture
-			//ˆø”10: SharedPointer->isAutoGabageCollection, default = ture
+			//å¼•æ•°1: position, default = zero
+			//å¼•æ•°2: scale, default = one
+			//å¼•æ•°3: rotation, default = identity
+			//å¼•æ•°4: name, default = "Transform only object"
+			//å¼•æ•°5: use function line if root transform, default = auto
+			//å¼•æ•°6: isStatic, default = false
+			//å¼•æ•°7: layer, default = Default Layer
+			//å¼•æ•°8: tag, default = Default Tag
+			//å¼•æ•°9: SharedPointer->isUsedMutexCounter, default = ture
+			//å¼•æ•°10: SharedPointer->isAutoGabageCollection, default = ture
 			inline SharedPointer<TransformX11> TransformX11::Instantiate(const Vector3 & position, const Vector3 & scale,
 				const Quaternion & rotation, const sgstring & name, int functionLineAtRoot, bool isStatic, Layer layer, const Tag & tag,
 				bool isUsedMutexCounter, bool isAutoGabageCollection)
@@ -1506,21 +1506,21 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[Instantiate]
-			//Transform‚ğÀ‘Ì‰»‚·‚é, •K‚¸ƒVƒ“ƒOƒ‹ƒXƒŒƒbƒhó‘Ô‚Ì‚ÉÀ‘Ì‰»‚·‚é‚±‚Æ
+			//Transformã‚’å®Ÿä½“åŒ–ã™ã‚‹, å¿…ãšã‚·ãƒ³ã‚°ãƒ«ã‚¹ãƒ¬ãƒƒãƒ‰çŠ¶æ…‹ã®æ™‚ã«å®Ÿä½“åŒ–ã™ã‚‹ã“ã¨
 			//position = zero, scale = one, rotation = identity
-			//return: transform, parent‚ª–³Œø‚Èƒ|ƒCƒ“ƒ^‚¾‚Á‚½ê‡Nullƒ|ƒCƒ“ƒ^
-			//ˆø”1: eTransform
-			//ˆø”2: position, rotation, scale -> true = world : false = local 
-			//ˆø”3: position, default = zero
-			//ˆø”4: scale, default = one
-			//ˆø”5: rotation, default = identity
-			//ˆø”6: name, default = "Transform only object"
-			//ˆø”7: use function line if root transform, default = auto
-			//ˆø”8: isStatic, default = false
-			//ˆø”9: layer, default = Default Layer
-			//ˆø”10: tag, default = Default Tag
-			//ˆø”11: SharedPointer->isUsedMutexCounter, default = ture
-			//ˆø”12: SharedPointer->isAutoGabageCollection, default = ture
+			//return: transform, parentãŒç„¡åŠ¹ãªãƒã‚¤ãƒ³ã‚¿ã ã£ãŸå ´åˆNullãƒã‚¤ãƒ³ã‚¿
+			//å¼•æ•°1: è¦ªTransform
+			//å¼•æ•°2: position, rotation, scale -> true = world : false = local 
+			//å¼•æ•°3: position, default = zero
+			//å¼•æ•°4: scale, default = one
+			//å¼•æ•°5: rotation, default = identity
+			//å¼•æ•°6: name, default = "Transform only object"
+			//å¼•æ•°7: use function line if root transform, default = auto
+			//å¼•æ•°8: isStatic, default = false
+			//å¼•æ•°9: layer, default = Default Layer
+			//å¼•æ•°10: tag, default = Default Tag
+			//å¼•æ•°11: SharedPointer->isUsedMutexCounter, default = ture
+			//å¼•æ•°12: SharedPointer->isAutoGabageCollection, default = ture
 			inline SharedPointer<TransformX11> TransformX11::Instantiate(SharedPointer<TransformX11> parent,
 			bool isInstantiateInWorldSpace, const Vector3 & position, const Vector3 & scale, const Quaternion & rotation,
 				const sgstring & name, int functionLineAtRoot, bool isStatic, Layer layer, const Tag & tag,
@@ -1535,7 +1535,7 @@ namespace SGFramework
 					result->transform = result;
 					result->m_parent = parent;
 
-					//d•¡–¼ŒŸõ
+					//é‡è¤‡åæ¤œç´¢
 					bool isDuplication = false;
 					do
 					{
@@ -1562,22 +1562,22 @@ namespace SGFramework
 			}
 
 			//----------------------------------------------------------------------------------
-			//[ƒfƒXƒgƒ‰ƒNƒ^]
-			//qƒIƒuƒWƒFƒNƒg‚ÌŠJ•ú
+			//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®é–‹æ”¾
 			inline TransformX11::~TransformX11()
 			{
 				LockGuardTransform guard(m_lock);
 				m_flags |= m_cIsDestroyFlag;
 
-				//e‚ª‚¢‚éê‡
+				//è¦ªãŒã„ã‚‹å ´åˆ
 				if (m_parent.LockShared())
 				{
-					//eƒŠƒXƒg‚©‚ç©•ª‚ğŒŸõ‚·‚éƒ‹[ƒv
+					//è¦ªãƒªã‚¹ãƒˆã‹ã‚‰è‡ªåˆ†ã‚’æ¤œç´¢ã™ã‚‹ãƒ«ãƒ¼ãƒ—
 					for (auto it = m_parent->m_childrens.begin(); it != m_parent->m_childrens.end();)
 					{
 						if (IS_TRUE(m_parent.LockShared()))
 						{
-							//”­Œ©‚µ‚½‚çerase & break
+							//ç™ºè¦‹ã—ãŸã‚‰erase & break
 							if ((*it)->instanceID() == this->instanceID())
 							{
 								m_parent->m_childrens.erase(it);
@@ -1590,22 +1590,22 @@ namespace SGFramework
 							break;
 					}
 
-					//ƒ|ƒCƒ“ƒ^ƒƒbƒN‰ğœ
+					//ãƒã‚¤ãƒ³ã‚¿ãƒ­ãƒƒã‚¯è§£é™¤
 					m_parent.UnlockShared();
 				}
-				//e‚ª‹‚È‚¢
+				//è¦ªãŒå±…ãªã„
 				else
 				{
-					//TopParentList‚©‚ç©g‚ğíœ
+					//TopParentListã‹ã‚‰è‡ªèº«ã‚’å‰Šé™¤
 					m_rootList.Erase(this);
 				}
 
-				//q‹Ÿíœ
+				//å­ä¾›å‰Šé™¤
 				DestroyAllChildren();
 
 				//Remove
 
-				//Callback ƒ‹[ƒv
+				//Callback ãƒ«ãƒ¼ãƒ—
 				for (auto& e : m_components)
 				{
 					//Callback
@@ -1623,19 +1623,19 @@ namespace SGFramework
 			{
 				using GraphicsX11 = SGFramework::Administrator::GraphicsX11;
 
-				//ƒRƒ“ƒXƒ^ƒ“ƒgƒoƒbƒtƒ@XV
+				//ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡æ›´æ–°
 				GraphicsX11::m_setConstantBufferObject.worldMatrix = m_drawMatrix.getTranspose();
 				GraphicsX11::m_setConstantBufferObject.worldInverseMatrix = m_drawMatrix.getInverse();
 				GraphicsX11::context->UpdateSubresource(GraphicsX11::m_constantBufferObject, 0, nullptr, &GraphicsX11::m_setConstantBufferObject, 0, 0);
 
-				//ƒRƒ“ƒXƒ^ƒ“ƒgƒoƒbƒtƒ@İ’è
+				//ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡è¨­å®š
 				GraphicsX11::context->VSSetConstantBuffers(GraphicsX11::m_cConstantBufferObjectSlot, 1, &GraphicsX11::m_constantBufferObject);
 				GraphicsX11::context->PSSetConstantBuffers(GraphicsX11::m_cConstantBufferObjectSlot, 1, &GraphicsX11::m_constantBufferObject);
 			}
 
 			//----------------------------------------------------------------------------------
 			//[FindRoot]
-			//reutrn: rootƒ|ƒCƒ“ƒ^, ‚¢‚È‚¢ê‡‚ÍNullƒ|ƒCƒ“ƒ^ (’ˆÓ!Às‚É’T¸‚ğs‚¢‚Ü‚·)
+			//reutrn: rootãƒã‚¤ãƒ³ã‚¿, ã„ãªã„å ´åˆã¯Nullãƒã‚¤ãƒ³ã‚¿ (æ³¨æ„!å®Ÿè¡Œæ™‚ã«æ¢æŸ»ã‚’è¡Œã„ã¾ã™)
 			inline WeakPointer<TransformX11> TransformX11::FindRoot()
 			{
 				LockGuardTransform guard(m_lock);
@@ -1653,8 +1653,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[IsTargetMyUpperHierarchy]
-			//return: ŒŸõ‘ÎÛ‚ª©g‚ÌãˆÊŠK‘w‚É‚¢‚éê‡true
-			//ˆø”1: ŒŸõ‘ÎÛ 
+			//return: æ¤œç´¢å¯¾è±¡ãŒè‡ªèº«ã®ä¸Šä½éšå±¤ã«ã„ã‚‹å ´åˆtrue
+			//å¼•æ•°1: æ¤œç´¢å¯¾è±¡ 
 			inline bool TransformX11::IsTargetMyUpperHierarchy(const SharedPointer<TransformX11>& target)
 			{
 				if (IS_FALSE(target.getIsValid())) return false;
@@ -1673,8 +1673,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[IsTargetMyUpperHierarchy]
-			//return: ŒŸõ‘ÎÛ‚ª©g‚ÌãˆÊŠK‘w‚É‚¢‚éê‡true
-			//ˆø”1: ŒŸõ‘ÎÛ 
+			//return: æ¤œç´¢å¯¾è±¡ãŒè‡ªèº«ã®ä¸Šä½éšå±¤ã«ã„ã‚‹å ´åˆtrue
+			//å¼•æ•°1: æ¤œç´¢å¯¾è±¡ 
 			inline bool TransformX11::IsTargetMyUpperHierarchy(const WeakPointer<TransformX11>& target)
 			{
 				if (IS_FALSE(target.getIsValid())) return false;
@@ -1693,24 +1693,24 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[RegisterParent]
-			//e‚ğ“o˜^‚·‚é, ©g‚Ée‚ª‹‚È‚¢ & ƒ|ƒCƒ“ƒ^‚ª—LŒø‚Èê‡‚Ì‚İ¬Œ÷‚·‚é
-			//e‚ğ•Ï‚¦‚éê‡‚ÍeƒNƒ‰ƒX‚©‚çUnderTake‚ğÀs‚·‚é‚±‚Æ
-			//reutrn: ¬Œ÷‚µ‚½ê‡->true
-			//ˆø”1: parentƒ|ƒCƒ“ƒ^
+			//è¦ªã‚’ç™»éŒ²ã™ã‚‹, è‡ªèº«ã«è¦ªãŒå±…ãªã„ & ãƒã‚¤ãƒ³ã‚¿ãŒæœ‰åŠ¹ãªå ´åˆã®ã¿æˆåŠŸã™ã‚‹
+			//è¦ªã‚’å¤‰ãˆã‚‹å ´åˆã¯è¦ªã‚¯ãƒ©ã‚¹ã‹ã‚‰UnderTakeã‚’å®Ÿè¡Œã™ã‚‹ã“ã¨
+			//reutrn: æˆåŠŸã—ãŸå ´åˆ->true
+			//å¼•æ•°1: parentãƒã‚¤ãƒ³ã‚¿
 			inline bool TransformX11::RegisterParent(SharedPointer<TransformX11> parent)
 			{
-				//ƒ|ƒCƒ“ƒ^–³Œø
+				//ãƒã‚¤ãƒ³ã‚¿ç„¡åŠ¹
 				if (IS_TRUE(parent.getIsValid())) return false;
 
 				LockGuardTransform guard(m_lock);
 
-				//e‚ª‚¢‚é
+				//è¦ªãŒã„ã‚‹
 				if (IS_TRUE(m_parent.LockShared()))
 				{
-					//eƒŠƒXƒg‚©‚ç©•ª‚ğŒŸõ‚·‚éƒ‹[ƒv
+					//è¦ªãƒªã‚¹ãƒˆã‹ã‚‰è‡ªåˆ†ã‚’æ¤œç´¢ã™ã‚‹ãƒ«ãƒ¼ãƒ—
 					for (auto it = m_parent->m_childrens.begin(); it != m_childrens.end();)
 					{
-						//”­Œ©‚µ‚½‚çerase & break
+						//ç™ºè¦‹ã—ãŸã‚‰erase & break
 						if ((*it)->instanceID() == this->instanceID())
 						{
 							m_parent->m_childrens.erase(it);
@@ -1719,12 +1719,12 @@ namespace SGFramework
 					}
 					m_parent.UnlockShared();
 				}
-				//‹‚È‚¢
+				//å±…ãªã„
 				m_rootList.Erase(this);
 
 				auto oldParent = m_parent;
 				
-				//e‚É“o˜^, e‚Ìq‹ŸƒŠƒXƒg‚É©•ª‚ğ“o˜^
+				//è¦ªã«ç™»éŒ², è¦ªã®å­ä¾›ãƒªã‚¹ãƒˆã«è‡ªåˆ†ã‚’ç™»éŒ²
 				m_parent = parent;
 				m_parent->m_childrens.push_back(transform.InstantiateShared());
 
@@ -1738,25 +1738,25 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[RegisterChildren]
-			//q‚ğ“o˜^‚·‚é, ƒ|ƒCƒ“ƒ^‚ª—LŒø & ƒ|ƒCƒ“ƒ^‚Ée‚ª‹‚È‚¢ê‡‚Ì‚İ¬Œ÷‚·‚é
-			//e‚ğ•Ï‚¦‚éê‡‚ÍeƒNƒ‰ƒX‚©‚çUnderTake‚ğÀs‚·‚é‚±‚Æ
-			//reutrn: ¬Œ÷‚µ‚½ê‡->true
-			//ˆø”1: childrenƒ|ƒCƒ“ƒ^
+			//å­ã‚’ç™»éŒ²ã™ã‚‹, ãƒã‚¤ãƒ³ã‚¿ãŒæœ‰åŠ¹ & ãƒã‚¤ãƒ³ã‚¿ã«è¦ªãŒå±…ãªã„å ´åˆã®ã¿æˆåŠŸã™ã‚‹
+			//è¦ªã‚’å¤‰ãˆã‚‹å ´åˆã¯è¦ªã‚¯ãƒ©ã‚¹ã‹ã‚‰UnderTakeã‚’å®Ÿè¡Œã™ã‚‹ã“ã¨
+			//reutrn: æˆåŠŸã—ãŸå ´åˆ->true
+			//å¼•æ•°1: childrenãƒã‚¤ãƒ³ã‚¿
 			inline bool TransformX11::RegisterChildren(SharedPointer<TransformX11> children)
 			{
-				//q‹Ÿ‚ª–³Œø
+				//å­ä¾›ãŒç„¡åŠ¹
 				if (IS_FALSE(children.getIsValid())) return false;
 
 				LockGuardTransform guard(m_lock);
 
-				//e‚ª‹‚½
+				//è¦ªãŒå±…ãŸ
 				if (IS_TRUE(children->m_parent.LockShared()))
 				{
 
-					//eƒŠƒXƒg‚©‚ç©•ª‚ğŒŸõ‚·‚éƒ‹[ƒv
+					//è¦ªãƒªã‚¹ãƒˆã‹ã‚‰è‡ªåˆ†ã‚’æ¤œç´¢ã™ã‚‹ãƒ«ãƒ¼ãƒ—
 					for (auto it = children->m_parent->m_childrens.begin(); it != m_childrens.end();)
 					{
-						//”­Œ©‚µ‚½‚çerase & break
+						//ç™ºè¦‹ã—ãŸã‚‰erase & break
 						if ((*it)->instanceID() == this->instanceID())
 						{
 							children->m_parent->m_childrens.erase(it);
@@ -1767,9 +1767,9 @@ namespace SGFramework
 				}
 				
 
-				//’Ç‰Á
+				//è¿½åŠ 
 				m_childrens.push_back(children);
-				//this“o˜^
+				//thisç™»éŒ²
 				children->m_parent = transform;
 				//Init
 				children->InitLocal(true);
@@ -1779,14 +1779,14 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[FindChildren]
-			//qtransform‚ğŒŸõ‚·‚é, index = 0‚©‚ç‘–¸‚·‚é‚Ì‚Å“¯–¼TransformX11‚Í’ˆÓ
-			//reutrn: ¬Œ÷‚µ‚½ê‡->qƒ|ƒCƒ“ƒ^, ¸”s‚µ‚½ê‡->Nullƒ|ƒCƒ“ƒ^
-			//ˆø”1: transform->name
+			//å­transformã‚’æ¤œç´¢ã™ã‚‹, index = 0ã‹ã‚‰èµ°æŸ»ã™ã‚‹ã®ã§åŒåTransformX11ã¯æ³¨æ„
+			//reutrn: æˆåŠŸã—ãŸå ´åˆ->å­ãƒã‚¤ãƒ³ã‚¿, å¤±æ•—ã—ãŸå ´åˆ->Nullãƒã‚¤ãƒ³ã‚¿
+			//å¼•æ•°1: transform->name
 			inline WeakPointer<TransformX11> TransformX11::FindChildren(const sgstring& name)
 			{
 				LockGuardTransform guard(m_lock);
 
-				//Name‚ÌƒIƒuƒWƒFƒNƒg‚ª‘¶İ‚·‚ê‚Î•Ô‹p
+				//Nameã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå­˜åœ¨ã™ã‚Œã°è¿”å´
 				for (auto& e : m_childrens)
 					if (e->name() == name) return e;
 
@@ -1795,9 +1795,9 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[FindChildrenEx]
-			//qtransform‚ğŒŸõ‚·‚é, index = 0‚©‚ç‘–¸‚µ“¯–¼TransformX11‚ğ‘S‚Ä•Ô‹p‚·‚é
-			//reutrn: ŒŸõŒ‹‰Êvector
-			//ˆø”1: transform->name
+			//å­transformã‚’æ¤œç´¢ã™ã‚‹, index = 0ã‹ã‚‰èµ°æŸ»ã—åŒåTransformX11ã‚’å…¨ã¦è¿”å´ã™ã‚‹
+			//reutrn: æ¤œç´¢çµæœvector
+			//å¼•æ•°1: transform->name
 			inline std::vector<WeakPointer<TransformX11>> TransformX11::FindChildrenEx(const sgstring & name)
 			{
 				LockGuardTransform guard(m_lock);
@@ -1805,7 +1805,7 @@ namespace SGFramework
 				//result
 				std::vector<WeakPointer<TransformX11>> result;
 
-				//ƒIƒuƒWƒFƒNƒg‚ª‘¶İ‚·‚ê‚Î’Ç‰Á
+				//ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå­˜åœ¨ã™ã‚Œã°è¿½åŠ 
 				for (auto& e : m_childrens)
 					if (e->name() == name) result.emplace_back(e);
 
@@ -1814,14 +1814,14 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[FindChildrenIndex]
-			//qtransform‚ğŒŸõ‚·‚é, index = 0‚©‚ç‘–¸‚·‚é‚Ì‚Å“¯–¼TransformX11‚Í’ˆÓ
-			//reutrn: ¬Œ÷‚µ‚½ê‡->Œ»İ‚Ìindex, ¸”s‚µ‚½ê‡->VariableLimit::cUintMax
-			//ˆø”1: transform->name
+			//å­transformã‚’æ¤œç´¢ã™ã‚‹, index = 0ã‹ã‚‰èµ°æŸ»ã™ã‚‹ã®ã§åŒåTransformX11ã¯æ³¨æ„
+			//reutrn: æˆåŠŸã—ãŸå ´åˆ->ç¾åœ¨ã®index, å¤±æ•—ã—ãŸå ´åˆ->VariableLimit::cUintMax
+			//å¼•æ•°1: transform->name
 			inline uint TransformX11::FindChildrenIndex(const sgstring& name)
 			{
 				LockGuardTransform guard(m_lock);
 
-				//Name‚ÌƒIƒuƒWƒFƒNƒg‚ª‘¶İ‚·‚ê‚Î•Ô‹p
+				//Nameã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå­˜åœ¨ã™ã‚Œã°è¿”å´
 				for (uint i = 0; i < static_cast<uint>(m_childrens.size()); i++)
 					if (m_childrens[i]->name() == name) return i;
 
@@ -1830,9 +1830,9 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[FindChildrenIndexEx]
-			//qtransform‚ğŒŸõ‚·‚é, index = 0‚©‚ç‘–¸‚µ“¯–¼TransformX11‚ğ‘S‚Ä•Ô‹p‚·‚é
-			//reutrn: ŒŸõŒ‹‰Êvector
-			//ˆø”1: transform->name
+			//å­transformã‚’æ¤œç´¢ã™ã‚‹, index = 0ã‹ã‚‰èµ°æŸ»ã—åŒåTransformX11ã‚’å…¨ã¦è¿”å´ã™ã‚‹
+			//reutrn: æ¤œç´¢çµæœvector
+			//å¼•æ•°1: transform->name
 			inline std::vector<uint> TransformX11::FindChildrenIndexEx(const sgstring & name)
 			{
 				LockGuardTransform guard(m_lock);
@@ -1840,7 +1840,7 @@ namespace SGFramework
 				//result
 				std::vector<uint> result;
 
-				//ƒIƒuƒWƒFƒNƒg‚ª‘¶İ‚·‚ê‚Î’Ç‰Á
+				//ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå­˜åœ¨ã™ã‚Œã°è¿½åŠ 
 				for (uint i = 0, max = static_cast<uint>(m_childrens.size()); i < max; ++i)
 					if (m_childrens[i]->name() == name) result.emplace_back(i);
 
@@ -1850,62 +1850,62 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[UnderTakeChildren]
-			//q‚ğ•Ê‚Ìtransform‚Ìq‚ÉˆÚ“®‚³‚¹‚é, •K‚¸“¯ˆêƒXƒŒƒbƒhã‚ÅÀs‚·‚é‚±‚Æ
-			//index‚ª—LŒø & ˆø”1‚ª—LŒø‚Èê‡‚Ì‚İ¬Œ÷‚·‚é
-			//reutrn: ¬Œ÷‚µ‚½ê‡->true
-			//ˆø”1: V‚µ‚¢etransfrom
-			//ˆø”2: ˆÚ‚·qTransformIndex
+			//å­ã‚’åˆ¥ã®transformã®å­ã«ç§»å‹•ã•ã›ã‚‹, å¿…ãšåŒä¸€ã‚¹ãƒ¬ãƒƒãƒ‰ä¸Šã§å®Ÿè¡Œã™ã‚‹ã“ã¨
+			//indexãŒæœ‰åŠ¹ & å¼•æ•°1ãŒæœ‰åŠ¹ãªå ´åˆã®ã¿æˆåŠŸã™ã‚‹
+			//reutrn: æˆåŠŸã—ãŸå ´åˆ->true
+			//å¼•æ•°1: æ–°ã—ã„è¦ªtransfrom
+			//å¼•æ•°2: ç§»ã™å­TransformIndex
 			inline bool TransformX11::UnderTakeChildren(SharedPointer<TransformX11> transform, uint index)
 			{
 				LockGuardTransform guard(m_lock);
 
-				//index—LŒø & transform—LŒø
+				//indexæœ‰åŠ¹ & transformæœ‰åŠ¹
 				if (m_childrens.size() > index && IS_TRUE(transform.getIsValid()))
 				{
-					//•Û‘¶
+					//ä¿å­˜
 					auto children = m_childrens[index];
 
-					//q‹Ÿ‚Ìe‚ğ•ÏX
+					//å­ä¾›ã®è¦ªã‚’å¤‰æ›´
 					m_childrens[index]->m_parent = transform;
 					//Init
 					m_childrens[index]->InitLocal(true);
 					
-					//transform‚Ìq‹Ÿ‚ÉˆÚ‚·
+					//transformã®å­ä¾›ã«ç§»ã™
 					transform->m_childrens.push_back(m_childrens[index]);				
-					//©•ª‚Ìq‹ŸƒŠƒXƒg‚©‚çíœ
+					//è‡ªåˆ†ã®å­ä¾›ãƒªã‚¹ãƒˆã‹ã‚‰å‰Šé™¤
 					m_childrens.erase(m_childrens.begin() + index);
 					
 					//callback
 					children->InvokeCallback(ComponentX11::CallbackFunctions::ChangeUpperHierarchy, children->m_parent, this->transform);
 					return true;
 				}
-				//–³Œø->false
+				//ç„¡åŠ¹->false
 				else
 					return false;
 			}
 			//----------------------------------------------------------------------------------
 			//[UnderTakeChildren]
-			//q‚ğ•Ê‚Ìtransform‚Ìq‚ÉˆÚ“®‚³‚¹‚é, •K‚¸“¯ˆêƒXƒŒƒbƒhã‚ÅÀs‚·‚é‚±‚Æ
-			//name‚ª—LŒø & ˆø”1‚ª—LŒø‚Èê‡‚Ì‚İ¬Œ÷‚·‚é
-			//reutrn: ¬Œ÷‚µ‚½ê‡->true
-			//ˆø”1: V‚µ‚¢etransfrom
-			//ˆø”2: ˆÚ‚·qTransform->name
+			//å­ã‚’åˆ¥ã®transformã®å­ã«ç§»å‹•ã•ã›ã‚‹, å¿…ãšåŒä¸€ã‚¹ãƒ¬ãƒƒãƒ‰ä¸Šã§å®Ÿè¡Œã™ã‚‹ã“ã¨
+			//nameãŒæœ‰åŠ¹ & å¼•æ•°1ãŒæœ‰åŠ¹ãªå ´åˆã®ã¿æˆåŠŸã™ã‚‹
+			//reutrn: æˆåŠŸã—ãŸå ´åˆ->true
+			//å¼•æ•°1: æ–°ã—ã„è¦ªtransfrom
+			//å¼•æ•°2: ç§»ã™å­Transform->name
 			inline bool TransformX11::UnderTakeChildren(SharedPointer<TransformX11> transform, const sgstring& name)
 			{				
 				return UnderTakeChildren(transform, FindChildrenIndex(name));
 			}
 			//----------------------------------------------------------------------------------
 			//[UnderTakeChildrenEx]
-			//name‚Ìq‚ğ‘S‚Ä•Ê‚Ìtransform‚Ìq‚ÉˆÚ“®‚³‚¹‚é, •K‚¸“¯ˆêƒXƒŒƒbƒhã‚ÅÀs‚·‚é‚±‚Æ
-			//name‚ª—LŒø & ˆø”1‚ª—LŒø‚Èê‡‚Ì‚İ¬Œ÷‚·‚é
-			//reutrn: ¬Œ÷‚µ‚½ê‡->true
-			//ˆø”1: V‚µ‚¢etransfrom
-			//ˆø”2: ˆÚ‚·qTransform->name
+			//nameã®å­ã‚’å…¨ã¦åˆ¥ã®transformã®å­ã«ç§»å‹•ã•ã›ã‚‹, å¿…ãšåŒä¸€ã‚¹ãƒ¬ãƒƒãƒ‰ä¸Šã§å®Ÿè¡Œã™ã‚‹ã“ã¨
+			//nameãŒæœ‰åŠ¹ & å¼•æ•°1ãŒæœ‰åŠ¹ãªå ´åˆã®ã¿æˆåŠŸã™ã‚‹
+			//reutrn: æˆåŠŸã—ãŸå ´åˆ->true
+			//å¼•æ•°1: æ–°ã—ã„è¦ªtransfrom
+			//å¼•æ•°2: ç§»ã™å­Transform->name
 			inline bool TransformX11::UnderTakeChildrenEx(SharedPointer<TransformX11> transform, const sgstring& name)
 			{
 				LockGuardTransform guard(m_lock);
 
-				//transform—LŒø
+				//transformæœ‰åŠ¹
 				if (IS_TRUE(transform.getIsValid()))
 				{
 					bool isResult = false;
@@ -1917,16 +1917,16 @@ namespace SGFramework
 
 						isResult = true;
 
-						//•Û‘¶
+						//ä¿å­˜
 						auto children = m_childrens[index];
-						//q‹Ÿ‚Ìe‚ğ•ÏX
+						//å­ä¾›ã®è¦ªã‚’å¤‰æ›´
 						m_childrens[index]->m_parent = transform;
 						//Init
 						m_childrens[index]->InitLocal(true);
 
-						//transform‚Ìq‹Ÿ‚ÉˆÚ‚·
+						//transformã®å­ä¾›ã«ç§»ã™
 						transform->m_childrens.push_back(m_childrens[index]);
-						//©•ª‚Ìq‹ŸƒŠƒXƒg‚©‚çíœ
+						//è‡ªåˆ†ã®å­ä¾›ãƒªã‚¹ãƒˆã‹ã‚‰å‰Šé™¤
 						m_childrens.erase(m_childrens.begin() + index);
 						//callback
 						children->InvokeCallback(ComponentX11::CallbackFunctions::ChangeUpperHierarchy, children->m_parent, this->transform);
@@ -1934,35 +1934,35 @@ namespace SGFramework
 
 					return isResult;
 				}
-				//–³Œø->false
+				//ç„¡åŠ¹->false
 				else
 					return false;
 			}
 
 			//----------------------------------------------------------------------------------
 			//[IndependentChildren]
-			//qƒIƒuƒWƒFƒNƒg‚ğeqŠÖŒW‚©‚çØ‚è—£‚µ“Æ—§‚³‚¹‚é
-			//return: ¬Œ÷‚µ‚½ê‡->“Æ—§‚µ‚½ƒ|ƒCƒ“ƒ^, ¸”s‚µ‚½ê‡->Nullƒ|ƒCƒ“ƒ^
-			//ˆø”1: index
+			//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¦ªå­é–¢ä¿‚ã‹ã‚‰åˆ‡ã‚Šé›¢ã—ç‹¬ç«‹ã•ã›ã‚‹
+			//return: æˆåŠŸã—ãŸå ´åˆ->ç‹¬ç«‹ã—ãŸãƒã‚¤ãƒ³ã‚¿, å¤±æ•—ã—ãŸå ´åˆ->Nullãƒã‚¤ãƒ³ã‚¿
+			//å¼•æ•°1: index
 			inline SharedPointer<TransformX11> TransformX11::IndependentChildren(uint index)
 			{
 				LockGuardTransform guard(m_lock);
 
-				//index—LŒø
+				//indexæœ‰åŠ¹
 				if (m_childrens.size() > index)
 				{
-					//worldî•ñ‚ğİ’è
+					//worldæƒ…å ±ã‚’è¨­å®š
 					m_childrens[index]->m_variables.localRotation = m_childrens[index]->m_variables.worldRotation;
 					m_childrens[index]->m_variables.localPosition = m_childrens[index]->m_variables.worldPosition;
 					m_childrens[index]->m_variables.localScale = m_childrens[index]->m_variables.worldScale;
 
-					//resultæ“¾
+					//resultå–å¾—
 					auto result = std::move(m_childrens[index]);
-					//parent‰Šú‰»
+					//parentåˆæœŸåŒ–
 					result->m_parent.Reset();
-					//Root’Ç‰Á
+					//Rootè¿½åŠ 
 					m_rootList.Add(result.getPointer());
-					//ƒŠƒXƒgíœ
+					//ãƒªã‚¹ãƒˆå‰Šé™¤
 					m_childrens.erase(m_childrens.begin() + index);
 					
 					//callback
@@ -1971,26 +1971,26 @@ namespace SGFramework
 					//return move
 					return std::move(result);
 				}
-				//index–³Œø -> Null
+				//indexç„¡åŠ¹ -> Null
 				else
 					return SharedPointer<TransformX11>();
 			}
 			//----------------------------------------------------------------------------------
 			//[IndependentChildren]
-			//qƒIƒuƒWƒFƒNƒg‚ğeqŠÖŒW‚©‚çØ‚è—£‚µ“Æ—§‚³‚¹‚é
-			//index = 0‚©‚ç‘–¸‚µÅ‰‚ÉŒ©‚Â‚©‚Á‚½name‚Æ‡’v‚·‚étransform‚ğ“Æ—§‚³‚¹‚é
-			//return: ¬Œ÷‚µ‚½ê‡->“Æ—§‚µ‚½ƒ|ƒCƒ“ƒ^, ¸”s‚µ‚½ê‡->Nullƒ|ƒCƒ“ƒ^
-			//ˆø”1: name
+			//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¦ªå­é–¢ä¿‚ã‹ã‚‰åˆ‡ã‚Šé›¢ã—ç‹¬ç«‹ã•ã›ã‚‹
+			//index = 0ã‹ã‚‰èµ°æŸ»ã—æœ€åˆã«è¦‹ã¤ã‹ã£ãŸnameã¨åˆè‡´ã™ã‚‹transformã‚’ç‹¬ç«‹ã•ã›ã‚‹
+			//return: æˆåŠŸã—ãŸå ´åˆ->ç‹¬ç«‹ã—ãŸãƒã‚¤ãƒ³ã‚¿, å¤±æ•—ã—ãŸå ´åˆ->Nullãƒã‚¤ãƒ³ã‚¿
+			//å¼•æ•°1: name
 			inline SharedPointer<TransformX11> TransformX11::IndependentChildren(const sgstring& name)
 			{
-				//IndexŒŸõ‚µ‚ÄÀs
+				//Indexæ¤œç´¢ã—ã¦å®Ÿè¡Œ
 				return std::move(IndependentChildren(FindChildren(name)));
 			}
 			//----------------------------------------------------------------------------------
 			//[IndependentChildren]
-			//qƒIƒuƒWƒFƒNƒg‚ğeqŠÖŒW‚©‚çØ‚è—£‚µ“Æ—§‚³‚¹‚é, name‚Æ‡’v‚·‚étransform‚ğ‘S‚Ä“Æ—§‚³‚¹‚é
-			//return: Œ‹‰Ê‚ğŠi”[‚µ‚½vector, ¬Œ÷‚µ‚½ê‡->“Æ—§‚µ‚½ƒ|ƒCƒ“ƒ^, ¸”s‚µ‚½ê‡->Nullƒ|ƒCƒ“ƒ^
-			//ˆø”1: index
+			//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¦ªå­é–¢ä¿‚ã‹ã‚‰åˆ‡ã‚Šé›¢ã—ç‹¬ç«‹ã•ã›ã‚‹, nameã¨åˆè‡´ã™ã‚‹transformã‚’å…¨ã¦ç‹¬ç«‹ã•ã›ã‚‹
+			//return: çµæœã‚’æ ¼ç´ã—ãŸvector, æˆåŠŸã—ãŸå ´åˆ->ç‹¬ç«‹ã—ãŸãƒã‚¤ãƒ³ã‚¿, å¤±æ•—ã—ãŸå ´åˆ->Nullãƒã‚¤ãƒ³ã‚¿
+			//å¼•æ•°1: index
 			inline std::vector<SharedPointer<TransformX11>> TransformX11::IndependentChildrenEx(const sgstring& name)
 			{
 				LockGuardTransform guard(m_lock);
@@ -2011,41 +2011,41 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[DestroyChildren]
-			//qƒIƒuƒWƒFƒNƒg‚ğíœ‚·‚é, index‚ª—LŒø‚Èê‡‚Ì‚İ¬Œ÷‚·‚é
-			//return: ¬Œ÷‚µ‚½‚©”Û‚©
-			//ˆø”1: index
+			//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å‰Šé™¤ã™ã‚‹, indexãŒæœ‰åŠ¹ãªå ´åˆã®ã¿æˆåŠŸã™ã‚‹
+			//return: æˆåŠŸã—ãŸã‹å¦ã‹
+			//å¼•æ•°1: index
 			inline bool TransformX11::DestroyChildren(uint index)
 			{
 				LockGuardTransform guard(m_lock);
 
-				//index—LŒø
+				//indexæœ‰åŠ¹
 				if (m_childrens.size() > index)
 				{
-					//erase‚µ‚Äreturn
+					//eraseã—ã¦return
 					m_childrens.erase(m_childrens.begin() + index);
 					return true;
 				}
-				//index–³Œø
+				//indexç„¡åŠ¹
 				else
 					return false;
 			}
 			//----------------------------------------------------------------------------------
 			//[DestroyChildren]
-			//qƒIƒuƒWƒFƒNƒg‚ğíœ‚·‚é, index = 0‚©‚ç‘–¸‚µÅ‰‚ÉŒ©‚Â‚©‚Á‚½name‚Æ‡’v‚·‚étransform‚ğíœ‚·‚é
-			//return: ¬Œ÷‚µ‚½‚©”Û‚©
-			//ˆø”1: transform->name
+			//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å‰Šé™¤ã™ã‚‹, index = 0ã‹ã‚‰èµ°æŸ»ã—æœ€åˆã«è¦‹ã¤ã‹ã£ãŸnameã¨åˆè‡´ã™ã‚‹transformã‚’å‰Šé™¤ã™ã‚‹
+			//return: æˆåŠŸã—ãŸã‹å¦ã‹
+			//å¼•æ•°1: transform->name
 			inline bool TransformX11::DestroyChildren(const sgstring & name)
 			{
 				LockGuardTransform guard(m_lock);
 
-				//IndexŒŸõ‚µ‚ÄÀs
+				//Indexæ¤œç´¢ã—ã¦å®Ÿè¡Œ
 				return DestroyChildren(FindChildren(name));
 			}
 			//----------------------------------------------------------------------------------
 			//[DestroyChildren]
-			//qƒIƒuƒWƒFƒNƒg‚ğíœ‚·‚é, name‚Æ‡’v‚·‚étransform‚ğ‘S‚Äíœ‚·‚é
-			//return: ¬Œ÷‚µ‚½‚©”Û‚©
-			//ˆø”1: transform->name
+			//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å‰Šé™¤ã™ã‚‹, nameã¨åˆè‡´ã™ã‚‹transformã‚’å…¨ã¦å‰Šé™¤ã™ã‚‹
+			//return: æˆåŠŸã—ãŸã‹å¦ã‹
+			//å¼•æ•°1: transform->name
 			inline bool TransformX11::DestroyChildrenEx(const sgstring & name)
 			{
 				LockGuardTransform guard(m_lock);
@@ -2065,20 +2065,20 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[DestroyAllChildren]
-			//qƒIƒuƒWƒFƒNƒg‚ğíœ‚·‚é
+			//å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å‰Šé™¤ã™ã‚‹
 			inline void TransformX11::DestroyAllChildren()
 			{
 				LockGuardTransform guard(m_lock);
 
-				//q‹Ÿ‚ª‚¢‚é‚È‚çíœ
+				//å­ä¾›ãŒã„ã‚‹ãªã‚‰å‰Šé™¤
 				if (IS_FALSE(m_childrens.empty()))
 					m_childrens.clear();
 			}
 
 			//----------------------------------------------------------------------------------
 			//[AddComponent]
-			//Component‚ğ’Ç‰Á‚·‚é (ƒfƒB[ƒvƒRƒs[)
-			//ˆø”1: componentŒp³ƒIƒuƒWƒFƒNƒg
+			//Componentã‚’è¿½åŠ ã™ã‚‹ (ãƒ‡ã‚£ãƒ¼ãƒ—ã‚³ãƒ”ãƒ¼)
+			//å¼•æ•°1: componentç¶™æ‰¿ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 			template <class ComponentClass>
 			inline WeakPointer<ComponentClass> TransformX11::AddComponent(SharedPointer<ComponentClass> component)
 			{
@@ -2087,21 +2087,21 @@ namespace SGFramework
 
 				LockGuardTransform guard(m_lock);
 
-				//’Ç‰Á
+				//è¿½åŠ 
 				auto component = std::move(ComponentX11::Instantiate<ComponentClass>(
 					component, transform.InstantiateShared(), m_flags & m_cIsUsedMutexCounterFlag ? true : false,
 					m_flags & m_cIsAutoGabageCollectionFlag ? true : false).DownCast<ComponentX11>());
 				m_components.emplace_back(component.DownCast<ComponentX11>());
-				//ÄAllocate
+				//å†Allocate
 				this->AllocateCallback();
 
 				return m_components.back();
 			}
 			//----------------------------------------------------------------------------------
 			//[AddComponent]
-			//Component‚ğ’Ç‰Á‚·‚é (Instantiate)
-			//return: ’Ç‰Á‚µ‚½Component
-			//ˆø”1: Callback—LŒø‰»ƒtƒ‰ƒO, default = true
+			//Componentã‚’è¿½åŠ ã™ã‚‹ (Instantiate)
+			//return: è¿½åŠ ã—ãŸComponent
+			//å¼•æ•°1: Callbackæœ‰åŠ¹åŒ–ãƒ•ãƒ©ã‚°, default = true
 			template <class ComponentClass>
 			inline WeakPointer<ComponentClass> TransformX11::AddComponent(bool isEnabled)
 			{
@@ -2110,10 +2110,10 @@ namespace SGFramework
 
 				LockGuardTransform guard(m_lock);
 
-				//’Ç‰Á
+				//è¿½åŠ 
 				auto component = std::move(ComponentX11::Instantiate<ComponentClass>(std::move(transform.InstantiateShared()), isEnabled));
 				m_components.emplace_back(component.DownCast<ComponentX11>());
-				//ÄAllocate
+				//å†Allocate
 				this->AllocateCallback();
 				
 				return component;
@@ -2121,7 +2121,7 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[RemoveComponent]
-			//Component‚ğíœ‚·‚é (templateŒ^‚É‘Î‰‚µ‚½Å‚àŒÃ‚¢ƒRƒ“ƒ|[ƒlƒ“ƒg)
+			//Componentã‚’å‰Šé™¤ã™ã‚‹ (templateå‹ã«å¯¾å¿œã—ãŸæœ€ã‚‚å¤ã„ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ)
 			template <class ComponentClass>
 			inline void TransformX11::RemoveComponent()
 			{
@@ -2130,7 +2130,7 @@ namespace SGFramework
 
 				LockGuardTransform guard(m_lock);
 
-				//ŒŸõƒ‹[ƒv
+				//æ¤œç´¢ãƒ«ãƒ¼ãƒ—
 				for (auto it = m_components.begin(); it != m_components.end(); ++it)
 				{				
 					//Hit
@@ -2144,7 +2144,7 @@ namespace SGFramework
 						
 						//Erase
 						m_components.erase(it);
-						//ÄAllocate
+						//å†Allocate
 						this->AllocateCallback();
 						
 						return;
@@ -2153,8 +2153,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[FindComponent]
-			//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : Å‚àŒÃ‚¢ƒRƒ“ƒ|[ƒlƒ“ƒg
-			//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
+			//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : æœ€ã‚‚å¤ã„ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+			//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
 			template <class ComponentClass>
 			inline WeakPointer<ComponentClass> TransformX11::FindComponent()
 			{
@@ -2163,7 +2163,7 @@ namespace SGFramework
 
 				LockGuardTransform guard(m_lock);
 
-				//ŒŸõƒ‹[ƒv
+				//æ¤œç´¢ãƒ«ãƒ¼ãƒ—
 				for (auto& e : m_components)
 				{
 					//Cast
@@ -2175,10 +2175,10 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[FindComponentInParent]
-			//ComponentClassŒ^ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğthis‚©‚çParent‚Ö‚Æ’T¸‚·‚é
-			//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : Å‰‚ÉŒ©‚Â‚©‚Á‚½ƒRƒ“ƒ|[ƒlƒ“ƒg
-			//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
-			//ˆø”1: ©g‚àŠÜ‚ß‚é‚©, default = true
+			//ComponentClasså‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’thisã‹ã‚‰Parentã¸ã¨æ¢æŸ»ã™ã‚‹
+			//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : æœ€åˆã«è¦‹ã¤ã‹ã£ãŸã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+			//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
+			//å¼•æ•°1: è‡ªèº«ã‚‚å«ã‚ã‚‹ã‹, default = true
 			template <class ComponentClass>
 			inline WeakPointer<ComponentClass> TransformX11::FindComponentInParent(bool isIncludeYourself)
 			{
@@ -2187,10 +2187,10 @@ namespace SGFramework
 
 				LockGuardTransform guard(m_lock);
 
-				//©g‚àŠÜ‚ß‚é
+				//è‡ªèº«ã‚‚å«ã‚ã‚‹
 				if (IS_TRUE(isIncludeYourself))
 				{		
-					//ŒŸõƒ‹[ƒv
+					//æ¤œç´¢ãƒ«ãƒ¼ãƒ—
 					for (auto& e : m_components)
 					{
 						//Cast
@@ -2199,15 +2199,15 @@ namespace SGFramework
 						if (cast.getIsValid()) return cast;
 					}
 				}
-				//ÄŒŸõH
+				//å†æ¤œç´¢ï¼Ÿ
 				return IS_TRUE(m_parent.getIsValid()) ? m_parent->FindComponentInParent<ComponentClass>() : WeakPointer<ComponentClass>();
 			}
 			//----------------------------------------------------------------------------------
 			//[FindComponentInChildren]
-			//ComponentClassŒ^ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğChildren‚©‚ç’T¸‚·‚é
-			//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : Å‰‚ÉŒ©‚Â‚©‚Á‚½ƒRƒ“ƒ|[ƒlƒ“ƒg
-			//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
-			//ˆø”1: ©g‚àŠÜ‚ß‚é‚©, default = true
+			//ComponentClasså‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’Childrenã‹ã‚‰æ¢æŸ»ã™ã‚‹
+			//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : æœ€åˆã«è¦‹ã¤ã‹ã£ãŸã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+			//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
+			//å¼•æ•°1: è‡ªèº«ã‚‚å«ã‚ã‚‹ã‹, default = true
 			template <class ComponentClass>
 			inline WeakPointer<ComponentClass> TransformX11::FindComponentInChildren(bool isIncludeYourself)
 			{
@@ -2216,13 +2216,13 @@ namespace SGFramework
 
 				LockGuardTransform guard(m_lock);
 
-				//©g‚àŠÜ‚ß‚é
+				//è‡ªèº«ã‚‚å«ã‚ã‚‹
 				if (IS_TRUE(isIncludeYourself))
 				{
-					//ChildrenŒŸõƒ‹[ƒv
+					//Childrenæ¤œç´¢ãƒ«ãƒ¼ãƒ—
 					for (auto& children : m_childrens)
 					{
-						//ŒŸõƒ‹[ƒv
+						//æ¤œç´¢ãƒ«ãƒ¼ãƒ—
 						for (auto& e : children->m_components)
 						{
 							//Cast
@@ -2233,20 +2233,20 @@ namespace SGFramework
 					}
 				}
 
-				//‘·ŒŸõƒ‹[ƒv
+				//å­«æ¤œç´¢ãƒ«ãƒ¼ãƒ—
 				for (auto& children : m_childrens)
 				{
 					auto childrenResult = children->FindComponentInChildren<ComponentClass>();
 					if (childrenResult.getIsValid()) return childrenResult;
 				}
 				
-				//Œ©‚Â‚©‚ç‚È‚©‚Á‚½‚æ
+				//è¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸã‚ˆ
 				return WeakPointer<ComponentClass>();
 			}
 			//----------------------------------------------------------------------------------
 			//[FindComponentEx]
-			//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : ‘S‚Ä‚Ì“¯Œ^ƒRƒ“ƒ|[ƒlƒ“ƒg
-			//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
+			//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : å…¨ã¦ã®åŒå‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+			//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
 			template <class ComponentClass>
 			inline std::vector<WeakPointer<ComponentClass>> TransformX11::FindComponentEx()
 			{
@@ -2257,7 +2257,7 @@ namespace SGFramework
 
 				std::vector<WeakPointer<ComponentClass>> result;
 
-				//ŒŸõƒ‹[ƒv
+				//æ¤œç´¢ãƒ«ãƒ¼ãƒ—
 				for (auto& e : m_components)
 				{
 					//Cast
@@ -2270,10 +2270,10 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[FindComponentInParentEx]
-			//ComponentClassŒ^ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğthis‚©‚çParent‚Ö‚Æ’T¸‚·‚é
-			//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : ‘S‚Ä‚Ì“¯Œ^ƒRƒ“ƒ|[ƒlƒ“ƒg
-			//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
-			//ˆø”1: ©g‚àŠÜ‚ß‚é‚©, default = true
+			//ComponentClasså‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’thisã‹ã‚‰Parentã¸ã¨æ¢æŸ»ã™ã‚‹
+			//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : å…¨ã¦ã®åŒå‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+			//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
+			//å¼•æ•°1: è‡ªèº«ã‚‚å«ã‚ã‚‹ã‹, default = true
 			template <class ComponentClass>
 			inline std::vector<WeakPointer<ComponentClass>> TransformX11::FindComponentInParentEx(bool isIncludeYourself)
 			{
@@ -2284,10 +2284,10 @@ namespace SGFramework
 
 				std::vector<WeakPointer<ComponentClass>> result;
 
-				//©g‚àŠÜ‚ß‚é
+				//è‡ªèº«ã‚‚å«ã‚ã‚‹
 				if (IS_TRUE(isIncludeYourself))
 				{
-					//ŒŸõƒ‹[ƒv
+					//æ¤œç´¢ãƒ«ãƒ¼ãƒ—
 					for (auto& e : m_components)
 					{
 						//Cast
@@ -2307,10 +2307,10 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[FindComponentInChildrenEx]
-			//ComponentClassŒ^ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğChildren‚©‚ç’T¸‚·‚é
-			//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : ‘S‚Ä‚Ì“¯Œ^ƒRƒ“ƒ|[ƒlƒ“ƒg
-			//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
-			//ˆø”1: ©g‚àŠÜ‚ß‚é‚©, default = true
+			//ComponentClasså‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’Childrenã‹ã‚‰æ¢æŸ»ã™ã‚‹
+			//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : å…¨ã¦ã®åŒå‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+			//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
+			//å¼•æ•°1: è‡ªèº«ã‚‚å«ã‚ã‚‹ã‹, default = true
 			template <class ComponentClass>
 			inline std::vector<WeakPointer<ComponentClass>> TransformX11::FindComponentInChildrenEx(bool isIncludeYourself)
 			{
@@ -2321,13 +2321,13 @@ namespace SGFramework
 
 				std::vector<WeakPointer<ComponentClass>> result;
 
-				//©g‚àŠÜ‚ß‚é
+				//è‡ªèº«ã‚‚å«ã‚ã‚‹
 				if (IS_TRUE(isIncludeYourself))
 				{
-					//ChildrenŒŸõƒ‹[ƒv
+					//Childrenæ¤œç´¢ãƒ«ãƒ¼ãƒ—
 					for (auto& children : m_childrens)
 					{
-						//ŒŸõƒ‹[ƒv
+						//æ¤œç´¢ãƒ«ãƒ¼ãƒ—
 						for (auto& e : children->m_components)
 						{
 							//Cast
@@ -2338,7 +2338,7 @@ namespace SGFramework
 					}
 				}
 
-				//‘·ŒŸõƒ‹[ƒv
+				//å­«æ¤œç´¢ãƒ«ãƒ¼ãƒ—
 				for (auto& children : m_childrens)
 				{
 					auto childrenResult = children->FindComponentInChildrenEx<ComponentClass>();
@@ -2349,7 +2349,7 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[RemoveComponentEx]
-			//Component‚ğíœ‚·‚é (templateŒ^‚É‘Î‰‚µ‚½‘S‚Ä‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg)
+			//Componentã‚’å‰Šé™¤ã™ã‚‹ (templateå‹ã«å¯¾å¿œã—ãŸå…¨ã¦ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ)
 			template <class ComponentClass>
 			inline void TransformX11::RemoveComponentEx()
 			{
@@ -2358,7 +2358,7 @@ namespace SGFramework
 
 				LockGuardTransform guard(m_lock);
 
-				//ŒŸõƒ‹[ƒv
+				//æ¤œç´¢ãƒ«ãƒ¼ãƒ—
 				for (auto it = m_components.begin(); it != m_components.end();)
 				{
 					//Hit
@@ -2377,17 +2377,17 @@ namespace SGFramework
 						++it;
 				}
 
-				//ÄAllocate
+				//å†Allocate
 				this->AllocateCallback();
 			}
 			//----------------------------------------------------------------------------------
 			//[RemoveComponentAll]
-			//Component‚ğ‘S‚Äíœ‚·‚é
+			//Componentã‚’å…¨ã¦å‰Šé™¤ã™ã‚‹
 			void TransformX11::RemoveComponentAll()
 			{
 				LockGuardTransform guard(m_lock);
 
-				//Callback ƒ‹[ƒv
+				//Callback ãƒ«ãƒ¼ãƒ—
 				for (auto& e : m_components)
 				{
 					//Callback
@@ -2399,20 +2399,20 @@ namespace SGFramework
 				//Clear
 				m_components.clear();
 
-				//ÄAllocate
+				//å†Allocate
 				this->AllocateCallback();
 			}
 
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‘ã“ü‰Šú‰»‚·‚é
-			//ˆø”1: name
-			//ˆø”2: position
-			//ˆø”3: scale
-			//ˆø”4: rotation
-			//ˆø”5: isStatic
-			//ˆø”6: layer
-			//ˆø”7: tag
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+			//å¼•æ•°1: name
+			//å¼•æ•°2: position
+			//å¼•æ•°3: scale
+			//å¼•æ•°4: rotation
+			//å¼•æ•°5: isStatic
+			//å¼•æ•°6: layer
+			//å¼•æ•°7: tag
 			inline TransformX11::TransformX11(const sgstring& name, const Vector3& position,
 				const Vector3& scale, const Quaternion& rotation, int functionLine, bool isStatic, Layer layer,
 				const Tag& tag, bool isUsedMutexCounter, bool isAutoGabageCollection)
@@ -2431,15 +2431,15 @@ namespace SGFramework
 				{
 					m_staticMatrix = new Vector4x4();
 
-					//XVMatrix
+					//æ›´æ–°Matrix
 					Matrix matrix = Matrix::Identity();
 
-					//worlds—ñŒvZ
+					//worldè¡Œåˆ—è¨ˆç®—
 					matrix *= Matrix::Scaleing(scale);
 					matrix *= rotation.ToMatrix();
 					matrix *= Matrix::Translate(position);
 
-					//Vector4x4‚ÉStore
+					//Vector4x4ã«Store
 					*m_staticMatrix = matrix;
 				}
 			}
@@ -2483,7 +2483,7 @@ namespace SGFramework
 			//BackGroundUpdate (ALL)
 			inline void TransformX11::UpdateForSingleThread(uint callbackType)
 			{
-				//ƒŠƒXƒgæ“¾
+				//ãƒªã‚¹ãƒˆå–å¾—
 				int getLine = 0;
 
 				//Update
@@ -2506,7 +2506,7 @@ namespace SGFramework
 			//BackGroundUpdate (ALL)
 			inline void TransformX11::UpdateForMultiThread1()
 			{
-				//ƒŠƒXƒgæ“¾
+				//ãƒªã‚¹ãƒˆå–å¾—
 				int getLine = 0;
 
 				//Update
@@ -2529,7 +2529,7 @@ namespace SGFramework
 			//BackGroundUpdate (ALL)
 			inline void TransformX11::UpdateForMultiThread1(uint callbackType)
 			{
-				//ƒŠƒXƒgæ“¾
+				//ãƒªã‚¹ãƒˆå–å¾—
 				int getLine = 0;
 
 				//Update
@@ -2580,7 +2580,7 @@ namespace SGFramework
 			//BackGroundUpdate (Sync)
 			inline void TransformX11::SyncForMultiThread1(uint callbackType)
 			{
-				//ƒŠƒXƒgæ“¾
+				//ãƒªã‚¹ãƒˆå–å¾—
 				int getLine = 0;
 
 				//Update
@@ -2617,7 +2617,7 @@ namespace SGFramework
 			//ALL Callback Invoke
 			inline void TransformX11::InvokeCallbackForMultiThread1(uint callbackType)
 			{
-				//ƒŠƒXƒgæ“¾
+				//ãƒªã‚¹ãƒˆå–å¾—
 				int getLine = 0;
 
 				//Update
@@ -2640,7 +2640,7 @@ namespace SGFramework
 			//ALL Callback Invoke
 			inline void TransformX11::InvokeCallbackForSingleThread(uint callbackType)
 			{
-				//ƒŠƒXƒgæ“¾
+				//ãƒªã‚¹ãƒˆå–å¾—
 				int getLine = 0;
 
 				//Update
@@ -2668,10 +2668,10 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[UpdateForRoot]
-			//BackGroundUpdate (Parent‚ª‚¢‚È‚¢TransformX11”Å)
+			//BackGroundUpdate (ParentãŒã„ãªã„TransformX11ç‰ˆ)
 			inline void TransformX11::UpdateForRoot()
 			{
-				//XVMatrix
+				//æ›´æ–°Matrix
 				Matrix matrix;
 
 				//Static
@@ -2680,41 +2680,41 @@ namespace SGFramework
 				//Accsess
 				else if (IS_TRUE(m_isNotify))
 				{
-					//worlds—ñŒvZ
+					//worldè¡Œåˆ—è¨ˆç®—
 					matrix *= Matrix::Scaleing(m_variables.worldScale);
 					matrix *= m_variables.worldRotation.ToMatrix();
 					matrix *= Matrix::Translate(m_variables.worldPosition);
 
-					//Vector4x4‚ÉStore
+					//Vector4x4ã«Store
 					m_updateMatrix = matrix;
 
-					//local•Ï”‚É‘ã“ü
+					//localå¤‰æ•°ã«ä»£å…¥
 					m_variables.localRotation = m_variables.worldRotation;
 					m_variables.localPosition = m_variables.worldPosition;
 					m_variables.localScale = m_variables.worldScale;
 				}
-				//worlds—ñ‚É•ÏŠ·
+				//worldè¡Œåˆ—ã«å¤‰æ›
 				else
 					matrix = m_updateMatrix;
 
-				//IsActiveİ’è
+				//IsActiveè¨­å®š
 				m_isActive = m_isActivePublic;
 
-				//©g‚Ìq‹Ÿ‚ğXV
+				//è‡ªèº«ã®å­ä¾›ã‚’æ›´æ–°
 				for (auto& e : m_childrens)
 					e->UpdateForChildren(matrix, m_variables.worldRotation,
 						m_variables.worldScale, m_variables.worldPosition, m_isActive, static_cast<bool>(m_flags & m_cIsStaticFlag), m_isNotify);
 
-				//Notify‰ğœ
+				//Notifyè§£é™¤
 				m_isNotify = false;
 			}
 			//----------------------------------------------------------------------------------
 			//[UpdateForChildren]
-			//BackGroundUpdate (Parent‚ª‚¢‚éTransformX11”Å)
+			//BackGroundUpdate (ParentãŒã„ã‚‹TransformX11ç‰ˆ)
 			inline void TransformX11::UpdateForChildren(Matrix& parentMatrix, Quaternion & rotation,
 				Vector3 & scale, Vector3& position, bool isActive, bool isStatic, bool isChanged)
 			{
-				//XVMatrix
+				//æ›´æ–°Matrix
 				Matrix matrix;
 				bool isStaticAll = isStatic & static_cast<bool>(m_flags & m_cIsStaticFlag);
 
@@ -2726,27 +2726,27 @@ namespace SGFramework
 				{
 					//Static Matrix
 					matrix = *m_staticMatrix * parentMatrix;
-					//Vector4x4‚ÉStore
+					//Vector4x4ã«Store
 					m_updateMatrix = matrix;
 
-					//world•Ï”XV
+					//worldå¤‰æ•°æ›´æ–°
 					m_variables.worldRotation = m_variables.localRotation * rotation;
 					m_variables.worldScale = m_variables.localScale * scale;
 				}
 				//Accsess
 				else if (m_isNotify | isChanged)
 				{
-					//locals—ñŒvZ
+					//localè¡Œåˆ—è¨ˆç®—
 					matrix *= Matrix::Scaleing(m_variables.localScale);
 					matrix *= m_variables.localRotation.ToMatrix();
 					matrix *= Matrix::Translate(m_variables.localPosition);
 
-					//worlds—ñ‚É•ÏŠ·
+					//worldè¡Œåˆ—ã«å¤‰æ›
 					matrix *= parentMatrix;
-					//Vector4x4‚ÉStore
+					//Vector4x4ã«Store
 					m_updateMatrix = matrix;
 		
-					//world•Ï”XV
+					//worldå¤‰æ•°æ›´æ–°
 					m_variables.worldRotation = m_variables.localRotation * rotation;
 					m_variables.worldPosition = m_variables.localPosition + position;
 					m_variables.worldScale = m_variables.localScale * scale;
@@ -2755,23 +2755,23 @@ namespace SGFramework
 				else
 					matrix = m_updateMatrix;
 
-				//IsActiveİ’è
+				//IsActiveè¨­å®š
 				m_isActive = m_isActivePublic;
 
-				//©g‚Ìq‹Ÿ‚ğXV
+				//è‡ªèº«ã®å­ä¾›ã‚’æ›´æ–°
 				for (auto& e : m_childrens)
 					e->UpdateForChildren(matrix, m_variables.worldRotation,
 						m_variables.worldScale, m_variables.worldPosition, m_isActive, isStaticAll, m_isNotify | isChanged);
 
-				//Notify‰ğœ
+				//Notifyè§£é™¤
 				m_isNotify = false;
 			}
 			//----------------------------------------------------------------------------------
 			//[UpdateForRoot]
-			//BackGroundUpdate (Parent‚ª‚¢‚È‚¢TransformX11”Å)
+			//BackGroundUpdate (ParentãŒã„ãªã„TransformX11ç‰ˆ)
 			inline void TransformX11::UpdateForRoot(uint callbackType)
 			{
-				//XVMatrix
+				//æ›´æ–°Matrix
 				Matrix matrix;
 
 				//Static
@@ -2780,46 +2780,46 @@ namespace SGFramework
 				//Accsess
 				else if (IS_TRUE(m_isNotify))
 				{
-					//worlds—ñŒvZ
+					//worldè¡Œåˆ—è¨ˆç®—
 					matrix *= Matrix::Scaleing(m_variables.worldScale);
 					matrix *= m_variables.worldRotation.ToMatrix();
 					matrix *= Matrix::Translate(m_variables.worldPosition);
 
-					//Vector4x4‚ÉStore
+					//Vector4x4ã«Store
 					m_updateMatrix = matrix;
 
-					//local•Ï”‚É‘ã“ü
+					//localå¤‰æ•°ã«ä»£å…¥
 					m_variables.localRotation = m_variables.worldRotation;
 					m_variables.localPosition = m_variables.worldPosition;
 					m_variables.localScale = m_variables.worldScale;
 				}
-				//worlds—ñ‚É•ÏŠ·
+				//worldè¡Œåˆ—ã«å¤‰æ›
 				else
 					matrix = m_updateMatrix;
 
-				//IsActiveİ’è
+				//IsActiveè¨­å®š
 				m_isActive = m_isActivePublic;
 
-				//©g‚Ìq‹Ÿ‚ğXV
+				//è‡ªèº«ã®å­ä¾›ã‚’æ›´æ–°
 				for (auto& e : m_childrens)
 					e->UpdateForChildren(callbackType, matrix, m_variables.worldRotation, 
 						m_variables.worldScale, m_variables.worldPosition, m_isActive, static_cast<bool>(m_flags & m_cIsStaticFlag), m_isNotify);
 
-				//Notify‰ğœ
+				//Notifyè§£é™¤
 				m_isNotify = false;
 
-				//ComponentXV
+				//Componentæ›´æ–°
 				if (IS_TRUE(m_isActive) && (m_callbackEnabledFlags & callbackType))
 					for (auto& e : m_callbackIndexs.at(callbackType))
 						m_components[e]->InvokeCallback(callbackType);
 			}
 			//----------------------------------------------------------------------------------
 			//[UpdateForChildren]
-			//BackGroundUpdate (Parent‚ª‚¢‚éTransformX11”Å)
+			//BackGroundUpdate (ParentãŒã„ã‚‹TransformX11ç‰ˆ)
 			inline void TransformX11::UpdateForChildren(uint callbackType, Matrix& parentMatrix, Quaternion& rotation,
 				Vector3& scale, Vector3& position, bool isActive, bool isStatic, bool isChanged)
 			{
-				//XVMatrix
+				//æ›´æ–°Matrix
 				Matrix matrix;
 				bool isStaticAll = isStatic & static_cast<bool>(m_flags & m_cIsStaticFlag);
 
@@ -2831,27 +2831,27 @@ namespace SGFramework
 				{
 					//Static Matrix
 					matrix = *m_staticMatrix * parentMatrix;
-					//Vector4x4‚ÉStore
+					//Vector4x4ã«Store
 					m_updateMatrix = matrix;
 
-					//world•Ï”XV
+					//worldå¤‰æ•°æ›´æ–°
 					m_variables.worldRotation = m_variables.localRotation * rotation;
 					m_variables.worldScale = m_variables.localScale * scale;
 				}
 				//Accsess
 				else if (m_isNotify | isChanged)
 				{
-					//locals—ñŒvZ
+					//localè¡Œåˆ—è¨ˆç®—
 					matrix *= Matrix::Scaleing(m_variables.localScale);
 					matrix *= m_variables.localRotation.ToMatrix();
 					matrix *= Matrix::Translate(m_variables.localPosition);
 
-					//worlds—ñ‚É•ÏŠ·
+					//worldè¡Œåˆ—ã«å¤‰æ›
 					matrix *= parentMatrix;
-					//Vector4x4‚ÉStore
+					//Vector4x4ã«Store
 					m_updateMatrix = matrix;
 
-					//world•Ï”XV
+					//worldå¤‰æ•°æ›´æ–°
 					m_variables.worldRotation = m_variables.localRotation * rotation;
 					m_variables.worldPosition = m_variables.localPosition + position;
 					m_variables.worldScale = m_variables.localScale * scale;
@@ -2860,18 +2860,18 @@ namespace SGFramework
 				else
 					matrix = m_updateMatrix;
 
-				//IsActiveİ’è
+				//IsActiveè¨­å®š
 				m_isActive = m_isActivePublic;
 
-				//©g‚Ìq‹Ÿ‚ğXV
+				//è‡ªèº«ã®å­ä¾›ã‚’æ›´æ–°
 				for (auto& e : m_childrens)
 					e->UpdateForChildren(callbackType, matrix, m_variables.worldRotation,
 						m_variables.worldScale, m_variables.worldPosition, m_isActive, isStaticAll, m_isNotify | isChanged);
 
-				//Notify‰ğœ
+				//Notifyè§£é™¤
 				m_isNotify = false;
 
-				//ComponentXV
+				//Componentæ›´æ–°
 				if (IS_TRUE(m_isActive) && (m_callbackEnabledFlags & callbackType))
 					for (auto& e : m_callbackIndexs.at(callbackType))
 						m_components[e]->InvokeCallback(callbackType);
@@ -2887,16 +2887,16 @@ namespace SGFramework
 				//Sync
 				SyncDrawMatrix();
 
-				//©g‚Ìq‹Ÿ‚ğXV
+				//è‡ªèº«ã®å­ä¾›ã‚’æ›´æ–°
 				for (auto& e : m_childrens)
 					e->SyncAndUpdateForBackGround(callbackType);
 
-				//ComponentXV
+				//Componentæ›´æ–°
 				if (m_callbackEnabledFlags & ComponentX11::CallbackFunctions::m_cSync)
 					for (auto& e : m_callbackIndexs.at(ComponentX11::CallbackFunctions::m_cSync))
 						m_components[e]->InvokeCallback(ComponentX11::CallbackFunctions::m_cSync);
 
-				//—v‘f‚ ‚ê‚ÎCall
+				//è¦ç´ ã‚ã‚Œã°Call
 				if ((IS_TRUE(m_isActive) && (m_callbackEnabledFlags & callbackType)) != 0)
 				{
 					for (auto& e : m_callbackIndexs.at(callbackType))
@@ -2911,60 +2911,60 @@ namespace SGFramework
 				//Sync
 				SyncDrawMatrix();
 				
-				//©g‚Ìq‹Ÿ‚ğXV
+				//è‡ªèº«ã®å­ä¾›ã‚’æ›´æ–°
 				for (auto& e : m_childrens)
 					e->SyncForBackGround1();
 				
-				//ComponentXV
+				//Componentæ›´æ–°
 				if (m_callbackEnabledFlags & ComponentX11::CallbackFunctions::m_cSync)
 					for (auto& e : m_callbackIndexs.at(ComponentX11::CallbackFunctions::m_cSync))
 						m_components[e]->InvokeCallback(ComponentX11::CallbackFunctions::m_cSync);
 			}
 			//----------------------------------------------------------------------------------
 			//[InitLocal]
-			//LocalSync‚ğs‚¤
-			//ˆø”1: world->local?
+			//LocalSyncã‚’è¡Œã†
+			//å¼•æ•°1: world->local?
 			inline void TransformX11::InitLocal(bool isUseWorldInfo)
 			{
 				Matrix matrix = m_updateMatrix.ToMatrix();
 
-				//WorldInfo‚ğ‚à‚Æ‚ÉLocalInfoì¬
+				//WorldInfoã‚’ã‚‚ã¨ã«LocalInfoä½œæˆ
 				if (IS_TRUE(isUseWorldInfo))
 				{
-					//Copy, rotration‚¾‚¯•‰‰×ŒyŒ¸‚Ì‚½‚ßXmVector
+					//Copy, rotrationã ã‘è² è·è»½æ¸›ã®ãŸã‚XmVector
 					XmVector rotation = m_variables.worldRotation;
 					m_variables.localPosition = m_variables.worldPosition;
 					m_variables.localScale = m_variables.worldScale;
 
-					//ŒvZƒ‹[ƒv
+					//è¨ˆç®—ãƒ«ãƒ¼ãƒ—
 					for (auto pt = m_parent; IS_TRUE(pt.LockShared()); pt = pt->m_parent)
 					{
-						//matrix, local->worldŒvZ
+						//matrix, local->worldè¨ˆç®—
 						matrix *= pt->m_updateMatrix.ToMatrix();
-						//world->localŒvZ
+						//world->localè¨ˆç®—
 						rotation = DirectX::XMQuaternionMultiply(rotation, Quaternion::Inverse(pt->m_variables.localRotation));
 						m_variables.localPosition -= pt->m_variables.localPosition;
 						m_variables.localScale /= pt->m_variables.localScale;
-						//Lock‰ğœ
+						//Lockè§£é™¤
 						pt.UnlockShared();
 					}
 					//Set
 					m_variables.localRotation = rotation;
 
 
-					//locals—ñŒvZ
+					//localè¡Œåˆ—è¨ˆç®—
 					Matrix localToWorldMatrix = Matrix::Scaleing(m_variables.localScale);
 					localToWorldMatrix *= m_variables.localRotation.ToMatrix();
 					localToWorldMatrix *= Matrix::Translate(m_variables.localPosition);
 					//local->world
 					m_updateMatrix = localToWorldMatrix * matrix;
 				}
-				//LocalInfo‚ğ‚à‚Æ‚ÉWorldInfoì¬
+				//LocalInfoã‚’ã‚‚ã¨ã«WorldInfoä½œæˆ
 				else
 				{
 					bool isStaticAll = true;
 	
-					//locals—ñŒvZ
+					//localè¡Œåˆ—è¨ˆç®—
 					matrix *= Matrix::Scaleing(m_variables.localScale);
 					matrix *= m_variables.localRotation.ToMatrix();
 					matrix *= Matrix::Translate(m_variables.localPosition);
@@ -2972,17 +2972,17 @@ namespace SGFramework
 					m_variables.worldRotation = m_variables.localRotation;
 					m_variables.worldScale = m_variables.localScale;
 
-					//ŒvZƒ‹[ƒv
+					//è¨ˆç®—ãƒ«ãƒ¼ãƒ—
 					for (auto pt = m_parent; IS_TRUE(pt.LockShared()); pt = pt->m_parent)
 					{
-						//MatrixŒvZ, local->world
+						//Matrixè¨ˆç®—, local->world
 						matrix *= pt->m_updateMatrix.ToMatrix();
-						//world•Ï”‚àlocal->worldŒvZ
+						//worldå¤‰æ•°ã‚‚local->worldè¨ˆç®—
 						m_variables.worldScale *= pt->m_variables.localScale;
 						m_variables.worldRotation *= pt->m_variables.localRotation;
 						//static?
 						isStaticAll &= static_cast<bool>(pt->m_flags & m_cIsStaticFlag);
-						//Lock‰ğœ
+						//Lockè§£é™¤
 						pt.UnlockShared();
 					}
 
@@ -2990,7 +2990,7 @@ namespace SGFramework
 					m_updateMatrix = matrix;
 					m_isNotify = false;
 
-					//©g‚Ìq‹Ÿ‚ğXV
+					//è‡ªèº«ã®å­ä¾›ã‚’æ›´æ–°
 					for (auto& e : m_childrens)
 						e->UpdateForChildren(0, matrix, m_variables.worldRotation,
 							m_variables.worldScale, m_variables.worldPosition, m_isActive, isStaticAll, true);
@@ -3001,7 +3001,7 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[SyncDrawMatrix]
-			//GraphicsUpdate—pMatrix‚ğ“¯Šú‚·‚é
+			//GraphicsUpdateç”¨Matrixã‚’åŒæœŸã™ã‚‹
 			inline void TransformX11::SyncDrawMatrix()
 			{
 				//MemoryCopy
@@ -3009,7 +3009,7 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[AllocateCallback]
-			//m_callbackIndexs‚ğİ’è
+			//m_callbackIndexsã‚’è¨­å®š
 			inline void TransformX11::AllocateCallback()
 			{
 				LockGuardTransform guard(m_lock);
@@ -3020,15 +3020,15 @@ namespace SGFramework
 				m_callbackIndexs.clear();
 				m_callbackEnabledFlags = 0;
 
-				//’T¸ƒ‹[ƒv
+				//æ¢æŸ»ãƒ«ãƒ¼ãƒ—
 				for (auto& e : m_components)
 				{	
-					//ƒtƒ‰ƒO•ª‰ğ
+					//ãƒ•ãƒ©ã‚°åˆ†è§£
 					uint flags = (e->m_saveCallbackEnabledFlags - (e->m_saveCallbackEnabledFlags & ComponentX11::CallbackFunctions::m_cExclusionAllocateFlags));
-					//ƒtƒ‰ƒO’l‚ ‚è
+					//ãƒ•ãƒ©ã‚°å€¤ã‚ã‚Š
 					if (flags != 0)
 					{
-						//ƒVƒtƒg‚µ‚È‚ª‚çTrue BitŒŸõ, Hit‚ÅƒCƒ“ƒfƒbƒNƒXƒŠƒXƒg‚É’Ç‰Á
+						//ã‚·ãƒ•ãƒˆã—ãªãŒã‚‰True Bitæ¤œç´¢, Hitã§ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãƒªã‚¹ãƒˆã«è¿½åŠ 
 						for (uint i = 0, shift = 1; i < ComponentX11::CallbackFunctions::m_cNumAllCallbacks; ++i, shift = 1 << i)
 							if (e->m_saveCallbackEnabledFlags & shift)
 							{
@@ -3038,7 +3038,7 @@ namespace SGFramework
 								m_callbackIndexs.at(shift).emplace_back(componentsIndex);
 								m_callbackEnabledFlags |= shift;
 							}
-						//ƒVƒtƒg‚µ‚È‚ª‚çTrue BitŒŸõ, Hit‚ÅƒCƒ“ƒfƒbƒNƒXƒŠƒXƒg‚É’Ç‰Á
+						//ã‚·ãƒ•ãƒˆã—ãªãŒã‚‰True Bitæ¤œç´¢, Hitã§ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãƒªã‚¹ãƒˆã«è¿½åŠ 
 						for (uint i = ComponentX11::CallbackFunctions::m_cPrivateCallbacksStartValue, shift = 1;
 							i < ComponentX11::CallbackFunctions::m_cNumAllPrivateCallbacks; ++i, shift = 1 << i)
 							if (e->m_saveCallbackEnabledFlags & shift)
@@ -3059,7 +3059,7 @@ namespace SGFramework
 			//Invoke Callback in this and childrens
 			inline void TransformX11::InvokeCallback(uint callbackType)
 			{
-				//—v‘f‚ ‚ê‚ÎCall
+				//è¦ç´ ã‚ã‚Œã°Call
 				if (IS_TRUE(m_isActive) && (m_callbackEnabledFlags & callbackType))
 				{
 					for (auto& e : m_callbackIndexs.at(callbackType))
@@ -3083,7 +3083,7 @@ namespace SGFramework
 			inline void TransformX11::InvokeCallback(uint callbackType, 
 				const WeakPointer<TransformX11>& pointer0, const WeakPointer<TransformX11>& pointer1)
 			{
-				//—v‘f‚ ‚ê‚ÎCall
+				//è¦ç´ ã‚ã‚Œã°Call
 				if (IS_TRUE(m_isActive) && (m_callbackEnabledFlags & callbackType))
 				{
 					for (auto& e : m_callbackIndexs.at(callbackType))
@@ -3107,7 +3107,7 @@ namespace SGFramework
 			//Invoke Callback in this
 			inline void TransformX11::InvokeCallbackPhysics(uint callbackType, const ContactInfo& info)
 			{
-				//—v‘f‚ ‚ê‚ÎCall
+				//è¦ç´ ã‚ã‚Œã°Call
 				if (IS_TRUE(m_isActive) && (m_callbackEnabledFlags & callbackType))
 				{
 					for (auto& e : m_callbackIndexs.at(callbackType))
@@ -3138,7 +3138,7 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ParentSettings]
-			//CopyInstantiate—p, parent‚ğİ’è‚µ’¼‚·
+			//CopyInstantiateç”¨, parentã‚’è¨­å®šã—ç›´ã™
 			inline void TransformX11::ParentSettings(WeakPointer<TransformX11> parent)
 			{
 				m_parent = parent;
@@ -3151,11 +3151,11 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Instantiate]
-			//ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é
-			//ˆø”1: copy
-			//ˆø”2: “o˜^‚·‚éTransform
-			//ˆø”3: Used mutex counter (Required for Multi thread), default = true
-			//ˆø”4: Auto gabage collection?, default = true
+			//ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹
+			//å¼•æ•°1: copy
+			//å¼•æ•°2: ç™»éŒ²ã™ã‚‹Transform
+			//å¼•æ•°3: Used mutex counter (Required for Multi thread), default = true
+			//å¼•æ•°4: Auto gabage collection?, default = true
 			template <class ComponentClass>
 			inline static SharedPointer<ComponentClass> ComponentX11::Instantiate(SharedPointer<ComponentClass> copy, 
 				SharedPointer<TransformX11> transform, bool isUsedMutexCounter, bool isAutoGabageCollection)
@@ -3166,10 +3166,10 @@ namespace SGFramework
 				//valid?
 				if (IS_FALSE(transform.getIsValid() & copy.getIsValid())) return SharedPointer<ComponentClass>();
 
-				//ì¬
+				//ä½œæˆ
 				SharedPointer<ComponentClass> result(new ComponentClass(),
 					isUsedMutexCounter, isAutoGabageCollection);
-				//ƒRƒs[
+				//ã‚³ãƒ”ãƒ¼
 				uint instanceID = result->m_instanceID;
 
 				memcpy_s(result.getPointer(), sizeof(ComponentClass), copy.getPointer(), sizeof(ComponentClass));
@@ -3195,11 +3195,11 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[Instantiate]
-			//ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é
-			//ˆø”1: “o˜^‚·‚éTransform
-			//ˆø”2: is Enabled, default = true
-			//ˆø”3: Used mutex counter (Required for Multi thread), default = true
-			//ˆø”4: Auto gabage collection?, default = true
+			//ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹
+			//å¼•æ•°1: ç™»éŒ²ã™ã‚‹Transform
+			//å¼•æ•°2: is Enabled, default = true
+			//å¼•æ•°3: Used mutex counter (Required for Multi thread), default = true
+			//å¼•æ•°4: Auto gabage collection?, default = true
 			template <class ComponentClass>
 			inline static SharedPointer<ComponentClass> ComponentX11::Instantiate(SharedPointer<TransformX11> transform, 
 				bool isEnabled, bool isUsedMutexCounter, bool isAutoGabageCollection)
@@ -3210,7 +3210,7 @@ namespace SGFramework
 				//valid?
 				if (IS_FALSE(transform.getIsValid())) return SharedPointer<ComponentClass>();
 
-				//ì¬
+				//ä½œæˆ
 				SharedPointer<ComponentClass> result(new ComponentClass(), 
 					isUsedMutexCounter, isAutoGabageCollection);
 		
@@ -3246,10 +3246,10 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ChangeCallbackFlag]
-			//CallbackEnabledFlags‚Ì’l‚ğ•ÏX‚·‚é, Awake‚È‚Ç‚ÍÄ“xŒÄ‚Ño‚·‚æ‚¤‚Éİ’è‚·‚é‚Æ‘¦ŒÄ‚Î‚ê‚é
-			//Copy Instantiate‚ğs‚¤‚ÆCopyæ‚Í‰Šúó‘Ô‚Æ‚È‚é
-			//ˆø”1: flag
-			//ˆø”2: set value
+			//CallbackEnabledFlagsã®å€¤ã‚’å¤‰æ›´ã™ã‚‹, Awakeãªã©ã¯å†åº¦å‘¼ã³å‡ºã™ã‚ˆã†ã«è¨­å®šã™ã‚‹ã¨å³æ™‚å‘¼ã°ã‚Œã‚‹
+			//Copy Instantiateã‚’è¡Œã†ã¨Copyå…ˆã¯åˆæœŸçŠ¶æ…‹ã¨ãªã‚‹
+			//å¼•æ•°1: flag
+			//å¼•æ•°2: set value
 			inline void ComponentX11::ChangeCallbackFlags(uint flags, bool setValue)
 			{
 				TransformX11::LockGuardTransform guard(transform->m_lock);
@@ -3279,13 +3279,13 @@ namespace SGFramework
 						OnEnable();
 				}
 
-				//ÄAllocate
+				//å†Allocate
 				transform->AllocateCallback();
 			}
 
 			//----------------------------------------------------------------------------------
 			//[AllocateCallback]
-			//callback table‚ğì¬‚·‚é
+			//callback tableã‚’ä½œæˆã™ã‚‹
 			inline void ComponentX11::AllocateCallback()
 			{
 				//Callback Awake Function Flag
@@ -3331,7 +3331,7 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[RefreshCallbackFlags]
-			//Callback Flags‚ğ‰Šúó‘Ô‚É‚·‚é
+			//Callback Flagsã‚’åˆæœŸçŠ¶æ…‹ã«ã™ã‚‹
 			inline void ComponentX11::RefreshCallbackFlags()
 			{
 				m_callbackEnabledFlags = m_saveCallbackEnabledFlags;
@@ -3371,21 +3371,21 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[InvokeCallback]
-			//Callback‚ğŒÄ‚Ño‚·
+			//Callbackã‚’å‘¼ã³å‡ºã™
 			inline void ComponentX11::InvokeCallback(uint callbackType)
 			{
 				(this->*m_functionTable.at(callbackType))();
 			}
 			//----------------------------------------------------------------------------------
 			//[InvokeCallbackPhysics]
-			//Callback‚ğŒÄ‚Ño‚· (Physics)
+			//Callbackã‚’å‘¼ã³å‡ºã™ (Physics)
 			inline void ComponentX11::InvokeCallbackPhysics(uint callbackType, const ContactInfo& info)
 			{
 				(this->*m_physicsFunctionTable.at(callbackType))(info);
 			}
 			//----------------------------------------------------------------------------------
 			//[InvokeCallbackPointer]
-			//Callback‚ğŒÄ‚Ño‚· (Physics)
+			//Callbackã‚’å‘¼ã³å‡ºã™ (Physics)
 			inline void ComponentX11::InvokeCallbackPointer(uint callbackType, const WeakPointer<TransformX11>& pointer0, const WeakPointer<TransformX11>& pointer1)
 			{
 				(this->*m_pointerFunctionTable.at(callbackType))(pointer0, pointer1);

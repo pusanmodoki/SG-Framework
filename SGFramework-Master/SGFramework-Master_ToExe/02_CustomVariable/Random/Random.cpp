@@ -1,17 +1,17 @@
 /*----------------------------------------------------------------------------------
-ƒ‰ƒ“ƒ_ƒ€‚ÈÀ”‚ğ¶¬‚·‚é Random Class
-	¨static•Ï”‚ğ‹Lq‚·‚éRandom.cpp
+ãƒ©ãƒ³ãƒ€ãƒ ãªå®Ÿæ•°ã‚’ç”Ÿæˆã™ã‚‹ Random Class
+	â†’staticå¤‰æ•°ã‚’è¨˜è¿°ã™ã‚‹Random.cpp
 ------------------------------------------------------------------------------------*/	
 #include "Random.hpp"
 
 //Framework namespace
 namespace SGFramework
 {
-	//—”
+	//ä¹±æ•°
 	std::unordered_map<std::thread::id, std::mt19937> Random::m_randoms;
-	//floatˆê—l•ª•z	
+	//floatä¸€æ§˜åˆ†å¸ƒ	
 	std::unordered_map<std::thread::id, std::uniform_real_distribution<float>> Random::m_distributionFloats;
-	//intˆê—l•ª•z	
+	//intä¸€æ§˜åˆ†å¸ƒ	
 	std::unordered_map<std::thread::id, std::uniform_int_distribution<int>> Random::m_distributionInts;
 	//floatBind
 	std::unordered_map<std::thread::id, std::_Binder<std::_Unforced, std::uniform_real_distribution<float>&, std::reference_wrapper<std::mt19937>>> Random::m_valueFloats;

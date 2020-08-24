@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-•¨—ƒGƒ“ƒWƒ“(PhysX)‚ğŠÇ—‚·‚éPhysics class
+ç‰©ç†ã‚¨ãƒ³ã‚¸ãƒ³(PhysX)ã‚’ç®¡ç†ã™ã‚‹Physics class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_PHYSICS_HPP_
 #define SGFRAMEWORK_HEADER_PHYSICS_HPP_
@@ -23,7 +23,7 @@ namespace SGFramework
 	struct OverlapHit;
 	struct SweepHit;
 
-	//•¨—ƒGƒ“ƒWƒ“(PhysX)‚ğŠÇ—‚·‚éPhysics class
+	//ç‰©ç†ã‚¨ãƒ³ã‚¸ãƒ³(PhysX)ã‚’ç®¡ç†ã™ã‚‹Physics class
 	class Physics final
 	{
 	private:
@@ -68,81 +68,81 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Raycast]
-		//Ray‚Å“–‚½‚è”»’è‚ğs‚¤
-		//ˆø”1: Œ´“_
-		//ˆø”2: •ûŒü
-		//ˆø”3: ‹——£, default = infinity
-		//ˆø”4: RaycastHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ğ‘ã“ü‚·‚é, default = nullptr
-		//ˆø”4: LayerMask, default = all layer mask
-		//ˆø”5: true = ray‚É“–‚½‚Á‚½î•ñ‚ğ‘S‚Ä•Ô‹p
+		//Rayã§å½“ãŸã‚Šåˆ¤å®šã‚’è¡Œã†
+		//å¼•æ•°1: åŸç‚¹
+		//å¼•æ•°2: æ–¹å‘
+		//å¼•æ•°3: è·é›¢, default = infinity
+		//å¼•æ•°4: RaycastHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+		//å¼•æ•°4: LayerMask, default = all layer mask
+		//å¼•æ•°5: true = rayã«å½“ãŸã£ãŸæƒ…å ±ã‚’å…¨ã¦è¿”å´
 		static bool Raycast(const Vector3& origin, const Vector3& direction, float distance = MathAF::cInfinity,
 			RaycastHit* raycastHit = nullptr, const LayerMask& layerMask = LayerMask::getAllLayersMask(), bool isMultiHit = false);
 
 		//----------------------------------------------------------------------------------
 		//[BoxCast]
-		//BoxRay‚Å“–‚½‚è”»’è‚ğs‚¤
-		//ˆø”1: Œ´“_
-		//ˆø”2: •ûŒü
-		//ˆø”3: ƒTƒCƒY
-		//ˆø”4: ‰ñ“]
-		//ˆø”5: ‹——£, default = infinity
-		//ˆø”6: SweepHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ğ‘ã“ü‚·‚é, default = nullptr
-		//ˆø”7: LayerMask, default = all layer mask
+		//BoxRayã§å½“ãŸã‚Šåˆ¤å®šã‚’è¡Œã†
+		//å¼•æ•°1: åŸç‚¹
+		//å¼•æ•°2: æ–¹å‘
+		//å¼•æ•°3: ã‚µã‚¤ã‚º
+		//å¼•æ•°4: å›è»¢
+		//å¼•æ•°5: è·é›¢, default = infinity
+		//å¼•æ•°6: SweepHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+		//å¼•æ•°7: LayerMask, default = all layer mask
 		static bool BoxCast(const Vector3& origin, const Vector3& direction, const Vector3& size, const Quaternion& rotation,
 			float distance = MathAF::cInfinity, SweepHit* hit = nullptr, const LayerMask& layerMask = LayerMask::getAllLayersMask());
 		//----------------------------------------------------------------------------------
 		//[SphereCast]
-		//SphereRay‚Å“–‚½‚è”»’è‚ğs‚¤
-		//ˆø”1: Œ´“_
-		//ˆø”2: •ûŒü
-		//ˆø”3: ”¼Œa
-		//ˆø”4: ‹——£, default = infinity
-		//ˆø”5: SweepHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ğ‘ã“ü‚·‚é, default = nullptr
-		//ˆø”6: LayerMask, default = all layer mask
+		//SphereRayã§å½“ãŸã‚Šåˆ¤å®šã‚’è¡Œã†
+		//å¼•æ•°1: åŸç‚¹
+		//å¼•æ•°2: æ–¹å‘
+		//å¼•æ•°3: åŠå¾„
+		//å¼•æ•°4: è·é›¢, default = infinity
+		//å¼•æ•°5: SweepHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+		//å¼•æ•°6: LayerMask, default = all layer mask
 		static bool SphereCast(const Vector3& origin, const Vector3& direction, float radius,
 			float distance = MathAF::cInfinity, SweepHit* hit = nullptr, const LayerMask& layerMask = LayerMask::getAllLayersMask());
 		//----------------------------------------------------------------------------------
 		//[CapsuleCast]
-		//CapsuleRay‚Å“–‚½‚è”»’è‚ğs‚¤
-		//ˆø”1: Œ´“_
-		//ˆø”2: •ûŒü
-		//ˆø”3: ”¼Œa
-		//ˆø”4: ‚‚³
-		//ˆø”5: ‰ñ“]
-		//ˆø”6: ‹——£, default = infinity
-		//ˆø”7: SweepHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ğ‘ã“ü‚·‚é, default = nullptr
-		//ˆø”8: LayerMask, default = all layer mask
+		//CapsuleRayã§å½“ãŸã‚Šåˆ¤å®šã‚’è¡Œã†
+		//å¼•æ•°1: åŸç‚¹
+		//å¼•æ•°2: æ–¹å‘
+		//å¼•æ•°3: åŠå¾„
+		//å¼•æ•°4: é«˜ã•
+		//å¼•æ•°5: å›è»¢
+		//å¼•æ•°6: è·é›¢, default = infinity
+		//å¼•æ•°7: SweepHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+		//å¼•æ•°8: LayerMask, default = all layer mask
 		static bool CapsuleCast(const Vector3& origin, const Vector3& direction, float radius, float height, const Quaternion& rotation,
 			float distance = MathAF::cInfinity, SweepHit* hit = nullptr, const LayerMask& layerMask = LayerMask::getAllLayersMask());
 
 		//----------------------------------------------------------------------------------
 		//[OverlapBox]
-		//Box‚ÉƒIƒuƒWƒFƒNƒg‚ªÚG‚µ‚Ä‚¢‚é‚©Šm”F‚·‚é
-		//ˆø”1: À•W
-		//ˆø”2: ‰ñ“]
-		//ˆø”3: ƒTƒCƒY
-		//ˆø”4: OverlapHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ğ‘ã“ü‚·‚é, default = nullptr
-		//ˆø”5: LayerMask, default = all layer mask
+		//Boxã«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒæ¥è§¦ã—ã¦ã„ã‚‹ã‹ç¢ºèªã™ã‚‹
+		//å¼•æ•°1: åº§æ¨™
+		//å¼•æ•°2: å›è»¢
+		//å¼•æ•°3: ã‚µã‚¤ã‚º
+		//å¼•æ•°4: OverlapHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+		//å¼•æ•°5: LayerMask, default = all layer mask
 		static bool OverlapBox(const Vector3& position, const Quaternion& rotation, 
 			const Vector3& size, OverlapHit* hit = nullptr, const LayerMask& layerMask = LayerMask::getAllLayersMask());
 		//----------------------------------------------------------------------------------
 		//[OverlapSphere]
-		//Sphere‚ÉƒIƒuƒWƒFƒNƒg‚ªÚG‚µ‚Ä‚¢‚é‚©Šm”F‚·‚é
-		//ˆø”1: À•W
-		//ˆø”2: radius
-		//ˆø”3: OverlapHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ğ‘ã“ü‚·‚é, default = nullptr
-		//ˆø”4: LayerMask, default = all layer mask
+		//Sphereã«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒæ¥è§¦ã—ã¦ã„ã‚‹ã‹ç¢ºèªã™ã‚‹
+		//å¼•æ•°1: åº§æ¨™
+		//å¼•æ•°2: radius
+		//å¼•æ•°3: OverlapHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+		//å¼•æ•°4: LayerMask, default = all layer mask
 		static bool OverlapSphere(const Vector3& position, float radius, 
 			OverlapHit* hit = nullptr, const LayerMask& layerMask = LayerMask::getAllLayersMask());
 		//----------------------------------------------------------------------------------
 		//[OverlapCapsule]
-		//Capsule‚ÉƒIƒuƒWƒFƒNƒg‚ªÚG‚µ‚Ä‚¢‚é‚©Šm”F‚·‚é
-		//ˆø”1: À•W
-		//ˆø”2: ‰ñ“]
-		//ˆø”3: radius
-		//ˆø”4: height
-		//ˆø”5: OverlapHit, nullptr‚Å‚È‚¢ê‡‚ÍHitî•ñ‚ğ‘ã“ü‚·‚é, default = nullptr
-		//ˆø”6: LayerMask, default = all layer mask
+		//Capsuleã«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒæ¥è§¦ã—ã¦ã„ã‚‹ã‹ç¢ºèªã™ã‚‹
+		//å¼•æ•°1: åº§æ¨™
+		//å¼•æ•°2: å›è»¢
+		//å¼•æ•°3: radius
+		//å¼•æ•°4: height
+		//å¼•æ•°5: OverlapHit, nullptrã§ãªã„å ´åˆã¯Hitæƒ…å ±ã‚’ä»£å…¥ã™ã‚‹, default = nullptr
+		//å¼•æ•°6: LayerMask, default = all layer mask
 		static bool OverlapCapsule(const Vector3& position, const Quaternion& rotation,
 			float radius, float height, OverlapHit* hit = nullptr, const LayerMask& layerMask = LayerMask::getAllLayersMask());
 
@@ -161,7 +161,7 @@ namespace SGFramework
 		static PointerProperty<physx::PxScene*> physicsScene;
 		//PhysX->PxControllerManager
 		static PointerProperty<physx::PxControllerManager*> controllerManager;
-		//Default PhysicsMaterial (staticFriction = 0.5f, dynamicFriction = 0.5f, restitution(”½”­ŒW”) = 0.1f)
+		//Default PhysicsMaterial (staticFriction = 0.5f, dynamicFriction = 0.5f, restitution(åç™ºä¿‚æ•°) = 0.1f)
 		static GetOnlyProperty<PhysicsMaterial> defaultPhysicsMaterial;
 
 	private:
@@ -174,7 +174,7 @@ namespace SGFramework
 		//world0 = layerMask
 		//world1 = exclude instance id
 
-		//Actorî•ñ‚ğ•Û‘¶‚·‚éActorInfo
+		//Actoræƒ…å ±ã‚’ä¿å­˜ã™ã‚‹ActorInfo
 		struct ActorInfo
 		{
 			inline ActorInfo(const WeakPointer<Transform>& transform, const WeakPointer<BaseClass::BaseRigidBody>& rigidBody,
@@ -196,7 +196,7 @@ namespace SGFramework
 			bool isDynamic;
 		};
 
-		//Colliderî•ñ‚ğ•Û‘¶‚·‚éColliderInfo
+		//Collideræƒ…å ±ã‚’ä¿å­˜ã™ã‚‹ColliderInfo
 		struct ColliderInfo
 		{
 			inline ColliderInfo(const WeakPointer<BaseClass::BaseCollider>& collider, physx::PxShape* shape) 
@@ -208,7 +208,7 @@ namespace SGFramework
 			physx::PxShape* shape;
 		};
 
-		//collider hit pair‚ğ•Û‘¶‚·‚éHitPair
+		//collider hit pairã‚’ä¿å­˜ã™ã‚‹HitPair
 		struct HitPair
 		{
 			inline HitPair(uint64 hashID, 
@@ -222,7 +222,7 @@ namespace SGFramework
 				isTrigger0(isTrigger0), isTrigger1(isTrigger1) ,
 				isEnabledCallback0(isEnabledCallback0), isEnabledCallback1(isEnabledCallback1) {}
 
-			//Hash—puint64¶¬
+			//Hashç”¨uint64ç”Ÿæˆ
 			inline static uint64 CalculateHashSeed(uint instanceID0, uint instanceID1)
 			{
 				return instanceID0 >= instanceID1 ? ((static_cast<uint64>(instanceID0) << 32) | static_cast<uint64>(instanceID1))
@@ -284,7 +284,7 @@ namespace SGFramework
 			uint m_colliderInstanceID1;
 		};
 
-		//collider lost pair‚ğ•Û‘¶‚·‚éLostPair
+		//collider lost pairã‚’ä¿å­˜ã™ã‚‹LostPair
 		struct LostPair
 		{
 			inline LostPair(const HitPair& pair, bool isObjectDestroy, bool isRemovedHitPairs)
@@ -320,7 +320,7 @@ namespace SGFramework
 		//SimulationEventCallback
 		class SimulationEventCallback : public physx::PxSimulationEventCallback
 		{
-			//‹óÀ‘•
+			//ç©ºå®Ÿè£…
 			inline void onConstraintBreak(physx::PxConstraintInfo *constraints, physx::PxU32 count) override {}
 			inline void onWake(physx::PxActor **actors, physx::PxU32 count) override {}
 			inline void onSleep(physx::PxActor **actors, physx::PxU32 count) override {}
@@ -353,8 +353,8 @@ namespace SGFramework
 		//----------------------------------------------------------------------------------
 		//[StartUp]
 		//throw: failed start up
-		//ˆø”1: gravity
-		//ˆø”2: HitPair->Init Num Reserve
+		//å¼•æ•°1: gravity
+		//å¼•æ•°2: HitPair->Init Num Reserve
 		static void StartUp(const ReadElement::Pack& gravity, const ReadElement::Pack& hitPairVectorReserves);
 		//----------------------------------------------------------------------------------
 		//[ShutDown]
@@ -372,26 +372,26 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[ProcessingMessage]
-		//ƒƒbƒZ[ƒW‚ğˆ—‚·‚é
-		//ˆø”1: message
+		//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã™ã‚‹
+		//å¼•æ•°1: message
 		inline static void ProcessingMessage(const Detail::Physics::PhysicsMessage& message);
 		//----------------------------------------------------------------------------------
 		//[ProcessingRigidBodyDynamicMessage]
-		//ƒƒbƒZ[ƒW‚ğˆ—‚·‚é (RigidBodyDynamic)
-		//ˆø”1: message
-		//ˆø”1: message type
+		//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã™ã‚‹ (RigidBodyDynamic)
+		//å¼•æ•°1: message
+		//å¼•æ•°1: message type
 		inline static void ProcessingRigidBodyDynamicMessage(const Detail::Physics::PhysicsMessage& message, uint messageType);
 		//----------------------------------------------------------------------------------
 		//[ProcessingPointerMessage]
-		//ƒƒbƒZ[ƒW‚ğˆ—‚·‚é (Pointer)
-		//ˆø”1: message
-		//ˆø”1: message type
+		//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã™ã‚‹ (Pointer)
+		//å¼•æ•°1: message
+		//å¼•æ•°1: message type
 		inline static void ProcessingPointerMessage(const Detail::Physics::PhysicsMessage& message, uint messageType);
 		//----------------------------------------------------------------------------------
 		//[ProcessingOtherMessage]
-		//ƒƒbƒZ[ƒW‚ğˆ—‚·‚é (Other)
-		//ˆø”1: message
-		//ˆø”1: message type
+		//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã™ã‚‹ (Other)
+		//å¼•æ•°1: message
+		//å¼•æ•°1: message type
 		inline static void ProcessingOtherMessage(const Detail::Physics::PhysicsMessage& message, uint messageType);
 
 		//----------------------------------------------------------------------------------
@@ -478,9 +478,9 @@ namespace SGFramework
 		static std::vector<LostPair> m_lostPairs;
 		//found pair vector
 		static std::vector<HitPair> m_foundPairs;
-		//—Dæmessage
+		//å„ªå…ˆmessage
 		static std::vector<Detail::Physics::PhysicsMessage> m_preferentMessages;
-		//—Dæmessage (use thread)
+		//å„ªå…ˆmessage (use thread)
 		static std::unordered_set<uint> m_preferentRegisterInstanceIDs;
 		//message
 		static std::vector<Detail::Physics::PhysicsMessage> m_messages;
@@ -557,17 +557,17 @@ namespace SGFramework
 		physx::PxFilterObjectAttributes attributes0, physx::PxFilterData filterData0, 
 		physx::PxFilterObjectAttributes attributes1, physx::PxFilterData filterData1, bool objectRemoved)
 	{
-		//ƒnƒbƒVƒ…ƒV[ƒh¶¬
+		//ãƒãƒƒã‚·ãƒ¥ã‚·ãƒ¼ãƒ‰ç”Ÿæˆ
 		uint64 id = HitPair::CalculateHashSeed(filterData0.word3, filterData1.word3);
 		//Found
 		auto find = m_hitPairs.find(id);
 		
-		//Pair”­Œ©->Lost’Ç‰Á
+		//Pairç™ºè¦‹->Lostè¿½åŠ 
 		if (find != m_hitPairs.end())
 			m_lostPairs.emplace_back(find->second, objectRemoved, true);
 		else
 		{
-			//FoundPair‚©‚ç‚àŒŸõ, ‚È‚¯‚ê‚Î’Ç‰Á
+			//FoundPairã‹ã‚‰ã‚‚æ¤œç´¢, ãªã‘ã‚Œã°è¿½åŠ 
 			for(auto& e : m_foundPairs)
 				if (e.hashID == id)
 				{
@@ -581,10 +581,10 @@ namespace SGFramework
 	inline physx::PxQueryHitType::Enum Physics::QueryCallback::preFilter(const physx::PxFilterData & filterData,
 		const physx::PxShape * shape, const physx::PxRigidActor * actor, physx::PxHitFlags & queryFlags)
 	{
-		//FilterDataæ“¾
+		//FilterDataå–å¾—
 		auto shapeFilterData = shape->getSimulationFilterData();
 		
-		//ƒqƒbƒg”»’è, Multi Touch‚Å‚È‚¯‚ê‚ÎBlock, ‚»‚¤‚Å‚È‚¯‚ê‚ÎTouch•Ô‹p
+		//ãƒ’ãƒƒãƒˆåˆ¤å®š, Multi Touchã§ãªã‘ã‚Œã°Block, ãã†ã§ãªã‘ã‚Œã°Touchè¿”å´
 		if (filterData.word0 & shapeFilterData.word0)
 			return filterData.word1 ? physx::PxQueryHitType::eTOUCH : physx::PxQueryHitType::eBLOCK;
 		else
@@ -595,10 +595,10 @@ namespace SGFramework
 	inline physx::PxQueryHitType::Enum Physics::QueryCallback::postFilter(
 		const physx::PxFilterData & filterData, const physx::PxQueryHit & hit)
 	{
-		//FilterDataæ“¾
+		//FilterDataå–å¾—
 		auto shapeFilterData = hit.shape->getSimulationFilterData();
 
-		//ƒqƒbƒg”»’è, Multi Touch‚Å‚È‚¯‚ê‚ÎBlock, ‚»‚¤‚Å‚È‚¯‚ê‚ÎTouch•Ô‹p
+		//ãƒ’ãƒƒãƒˆåˆ¤å®š, Multi Touchã§ãªã‘ã‚Œã°Block, ãã†ã§ãªã‘ã‚Œã°Touchè¿”å´
 		if (filterData.word0 & shapeFilterData.word0)
 			return filterData.word1 ? physx::PxQueryHitType::eTOUCH : physx::PxQueryHitType::eBLOCK;
 		else
@@ -608,12 +608,12 @@ namespace SGFramework
 	//on trigger event
 	inline void 	Physics::SimulationEventCallback::onTrigger(physx::PxTriggerPair *pairs, physx::PxU32 count) 
 	{
-		//Trigger‘¤FilterData
+		//Triggerå´FilterData
 		auto triggerFilterData = pairs->triggerShape->getSimulationFilterData();
-		//‘Šè‚ÌFilterData
+		//ç›¸æ‰‹ã®FilterData
 		auto otherFilterData = pairs->otherShape->getSimulationFilterData();
 
-		//TriggerEnter & ƒŒƒCƒ„[”»’è & !“¯ˆêƒIƒuƒWƒFƒNƒg”»’è->Found“o˜^
+		//TriggerEnter & ãƒ¬ã‚¤ãƒ¤ãƒ¼åˆ¤å®š & !åŒä¸€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆåˆ¤å®š->Foundç™»éŒ²
 		if ((pairs->status & physx::PxPairFlag::eNOTIFY_TOUCH_FOUND) &&
 			(triggerFilterData.word2 | otherFilterData.word2) && 
 			triggerFilterData.word3 != otherFilterData.word3)
@@ -627,23 +627,23 @@ namespace SGFramework
 		//TriggerExit
 		else if ((pairs->status & physx::PxPairFlag::eNOTIFY_TOUCH_LOST))
 		{
-			//ƒnƒbƒVƒ…ƒV[ƒh¶¬
+			//ãƒãƒƒã‚·ãƒ¥ã‚·ãƒ¼ãƒ‰ç”Ÿæˆ
 			uint64 id = HitPair::CalculateHashSeed(pairs->triggerShape->getSimulationFilterData().word3, 
 				pairs->otherShape->getSimulationFilterData().word3);
 
 			//Found
 			auto find = m_hitPairs.find(id);
-			//ƒIƒuƒWƒFƒNƒgíœ‚É‚æ‚éExit‚©”»’è
+			//ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå‰Šé™¤ã«ã‚ˆã‚‹Exitã‹åˆ¤å®š
 			bool isObjectRemoved = (pairs->flags &
 				(physx::PxTriggerPairFlag::eREMOVED_SHAPE_OTHER |
 					physx::PxTriggerPairFlag::eREMOVED_SHAPE_TRIGGER)) ? true : false;
 
-			//Pair‘¶İ‚È‚çLost’Ç‰Á
+			//Pairå­˜åœ¨ãªã‚‰Lostè¿½åŠ 
 			if (find != m_hitPairs.end())
 				m_lostPairs.emplace_back(find->second, isObjectRemoved, true);
 			else
 			{
-				//Found‚©‚ç‚àŒŸõ->Œ©‚Â‚¯‚ê‚ÎLost’Ç‰Á
+				//Foundã‹ã‚‰ã‚‚æ¤œç´¢->è¦‹ã¤ã‘ã‚Œã°Lostè¿½åŠ 
 				for (auto& e : m_foundPairs)
 					if (e.hashID == id)
 					{

@@ -26,10 +26,10 @@ namespace SGFramework
 		};
 	}
 
-	//ƒp[ƒc
+	//ãƒ‘ãƒ¼ãƒ„
 	namespace Detail
 	{
-		//ƒ|ƒCƒ“ƒ^Œn
+		//ãƒã‚¤ãƒ³ã‚¿ç³»
 		namespace Pointer
 		{
 			//prototypes
@@ -45,7 +45,7 @@ namespace SGFramework
 			template <class PointerType, class DestroyType, class IsArray>
 			class Deallocator;
 
-			//Unique, Shared, Weak, ClonePointer‚ÌBase‚Æ‚È‚éBasePointer class
+			//Unique, Shared, Weak, ClonePointerã®Baseã¨ãªã‚‹BasePointer class
 			class BasePointer
 			{
 			public:
@@ -61,7 +61,7 @@ namespace SGFramework
 				virtual void ReleasePointer() = 0;
 			};
 
-			//Shared, WeakPointer‚ÌBase‚Æ‚È‚éBaseCountPointer class
+			//Shared, WeakPointerã®Baseã¨ãªã‚‹BaseCountPointer class
 			class BaseCountPointer : protected BasePointer
 			{
 			public:
@@ -72,7 +72,7 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[AddRef]
-				//QÆƒJƒEƒ“ƒ^‚ğ‘‚â‚·, memcpy‚µ‚½—p‚¾‚ªA‰Â”\‚ÈŒÀ‚èg‚¤‚×‚©‚ç‚¸
+				//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’å¢—ã‚„ã™, memcpyã—ãŸæ™‚ç”¨ã ãŒã€å¯èƒ½ãªé™ã‚Šä½¿ã†ã¹ã‹ã‚‰ãš
 				inline virtual void AddRef() const noexcept = 0;
 				
 			protected:
@@ -83,7 +83,7 @@ namespace SGFramework
 				BaseCounter* m_counter = nullptr;
 			};
 
-			//CloneShared, CloneWeakPointer‚ÌBase‚Æ‚È‚éBaseClonePointer class
+			//CloneShared, CloneWeakPointerã®Baseã¨ãªã‚‹BaseClonePointer class
 			class BaseClonePointer : protected BasePointer
 			{
 			public:
@@ -101,7 +101,7 @@ namespace SGFramework
 				BaseCloneCounter* m_counter = nullptr;
 			};
 
-			//QÆƒJƒEƒ“ƒ^‚ÆãQÆƒJƒEƒ“ƒ^‚ğ‚ÂBaseCounter
+			//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã¨å¼±å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¤BaseCounter
 			struct BaseCounter
 			{
 				//Full Setting Constructor
@@ -132,7 +132,7 @@ namespace SGFramework
 				//Destroy counter?
 				virtual bool IsDestroyCounter() = 0;
 			};
-			//QÆƒJƒEƒ“ƒ^‚ÆãQÆƒJƒEƒ“ƒ^‚ğ‚ÂANotMutex‚ÈSimpleCounter
+			//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã¨å¼±å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¤ã€NotMutexãªSimpleCounter
 			struct SimpleCounter : public BaseCounter
 			{
 				//SharedCount = 1, WeakCount = 0
@@ -192,7 +192,7 @@ namespace SGFramework
 				bool m_isDestroyPointer;
 				bool m_isDestroyCounter;
 			};
-			//QÆƒJƒEƒ“ƒ^‚ÆãQÆƒJƒEƒ“ƒ^‚ğ‚ÂAMutex‚ÈMutexCounter
+			//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã¨å¼±å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¤ã€MutexãªMutexCounter
 			struct MutexCounter : public BaseCounter
 			{
 				//SharedCount = 1, WeakCount = 0
@@ -268,7 +268,7 @@ namespace SGFramework
 			};
 
 
-			//QÆƒJƒEƒ“ƒ^‚ÆãQÆƒJƒEƒ“ƒ^‚ğ‚ÂClone—pBaseCloneCounter
+			//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã¨å¼±å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¤Cloneç”¨BaseCloneCounter
 			struct BaseCloneCounter : public BaseCounter
 			{
 				//Full Setting Constructor
@@ -281,7 +281,7 @@ namespace SGFramework
 				//set isLinked value, return isLinked
 				virtual bool setIsLinked(bool value) = 0;
 			};
-			//QÆƒJƒEƒ“ƒ^‚ÆãQÆƒJƒEƒ“ƒ^‚ğ‚ÂANotMutex‚ÈSimpleCloneCounter
+			//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã¨å¼±å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¤ã€NotMutexãªSimpleCloneCounter
 			struct SimpleCloneCounter : public BaseCloneCounter
 			{
 				//SharedCount = 1, WeakCount = 0
@@ -347,7 +347,7 @@ namespace SGFramework
 				bool m_isDestroyPointer;
 				bool m_isDestroyCounter;
 			};
-			//QÆƒJƒEƒ“ƒ^‚ÆãQÆƒJƒEƒ“ƒ^‚ğ‚ÂAMutex‚ÈMutexCloneCounter
+			//å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã¨å¼±å‚ç…§ã‚«ã‚¦ãƒ³ã‚¿ã‚’æŒã¤ã€MutexãªMutexCloneCounter
 			struct MutexCloneCounter : public BaseCloneCounter
 			{
 				//SharedCount = 1, WeakCount = 0
@@ -425,19 +425,19 @@ namespace SGFramework
 				std::atomic_bool m_isDestroyCounter;
 			};
 
-			//Deallocatorƒƒ“ƒoéŒ¾—pƒNƒ‰ƒX
+			//Deallocatorãƒ¡ãƒ³ãƒå®£è¨€ç”¨ã‚¯ãƒ©ã‚¹
 			class BaseDeallocator
 			{
 			public:
-				//‰½‚à‚µ‚È‚¢
+				//ä½•ã‚‚ã—ãªã„
 				inline BaseDeallocator() = default;
-				//‰½‚à‚µ‚È‚¢
+				//ä½•ã‚‚ã—ãªã„
 				inline virtual ~BaseDeallocator() {}
 
-				//ƒ|ƒCƒ“ƒ^íœ
+				//ãƒã‚¤ãƒ³ã‚¿å‰Šé™¤
 				virtual void DestoroyPointer(void* pointer) = 0;
 			};
-			//freedeíœ‚·‚éDeallocatorFree class
+			//freedeå‰Šé™¤ã™ã‚‹DeallocatorFree class
 			class DeallocatorFree : public BaseDeallocator
 			{
 			public:
@@ -446,13 +446,13 @@ namespace SGFramework
 				//delete
 				DeallocatorFree(const DeallocatorFree& copy) = delete;
 
-				//ƒ|ƒCƒ“ƒ^íœ
+				//ãƒã‚¤ãƒ³ã‚¿å‰Šé™¤
 				void DestoroyPointer(void* pointer) override
 				{
 					free(pointer);
 				}
 			};
-			//Œ^‚ğŠo‚¦‚Äíœ‚·‚éDeallocator class
+			//å‹ã‚’è¦šãˆã¦å‰Šé™¤ã™ã‚‹Deallocator class
 			template <class PointerType, class DestroyType, class IsArray>
 			class Deallocator : public BaseDeallocator
 			{
@@ -462,7 +462,7 @@ namespace SGFramework
 				//delete
 				Deallocator(const Deallocator& copy) = delete;
 
-				//ƒ|ƒCƒ“ƒ^íœ
+				//ãƒã‚¤ãƒ³ã‚¿å‰Šé™¤
 				inline void DestoroyPointer(void* pointer) override
 				{
 					if (!std::is_same_v<IsArray, std::true_type>) delete reinterpret_cast<DestroyType*>(pointer);

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Exception namespace‚ğ‹Lq‚µ‚½Exception.hpp
+Exception namespaceã‚’è¨˜è¿°ã—ãŸException.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_EXCEPTION_HPP_
 #define SGFRAMEWORK_HEADER_EXCEPTION_HPP_
@@ -18,7 +18,7 @@ namespace SGFramework
 		//Detail namespace
 		namespace Detail
 		{
-			//DefaultException‚Ìƒx[ƒX‚Æ‚È‚éExceptionInterface class
+			//DefaultExceptionã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹ExceptionInterface class
 			class ExceptionInterface : std::exception
 			{
 			public:
@@ -29,8 +29,8 @@ namespace SGFramework
 			};
 		}
 
-		//throw—p‚ÌDefaultException class
-		//SGFramework‚Ìthrow‚Í‚·‚×‚Ä‚±‚ÌƒNƒ‰ƒX‚ğŒp³‚µ‚½‚à‚Ì‚ğ“Š‚°‚é
+		//throwç”¨ã®DefaultException class
+		//SGFrameworkã®throwã¯ã™ã¹ã¦ã“ã®ã‚¯ãƒ©ã‚¹ã‚’ç¶™æ‰¿ã—ãŸã‚‚ã®ã‚’æŠ•ã’ã‚‹
 		class DefaultException : public Detail::ExceptionInterface
 		{
 		public:
@@ -39,16 +39,16 @@ namespace SGFramework
 			//default
 			inline DefaultException(const DefaultException& copy) = default;
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»‚ğs‚¤
-			//ˆø”1: ƒGƒ‰[‚ğo‚µ‚½ŠÖ”‚ÌêŠ(—á: Namespace::Class)
-			//ˆø”2: ƒGƒ‰[‚ğo‚µ‚½ŠÖ”–¼
-			//ˆø”3: ƒGƒ‰[“à—e
-			//ˆø”4: ƒGƒ‰[ƒR[ƒh(‚ ‚éê‡)
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//åˆæœŸåŒ–ã‚’è¡Œã†
+			//å¼•æ•°1: ã‚¨ãƒ©ãƒ¼ã‚’å‡ºã—ãŸé–¢æ•°ã®å ´æ‰€(ä¾‹: Namespace::Class)
+			//å¼•æ•°2: ã‚¨ãƒ©ãƒ¼ã‚’å‡ºã—ãŸé–¢æ•°å
+			//å¼•æ•°3: ã‚¨ãƒ©ãƒ¼å†…å®¹
+			//å¼•æ•°4: ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰(ã‚ã‚‹å ´åˆ)
 			inline DefaultException(const std::string& addressName, const std::string& functionName, const std::string& errorText, long errorCode = 0)
 				: m_addressName(addressName), m_functionName(functionName), m_text(errorText), m_errorCode(errorCode) {}
 
-			//std—p
+			//stdç”¨
 			const char* what() const override { return _allText().c_str(); }
 
 			//<property> error class name
@@ -72,9 +72,9 @@ namespace SGFramework
 			//<property> error window text
 			SGF_PROPERTY const std::string& _windowText() const 
 			{ 
-				//x16‚É•ÏŠ·‚µ‚½ƒGƒ‰[ƒR[ƒh
+				//x16ã«å¤‰æ›ã—ãŸã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰
 				std::stringstream stream; stream << std::showbase; stream << std::hex << m_errorCode;
-				//ƒGƒ‰[“à—e•Ô‹p
+				//ã‚¨ãƒ©ãƒ¼å†…å®¹è¿”å´
 				return _exceptionName() + "::" + _exceptionText() + "\n"
 #ifdef SGF_DEBUG
 					 + (m_addressName != "" ? ("<Debug>class: " + m_addressName) : "") + "<Debug>function: " + m_functionName + "\n"
@@ -84,23 +84,23 @@ namespace SGFramework
 			}
 			
 		private:
-			std::string m_addressName;		//ƒNƒ‰ƒX–¼
-			std::string m_functionName;	//ŠÖ”–¼
-			std::string m_text;					//ƒGƒ‰[“à—e
-			long m_errorCode;					//ƒGƒ‰[ƒR[ƒh(‚ ‚éê‡)
+			std::string m_addressName;		//ã‚¯ãƒ©ã‚¹å
+			std::string m_functionName;	//é–¢æ•°å
+			std::string m_text;					//ã‚¨ãƒ©ãƒ¼å†…å®¹
+			long m_errorCode;					//ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰(ã‚ã‚‹å ´åˆ)
 		};
 
-		//–³Œø‚Èˆø”‚ªŒ´ˆö‚ÌÛ‚Ég‚í‚ê‚éInvalidArgumentException class
+		//ç„¡åŠ¹ãªå¼•æ•°ãŒåŸå› ã®éš›ã«ä½¿ã‚ã‚Œã‚‹InvalidArgumentException class
 		class InvalidArgumentException : DefaultException
 		{
 		public:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»‚ğs‚¤
-			//ˆø”1: ƒGƒ‰[‚ğo‚µ‚½ŠÖ”‚ÌêŠ(—á: Namespace::Class)
-			//ˆø”2: ƒGƒ‰[‚ğo‚µ‚½ŠÖ”–¼
-			//ˆø”3: ƒGƒ‰[“à—e
-			//ˆø”4: ƒGƒ‰[ƒR[ƒh(‚ ‚éê‡)
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//åˆæœŸåŒ–ã‚’è¡Œã†
+			//å¼•æ•°1: ã‚¨ãƒ©ãƒ¼ã‚’å‡ºã—ãŸé–¢æ•°ã®å ´æ‰€(ä¾‹: Namespace::Class)
+			//å¼•æ•°2: ã‚¨ãƒ©ãƒ¼ã‚’å‡ºã—ãŸé–¢æ•°å
+			//å¼•æ•°3: ã‚¨ãƒ©ãƒ¼å†…å®¹
+			//å¼•æ•°4: ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰(ã‚ã‚‹å ´åˆ)
 			inline InvalidArgumentException(const std::string& addressName, const std::string& functionName, const std::string& errorText, long errorCode = 0)
 				: DefaultException(addressName, functionName, errorText, errorCode) {}
 
@@ -110,17 +110,17 @@ namespace SGFramework
 			SGF_PROPERTY const std::string& _exceptionText() const override { return "invalid argument."; }
 		};
 
-		//–³Œø‚ÈŠÖ”ŒÄ‚Ño‚µ‚ªŒ´ˆö‚ÌÛ‚Ég‚í‚ê‚éInvalidFunctionCallException class
+		//ç„¡åŠ¹ãªé–¢æ•°å‘¼ã³å‡ºã—ãŒåŸå› ã®éš›ã«ä½¿ã‚ã‚Œã‚‹InvalidFunctionCallException class
 		class InvalidFunctionCallException : DefaultException
 		{
 		public:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»‚ğs‚¤
-			//ˆø”1: ƒGƒ‰[‚ğo‚µ‚½ŠÖ”‚ÌêŠ(—á: Namespace::Class)
-			//ˆø”2: ƒGƒ‰[‚ğo‚µ‚½ŠÖ”–¼
-			//ˆø”3: ƒGƒ‰[“à—e
-			//ˆø”4: ƒGƒ‰[ƒR[ƒh(‚ ‚éê‡)
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//åˆæœŸåŒ–ã‚’è¡Œã†
+			//å¼•æ•°1: ã‚¨ãƒ©ãƒ¼ã‚’å‡ºã—ãŸé–¢æ•°ã®å ´æ‰€(ä¾‹: Namespace::Class)
+			//å¼•æ•°2: ã‚¨ãƒ©ãƒ¼ã‚’å‡ºã—ãŸé–¢æ•°å
+			//å¼•æ•°3: ã‚¨ãƒ©ãƒ¼å†…å®¹
+			//å¼•æ•°4: ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰(ã‚ã‚‹å ´åˆ)
 			inline InvalidFunctionCallException(const std::string& addressName, const std::string& functionName, const std::string& errorText, long errorCode = 0)
 				: DefaultException(addressName, functionName, errorText, errorCode) {}
 

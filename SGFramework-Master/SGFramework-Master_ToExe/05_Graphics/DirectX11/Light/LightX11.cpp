@@ -1,12 +1,12 @@
 /*----------------------------------------------------------------------------------
-DirectX11 Lightを纏めるLightX11.cpp
+DirectX11 Light繧堤ｺ上ａ繧記ightX11.cpp
 ------------------------------------------------------------------------------------*/
 #include "LightX11.hpp"
 
 // Framework namespace
 namespace SGFramework
 {
-	//フレームワークの管理をするAdministrator namespace
+	//繝輔Ξ繝ｼ繝繝ｯ繝ｼ繧ｯ縺ｮ邂｡逅�繧偵☆繧帰dministrator namespace
 	namespace Administrator
 	{
 		//GraphicsDetail namespace

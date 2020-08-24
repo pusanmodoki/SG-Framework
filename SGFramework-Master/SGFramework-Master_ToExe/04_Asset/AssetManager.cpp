@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Asset‚ÌŠÇ—, ¶¬‚ğs‚¤AssetManager class
+Assetã®ç®¡ç†, ç”Ÿæˆã‚’è¡Œã†AssetManager class
 ------------------------------------------------------------------------------------*/
 #include "AssetManager.hpp"
 #include "../07_Thread/Thread.hpp"
@@ -7,49 +7,49 @@ Asset‚ÌŠÇ—, ¶¬‚ğs‚¤AssetManager class
 // Framework namespace
 namespace SGFramework
 {
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
-		//ŠÄ‹ŠÔŠu
+		//ç›£è¦–é–“éš”
 		const std::chrono::seconds AssetManager::m_cMonitoringInterval(3);
-		//ƒAƒZƒbƒgŒŸõ—pƒŠƒXƒg
+		//ã‚¢ã‚»ãƒƒãƒˆæ¤œç´¢ç”¨ãƒªã‚¹ãƒˆ
 		std::unordered_map<Asset::AssetType, std::unordered_map<
 			std::wstring, WeakPointer<BaseClass::BaseAsset>>> AssetManager::m_findAssets;
-		//ƒAƒZƒbƒgŠÇ—ƒŠƒXƒg
+		//ã‚¢ã‚»ãƒƒãƒˆç®¡ç†ãƒªã‚¹ãƒˆ
 		std::unordered_map<uint, WeakPointer<BaseClass::BaseAsset>> AssetManager::m_assets;
-		std::thread AssetManager::m_monitoringThread;					//ƒAƒZƒbƒgŠÄ‹ƒXƒŒƒbƒh										
+		std::thread AssetManager::m_monitoringThread;					//ã‚¢ã‚»ãƒƒãƒˆç›£è¦–ã‚¹ãƒ¬ãƒƒãƒ‰										
 		std::atomic_ushort AssetManager::m_lock = false;				//lock
-		std::atomic_bool AssetManager::m_isEndUpdate = false;		//ƒAƒbƒvƒf[ƒgI—¹ƒtƒ‰ƒO
-		std::atomic_bool AssetManager::m_isNotStopUpdate = true;//Update’â~ƒtƒ‰ƒO
+		std::atomic_bool AssetManager::m_isEndUpdate = false;		//ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆçµ‚äº†ãƒ•ãƒ©ã‚°
+		std::atomic_bool AssetManager::m_isNotStopUpdate = true;//Updateåœæ­¢ãƒ•ãƒ©ã‚°
 	
 
 		//----------------------------------------------------------------------------------
 		//[StartMonitoring]
-		//ƒAƒZƒbƒg‚ÌŠÄ‹‚ğ•ÊƒXƒŒƒbƒh‚Ås‚¤ (ƒfƒoƒbƒOƒ‚[ƒhŒÀ’è)
+		//ã‚¢ã‚»ãƒƒãƒˆã®ç›£è¦–ã‚’åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰ã§è¡Œã† (ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰é™å®š)
 		void AssetManager::StartMonitoring()
 		{
-			//ƒfƒoƒbƒOƒ‚[ƒh‚Å‚È‚¯‚ê‚ÎI—¹
+			//ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰ã§ãªã‘ã‚Œã°çµ‚äº†
 			if (IS_FALSE(IsDebug::isValue())) return;
 
-			//I—¹ƒtƒ‰ƒO‰Šú‰»
+			//çµ‚äº†ãƒ•ãƒ©ã‚°åˆæœŸåŒ–
 			AtomicOperation::Init(m_isEndUpdate, false);
-			//ƒAƒbƒvƒf[ƒg‚ğ•ÊƒXƒŒƒbƒh‚Å‹N“®
+			//ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã‚’åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰ã§èµ·å‹•
 			m_monitoringThread = std::thread(MonitoringThread);
-			//ƒAƒtƒBƒjƒeƒBİ’è, ƒXƒŒƒbƒh“o˜^
+			//ã‚¢ãƒ•ã‚£ãƒ‹ãƒ†ã‚£è¨­å®š, ã‚¹ãƒ¬ãƒƒãƒ‰ç™»éŒ²
 			Thread::setAffinityAssetMonitoring(m_monitoringThread.native_handle());
 			Thread::RegisterRunningFrameworkThread();
 		}
 		//----------------------------------------------------------------------------------
 		//[EndMonitoring]
-		//•ÊƒXƒŒƒbƒh‚Ås‚Á‚Ä‚¢‚½ƒAƒZƒbƒg‚ÌŠÄ‹‚ğI—¹‚·‚é (ƒfƒoƒbƒOƒ‚[ƒhŒÀ’è)
+		//åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰ã§è¡Œã£ã¦ã„ãŸã‚¢ã‚»ãƒƒãƒˆã®ç›£è¦–ã‚’çµ‚äº†ã™ã‚‹ (ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰é™å®š)
 		void AssetManager::EndMonitoring()
 		{
-			//ƒfƒoƒbƒOƒ‚[ƒh‚Å‚È‚¯‚ê‚ÎI—¹
+			//ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰ã§ãªã‘ã‚Œã°çµ‚äº†
 			if (IS_FALSE(IsDebug::isValue())) return;
 			
-			//I—¹ƒtƒ‰ƒOİ’è
+			//çµ‚äº†ãƒ•ãƒ©ã‚°è¨­å®š
 			AtomicOperation::Init(m_isEndUpdate, true);
-			//ƒXƒŒƒbƒhI—¹, ƒXƒŒƒbƒh“o˜^‰ğœ
+			//ã‚¹ãƒ¬ãƒƒãƒ‰çµ‚äº†, ã‚¹ãƒ¬ãƒƒãƒ‰ç™»éŒ²è§£é™¤
 			if (m_monitoringThread.joinable())
 			{
 				m_monitoringThread.join();		
@@ -59,13 +59,13 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[CleanUp]
-		//ŠÄ‹‚µ‚Ä‚¢‚éƒAƒZƒbƒg‚ÉƒŠƒ“ƒNØ‚ê‚ª‚È‚¢‚©Šm”F‚·‚é (’Êí‚Í‚ ‚è‚¦‚È‚¢)
+		//ç›£è¦–ã—ã¦ã„ã‚‹ã‚¢ã‚»ãƒƒãƒˆã«ãƒªãƒ³ã‚¯åˆ‡ã‚ŒãŒãªã„ã‹ç¢ºèªã™ã‚‹ (é€šå¸¸ã¯ã‚ã‚Šãˆãªã„)
 		void AssetManager::CleanUp()
 		{
-			//ƒŠƒXƒg‚ğ‚¢‚¶‚é‘O‚ÉƒƒbƒN
+			//ãƒªã‚¹ãƒˆã‚’ã„ã˜ã‚‹å‰ã«ãƒ­ãƒƒã‚¯
 			LockGuardAsset guard(m_lock, true);
 
-			//Šm”F->íœƒ‹[ƒv
+			//ç¢ºèª->å‰Šé™¤ãƒ«ãƒ¼ãƒ—
 			for (auto it = m_assets.begin(); it != m_assets.end();)
 			{
 				if (!it->second.getIsValid())  it = m_assets.erase(it);
@@ -82,31 +82,31 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[MonitoringThread]
-		//ƒAƒZƒbƒg‚ğŠÄ‹‚·‚é (•ÊƒXƒŒƒbƒh“®ì)
+		//ã‚¢ã‚»ãƒƒãƒˆã‚’ç›£è¦–ã™ã‚‹ (åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰å‹•ä½œ)
 		void AssetManager::MonitoringThread()
 		{
-			//ƒ‹[ƒv
+			//ãƒ«ãƒ¼ãƒ—
 			while (true)
 			{
-				//I—¹ƒtƒ‰ƒOtrue‚ÅI—¹
+				//çµ‚äº†ãƒ•ãƒ©ã‚°trueã§çµ‚äº†
 				if (IS_TRUE(m_isEndUpdate.load())) return;
 
-				//ReloadƒŠƒXƒg
+				//Reloadãƒªã‚¹ãƒˆ
 				std::vector<uint> reloads;
-				//Ÿ‰ñƒXƒŒƒbƒh‹N“®ŠÔ
+				//æ¬¡å›ã‚¹ãƒ¬ãƒƒãƒ‰èµ·å‹•æ™‚é–“
 				auto nextWakeTime = std::chrono::system_clock::now() + m_cMonitoringInterval;
 
-				//LockGuard‚Ì‚½‚ß‚ÉˆÍ‚İ‚Ü‚·
+				//LockGuardã®ãŸã‚ã«å›²ã¿ã¾ã™
 				{
-					//ƒŠƒXƒg‚ğ‚¢‚¶‚é‘O‚ÉƒƒbƒN
+					//ãƒªã‚¹ãƒˆã‚’ã„ã˜ã‚‹å‰ã«ãƒ­ãƒƒã‚¯
 					LockGuardAsset guard(m_lock, false);
-					//ŠÄ‹ƒ‹[ƒv
+					//ç›£è¦–ãƒ«ãƒ¼ãƒ—
 					for (auto& e : m_assets)
 					{
-						//ƒŠƒ“ƒNØ‚ê‚Ä‚È‚¯‚ê‚ÎXVƒ`ƒFƒbƒN
+						//ãƒªãƒ³ã‚¯åˆ‡ã‚Œã¦ãªã‘ã‚Œã°æ›´æ–°ãƒã‚§ãƒƒã‚¯
 						if (e.second.getIsValid() & e.second.LockShared())
 						{
-							//XVƒ`ƒFƒbƒNAXV‚ª‚ ‚ê‚ÎƒŠƒ[ƒh’Ç‰Á
+							//æ›´æ–°ãƒã‚§ãƒƒã‚¯ã€æ›´æ–°ãŒã‚ã‚Œã°ãƒªãƒ­ãƒ¼ãƒ‰è¿½åŠ 
 							if (e.second->CheckForUpdates())
 								reloads.emplace_back(e.first);
 							e.second.UnlockShared();
@@ -114,23 +114,23 @@ namespace SGFramework
 					}
 				}
 
-				//ƒŠƒ[ƒhƒ‹[ƒv
+				//ãƒªãƒ­ãƒ¼ãƒ‰ãƒ«ãƒ¼ãƒ—
 				if (IS_FALSE(reloads.empty()))
 				{
-					//XVƒXƒgƒbƒv
+					//æ›´æ–°ã‚¹ãƒˆãƒƒãƒ—
 					m_isNotStopUpdate = false;
-					//ˆê’â~‚µ‘S‚Ä‚ÌƒXƒŒƒbƒh‚Ì’â~‚ğ‘Ò‚Â
+					//ä¸€æ™‚åœæ­¢ã—å…¨ã¦ã®ã‚¹ãƒ¬ãƒƒãƒ‰ã®åœæ­¢ã‚’å¾…ã¤
 					std::this_thread::sleep_for(std::chrono::seconds(1));
 
-					//XV
+					//æ›´æ–°
 					for (auto& e : reloads)
 						m_assets.at(e)->Reload();
 
-					//I—¹
+					//çµ‚äº†
 					m_isNotStopUpdate = true;
 				}
 
-				//w’è•b”Œo‰ß‚·‚é‚Ü‚ÅƒƒbƒN
+				//æŒ‡å®šç§’æ•°çµŒéã™ã‚‹ã¾ã§ãƒ­ãƒƒã‚¯
 				std::this_thread::sleep_until(nextWakeTime);
 			}
 		}

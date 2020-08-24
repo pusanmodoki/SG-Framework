@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ObjectŒnƒNƒ‰ƒX‚ÌŠî’ê‚Æ‚È‚éObject class
+Objectç³»ã‚¯ãƒ©ã‚¹ã®åŸºåº•ã¨ãªã‚‹Object class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_OBJECT_HPP_
 #define SGFRAMEWORK_HEADER_OBJECT_HPP_
@@ -17,7 +17,7 @@ namespace SGFramework
 		class BaseAsset;
 	}
 
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		//GraphicsDetail namespace
@@ -26,7 +26,7 @@ namespace SGFramework
 			class TransformX11;
 		}
 	}
-	//ObjectŒnƒNƒ‰ƒX‚ÌŠî’ê‚Æ‚È‚éObject class
+	//Objectç³»ã‚¯ãƒ©ã‚¹ã®åŸºåº•ã¨ãªã‚‹Object class
 	class Object
 	{
 	public:
@@ -36,12 +36,12 @@ namespace SGFramework
 		friend class Administrator::GraphicsDetail::TransformX11;
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‰Šú‰»‚ğs‚¤
-		//ˆø”1: ƒIƒuƒWƒFƒNƒg–¼
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//åˆæœŸåŒ–ã‚’è¡Œã†
+		//å¼•æ•°1: ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå
 		inline Object(const sgstring& name);
 		//----------------------------------------------------------------------------------
-		//[ƒfƒXƒgƒ‰ƒNƒ^]
+		//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 		inline virtual ~Object() { AtomicOperation::Subtract(getNowCounter(), 1); }
 
 		//all instantiate objects<static> (read function property)
@@ -65,20 +65,20 @@ namespace SGFramework
 		template <class Left, class Right>
 		inline static bool IsNotEqualPointer(const Left& left, const Right& right);
 
-		GetOnlyProperty<sgstring> name;		//ƒIƒuƒWƒFƒNƒg–¼
-		GetOnlyProperty<uint> instanceID;		//ƒCƒ“ƒXƒ^ƒ“ƒXID
+		GetOnlyProperty<sgstring> name;		//ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå
+		GetOnlyProperty<uint> instanceID;		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ID
 	
 	protected:
 		//----------------------------------------------------------------------------------
 		//[CreateCopyName]
-		//return: Copy Object—pName
-		//ˆø”1: ƒIƒuƒWƒFƒNƒg–¼
+		//return: Copy Objectç”¨Name
+		//å¼•æ•°1: ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå
 		inline static sgstring CreateCopyName(const sgstring& name);
 	
 	private:
 		//----------------------------------------------------------------------------------
 		//[RegisterMyInstanceID]
-		//return: ©g‚ÌID
+		//return: è‡ªèº«ã®ID
 		inline uint RegisterMyInstanceID();
 
 		//object instance master id<static> (reference property)
@@ -86,14 +86,14 @@ namespace SGFramework
 		//num now object <static> (reference property)
 		SGF_FUNCTION_PROPERTY static std::atomic<uint>& getNowCounter() { static std::atomic<uint> counter = 0;  return counter; }
 
-		sgstring m_name;		//ƒIƒuƒWƒFƒNƒg–¼
-		uint m_instanceID;		//ƒCƒ“ƒXƒ^ƒ“ƒXID
+		sgstring m_name;		//ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå
+		uint m_instanceID;		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ID
 	};
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‰Šú‰»‚ğs‚¤
-	//ˆø”1: ƒIƒuƒWƒFƒNƒg–¼
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//åˆæœŸåŒ–ã‚’è¡Œã†
+	//å¼•æ•°1: ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå
 	inline Object::Object(const sgstring & name) : name(m_name), 
 		instanceID(m_instanceID), m_name(name), m_instanceID(RegisterMyInstanceID()) 
 	{
@@ -120,36 +120,36 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[CreateCopyName]
-	//return: Copy Object—pName
-	//ˆø”1: ƒIƒuƒWƒFƒNƒg–¼
+	//return: Copy Objectç”¨Name
+	//å¼•æ•°1: ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå
 	inline sgstring Object::CreateCopyName(const sgstring& name)
 	{
 		//result
 		sgstring result = name;
 
-		//‹°‚ç‚­ƒRƒs[Ï‚İ
+		//æã‚‰ãã‚³ãƒ”ãƒ¼æ¸ˆã¿
 		if (result.back() == L')' && result[result.length() - 3] == L'(')
 		{
-			//ˆê’U•¶š—ñ‚Åó‚¯æ‚é
+			//ä¸€æ—¦æ–‡å­—åˆ—ã§å—ã‘å–ã‚‹
 			sgstring number = result.substr(result.length() - 3, 1);
-			//”š??
+			//æ•°å­—??
 			if (number.my_functions.IsFirstOfNumbers())
 			{
-				//‰ÁZ
+				//åŠ ç®—
 				number = number.my_functions.ToInt() + 1;
 				result.pop_back();
 				result += number + L")";
 				return result;
 			}
 		}
-		//‹°‚ç‚­‰ƒRƒs[
+		//æã‚‰ãåˆã‚³ãƒ”ãƒ¼
 		result += L" (1)";
 		return result;
 	}
 
 	//----------------------------------------------------------------------------------
 	//[RegisterMyInstanceID]
-	//return: ©g‚ÌID
+	//return: è‡ªèº«ã®ID
 	inline uint Object::RegisterMyInstanceID()
 	{
 		return AtomicOperation::Add(getMasterID(), 1);

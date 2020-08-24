@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-Sphereó“–‚½‚è”»’è‚ğ’ñ‹Ÿ‚·‚éSphereCollider class
-BuildCollider‚ğÀs‚·‚é‚Ü‚Å“–‚½‚è”»’è‚Í‹@”\‚µ‚È‚¢‚Ì‚Å’ˆÓ
+SphereçŠ¶å½“ãŸã‚Šåˆ¤å®šã‚’æä¾›ã™ã‚‹SphereCollider class
+BuildColliderã‚’å®Ÿè¡Œã™ã‚‹ã¾ã§å½“ãŸã‚Šåˆ¤å®šã¯æ©Ÿèƒ½ã—ãªã„ã®ã§æ³¨æ„
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_SPHERE_COLLIDER_HPP_
 #define SGFRAMEWORK_HEADER_SPHERE_COLLIDER_HPP_
@@ -11,8 +11,8 @@ BuildCollider‚ğÀs‚·‚é‚Ü‚Å“–‚½‚è”»’è‚Í‹@”\‚µ‚È‚¢‚Ì‚Å’ˆÓ
 //Framework namespace
 namespace SGFramework
 {
-	//Sphereó“–‚½‚è”»’è‚ğ’ñ‹Ÿ‚·‚éSphereCollider class
-	//BuildCollider‚ğÀs‚·‚é‚Ü‚Å“–‚½‚è”»’è‚Í‹@”\‚µ‚È‚¢‚Ì‚Å’ˆÓ
+	//SphereçŠ¶å½“ãŸã‚Šåˆ¤å®šã‚’æä¾›ã™ã‚‹SphereCollider class
+	//BuildColliderã‚’å®Ÿè¡Œã™ã‚‹ã¾ã§å½“ãŸã‚Šåˆ¤å®šã¯æ©Ÿèƒ½ã—ãªã„ã®ã§æ³¨æ„
 	class SphereCollider final : public BaseClass::BaseCollider
 	{
 	public:
@@ -35,12 +35,12 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[BuildCollider]
-		//Collider‚ğ¶¬‚·‚é
-		//ˆø”1: radius (transform->getWorldScale.x * this value)
-		//ˆø”2: collider is trigger?, default = false
-		//ˆø”3: used hit callback?, default = ture
-		//ˆø”4: collider center, default = zero
-		//ˆø”5: physics material, default = defaultMaterial
+		//Colliderã‚’ç”Ÿæˆã™ã‚‹
+		//å¼•æ•°1: radius (transform->getWorldScale.x * this value)
+		//å¼•æ•°2: collider is trigger?, default = false
+		//å¼•æ•°3: used hit callback?, default = ture
+		//å¼•æ•°4: collider center, default = zero
+		//å¼•æ•°5: physics material, default = defaultMaterial
 		inline void BuildCollider(float radius, bool isTrigger = false, bool isUsedCallback = true,
 			const Vector3& center = Const::Vector3::zero,
 			const PhysicsMaterial& material = Physics::defaultPhysicsMaterial())
@@ -55,7 +55,7 @@ namespace SGFramework
 			m_material = material;
 			m_isUsedCallback = isUsedCallback;
 
-			//messageì¬
+			//messageä½œæˆ
 			PhysicsMessage message(MessageType::PointerMessageFlag | MessageType::RegisterColliderCL, instanceID());
 			message.attachment.collider = m_thisPointer.DynamicCast<BaseClass::BaseCollider>();
 			//send message
@@ -65,7 +65,7 @@ namespace SGFramework
 	private:
 		//----------------------------------------------------------------------------------
 		//[CreateShape]
-		//ÀÛ‚ÉShape‚ğì¬‚·‚é
+		//å®Ÿéš›ã«Shapeã‚’ä½œæˆã™ã‚‹
 		inline void CreateShape() override
 		{
 			//flag setting
@@ -103,17 +103,17 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[ChangeScale]
-		//Scale‚ğ•ÏX‚·‚é
+		//Scaleã‚’å¤‰æ›´ã™ã‚‹
 		inline void ChangeScale() override
 		{
 			//get
 			float get = transform->getWorldScale().x;
 
-			//buf‚Æˆá‚¦‚Î•ÏX
+			//bufã¨é•ãˆã°å¤‰æ›´
 			if (m_transformScaleX != get)
 				m_shape->setGeometry(physx::PxSphereGeometry(m_radius * m_transformScaleX));
 
-			//buf•Û‘¶
+			//bufä¿å­˜
 			m_transformScaleX = get;
 		}
 

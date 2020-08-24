@@ -8,8 +8,8 @@ namespace SGFramework
 {
 	class Application;
 
-	//‘SƒQ[ƒ€ƒIƒuƒWƒFƒNƒg‚ÌŠî’êƒNƒ‰ƒX‚Æ‚È‚éGameObject class
-	//ê—p‚ÌƒR[ƒ‹ƒoƒbƒNƒVƒXƒeƒ€‚ğ‚¿AEnableCallbacks‚ÆŠeŠÖ”‚Ìoverride‚ÅÀŒ»‚Å‚«‚é
+	//å…¨ã‚²ãƒ¼ãƒ ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®åŸºåº•ã‚¯ãƒ©ã‚¹ã¨ãªã‚‹GameObject class
+	//å°‚ç”¨ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã‚·ã‚¹ãƒ†ãƒ ã‚’æŒã¡ã€EnableCallbacksã¨å„é–¢æ•°ã®overrideã§å®Ÿç¾ã§ãã‚‹
 	class GameObject : public Object
 	{
 	private:
@@ -21,7 +21,7 @@ namespace SGFramework
 	public:
 		friend class Application;
 
-		//Callback‚ğw’è‚·‚éƒtƒ‰ƒO‚ğ’è‹`‚µ‚½CallbackFunctions
+		//Callbackã‚’æŒ‡å®šã™ã‚‹ãƒ•ãƒ©ã‚°ã‚’å®šç¾©ã—ãŸCallbackFunctions
 		struct CallbackFunctions
 		{
 			friend class GameObject;
@@ -71,7 +71,7 @@ namespace SGFramework
 		};
 
 		//----------------------------------------------------------------------------------
-		//[ƒfƒXƒgƒ‰ƒNƒ^]
+		//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 		inline ~GameObject()
 		{
 			if (IS_TRUE(cIsFindEnabled))
@@ -88,103 +88,103 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Instantiate]
-		//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Ävirtual InstantiateSetting Callback‚Åİ’è)
-		//template: GameObjectŒp³ƒNƒ‰ƒX
-		//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject
-		//ˆø”1: position, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-		//ˆø”2: rotation, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-		//ˆø”3: SharedPointer->isUsedMutexCounter, default = ture
-		//ˆø”4: SharedPointer->isAutoGabageCollection, default = ture
-		//ˆø”5: ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÅƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚éuser flags data, default = 0
+		//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦virtual InstantiateSetting Callbackã§è¨­å®š)
+		//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+		//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject
+		//å¼•æ•°1: position, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+		//å¼•æ•°2: rotation, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+		//å¼•æ•°3: SharedPointer->isUsedMutexCounter, default = ture
+		//å¼•æ•°4: SharedPointer->isAutoGabageCollection, default = ture
+		//å¼•æ•°5: å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã‚‹user flags data, default = 0
 		template <class GameObjectDerived>
 		static SharedPointer<GameObjectDerived> Instantiate(const Vector3& position,
 			const Quaternion& rotation, uint userFlags = 0, bool isUsedMutexCounter = true, bool isAutoGabageCollection = true);
 		//----------------------------------------------------------------------------------
 		//[Instantiate]
-		//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Ävirtual InstantiateSetting Callback‚Åİ’è)
-		//template: GameObjectŒp³ƒNƒ‰ƒX
-		//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject
-		//ˆø”1: name, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-		//ˆø”2: SharedPointer->isUsedMutexCounter, default = ture
-		//ˆø”3: SharedPointer->isAutoGabageCollection, default = ture
-		//ˆø”4: ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÅƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚éuser flags data, default = 0
+		//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦virtual InstantiateSetting Callbackã§è¨­å®š)
+		//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+		//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject
+		//å¼•æ•°1: name, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+		//å¼•æ•°2: SharedPointer->isUsedMutexCounter, default = ture
+		//å¼•æ•°3: SharedPointer->isAutoGabageCollection, default = ture
+		//å¼•æ•°4: å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã‚‹user flags data, default = 0
 		template <class GameObjectDerived>
 		static SharedPointer<GameObjectDerived> Instantiate(const sgstring& name, 
 			uint userFlags = 0, bool isUsedMutexCounter = true, bool isAutoGabageCollection = true);
 		//----------------------------------------------------------------------------------
 		//[Instantiate]
-		//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Ävirtual InstantiateSetting Callback‚Åİ’è)
-		//template: GameObjectŒp³ƒNƒ‰ƒX
-		//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject
-		//ˆø”1: SharedPointer->isUsedMutexCounter, default = ture
-		//ˆø”2: SharedPointer->isAutoGabageCollection, default = ture
-		//ˆø”3: ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÅƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚éuser flags data, default = 0
+		//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦virtual InstantiateSetting Callbackã§è¨­å®š)
+		//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+		//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject
+		//å¼•æ•°1: SharedPointer->isUsedMutexCounter, default = ture
+		//å¼•æ•°2: SharedPointer->isAutoGabageCollection, default = ture
+		//å¼•æ•°3: å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã‚‹user flags data, default = 0
 		template <class GameObjectDerived>
 		static SharedPointer<GameObjectDerived> Instantiate(uint userFlags = 0, bool isUsedMutexCounter = true,
 			bool isAutoGabageCollection = true);
 
 		//----------------------------------------------------------------------------------
 		//[Instantiate]
-		//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Ävirtual InstantiateSetting Callback‚Åİ’è)
-		//template: GameObjectŒp³ƒNƒ‰ƒX
-		//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject, parent‚ª–³Œø‚Ìê‡null
-		//ˆø”1: eTransform, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-		//ˆø”2: position, rotation, scale -> true = world : false = local , InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-		//ˆø”3: position, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-		//ˆø”4: rotation, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-		//ˆø”5: ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÅƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚éuser flags data, default = 0
-		//ˆø”6: SharedPointer->isUsedMutexCounter, default = ture
-		//ˆø”7: SharedPointer->isAutoGabageCollection, default = ture
+		//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦virtual InstantiateSetting Callbackã§è¨­å®š)
+		//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+		//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject, parentãŒç„¡åŠ¹ã®å ´åˆnull
+		//å¼•æ•°1: è¦ªTransform, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+		//å¼•æ•°2: position, rotation, scale -> true = world : false = local , InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+		//å¼•æ•°3: position, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+		//å¼•æ•°4: rotation, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+		//å¼•æ•°5: å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã‚‹user flags data, default = 0
+		//å¼•æ•°6: SharedPointer->isUsedMutexCounter, default = ture
+		//å¼•æ•°7: SharedPointer->isAutoGabageCollection, default = ture
 		template <class GameObjectDerived>
 		static SharedPointer<GameObjectDerived> Instantiate(SharedPointer<Transform> parent,
 			bool isInstantiateInWorldSpace, const Vector3& position, const Quaternion& rotation, 
 			uint userFlags = 0, bool isUsedMutexCounter = true, bool isAutoGabageCollection = true);
 		//----------------------------------------------------------------------------------
 		//[Instantiate]
-		//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Ävirtual InstantiateSetting Callback‚Åİ’è)
-		//template: GameObjectŒp³ƒNƒ‰ƒX
-		//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject, parent‚ª–³Œø‚Ìê‡null
-		//ˆø”1: eTransform, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-		//ˆø”2: position, rotation, scale -> true = world : false = local , InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-		//ˆø”3: name, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-		//ˆø”4: ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÅƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚éuser flags data, default = 0
-		//ˆø”5: SharedPointer->isUsedMutexCounter, default = ture
-		//ˆø”6: SharedPointer->isAutoGabageCollection, default = ture
+		//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦virtual InstantiateSetting Callbackã§è¨­å®š)
+		//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+		//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject, parentãŒç„¡åŠ¹ã®å ´åˆnull
+		//å¼•æ•°1: è¦ªTransform, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+		//å¼•æ•°2: position, rotation, scale -> true = world : false = local , InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+		//å¼•æ•°3: name, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+		//å¼•æ•°4: å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã‚‹user flags data, default = 0
+		//å¼•æ•°5: SharedPointer->isUsedMutexCounter, default = ture
+		//å¼•æ•°6: SharedPointer->isAutoGabageCollection, default = ture
 		template <class GameObjectDerived>
 		static SharedPointer<GameObjectDerived> Instantiate(SharedPointer<Transform> parent,
 			bool isInstantiateInWorldSpace, const sgstring& name, uint userFlags = 0,
 			bool isUsedMutexCounter = true, bool isAutoGabageCollection = true);
 		//----------------------------------------------------------------------------------
 		//[Instantiate]
-		//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Ävirtual InstantiateSetting Callback‚Åİ’è)
-		//template: GameObjectŒp³ƒNƒ‰ƒX
-		//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject, parent‚ª–³Œø‚Ìê‡null
-		//ˆø”1: eTransform, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-		//ˆø”2: position, rotation, scale -> true = world : false = local , InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-		//ˆø”3: ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÅƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚éuser flags data, default = 0
-		//ˆø”4: SharedPointer->isUsedMutexCounter, default = ture
-		//ˆø”5: SharedPointer->isAutoGabageCollection, default = ture
+		//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦virtual InstantiateSetting Callbackã§è¨­å®š)
+		//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+		//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject, parentãŒç„¡åŠ¹ã®å ´åˆnull
+		//å¼•æ•°1: è¦ªTransform, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+		//å¼•æ•°2: position, rotation, scale -> true = world : false = local , InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+		//å¼•æ•°3: å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã‚‹user flags data, default = 0
+		//å¼•æ•°4: SharedPointer->isUsedMutexCounter, default = ture
+		//å¼•æ•°5: SharedPointer->isAutoGabageCollection, default = ture
 		template <class GameObjectDerived>
 		static SharedPointer<GameObjectDerived> Instantiate(SharedPointer<Transform> parent,
 			bool isInstantiateInWorldSpace, uint userFlags = 0, bool isUsedMutexCounter = true, bool isAutoGabageCollection = true);
 
 		//----------------------------------------------------------------------------------
 		//[InstantiateManual]
-		//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Äè“®İ’è)
-		//template: GameObjectŒp³ƒNƒ‰ƒX
-		//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject
-		//ˆø”1: position, default = zero
-		//ˆø”2: scale, default = one
-		//ˆø”3: rotation, default = identity
-		//ˆø”4: TimeLayer, default = root layer
-		//ˆø”5: name, default = "Game Object"
-		//ˆø”6: use function line if root transform, default = auto
-		//ˆø”7: isStatic, default = false
-		//ˆø”8: layer, default = Default Layer
-		//ˆø”9: tag, default = Default Tag
-		//ˆø”10: FindŒnŠÖ”—pƒŠƒXƒg‚É“o˜^‚·‚é, ƒpƒtƒH[ƒ}ƒ“ƒX‚É‘å‚«‚­ŠÖŒW‚µ‚Ü‚·, default = true
-		//ˆø”11: SharedPointer->isUsedMutexCounter, default = ture
-		//ˆø”12: SharedPointer->isAutoGabageCollection, default = ture
+		//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦æ‰‹å‹•è¨­å®š)
+		//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+		//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject
+		//å¼•æ•°1: position, default = zero
+		//å¼•æ•°2: scale, default = one
+		//å¼•æ•°3: rotation, default = identity
+		//å¼•æ•°4: TimeLayer, default = root layer
+		//å¼•æ•°5: name, default = "Game Object"
+		//å¼•æ•°6: use function line if root transform, default = auto
+		//å¼•æ•°7: isStatic, default = false
+		//å¼•æ•°8: layer, default = Default Layer
+		//å¼•æ•°9: tag, default = Default Tag
+		//å¼•æ•°10: Findç³»é–¢æ•°ç”¨ãƒªã‚¹ãƒˆã«ç™»éŒ²ã™ã‚‹, ãƒ‘ãƒ•ã‚©ãƒ¼ãƒãƒ³ã‚¹ã«å¤§ããé–¢ä¿‚ã—ã¾ã™, default = true
+		//å¼•æ•°11: SharedPointer->isUsedMutexCounter, default = ture
+		//å¼•æ•°12: SharedPointer->isAutoGabageCollection, default = ture
 		template <class GameObjectDerived>
 		static SharedPointer<GameObjectDerived> InstantiateManual(const Vector3& position = Const::Vector3::zero,
 			const Vector3& scale = Const::Vector3::one, const Quaternion& rotation = Const::Quaternion::identity,
@@ -194,23 +194,23 @@ namespace SGFramework
 			bool isFindEnabled = true, bool isUsedMutexCounter = true, bool isAutoGabageCollection = true);
 		//----------------------------------------------------------------------------------
 		//[InstantiateManual]
-		//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Äè“®İ’è)
-		//template: GameObjectŒp³ƒNƒ‰ƒX
-		//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject, parent‚ª–³Œø‚Ìê‡null
-		//ˆø”1: eTransform
-		//ˆø”2: position, rotation, scale -> true = world : false = local 
-		//ˆø”3: position, default = zero
-		//ˆø”4: scale, default = one
-		//ˆø”5: rotation, default = identity
-		//ˆø”6: TimeLayer, default = root layer
-		//ˆø”7: name, default = "Game Object"
-		//ˆø”8: use function line if root transform, default = auto
-		//ˆø”9: isStatic, default = false
-		//ˆø”10: layer, default = Default Layer
-		//ˆø”11: tag, default = Default Tag
-		//ˆø”12: FindŒnŠÖ”—pƒŠƒXƒg‚É“o˜^‚·‚é, ƒpƒtƒH[ƒ}ƒ“ƒX‚É‘å‚«‚­ŠÖŒW‚µ‚Ü‚·, default = true
-		//ˆø”13: SharedPointer->isUsedMutexCounter, default = ture
-		//ˆø”14: SharedPointer->isAutoGabageCollection, default = ture
+		//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦æ‰‹å‹•è¨­å®š)
+		//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+		//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject, parentãŒç„¡åŠ¹ã®å ´åˆnull
+		//å¼•æ•°1: è¦ªTransform
+		//å¼•æ•°2: position, rotation, scale -> true = world : false = local 
+		//å¼•æ•°3: position, default = zero
+		//å¼•æ•°4: scale, default = one
+		//å¼•æ•°5: rotation, default = identity
+		//å¼•æ•°6: TimeLayer, default = root layer
+		//å¼•æ•°7: name, default = "Game Object"
+		//å¼•æ•°8: use function line if root transform, default = auto
+		//å¼•æ•°9: isStatic, default = false
+		//å¼•æ•°10: layer, default = Default Layer
+		//å¼•æ•°11: tag, default = Default Tag
+		//å¼•æ•°12: Findç³»é–¢æ•°ç”¨ãƒªã‚¹ãƒˆã«ç™»éŒ²ã™ã‚‹, ãƒ‘ãƒ•ã‚©ãƒ¼ãƒãƒ³ã‚¹ã«å¤§ããé–¢ä¿‚ã—ã¾ã™, default = true
+		//å¼•æ•°13: SharedPointer->isUsedMutexCounter, default = ture
+		//å¼•æ•°14: SharedPointer->isAutoGabageCollection, default = ture
 		template <class GameObjectDerived>
 		static SharedPointer<GameObjectDerived> InstantiateManual(SharedPointer<Transform> parent,
 			bool isInstantiateInWorldSpace, const Vector3& position = Const::Vector3::zero,
@@ -238,40 +238,40 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[FindWithName]
-		//Œ»İ‘¶İ‚·‚é‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg‚©‚çname‚ğkey‚ÉŒŸõ‚·‚é
-		//’ˆÓI sub scene‚É‘¶İ‚·‚éƒIƒuƒWƒFƒNƒg‚àƒqƒbƒg‚µ‚Ü‚·
-		//return: Hit‚µ‚½Å‚àŒÃ‚¢ƒIƒuƒWƒFƒNƒg
+		//ç¾åœ¨å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰nameã‚’keyã«æ¤œç´¢ã™ã‚‹
+		//æ³¨æ„ï¼ sub sceneã«å­˜åœ¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚‚ãƒ’ãƒƒãƒˆã—ã¾ã™
+		//return: Hitã—ãŸæœ€ã‚‚å¤ã„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 		inline static WeakPointer<GameObject> FindWithName(const sgstring& name);
 		//----------------------------------------------------------------------------------
 		//[FindWithTag]
-		//Œ»İ‘¶İ‚·‚é‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg‚©‚çtag‚ğkey‚ÉŒŸõ‚·‚é
-		//’ˆÓI sub scene‚É‘¶İ‚·‚éƒIƒuƒWƒFƒNƒg‚àƒqƒbƒg‚µ‚Ü‚·
-		//return: Hit‚µ‚½Å‚àŒÃ‚¢ƒIƒuƒWƒFƒNƒg
+		//ç¾åœ¨å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰tagã‚’keyã«æ¤œç´¢ã™ã‚‹
+		//æ³¨æ„ï¼ sub sceneã«å­˜åœ¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚‚ãƒ’ãƒƒãƒˆã—ã¾ã™
+		//return: Hitã—ãŸæœ€ã‚‚å¤ã„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 		inline static WeakPointer<GameObject> FindWithTag(const Tag& tag);
 		//----------------------------------------------------------------------------------
 		//[FindWithLayer]
-		//Œ»İ‘¶İ‚·‚é‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg‚©‚çlayer‚ğkey‚ÉŒŸõ‚·‚é
-		//’ˆÓI sub scene‚É‘¶İ‚·‚éƒIƒuƒWƒFƒNƒg‚àƒqƒbƒg‚µ‚Ü‚·
-		//return: Hit‚µ‚½Å‚àŒÃ‚¢ƒIƒuƒWƒFƒNƒg
+		//ç¾åœ¨å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰layerã‚’keyã«æ¤œç´¢ã™ã‚‹
+		//æ³¨æ„ï¼ sub sceneã«å­˜åœ¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚‚ãƒ’ãƒƒãƒˆã—ã¾ã™
+		//return: Hitã—ãŸæœ€ã‚‚å¤ã„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 		inline static WeakPointer<GameObject> FindWithLayer(const Layer& layer);
 
 		//----------------------------------------------------------------------------------
 		//[FindWithNameEx]
-		//Œ»İ‘¶İ‚·‚é‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg‚©‚çname‚ğkey‚ÉŒŸõ‚·‚é, (All Search)
-		//’ˆÓI sub scene‚É‘¶İ‚·‚éƒIƒuƒWƒFƒNƒg‚àƒqƒbƒg‚µ‚Ü‚·
-		//return: Hit‚µ‚½‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg”z—ñ
+		//ç¾åœ¨å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰nameã‚’keyã«æ¤œç´¢ã™ã‚‹, (All Search)
+		//æ³¨æ„ï¼ sub sceneã«å­˜åœ¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚‚ãƒ’ãƒƒãƒˆã—ã¾ã™
+		//return: Hitã—ãŸå…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆé…åˆ—
 		inline static std::vector<WeakPointer<GameObject>> FindWithNameEx(const sgstring& name);
 		//----------------------------------------------------------------------------------
 		//[FindWithNameEx]
-		//Œ»İ‘¶İ‚·‚é‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg‚©‚çtag‚ğkey‚ÉŒŸõ‚·‚é, (All Search)
-		//’ˆÓI sub scene‚É‘¶İ‚·‚éƒIƒuƒWƒFƒNƒg‚àƒqƒbƒg‚µ‚Ü‚·
-		//return: Hit‚µ‚½‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg”z—ñ
+		//ç¾åœ¨å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰tagã‚’keyã«æ¤œç´¢ã™ã‚‹, (All Search)
+		//æ³¨æ„ï¼ sub sceneã«å­˜åœ¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚‚ãƒ’ãƒƒãƒˆã—ã¾ã™
+		//return: Hitã—ãŸå…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆé…åˆ—
 		inline static std::vector<WeakPointer<GameObject>> FindWithTagEx(const Tag& tag);
 		//----------------------------------------------------------------------------------
 		//[FindWithNameEx]
-		//Œ»İ‘¶İ‚·‚é‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg‚©‚çlayer‚ğkey‚ÉŒŸõ‚·‚é, (All Search)
-		//’ˆÓI sub scene‚É‘¶İ‚·‚éƒIƒuƒWƒFƒNƒg‚àƒqƒbƒg‚µ‚Ü‚·
-		//return: Hit‚µ‚½‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg”z—ñ
+		//ç¾åœ¨å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰layerã‚’keyã«æ¤œç´¢ã™ã‚‹, (All Search)
+		//æ³¨æ„ï¼ sub sceneã«å­˜åœ¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚‚ãƒ’ãƒƒãƒˆã—ã¾ã™
+		//return: Hitã—ãŸå…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆé…åˆ—
 		inline static std::vector<WeakPointer<GameObject>> FindWithLayerEx(const Layer& layer);
 
 		
@@ -280,8 +280,8 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[AddComponent]
-		//Component‚ğ’Ç‰Á‚·‚é (ƒfƒB[ƒvƒRƒs[)
-		//ˆø”1: componentŒp³ƒIƒuƒWƒFƒNƒg
+		//Componentã‚’è¿½åŠ ã™ã‚‹ (ãƒ‡ã‚£ãƒ¼ãƒ—ã‚³ãƒ”ãƒ¼)
+		//å¼•æ•°1: componentç¶™æ‰¿ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 		template <class ComponentClass>
 		inline WeakPointer<ComponentClass> AddComponent(SharedPointer<ComponentClass> component)
 		{
@@ -289,9 +289,9 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[AddComponent]
-		//Component‚ğ’Ç‰Á‚·‚é (Instantiate)
-		//return: ’Ç‰Á‚µ‚½Component
-		//ˆø”1: Callback—LŒø‰»ƒtƒ‰ƒO, default = true
+		//Componentã‚’è¿½åŠ ã™ã‚‹ (Instantiate)
+		//return: è¿½åŠ ã—ãŸComponent
+		//å¼•æ•°1: Callbackæœ‰åŠ¹åŒ–ãƒ•ãƒ©ã‚°, default = true
 		template <class ComponentClass>
 		inline WeakPointer<ComponentClass> AddComponent(bool isEnabled = true)
 		{
@@ -300,8 +300,8 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[FindComponent]
-		//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : Å‚àŒÃ‚¢ƒRƒ“ƒ|[ƒlƒ“ƒg
-		//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
+		//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : æœ€ã‚‚å¤ã„ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+		//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
 		template <class ComponentClass>
 		inline WeakPointer<ComponentClass> FindComponent()
 		{
@@ -309,10 +309,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[FindComponentInParent]
-		//ComponentClassŒ^ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğthis‚©‚çParent‚Ö‚Æ’T¸‚·‚é
-		//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : Å‰‚ÉŒ©‚Â‚©‚Á‚½ƒRƒ“ƒ|[ƒlƒ“ƒg
-		//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
-		//ˆø”1: ©g‚àŠÜ‚ß‚é‚©, default = true
+		//ComponentClasså‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’thisã‹ã‚‰Parentã¸ã¨æ¢æŸ»ã™ã‚‹
+		//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : æœ€åˆã«è¦‹ã¤ã‹ã£ãŸã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+		//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
+		//å¼•æ•°1: è‡ªèº«ã‚‚å«ã‚ã‚‹ã‹, default = true
 		template <class ComponentClass>
 		inline WeakPointer<ComponentClass> FindComponentInParent(bool isIncludeYourself = true)
 		{
@@ -320,10 +320,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[FindComponentInChildren]
-		//ComponentClassŒ^ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğChildren‚©‚ç’T¸‚·‚é
-		//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : Å‰‚ÉŒ©‚Â‚©‚Á‚½ƒRƒ“ƒ|[ƒlƒ“ƒg
-		//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
-		//ˆø”1: ©g‚àŠÜ‚ß‚é‚©, default = true
+		//ComponentClasså‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’Childrenã‹ã‚‰æ¢æŸ»ã™ã‚‹
+		//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : æœ€åˆã«è¦‹ã¤ã‹ã£ãŸã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+		//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
+		//å¼•æ•°1: è‡ªèº«ã‚‚å«ã‚ã‚‹ã‹, default = true
 		template <class ComponentClass>
 		inline WeakPointer<ComponentClass> FindComponentInChildren(bool isIncludeYourself = true)
 		{
@@ -331,8 +331,8 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[FindComponentEx]
-		//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : ‘S‚Ä‚Ì“¯Œ^ƒRƒ“ƒ|[ƒlƒ“ƒg
-		//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
+		//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : å…¨ã¦ã®åŒå‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+		//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
 		template <class ComponentClass>
 		inline std::vector<WeakPointer<ComponentClass>> FindComponentEx()
 		{
@@ -340,10 +340,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[FindComponentInParentEx]
-		//ComponentClassŒ^ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğthis‚©‚çParent‚Ö‚Æ’T¸‚·‚é
-		//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : ‘S‚Ä‚Ì“¯Œ^ƒRƒ“ƒ|[ƒlƒ“ƒg
-		//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
-		//ˆø”1: ©g‚àŠÜ‚ß‚é‚©, default = true
+		//ComponentClasså‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’thisã‹ã‚‰Parentã¸ã¨æ¢æŸ»ã™ã‚‹
+		//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : å…¨ã¦ã®åŒå‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+		//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
+		//å¼•æ•°1: è‡ªèº«ã‚‚å«ã‚ã‚‹ã‹, default = true
 		template <class ComponentClass>
 		inline std::vector<WeakPointer<ComponentClass>> FindComponentInParentEx(bool isIncludeYourself = true)
 		{
@@ -351,10 +351,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[FindComponentInChildrenEx]
-		//ComponentClassŒ^ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğChildren‚©‚ç’T¸‚·‚é
-		//return: ComponentClassŒ^‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg‚ª•R•t‚¯‚ç‚ê‚Ä‚¢‚éê‡ : ‘S‚Ä‚Ì“¯Œ^ƒRƒ“ƒ|[ƒlƒ“ƒg
-		//				•R•t‚¯‚ç‚ê‚Ä‚¢‚È‚¢ê‡ : Null
-		//ˆø”1: ©g‚àŠÜ‚ß‚é‚©, default = true
+		//ComponentClasså‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’Childrenã‹ã‚‰æ¢æŸ»ã™ã‚‹
+		//return: ComponentClasså‹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ã‚‹å ´åˆ : å…¨ã¦ã®åŒå‹ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+		//				ç´ä»˜ã‘ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ : Null
+		//å¼•æ•°1: è‡ªèº«ã‚‚å«ã‚ã‚‹ã‹, default = true
 		template <class ComponentClass>
 		inline std::vector<WeakPointer<ComponentClass>> FindComponentInChildrenEx(bool isIncludeYourself = true)
 		{
@@ -363,17 +363,17 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[RemoveComponent]
-		//Component‚ğíœ‚·‚é (templateŒ^‚É‘Î‰‚µ‚½Å‚àŒÃ‚¢ƒRƒ“ƒ|[ƒlƒ“ƒg)
+		//Componentã‚’å‰Šé™¤ã™ã‚‹ (templateå‹ã«å¯¾å¿œã—ãŸæœ€ã‚‚å¤ã„ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ)
 		template <class ComponentClass>
 		inline void RemoveComponent() { m_transform->RemoveComponent<ComponentClass>(); }
 		//----------------------------------------------------------------------------------
 		//[RemoveComponentEx]
-		//Component‚ğíœ‚·‚é (templateŒ^‚É‘Î‰‚µ‚½‘S‚Ä‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg)
+		//Componentã‚’å‰Šé™¤ã™ã‚‹ (templateå‹ã«å¯¾å¿œã—ãŸå…¨ã¦ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ)
 		template <class ComponentClass>
 		inline void RemoveComponentEx() { m_transform->RemoveComponentEx<ComponentClass>(); }
 		//----------------------------------------------------------------------------------
 		//[RemoveComponentAll]
-		//Component‚ğ‘S‚Äíœ‚·‚é
+		//Componentã‚’å…¨ã¦å‰Šé™¤ã™ã‚‹
 		inline void RemoveComponentAll() { m_transform->RemoveComponentAll(); }
 
 
@@ -382,13 +382,13 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[InstantiateSetting]
-		//Instantiate‚ÉCallback‚³‚ê‚éŠÖ”, ˆø”‚É—^‚¦‚ç‚ê‚½î•ñ‚ğŠÖ”“à‚Åİ’è‚·‚é
-		//ˆø”3ˆÈ~‚ÍŠù‚ÉInstantiate‚Åİ’è‚µ‚Ä‚¢‚é‚Ì‚Å, •ÏX‚ğ‰Á‚¦‚Ä‚àÀÛ‚É‹““®‚ª•Ï‚í‚é‚í‚¯‚Å‚Í‚È‚¢ (not reference)
-		//ˆø”1: required settings values (•K‚¸İ’è‚·‚é‚×‚µI)
-		//ˆø”2: parent values
-		//ˆø”3: ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÅƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚éuser flags data
-		//ˆø”3: SharedPointer->isUsedMutexCounter
-		//ˆø”4: SharedPointer->isAutoGabageCollection
+		//Instantiateæ™‚ã«Callbackã•ã‚Œã‚‹é–¢æ•°, å¼•æ•°ã«ä¸ãˆã‚‰ã‚ŒãŸæƒ…å ±ã‚’é–¢æ•°å†…ã§è¨­å®šã™ã‚‹
+		//å¼•æ•°3ä»¥é™ã¯æ—¢ã«Instantiateã§è¨­å®šã—ã¦ã„ã‚‹ã®ã§, å¤‰æ›´ã‚’åŠ ãˆã¦ã‚‚å®Ÿéš›ã«æŒ™å‹•ãŒå¤‰ã‚ã‚‹ã‚ã‘ã§ã¯ãªã„ (not reference)
+		//å¼•æ•°1: required settings values (å¿…ãšè¨­å®šã™ã‚‹ã¹ã—ï¼)
+		//å¼•æ•°2: parent values
+		//å¼•æ•°3: å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã‚‹user flags data
+		//å¼•æ•°3: SharedPointer->isUsedMutexCounter
+		//å¼•æ•°4: SharedPointer->isAutoGabageCollection
 		inline virtual void InstantiateSetting(InstantiateRequiredInfo& requiredInfo, InstantiateParentInfo& parentInfo,
 			uint userFlags, bool isUsedMutexCounter, bool isAutoGabageCollection) {}
 
@@ -398,90 +398,90 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[EnabledCallbacks]
-		//return: ©g‚ªCall‚³‚ê‚éCallback Flags, GameObject::CallbackFunctionsQÆ
+		//return: è‡ªèº«ãŒCallã•ã‚Œã‚‹Callback Flags, GameObject::CallbackFunctionså‚ç…§
 		inline virtual uint EnableCallbacks() { return 0; }
 		//----------------------------------------------------------------------------------
 		//[Awake]
-		//ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½uŠÔ‚ÉŒÄ‚Î‚ê‚éCallbackŠÖ”
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸç¬é–“ã«å‘¼ã°ã‚Œã‚‹Callbacké–¢æ•°
 		inline virtual void Awake() {}
 		//----------------------------------------------------------------------------------
 		//[OnEnable]
-		//ƒCƒ“ƒXƒ^ƒ“ƒX‰»ŒãisEnabled‚ªtrue‚É‚È‚Á‚½uŠÔ‚ÉŒÄ‚Î‚ê‚éCallbackŠÖ”
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–å¾ŒisEnabledãŒtrueã«ãªã£ãŸç¬é–“ã«å‘¼ã°ã‚Œã‚‹Callbacké–¢æ•°
 		inline virtual void OnEnable() {}
 		//----------------------------------------------------------------------------------
 		//[Start]
-		//ƒCƒ“ƒXƒ^ƒ“ƒX‰»Œã“¯ŠúƒtƒŒ[ƒ€‚ÅCallback‚³‚ê‚éŠÖ”
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–å¾ŒåŒæœŸãƒ•ãƒ¬ãƒ¼ãƒ ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 		inline virtual void Start() {}
 
 		//----------------------------------------------------------------------------------
 		//[Update]
-		//–ˆƒtƒŒ[ƒ€UpdateƒuƒƒbƒN‚ÅCallback‚³‚ê‚éŠÖ”
+		//æ¯ãƒ•ãƒ¬ãƒ¼ãƒ Updateãƒ–ãƒ­ãƒƒã‚¯ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 		inline virtual void Update() {}
 		//----------------------------------------------------------------------------------
 		//[Sync]
-		//–ˆƒtƒŒ[ƒ€UpdateŒã‚Ì“®‹@ƒuƒƒbƒN (Sync) ‚ÅCallback‚³‚ê‚éŠÖ”
+		//æ¯ãƒ•ãƒ¬ãƒ¼ãƒ Updateå¾Œã®å‹•æ©Ÿãƒ–ãƒ­ãƒƒã‚¯ (Sync) ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 		inline virtual void Sync() {}
 		//----------------------------------------------------------------------------------
 		//[LateUpdate]
-		//Update, SyncŒã‚ÉŒÄ‚Î‚ê‚éXVƒuƒƒbƒN (LateUpdate) ‚ÅCallback‚³‚ê‚éŠÖ”
+		//Update, Syncå¾Œã«å‘¼ã°ã‚Œã‚‹æ›´æ–°ãƒ–ãƒ­ãƒƒã‚¯ (LateUpdate) ã§Callbackã•ã‚Œã‚‹é–¢æ•°
 		inline virtual void LateUpdate() {}
 		//----------------------------------------------------------------------------------
 		//[FixedUpdate]
-		//’èŠú“I‚ÉŒÄ‚Î‚ê‚éFixedƒtƒŒ[ƒ€“à‚ÅUpdate‚Æ‚µ‚ÄCallback‚³‚ê‚éŠÖ”
+		//å®šæœŸçš„ã«å‘¼ã°ã‚Œã‚‹Fixedãƒ•ãƒ¬ãƒ¼ãƒ å†…ã§Updateã¨ã—ã¦Callbackã•ã‚Œã‚‹é–¢æ•°
 		inline virtual void FixedUpdate() {}
 		//----------------------------------------------------------------------------------
 		//[MakeDrawCommand]
-		//Update, Sync, LateUpdate ƒuƒƒbƒNŒã‚ÉCallback‚³‚ê‚é,
-		//		DrawCommand‚ğì¬‚·‚é‚½‚ß‚ÌŠÖ”
+		//Update, Sync, LateUpdate ãƒ–ãƒ­ãƒƒã‚¯å¾Œã«Callbackã•ã‚Œã‚‹,
+		//		DrawCommandã‚’ä½œæˆã™ã‚‹ãŸã‚ã®é–¢æ•°
 		inline virtual void MakeDrawCommand() {}
 
 		//----------------------------------------------------------------------------------
 		//[OnDisable]
-		//isEnabled‚ªfalse‚É‚È‚Á‚½uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
+		//isEnabledãŒfalseã«ãªã£ãŸç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
 		inline virtual void OnDisable() {}
 		//----------------------------------------------------------------------------------
 		//[OnDestroy]
-		//ƒCƒ“ƒXƒ^ƒ“ƒX‚ªíœ‚³‚ê‚éuŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
+		//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒå‰Šé™¤ã•ã‚Œã‚‹ç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
 		inline virtual void OnDestroy() {}
 
 		//----------------------------------------------------------------------------------
 		//[OnCollisionEnter]
-		//Collider‚ª“–‚½‚Á‚½uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
-		//ˆø”1: ÚGƒIƒuƒWƒFƒNƒg‚Ìî•ñ
+		//ColliderãŒå½“ãŸã£ãŸç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
+		//å¼•æ•°1: æ¥è§¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æƒ…å ±
 		inline virtual void OnCollisionEnter(const ContactInfo& contactInfo) {}
 		//----------------------------------------------------------------------------------
 		//[OnCollisionStay]
-		//Collider‚ª“–‚½‚Á‚Ä‚¢‚éŠÔCallback‚³‚ê‚éŠÖ”
-		//ˆø”1: ÚGƒIƒuƒWƒFƒNƒg‚Ìî•ñ
+		//ColliderãŒå½“ãŸã£ã¦ã„ã‚‹é–“Callbackã•ã‚Œã‚‹é–¢æ•°
+		//å¼•æ•°1: æ¥è§¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æƒ…å ±
 		inline virtual void OnCollisionStay(const ContactInfo& contactInfo) {}
 		//----------------------------------------------------------------------------------
 		//[OnCollisionExit]
-		//Collider‚ª—£‚ê‚½uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
-		//ˆø”1: ÚGƒIƒuƒWƒFƒNƒg‚Ìî•ñ (ƒIƒuƒWƒFƒNƒg‚ªíœ‚³‚ê‚Ä‚¢‚½ê‡Aƒ|ƒCƒ“ƒ^‚ÍNull->isValid)
+		//ColliderãŒé›¢ã‚ŒãŸç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
+		//å¼•æ•°1: æ¥è§¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æƒ…å ± (ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå‰Šé™¤ã•ã‚Œã¦ã„ãŸå ´åˆã€ãƒã‚¤ãƒ³ã‚¿ã¯Null->isValid)
 		inline virtual void OnCollisionExit(const ContactInfo& contactInfo) {}
 
 		//----------------------------------------------------------------------------------
 		//[OnTriggerEnter]
-		//Trigger‚ª“–‚½‚Á‚½uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
-		//ˆø”1: ÚGƒIƒuƒWƒFƒNƒg‚Ìî•ñ
+		//TriggerãŒå½“ãŸã£ãŸç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
+		//å¼•æ•°1: æ¥è§¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æƒ…å ±
 		inline virtual void OnTriggerEnter(const ContactInfo& contactInfo) {}
 		//----------------------------------------------------------------------------------
 		//[OnTriggerStay]
-		//Trigger‚ª“–‚½‚Á‚Ä‚¢‚éŠÔCallback‚³‚ê‚éŠÖ”
-		//ˆø”1: ÚGƒIƒuƒWƒFƒNƒg‚Ìî•ñ
+		//TriggerãŒå½“ãŸã£ã¦ã„ã‚‹é–“Callbackã•ã‚Œã‚‹é–¢æ•°
+		//å¼•æ•°1: æ¥è§¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æƒ…å ±
 		inline virtual void OnTriggerStay(const ContactInfo& contactInfo) {}
 		//----------------------------------------------------------------------------------
 		//[OnTriggerExit]
-		//Trigger‚ª—£‚ê‚½uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
-		//ˆø”1: ÚGƒIƒuƒWƒFƒNƒg‚Ìî•ñ (ƒIƒuƒWƒFƒNƒg‚ªíœ‚³‚ê‚Ä‚¢‚½ê‡Aƒ|ƒCƒ“ƒ^‚ÍNull->isValid)
+		//TriggerãŒé›¢ã‚ŒãŸç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
+		//å¼•æ•°1: æ¥è§¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æƒ…å ± (ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå‰Šé™¤ã•ã‚Œã¦ã„ãŸå ´åˆã€ãƒã‚¤ãƒ³ã‚¿ã¯Null->isValid)
 		inline virtual void OnTriggerExit(const ContactInfo& contactInfo) {}
 
 		//----------------------------------------------------------------------------------
 		//[ChangeUpperHierarchy]
-		//parentˆÈã‚ÌŠK‘wŠÖŒW‚É•ÏX‚ªs‚í‚ê‚½(parent‚Ì•ÏX‚È‚Ç)uŠÔ‚ÉCallback‚³‚ê‚éŠÖ”
-		//d—lãUpdateFlame‚ÅŒÄ‚Ño‚³‚ê‚é‰Â”\«‚ª‚ ‚é‚±‚Æ‚É—¯ˆÓ‚·‚é‚±‚Æ (parent‚Ì•ÏX‚È‚Ç‚ğs‚Á‚½ƒXƒŒƒbƒh‚ÅŒÄ‚Ño‚µ)
-		//ˆø”1: new parent (null‚Ì‰Â”\«‚ ‚è, ’¼ã‚Ìe‚Å‚Í‚È‚¢‰Â”\«‚ª‚ ‚è)
-		//ˆø”2: old parent (null‚Ì‰Â”\«‚ ‚è, ’¼ã‚Ìe‚Å‚Í‚È‚¢‰Â”\«‚ª‚ ‚è)
+		//parentä»¥ä¸Šã®éšå±¤é–¢ä¿‚ã«å¤‰æ›´ãŒè¡Œã‚ã‚ŒãŸ(parentã®å¤‰æ›´ãªã©)ç¬é–“ã«Callbackã•ã‚Œã‚‹é–¢æ•°
+		//ä»•æ§˜ä¸ŠUpdateFlameã§å‘¼ã³å‡ºã•ã‚Œã‚‹å¯èƒ½æ€§ãŒã‚ã‚‹ã“ã¨ã«ç•™æ„ã™ã‚‹ã“ã¨ (parentã®å¤‰æ›´ãªã©ã‚’è¡Œã£ãŸã‚¹ãƒ¬ãƒƒãƒ‰ã§å‘¼ã³å‡ºã—)
+		//å¼•æ•°1: new parent (nullã®å¯èƒ½æ€§ã‚ã‚Š, ç›´ä¸Šã®è¦ªã§ã¯ãªã„å¯èƒ½æ€§ãŒã‚ã‚Š)
+		//å¼•æ•°2: old parent (nullã®å¯èƒ½æ€§ã‚ã‚Š, ç›´ä¸Šã®è¦ªã§ã¯ãªã„å¯èƒ½æ€§ãŒã‚ã‚Š)
 		inline virtual void ChangeUpperHierarchy(WeakPointer<Transform> newParent, WeakPointer<Transform> oldParent) {}
 
 
@@ -541,22 +541,22 @@ namespace SGFramework
 
 	protected:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 		inline GameObject()
 			: Object(L""), cThisScene(Scene::SceneManager::getNowScene()),
 			cIsFindEnabled(false), cIsUsingMutexPointer(false), cIsUsingAutoGabageCollection(false) {}
 
 
-		//InstantiateÀs‚Ég—p‚·‚éInstantiateRequiredInfo structure
+		//Instantiateå®Ÿè¡Œæ™‚ã«ä½¿ç”¨ã™ã‚‹InstantiateRequiredInfo structure
 		struct InstantiateRequiredInfo
 		{
 			//TimeLayer, default = root layer
 			WeakPointer<Time::TimeLayer> timeLayer = Time::rootTimeLayer();
 			//name, default = "Game Object"
 			sgstring name = L"Game Object";
-			//rotation(Instantiate‚Ìİ’è’l‚Åã‘‚«‚³‚ê‚é‰Â”\«‚ª‚ ‚è‚Ü‚·), default = identity
+			//rotation(Instantiateã®è¨­å®šå€¤ã§ä¸Šæ›¸ãã•ã‚Œã‚‹å¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™), default = identity
 			Quaternion rotation = Const::Quaternion::identity;
-			//position(Instantiate‚Ìİ’è’l‚Åã‘‚«‚³‚ê‚é‰Â”\«‚ª‚ ‚è‚Ü‚·), default = zero
+			//position(Instantiateã®è¨­å®šå€¤ã§ä¸Šæ›¸ãã•ã‚Œã‚‹å¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™), default = zero
 			Vector3 position = Const::Vector3::zero;
 			//scale, default = one
 			Vector3 scale = Const::Vector3::one;
@@ -566,31 +566,31 @@ namespace SGFramework
 			Tag tag = Tag::DefaultTag();
 			//use function line if root transform, default = auto
 			int functionLineAtRoot = Transform::cAutoSelectFunctionLine;
-			//FindŒnŠÖ”—pƒŠƒXƒg‚É“o˜^‚·‚é, ƒpƒtƒH[ƒ}ƒ“ƒX‚É‘å‚«‚­ŠÖŒW‚µ‚Ü‚·, default = true
+			//Findç³»é–¢æ•°ç”¨ãƒªã‚¹ãƒˆã«ç™»éŒ²ã™ã‚‹, ãƒ‘ãƒ•ã‚©ãƒ¼ãƒãƒ³ã‚¹ã«å¤§ããé–¢ä¿‚ã—ã¾ã™, default = true
 			bool isFindEnabled = true;
 			//isStatic, default = false
 			bool isStatic = false;
 		};
 
-		//InstantiateÀs‚Ég—p‚·‚éInstantiateParentInfo structure
+		//Instantiateå®Ÿè¡Œæ™‚ã«ä½¿ç”¨ã™ã‚‹InstantiateParentInfo structure
 		struct InstantiateParentInfo
 		{
-			//eTransform
+			//è¦ªTransform
 			SharedPointer<Transform> parent = SharedPointer<Transform>::getNull();
 			//position, rotation, scale -> true = world : false = local 
 			bool isInstantiateInWorldSpace = true;
 		};
 
 	private:
-		//callback‚ğÀÛ‚És‚¤ƒRƒ“ƒ|[ƒlƒ“ƒg‚Æ‚È‚éGameObjectCallback class
+		//callbackã‚’å®Ÿéš›ã«è¡Œã†ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¨ãªã‚‹GameObjectCallback class
 		class GameObjectCallback : public Component
 		{
 		public:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 			inline GameObjectCallback(GameObject& gameObject) : gameObjectReference(gameObject) {}
 
-			//GameObject‚Ì‚à‚Ì‚ğŒÄ‚Ño‚·
+			//GameObjectã®ã‚‚ã®ã‚’å‘¼ã³å‡ºã™
 			inline uint EnableCallbacks() override { return gameObjectReference.EnableCallbacks(); }
 			inline void Awake() override { gameObjectReference.Awake(); }
 			inline void OnEnable() override { gameObjectReference.OnEnable(); }
@@ -614,26 +614,26 @@ namespace SGFramework
 			}
 
 		private:
-			//©g‚ÌQÆ
+			//è‡ªèº«ã®å‚ç…§
 			GameObject& gameObjectReference;
 		};
 
 		//----------------------------------------------------------------------------------
 		//[RegisterObjects]
-		//ƒIƒuƒWƒFƒNƒgƒŠƒXƒg‚Ö‚Ì“o˜^
+		//ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãƒªã‚¹ãƒˆã¸ã®ç™»éŒ²
 		inline void RegisterObjects()
 		{
-			//ƒIƒuƒWƒFƒNƒgƒŠƒXƒg‚É“o˜^
+			//ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãƒªã‚¹ãƒˆã«ç™»éŒ²
 			AtomicOperation::LockAtomic(m_staticLock);
 			m_findObjects.try_emplace(instanceID(), this);
 			AtomicOperation::UnlockAtomic(m_staticLock);
 		}
 
-		//Find—pƒIƒuƒWƒFƒNƒgƒŠƒXƒg
+		//Findç”¨ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãƒªã‚¹ãƒˆ
 		static std::unordered_map<uint, GameObject*> m_findObjects;
-		//Destroy—pƒIƒuƒWƒFƒNƒgƒŠƒXƒg
+		//Destroyç”¨ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãƒªã‚¹ãƒˆ
 		static std::vector<SharedPointer<GameObject>> m_destroyObjects;
-		//ƒŠƒXƒg—pLock
+		//ãƒªã‚¹ãƒˆç”¨Lock
 		static std::atomic_bool m_staticLock;
 
 		//transform (shared)
@@ -643,14 +643,14 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Instantiate]
-	//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Ävirtual InstantiateSetting Callback‚Åİ’è)
-	//template: GameObjectŒp³ƒNƒ‰ƒX
-	//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject
-	//ˆø”1: position, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-	//ˆø”2: rotation, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-	//ˆø”3: ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÅƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚éuser flags data, default = 0
-	//ˆø”4: SharedPointer->isUsedMutexCounter, default = ture
-	//ˆø”5: SharedPointer->isAutoGabageCollection, default = ture
+	//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦virtual InstantiateSetting Callbackã§è¨­å®š)
+	//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+	//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject
+	//å¼•æ•°1: position, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+	//å¼•æ•°2: rotation, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+	//å¼•æ•°3: å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã‚‹user flags data, default = 0
+	//å¼•æ•°4: SharedPointer->isUsedMutexCounter, default = ture
+	//å¼•æ•°5: SharedPointer->isAutoGabageCollection, default = ture
 	template<class GameObjectDerived>
 	inline SharedPointer<GameObjectDerived> GameObject::Instantiate(const Vector3 & position, const Quaternion & rotation,
 		uint userFlags, bool isUsedMutexCounter, bool isAutoGabageCollection)
@@ -658,28 +658,28 @@ namespace SGFramework
 		static_assert(std::is_base_of_v<GameObject, GameObjectDerived>,
 			"GameObject::Instantiate templatre -> GameObject derived class only!");
 
-		//ƒ|ƒCƒ“ƒ^ì¬, friendƒNƒ‰ƒX‚ğG‚é‚Ì‚ÅGameObject‚Éƒ_ƒEƒ“ƒLƒƒƒXƒg‚µ‚½‚à‚Ì‚à—pˆÓ
+		//ãƒã‚¤ãƒ³ã‚¿ä½œæˆ, friendã‚¯ãƒ©ã‚¹ã‚’è§¦ã‚‹ã®ã§GameObjectã«ãƒ€ã‚¦ãƒ³ã‚­ãƒ£ã‚¹ãƒˆã—ãŸã‚‚ã®ã‚‚ç”¨æ„
 		SharedPointer<GameObjectDerived> result(new GameObjectDerived(), isUsedMutexCounter, isAutoGabageCollection);
 		SharedPointer<GameObject> downCast = result.DownCast<GameObject>();
 		//InstantiateInfo
 		InstantiateRequiredInfo info0;
 		InstantiateParentInfo info1;
 
-		//’l‚ğİ’è
+		//å€¤ã‚’è¨­å®š
 		downCast->InstantiateSetting(info0, info1, userFlags, isUsedMutexCounter, isAutoGabageCollection);
 
-		//Še•Ï”‚Ì‰Šú‰»
+		//å„å¤‰æ•°ã®åˆæœŸåŒ–
 		*const_cast<bool*>(&downCast->cIsUsingMutexPointer) = isUsedMutexCounter;
 		*const_cast<bool*>(&downCast->cIsUsingAutoGabageCollection) = isAutoGabageCollection;
 		*const_cast<bool*>(&downCast->cIsFindEnabled) = info0.isFindEnabled;
 
-		//parent‚ª‘¶İ‚µ‚È‚¢->instantiate root transform
+		//parentãŒå­˜åœ¨ã—ãªã„->instantiate root transform
 		if (IS_FALSE(info1.parent.getIsValid()))
 		{
 			downCast->m_transform = Transform::Instantiate(position, info0.scale, rotation, info0.name,
 				info0.functionLineAtRoot, info0.isStatic, info0.layer, info0.tag, isUsedMutexCounter, isAutoGabageCollection);
 		}
-		//parent‚ª‘¶İ‚·‚é->instantiate children transform
+		//parentãŒå­˜åœ¨ã™ã‚‹->instantiate children transform
 		else
 		{
 			downCast->m_transform = Transform::Instantiate(info1.parent, info1.isInstantiateInWorldSpace,
@@ -688,24 +688,24 @@ namespace SGFramework
 		}
 		downCast->setName(downCast->m_transform->name());
 
-		//ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->gameObject = downCast;
 		downCast->timeLayer = info0.timeLayer;
-		//transform->ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//transform->ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->transform = downCast->m_transform;
 		downCast->m_transform->timeLayer = info0.timeLayer;
 		downCast->m_transform->gameObject = downCast;
 
-		//find enabled -> “o˜^
+		//find enabled -> ç™»éŒ²
 		if (IS_TRUE(downCast->cIsFindEnabled))
 			downCast->RegisterObjects();
 
-		//Add Component (AddComponent‚©‚çŒÄ‚Ño‚·‚ÆQÆİ’è‚ª‚Å‚«‚È‚¢)
+		//Add Component (AddComponentã‹ã‚‰å‘¼ã³å‡ºã™ã¨å‚ç…§è¨­å®šãŒã§ããªã„)
 		{
 			//callback instantiate
 			SharedPointer<GameObjectCallback> component(new GameObjectCallback(*downCast),
 				isUsedMutexCounter, isAutoGabageCollection);
-			//Še•Ï”‚ğ‰Šú‰»
+			//å„å¤‰æ•°ã‚’åˆæœŸåŒ–
 			downCast->gameObjectCallbackComponent = component;
 			component->transform = downCast->m_transform;
 			component->setName(downCast->m_transform->name());
@@ -715,18 +715,18 @@ namespace SGFramework
 			component->m_isOldActive = downCast->m_transform->m_isActive;
 			component->m_thisPointer = component.DownCast<Component>();
 
-			//Callback flagsæ“¾
+			//Callback flagså–å¾—
 			uint flags = component->EnableCallbacks();
-			//private syncİ’è
+			//private syncè¨­å®š
 			if (component->m_callbackEnabledFlags & Component::CallbackFunctions::m_cSyncIncludeFlags)
 				flags |= Component::CallbackFunctions::m_cSync;
-			//‰Šú‰»
+			//åˆæœŸåŒ–
 			component->m_callbackEnabledFlags = component->m_saveCallbackEnabledFlags = flags;
 
-			//componentƒŠƒXƒg‚Ö“o˜^
+			//componentãƒªã‚¹ãƒˆã¸ç™»éŒ²
 			downCast->m_transform->m_components.emplace_back(component.DownCast<Component>());
 
-			//ÄAllocate
+			//å†Allocate
 			downCast->m_transform->AllocateCallback();
 
 			//invoke callback?
@@ -745,13 +745,13 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[Instantiate]
-	//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Ävirtual InstantiateSetting Callback‚Åİ’è)
-	//template: GameObjectŒp³ƒNƒ‰ƒX
-	//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject
-	//ˆø”1: name, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-	//ˆø”2: ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÅƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚éuser flags data, default = 0
-	//ˆø”3: SharedPointer->isUsedMutexCounter, default = ture
-	//ˆø”4: SharedPointer->isAutoGabageCollection, default = ture
+	//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦virtual InstantiateSetting Callbackã§è¨­å®š)
+	//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+	//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject
+	//å¼•æ•°1: name, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+	//å¼•æ•°2: å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã‚‹user flags data, default = 0
+	//å¼•æ•°3: SharedPointer->isUsedMutexCounter, default = ture
+	//å¼•æ•°4: SharedPointer->isAutoGabageCollection, default = ture
 	template<class GameObjectDerived>
 	inline SharedPointer<GameObjectDerived> GameObject::Instantiate(const sgstring & name, 
 		uint userFlags, bool isUsedMutexCounter, bool isAutoGabageCollection)
@@ -759,28 +759,28 @@ namespace SGFramework
 		static_assert(std::is_base_of_v<GameObject, GameObjectDerived>,
 			"GameObject::Instantiate templatre -> GameObject derived class only!");
 
-		//ƒ|ƒCƒ“ƒ^ì¬, friendƒNƒ‰ƒX‚ğG‚é‚Ì‚ÅGameObject‚Éƒ_ƒEƒ“ƒLƒƒƒXƒg‚µ‚½‚à‚Ì‚à—pˆÓ
+		//ãƒã‚¤ãƒ³ã‚¿ä½œæˆ, friendã‚¯ãƒ©ã‚¹ã‚’è§¦ã‚‹ã®ã§GameObjectã«ãƒ€ã‚¦ãƒ³ã‚­ãƒ£ã‚¹ãƒˆã—ãŸã‚‚ã®ã‚‚ç”¨æ„
 		SharedPointer<GameObjectDerived> result(new GameObjectDerived(), isUsedMutexCounter, isAutoGabageCollection);
 		SharedPointer<GameObject> downCast = result.DownCast<GameObject>();
 		//InstantiateInfo
 		InstantiateRequiredInfo info0;
 		InstantiateParentInfo info1;
 
-		//’l‚ğİ’è
+		//å€¤ã‚’è¨­å®š
 		downCast->InstantiateSetting(info0, info1, userFlags, isUsedMutexCounter, isAutoGabageCollection);
 
-		//Še•Ï”‚Ì‰Šú‰»
+		//å„å¤‰æ•°ã®åˆæœŸåŒ–
 		*const_cast<bool*>(&downCast->cIsUsingMutexPointer) = isUsedMutexCounter;
 		*const_cast<bool*>(&downCast->cIsUsingAutoGabageCollection) = isAutoGabageCollection;
 		*const_cast<bool*>(&downCast->cIsFindEnabled) = info0.isFindEnabled;
 
-		//parent‚ª‘¶İ‚µ‚È‚¢->instantiate root transform
+		//parentãŒå­˜åœ¨ã—ãªã„->instantiate root transform
 		if (IS_FALSE(info1.parent.getIsValid()))
 		{
 			downCast->m_transform = Transform::Instantiate(info0.position, info0.scale, info0.rotation, name,
 				info0.functionLineAtRoot, info0.isStatic, info0.layer, info0.tag, isUsedMutexCounter, isAutoGabageCollection);
 		}
-		//parent‚ª‘¶İ‚·‚é->instantiate children transform
+		//parentãŒå­˜åœ¨ã™ã‚‹->instantiate children transform
 		else
 		{
 			downCast->m_transform = Transform::Instantiate(info1.parent, info1.isInstantiateInWorldSpace,
@@ -789,24 +789,24 @@ namespace SGFramework
 		}
 		downCast->setName(downCast->m_transform->name());
 
-		//ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->gameObject = downCast;
 		downCast->timeLayer = info0.timeLayer;
-		//transform->ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//transform->ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->transform = downCast->m_transform;
 		downCast->m_transform->timeLayer = info0.timeLayer;
 		downCast->m_transform->gameObject = downCast;
 
-		//find enabled -> “o˜^
+		//find enabled -> ç™»éŒ²
 		if (IS_TRUE(downCast->cIsFindEnabled))
 			downCast->RegisterObjects();
 
-		//Add Component (AddComponent‚©‚çŒÄ‚Ño‚·‚ÆQÆİ’è‚ª‚Å‚«‚È‚¢)
+		//Add Component (AddComponentã‹ã‚‰å‘¼ã³å‡ºã™ã¨å‚ç…§è¨­å®šãŒã§ããªã„)
 		{
 			//callback instantiate
 			SharedPointer<GameObjectCallback> component(new GameObjectCallback(*downCast),
 				isUsedMutexCounter, isAutoGabageCollection);
-			//Še•Ï”‚ğ‰Šú‰»
+			//å„å¤‰æ•°ã‚’åˆæœŸåŒ–
 			downCast->gameObjectCallbackComponent = component;
 			component->transform = downCast->m_transform;
 			component->setName(downCast->m_transform->name());
@@ -816,18 +816,18 @@ namespace SGFramework
 			component->m_isOldActive = downCast->m_transform->m_isActive;
 			component->m_thisPointer = component.DownCast<Component>();
 
-			//Callback flagsæ“¾
+			//Callback flagså–å¾—
 			uint flags = component->EnableCallbacks();
-			//private syncİ’è
+			//private syncè¨­å®š
 			if (component->m_callbackEnabledFlags & Component::CallbackFunctions::m_cSyncIncludeFlags)
 				flags |= Component::CallbackFunctions::m_cSync;
-			//‰Šú‰»
+			//åˆæœŸåŒ–
 			component->m_callbackEnabledFlags = component->m_saveCallbackEnabledFlags = flags;
 
-			//componentƒŠƒXƒg‚Ö“o˜^
+			//componentãƒªã‚¹ãƒˆã¸ç™»éŒ²
 			downCast->m_transform->m_components.emplace_back(component.DownCast<Component>());
 
-			//ÄAllocate
+			//å†Allocate
 			downCast->m_transform->AllocateCallback();
 
 			//invoke callback?
@@ -846,12 +846,12 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[Instantiate]
-	//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Ävirtual InstantiateSetting Callback‚Åİ’è)
-	//template: GameObjectŒp³ƒNƒ‰ƒX
-	//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject
-	//ˆø”1: ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÅƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚éuser flags data, default = 0
-	//ˆø”2: SharedPointer->isUsedMutexCounter, default = ture
-	//ˆø”3: SharedPointer->isAutoGabageCollection, default = ture
+	//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦virtual InstantiateSetting Callbackã§è¨­å®š)
+	//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+	//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject
+	//å¼•æ•°1: å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã‚‹user flags data, default = 0
+	//å¼•æ•°2: SharedPointer->isUsedMutexCounter, default = ture
+	//å¼•æ•°3: SharedPointer->isAutoGabageCollection, default = ture
 	template <class GameObjectDerived>
 	inline SharedPointer<GameObjectDerived> GameObject::Instantiate(uint userFlags,
 		bool isUsedMutexCounter, bool isAutoGabageCollection)
@@ -859,28 +859,28 @@ namespace SGFramework
 		static_assert(std::is_base_of_v<GameObject, GameObjectDerived>,
 			"GameObject::Instantiate templatre -> GameObject derived class only!");
 
-		//ƒ|ƒCƒ“ƒ^ì¬, friendƒNƒ‰ƒX‚ğG‚é‚Ì‚ÅGameObject‚Éƒ_ƒEƒ“ƒLƒƒƒXƒg‚µ‚½‚à‚Ì‚à—pˆÓ
+		//ãƒã‚¤ãƒ³ã‚¿ä½œæˆ, friendã‚¯ãƒ©ã‚¹ã‚’è§¦ã‚‹ã®ã§GameObjectã«ãƒ€ã‚¦ãƒ³ã‚­ãƒ£ã‚¹ãƒˆã—ãŸã‚‚ã®ã‚‚ç”¨æ„
 		SharedPointer<GameObjectDerived> result(new GameObjectDerived(), isUsedMutexCounter, isAutoGabageCollection);
 		SharedPointer<GameObject> downCast = result.DownCast<GameObject>();
 		//InstantiateInfo
 		InstantiateRequiredInfo info0;
 		InstantiateParentInfo info1;
 
-		//’l‚ğİ’è
+		//å€¤ã‚’è¨­å®š
 		downCast->InstantiateSetting(info0, info1, userFlags, isUsedMutexCounter, isAutoGabageCollection);
 
-		//Še•Ï”‚Ì‰Šú‰»
+		//å„å¤‰æ•°ã®åˆæœŸåŒ–
 		*const_cast<bool*>(&downCast->cIsUsingMutexPointer) = isUsedMutexCounter;
 		*const_cast<bool*>(&downCast->cIsUsingAutoGabageCollection) = isAutoGabageCollection;
 		*const_cast<bool*>(&downCast->cIsFindEnabled) = info0.isFindEnabled;
 		
-		//parent‚ª‘¶İ‚µ‚È‚¢->instantiate root transform
+		//parentãŒå­˜åœ¨ã—ãªã„->instantiate root transform
 		if (IS_FALSE(info1.parent.getIsValid()))
 		{
 			downCast->m_transform = Transform::Instantiate(info0.position, info0.scale, info0.rotation, info0.name,
 				info0.functionLineAtRoot, info0.isStatic, info0.layer, info0.tag, isUsedMutexCounter, isAutoGabageCollection);
 		}
-		//parent‚ª‘¶İ‚·‚é->instantiate children transform
+		//parentãŒå­˜åœ¨ã™ã‚‹->instantiate children transform
 		else
 		{
 			downCast->m_transform = Transform::Instantiate(info1.parent, info1.isInstantiateInWorldSpace,
@@ -889,24 +889,24 @@ namespace SGFramework
 		}
 		downCast->setName(downCast->m_transform->name());
 
-		//ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->gameObject = downCast;
 		downCast->timeLayer = info0.timeLayer;
-		//transform->ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//transform->ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->transform = downCast->m_transform;
 		downCast->m_transform->timeLayer = info0.timeLayer;
 		downCast->m_transform->gameObject = downCast;
 
-		//find enabled -> “o˜^
+		//find enabled -> ç™»éŒ²
 		if (IS_TRUE(downCast->cIsFindEnabled))
 			downCast->RegisterObjects();
 
-		//Add Component (AddComponent‚©‚çŒÄ‚Ño‚·‚ÆQÆİ’è‚ª‚Å‚«‚È‚¢)
+		//Add Component (AddComponentã‹ã‚‰å‘¼ã³å‡ºã™ã¨å‚ç…§è¨­å®šãŒã§ããªã„)
 		{
 			//callback instantiate
 			SharedPointer<GameObjectCallback> component(new GameObjectCallback(*downCast),
 				isUsedMutexCounter, isAutoGabageCollection);
-			//Še•Ï”‚ğ‰Šú‰»
+			//å„å¤‰æ•°ã‚’åˆæœŸåŒ–
 			downCast->gameObjectCallbackComponent = component;
 			component->transform = downCast->m_transform;
 			component->setName(downCast->m_transform->name());
@@ -916,18 +916,18 @@ namespace SGFramework
 			component->m_isOldActive = downCast->m_transform->m_isActive;
 			component->m_thisPointer = component.DownCast<Component>();
 
-			//Callback flagsæ“¾
+			//Callback flagså–å¾—
 			uint flags = component->EnableCallbacks();
-			//private syncİ’è
+			//private syncè¨­å®š
 			if (component->m_callbackEnabledFlags & Component::CallbackFunctions::m_cSyncIncludeFlags)
 				flags |= Component::CallbackFunctions::m_cSync;
-			//‰Šú‰»
+			//åˆæœŸåŒ–
 			component->m_callbackEnabledFlags = component->m_saveCallbackEnabledFlags = flags;
 
-			//componentƒŠƒXƒg‚Ö“o˜^
+			//componentãƒªã‚¹ãƒˆã¸ç™»éŒ²
 			downCast->m_transform->m_components.emplace_back(component.DownCast<Component>());
 
-			//ÄAllocate
+			//å†Allocate
 			downCast->m_transform->AllocateCallback();
 
 			//invoke callback?
@@ -947,16 +947,16 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Instantiate]
-	//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Ävirtual InstantiateSetting Callback‚Åİ’è)
-	//template: GameObjectŒp³ƒNƒ‰ƒX
-	//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject, parent‚ª–³Œø‚Ìê‡null
-	//ˆø”1: eTransform, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-	//ˆø”2: position, rotation, scale -> true = world : false = local , InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-	//ˆø”3: position, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-	//ˆø”4: rotation, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-	//ˆø”5: ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÅƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚éuser flags data, default = 0
-	//ˆø”6: SharedPointer->isUsedMutexCounter, default = ture
-	//ˆø”7: SharedPointer->isAutoGabageCollection, default = ture
+	//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦virtual InstantiateSetting Callbackã§è¨­å®š)
+	//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+	//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject, parentãŒç„¡åŠ¹ã®å ´åˆnull
+	//å¼•æ•°1: è¦ªTransform, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+	//å¼•æ•°2: position, rotation, scale -> true = world : false = local , InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+	//å¼•æ•°3: position, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+	//å¼•æ•°4: rotation, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+	//å¼•æ•°5: å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã‚‹user flags data, default = 0
+	//å¼•æ•°6: SharedPointer->isUsedMutexCounter, default = ture
+	//å¼•æ•°7: SharedPointer->isAutoGabageCollection, default = ture
 	template<class GameObjectDerived>
 	inline SharedPointer<GameObjectDerived> GameObject::Instantiate(SharedPointer<Transform> parent,
 		bool isInstantiateInWorldSpace, const Vector3 & position, const Quaternion & rotation, 
@@ -965,21 +965,21 @@ namespace SGFramework
 		static_assert(std::is_base_of_v<GameObject, GameObjectDerived>,
 			"GameObject::Instantiate templatre -> GameObject derived class only!");
 
-		//parent‚ª‘¶İ‚µ‚È‚¢->return
+		//parentãŒå­˜åœ¨ã—ãªã„->return
 		if (IS_FALSE(parent.getIsValid()))
 			return SharedPointer<GameObjectDerived>::getNull();
 
-		//ƒ|ƒCƒ“ƒ^ì¬, friendƒNƒ‰ƒX‚ğG‚é‚Ì‚ÅGameObject‚Éƒ_ƒEƒ“ƒLƒƒƒXƒg‚µ‚½‚à‚Ì‚à—pˆÓ
+		//ãƒã‚¤ãƒ³ã‚¿ä½œæˆ, friendã‚¯ãƒ©ã‚¹ã‚’è§¦ã‚‹ã®ã§GameObjectã«ãƒ€ã‚¦ãƒ³ã‚­ãƒ£ã‚¹ãƒˆã—ãŸã‚‚ã®ã‚‚ç”¨æ„
 		SharedPointer<GameObjectDerived> result(new GameObjectDerived(), isUsedMutexCounter, isAutoGabageCollection);
 		SharedPointer<GameObject> downCast = result.DownCast<GameObject>();
 		//InstantiateInfo
 		InstantiateRequiredInfo info0;
 		InstantiateParentInfo info1;
 
-		//’l‚ğİ’è
+		//å€¤ã‚’è¨­å®š
 		downCast->InstantiateSetting(info0, info1, userFlags, isUsedMutexCounter, isAutoGabageCollection);
 
-		//Še•Ï”‚Ì‰Šú‰»
+		//å„å¤‰æ•°ã®åˆæœŸåŒ–
 		*const_cast<bool*>(&downCast->cIsUsingMutexPointer) = isUsedMutexCounter;
 		*const_cast<bool*>(&downCast->cIsUsingAutoGabageCollection) = isAutoGabageCollection;
 		*const_cast<bool*>(&downCast->cIsFindEnabled) = info0.isFindEnabled;
@@ -989,24 +989,24 @@ namespace SGFramework
 			info0.isStatic, info0.layer, info0.tag, isUsedMutexCounter, isAutoGabageCollection);
 		downCast->setName(downCast->m_transform->name());
 
-		//ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->gameObject = downCast;
 		downCast->timeLayer = info0.timeLayer;
-		//transform->ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//transform->ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->transform = downCast->m_transform;
 		downCast->m_transform->timeLayer = info0.timeLayer;
 		downCast->m_transform->gameObject = downCast;
 
-		//find enabled -> “o˜^
+		//find enabled -> ç™»éŒ²
 		if (IS_TRUE(downCast->cIsFindEnabled))
 			downCast->RegisterObjects();
 
-		//Add Component (AddComponent‚©‚çŒÄ‚Ño‚·‚ÆQÆİ’è‚ª‚Å‚«‚È‚¢)
+		//Add Component (AddComponentã‹ã‚‰å‘¼ã³å‡ºã™ã¨å‚ç…§è¨­å®šãŒã§ããªã„)
 		{
 			//callback instantiate
 			SharedPointer<GameObjectCallback> component(new GameObjectCallback(*downCast),
 				isUsedMutexCounter, isAutoGabageCollection);
-			//Še•Ï”‚ğ‰Šú‰»
+			//å„å¤‰æ•°ã‚’åˆæœŸåŒ–
 			downCast->gameObjectCallbackComponent = component;
 			component->transform = downCast->m_transform;
 			component->setName(downCast->m_transform->name());
@@ -1016,18 +1016,18 @@ namespace SGFramework
 			component->m_isOldActive = downCast->m_transform->m_isActive;
 			component->m_thisPointer = component.DownCast<Component>();
 
-			//Callback flagsæ“¾
+			//Callback flagså–å¾—
 			uint flags = component->EnableCallbacks();
-			//private syncİ’è
+			//private syncè¨­å®š
 			if (component->m_callbackEnabledFlags & Component::CallbackFunctions::m_cSyncIncludeFlags)
 				flags |= Component::CallbackFunctions::m_cSync;
-			//‰Šú‰»
+			//åˆæœŸåŒ–
 			component->m_callbackEnabledFlags = component->m_saveCallbackEnabledFlags = flags;
 
-			//componentƒŠƒXƒg‚Ö“o˜^
+			//componentãƒªã‚¹ãƒˆã¸ç™»éŒ²
 			downCast->m_transform->m_components.emplace_back(component.DownCast<Component>());
 
-			//ÄAllocate
+			//å†Allocate
 			downCast->m_transform->AllocateCallback();
 
 			//invoke callback?
@@ -1047,15 +1047,15 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Instantiate]
-	//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Ävirtual InstantiateSetting Callback‚Åİ’è)
-	//template: GameObjectŒp³ƒNƒ‰ƒX
-	//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject, parent‚ª–³Œø‚Ìê‡null
-	//ˆø”1: eTransform, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-	//ˆø”2: position, rotation, scale -> true = world : false = local , InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-	//ˆø”3: name, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-	//ˆø”4: ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÅƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚éuser flags data, default = 0
-	//ˆø”5: SharedPointer->isUsedMutexCounter, default = ture
-	//ˆø”6: SharedPointer->isAutoGabageCollection, default = ture
+	//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦virtual InstantiateSetting Callbackã§è¨­å®š)
+	//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+	//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject, parentãŒç„¡åŠ¹ã®å ´åˆnull
+	//å¼•æ•°1: è¦ªTransform, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+	//å¼•æ•°2: position, rotation, scale -> true = world : false = local , InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+	//å¼•æ•°3: name, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+	//å¼•æ•°4: å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã‚‹user flags data, default = 0
+	//å¼•æ•°5: SharedPointer->isUsedMutexCounter, default = ture
+	//å¼•æ•°6: SharedPointer->isAutoGabageCollection, default = ture
 	template<class GameObjectDerived>
 	inline SharedPointer<GameObjectDerived> GameObject::Instantiate(SharedPointer<Transform> parent,
 		bool isInstantiateInWorldSpace, const sgstring & name, uint userFlags, bool isUsedMutexCounter, bool isAutoGabageCollection)
@@ -1063,21 +1063,21 @@ namespace SGFramework
 		static_assert(std::is_base_of_v<GameObject, GameObjectDerived>,
 			"GameObject::Instantiate templatre -> GameObject derived class only!");
 
-		//parent‚ª‘¶İ‚µ‚È‚¢->return
+		//parentãŒå­˜åœ¨ã—ãªã„->return
 		if (IS_FALSE(parent.getIsValid()))
 			return SharedPointer<GameObjectDerived>::getNull();
 
-		//ƒ|ƒCƒ“ƒ^ì¬, friendƒNƒ‰ƒX‚ğG‚é‚Ì‚ÅGameObject‚Éƒ_ƒEƒ“ƒLƒƒƒXƒg‚µ‚½‚à‚Ì‚à—pˆÓ
+		//ãƒã‚¤ãƒ³ã‚¿ä½œæˆ, friendã‚¯ãƒ©ã‚¹ã‚’è§¦ã‚‹ã®ã§GameObjectã«ãƒ€ã‚¦ãƒ³ã‚­ãƒ£ã‚¹ãƒˆã—ãŸã‚‚ã®ã‚‚ç”¨æ„
 		SharedPointer<GameObjectDerived> result(new GameObjectDerived(), isUsedMutexCounter, isAutoGabageCollection);
 		SharedPointer<GameObject> downCast = result.DownCast<GameObject>();
 		//InstantiateInfo
 		InstantiateRequiredInfo info0;
 		InstantiateParentInfo info1;
 
-		//’l‚ğİ’è
+		//å€¤ã‚’è¨­å®š
 		downCast->InstantiateSetting(info0, info1, userFlags, isUsedMutexCounter, isAutoGabageCollection);
 
-		//Še•Ï”‚Ì‰Šú‰»
+		//å„å¤‰æ•°ã®åˆæœŸåŒ–
 		*const_cast<bool*>(&downCast->cIsUsingMutexPointer) = isUsedMutexCounter;
 		*const_cast<bool*>(&downCast->cIsUsingAutoGabageCollection) = isAutoGabageCollection;
 		*const_cast<bool*>(&downCast->cIsFindEnabled) = info0.isFindEnabled;
@@ -1087,24 +1087,24 @@ namespace SGFramework
 			info0.isStatic, info0.layer, info0.tag, isUsedMutexCounter, isAutoGabageCollection);
 		downCast->setName(downCast->m_transform->name());
 
-		//ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->gameObject = downCast;
 		downCast->timeLayer = info0.timeLayer;
-		//transform->ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//transform->ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->transform = downCast->m_transform;
 		downCast->m_transform->timeLayer = info0.timeLayer;
 		downCast->m_transform->gameObject = downCast;
 
-		//find enabled -> “o˜^
+		//find enabled -> ç™»éŒ²
 		if (IS_TRUE(downCast->cIsFindEnabled))
 			downCast->RegisterObjects();
 
-		//Add Component (AddComponent‚©‚çŒÄ‚Ño‚·‚ÆQÆİ’è‚ª‚Å‚«‚È‚¢)
+		//Add Component (AddComponentã‹ã‚‰å‘¼ã³å‡ºã™ã¨å‚ç…§è¨­å®šãŒã§ããªã„)
 		{
 			//callback instantiate
 			SharedPointer<GameObjectCallback> component(new GameObjectCallback(*downCast),
 				isUsedMutexCounter, isAutoGabageCollection);
-			//Še•Ï”‚ğ‰Šú‰»
+			//å„å¤‰æ•°ã‚’åˆæœŸåŒ–
 			downCast->gameObjectCallbackComponent = component;
 			component->transform = downCast->m_transform;
 			component->setName(downCast->m_transform->name());
@@ -1114,18 +1114,18 @@ namespace SGFramework
 			component->m_isOldActive = downCast->m_transform->m_isActive;
 			component->m_thisPointer = component.DownCast<Component>();
 
-			//Callback flagsæ“¾
+			//Callback flagså–å¾—
 			uint flags = component->EnableCallbacks();
-			//private syncİ’è
+			//private syncè¨­å®š
 			if (component->m_callbackEnabledFlags & Component::CallbackFunctions::m_cSyncIncludeFlags)
 				flags |= Component::CallbackFunctions::m_cSync;
-			//‰Šú‰»
+			//åˆæœŸåŒ–
 			component->m_callbackEnabledFlags = component->m_saveCallbackEnabledFlags = flags;
 
-			//componentƒŠƒXƒg‚Ö“o˜^
+			//componentãƒªã‚¹ãƒˆã¸ç™»éŒ²
 			downCast->m_transform->m_components.emplace_back(component.DownCast<Component>());
 
-			//ÄAllocate
+			//å†Allocate
 			downCast->m_transform->AllocateCallback();
 
 			//invoke callback?
@@ -1144,14 +1144,14 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[Instantiate]
-	//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Ävirtual InstantiateSetting Callback‚Åİ’è)
-	//template: GameObjectŒp³ƒNƒ‰ƒX
-	//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject, parent‚ª–³Œø‚Ìê‡null
-	//ˆø”1: eTransform, InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-	//ˆø”2: position, rotation, scale -> true = world : false = local , InstantiateSetting‚Åİ’è‚³‚ê‚½‚à‚Ì‚ğã‘‚«‚µ‚Ü‚·
-	//ˆø”3: ŠeƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÅƒJƒXƒ^ƒ}ƒCƒY‚Å‚«‚éuser flags data, default = 0
-	//ˆø”4: SharedPointer->isUsedMutexCounter, default = ture
-	//ˆø”5: SharedPointer->isAutoGabageCollection, default = ture
+	//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦virtual InstantiateSetting Callbackã§è¨­å®š)
+	//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+	//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject, parentãŒç„¡åŠ¹ã®å ´åˆnull
+	//å¼•æ•°1: è¦ªTransform, InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+	//å¼•æ•°2: position, rotation, scale -> true = world : false = local , InstantiateSettingã§è¨­å®šã•ã‚ŒãŸã‚‚ã®ã‚’ä¸Šæ›¸ãã—ã¾ã™
+	//å¼•æ•°3: å„ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºã§ãã‚‹user flags data, default = 0
+	//å¼•æ•°4: SharedPointer->isUsedMutexCounter, default = ture
+	//å¼•æ•°5: SharedPointer->isAutoGabageCollection, default = ture
 	template <class GameObjectDerived>
 	inline SharedPointer<GameObjectDerived> GameObject::Instantiate(SharedPointer<Transform> parent,
 		bool isInstantiateInWorldSpace, uint userFlags, bool isUsedMutexCounter, bool isAutoGabageCollection)
@@ -1159,32 +1159,32 @@ namespace SGFramework
 		static_assert(std::is_base_of_v<GameObject, GameObjectDerived>,
 			"GameObject::Instantiate templatre -> GameObject derived class only!");
 
-		//parent‚ª‘¶İ‚µ‚È‚¢->return
+		//parentãŒå­˜åœ¨ã—ãªã„->return
 		if (IS_FALSE(parent.getIsValid()))
 			return SharedPointer<GameObjectDerived>::getNull();
 
-		//ƒ|ƒCƒ“ƒ^ì¬, friendƒNƒ‰ƒX‚ğG‚é‚Ì‚ÅGameObject‚Éƒ_ƒEƒ“ƒLƒƒƒXƒg‚µ‚½‚à‚Ì‚à—pˆÓ
+		//ãƒã‚¤ãƒ³ã‚¿ä½œæˆ, friendã‚¯ãƒ©ã‚¹ã‚’è§¦ã‚‹ã®ã§GameObjectã«ãƒ€ã‚¦ãƒ³ã‚­ãƒ£ã‚¹ãƒˆã—ãŸã‚‚ã®ã‚‚ç”¨æ„
 		SharedPointer<GameObjectDerived> result(new GameObjectDerived(), isUsedMutexCounter, isAutoGabageCollection);
 		SharedPointer<GameObject> downCast = result.DownCast<GameObject>();
 		//InstantiateInfo
 		InstantiateRequiredInfo info0;
 		InstantiateParentInfo info1;
 
-		//’l‚ğİ’è
+		//å€¤ã‚’è¨­å®š
 		downCast->InstantiateSetting(info0, info1, userFlags, isUsedMutexCounter, isAutoGabageCollection);
 
-		//Še•Ï”‚Ì‰Šú‰»
+		//å„å¤‰æ•°ã®åˆæœŸåŒ–
 		*const_cast<bool*>(&downCast->cIsUsingMutexPointer) = isUsedMutexCounter;
 		*const_cast<bool*>(&downCast->cIsUsingAutoGabageCollection) = isAutoGabageCollection;
 		*const_cast<bool*>(&downCast->cIsFindEnabled) = info0.isFindEnabled;
 
-		//parent‚ª‘¶İ‚µ‚È‚¢->instantiate root transform
+		//parentãŒå­˜åœ¨ã—ãªã„->instantiate root transform
 		if (IS_FALSE(info1.parent.getIsValid()))
 		{
 			downCast->m_transform = Transform::Instantiate(info0.position, info0.scale, info0.rotation, info0.name,
 				info0.functionLineAtRoot, info0.isStatic, info0.layer, info0.tag, isUsedMutexCounter, isAutoGabageCollection);
 		}
-		//parent‚ª‘¶İ‚·‚é->instantiate children transform
+		//parentãŒå­˜åœ¨ã™ã‚‹->instantiate children transform
 		else
 		{
 			downCast->m_transform = Transform::Instantiate(info1.parent, info1.isInstantiateInWorldSpace,
@@ -1193,24 +1193,24 @@ namespace SGFramework
 		}
 		downCast->setName(downCast->m_transform->name());
 
-		//ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->gameObject = downCast;
 		downCast->timeLayer = info0.timeLayer;
-		//transform->ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//transform->ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->transform = downCast->m_transform;
 		downCast->m_transform->timeLayer = info0.timeLayer;
 		downCast->m_transform->gameObject = downCast;
 
-		//find enabled -> “o˜^
+		//find enabled -> ç™»éŒ²
 		if (IS_TRUE(downCast->cIsFindEnabled))
 			downCast->RegisterObjects();
 
-		//Add Component (AddComponent‚©‚çŒÄ‚Ño‚·‚ÆQÆİ’è‚ª‚Å‚«‚È‚¢)
+		//Add Component (AddComponentã‹ã‚‰å‘¼ã³å‡ºã™ã¨å‚ç…§è¨­å®šãŒã§ããªã„)
 		{
 			//callback instantiate
 			SharedPointer<GameObjectCallback> component(new GameObjectCallback(*downCast),
 				isUsedMutexCounter, isAutoGabageCollection);
-			//Še•Ï”‚ğ‰Šú‰»
+			//å„å¤‰æ•°ã‚’åˆæœŸåŒ–
 			downCast->gameObjectCallbackComponent = component;
 			component->transform = downCast->m_transform;
 			component->setName(downCast->m_transform->name());
@@ -1220,18 +1220,18 @@ namespace SGFramework
 			component->m_isOldActive = downCast->m_transform->m_isActive;
 			component->m_thisPointer = component.DownCast<Component>();
 
-			//Callback flagsæ“¾
+			//Callback flagså–å¾—
 			uint flags = component->EnableCallbacks();
-			//private syncİ’è
+			//private syncè¨­å®š
 			if (component->m_callbackEnabledFlags & Component::CallbackFunctions::m_cSyncIncludeFlags)
 				flags |= Component::CallbackFunctions::m_cSync;
-			//‰Šú‰»
+			//åˆæœŸåŒ–
 			component->m_callbackEnabledFlags = component->m_saveCallbackEnabledFlags = flags;
 
-			//componentƒŠƒXƒg‚Ö“o˜^
+			//componentãƒªã‚¹ãƒˆã¸ç™»éŒ²
 			downCast->m_transform->m_components.emplace_back(component.DownCast<Component>());
 
-			//ÄAllocate
+			//å†Allocate
 			downCast->m_transform->AllocateCallback();
 
 			//invoke callback?
@@ -1251,21 +1251,21 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[InstantiateManual]
-	//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Äè“®İ’è)
-	//template: GameObjectŒp³ƒNƒ‰ƒX
-	//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject
-	//ˆø”1: position, default = zero
-	//ˆø”2: scale, default = one
-	//ˆø”3: rotation, default = identity
-	//ˆø”4: TimeLayer, default = root layer
-	//ˆø”5: name, default = "Game Object"
-	//ˆø”6: use function line if root transform, default = auto
-	//ˆø”7: isStatic, default = false
-	//ˆø”8: layer, default = Default Layer
-	//ˆø”9: tag, default = Default Tag
-	//ˆø”10: FindŒnŠÖ”—pƒŠƒXƒg‚É“o˜^‚·‚é, ƒpƒtƒH[ƒ}ƒ“ƒX‚É‘å‚«‚­ŠÖŒW‚µ‚Ü‚·, default = true
-	//ˆø”11: SharedPointer->isUsedMutexCounter, default = ture
-	//ˆø”12: SharedPointer->isAutoGabageCollection, default = ture
+	//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦æ‰‹å‹•è¨­å®š)
+	//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+	//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject
+	//å¼•æ•°1: position, default = zero
+	//å¼•æ•°2: scale, default = one
+	//å¼•æ•°3: rotation, default = identity
+	//å¼•æ•°4: TimeLayer, default = root layer
+	//å¼•æ•°5: name, default = "Game Object"
+	//å¼•æ•°6: use function line if root transform, default = auto
+	//å¼•æ•°7: isStatic, default = false
+	//å¼•æ•°8: layer, default = Default Layer
+	//å¼•æ•°9: tag, default = Default Tag
+	//å¼•æ•°10: Findç³»é–¢æ•°ç”¨ãƒªã‚¹ãƒˆã«ç™»éŒ²ã™ã‚‹, ãƒ‘ãƒ•ã‚©ãƒ¼ãƒãƒ³ã‚¹ã«å¤§ããé–¢ä¿‚ã—ã¾ã™, default = true
+	//å¼•æ•°11: SharedPointer->isUsedMutexCounter, default = ture
+	//å¼•æ•°12: SharedPointer->isAutoGabageCollection, default = ture
 	template <class GameObjectDerived>
 	inline SharedPointer<GameObjectDerived> GameObject::InstantiateManual(const Vector3 & position,
 		const Vector3 & scale, const Quaternion & rotation, WeakPointer<Time::TimeLayer> timeLayer, 
@@ -1275,11 +1275,11 @@ namespace SGFramework
 		static_assert(std::is_base_of_v<GameObject, GameObjectDerived>,
 			"GameObject::Instantiate templatre -> GameObject derived class only!");
 
-		//ƒ|ƒCƒ“ƒ^ì¬, friendƒNƒ‰ƒX‚ğG‚é‚Ì‚ÅGameObject‚Éƒ_ƒEƒ“ƒLƒƒƒXƒg‚µ‚½‚à‚Ì‚à—pˆÓ
+		//ãƒã‚¤ãƒ³ã‚¿ä½œæˆ, friendã‚¯ãƒ©ã‚¹ã‚’è§¦ã‚‹ã®ã§GameObjectã«ãƒ€ã‚¦ãƒ³ã‚­ãƒ£ã‚¹ãƒˆã—ãŸã‚‚ã®ã‚‚ç”¨æ„
 		SharedPointer<GameObjectDerived> result(new GameObjectDerived(), isUsedMutexCounter, isAutoGabageCollection);
 		SharedPointer<GameObject> downCast = result.DownCast<GameObject>();
 
-		//Še•Ï”‚Ì‰Šú‰»
+		//å„å¤‰æ•°ã®åˆæœŸåŒ–
 		*const_cast<bool*>(&downCast->cIsUsingMutexPointer) = isUsedMutexCounter;
 		*const_cast<bool*>(&downCast->cIsUsingAutoGabageCollection) = isAutoGabageCollection;
 		*const_cast<bool*>(&downCast->cIsFindEnabled) = isFindEnabled;
@@ -1289,24 +1289,24 @@ namespace SGFramework
 			functionLineAtRoot, isStatic, layer, tag, isUsedMutexCounter, isAutoGabageCollection);
 
 		downCast->setName(downCast->m_transform->name());
-		//ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->gameObject = downCast;
 		downCast->timeLayer = timeLayer;
-		//transform->ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//transform->ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->transform = downCast->m_transform;
 		downCast->m_transform->timeLayer = timeLayer;
 		downCast->m_transform->gameObject = downCast;
 
-		//find enabled -> “o˜^
+		//find enabled -> ç™»éŒ²
 		if (IS_TRUE(downCast->cIsFindEnabled))
 			downCast->RegisterObjects();
 
-		//Add Component (AddComponent‚©‚çŒÄ‚Ño‚·‚ÆQÆİ’è‚ª‚Å‚«‚È‚¢)
+		//Add Component (AddComponentã‹ã‚‰å‘¼ã³å‡ºã™ã¨å‚ç…§è¨­å®šãŒã§ããªã„)
 		{
 			//callback instantiate
 			SharedPointer<GameObjectCallback> component(new GameObjectCallback(*downCast),
 				isUsedMutexCounter, isAutoGabageCollection);
-			//Še•Ï”‚ğ‰Šú‰»
+			//å„å¤‰æ•°ã‚’åˆæœŸåŒ–
 			downCast->gameObjectCallbackComponent = component;
 			component->transform = downCast->m_transform;
 			component->setName(downCast->m_transform->name());
@@ -1316,18 +1316,18 @@ namespace SGFramework
 			component->m_isOldActive = downCast->m_transform->m_isActive;
 			component->m_thisPointer = component.DownCast<Component>();
 
-			//Callback flagsæ“¾
+			//Callback flagså–å¾—
 			uint flags = component->EnableCallbacks();
-			//private syncİ’è
+			//private syncè¨­å®š
 			if (component->m_callbackEnabledFlags & Component::CallbackFunctions::m_cSyncIncludeFlags)
 				flags |= Component::CallbackFunctions::m_cSync;
-			//‰Šú‰»
+			//åˆæœŸåŒ–
 			component->m_callbackEnabledFlags = component->m_saveCallbackEnabledFlags = flags;
 
-			//componentƒŠƒXƒg‚Ö“o˜^
+			//componentãƒªã‚¹ãƒˆã¸ç™»éŒ²
 			downCast->m_transform->m_components.emplace_back(component.DownCast<Component>());
 
-			//ÄAllocate
+			//å†Allocate
 			downCast->m_transform->AllocateCallback();
 		
 			//invoke callback?
@@ -1346,23 +1346,23 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[InstantiateManual]
-	//GameObject‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é (’l‚Í‘S‚Äè“®İ’è)
-	//template: GameObjectŒp³ƒNƒ‰ƒX
-	//return: ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚½GameObject, parent‚ª–³Œø‚Ìê‡null
-	//ˆø”1: eTransform
-	//ˆø”2: position, rotation, scale -> true = world : false = local 
-	//ˆø”3: position, default = zero
-	//ˆø”4: scale, default = one
-	//ˆø”5: rotation, default = identity
-	//ˆø”6: TimeLayer, default = root layer
-	//ˆø”7: name, default = "Game Object"
-	//ˆø”8: use function line if root transform, default = auto
-	//ˆø”9: isStatic, default = false
-	//ˆø”10: layer, default = Default Layer
-	//ˆø”11: tag, default = Default Tag
-	//ˆø”12: FindŒnŠÖ”—pƒŠƒXƒg‚É“o˜^‚·‚é, ƒpƒtƒH[ƒ}ƒ“ƒX‚É‘å‚«‚­ŠÖŒW‚µ‚Ü‚·, default = true
-	//ˆø”13: SharedPointer->isUsedMutexCounter, default = ture
-	//ˆø”14: SharedPointer->isAutoGabageCollection, default = ture
+	//GameObjectã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ (å€¤ã¯å…¨ã¦æ‰‹å‹•è¨­å®š)
+	//template: GameObjectç¶™æ‰¿ã‚¯ãƒ©ã‚¹
+	//return: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ãŸGameObject, parentãŒç„¡åŠ¹ã®å ´åˆnull
+	//å¼•æ•°1: è¦ªTransform
+	//å¼•æ•°2: position, rotation, scale -> true = world : false = local 
+	//å¼•æ•°3: position, default = zero
+	//å¼•æ•°4: scale, default = one
+	//å¼•æ•°5: rotation, default = identity
+	//å¼•æ•°6: TimeLayer, default = root layer
+	//å¼•æ•°7: name, default = "Game Object"
+	//å¼•æ•°8: use function line if root transform, default = auto
+	//å¼•æ•°9: isStatic, default = false
+	//å¼•æ•°10: layer, default = Default Layer
+	//å¼•æ•°11: tag, default = Default Tag
+	//å¼•æ•°12: Findç³»é–¢æ•°ç”¨ãƒªã‚¹ãƒˆã«ç™»éŒ²ã™ã‚‹, ãƒ‘ãƒ•ã‚©ãƒ¼ãƒãƒ³ã‚¹ã«å¤§ããé–¢ä¿‚ã—ã¾ã™, default = true
+	//å¼•æ•°13: SharedPointer->isUsedMutexCounter, default = ture
+	//å¼•æ•°14: SharedPointer->isAutoGabageCollection, default = ture
 	template <class GameObjectDerived>
 	inline SharedPointer<GameObjectDerived> GameObject::InstantiateManual(SharedPointer<Transform> parent,
 		bool isInstantiateInWorldSpace, const Vector3 & position, const Vector3 & scale, const Quaternion & rotation,
@@ -1374,11 +1374,11 @@ namespace SGFramework
 
 		if (IS_FALSE(parent.getIsValid())) return SharedPointer<GameObjectDerived>::getNull();
 
-		//ƒ|ƒCƒ“ƒ^ì¬, friendƒNƒ‰ƒX‚ğG‚é‚Ì‚ÅGameObject‚Éƒ_ƒEƒ“ƒLƒƒƒXƒg‚µ‚½‚à‚Ì‚à—pˆÓ
+		//ãƒã‚¤ãƒ³ã‚¿ä½œæˆ, friendã‚¯ãƒ©ã‚¹ã‚’è§¦ã‚‹ã®ã§GameObjectã«ãƒ€ã‚¦ãƒ³ã‚­ãƒ£ã‚¹ãƒˆã—ãŸã‚‚ã®ã‚‚ç”¨æ„
 		SharedPointer<GameObjectDerived> result(new GameObjectDerived(), isUsedMutexCounter, isAutoGabageCollection);
 		SharedPointer<GameObject> downCast = result.DownCast<GameObject>();
 
-		//Še•Ï”‚Ì‰Šú‰»
+		//å„å¤‰æ•°ã®åˆæœŸåŒ–
 		*const_cast<bool*>(&downCast->cIsUsingMutexPointer) = isUsedMutexCounter;
 		*const_cast<bool*>(&downCast->cIsUsingAutoGabageCollection) = isAutoGabageCollection;
 		*const_cast<bool*>(&downCast->cIsFindEnabled) = isFindEnabled;
@@ -1388,24 +1388,24 @@ namespace SGFramework
 			functionLineAtRoot, isStatic, layer, tag, isUsedMutexCounter, isAutoGabageCollection);
 		downCast->setName(downCast->m_transform->name());
 
-		//ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->gameObject = downCast;
 		downCast->timeLayer = timeLayer;
-		//transform->ƒ|ƒCƒ“ƒ^‚Ì“o˜^
+		//transform->ãƒã‚¤ãƒ³ã‚¿ã®ç™»éŒ²
 		downCast->transform = downCast->m_transform;
 		downCast->m_transform->timeLayer = timeLayer;
 		downCast->m_transform->gameObject = downCast;
 		
-		//find enabled -> “o˜^
+		//find enabled -> ç™»éŒ²
 		if (IS_TRUE(downCast->cIsFindEnabled))
 			downCast->RegisterObjects();
 
-		//Add Component (AddComponent‚©‚çŒÄ‚Ño‚·‚ÆQÆİ’è‚ª‚Å‚«‚È‚¢)
+		//Add Component (AddComponentã‹ã‚‰å‘¼ã³å‡ºã™ã¨å‚ç…§è¨­å®šãŒã§ããªã„)
 		{
 			//callback instantiate
 			SharedPointer<GameObjectCallback> component(new GameObjectCallback(*downCast),
 				isUsedMutexCounter, isAutoGabageCollection);
-			//Še•Ï”‚ğ‰Šú‰»
+			//å„å¤‰æ•°ã‚’åˆæœŸåŒ–
 			downCast->gameObjectCallbackComponent = component;
 			component->transform = downCast->m_transform;
 			component->setName(downCast->m_transform->name());
@@ -1415,18 +1415,18 @@ namespace SGFramework
 			component->m_isOldActive = downCast->m_transform->m_isActive;
 			component->m_thisPointer = component.DownCast<Component>();
 
-			//Callback flagsæ“¾
+			//Callback flagså–å¾—
 			uint flags = component->EnableCallbacks();
-			//private syncİ’è
+			//private syncè¨­å®š
 			if (component->m_callbackEnabledFlags & Component::CallbackFunctions::m_cSyncIncludeFlags)
 				flags |= Component::CallbackFunctions::m_cSync;
-			//‰Šú‰»
+			//åˆæœŸåŒ–
 			component->m_callbackEnabledFlags = component->m_saveCallbackEnabledFlags = flags;
 
-			//componentƒŠƒXƒg‚Ö“o˜^
+			//componentãƒªã‚¹ãƒˆã¸ç™»éŒ²
 			downCast->m_transform->m_components.emplace_back(component.DownCast<Component>());
 
-			//ÄAllocate
+			//å†Allocate
 			downCast->m_transform->AllocateCallback();
 
 			//invoke callback?
@@ -1446,9 +1446,9 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[FindWithName]
-	//Œ»İ‘¶İ‚·‚é‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg‚©‚çname‚ğkey‚ÉŒŸõ‚·‚é
-	//’ˆÓI sub scene‚É‘¶İ‚·‚éƒIƒuƒWƒFƒNƒg‚àƒqƒbƒg‚µ‚Ü‚·
-	//return: Hit‚µ‚½Å‚àŒÃ‚¢ƒIƒuƒWƒFƒNƒg
+	//ç¾åœ¨å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰nameã‚’keyã«æ¤œç´¢ã™ã‚‹
+	//æ³¨æ„ï¼ sub sceneã«å­˜åœ¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚‚ãƒ’ãƒƒãƒˆã—ã¾ã™
+	//return: Hitã—ãŸæœ€ã‚‚å¤ã„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 	inline WeakPointer<GameObject> GameObject::FindWithName(const sgstring & name)
 	{	
 		AtomicOperation::LockGuard guard(m_staticLock);
@@ -1461,9 +1461,9 @@ namespace SGFramework
 	}		
 	//----------------------------------------------------------------------------------
 	//[FindWithTag]
-	//Œ»İ‘¶İ‚·‚é‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg‚©‚çtag‚ğkey‚ÉŒŸõ‚·‚é
-	//’ˆÓI sub scene‚É‘¶İ‚·‚éƒIƒuƒWƒFƒNƒg‚àƒqƒbƒg‚µ‚Ü‚·
-	//return: Hit‚µ‚½Å‚àŒÃ‚¢ƒIƒuƒWƒFƒNƒg
+	//ç¾åœ¨å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰tagã‚’keyã«æ¤œç´¢ã™ã‚‹
+	//æ³¨æ„ï¼ sub sceneã«å­˜åœ¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚‚ãƒ’ãƒƒãƒˆã—ã¾ã™
+	//return: Hitã—ãŸæœ€ã‚‚å¤ã„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 	inline WeakPointer<GameObject> GameObject::FindWithTag(const Tag & tag)
 	{
 		AtomicOperation::LockGuard guard(m_staticLock);
@@ -1476,9 +1476,9 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[FindWithLayer]
-	//Œ»İ‘¶İ‚·‚é‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg‚©‚çlayer‚ğkey‚ÉŒŸõ‚·‚é
-	//’ˆÓI sub scene‚É‘¶İ‚·‚éƒIƒuƒWƒFƒNƒg‚àƒqƒbƒg‚µ‚Ü‚·
-	//return: Hit‚µ‚½Å‚àŒÃ‚¢ƒIƒuƒWƒFƒNƒg
+	//ç¾åœ¨å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰layerã‚’keyã«æ¤œç´¢ã™ã‚‹
+	//æ³¨æ„ï¼ sub sceneã«å­˜åœ¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚‚ãƒ’ãƒƒãƒˆã—ã¾ã™
+	//return: Hitã—ãŸæœ€ã‚‚å¤ã„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 	inline WeakPointer<GameObject> GameObject::FindWithLayer(const Layer & layer)
 	{
 		AtomicOperation::LockGuard guard(m_staticLock);
@@ -1492,9 +1492,9 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[FindWithNameEx]
-	//Œ»İ‘¶İ‚·‚é‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg‚©‚çname‚ğkey‚ÉŒŸõ‚·‚é, (All Search)
-	//’ˆÓI sub scene‚É‘¶İ‚·‚éƒIƒuƒWƒFƒNƒg‚àƒqƒbƒg‚µ‚Ü‚·
-	//return: Hit‚µ‚½‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg”z—ñ
+	//ç¾åœ¨å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰nameã‚’keyã«æ¤œç´¢ã™ã‚‹, (All Search)
+	//æ³¨æ„ï¼ sub sceneã«å­˜åœ¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚‚ãƒ’ãƒƒãƒˆã—ã¾ã™
+	//return: Hitã—ãŸå…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆé…åˆ—
 	inline std::vector<WeakPointer<GameObject>> GameObject::FindWithNameEx(const sgstring & name)
 	{
 		std::vector<WeakPointer<GameObject>> result;
@@ -1508,9 +1508,9 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[FindWithNameEx]
-	//Œ»İ‘¶İ‚·‚é‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg‚©‚çtag‚ğkey‚ÉŒŸõ‚·‚é, (All Search)
-	//’ˆÓI sub scene‚É‘¶İ‚·‚éƒIƒuƒWƒFƒNƒg‚àƒqƒbƒg‚µ‚Ü‚·
-	//return: Hit‚µ‚½‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg”z—ñ
+	//ç¾åœ¨å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰tagã‚’keyã«æ¤œç´¢ã™ã‚‹, (All Search)
+	//æ³¨æ„ï¼ sub sceneã«å­˜åœ¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚‚ãƒ’ãƒƒãƒˆã—ã¾ã™
+	//return: Hitã—ãŸå…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆé…åˆ—
 	inline std::vector<WeakPointer<GameObject>> GameObject::FindWithTagEx(const Tag & tag)
 	{
 		std::vector<WeakPointer<GameObject>> result;
@@ -1524,9 +1524,9 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[FindWithNameEx]
-	//Œ»İ‘¶İ‚·‚é‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg‚©‚çlayer‚ğkey‚ÉŒŸõ‚·‚é, (All Search)
-	//’ˆÓI sub scene‚É‘¶İ‚·‚éƒIƒuƒWƒFƒNƒg‚àƒqƒbƒg‚µ‚Ü‚·
-	//return: Hit‚µ‚½‘S‚Ä‚ÌƒIƒuƒWƒFƒNƒg”z—ñ
+	//ç¾åœ¨å­˜åœ¨ã™ã‚‹å…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰layerã‚’keyã«æ¤œç´¢ã™ã‚‹, (All Search)
+	//æ³¨æ„ï¼ sub sceneã«å­˜åœ¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚‚ãƒ’ãƒƒãƒˆã—ã¾ã™
+	//return: Hitã—ãŸå…¨ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆé…åˆ—
 	inline std::vector<WeakPointer<GameObject>> GameObject::FindWithLayerEx(const Layer & layer)
 	{
 		std::vector<WeakPointer<GameObject>> result;

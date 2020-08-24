@@ -17,7 +17,7 @@ namespace SGFramework
 		Scene::SceneManager::GameStart();
 
 		//------------------------------------------------------------------------------- 
-		//ƒQ[ƒ€ƒ‹[ƒv
+		//ã‚²ãƒ¼ãƒ ãƒ«ãƒ¼ãƒ—
 		while (IS_FALSE(m_isEndUpdate.load()))
 		{
 			//FixedUpdate
@@ -29,10 +29,10 @@ namespace SGFramework
 					////PhysX
 					//Physics::BeginUpdate();
 
-					////TransformXV & callback
+					////Transformæ›´æ–° & callback
 					//Thread::MainThreadInvokeCallbacks(Component::CallbackFunctions::FixedUpdate);
 					//Scene::SceneManager::FixedUpdate();
-					////TransformXV
+					////Transformæ›´æ–°
 					//Thread::MainThreadUpdate();
 
 					////PhysX
@@ -49,7 +49,7 @@ namespace SGFramework
 					Physics::SyncPhysicsEnd();
 					++s_fixedCounter;
 				}
-				//Time”»’è
+				//Timeåˆ¤å®š
 				Time::FixedLastUpdate();
 
 				if (s_fixedCounter >= 5)
@@ -78,14 +78,14 @@ namespace SGFramework
 					//Thread Sync
 					Thread::MainThreadEndBeforeSync();
 
-					//‰¹‚Æ‰æ‚ÌXVŠJn
+					//éŸ³ã¨ç”»ã®æ›´æ–°é–‹å§‹
 					Thread::StartAudioGraphicsUpdate();
 				}
 
 				//Update Ready?
 				if (IS_TRUE(m_isUpdateReady.load()))
 				{
-					//SyncŠJn
+					//Syncé–‹å§‹
 					Transform::StartSyncFrame();
 					//callback
 					Thread::MainThreadSingleInvokeCallbacks(Component::CallbackFunctions::Sync);
@@ -96,7 +96,7 @@ namespace SGFramework
 						Application::Quit();
 						break;
 					}
-					//SyncI—¹
+					//Syncçµ‚äº†
 					Transform::EndSyncFrame();
 				}
 

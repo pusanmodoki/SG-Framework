@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-”Ä—pXVƒXƒŒƒbƒh‚ğŠÇ—‚·‚éThread class
+æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’ç®¡ç†ã™ã‚‹Thread class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_THREAD_HPP_
 #define SGFRAMEWORK_HEADER_THREAD_HPP_
@@ -19,7 +19,7 @@
 // Framework namespace
 namespace SGFramework
 {
-	//friend—p
+	//friendç”¨
 	class Physics;
 	namespace Administrator
 	{
@@ -32,7 +32,7 @@ namespace SGFramework
 		class AudioAssetMusic;
 	}
 	
-	//”Ä—pXVƒXƒŒƒbƒh‚ğŠÇ—‚·‚éThread class
+	//æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’ç®¡ç†ã™ã‚‹Thread class
 	class Thread final
 	{
 	public:
@@ -50,32 +50,32 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[AutoThreadAllocation]
-		//BGMƒXƒgƒŠ[ƒ~ƒ“ƒO‚È‚Ç‚ÌŠ„‚èU‚èŒ^•ÊƒXƒŒƒbƒhŠÖ”‚ğ“KØ‚ÈƒXƒŒƒbƒh‚ÉŠ„‚èU‚é
+		//BGMã‚¹ãƒˆãƒªãƒ¼ãƒŸãƒ³ã‚°ãªã©ã®éšæ™‚å‰²ã‚ŠæŒ¯ã‚Šå‹åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰é–¢æ•°ã‚’é©åˆ‡ãªã‚¹ãƒ¬ãƒƒãƒ‰ã«å‰²ã‚ŠæŒ¯ã‚‹
 		inline static uint64 AutoThreadAllocation(const HANDLE& threadHandle)
 		{
-			static std::atomic<uint> allocation = 0;	//ƒVƒtƒg—p
+			static std::atomic<uint> allocation = 0;	//ã‚·ãƒ•ãƒˆç”¨
 
-			//null‚È‚çI—¹
+			//nullãªã‚‰çµ‚äº†
 			if (threadHandle == nullptr) return 0;
 
-			//ƒ}ƒXƒNæ“¾
+			//ãƒã‚¹ã‚¯å–å¾—
 			uint64 result = 1Ui64 << AtomicOperation::Add(allocation, 1) % 
 				MathAF::Min(std::thread::hardware_concurrency(), m_numMaxUsingThreads);
 
-			//ƒAƒtƒBƒjƒeƒBİ’è
+			//ã‚¢ãƒ•ã‚£ãƒ‹ãƒ†ã‚£è¨­å®š
 			SetThreadAffinityMask(threadHandle, result);
 
 			return result;
 		}
 		//----------------------------------------------------------------------------------
 		//[ThreadAllocation]
-		//BGMƒXƒgƒŠ[ƒ~ƒ“ƒO‚È‚Ç‚ÌŠ„‚èU‚èŒ^•ÊƒXƒŒƒbƒhŠÖ”‚ğƒ}ƒjƒ…ƒAƒ‹‚Å“KØ‚ÈƒXƒŒƒbƒh‚ÉŠ„‚èU‚é
+		//BGMã‚¹ãƒˆãƒªãƒ¼ãƒŸãƒ³ã‚°ãªã©ã®éšæ™‚å‰²ã‚ŠæŒ¯ã‚Šå‹åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰é–¢æ•°ã‚’ãƒãƒ‹ãƒ¥ã‚¢ãƒ«ã§é©åˆ‡ãªã‚¹ãƒ¬ãƒƒãƒ‰ã«å‰²ã‚ŠæŒ¯ã‚‹
 		inline static void ThreadAllocation(const HANDLE& threadHandle, uint64 useThread)
 		{
-			//null‚È‚çI—¹
+			//nullãªã‚‰çµ‚äº†
 			if (threadHandle == nullptr || useThread == 0) return;
 
-			//ƒAƒtƒBƒjƒeƒBİ’è
+			//ã‚¢ãƒ•ã‚£ãƒ‹ãƒ†ã‚£è¨­å®š
 			SetThreadAffinityMask(threadHandle, useThread);
 		}
 
@@ -104,138 +104,138 @@ namespace SGFramework
 		}
 
 
-		//‚±‚ÌƒNƒ‰ƒX‚ªŠÇ—‚µ‚Ä‚¢‚é”Ä—pXVê—pƒXƒŒƒbƒh”
+		//ã“ã®ã‚¯ãƒ©ã‚¹ãŒç®¡ç†ã—ã¦ã„ã‚‹æ±ç”¨æ›´æ–°å°‚ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ•°
 		static GetOnlyProperty<uint> numUpdateThreads;
-		//‚±‚ÌƒNƒ‰ƒX‚ªŠÇ—‚µ‚Ä‚¢‚éXVƒ‰ƒCƒ“”
+		//ã“ã®ã‚¯ãƒ©ã‚¹ãŒç®¡ç†ã—ã¦ã„ã‚‹æ›´æ–°ãƒ©ã‚¤ãƒ³æ•°
 		static GetOnlyProperty<uint> numFunctionLines;
-		//Às‚µ‚Ä‚¢‚éPC‚Ìƒn[ƒhƒEƒFƒAƒXƒŒƒbƒh”
+		//å®Ÿè¡Œã—ã¦ã„ã‚‹PCã®ãƒãƒ¼ãƒ‰ã‚¦ã‚§ã‚¢ã‚¹ãƒ¬ãƒƒãƒ‰æ•°
 		static GetOnlyProperty<uint> numHardwareThreads;
 
 	private:
 		//----------------------------------------------------------------------------------
 		//[StartUp]
-		//ƒXƒŒƒbƒh‚ğ‹N“®‚·‚é
-		//throw: ƒn[ƒhƒEƒFƒAƒXƒŒƒbƒh”‚ª4–¢–‚Ìê‡ (ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ğÀs‚Å‚«‚È‚¢)
-		//ˆø”1: ŠÖ”ƒLƒ…[‚Ì”
-		//ˆø”2: Å‘åg—pƒXƒŒƒbƒh”
+		//ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’èµ·å‹•ã™ã‚‹
+		//throw: ãƒãƒ¼ãƒ‰ã‚¦ã‚§ã‚¢ã‚¹ãƒ¬ãƒƒãƒ‰æ•°ãŒ4æœªæº€ã®å ´åˆ (ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å®Ÿè¡Œã§ããªã„)
+		//å¼•æ•°1: é–¢æ•°ã‚­ãƒ¥ãƒ¼ã®æ•°
+		//å¼•æ•°2: æœ€å¤§ä½¿ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ•°
 		static void StartUp(const ReadElement::Pack& linesCount, const ReadElement::Pack& numMaxUsingThreads);
 		//----------------------------------------------------------------------------------
 		//[ShutDown]
-		//ƒXƒŒƒbƒh‚ğI—¹‚·‚é
+		//ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’çµ‚äº†ã™ã‚‹
 		static void ShutDown();
 
 		//----------------------------------------------------------------------------------
 		//[MainThreadBeginBeforeSync]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
 		//Update(before sync)->Begin
 		static void MainThreadBeginBeforeSync();
 		//----------------------------------------------------------------------------------
 		//[MainBeginFixed]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
 		//Update(before sync)->End
 		static void MainThreadEndBeforeSync();
 		//----------------------------------------------------------------------------------
 		//[MainThreadBeginBeforeSync]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
 		//Update(after sync)->Begin
 		static void MainThreadBeginAfterSync();
 		//----------------------------------------------------------------------------------
 		//[MainBeginFixed]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
 		//Update(after sync)->End
 		static void MainThreadEndAfterSync();
 		//----------------------------------------------------------------------------------
 		//[MainThreadBeginFixed]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
 		//FixedUpdate->Begin
 		static void MainThreadBeginFixed();
 		//----------------------------------------------------------------------------------
 		//[MainThreadEndFixed]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
 		//FixedUpdate->End
 		static void MainThreadEndFixed();
 		//----------------------------------------------------------------------------------
 		//[UpdateThread]
-		//”Ä—pXVƒXƒŒƒbƒh—pŠÖ”
-		//ŠÖ”ƒLƒ…[‚ÌÁ‰»‚ÆÀs‘Ò‹@‚ğƒ‹[ƒv‚·‚é
-		//ˆø”1: ÀsƒXƒŒƒbƒh‚Ì—v‘f”Ô†
+		//æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+		//é–¢æ•°ã‚­ãƒ¥ãƒ¼ã®æ¶ˆåŒ–ã¨å®Ÿè¡Œå¾…æ©Ÿã‚’ãƒ«ãƒ¼ãƒ—ã™ã‚‹
+		//å¼•æ•°1: å®Ÿè¡Œã‚¹ãƒ¬ãƒƒãƒ‰ã®è¦ç´ ç•ªå·
 		static void UpdateThread(uint myThreadNumber);
 
 
 
 		//----------------------------------------------------------------------------------
 		//[MainThreadUpdate]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-		//”Ä—pXVƒXƒŒƒbƒh‚Ì‘Ò‹@ó‘Ô‚ğ‰ğœ‚µAŠÖ”ƒLƒ…[‚ÌÁ‰»‚ğ•À—ñ‚Ås‚¤
-		//ˆø”1: callbackType
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+		//æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã®å¾…æ©ŸçŠ¶æ…‹ã‚’è§£é™¤ã—ã€é–¢æ•°ã‚­ãƒ¥ãƒ¼ã®æ¶ˆåŒ–ã‚’ä¸¦åˆ—ã§è¡Œã†
+		//å¼•æ•°1: callbackType
 		static void MainThreadSingleUpdate(uint callbackType);
 		//----------------------------------------------------------------------------------
 		//[MainThreadUpdate]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-		//”Ä—pXVƒXƒŒƒbƒh‚Ì‘Ò‹@ó‘Ô‚ğ‰ğœ‚µAŠÖ”ƒLƒ…[‚ÌÁ‰»‚ğ•À—ñ‚Ås‚¤
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+		//æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã®å¾…æ©ŸçŠ¶æ…‹ã‚’è§£é™¤ã—ã€é–¢æ•°ã‚­ãƒ¥ãƒ¼ã®æ¶ˆåŒ–ã‚’ä¸¦åˆ—ã§è¡Œã†
 		static void MainThreadUpdate();
 		//----------------------------------------------------------------------------------
 		//[MainThreadUpdate]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-		//”Ä—pXVƒXƒŒƒbƒh‚Ì‘Ò‹@ó‘Ô‚ğ‰ğœ‚µAŠÖ”ƒLƒ…[‚ÌÁ‰»‚ğ•À—ñ‚Ås‚¤
-		//ˆø”1: callbackType
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+		//æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã®å¾…æ©ŸçŠ¶æ…‹ã‚’è§£é™¤ã—ã€é–¢æ•°ã‚­ãƒ¥ãƒ¼ã®æ¶ˆåŒ–ã‚’ä¸¦åˆ—ã§è¡Œã†
+		//å¼•æ•°1: callbackType
 		static void MainThreadUpdate(uint callbackType);
 		//----------------------------------------------------------------------------------
 		//[MainThreadInvokeCallbacks]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-		//”Ä—pXVƒXƒŒƒbƒh‚Ì‘Ò‹@ó‘Ô‚ğ‰ğœ‚µAƒR[ƒ‹ƒoƒbƒNŒÄ‚Ño‚µ‚ğ•À—ñ‚Ås‚¤
-		//ˆø”1: callbackType
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+		//æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã®å¾…æ©ŸçŠ¶æ…‹ã‚’è§£é™¤ã—ã€ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯å‘¼ã³å‡ºã—ã‚’ä¸¦åˆ—ã§è¡Œã†
+		//å¼•æ•°1: callbackType
 		static void MainThreadInvokeCallbacks(uint callbackType);
 		//----------------------------------------------------------------------------------
 		//[MainThreadSingleInvokeCallbacks]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-		//ƒR[ƒ‹ƒoƒbƒNŒÄ‚Ño‚µ‚ğƒVƒ“ƒOƒ‹ƒXƒŒƒbƒh‚Ås‚¤
-		//ˆø”1: callbackType
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+		//ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯å‘¼ã³å‡ºã—ã‚’ã‚·ãƒ³ã‚°ãƒ«ã‚¹ãƒ¬ãƒƒãƒ‰ã§è¡Œã†
+		//å¼•æ•°1: callbackType
 		static void MainThreadSingleInvokeCallbacks(uint callbackType);
 		//----------------------------------------------------------------------------------
 		//[MainThreadBeginUpdate]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-		//”Ä—pXVƒXƒŒƒbƒh‚Ì‘Ò‹@ó‘Ô‚ğ‰ğœ‚µA‰ŠúXV‚ğ•À—ñÀs‚·‚é
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+		//æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã®å¾…æ©ŸçŠ¶æ…‹ã‚’è§£é™¤ã—ã€åˆæœŸæ›´æ–°ã‚’ä¸¦åˆ—å®Ÿè¡Œã™ã‚‹
 		static void MainThreadBeginUpdate();
 		//----------------------------------------------------------------------------------
 		//[MainThreadGraphicsUpdate]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—pŠÖ”
-		//”Ä—pXVƒXƒŒƒbƒh‚Ì‘Ò‹@ó‘Ô‚ğ‰ğœ‚µA•`‰æƒŠƒXƒg‚Ìì¬•ƒ\[ƒg‚ğ•À—ñ‚Ås‚¤
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+		//æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ã®å¾…æ©ŸçŠ¶æ…‹ã‚’è§£é™¤ã—ã€æç”»ãƒªã‚¹ãƒˆã®ä½œæˆï¼†ã‚½ãƒ¼ãƒˆã‚’ä¸¦åˆ—ã§è¡Œã†
 		static void MainThreadGraphicsUpdate();
 		//----------------------------------------------------------------------------------
 		//[ThreadUpdate1]
-		//”Ä—pXVƒXƒŒƒbƒh—pŠÖ”
-		//ŠÖ”ƒLƒ…[‚ÌÁ‰»‚ÆÀs‘Ò‹@‚ğƒ‹[ƒv‚·‚é
-		//ˆø”1: ÀsƒXƒŒƒbƒh‚Ì—v‘f”Ô†
-		//ˆø”2: —áŠOƒ|ƒCƒ“ƒ^
+		//æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+		//é–¢æ•°ã‚­ãƒ¥ãƒ¼ã®æ¶ˆåŒ–ã¨å®Ÿè¡Œå¾…æ©Ÿã‚’ãƒ«ãƒ¼ãƒ—ã™ã‚‹
+		//å¼•æ•°1: å®Ÿè¡Œã‚¹ãƒ¬ãƒƒãƒ‰ã®è¦ç´ ç•ªå·
+		//å¼•æ•°2: ä¾‹å¤–ãƒã‚¤ãƒ³ã‚¿
 		static void ThreadUpdate1(uint myThreadNumber);
 		//----------------------------------------------------------------------------------
 		//[StartAudioGraphicsUpdate]
-		//ƒI[ƒfƒBƒIƒOƒ‰ƒtƒBƒbƒNƒAƒbƒvƒf[ƒg‚ğŠJn‚·‚é
+		//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã‚’é–‹å§‹ã™ã‚‹
 		static void StartAudioGraphicsUpdate();
 		//----------------------------------------------------------------------------------
 		//[WaitAudioGraphicsUpdate]
-		//ƒI[ƒfƒBƒIƒOƒ‰ƒtƒBƒbƒNƒAƒbƒvƒf[ƒg‚ÌI—¹‚Ü‚Å‘Ò‹@‚·‚é
+		//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã®çµ‚äº†ã¾ã§å¾…æ©Ÿã™ã‚‹
 		static void WaitAudioGraphicsUpdate();
 		//----------------------------------------------------------------------------------
 		//[AudioGraphicsUpdate]
-		//ƒI[ƒfƒBƒIƒOƒ‰ƒtƒBƒbƒN—Dæˆ—ƒXƒŒƒbƒh—pŠÖ”
-		//1ƒtƒŒ[ƒ€‘O‚Ìî•ñ‚ğŠî‚ÉŒvZ, •`‰æ‚âÄ¶‚ğs‚¤
-		//ˆø”1: —áŠOƒ|ƒCƒ“ƒ^
+		//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯å„ªå…ˆå‡¦ç†ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+		//1ãƒ•ãƒ¬ãƒ¼ãƒ å‰ã®æƒ…å ±ã‚’åŸºã«è¨ˆç®—, æç”»ã‚„å†ç”Ÿã‚’è¡Œã†
+		//å¼•æ•°1: ä¾‹å¤–ãƒã‚¤ãƒ³ã‚¿
 		static void AudioGraphicsUpdate();
 		//----------------------------------------------------------------------------------
 		//[AudioUpdate]
-		//ƒI[ƒfƒBƒIˆ—ƒXƒŒƒbƒh—pŠÖ”
-		//1ƒtƒŒ[ƒ€‘O‚Ìî•ñ‚ğŠî‚ÉŒvZ, Ä¶‚ğs‚¤
+		//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªå‡¦ç†ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨é–¢æ•°
+		//1ãƒ•ãƒ¬ãƒ¼ãƒ å‰ã®æƒ…å ±ã‚’åŸºã«è¨ˆç®—, å†ç”Ÿã‚’è¡Œã†
 		static void AudioUpdate();
 
 		//----------------------------------------------------------------------------------
 		//[RegisterRunningFrameworkThread]
-		//AudioAssetMusic‚È‚Ç‚ÅRunning“o˜^‚ğs‚¤
+		//AudioAssetMusicãªã©ã§Runningç™»éŒ²ã‚’è¡Œã†
 		inline static void RegisterRunningFrameworkThread() { AtomicOperation::Add(m_runningCounter, 1); }
 		//----------------------------------------------------------------------------------
 		//[UnregisterRunningFrameworkThread]
-		//AudioAssetMusic‚È‚Ç‚ÅRunning“o˜^‰ğœ‚ğs‚¤
+		//AudioAssetMusicãªã©ã§Runningç™»éŒ²è§£é™¤ã‚’è¡Œã†
 		inline static void UnRegisterRunningFrameworkThread() { AtomicOperation::Subtract(m_runningCounter, 1); }
 
 		//----------------------------------------------------------------------------------
@@ -309,32 +309,32 @@ namespace SGFramework
 		//Update->NotCallback
 		static constexpr uint m_UpdateNotCallback = 0x20;
 
-		//”Ä—pXVƒXƒŒƒbƒh
+		//æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰
 		static std::vector<std::thread> m_updateThreads;								
-		//‰ŠúXVƒŠƒXƒg
+		//åˆæœŸæ›´æ–°ãƒªã‚¹ãƒˆ
 		static std::vector<std::vector<void(*)()>> m_beginFunctions;
-		//ƒ‰ƒCƒ“Š„“–ƒŠƒXƒg
+		//ãƒ©ã‚¤ãƒ³å‰²å½“ãƒªã‚¹ãƒˆ
 		static std::vector<std::vector<int>> m_lineAllocations;
-		//”Ä—pƒXƒŒƒbƒhXVŠJnğŒ•Ï”‚½‚¿
+		//æ±ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ›´æ–°é–‹å§‹æ¡ä»¶å¤‰æ•°ãŸã¡
 		static std::vector<ConditionVariable::AutoReference<bool>> m_startUpdateConditions;
-		//”Ä—pƒXƒŒƒbƒhXVI—¹ğŒ•Ï”‚½‚¿
+		//æ±ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ›´æ–°çµ‚äº†æ¡ä»¶å¤‰æ•°ãŸã¡
 		static std::vector<ConditionVariable::AutoReference<bool>> m_endUpdateConditions;
-		//ƒI[ƒfƒBƒIƒOƒ‰ƒtƒBƒbƒNî•ñ“¯ŠúŠJnğŒ•Ï”
+		//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯æƒ…å ±åŒæœŸé–‹å§‹æ¡ä»¶å¤‰æ•°
 		static UniquePointer<ConditionVariable::AutoReference<bool>> m_startAudioGraphicsCondition;
-		//ƒI[ƒfƒBƒIƒOƒ‰ƒtƒBƒbƒNî•ñ“¯ŠúI—¹ğŒ•Ï”
+		//ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯æƒ…å ±åŒæœŸçµ‚äº†æ¡ä»¶å¤‰æ•°
 		static UniquePointer<ConditionVariable::AutoReference<bool>> m_endAudioGraphicsCondition;
 
-		static std::thread m_audioGraphicsThread;			//AudioGraphicsUpdate—pƒXƒŒƒbƒh
-		static UniquePointer<bool[]> m_conditionFlags;		//ğŒ•Ï”—pƒtƒ‰ƒO‚½‚¿
-		static std::atomic<uint> m_runningCounter;			//g—pƒXƒŒƒbƒh”Œv‘ª
-		static std::atomic<uint> m_beginCounter;			//BeginFunctionƒJƒEƒ“ƒ^
-		static uint m_numMaxUsingThreads;						//Å‘åg—pƒXƒŒƒbƒh”Clamp
-		static uint m_numHardwareThreads;						//PC‚Ìƒn[ƒhƒEƒFƒAƒXƒŒƒbƒh”
-		static uint m_numUseUpdateThreads;						//–{ƒNƒ‰ƒX‚ª‚Â”Ä—pXVƒXƒŒƒbƒh”
-		static uint m_numFunctionLines;								//–{ƒNƒ‰ƒX‚ª‚ÂXVƒ‰ƒCƒ“”
-		static uint m_updateType;										//‰½‚ğXV‚·‚é‚©
-		static uint m_callbackType;										//‰½‚ÌComponent->Callback‚ğÀs‚·‚é‚©
-		static uint m_transformCount;									//transformUpdateƒXƒŒƒbƒh”Šm”F—p
+		static std::thread m_audioGraphicsThread;			//AudioGraphicsUpdateç”¨ã‚¹ãƒ¬ãƒƒãƒ‰
+		static UniquePointer<bool[]> m_conditionFlags;		//æ¡ä»¶å¤‰æ•°ç”¨ãƒ•ãƒ©ã‚°ãŸã¡
+		static std::atomic<uint> m_runningCounter;			//ä½¿ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ•°è¨ˆæ¸¬
+		static std::atomic<uint> m_beginCounter;			//BeginFunctionã‚«ã‚¦ãƒ³ã‚¿
+		static uint m_numMaxUsingThreads;						//æœ€å¤§ä½¿ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰æ•°Clamp
+		static uint m_numHardwareThreads;						//PCã®ãƒãƒ¼ãƒ‰ã‚¦ã‚§ã‚¢ã‚¹ãƒ¬ãƒƒãƒ‰æ•°
+		static uint m_numUseUpdateThreads;						//æœ¬ã‚¯ãƒ©ã‚¹ãŒæŒã¤æ±ç”¨æ›´æ–°ã‚¹ãƒ¬ãƒƒãƒ‰æ•°
+		static uint m_numFunctionLines;								//æœ¬ã‚¯ãƒ©ã‚¹ãŒæŒã¤æ›´æ–°ãƒ©ã‚¤ãƒ³æ•°
+		static uint m_updateType;										//ä½•ã‚’æ›´æ–°ã™ã‚‹ã‹
+		static uint m_callbackType;										//ä½•ã®Component->Callbackã‚’å®Ÿè¡Œã™ã‚‹ã‹
+		static uint m_transformCount;									//transformUpdateã‚¹ãƒ¬ãƒƒãƒ‰æ•°ç¢ºèªç”¨
 	};
 
 	//ApplicationMain, GraphicsUpdate, AudioUpdate, PhysX
@@ -404,7 +404,7 @@ namespace SGFramework
 	//setting AssetMonitoring thread affinity property (set only)
 	SGF_FUNCTION_PROPERTY void Thread::setAffinityAssetMonitoring(const HANDLE & threadHandle)
 	{
-		//WinMain‚Æ“¯‹‚³‚¹‚Ü‚· (3•b‚²‚ÆXV‚¾‚µ‚»‚±‚Ü‚Å•‰‰×‚Í‚‚­‚È‚¢B‚Í‚¸B)
+		//WinMainã¨åŒå±…ã•ã›ã¾ã™ (3ç§’ã”ã¨æ›´æ–°ã ã—ãã“ã¾ã§è² è·ã¯é«˜ããªã„ã€‚ã¯ãšã€‚)
 		SetThreadAffinityMask(threadHandle, static_cast<uint64>(getAffinityWinMain()));
 	}
 	//setting GraphicsUpdate thread affinity property (set only)

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ŠeƒNƒ‰ƒX‚ÅRead‚µ‚½—v‘f‚ÌŠi”[æ‚Æ‚µ‚Äg—p‚·‚éReadElement class
+å„ã‚¯ãƒ©ã‚¹ã§Readã—ãŸè¦ç´ ã®æ ¼ç´å…ˆã¨ã—ã¦ä½¿ç”¨ã™ã‚‹ReadElement class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_READ_ELEMENT_HPP_
 #define SGFRAMEWORK_HEADER_READ_ELEMENT_HPP_
@@ -11,21 +11,21 @@
 //Framework namespace
 namespace SGFramework
 {
-	//ŠeƒNƒ‰ƒX‚ÅRead‚µ‚½—v‘f‚ÌŠi”[æ‚Æ‚µ‚Äg—p‚·‚éReadElement class
+	//å„ã‚¯ãƒ©ã‚¹ã§Readã—ãŸè¦ç´ ã®æ ¼ç´å…ˆã¨ã—ã¦ä½¿ç”¨ã™ã‚‹ReadElement class
 	class ReadElement final
 	{
 	public:
-		//Read‚µ‚½•û®
+		//Readã—ãŸæ–¹å¼
 		enum class ReadType;
 
-		ReadType readType;		//“Ç‚İ‚İƒ^ƒCƒv
+		ReadType readType;		//èª­ã¿è¾¼ã¿ã‚¿ã‚¤ãƒ—
 		sgstring valueString;		//value string
 		float valueFloat = 0.0f;	//value float
 		int valueInt = 0;				//value int
 
-		//Read‚µ‚½•û®
-		//Int, Float‚Ìê‡‘S‚Ä‚Ìvalue‚É’l‚ªŠi”[‚³‚ê‚é
-		//String‚Ìê‡valueString‚É‚Ì‚İ’l‚ªŠi”[‚³‚ê‚é
+		//Readã—ãŸæ–¹å¼
+		//Int, Floatã®å ´åˆå…¨ã¦ã®valueã«å€¤ãŒæ ¼ç´ã•ã‚Œã‚‹
+		//Stringã®å ´åˆvalueStringã«ã®ã¿å€¤ãŒæ ¼ç´ã•ã‚Œã‚‹
 		enum class ReadType
 		{
 			Int = 0X1,		//valueInt
@@ -33,7 +33,7 @@ namespace SGFramework
 			String = 0X4	//valueString
 		};
 
-		//ReadElement‚ğ•¡”Ši”[‚Å‚«‚éPack class
+		//ReadElementã‚’è¤‡æ•°æ ¼ç´ã§ãã‚‹Pack class
 		class Pack final
 		{
 		public:
@@ -71,7 +71,7 @@ namespace SGFramework
 			//elements.crend() (get function property)
 			SGF_FUNCTION_PROPERTY const auto crend() const { return elements.crend(); }
 
-			sgstring header;									//Pack‚Ìƒwƒbƒ_[
+			sgstring header;									//Packã®ãƒ˜ãƒƒãƒ€ãƒ¼
 			std::vector<ReadElement> elements;	//Elements
 		};
 
@@ -81,9 +81,9 @@ namespace SGFramework
 			//default
 			Groop() = default;
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//ƒwƒbƒ_[‚ğİ’è
-			//ˆø”1: ƒwƒbƒ_[
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ãƒ˜ãƒƒãƒ€ãƒ¼ã‚’è¨­å®š
+			//å¼•æ•°1: ãƒ˜ãƒƒãƒ€ãƒ¼
 			Groop(const sgstring& header) : header(header) {}
 			
 			//[] operator
@@ -107,7 +107,7 @@ namespace SGFramework
 			//elements.crend() (get function property)
 			SGF_FUNCTION_PROPERTY const auto crend() const { return packs.crend(); }
 
-			sgstring header;					//Groop‚Ìƒwƒbƒ_[
+			sgstring header;					//Groopã®ãƒ˜ãƒƒãƒ€ãƒ¼
 			std::vector<Pack> packs;	//Packs
 		};
 	};

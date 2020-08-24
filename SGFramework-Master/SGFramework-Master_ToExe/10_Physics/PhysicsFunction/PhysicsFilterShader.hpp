@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-•¨—ƒGƒ“ƒWƒ“(PhysX)‚ðŠÇ—‚·‚éPhysics class
-	¨Collision Filter‚ð’è‹`‚·‚é PhysicsFilterShader.hpp
+ç‰©ç†ã‚¨ãƒ³ã‚¸ãƒ³(PhysX)ã‚’ç®¡ç†ã™ã‚‹Physics class
+	â†’Collision Filterã‚’å®šç¾©ã™ã‚‹ PhysicsFilterShader.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_PHYSICS_FILTER_SHADER_HPP_
 #define SGFRAMEWORK_HEADER_PHYSICS_FILTER_SHADER_HPP_
@@ -30,18 +30,18 @@ namespace SGFramework
 		PX_UNUSED(constantBlock);
 		PX_UNUSED(constantBlockSize);
 		
-		//ƒŒƒCƒ„[”»’è
+		//ãƒ¬ã‚¤ãƒ¤ãƒ¼åˆ¤å®š
 		if ((filterData0.word0 & filterData1.word1) == 0)
 			return PxFilterFlag::eSUPPRESS;
 
-		//ƒgƒŠƒK[‚ª‚¢‚È‚¢->CollisionÝ’è
+		//ãƒˆãƒªã‚¬ãƒ¼ãŒã„ãªã„->Collisionè¨­å®š
 		if (((attributes0 | attributes1) & PxFilterObjectFlag::eTRIGGER) == 0)
 		{
 			pairFlags = PxPairFlag::eSOLVE_CONTACT |
 				PxPairFlag::eDETECT_DISCRETE_CONTACT |
 				PxPairFlag::eDETECT_CCD_CONTACT;
 		}
-		//ƒgƒŠƒK[‚ª‚¢‚é->TriggerÝ’è
+		//ãƒˆãƒªã‚¬ãƒ¼ãŒã„ã‚‹->Triggerè¨­å®š
 		else
 		{
 			pairFlags = PxPairFlag::eDETECT_DISCRETE_CONTACT |

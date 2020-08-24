@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Physics Message‚ğˆµ‚¤PhysicsMessage structure
+Physics Messageã‚’æ‰±ã†PhysicsMessage structure
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_PHYSICS_MESSAGE_HPP_
 #define SGFRAMEWORK_HEADER_PHYSICS_MESSAGE_HPP_
@@ -17,16 +17,16 @@ namespace SGFramework
 		class BaseCollider;
 	}
 
-	//ƒp[ƒc
+	//ãƒ‘ãƒ¼ãƒ„
 	namespace Detail
 	{
 		//Physics
 		namespace Physics
 		{
-			//Physics Message‚ğˆµ‚¤PhysicsMessage structure
+			//Physics Messageã‚’æ‰±ã†PhysicsMessage structure
 			struct PhysicsMessage
 			{
-				//•t‘Ñî•ñ‚ğŠi”[‚·‚éAttachment union
+				//ä»˜å¸¯æƒ…å ±ã‚’æ ¼ç´ã™ã‚‹Attachment union
 				union Attachment
 				{
 					inline Attachment() { ZeroMemory(this, sizeof(Attachment)); }
@@ -48,10 +48,10 @@ namespace SGFramework
 					bool booleanData;		//bool data
 				};
 
-				//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
+				//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 				inline PhysicsMessage(uint messageType, uint instanceID)
 					: attachment(), type(messageType), instanceID(instanceID) {}
-				//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]->memcpy
+				//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]->memcpy
 				inline PhysicsMessage(const PhysicsMessage& copy)
 				{
 					memcpy_s(this, sizeof(PhysicsMessage), &copy, sizeof(PhysicsMessage));
@@ -64,19 +64,19 @@ namespace SGFramework
 				}
 				//----------------------------------------------------------------------------------
 				//[Release]
-				//Pointer‚È‚Ç‚ª•t‘Ñ‚³‚ê‚Ä‚¢‚éê‡ŠJ•ú‚·‚é
+				//Pointerãªã©ãŒä»˜å¸¯ã•ã‚Œã¦ã„ã‚‹å ´åˆé–‹æ”¾ã™ã‚‹
 				inline void Release();
 
-				Attachment attachment;			//•t‘Ñî•ñ
+				Attachment attachment;			//ä»˜å¸¯æƒ…å ±
 				uint type;								//message type
 				uint instanceID;						//instance id
 			};
-			//56ƒoƒCƒg‚Éû‚ß‚½‚¢Bâ‘ÎB
+			//56ãƒã‚¤ãƒˆã«åã‚ãŸã„ã€‚çµ¶å¯¾ã€‚
 			static constexpr size_t cMessageSize = sizeof(PhysicsMessage);
 
 			//----------------------------------------------------------------------------------
 			//[Release]
-			//Pointer‚È‚Ç‚ª•t‘Ñ‚³‚ê‚Ä‚¢‚éê‡ŠJ•ú‚·‚é
+			//Pointerãªã©ãŒä»˜å¸¯ã•ã‚Œã¦ã„ã‚‹å ´åˆé–‹æ”¾ã™ã‚‹
 			inline void PhysicsMessage::Release()
 			{
 				if (type == (MessageType::PointerMessageFlag | MessageType::RegisterRigidBodyRG))

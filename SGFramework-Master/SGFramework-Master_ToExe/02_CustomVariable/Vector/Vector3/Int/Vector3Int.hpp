@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-3‚Â‚Ì’l‚ğˆµ‚¦‚éVector3Int \‘¢‘Ì
-Å‚à‘½—p‚·‚é\‘¢‘ÌƒVƒŠ[ƒY‚Ì1‚Â‚È‚Ì‚Å•Ê©ìVector‚ªŠÖŒW‚È‚¢‚à‚Ì‚Í‘S‚ÄinlineÀ‘•
+3ã¤ã®å€¤ã‚’æ‰±ãˆã‚‹Vector3Int æ§‹é€ ä½“
+æœ€ã‚‚å¤šç”¨ã™ã‚‹æ§‹é€ ä½“ã‚·ãƒªãƒ¼ã‚ºã®1ã¤ãªã®ã§åˆ¥è‡ªä½œVectorãŒé–¢ä¿‚ãªã„ã‚‚ã®ã¯å…¨ã¦inlineå®Ÿè£…
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_VECTOR_VECTOR3INT_HPP_
 #define SGFRAMEWORK_HEADER_VECTOR_VECTOR3INT_HPP_
@@ -15,33 +15,33 @@
 //Framework namespace
 namespace SGFramework
 {
-	//ƒvƒƒgƒ^ƒCƒvéŒ¾
+	//ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—å®£è¨€
 	struct Vector2Int;
 	struct Vector4Int;
 	struct Vector3;
 	struct Vector3Ref;
 
-	//3‚Â‚Ì’l‚ğˆµ‚¦‚éVector3Int \‘¢‘Ì
+	//3ã¤ã®å€¤ã‚’æ‰±ãˆã‚‹Vector3Int æ§‹é€ ä½“
 	struct Vector3Int final
 	{
 		//----------------------------------------------------------------------------------
-		//inlneÀ‘•
+		//inlneå®Ÿè£…
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘S‚Ä0‚Éİ’è‚³‚ê‚é
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å…¨ã¦0ã«è¨­å®šã•ã‚Œã‚‹
 		inline constexpr Vector3Int();
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: x
-		//ˆø”2: y
-		//ˆø”3: z
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: x
+		//å¼•æ•°2: y
+		//å¼•æ•°3: z
 		inline constexpr Vector3Int(int x, int y, int z);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: int*
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: int*
 		inline Vector3Int(const int* array);
 
 		//----------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ namespace SGFramework
 		Vector3Int& operator=(Vector3Int&&) = default;
 
 		//----------------------------------------------------------------------------------
-		//•Ï”
+		//å¤‰æ•°
 		union
 		{
 			struct
@@ -83,55 +83,55 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Absolute]
-		//return: â‘Î’l
+		//return: çµ¶å¯¾å€¤
 		inline Vector3Int Absolute() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[Magnitude]
-		//return: ©g‚ÆVector(0,0,0)‚Ì‹——£
+		//return: è‡ªèº«ã¨Vector(0,0,0)ã®è·é›¢
 		inline constexpr float Magnitude() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ExactMagnitude]
-		//return: ©g‚ÆVector(0,0,0)‚Ì‹——£ (³Šm‚È’l‚¾‚ª•‰‰×‚ª‚‚¢)
+		//return: è‡ªèº«ã¨Vector(0,0,0)ã®è·é›¢ (æ­£ç¢ºãªå€¤ã ãŒè² è·ãŒé«˜ã„)
 		inline float ExactMagnitude() const noexcept;
 
-		//int*ƒIƒyƒŒ[ƒ^[
+		//int*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator int* ();
-		//const int*ƒIƒyƒŒ[ƒ^[
+		//const int*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator const int*() const;
 
-		//-ƒIƒyƒŒ[ƒ^[  
+		//-ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 		inline Vector3Int operator +() const;
-		//-ƒIƒyƒŒ[ƒ^[  
+		//-ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 		inline Vector3Int operator -() const;
-		//==ƒIƒyƒŒ[ƒ^[
+		//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator ==(const Vector3Int& vec) const;
-		//!=ƒIƒyƒŒ[ƒ^[
+		//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator !=(const Vector3Int& vec) const;
 
-		//‰ÁZƒIƒyƒŒ[ƒ^[
+		//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector3Int operator +(const Vector3Int& vec) const;
-		//Œ¸ZƒIƒyƒŒ[ƒ^[
+		//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector3Int operator -(const Vector3Int& vec) const;
-		//æZƒIƒyƒŒ[ƒ^[
+		//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector3Int operator *(const Vector3Int& vec) const;
-		//æZƒIƒyƒŒ[ƒ^[(int)
+		//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 		inline Vector3Int operator *(int value) const;
-		//œZƒIƒyƒŒ[ƒ^[
+		//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector3Int operator /(const Vector3Int& vec) const;
-		//œZƒIƒyƒŒ[ƒ^[(int)
+		//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 		inline Vector3Int operator /(int value) const;
 
-		//+=ƒIƒyƒŒ[ƒ^[
+		//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector3Int &operator +=(const Vector3Int& vec);
-		//-=ƒIƒyƒŒ[ƒ^[
+		//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector3Int &operator -=(const Vector3Int& vec);
-		//*=ƒIƒyƒŒ[ƒ^[
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector3Int &operator *=(const Vector3Int& vec);
-		//*=ƒIƒyƒŒ[ƒ^[(int)
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 		inline const Vector3Int &operator *=(int value);
-		// /=ƒIƒyƒŒ[ƒ^[
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector3Int &operator /=(const Vector3Int& vec);
-		// /=ƒIƒyƒŒ[ƒ^[(int)
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 		inline const Vector3Int &operator /=(int value);
 
 
@@ -139,49 +139,49 @@ namespace SGFramework
 		inline operator sgstring() const { return ToString(); }
 		//----------------------------------------------------------------------------------
 		//[ToString]
-		//sgstringŒ`®‚Åo—Í‚·‚é
-		//return: sgstring•\Œ»‚µ‚½this
+		//sgstringå½¢å¼ã§å‡ºåŠ›ã™ã‚‹
+		//return: sgstringè¡¨ç¾ã—ãŸthis
 		inline sgstring ToString() const { return (L"(" + std::to_wstring(x) + L", " + std::to_wstring(y) + L", " + std::to_wstring(z) + L")"); }
 		//----------------------------------------------------------------------------------
 		//[ToStdString]
-		//std::stringŒ`®‚Åo—Í‚·‚é
-		//return: std::string•\Œ»‚µ‚½this
+		//std::stringå½¢å¼ã§å‡ºåŠ›ã™ã‚‹
+		//return: std::stringè¡¨ç¾ã—ãŸthis
 		inline std::string ToStdString() const { return ("(" + std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + ")"); }
 
 		//----------------------------------------------------------------------------------
-		//cppÀ‘•
+		//cppå®Ÿè£…
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: Vector3
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Vector3
 		Vector3Int(const Vector3& value);
 
 		//----------------------------------------------------------------------------------
 		//[ToFloat]
-		//Vector3‚É•ÏŠ·‚ğs‚¤
-		//return: Vector3‚É•ÏŠ·‚µ‚½this
+		//Vector3ã«å¤‰æ›ã‚’è¡Œã†
+		//return: Vector3ã«å¤‰æ›ã—ãŸthis
 		Vector3 ToFloat() const;
 
-		//Vector2IntƒIƒyƒŒ[ƒ^[
+		//Vector2Intã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		operator Vector2Int() const;
-		//Vector4IntƒIƒyƒŒ[ƒ^[
+		//Vector4Intã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		operator Vector4Int() const;
 
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector3Int& operator = (const Vector2Int& vec);
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector3Int& operator = (const Vector4Int& vec);
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector3Int& operator = (const Vector3& vec);
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector3Int& operator = (const Vector3Ref& vec);
 	};
 
 	//----------------------------------------------------------------------------------
 	//[wostream operator]
-	//ˆø”1: stream
-	//ˆø”2: this
+	//å¼•æ•°1: stream
+	//å¼•æ•°2: this
 	inline std::wostream& operator<<(std::wostream& stream, const Vector3Int& value)
 	{
 		const wchar* string = value.ToString();
@@ -190,20 +190,20 @@ namespace SGFramework
 	}
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘S‚Ä0‚Éİ’è‚³‚ê‚é
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//å…¨ã¦0ã«è¨­å®šã•ã‚Œã‚‹
 	inline constexpr Vector3Int::Vector3Int() : x(0), y(0), z(0) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: x
-	//ˆø”2: y
-	//ˆø”3: z
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: x
+	//å¼•æ•°2: y
+	//å¼•æ•°3: z
 	inline constexpr Vector3Int::Vector3Int(int x, int y, int z) : x(x), y(y), z(z) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: int*
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: int*
 	inline Vector3Int::Vector3Int(const int * array)
 	{
 		value[0] = array[0];	value[1] = array[1];
@@ -212,14 +212,14 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Absolute]
-	//return: â‘Î’l
+	//return: çµ¶å¯¾å€¤
 	inline Vector3Int Vector3Int::Absolute() const noexcept
 	{
 		return std::move(Vector3Int(x < 0 ? -x : x, y < 0 ? -y : y, z < 0 ? -z : z));
 	}
 	//----------------------------------------------------------------------------------
 	//[Magnitude]
-	//return: ©g‚ÆVector(0,0,0)‚Ì‹——£
+	//return: è‡ªèº«ã¨Vector(0,0,0)ã®è·é›¢
 	inline constexpr float Vector3Int::Magnitude() const noexcept
 	{
 		float f = static_cast<float>(x * x + y * y + z * z);
@@ -231,75 +231,75 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ExactMagnitude]
-	//return: ©g‚ÆVector(0,0,0)‚Ì‹——£ (³Šm‚È’l‚¾‚ª•‰‰×‚ª‚‚¢)
+	//return: è‡ªèº«ã¨Vector(0,0,0)ã®è·é›¢ (æ­£ç¢ºãªå€¤ã ãŒè² è·ãŒé«˜ã„)
 	inline float Vector3Int::ExactMagnitude() const noexcept
 	{
 		return std::sqrtf(static_cast<float>(x * x + y * y + z * z));
 	}
 
-	//int*ƒIƒyƒŒ[ƒ^[
+	//int*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector3Int::operator int*() { return value; }
-	//const int*ƒIƒyƒŒ[ƒ^[
+	//const int*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector3Int::operator const int*() const { return value; }
 
-	//+ƒIƒyƒŒ[ƒ^[  
+	//+ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 	inline Vector3Int Vector3Int::operator+() const { return Vector3Int(+this->x, +this->y, +this->z); }
-	//-ƒIƒyƒŒ[ƒ^[  
+	//-ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 	inline Vector3Int Vector3Int::operator-() const { return Vector3Int(-this->x, -this->y, -this->z); }
-	//==ƒIƒyƒŒ[ƒ^[
+	//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline bool Vector3Int::operator==(const Vector3Int& vec) const { return (x == vec.x && y == vec.y && z == vec.z); }
-	//!=ƒIƒyƒŒ[ƒ^[
+	//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline bool Vector3Int::operator!=(const Vector3Int& vec) const { return (x != vec.x || y != vec.y || z != vec.z); }
 
-	//‰ÁZƒIƒyƒŒ[ƒ^[
+	//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector3Int Vector3Int::operator+(const Vector3Int& vec) const { return Vector3Int(x + vec.x, y + vec.y, z + vec.z); }
-	//Œ¸ZƒIƒyƒŒ[ƒ^[
+	//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector3Int Vector3Int::operator-(const Vector3Int& vec) const { return Vector3Int(x - vec.x, y - vec.y, z - vec.z); }
-	//æZƒIƒyƒŒ[ƒ^[
+	//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector3Int Vector3Int::operator*(const Vector3Int& vec) const { return Vector3Int(x * vec.x, y * vec.y, z * vec.z); }
-	//æZƒIƒyƒŒ[ƒ^[(int)
+	//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 	inline Vector3Int Vector3Int::operator*(int value) const { return Vector3Int(x * value, y * value, z * value); }
-	//œZƒIƒyƒŒ[ƒ^[
+	//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector3Int Vector3Int::operator/(const Vector3Int& vec) const { return Vector3Int(x / vec.x, y / vec.y, z / vec.z); }
-	//œZƒIƒyƒŒ[ƒ^[(int)
+	//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 	inline Vector3Int Vector3Int::operator/(int value) const { return Vector3Int(x / value, y / value, z / value); }
 
-	//+=ƒIƒyƒŒ[ƒ^[
+	//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector3Int & Vector3Int::operator+=(const Vector3Int& vec)
 	{
 		this->x += vec.x;		this->y += vec.y;
 		this->z += vec.z;
 		return *this;
 	}
-	//-=ƒIƒyƒŒ[ƒ^[
+	//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector3Int & Vector3Int::operator-=(const Vector3Int& vec)
 	{
 		this->x -= vec.x;		this->y -= vec.y;
 		this->z -= vec.z;
 		return *this;
 	}
-	//*=ƒIƒyƒŒ[ƒ^[
+	//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector3Int & Vector3Int::operator*=(const Vector3Int& vec)
 	{
 		this->x *= vec.x;		this->y *= vec.y;
 		this->z *= vec.z;
 		return *this;
 	}
-	//*=ƒIƒyƒŒ[ƒ^[(int)
+	//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 	inline const Vector3Int & Vector3Int::operator*=(int value)
 	{
 		this->x *= value;		this->y *= value;
 		this->z *= value;
 		return *this;
 	}
-	// /=ƒIƒyƒŒ[ƒ^[
+	// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector3Int & Vector3Int::operator/=(const Vector3Int& vec)
 	{
 		this->x /= vec.x;		this->y /= vec.y;
 		this->z /= vec.z;
 		return *this;
 	}
-	// /=ƒIƒyƒŒ[ƒ^[(int)
+	// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 	inline const Vector3Int & Vector3Int::operator/=(int value)
 	{
 		this->x /= value;		this->y /= value;

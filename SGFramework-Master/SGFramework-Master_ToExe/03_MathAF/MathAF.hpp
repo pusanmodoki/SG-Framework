@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ŒvZƒ‰ƒCƒuƒ‰ƒŠ‚ÈMathAF namespace (math + almost float)
+è¨ˆç®—ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãªMathAF namespace (math + almost float)
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_MATHAF_HPP_
 #define SGFRAMEWORK_HEADER_MATHAF_HPP_

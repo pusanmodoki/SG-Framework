@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-GUI‚ğŠÇ—‚·‚éGUI class
+GUIã‚’ç®¡ç†ã™ã‚‹GUI class
 ------------------------------------------------------------------------------------*/
 #include "GUI.hpp"
 #include "../08_Input/Input.hpp"
@@ -11,7 +11,7 @@ namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
 	//[BuildDebugStream]
-	//DebugStream‚ğ“o˜^î•ñ‚ğŠî‚É\’z‚·‚é
+	//DebugStreamã‚’ç™»éŒ²æƒ…å ±ã‚’åŸºã«æ§‹ç¯‰ã™ã‚‹
 	void GUI::BuildDebugStream()
 	{
 		m_drawConsoleMessages.reserve(m_cDebugDrawReserveSize);
@@ -19,33 +19,33 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[SyncDebugStream]
-	//DebugStream‚©‚çConsoleMessage‚Ö•ÏŠ·‚µ•Û‘¶‚·‚é
+	//DebugStreamã‹ã‚‰ConsoleMessageã¸å¤‰æ›ã—ä¿å­˜ã™ã‚‹
 	void GUI::SyncDebugStream()
 	{
-		//“Ç‚İ‚İƒoƒbƒtƒ@
+		//èª­ã¿è¾¼ã¿ãƒãƒƒãƒ•ã‚¡
 		static wchar readBuffer[m_cBufferLength] = { L'\0' };
 
-		//ƒNƒŠƒA = true->ƒRƒ}ƒ“ƒhƒoƒbƒtƒ@ƒNƒŠƒA
+		//ã‚¯ãƒªã‚¢ = true->ã‚³ãƒãƒ³ãƒ‰ãƒãƒƒãƒ•ã‚¡ã‚¯ãƒªã‚¢
 		if (IS_TRUE(m_isClearDebugStreams.load()))
 		{
 			m_drawConsoleMessages.clear();
 			AtomicOperation::Init(m_isClearDebugStreams, false);
 		}
 
-		//Œ»İ
+		//ç¾åœ¨æ™‚åˆ»
 		std::string timeString(Time::CurrentTimeToStdString());
 
-		//ƒXƒgƒŠ[ƒ€ƒ‹[ƒv
+		//ã‚¹ãƒˆãƒªãƒ¼ãƒ ãƒ«ãƒ¼ãƒ—
 		for (auto& e : m_debugStreams)
 		{
-			//ƒwƒbƒ_[ = time + thread name
+			//ãƒ˜ãƒƒãƒ€ãƒ¼ = time + thread name
 			std::string header = (timeString + "(" + e.second.threadName + "): ");
 
-			//getline->console message‚É•ÏŠ·AƒXƒ^ƒbƒN
+			//getline->console messageã«å¤‰æ›ã€ã‚¹ã‚¿ãƒƒã‚¯
 			while (e.second.stream.getline(readBuffer, m_cBufferLength))
 				m_drawConsoleMessages.emplace_back(ConsoleMessage(header, readBuffer));
 
-			//‚±‚Ì‚Ü‚Ü‚¾‚ÆƒXƒgƒŠ[ƒ€‚ªg‚¦‚È‚­‚È‚é‚Ì‚Åswap
+			//ã“ã®ã¾ã¾ã ã¨ã‚¹ãƒˆãƒªãƒ¼ãƒ ãŒä½¿ãˆãªããªã‚‹ã®ã§swap
 			std::wstringstream swap;
 			e.second.stream.swap(swap);
 		}
@@ -53,20 +53,20 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[DrawDebugStream]
-	//DebugStream(ConsoleMessage)‚ğ•`‰æ‚·‚é
+	//DebugStream(ConsoleMessage)ã‚’æç”»ã™ã‚‹
 	void GUI::DrawDebugStream()
 	{
 		//Show Window?
 		static bool s_isShowWindow = false;
 
-		//Ctrl + F12->Ø‚è‘Ö‚¦
+		//Ctrl + F12->åˆ‡ã‚Šæ›¿ãˆ
 		if ((Input::Keybord::GetKeyDown(KeyCode::Control) ||
 			Input::Keybord::GetKeyDown(KeyCode::F12))
 			&& (Input::Keybord::GetKey(KeyCode::Control) &&
 				Input::Keybord::GetKey(KeyCode::F12)))
 			s_isShowWindow = !s_isShowWindow;
 
-		//•`‰æ‚È‚µ->I—¹
+		//æç”»ãªã—->çµ‚äº†
 		if (IS_FALSE(s_isShowWindow)) return;
 
 		// We specify a default position/size in case there's no data in the .ini file. Typically this isn't required! We only do it to make the Demo applications a little more welcoming.
@@ -245,7 +245,7 @@ namespace SGFramework
 			//Scene Infomation Node
 			if (ImGui::TreeNode("Scene Infomation"))
 			{
-				//SceneManager lock(— ‚ÅUpdate‚ÆƒKƒx[ƒWƒRƒŒƒNƒ^‚ª‘–‚Á‚Ä‚¢‚é‚½‚ß)
+				//SceneManager lock(è£ã§Updateã¨ã‚¬ãƒ™ãƒ¼ã‚¸ã‚³ãƒ¬ã‚¯ã‚¿ãŒèµ°ã£ã¦ã„ã‚‹ãŸã‚)
 				std::lock_guard<std::mutex> guard(Scene::SceneManager::m_mutex);
 				
 				//Now Scene
@@ -267,13 +267,13 @@ namespace SGFramework
 			//Asset Infomation Node
 			if (ImGui::TreeNode("Asset Infomation"))
 			{
-				//AssetManager lock(— ‚ÅŠÄ‹ƒXƒŒƒbƒh‚ª‘–‚Á‚Ä‚¢‚é‚½‚ß)
+				//AssetManager lock(è£ã§ç›£è¦–ã‚¹ãƒ¬ãƒƒãƒ‰ãŒèµ°ã£ã¦ã„ã‚‹ãŸã‚)
 				Administrator::AssetManager::LockGuardAsset(Administrator::AssetManager::m_lock, false);
 
 				//Assets roop
 				for (auto& e : Administrator::AssetManager::m_assets)
 				{
-					//Pointer Lock‚Å‚«‚È‚¯‚ê‚Î•`‰æ‚ğs‚í‚È‚¢
+					//Pointer Lockã§ããªã‘ã‚Œã°æç”»ã‚’è¡Œã‚ãªã„
 					if (IS_FALSE(e.second.LockShared())) continue;
 
 					std::string path = "File path: " + e.second->name().to_std_string();
@@ -284,7 +284,7 @@ namespace SGFramework
 						std::string str = "File size (KB): %f";
 						float fileSize = e.second->fileSizes->getKiloByte();
 						
-						//ƒtƒ@ƒCƒ‹ƒTƒCƒY‚Ì’PˆÊ‚ğ’²®
+						//ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚ºã®å˜ä½ã‚’èª¿æ•´
 						if (fileSize > 1024.0f)
 						{
 							fileSize = e.second->fileSizes->getMegaByte();
@@ -312,7 +312,7 @@ namespace SGFramework
 			//Transform Objects Viewer Node
 			if (ImGui::TreeNode("Transform Objects Viewer"))
 			{
-				//RootList Lock(— ‚ÅUpdate, ƒKƒx[ƒWƒRƒŒƒNƒ^‚ª‘–‚Á‚Ä‚¢‚é‚½‚ß)
+				//RootList Lock(è£ã§Update, ã‚¬ãƒ™ãƒ¼ã‚¸ã‚³ãƒ¬ã‚¯ã‚¿ãŒèµ°ã£ã¦ã„ã‚‹ãŸã‚)
 				AtomicOperation::LockGuard guard(Transform::m_rootList.m_lock);
 				
 				//Transforms Loop
@@ -368,7 +368,7 @@ namespace SGFramework
 			for (auto& e : m_drawConsoleMessages)
 			{
 				e.Draw();	
-				//ƒXƒNƒ[ƒ‹‚ğ‰º‚Ö
+				//ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚’ä¸‹ã¸
 				ImGui::SetScrollHereY(1.0f);
 			}
 
@@ -380,7 +380,7 @@ namespace SGFramework
 	//----------------------------------------------------------------------------------
 	//[ShowTimeLayers]
 	//DebugStream->Draw Time Layers
-	//ˆø”1: draw layer
+	//å¼•æ•°1: draw layer
 	void GUI::ShowTimeLayers(const WeakPointer<Time::TimeLayer>& layer)
 	{
 		std::string myName = "Layer name: " + layer->layerName->to_std_string();
@@ -408,7 +408,7 @@ namespace SGFramework
 	//----------------------------------------------------------------------------------
 	//[ShowAudioLayers]
 	//DebugStream->Draw Audio Submix Layers
-	//ˆø”1: draw layer
+	//å¼•æ•°1: draw layer
 	void GUI::ShowAudioLayers(const WeakPointer<Audio::SubmixLayer>& layer)
 	{
 		std::string myName = "Layer name: " + layer->layerName->to_std_string();
@@ -435,7 +435,7 @@ namespace SGFramework
 	//----------------------------------------------------------------------------------
 	//[ShowScene]
 	//DebugStream->Draw Sub Scenes
-	//ˆø”1: draw scene
+	//å¼•æ•°1: draw scene
 	void GUI::ShowScene(const UniquePointer<Scene::BaseScene>& scene)
 	{
 		ImGui::Text("Scene name: %s", scene->getSceneName().to_std_string().c_str());
@@ -446,7 +446,7 @@ namespace SGFramework
 		if (scene->numSubScenes > 0 
 			&& ImGui::TreeNode("Sub Scenes"))
 		{
-			//Lock Guard (— ‚ÅUpdate, ƒKƒx[ƒWƒRƒŒƒNƒ^‚ª‘–‚Á‚Ä‚¢‚é‚½‚ß)
+			//Lock Guard (è£ã§Update, ã‚¬ãƒ™ãƒ¼ã‚¸ã‚³ãƒ¬ã‚¯ã‚¿ãŒèµ°ã£ã¦ã„ã‚‹ãŸã‚)
 			std::lock_guard<std::mutex> subGuard(scene->m_mutex);
 
 			//Draw Loop
@@ -464,14 +464,14 @@ namespace SGFramework
 	//----------------------------------------------------------------------------------
 	//[ShowTransform]
 	//DebugStream->Draw Transforms
-	//ˆø”1: draw transform
+	//å¼•æ•°1: draw transform
 	void GUI::ShowTransform(Transform* transform)
 	{
 		//Transform Detail Node
 		if (ImGui::TreeNode(("Name: " + transform->name->to_std_string()).c_str()))
 		{
 			{
-				//Variables Lock (ˆêXŒÄ‚Ño‚³‚ê‚é‚Ì‚ÅŒø—¦‰»)
+				//Variables Lock (ä¸€ã€…å‘¼ã³å‡ºã•ã‚Œã‚‹ã®ã§åŠ¹ç‡åŒ–)
 				Transform::LockGuardTransform guard(transform->m_lock);
 
 				ImGui::Text("Instance ID: %d", transform->instanceID());

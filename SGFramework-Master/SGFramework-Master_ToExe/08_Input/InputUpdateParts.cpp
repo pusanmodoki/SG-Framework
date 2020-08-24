@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-“ü—Í‚ğŠÇ—‚·‚éInput class
-	->UpdateZZ‚ğ‹Lq‚·‚éInputUpdateParts.cpp
+å…¥åŠ›ã‚’ç®¡ç†ã™ã‚‹Input class
+	->Updateã€‡ã€‡ã‚’è¨˜è¿°ã™ã‚‹InputUpdateParts.cpp
 ------------------------------------------------------------------------------------*/
 #include "Input.hpp"
 #include "../05_Graphics/Graphics.hpp"
@@ -10,26 +10,26 @@ namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
 	//[UpdateAny]
-	//Any‚ÌXV‚ğs‚¤
+	//Anyã®æ›´æ–°ã‚’è¡Œã†
 	void Input::UpdateAny()
 	{
-		//‰Šú‰»
+		//åˆæœŸåŒ–
 		m_isAny = false;
 		m_isAnyDown = false;
 		m_isAnyUp = false;
 
-		//•ÏXˆ—
+		//å¤‰æ›´å‡¦ç†
 		if (m_isNextChangeAnyMode & m_cNextChangeAnyInfoBit)
 		{
-			//AnyMode•ÏX
+			//AnyModeå¤‰æ›´
 			m_isAnyMode = (m_isNextChangeAnyMode & m_cNextChangeAnyValueBit) ? true : false;
-			//ƒtƒ‰ƒO‰Šú‰»
+			//ãƒ•ãƒ©ã‚°åˆæœŸåŒ–
 			m_isNextChangeAnyMode = 0;
-			//false‚È‚ç‚à‚¤I—¹
+			//falseãªã‚‰ã‚‚ã†çµ‚äº†
 			if (IS_FALSE(m_isAnyMode)) return;
 		}
 
-		//KeyStates‚ÌAnyŠm”F
+		//KeyStatesã®Anyç¢ºèª
 		for (uint i = 0; i < m_cKeyStateSize; ++i)
 		{
 			if (m_keyStates[m_cNowState][i] & Keybord::cGetKeyCheckBit)
@@ -40,10 +40,10 @@ namespace SGFramework
 				m_isAnyUp = true;
 		}
 
-		//‚±‚±‚©‚çJoystick
+		//ã“ã“ã‹ã‚‰Joystick
 		if (IS_FALSE(m_isUseJoystick)) return;
 
-		//Joystick‚ÌAnyŠm”F
+		//Joystickã®Anyç¢ºèª
 		for (uint i = 0; i < m_joystickCount; ++i)
 		{
 			if (m_joystickStates[m_cNowState][i].dwPacketNumber == m_joystickStates[m_cOldState][i].dwPacketNumber)
@@ -64,12 +64,12 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[UpdateKeybordStateAndSendMessage]
-	//KeybordState‚ÌXV‚ÆUpdateƒƒbƒZ[ƒW‚Ì‘—M‚ğs‚¤
+	//KeybordStateã®æ›´æ–°ã¨Updateãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®é€ä¿¡ã‚’è¡Œã†
 	void Input::UpdateKeybordStateAndSendMessage()
 	{
-		//ƒƒbƒZ[ƒW‘—M
+		//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡
 		SendNotifyMessage(SGFramework::Window::HwndHolder::main, WM_SGFRAMEWORK_UPDATE_INPUT, 0, 0);
-		//Rapid—pMapXV
+		//Rapidç”¨Mapæ›´æ–°
 		for (auto& e : m_keybordStateRapids)
 		{
 			e.second.value = IS_TRUE(e.second.isEnd.exchange(false)) ?
@@ -79,23 +79,23 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[UpdateMouse]
-	//Mouse‚ÌXV‚ğs‚¤ (WindowProcedure“à)
+	//Mouseã®æ›´æ–°ã‚’è¡Œã† (WindowProcedureå†…)
 	void Input::UpdateMouse()
 	{
-		//æ“¾—p
+		//å–å¾—ç”¨
 		static POINT s_point = {};
 		
-		//wheelæ“¾
+		//wheelå–å¾—
 		m_mouseWheels[m_cNowState] = m_mouseWheels[m_cMessageState];
 		m_mouseWheels[m_cMessageState] = 0;
 
-		//oldæ“¾
+		//oldå–å¾—
 		m_mouseAcceleration = m_mousePosition;		
-		//À•Wæ“¾
+		//åº§æ¨™å–å¾—
 		GetCursorPos(&s_point);
 		ScreenToClient(SGFramework::Window::HwndHolder::main, &s_point);
 
-		//•â³
+		//è£œæ­£
 		if (s_point.x < 0)
 			s_point.x = 0;
 		else if (s_point.x > Graphics::screen.width)
@@ -106,56 +106,56 @@ namespace SGFramework
 		else if (s_point.y > Graphics::screen.height)
 			s_point.y = Graphics::screen.height;
 
-		//‘ã“ü
+		//ä»£å…¥
 		m_mousePosition.x = static_cast<float>(s_point.x);
 		m_mousePosition.y = static_cast<float>(s_point.y);
 
-		//-1.0f ~ 1.0f‚Ì’l‚Ö•ÏŠ·
+		//-1.0f ~ 1.0fã®å€¤ã¸å¤‰æ›
 		m_mousePosition /= (Graphics::screen.windowSize().ToFloat() * 0.5f);
 		m_mousePosition -= Const::Vector2::one;
 		m_mousePosition.y *= -1;
 
-		//‰Á‘¬“xXV
+		//åŠ é€Ÿåº¦æ›´æ–°
 		m_mouseAcceleration = m_mousePosition - m_mouseAcceleration;
 	}
 
 	//----------------------------------------------------------------------------------
 	//[UpdateJoystick]
-	//Joystick‚ÌXV‚ğs‚¤
+	//Joystickã®æ›´æ–°ã‚’è¡Œã†
 	void Input::UpdateJoystick()
 	{
-		static HRESULT s_connectionResult = 0;			//Ú‘±¬Œ÷ƒŠƒUƒ‹ƒg
+		static HRESULT s_connectionResult = 0;			//æ¥ç¶šæˆåŠŸãƒªã‚¶ãƒ«ãƒˆ
 		static uint s_nowJoystick = 0;							//i
 		static std::array<bool, Joystick::cJoystickMax> s_sets;
 
-		//OldƒRƒs[
+		//Oldã‚³ãƒ”ãƒ¼
 		memcpy_s(m_joystickStates[m_cOldState].data(), m_cJoystickStateSize, m_joystickStates[m_cNowState].data(), m_cJoystickStateSize);
 		//ZeroMemory
 		ZeroMemory(s_sets.data(), Joystick::cJoystickMax);
 
-		//æ“¾ƒ‹[ƒv
+		//å–å¾—ãƒ«ãƒ¼ãƒ—
 		s_nowJoystick = 0;
 		for (auto& e : m_joystickStates[m_cNowState])
 		{
-			//æ“¾
+			//å–å¾—
 			s_connectionResult = XInputGetState(s_nowJoystick, &e);
 			
-			//Ú‘±‚³‚ê‚Ä‚é‚©‚µ‚½‚¯‚Ç‚È‚©‚Á‚½ or@Ú‘±‚³‚ê‚Ä‚¢‚é‚Í‚¸‚È‚Ì‚É‚È‚©‚Á‚½
+			//æ¥ç¶šã•ã‚Œã¦ã‚‹ã‹è©¦ã—ãŸã‘ã©ãªã‹ã£ãŸ orã€€æ¥ç¶šã•ã‚Œã¦ã„ã‚‹ã¯ãšãªã®ã«ãªã‹ã£ãŸ
 			if ((m_joystickCount == 0 && s_connectionResult != ERROR_SUCCESS) ||
 				(s_nowJoystick < m_joystickCount && s_connectionResult != ERROR_SUCCESS))
 			{
-				//Ú‘±”XV‚µ‚Äƒ‹[ƒvI—¹
+				//æ¥ç¶šæ•°æ›´æ–°ã—ã¦ãƒ«ãƒ¼ãƒ—çµ‚äº†
 				ReConnectJoyStick();
 				break;
 			}
-			//Ú‘±‚³‚ê‚Ä‚¢‚È‚¢‚Í‚¸‚È‚Ì‚É‚³‚ê‚Ä‚¢‚é
+			//æ¥ç¶šã•ã‚Œã¦ã„ãªã„ã¯ãšãªã®ã«ã•ã‚Œã¦ã„ã‚‹
 			else if (s_nowJoystick >= m_joystickCount && s_connectionResult == ERROR_SUCCESS)
 			{
-				//Ú‘±”XV
+				//æ¥ç¶šæ•°æ›´æ–°
 				ReConnectJoyStick();
 			}
 
-			//value / 32767 ‚ÌŒ‹‰Ê‚ª‚¸‚ê‚é‚Ì‚Å•â³
+			//value / 32767 ã®çµæœãŒãšã‚Œã‚‹ã®ã§è£œæ­£
 			if (e.Gamepad.sThumbLX == -32768)
 				++e.Gamepad.sThumbLX;
 			if (e.Gamepad.sThumbLY == -32768)
@@ -170,7 +170,7 @@ namespace SGFramework
 			++s_nowJoystick;
 		}
 
-		//RapidXV
+		//Rapidæ›´æ–°
 		for (auto& e1 : m_joystickRapids)
 			for(auto& e2 : e1)
 		{
@@ -178,46 +178,46 @@ namespace SGFramework
 				Time::unScaledWorldDeltaTime : e2.second.value + Time::unScaledWorldDeltaTime;
 		}
 
-		//VibrationXVƒ‹[ƒv (High, Low)		
+		//Vibrationæ›´æ–°ãƒ«ãƒ¼ãƒ— (High, Low)		
 		for (s_nowJoystick = 0; s_nowJoystick < 2; ++s_nowJoystick)
 		{
-			//ƒLƒ…[XVƒ‹[ƒv
+			//ã‚­ãƒ¥ãƒ¼æ›´æ–°ãƒ«ãƒ¼ãƒ—
 			for (auto& e : m_joystickVibrationQueues[s_nowJoystick])
 			{
-				//g—p”“’B‚Åbreak
+				//ä½¿ç”¨æ•°åˆ°é”ã§break
 				if (e.useStick >= m_joystickCount) break;
 
-				//ƒZƒbƒg‰Â”\‚È‚çƒZƒbƒg‚·‚é
+				//ã‚»ãƒƒãƒˆå¯èƒ½ãªã‚‰ã‚»ãƒƒãƒˆã™ã‚‹
 				if (e.isLive & (IS_FALSE(m_joystickSetVibrations[s_nowJoystick][e.useStick].isLive) | e.isForced))
 					m_joystickSetVibrations[s_nowJoystick][e.useStick] = e;
-				//ƒZƒbƒg¸”s
+				//ã‚»ãƒƒãƒˆå¤±æ•—
 				e.isLive = false;
 			}
 
-			//SetVibratoinsXVƒ‹[ƒv
+			//SetVibratoinsæ›´æ–°ãƒ«ãƒ¼ãƒ—
 			for (auto& e : m_joystickSetVibrations[s_nowJoystick])
 			{
-				//İ’è–³‚µ‚Åcontinue
+				//è¨­å®šç„¡ã—ã§continue
 				if (IS_FALSE(e.isLive)) continue;
-				//g—p”“’B‚Åbreak
+				//ä½¿ç”¨æ•°åˆ°é”ã§break
 				if (e.useStick >= m_joystickCount) break;
 
-				//ƒtƒF[ƒhƒAƒEƒg
+				//ãƒ•ã‚§ãƒ¼ãƒ‰ã‚¢ã‚¦ãƒˆ
 				if (e.type & VibrationQueue::cFadeOut)
 				{
-					//‘Ò‹@
+					//å¾…æ©Ÿ
 					if (e.type & VibrationQueue::cWaitState)
 					{
 						e.elapased += Time::unScaledWorldDeltaTime;
 						if (e.elapased >= e.wait)
 							e.type ^= VibrationQueue::cWaitState;
 						
-						//Å‰‚Å‚·
+						//æœ€åˆã§ã™
 						if (e.type & VibrationQueue::StartState)
 						{
 							e.type ^= VibrationQueue::StartState;
 
-							//İ’è
+							//è¨­å®š
 							if (s_nowJoystick == m_cHighState)
 								m_joystickVibrations[e.useStick].wRightMotorSpeed = static_cast<ushort>(e.target * m_cJoystickVibrationMax);
 							else if (s_nowJoystick == m_cLowState)
@@ -226,7 +226,7 @@ namespace SGFramework
 							s_sets[e.useStick] = true;
 						}
 					}
-					//‘Ò‹@I—¹
+					//å¾…æ©Ÿçµ‚äº†
 					else
 					{
 						e.target -= e.speed * Time::unScaledWorldDeltaTime;
@@ -236,7 +236,7 @@ namespace SGFramework
 							e.isLive = false;
 						}
 
-						//İ’è
+						//è¨­å®š
 						if (s_nowJoystick == m_cHighState)
 							m_joystickVibrations[e.useStick].wRightMotorSpeed = static_cast<ushort>(e.target * m_cJoystickVibrationMax);
 						else if (s_nowJoystick == m_cLowState)
@@ -245,10 +245,10 @@ namespace SGFramework
 						s_sets[e.useStick] = true;
 					}
 				}
-				//‘¦İ’è
+				//å³æ™‚è¨­å®š
 				else if (e.type & VibrationQueue::cSet)
 				{
-					//İ’è
+					//è¨­å®š
 					if (s_nowJoystick == m_cHighState)
 						m_joystickVibrations[e.useStick].wRightMotorSpeed = static_cast<ushort>(e.target * m_cJoystickVibrationMax);
 					else if (s_nowJoystick == m_cLowState)
@@ -259,7 +259,7 @@ namespace SGFramework
 				}
 			}
 
-			//ÀÛ‚Éİ’è‚·‚éƒ‹[ƒv
+			//å®Ÿéš›ã«è¨­å®šã™ã‚‹ãƒ«ãƒ¼ãƒ—
 			for (int i = 0; i < 4; i++)
 			{
 				if (IS_TRUE(s_sets[i])) XInputSetState(i, &m_joystickVibrations[i]);
@@ -269,55 +269,55 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[UpdateWindow]
-	//Window‚ÌXV‚ğs‚¤ (WindowProcedure“à)
+	//Windowã®æ›´æ–°ã‚’è¡Œã† (WindowProcedureå†…)
 	void Input::UpdateWindow()
 	{
-		//æ“¾—p
+		//å–å¾—ç”¨
 		static RECT rect = {};
 		
-		//oldæ“¾
+		//oldå–å¾—
 		m_windowAcceleration = m_windowPosition;
 
-		//Rectæ“¾
+		//Rectå–å¾—
 		GetWindowRect(SGFramework::Window::HwndHolder::main, &rect);
-		//•â³
+		//è£œæ­£
 		m_windowPosition.x = static_cast<float>(rect.left + (rect.right - rect.left) / 2);
 		m_windowPosition.y = static_cast<float>(rect.top + (rect.bottom - rect.top) / 2);
 		m_windowPosition /= Graphics::screen.m_resolution.ToFloat();
-		//‰Á‘¬“xİ’è
+		//åŠ é€Ÿåº¦è¨­å®š
 		m_windowAcceleration = m_windowPosition - m_windowAcceleration;
 		
-		//Rectæ“¾
+		//Rectå–å¾—
 		GetClientRect(SGFramework::Window::HwndHolder::main, &rect);
-		//ƒEƒBƒ“ƒhƒEƒTƒCƒYİ’è
+		//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚ºè¨­å®š
 		Graphics::screen.ChangeWindowSize(rect.right - rect.left, rect.bottom - rect.top);
 		m_windowSize = Graphics::screen.m_windowSize.ToFloat() / Graphics::screen.m_resolution.ToFloat();
 	}
 
 	//----------------------------------------------------------------------------------
 	//[ReConnectJoyStick]
-	// Ú‘±”‚ğXV‚·‚é
+	// æ¥ç¶šæ•°ã‚’æ›´æ–°ã™ã‚‹
 	void Input::ReConnectJoyStick()
 	{
-		//XInput‰Šú‰»
-		XINPUT_STATE connectionCheck[4];	//Ú‘±—pƒoƒbƒtƒ@ì¬
-		m_joystickCount = 0;						//Ú‘±ƒJƒEƒ“ƒg‰Šú‰»
+		//XInputåˆæœŸåŒ–
+		XINPUT_STATE connectionCheck[4];	//æ¥ç¶šç”¨ãƒãƒƒãƒ•ã‚¡ä½œæˆ
+		m_joystickCount = 0;						//æ¥ç¶šã‚«ã‚¦ãƒ³ãƒˆåˆæœŸåŒ–
 		
-		//Ú‘±Šm”Fƒ‹[ƒv
+		//æ¥ç¶šç¢ºèªãƒ«ãƒ¼ãƒ—
 		for (uint i = 0; i < Joystick::cJoystickMax; i++)
 		{
-			HRESULT connectionResult;				//Ú‘±¬Œ÷ƒŠƒUƒ‹ƒg
-			//ó‘Ôæ“¾
+			HRESULT connectionResult;				//æ¥ç¶šæˆåŠŸãƒªã‚¶ãƒ«ãƒˆ
+			//çŠ¶æ…‹å–å¾—
 			connectionResult = XInputGetState(i, &connectionCheck[i]);
-			//æ“¾¬Œ÷(Ú‘±‚µ‚Ä‚¢‚é)ê‡‚ÍÚ‘±ƒJƒEƒ“ƒg++
+			//å–å¾—æˆåŠŸ(æ¥ç¶šã—ã¦ã„ã‚‹)å ´åˆã¯æ¥ç¶šã‚«ã‚¦ãƒ³ãƒˆ++
 			if (connectionResult == ERROR_SUCCESS)	++m_joystickCount;
 		}
 		
-		//Callback‚ ‚éê‡ŒÄ‚Ño‚·
+		//Callbackã‚ã‚‹å ´åˆå‘¼ã³å‡ºã™
 		if (m_joystickCallback)
 			m_joystickCallback(m_joystickCount);
 	
-		//flagİ’è
+		//flagè¨­å®š
 		if (m_joystickCount == 0)
 			m_isUseJoystick = false;
 		else

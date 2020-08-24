@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-2‚Â‚Ì’l‚ğˆµ‚¦‚éVector2Ref (QÆ) \‘¢‘Ì
-Å‚à‘½—p‚·‚é\‘¢‘ÌƒVƒŠ[ƒY‚Ì1‚Â‚È‚Ì‚Å•Ê©ìVector‚ªŠÖŒW‚È‚¢‚à‚Ì‚Í‘S‚ÄinlineÀ‘•
+2ã¤ã®å€¤ã‚’æ‰±ãˆã‚‹Vector2Ref (å‚ç…§) æ§‹é€ ä½“
+æœ€ã‚‚å¤šç”¨ã™ã‚‹æ§‹é€ ä½“ã‚·ãƒªãƒ¼ã‚ºã®1ã¤ãªã®ã§åˆ¥è‡ªä½œVectorãŒé–¢ä¿‚ãªã„ã‚‚ã®ã¯å…¨ã¦inlineå®Ÿè£…
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_VECTOR_VECTOR2_REF_HPP_
 #define SGFRAMEWORK_HEADER_VECTOR_VECTOR2_REF_HPP_
@@ -17,28 +17,28 @@
 //Framework namespace
 namespace SGFramework
 {
-	//ƒvƒƒgƒ^ƒCƒvéŒ¾
+	//ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—å®£è¨€
 	struct Vector3;
 	struct Vector4;
 	struct Vector2Int;
 
-	//2‚Â‚Ì’l‚ğˆµ‚¦‚éVector2RefRef \‘¢‘Ì
+	//2ã¤ã®å€¤ã‚’æ‰±ãˆã‚‹Vector2RefRef æ§‹é€ ä½“
 	struct Vector2Ref final
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//inlneÀ‘•
+		//inlneå®Ÿè£…
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1:x
-		//ˆø”2:y
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1:x
+		//å¼•æ•°2:y
 		inline Vector2Ref(float& x, float& y);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: Vector2
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Vector2
 		inline Vector2Ref(DirectX::XMFLOAT2& value);
 
 		//----------------------------------------------------------------------------------
@@ -65,173 +65,173 @@ namespace SGFramework
 		Vector2Ref& operator=(Vector2Ref&&) = default;
 	
 		//----------------------------------------------------------------------------------
-		//•Ï”
+		//å¤‰æ•°
 		float& x;		//X
 		float& y;		//Y
 
 		//----------------------------------------------------------------------------------
 		//[Absolute]
-		//return: â‘Î’l
+		//return: çµ¶å¯¾å€¤
 		inline Vector2 Absolute() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[Magnitude]
-		//return: ©g‚ÆVector(0,0)‚Ì‹——£
+		//return: è‡ªèº«ã¨Vector(0,0)ã®è·é›¢
 		inline constexpr float Magnitude() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ExactMagnitude]
-		//return: ©g‚ÆVector(0,0)‚Ì‹——£ (³Šm‚È’l‚¾‚ª•‰‰×‚ª‚‚¢)
+		//return: è‡ªèº«ã¨Vector(0,0)ã®è·é›¢ (æ­£ç¢ºãªå€¤ã ãŒè² è·ãŒé«˜ã„)
 		inline float ExactMagnitude() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[ClampMagnitude]
-		//Length‚ğmaxLength‚É§ŒÀ‚·‚é
-		//return: §ŒÀ‚µ‚½vector
-		//ˆø”1: §ŒÀLength
+		//Lengthã‚’maxLengthã«åˆ¶é™ã™ã‚‹
+		//return: åˆ¶é™ã—ãŸvector
+		//å¼•æ•°1: åˆ¶é™Length
 		inline Vector2 ClampMagnitude(const float maxLength) const noexcept;
 		//----------------------------------------------------------------------------------
 		//[Normalize]
-		//return: ©g‚Ì³‹K‰»ƒxƒNƒgƒ‹
+		//return: è‡ªèº«ã®æ­£è¦åŒ–ãƒ™ã‚¯ãƒˆãƒ«
 		inline Vector2 Normalized() const noexcept;
 
-		//XMVECTORƒIƒyƒŒ[ƒ^[
+		//XMVECTORã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator XmVector() const noexcept;
 		
-		//+ƒIƒyƒŒ[ƒ^[  
+		//+ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 		inline Vector2 operator +() const;
-		//-ƒIƒyƒŒ[ƒ^[  
+		//-ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 		inline Vector2 operator -() const;
-		//==ƒIƒyƒŒ[ƒ^[
+		//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator ==(const Vector2Ref& vec) const;
-		//!=ƒIƒyƒŒ[ƒ^[
+		//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator !=(const Vector2Ref& vec) const;
 
-		//‰ÁZƒIƒyƒŒ[ƒ^[
+		//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator +(const Vector2Ref& vec) const;
-		//Œ¸ZƒIƒyƒŒ[ƒ^[
+		//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator -(const Vector2Ref& vec) const;
-		//æZƒIƒyƒŒ[ƒ^[
+		//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator *(const Vector2Ref& vec) const;
-		//æZƒIƒyƒŒ[ƒ^[(float)
+		//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 		inline Vector2 operator *(float value) const;
-		//œZƒIƒyƒŒ[ƒ^[
+		//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator /(const Vector2Ref& vec) const;
-		//œZƒIƒyƒŒ[ƒ^[(float)
+		//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 		inline Vector2 operator /(float value) const;
 
-		//+=ƒIƒyƒŒ[ƒ^[
+		//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref &operator +=(const Vector2Ref& vec);
-		//-=ƒIƒyƒŒ[ƒ^[
+		//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref &operator -=(const Vector2Ref& vec);
-		//*=ƒIƒyƒŒ[ƒ^[
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref &operator *=(const Vector2Ref& vec);
-		//*=ƒIƒyƒŒ[ƒ^[(float)
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 		inline const Vector2Ref &operator *=(float value);
-		// /=ƒIƒyƒŒ[ƒ^[
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref &operator /=(const Vector2Ref& vec);
-		// /=ƒIƒyƒŒ[ƒ^[(float)
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 		inline const Vector2Ref &operator /=(float value);
 
 		//sgstring operator
 		inline operator sgstring() const { return ToString(); }
 		//----------------------------------------------------------------------------------
 		//[ToString]
-		//sgstringŒ`®‚Åo—Í‚·‚é
-		//return: sgstring•\Œ»‚µ‚½this
+		//sgstringå½¢å¼ã§å‡ºåŠ›ã™ã‚‹
+		//return: sgstringè¡¨ç¾ã—ãŸthis
 		inline sgstring ToString() const { return (L"(" + std::to_wstring(x) + L", " + std::to_wstring(y) + L")"); }
 		//----------------------------------------------------------------------------------
 		//[ToStdString]
-		//std::stringŒ`®‚Åo—Í‚·‚é
-		//return: std::string•\Œ»‚µ‚½this
+		//std::stringå½¢å¼ã§å‡ºåŠ›ã™ã‚‹
+		//return: std::stringè¡¨ç¾ã—ãŸthis
 		inline std::string ToStdString() const { return ("(" + std::to_string(x) + ", " + std::to_string(y) + ")"); }
 
 		//----------------------------------------------------------------------------------
 		//Vector2
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: Vector2
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Vector2
 		inline Vector2Ref(Vector2& value);
 		//----------------------------------------------------------------------------------
 		//[ToVector2]
 		//return: Vector2
 		inline Vector2 ToVector2() const { return Vector2(*this); }
 
-		//= ƒIƒyƒŒ[ƒ^[
+		//= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref& operator = (const Vector2& vec);
 
-		//==ƒIƒyƒŒ[ƒ^[
+		//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator ==(const Vector2& vec) const;
-		//!=ƒIƒyƒŒ[ƒ^[
+		//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator !=(const Vector2& vec) const;
 
-		//‰ÁZƒIƒyƒŒ[ƒ^[
+		//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator +(const Vector2& vec) const;
-		//Œ¸ZƒIƒyƒŒ[ƒ^[
+		//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator -(const Vector2& vec) const;
-		//æZƒIƒyƒŒ[ƒ^[
+		//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator *(const Vector2& vec) const;
-		//œZƒIƒyƒŒ[ƒ^[
+		//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator /(const Vector2& vec) const;
 		
-		//+=ƒIƒyƒŒ[ƒ^[
+		//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref &operator +=(const Vector2& vec);
-		//-=ƒIƒyƒŒ[ƒ^[
+		//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref &operator -=(const Vector2& vec);
-		//*=ƒIƒyƒŒ[ƒ^[
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref &operator *=(const Vector2& vec);
-		// /=ƒIƒyƒŒ[ƒ^[
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref &operator /=(const Vector2& vec);
 
-		//= ƒIƒyƒŒ[ƒ^[
+		//= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref& operator = (const DirectX::XMFLOAT2& vec);
 
-		//==ƒIƒyƒŒ[ƒ^[
+		//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator ==(const DirectX::XMFLOAT2& vec) const;
-		//!=ƒIƒyƒŒ[ƒ^[
+		//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator !=(const DirectX::XMFLOAT2& vec) const;
 
-		//‰ÁZƒIƒyƒŒ[ƒ^[
+		//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator +(const DirectX::XMFLOAT2& vec) const;
-		//Œ¸ZƒIƒyƒŒ[ƒ^[
+		//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator -(const DirectX::XMFLOAT2& vec) const;
-		//æZƒIƒyƒŒ[ƒ^[
+		//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator *(const DirectX::XMFLOAT2& vec) const;
-		//œZƒIƒyƒŒ[ƒ^[
+		//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector2 operator /(const DirectX::XMFLOAT2& vec) const;
 
-		//+=ƒIƒyƒŒ[ƒ^[
+		//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref &operator +=(const DirectX::XMFLOAT2& vec);
-		//-=ƒIƒyƒŒ[ƒ^[
+		//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref &operator -=(const DirectX::XMFLOAT2& vec);
-		//*=ƒIƒyƒŒ[ƒ^[
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref &operator *=(const DirectX::XMFLOAT2& vec);
-		// /=ƒIƒyƒŒ[ƒ^[
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector2Ref &operator /=(const DirectX::XMFLOAT2& vec);
 
 
 		//----------------------------------------------------------------------------------
-		//cppÀ‘•
+		//cppå®Ÿè£…
 
-		//Vector3ƒIƒyƒŒ[ƒ^[
+		//Vector3ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		operator Vector3() const;
-		//Vector4ƒIƒyƒŒ[ƒ^[
+		//Vector4ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		operator Vector4() const;
-		//Vector2IntƒIƒyƒŒ[ƒ^[
+		//Vector2Intã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		operator Vector2Int() const;
 
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector2Ref& operator = (const Vector3& vec);
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector2Ref& operator = (const Vector4& vec);
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector2Ref& operator = (const Vector2Int& vec);
 	};
 
 
 	//----------------------------------------------------------------------------------
 	//[wostream operator]
-	//ˆø”1: stream
-	//ˆø”2: this
+	//å¼•æ•°1: stream
+	//å¼•æ•°2: this
 	inline std::wostream& operator<<(std::wostream& stream, const Vector2Ref& value)
 	{
 		const wchar* string = value.ToString();
@@ -240,27 +240,27 @@ namespace SGFramework
 	}
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1:x
-	//ˆø”2:y
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1:x
+	//å¼•æ•°2:y
 	inline Vector2Ref::Vector2Ref(float& x, float& y) : x(x), y(y) {};
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: XMFLOAT2
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: XMFLOAT2
 	inline Vector2Ref::Vector2Ref(DirectX::XMFLOAT2 & vec) : x(vec.x), y(vec.y) { }
 
 	//----------------------------------------------------------------------------------
 	//[Absolute]
-	//return: â‘Î’l
+	//return: çµ¶å¯¾å€¤
 	inline Vector2 Vector2Ref::Absolute() const noexcept
 	{
 		return Vector2(x < 0.0f ? -x : x, y < 0.0f ? -y : y);
 	}
 	//----------------------------------------------------------------------------------
 	//[Magnitude]
-	//return: ©g‚ÆVector(0,0)‚Ì‹——£
+	//return: è‡ªèº«ã¨Vector(0,0)ã®è·é›¢
 	inline constexpr float Vector2Ref::Magnitude() const noexcept
 	{
 		float f = x * x + y * y;
@@ -272,93 +272,93 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ExactMagnitude]
-	//return: ©g‚ÆVector(0,0)‚Ì‹——£ (³Šm‚È’l‚¾‚ª•‰‰×‚ª‚‚¢)
+	//return: è‡ªèº«ã¨Vector(0,0)ã®è·é›¢ (æ­£ç¢ºãªå€¤ã ãŒè² è·ãŒé«˜ã„)
 	inline float Vector2Ref::ExactMagnitude() const noexcept
 	{
 		return std::sqrtf(x * x + y * y);
 	}
 	//----------------------------------------------------------------------------------
 	//[ClampMagnitude]
-	//vec‚ÌLength‚ğmaxLength‚É§ŒÀ‚·‚é
-	//return: §ŒÀ‚µ‚½vector
-	//ˆø”2: §ŒÀLength
+	//vecã®Lengthã‚’maxLengthã«åˆ¶é™ã™ã‚‹
+	//return: åˆ¶é™ã—ãŸvector
+	//å¼•æ•°2: åˆ¶é™Length
 	inline Vector2 Vector2Ref::ClampMagnitude(const float maxLength) const noexcept
 	{
 		return std::move(Vector2(DirectX::XMVector2ClampLength(this->ToXmVector(), 0.0f, maxLength)));
 	}
 	//----------------------------------------------------------------------------------
 	//[Normalize]
-	//return: ©g‚Ì³‹K‰»ƒxƒNƒgƒ‹
+	//return: è‡ªèº«ã®æ­£è¦åŒ–ãƒ™ã‚¯ãƒˆãƒ«
 	inline Vector2 Vector2Ref::Normalized() const noexcept
 	{
 		float divLength = 1.0f / ExactMagnitude();
 		return std::move(Vector2(x * divLength, y * divLength));
 	}
 
-	//XMVECTORƒIƒyƒŒ[ƒ^[
+	//XMVECTORã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2Ref::operator XmVector() const noexcept { return DirectX::XMLoadFloat2(&DirectX::XMFLOAT2(x, y)); }
 
-	//+ƒIƒyƒŒ[ƒ^[  
+	//+ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 	inline Vector2 Vector2Ref::operator+() const { return Vector2(+this->x, +this->y); }
-	//-ƒIƒyƒŒ[ƒ^[  
+	//-ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 	inline Vector2 Vector2Ref::operator-() const { return Vector2(-this->x, -this->y); }
-	//==ƒIƒyƒŒ[ƒ^[
+	//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline bool Vector2Ref::operator==(const Vector2Ref& vec) const
 	{
 		return (fabsf(x - vec.x) <= MathAF::cEpsilon
 			&& fabsf(y - vec.y) <= MathAF::cEpsilon);
 	}
-	//!=ƒIƒyƒŒ[ƒ^[
+	//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline bool Vector2Ref::operator!=(const Vector2Ref& vec) const
 	{
 		return (fabsf(x - vec.x) > MathAF::cEpsilon
 			&& fabsf(y - vec.y) > MathAF::cEpsilon);
 	}
 
-	//‰ÁZƒIƒyƒŒ[ƒ^[
+	//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2Ref::operator+(const Vector2Ref& vec) const { return Vector2(x + vec.x, y + vec.y); }
-	//Œ¸ZƒIƒyƒŒ[ƒ^[
+	//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2Ref::operator-(const Vector2Ref& vec) const { return Vector2(x - vec.x, y - vec.y); }
-	//æZƒIƒyƒŒ[ƒ^[
+	//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2Ref::operator*(const Vector2Ref& vec) const { return Vector2(x * vec.x, y * vec.y); }
-	//æZƒIƒyƒŒ[ƒ^[(float)
+	//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 	inline Vector2 Vector2Ref::operator*(const float value) const { return Vector2(x * value, y * value); }
-	//œZƒIƒyƒŒ[ƒ^[
+	//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2Ref::operator/(const Vector2Ref& vec) const { return Vector2(x / vec.x, y / vec.y); }
-	//œZƒIƒyƒŒ[ƒ^[(float)
+	//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 	inline Vector2 Vector2Ref::operator/(const float value) const { return Vector2(x / value, y / value); }
 
-	//+=ƒIƒyƒŒ[ƒ^[
+	//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector2Ref & Vector2Ref::operator+=(const Vector2Ref& vec)
 	{
 		this->x += vec.x;		this->y += vec.y;
 		return *this;
 	}
-	//-=ƒIƒyƒŒ[ƒ^[
+	//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector2Ref & Vector2Ref::operator-=(const Vector2Ref& vec)
 	{
 		this->x -= vec.x;		this->y -= vec.y;
 		return *this;
 	}
-	//*=ƒIƒyƒŒ[ƒ^[
+	//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector2Ref & Vector2Ref::operator*=(const Vector2Ref& vec)
 	{
 		this->x *= vec.x;		this->y *= vec.y;
 		return *this;
 	}
-	//*=ƒIƒyƒŒ[ƒ^[(float)
+	//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 	inline const Vector2Ref & Vector2Ref::operator*=(const float value)
 	{
 		this->x *= value;		this->y *= value;
 		return *this;
 	}
-	// /=ƒIƒyƒŒ[ƒ^[
+	// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector2Ref & Vector2Ref::operator/=(const Vector2Ref& vec)
 	{
 		this->x /= vec.x;		this->y /= vec.y;
 		return *this;
 	}
-	// /=ƒIƒyƒŒ[ƒ^[(float)
+	// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(float)
 	inline const Vector2Ref & Vector2Ref::operator/=(const float value)
 	{
 		this->x /= value;		this->y /= value;
@@ -369,38 +369,38 @@ namespace SGFramework
 	//Vector2
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: Vector2
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: Vector2
 	Vector2Ref::Vector2Ref(Vector2 & value) : x(value.x), y(value.y) {}
 
-	//= ƒIƒyƒŒ[ƒ^[
+	//= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector2Ref & Vector2Ref::operator=(const Vector2 & vec)
 	{
 		x = vec.x; y = vec.y;
 		return *this;
 	}
 	
-	//==ƒIƒyƒŒ[ƒ^[
+	//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline bool Vector2Ref::operator==(const Vector2 & vec) const
 	{
 		return (fabsf(x - vec.x) <= MathAF::cEpsilon
 			&& fabsf(y - vec.y) <= MathAF::cEpsilon);
 	}
-	//!=ƒIƒyƒŒ[ƒ^[
+	//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline bool Vector2Ref::operator!=(const Vector2 & vec) const
 	{
 		return (fabsf(x - vec.x) > MathAF::cEpsilon
 			&& fabsf(y - vec.y) > MathAF::cEpsilon);
 	}
 
-	//‰ÁZƒIƒyƒŒ[ƒ^[
+	//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2Ref::operator+(const Vector2 & vec) const { return Vector2(x + vec.x, y + vec.y);}
-	//Œ¸ZƒIƒyƒŒ[ƒ^[
+	//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2Ref::operator-(const Vector2 & vec) const { return Vector2(x - vec.x, y - vec.y); }
-	//æZƒIƒyƒŒ[ƒ^[
+	//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2Ref::operator*(const Vector2 & vec) const { return Vector2(x * vec.x, y * vec.y); }
-	//œZƒIƒyƒŒ[ƒ^[
+	//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2Ref::operator/(const Vector2 & vec) const { return Vector2(x  / vec.x, y / vec.y); }
 
 	inline const Vector2Ref & Vector2Ref::operator+=(const Vector2 & vec)
@@ -427,33 +427,33 @@ namespace SGFramework
 		return *this;
 	}
 
-	//= ƒIƒyƒŒ[ƒ^[
+	//= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector2Ref & Vector2Ref::operator=(const DirectX::XMFLOAT2 & vec)
 	{
 		x = vec.x; y = vec.y;
 		return *this;
 	}
 
-	//==ƒIƒyƒŒ[ƒ^[
+	//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline bool Vector2Ref::operator==(const DirectX::XMFLOAT2& vec) const
 	{
 		return (fabsf(x - vec.x) <= MathAF::cEpsilon
 			&& fabsf(y - vec.y) <= MathAF::cEpsilon);
 	}
-	//!=ƒIƒyƒŒ[ƒ^[
+	//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline bool Vector2Ref::operator!=(const DirectX::XMFLOAT2& vec) const
 	{
 		return (fabsf(x - vec.x) > MathAF::cEpsilon
 			&& fabsf(y - vec.y) > MathAF::cEpsilon);
 	}
 
-	//‰ÁZƒIƒyƒŒ[ƒ^[
+	//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2Ref::operator+(const DirectX::XMFLOAT2& vec) const { return Vector2(x + vec.x, y + vec.y); }
-	//Œ¸ZƒIƒyƒŒ[ƒ^[
+	//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2Ref::operator-(const DirectX::XMFLOAT2& vec) const { return Vector2(x - vec.x, y - vec.y); }
-	//æZƒIƒyƒŒ[ƒ^[
+	//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2Ref::operator*(const DirectX::XMFLOAT2& vec) const { return Vector2(x * vec.x, y * vec.y); }
-	//œZƒIƒyƒŒ[ƒ^[
+	//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector2 Vector2Ref::operator/(const DirectX::XMFLOAT2& vec) const { return Vector2(x / vec.x, y / vec.y); }
 
 	inline const Vector2Ref & Vector2Ref::operator+=(const DirectX::XMFLOAT2& vec)

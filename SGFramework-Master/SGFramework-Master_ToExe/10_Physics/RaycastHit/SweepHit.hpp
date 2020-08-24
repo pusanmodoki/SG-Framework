@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-SweepCast(BoxCast, SphereCast, CapsuleCast)で使用するSweepHit structure
+SweepCast(BoxCast, SphereCast, CapsuleCast)縺ｧ菴ｿ逕ｨ縺吶ｋSweepHit structure
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_SWEEP_HIT_HPP_
 #define SGFRAMEWORK_HEADER_SWEEP_HIT_HPP_
@@ -9,7 +9,7 @@ SweepCast(BoxCast, SphereCast, CapsuleCast)で使用するSweepHit structure
 //Framework namespace
 namespace SGFramework
 {
-	//SweepCast(BoxCast, SphereCast, CapsuleCast)で使用するSweepHit structure
+	//SweepCast(BoxCast, SphereCast, CapsuleCast)縺ｧ菴ｿ逕ｨ縺吶ｋSweepHit structure
 	struct SweepHit
 	{
 		//friend
@@ -61,7 +61,7 @@ namespace SGFramework
 	private:
 		//----------------------------------------------------------------------------------
 		//[Init]
-		//Bufferをコピーする
+		//Buffer繧偵さ繝斐�ｼ縺吶ｋ
 		void Init(physx::PxSweepBuffer& buffer)
 		{
 			(*const_cast<bool*>(&this->isValid)) = buffer.getNbAnyHits() ? true : false;

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-DirectX11 PixelSHader‚ğˆµ‚¤PixelShaderAssetX11 class
+DirectX11 PixelSHaderã‚’æ‰±ã†PixelShaderAssetX11 class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_PIXEL_SHADER_ASSET_X11_HPP_
 #define SGFRAMEWORK_HEADER_PIXEL_SHADER_ASSET_X11_HPP_
@@ -10,14 +10,14 @@ DirectX11 PixelSHader‚ğˆµ‚¤PixelShaderAssetX11 class
 // Framework namespace
 namespace SGFramework
 {
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		class AssetManager;
 		//GraphicsDetail namespace
 		namespace GraphicsDetail
 		{
-			//DirectX11 PixelSHader‚ğˆµ‚¤PixelShaderAssetX11 class
+			//DirectX11 PixelSHaderã‚’æ‰±ã†PixelShaderAssetX11 class
 			class PixelShaderAssetX11 final : public SGFramework::BaseClass::BaseShaderAssetX11
 			{
 			public:
@@ -26,20 +26,20 @@ namespace SGFramework
 				friend SharedPointer<TAsset> Asset::InstantiateAsset(const sgstring& filePath, bool isRegisterSharedAsset);
 
 				//----------------------------------------------------------------------------------
-				//[ƒfƒXƒgƒ‰ƒNƒ^]
-				//ƒVƒF[ƒ_[ƒŠƒ\[ƒX‚ÌŠJ•ú‚ğs‚¤
+				//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+				//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒªã‚½ãƒ¼ã‚¹ã®é–‹æ”¾ã‚’è¡Œã†
 				inline ~PixelShaderAssetX11() override;
 
 				//----------------------------------------------------------------------------------
 				//[InstantiateDefaultShader3D]
-				//return: ¶¬‚µ‚½ƒfƒtƒHƒ‹ƒgƒVƒF[ƒ_[
+				//return: ç”Ÿæˆã—ãŸãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚·ã‚§ãƒ¼ãƒ€ãƒ¼
 				static inline SharedPointer<PixelShaderAssetX11> InstantiateDefaultShader3D()
 				{
 					return SharedPointer<PixelShaderAssetX11>();
 				}
 				//----------------------------------------------------------------------------------
 				//[InstantiateDefaultShader2D]
-				//return: ¶¬‚µ‚½ƒfƒtƒHƒ‹ƒgƒVƒF[ƒ_[
+				//return: ç”Ÿæˆã—ãŸãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚·ã‚§ãƒ¼ãƒ€ãƒ¼
 				static inline SharedPointer<PixelShaderAssetX11> InstantiateDefaultShader2D()
 				{
 					return SharedPointer<PixelShaderAssetX11>();
@@ -47,17 +47,17 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[Open]
-				//ƒVƒF[ƒ_[‚ğƒ[ƒh‚·‚é
-				//ˆø”1: ƒVƒF[ƒ_[ƒ‚ƒfƒ‹, default = "ps_5_0"
-				//ˆø”2: ƒGƒ“ƒgƒŠ[ƒ|ƒCƒ“ƒg, default = "main"
+				//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’ãƒ­ãƒ¼ãƒ‰ã™ã‚‹
+				//å¼•æ•°1: ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒ¢ãƒ‡ãƒ«, default = "ps_5_0"
+				//å¼•æ•°2: ã‚¨ãƒ³ãƒˆãƒªãƒ¼ãƒã‚¤ãƒ³ãƒˆ, default = "main"
 				inline void Open(const std::string& shaderModel = "ps_5_0", const std::string& entryPoint = "main");
 				//----------------------------------------------------------------------------------
 				//[Reload]
-				//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤
+				//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
 				inline void Reload() override;
 				//----------------------------------------------------------------------------------
 				//[Close]
-				//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 				inline void Close() override;
 
 				//get asset type (read function property)
@@ -76,26 +76,26 @@ namespace SGFramework
 
 			private:
 				//----------------------------------------------------------------------------------
-				//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-				//‰Šú‰»‚ğs‚¤
+				//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+				//åˆæœŸåŒ–ã‚’è¡Œã†
 				inline PixelShaderAssetX11();
 
 				//----------------------------------------------------------------------------------
 				//[ReleaseShader]
-				//ƒVƒF[ƒ_[‚ğŠJ•ú‚·‚é
+				//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’é–‹æ”¾ã™ã‚‹
 				void ReleaseShader() override;
 
-				//ƒVƒF[ƒ_[
+				//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼
 				ID3D11PixelShader* m_pixelShader = nullptr;
-				//Reload—p
+				//Reloadç”¨
 				std::string m_shaderModel;
-				//Reload—p
+				//Reloadç”¨
 				std::string m_entryPoint;
 			};
 
 			//----------------------------------------------------------------------------------
-			//[ƒfƒXƒgƒ‰ƒNƒ^]
-			//ƒVƒF[ƒ_[ƒŠƒ\[ƒX‚ÌŠJ•ú‚ğs‚¤
+			//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒªã‚½ãƒ¼ã‚¹ã®é–‹æ”¾ã‚’è¡Œã†
 			inline PixelShaderAssetX11::~PixelShaderAssetX11()
 			{
 				ReleaseShader();
@@ -104,16 +104,16 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Open]
-			//ƒVƒF[ƒ_[‚ğƒ[ƒh‚·‚é
-			//ˆø”1: ƒVƒF[ƒ_[ƒ‚ƒfƒ‹, default = "ps_5_0"
-			//ˆø”2: ƒGƒ“ƒgƒŠ[ƒ|ƒCƒ“ƒg, default = "main"
+			//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’ãƒ­ãƒ¼ãƒ‰ã™ã‚‹
+			//å¼•æ•°1: ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒ¢ãƒ‡ãƒ«, default = "ps_5_0"
+			//å¼•æ•°2: ã‚¨ãƒ³ãƒˆãƒªãƒ¼ãƒã‚¤ãƒ³ãƒˆ, default = "main"
 			inline void PixelShaderAssetX11::Open(const std::string& shaderModel, const std::string& entryPoint)
 			{
 				if (IS_TRUE(getIsFileOpened())) return;
 
 				setIsOpenFailed(false);
 
-				//‰Šú‰»
+				//åˆæœŸåŒ–
 				m_pixelShader = nullptr;
 				m_shaderModel = shaderModel;
 				m_entryPoint = entryPoint;
@@ -121,10 +121,10 @@ namespace SGFramework
 
 				try
 				{
-					//ƒVƒF[ƒ_[ƒRƒ“ƒpƒCƒ‹
+					//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«
 					Compile(name(), m_shaderModel, m_entryPoint);
 
-					//ì¬
+					//ä½œæˆ
 					auto result = SGFramework::Administrator::GraphicsX11::device->CreatePixelShader(
 						m_blob ? m_blob->GetBufferPointer() : m_byteData.data(),
 						m_blob ? m_blob->GetBufferSize() : m_byteData.size(),
@@ -148,20 +148,20 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Reload]
-			//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
 			inline void PixelShaderAssetX11::Reload()
 			{
 				if (IS_FALSE(getIsFileOpened())) return;
 				
-				//‚Ü‚¸ŠJ•ú
+				//ã¾ãšé–‹æ”¾
 				ReleaseShader();
 
 				try
 				{
-					//ƒVƒF[ƒ_[ƒRƒ“ƒpƒCƒ‹
+					//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«
 					Compile(name, m_shaderModel, m_entryPoint);
 
-					//ì¬
+					//ä½œæˆ
 					auto result = SGFramework::Administrator::GraphicsX11::device->CreatePixelShader(
 						m_blob ? m_blob->GetBufferPointer() : m_byteData.data(),
 						m_blob ? m_blob->GetBufferSize() : m_byteData.size(),
@@ -179,32 +179,32 @@ namespace SGFramework
 					throw;
 				}
 
-				//ƒŠƒ[ƒh
+				//ãƒªãƒ­ãƒ¼ãƒ‰
 				ReloadBaseAsset();
 			}
 
 			//----------------------------------------------------------------------------------
 			//[Close]
-			//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 			inline void PixelShaderAssetX11::Close()
 			{
-				//ƒVƒF[ƒ_[ŠJ•ú
+				//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼é–‹æ”¾
 				ReleaseShader();
 				//BaseAsset
 				CloseBaseAsset(getType(), false);
 			}
 
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»‚ğs‚¤
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//åˆæœŸåŒ–ã‚’è¡Œã†
 			inline PixelShaderAssetX11::PixelShaderAssetX11() : BaseShaderAssetX11() {}
 
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//ƒVƒF[ƒ_[‚ğƒ[ƒh‚·‚é
-			//ˆø”1: ƒVƒF[ƒ_[‚Ìƒtƒ@ƒCƒ‹ƒpƒX
-			//ˆø”2: ƒVƒF[ƒ_[ƒ‚ƒfƒ‹, default = "ps_5_0"
-			//ˆø”3: ƒGƒ“ƒgƒŠ[ƒ|ƒCƒ“ƒg, default = "main"
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’ãƒ­ãƒ¼ãƒ‰ã™ã‚‹
+			//å¼•æ•°1: ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã®ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹
+			//å¼•æ•°2: ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒ¢ãƒ‡ãƒ«, default = "ps_5_0"
+			//å¼•æ•°3: ã‚¨ãƒ³ãƒˆãƒªãƒ¼ãƒã‚¤ãƒ³ãƒˆ, default = "main"
 			inline void PixelShaderAssetX11::ReleaseShader()
 			{
 				COM_RELEASE(m_pixelShader);

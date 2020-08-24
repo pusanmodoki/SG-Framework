@@ -1,7 +1,7 @@
 /*----------------------------------------------------------------------------------
-4‚Â‚Ì’l‚ğˆµ‚¦‚éVector4 \‘¢‘Ì
-Å‚à‘½—p‚·‚é\‘¢‘ÌƒVƒŠ[ƒY‚Ì1‚Â‚È‚Ì‚Å•Ê©ìVector‚ªŠÖŒW‚È‚¢‚à‚Ì‚Í‘S‚ÄinlineÀ‘•
-¨ŠÖ”, inlineŠÖ”‚ğÀ‘•‚·‚éVector4.cpp	
+4ã¤ã®å€¤ã‚’æ‰±ãˆã‚‹Vector4 æ§‹é€ ä½“
+æœ€ã‚‚å¤šç”¨ã™ã‚‹æ§‹é€ ä½“ã‚·ãƒªãƒ¼ã‚ºã®1ã¤ãªã®ã§åˆ¥è‡ªä½œVectorãŒé–¢ä¿‚ãªã„ã‚‚ã®ã¯å…¨ã¦inlineå®Ÿè£…
+â†’é–¢æ•°, inlineé–¢æ•°ã‚’å®Ÿè£…ã™ã‚‹Vector4.cpp	
 ------------------------------------------------------------------------------------*/
 #include "Vector4.hpp"
 #include "Int/Vector4Int.hpp"
@@ -13,9 +13,9 @@
 namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: Vector4Int
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: Vector4Int
 	Vector4::Vector4(const Vector4Int & vec)
 	{
 		this->x = static_cast<float>(vec.x);		this->y = static_cast<float>(vec.y);
@@ -24,9 +24,9 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[setVector3]
-	//Vector4(vec.x, vec.y, vec.z, w)‚Ì‹——£
-	//ˆø”1: Vector3
-	//ˆø”2: w, default = 0.0f
+	//Vector4(vec.x, vec.y, vec.z, w)ã®è·é›¢
+	//å¼•æ•°1: Vector3
+	//å¼•æ•°2: w, default = 0.0f
 	void Vector4::setVector3(const Vector3 & vector3, float w)
 	{
 		this->x = vector3.x;
@@ -35,29 +35,29 @@ namespace SGFramework
 		this->w = w;
 	}
 
-	//Vector2ƒIƒyƒŒ[ƒ^[
+	//Vector2ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector4::operator Vector2() const { return Vector2(x, y); }
-	//Vector3ƒIƒyƒŒ[ƒ^[
+	//Vector3ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector4::operator Vector3() const { return Vector3(x, y, z); }
-	//Vector4IntƒIƒyƒŒ[ƒ^[
+	//Vector4Intã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector4::operator Vector4Int() const { return Vector4Int(static_cast<int>(x), 
 		static_cast<int>(y), static_cast<int>(z), static_cast<int>(w)); }
 
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector4& Vector4::operator=(const Vector2& vec)
 	{
 		this->x = vec.x;		this->y = vec.y;
 		this->z = 0.0f;		this->w = 0.0f;
 		return *this;
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector4& Vector4::operator=(const Vector3& vec)
 	{
 		this->x = vec.x;		this->y = vec.y;
 		this->z = vec.z;		this->w = 0.0f;
 		return *this;
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector4& Vector4::operator = (const Vector4Int& vec)
 	{
 		this->x = static_cast<float>(vec.x);		this->y = static_cast<float>(vec.y);
@@ -71,12 +71,12 @@ namespace SGFramework
 	//Vector4Ref
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: Vector4Ref
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: Vector4Ref
 	Vector4::Vector4(const Vector4Ref & value) : DirectX::XMFLOAT4(value.x, value.y, value.z, value.w) {}
 
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector4 & Vector4::operator=(const Vector4Ref & vec)
 	{
 		x = vec.x;		y = vec.y;
@@ -84,7 +84,7 @@ namespace SGFramework
 		return *this;
 	}
 
-	//==ƒIƒyƒŒ[ƒ^[
+	//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	bool Vector4::operator ==(const Vector4Ref& vec) const
 	{
 		return (fabsf(x - vec.x) <= MathAF::cEpsilon
@@ -92,7 +92,7 @@ namespace SGFramework
 			&& fabsf(z - vec.z) <= MathAF::cEpsilon
 			&& fabsf(w - vec.w) <= MathAF::cEpsilon);
 	}
-	//!=ƒIƒyƒŒ[ƒ^[
+	//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	bool Vector4::operator !=(const Vector4Ref& vec) const
 	{
 		return (fabsf(x - vec.x) <= MathAF::cEpsilon
@@ -101,49 +101,49 @@ namespace SGFramework
 			&& fabsf(w - vec.w) <= MathAF::cEpsilon);
 	}
 
-	//‰ÁZƒIƒyƒŒ[ƒ^[
+	//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector4 Vector4::operator +(const Vector4Ref& vec) const
 	{
 		return Vector4(x + vec.x, y + vec.y, z + vec.z, w + vec.w);
 	}
-	//Œ¸ZƒIƒyƒŒ[ƒ^[
+	//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector4 Vector4::operator -(const Vector4Ref& vec) const
 	{
 		return Vector4(x - vec.x, y - vec.y, z - vec.z, w - vec.w);
 	}
-	//æZƒIƒyƒŒ[ƒ^[
+	//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector4 Vector4::operator *(const Vector4Ref& vec) const
 	{
 		return Vector4(x * vec.x, y * vec.y, z * vec.z, w * vec.w);
 	}
-	//œZƒIƒyƒŒ[ƒ^[
+	//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector4 Vector4::operator /(const Vector4Ref& vec) const
 	{
 		return Vector4(x / vec.x, y / vec.y, z / vec.z, w / vec.w);
 	}
 
-	//+=ƒIƒyƒŒ[ƒ^[
+	//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector4& Vector4::operator +=(const Vector4Ref& vec)
 	{
 		this->x += vec.x;		this->y += vec.y;
 		this->z += vec.z;		this->w += vec.w;
 		return *this;
 	}
-	//-=ƒIƒyƒŒ[ƒ^[
+	//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector4& Vector4::operator -=(const Vector4Ref& vec)
 	{
 		this->x -= vec.x;		this->y -= vec.y;
 		this->z -= vec.z;		this->w -= vec.w;
 		return *this;
 	}
-	//*=ƒIƒyƒŒ[ƒ^[
+	//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector4& Vector4::operator *=(const Vector4Ref& vec)
 	{
 		this->x *= vec.x;		this->y *= vec.y;
 		this->z *= vec.z;		this->w *= vec.w;
 		return *this;
 	}
-	// /=ƒIƒyƒŒ[ƒ^[
+	// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector4& Vector4::operator /=(const Vector4Ref& vec)
 	{
 		this->x /= vec.x;		this->y /= vec.y;

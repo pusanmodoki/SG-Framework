@@ -1,9 +1,9 @@
 /*----------------------------------------------------------------------------------
-–³ŒÀ•½–Êó“–‚½‚è”»’è‚ğ’ñ‹Ÿ‚·‚éPlaneCollider class
-BuildCollider‚ğÀs‚·‚é‚Ü‚Å“–‚½‚è”»’è‚Í‹@”\‚µ‚È‚¢‚Ì‚Å’ˆÓ
-•½–Ê‚Ì–@ü‚Íforward•ûŒü‚Æ“¯‹`‚Æ‚È‚é
-“–‚½‚è”»’è‚ÍUnity•—‚Å‚Í‚È‚­A
-Plane‚Ì•½–Ê‚©‚çã‚É‚¢‚é(not hit)‚©, ‰º‚É‚¢‚é‚©(hit)‚Ì‚İ‚Å”»’è‚·‚éB’ˆÓB
+ç„¡é™å¹³é¢çŠ¶å½“ãŸã‚Šåˆ¤å®šã‚’æä¾›ã™ã‚‹PlaneCollider class
+BuildColliderã‚’å®Ÿè¡Œã™ã‚‹ã¾ã§å½“ãŸã‚Šåˆ¤å®šã¯æ©Ÿèƒ½ã—ãªã„ã®ã§æ³¨æ„
+å¹³é¢ã®æ³•ç·šã¯forwardæ–¹å‘ã¨åŒç¾©ã¨ãªã‚‹
+å½“ãŸã‚Šåˆ¤å®šã¯Unityé¢¨ã§ã¯ãªãã€
+Planeã®å¹³é¢ã‹ã‚‰ä¸Šã«ã„ã‚‹(not hit)ã‹, ä¸‹ã«ã„ã‚‹ã‹(hit)ã®ã¿ã§åˆ¤å®šã™ã‚‹ã€‚æ³¨æ„ã€‚
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_PLANE_COLLIDER_HPP_
 #define SGFRAMEWORK_HEADER_PLANE_COLLIDER_HPP_
@@ -14,11 +14,11 @@ Plane‚Ì•½–Ê‚©‚çã‚É‚¢‚é(not hit)‚©, ‰º‚É‚¢‚é‚©(hit)‚Ì‚İ‚Å”»’è‚·‚éB’ˆÓB
 //Framework namespace
 namespace SGFramework
 {
-	//–³ŒÀ•½–Êó“–‚½‚è”»’è‚ğ’ñ‹Ÿ‚·‚éPlaneCollider class
-	//BuildCollider‚ğÀs‚·‚é‚Ü‚Å“–‚½‚è”»’è‚Í‹@”\‚µ‚È‚¢‚Ì‚Å’ˆÓ
-	//•½–Ê‚Ì–@ü‚Íforward•ûŒü‚Æ“¯‹`‚Æ‚È‚é
-	//“–‚½‚è”»’è‚ÍUnity•—‚Å‚Í‚È‚­A
-	//Plane‚Ì•½–Ê‚©‚çã‚É‚¢‚é(not hit)‚©, ‰º‚É‚¢‚é‚©(hit)‚Ì‚İ‚Å”»’è‚·‚éB’ˆÓB
+	//ç„¡é™å¹³é¢çŠ¶å½“ãŸã‚Šåˆ¤å®šã‚’æä¾›ã™ã‚‹PlaneCollider class
+	//BuildColliderã‚’å®Ÿè¡Œã™ã‚‹ã¾ã§å½“ãŸã‚Šåˆ¤å®šã¯æ©Ÿèƒ½ã—ãªã„ã®ã§æ³¨æ„
+	//å¹³é¢ã®æ³•ç·šã¯forwardæ–¹å‘ã¨åŒç¾©ã¨ãªã‚‹
+	//å½“ãŸã‚Šåˆ¤å®šã¯Unityé¢¨ã§ã¯ãªãã€
+	//Planeã®å¹³é¢ã‹ã‚‰ä¸Šã«ã„ã‚‹(not hit)ã‹, ä¸‹ã«ã„ã‚‹ã‹(hit)ã®ã¿ã§åˆ¤å®šã™ã‚‹ã€‚æ³¨æ„ã€‚
 	class PlaneCollider : public BaseClass::BaseCollider
 	{
 	public:
@@ -33,12 +33,12 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[BuildCollider]
-		//Collider‚ğ¶¬‚·‚é
-		//•½–Ê‚Ì–@ü‚Íforward•ûŒü‚Æ“¯‹`‚Æ‚È‚é
-		//ˆø”1: collider is trigger?, default = false
-		//ˆø”2: used hit callback?, default = ture
-		//ˆø”3: collider center, default = zero
-		//ˆø”4: physics material, default = defaultMaterial
+		//Colliderã‚’ç”Ÿæˆã™ã‚‹
+		//å¹³é¢ã®æ³•ç·šã¯forwardæ–¹å‘ã¨åŒç¾©ã¨ãªã‚‹
+		//å¼•æ•°1: collider is trigger?, default = false
+		//å¼•æ•°2: used hit callback?, default = ture
+		//å¼•æ•°3: collider center, default = zero
+		//å¼•æ•°4: physics material, default = defaultMaterial
 		inline void BuildCollider(bool isTrigger = false, bool isUsedCallback = true,
 			const Vector3& center = Const::Vector3::zero,
 			const PhysicsMaterial& material = Physics::defaultPhysicsMaterial())
@@ -50,7 +50,7 @@ namespace SGFramework
 			m_material = material;
 			m_isUsedCallback = isUsedCallback;
 
-			//messageì¬
+			//messageä½œæˆ
 			PhysicsMessage message(MessageType::PointerMessageFlag | MessageType::RegisterColliderCL, instanceID());
 			message.attachment.collider = m_thisPointer.DynamicCast<BaseClass::BaseCollider>();
 			//send message
@@ -60,7 +60,7 @@ namespace SGFramework
 	private:
 		//----------------------------------------------------------------------------------
 		//[CreateShape]
-		//ÀÛ‚ÉShape‚ğì¬‚·‚é
+		//å®Ÿéš›ã«Shapeã‚’ä½œæˆã™ã‚‹
 		inline void CreateShape() override
 		{
 			//flag setting
@@ -94,7 +94,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[ChangeScale]
-		//Scale‚ğ•ÏX‚·‚é
+		//Scaleã‚’å¤‰æ›´ã™ã‚‹
 		inline void ChangeScale() override {}
 	};
 }

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ƒ‰ƒ“ƒ_ƒ€‚ÈÀ”‚ğ¶¬‚·‚é Random Class
+ãƒ©ãƒ³ãƒ€ãƒ ãªå®Ÿæ•°ã‚’ç”Ÿæˆã™ã‚‹ Random Class
 ------------------------------------------------------------------------------------*/	
 #ifndef SGFRAMEWORK_HEADER_RANDOM_HPP_
 #define SGFRAMEWORK_HEADER_RANDOM_HPP_
@@ -14,11 +14,11 @@
 //Framework namespace
 namespace SGFramework
 {
-	//friend—p
+	//friendç”¨
 	class Thread;
 	class Application;
 
-	//ƒ‰ƒ“ƒ_ƒ€‚ÈÀ”‚ğ¶¬‚·‚é Random Class
+	//ãƒ©ãƒ³ãƒ€ãƒ ãªå®Ÿæ•°ã‚’ç”Ÿæˆã™ã‚‹ Random Class
 	class Random final
 	{
 	public:
@@ -30,17 +30,17 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Value]
-		//return: 0.0f ~ 1.0f‚Ìƒ‰ƒ“ƒ_ƒ€‚Èfloat’l
+		//return: 0.0f ~ 1.0fã®ãƒ©ãƒ³ãƒ€ãƒ ãªfloatå€¤
 		inline static float Value() { return m_valueFloats.at(std::this_thread::get_id())(); }
 		//----------------------------------------------------------------------------------
 		//[ValueToInt]
-		//return: 0 ~ 100‚Ìƒ‰ƒ“ƒ_ƒ€‚Èint’l
+		//return: 0 ~ 100ã®ãƒ©ãƒ³ãƒ€ãƒ ãªintå€¤
 		inline static int ValueToInt() { return m_valueInts.at(std::this_thread::get_id())(); };
 		//----------------------------------------------------------------------------------
 		//[Range]
-		//return: min(ŠÜ‚Ş) ~ max(ŠÜ‚Ş)‚Ìƒ‰ƒ“ƒ_ƒ€‚Èfloat’l 
-		//ˆø”1: Å¬’l(ŠÜ‚Ş)
-		//ˆø”2: Å‘å’l(ŠÜ‚Ş)
+		//return: min(å«ã‚€) ~ max(å«ã‚€)ã®ãƒ©ãƒ³ãƒ€ãƒ ãªfloatå€¤ 
+		//å¼•æ•°1: æœ€å°å€¤(å«ã‚€)
+		//å¼•æ•°2: æœ€å¤§å€¤(å«ã‚€)
 		inline static float Range(float min, float max)
 		{
 			std::uniform_real_distribution<float> distribution(min, max);
@@ -48,9 +48,9 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[RangeToInt]
-		//return: min(ŠÜ‚Ş) ~ max(ŠÜ‚Ş)‚Ìƒ‰ƒ“ƒ_ƒ€‚Èint’l 
-		//ˆø”1: Å¬’l(ŠÜ‚Ş)
-		//ˆø”2: Å‘å’l(ŠÜ‚Ş)
+		//return: min(å«ã‚€) ~ max(å«ã‚€)ã®ãƒ©ãƒ³ãƒ€ãƒ ãªintå€¤ 
+		//å¼•æ•°1: æœ€å°å€¤(å«ã‚€)
+		//å¼•æ•°2: æœ€å¤§å€¤(å«ã‚€)
 		inline static int RangeToInt(int min, int max)
 		{
 			std::uniform_int_distribution<int> distribution(min, max);
@@ -60,7 +60,7 @@ namespace SGFramework
 	private:
 		//----------------------------------------------------------------------------------
 		//[InitMainThread]
-		//ƒƒCƒ“ƒXƒŒƒbƒh—p, ƒ‰ƒ“ƒ_ƒ€ƒŠƒXƒg‚ğ’Ç‰Á
+		//ãƒ¡ã‚¤ãƒ³ã‚¹ãƒ¬ãƒƒãƒ‰ç”¨, ãƒ©ãƒ³ãƒ€ãƒ ãƒªã‚¹ãƒˆã‚’è¿½åŠ 
 		inline static void InitMainThread()
 		{
 			std::lock_guard<std::mutex> guard(m_lock);
@@ -74,8 +74,8 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[InitMainThread]
-		//è“®—p, ƒ‰ƒ“ƒ_ƒ€ƒŠƒXƒg‚ğ’Ç‰Á
-		//ˆø”1: ƒXƒŒƒbƒh
+		//æ‰‹å‹•ç”¨, ãƒ©ãƒ³ãƒ€ãƒ ãƒªã‚¹ãƒˆã‚’è¿½åŠ 
+		//å¼•æ•°1: ã‚¹ãƒ¬ãƒƒãƒ‰
 		inline static void InitThread(const std::thread& thread)
 		{
 			std::lock_guard<std::mutex> guard(m_lock);
@@ -89,8 +89,8 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[InitThreads]
-		//ƒTƒu—p, ƒ‰ƒ“ƒ_ƒ€ƒŠƒXƒg‚ğ’Ç‰Á
-		//ˆø”1: ƒXƒŒƒbƒh
+		//ã‚µãƒ–ç”¨, ãƒ©ãƒ³ãƒ€ãƒ ãƒªã‚¹ãƒˆã‚’è¿½åŠ 
+		//å¼•æ•°1: ã‚¹ãƒ¬ãƒƒãƒ‰
 		inline static void InitThreads(const std::vector<std::thread>& threads)
 		{
 			std::lock_guard<std::mutex> guard(m_lock);
@@ -106,11 +106,11 @@ namespace SGFramework
 			}
 		}
 
-		//—”
+		//ä¹±æ•°
 		static std::unordered_map<std::thread::id, std::mt19937> m_randoms;
-		//floatˆê—l•ª•z	
+		//floatä¸€æ§˜åˆ†å¸ƒ	
 		static std::unordered_map<std::thread::id, std::uniform_real_distribution<float>> m_distributionFloats;
-		//intˆê—l•ª•z	
+		//intä¸€æ§˜åˆ†å¸ƒ	
 		static std::unordered_map<std::thread::id, std::uniform_int_distribution<int>> m_distributionInts;
 		//floatBind
 		static std::unordered_map<std::thread::id, std::_Binder<std::_Unforced, std::uniform_real_distribution<float>&, std::reference_wrapper<std::mt19937>>> m_valueFloats;

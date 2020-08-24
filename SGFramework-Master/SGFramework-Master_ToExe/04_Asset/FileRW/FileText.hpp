@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-std::vector< std::vector<sgstring>>‚ğg‚¢‚â‚·‚­‚·‚éFileText class
+std::vector< std::vector<sgstring>>ã‚’ä½¿ã„ã‚„ã™ãã™ã‚‹FileText class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_FILE_TEXT_HPP_
 #define SGFRAMEWORK_HEADER_FILE_TEXT_HPP_
@@ -12,55 +12,55 @@ namespace SGFramework
 	//File Edit
 	namespace File
 	{
-		//std::vector< std::vector<sgstring>>‚ğg‚¢‚â‚·‚­‚·‚éFileText class
+		//std::vector< std::vector<sgstring>>ã‚’ä½¿ã„ã‚„ã™ãã™ã‚‹FileText class
 		class FileText : public std::vector< std::vector<sgstring>>
 		{
 		public:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//åˆæœŸåŒ–
 			inline FileText();
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//s”‚ğlineCounst”’Ç‰Á‚·‚é
-			//ˆø”1: s”
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//è¡Œæ•°ã‚’lineCounstæ•°è¿½åŠ ã™ã‚‹
+			//å¼•æ•°1: è¡Œæ•°
 			inline FileText(uint lineCount);
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//s”‚ğlineCounst”’Ç‰Á, —ñ”‚ğelementCount”’Ç‰Á (‘Ss) ‚·‚é
-			//ˆø”1: s”
-			//ˆø”2: —ñ”
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//è¡Œæ•°ã‚’lineCounstæ•°è¿½åŠ , åˆ—æ•°ã‚’elementCountæ•°è¿½åŠ  (å…¨è¡Œ) ã™ã‚‹
+			//å¼•æ•°1: è¡Œæ•°
+			//å¼•æ•°2: åˆ—æ•°
 			inline FileText(uint lineCount, uint elementCount);
 
 
 			//----------------------------------------------------------------------------------
 			//[push_line_back]
-			//––”ö‚És‚ğ’Ç‰Á‚·‚é
+			//æœ«å°¾ã«è¡Œã‚’è¿½åŠ ã™ã‚‹
 			inline void push_line_back();
 			//----------------------------------------------------------------------------------
 			//[push_line_back]
-			//––”ö‚És‚ğ’Ç‰Á‚·‚é
-			//ˆø”1: ’Ç‰Á‚·‚és‚Épush‚·‚é—v‘f
-			//ˆø”2: ’Ç‰Á‚·‚és‚Épush‚·‚é—v‘f (Pack)
+			//æœ«å°¾ã«è¡Œã‚’è¿½åŠ ã™ã‚‹
+			//å¼•æ•°1: è¿½åŠ ã™ã‚‹è¡Œã«pushã™ã‚‹è¦ç´ 
+			//å¼•æ•°2: è¿½åŠ ã™ã‚‹è¡Œã«pushã™ã‚‹è¦ç´  (Pack)
 			template <typename SgString1, typename... SgString2>
 			inline void push_line_back_element(const SgString1& push, const SgString2&... pushPack);
 			//----------------------------------------------------------------------------------
 			//[push_line_back_multiple]
-			//––”ö‚És‚ğlineCount”’Ç‰Á‚·‚é
-			//ˆø”1: s”
+			//æœ«å°¾ã«è¡Œã‚’lineCountæ•°è¿½åŠ ã™ã‚‹
+			//å¼•æ•°1: è¡Œæ•°
 			inline void push_line_back_multiple(uint lineCount);
 			//----------------------------------------------------------------------------------
 			//[push_line_back_multiple]
-			//s”‚ğlineCounst”’Ç‰Á, —ñ”‚ğelementCount”’Ç‰Á (‘Ss) ‚·‚é
-			//ˆø”1: s”
-			//ˆø”2: —ñ”
+			//è¡Œæ•°ã‚’lineCounstæ•°è¿½åŠ , åˆ—æ•°ã‚’elementCountæ•°è¿½åŠ  (å…¨è¡Œ) ã™ã‚‹
+			//å¼•æ•°1: è¡Œæ•°
+			//å¼•æ•°2: åˆ—æ•°
 			inline void push_line_back_multiple(uint lineCount, uint elementCount);
 
 			//----------------------------------------------------------------------------------
 			//[push_line_back_multiple_element]
-			//s‚ğˆø”•ª’Ç‰Á‚·‚é
-			//ˆø”1: ’Ç‰Á‚·‚és
-			//ˆø”2: ’Ç‰Á‚·‚és (Pack)
+			//è¡Œã‚’å¼•æ•°åˆ†è¿½åŠ ã™ã‚‹
+			//å¼•æ•°1: è¿½åŠ ã™ã‚‹è¡Œ
+			//å¼•æ•°2: è¿½åŠ ã™ã‚‹è¡Œ (Pack)
 			template <typename FileLine1, typename... FileLine2>
 			inline void push_line_back_multiple_element(const FileLine1& push, const FileLine2&... pushPack);
 		};
@@ -71,32 +71,32 @@ namespace SGFramework
 
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‰Šú‰»
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//åˆæœŸåŒ–
 		inline FileText::FileText() : std::vector< std::vector<sgstring>>() { }
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//s”‚ğlineCounst”’Ç‰Á‚·‚é
-		//ˆø”1: s”
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//è¡Œæ•°ã‚’lineCounstæ•°è¿½åŠ ã™ã‚‹
+		//å¼•æ•°1: è¡Œæ•°
 		inline FileText::FileText(uint lineCount)
 			: std::vector< std::vector<sgstring>>(lineCount, std::vector<sgstring>()){}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//s”‚ğlineCounst”’Ç‰Á, —ñ”‚ğelementCount”’Ç‰Á (‘Ss) ‚·‚é
-		//ˆø”1: s”
-		//ˆø”2: —ñ”
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//è¡Œæ•°ã‚’lineCounstæ•°è¿½åŠ , åˆ—æ•°ã‚’elementCountæ•°è¿½åŠ  (å…¨è¡Œ) ã™ã‚‹
+		//å¼•æ•°1: è¡Œæ•°
+		//å¼•æ•°2: åˆ—æ•°
 		inline FileText::FileText(uint lineCount, uint elementCount)
 			: std::vector< std::vector<sgstring>>(lineCount, std::vector<sgstring>(elementCount, sgstring())) {}	
 
 		//----------------------------------------------------------------------------------
 		//[push_line_back]
-		//––”ö‚És‚ğ’Ç‰Á‚·‚é
+		//æœ«å°¾ã«è¡Œã‚’è¿½åŠ ã™ã‚‹
 		inline void FileText::push_line_back() { this->emplace_back(std::vector<sgstring>()); }
 		//----------------------------------------------------------------------------------
 		//[push_line_back]
-		//––”ö‚És‚ğ’Ç‰Á‚·‚é
-		//ˆø”1: ’Ç‰Á‚·‚és‚Épush‚·‚é—v‘f
-		//ˆø”2: ’Ç‰Á‚·‚és‚Épush‚·‚é—v‘f (Pack)
+		//æœ«å°¾ã«è¡Œã‚’è¿½åŠ ã™ã‚‹
+		//å¼•æ•°1: è¿½åŠ ã™ã‚‹è¡Œã«pushã™ã‚‹è¦ç´ 
+		//å¼•æ•°2: è¿½åŠ ã™ã‚‹è¡Œã«pushã™ã‚‹è¦ç´  (Pack)
 		template<typename SgString1, typename ...SgString2>
 		inline void FileText::push_line_back_element(const SgString1 & push, const SgString2 & ...pushPack)
 		{
@@ -109,8 +109,8 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[push_line_back_multiple]
-		//––”ö‚És‚ğlineCount”’Ç‰Á‚·‚é
-		//ˆø”1: s”
+		//æœ«å°¾ã«è¡Œã‚’lineCountæ•°è¿½åŠ ã™ã‚‹
+		//å¼•æ•°1: è¡Œæ•°
 		inline void FileText::push_line_back_multiple(uint lineCount) 
 		{
 			this->reserve(this->size() + lineCount);
@@ -118,9 +118,9 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[push_line_back_multiple]
-		//s”‚ğlineCounst”’Ç‰Á, —ñ”‚ğelementCount”’Ç‰Á (‘Ss) ‚·‚é
-		//ˆø”1: s”
-		//ˆø”2: —ñ”
+		//è¡Œæ•°ã‚’lineCounstæ•°è¿½åŠ , åˆ—æ•°ã‚’elementCountæ•°è¿½åŠ  (å…¨è¡Œ) ã™ã‚‹
+		//å¼•æ•°1: è¡Œæ•°
+		//å¼•æ•°2: åˆ—æ•°
 		inline void FileText::push_line_back_multiple(uint lineCount, uint elementCount)
 		{
 			this->reserve(this->size() + lineCount);
@@ -129,9 +129,9 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[push_line_back_multiple_element]
-		//s‚ğˆø”•ª’Ç‰Á‚·‚é
-		//ˆø”1: ’Ç‰Á‚·‚és
-		//ˆø”2: ’Ç‰Á‚·‚és (Pack)
+		//è¡Œã‚’å¼•æ•°åˆ†è¿½åŠ ã™ã‚‹
+		//å¼•æ•°1: è¿½åŠ ã™ã‚‹è¡Œ
+		//å¼•æ•°2: è¿½åŠ ã™ã‚‹è¡Œ (Pack)
 		template <typename FileLine1, typename... FileLine2>
 		inline void FileText::push_line_back_multiple_element(const FileLine1& push, const FileLine2&... pushPack)
 		{

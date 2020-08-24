@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ƒfƒXƒgƒ‰ƒNƒ^‚Å©“®“I‚Édelete‚³‚ê‚éUniquePointer class
+ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§è‡ªå‹•çš„ã«deleteã•ã‚Œã‚‹UniquePointer class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_UNIQUE_POINTER_HPP_
 #define SGFRAMEWORK_HEADER_UNIQUE_POINTER_HPP_
@@ -8,7 +8,7 @@
 //Framework namespace
 namespace SGFramework
 {
-	//ƒfƒXƒgƒ‰ƒNƒ^‚Å©“®“I‚Édelete‚³‚ê‚éUniquePointer class
+	//ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§è‡ªå‹•çš„ã«deleteã•ã‚Œã‚‹UniquePointer class
 	template<class PointerType>
 	class UniquePointer final : public Detail::Pointer::BasePointer
 	{
@@ -26,44 +26,44 @@ namespace SGFramework
 		inline const UniquePointer<DifferentType>& operator=(const UniquePointer<DifferentType>& copy) = delete;
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//nullptr‰Šú‰»‚ğs‚¤
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//nullptråˆæœŸåŒ–ã‚’è¡Œã†
 		inline UniquePointer() noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//©g‚Ö‚ÌMove‚ğs‚¤
-		//ˆø”1: MoveŒ³
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//è‡ªèº«ã¸ã®Moveã‚’è¡Œã†
+		//å¼•æ•°1: Moveå…ƒ
 		inline UniquePointer(UniquePointer<PointerType>&& move) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‰Šú‰»‚ğs‚¤
-		//ˆø”1: new‚µ‚½ƒ|ƒCƒ“ƒ^[
-		//ˆø”2: Auto gabage collection?, default = true
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//åˆæœŸåŒ–ã‚’è¡Œã†
+		//å¼•æ•°1: newã—ãŸãƒã‚¤ãƒ³ã‚¿ãƒ¼
+		//å¼•æ•°2: Auto gabage collection?, default = true
 		template<class NewType>
 		inline explicit UniquePointer(NewType* newPointer, bool isAutoGabageCollection = true) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒfƒXƒgƒ‰ƒNƒ^]
-		//ƒƒ“ƒo•Ï”‚ÌƒfƒXƒgƒ‰ƒNƒ^‚É‚æ‚èƒJƒEƒ“ƒ^‚ÌŒvZ‚âŠJ•ú‚ğs‚¤
+		//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ¡ãƒ³ãƒå¤‰æ•°ã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«ã‚ˆã‚Šã‚«ã‚¦ãƒ³ã‚¿ã®è¨ˆç®—ã‚„é–‹æ”¾ã‚’è¡Œã†
 		inline ~UniquePointer() noexcept { ReleasePointer(); }
 
 		//----------------------------------------------------------------------------------
 		//[Release]
-		//ƒ|ƒCƒ“ƒ^‚ÌŠJ•ú‚µ©g‚ğnullptr‚É‰Šú‰»‚·‚é
+		//ãƒã‚¤ãƒ³ã‚¿ã®é–‹æ”¾ã—è‡ªèº«ã‚’nullptrã«åˆæœŸåŒ–ã™ã‚‹
 		inline void Release() noexcept { ReleasePointer(); }
 		//----------------------------------------------------------------------------------
 		//[MovingDynamicCast]
-		//return: DynamicCast‚µ‚½SharedPointer, ©g‚ÍNull‚É‚È‚é
+		//return: DynamicCastã—ãŸSharedPointer, è‡ªèº«ã¯Nullã«ãªã‚‹
 		template<class DifferentType>
 		inline UniquePointer<DifferentType> MovingDynamicCast() noexcept;
 		//----------------------------------------------------------------------------------
 		//[MovingDownCast]
-		//return: DownCast‚µ‚½UniquePointer, ©g‚ÍNull‚É‚È‚é
+		//return: DownCastã—ãŸUniquePointer, è‡ªèº«ã¯Nullã«ãªã‚‹
 		template<class DifferentType>
 		inline UniquePointer<DifferentType> MovingDownCast() noexcept;
 		
 		//this raw pointer, not delete!! (get function property)
 		SGF_FUNCTION_PROPERTY PointerType* getPointer() const noexcept { return m_pointer; }
-		//pointer is owned(—LŒø)? (get function property)
+		//pointer is owned(æœ‰åŠ¹)? (get function property)
 		SGF_FUNCTION_PROPERTY bool getIsOwned() const noexcept { return (m_pointer != nullptr); }
 
 		//null pointer<static>(get function property)
@@ -99,12 +99,12 @@ namespace SGFramework
 		//Release Pointer (Used Gabage Collector if Clone)
 		inline void ReleasePointer() noexcept;
 
-		//ƒ|ƒCƒ“ƒ^
+		//ãƒã‚¤ãƒ³ã‚¿
 		PointerType* m_pointer;
 	};
 
 
-	//ƒfƒXƒgƒ‰ƒNƒ^‚Å©“®“I‚Édelete‚³‚ê‚éUniquePointer class [Array]
+	//ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§è‡ªå‹•çš„ã«deleteã•ã‚Œã‚‹UniquePointer class [Array]
 	template<class PointerType>
 	class UniquePointer<PointerType[]> final : public Detail::Pointer::BasePointer
 	{
@@ -126,45 +126,45 @@ namespace SGFramework
 		inline const UniquePointer<DifferentType[]>& operator=(const UniquePointer<DifferentType[]>& copy) = delete;
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//nullptr‰Šú‰»‚ğs‚¤
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//nullptråˆæœŸåŒ–ã‚’è¡Œã†
 		inline UniquePointer() noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//©g‚Ö‚ÌMove‚ğs‚¤
-		//ˆø”1: MoveŒ³
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//è‡ªèº«ã¸ã®Moveã‚’è¡Œã†
+		//å¼•æ•°1: Moveå…ƒ
 		inline UniquePointer(UniquePointer<PointerType[]>&& move) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‰Šú‰»‚ğs‚¤
-		//ˆø”1: new‚µ‚½ƒ|ƒCƒ“ƒ^[
-		//ˆø”2: ”z—ñƒTƒCƒY
-		//ˆø”2: Auto gabage collection?, default = true
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//åˆæœŸåŒ–ã‚’è¡Œã†
+		//å¼•æ•°1: newã—ãŸãƒã‚¤ãƒ³ã‚¿ãƒ¼
+		//å¼•æ•°2: é…åˆ—ã‚µã‚¤ã‚º
+		//å¼•æ•°2: Auto gabage collection?, default = true
 		template<class NewType>
 		inline explicit UniquePointer(NewType* pointer, uint arraySize, bool isAutoGabageCollection = true) noexcept;
 		//----------------------------------------------------------------------------------
-		//[ƒfƒXƒgƒ‰ƒNƒ^]
-		//ƒƒ“ƒo•Ï”‚ÌƒfƒXƒgƒ‰ƒNƒ^‚É‚æ‚èƒJƒEƒ“ƒ^‚ÌŒvZ‚âŠJ•ú‚ğs‚¤
+		//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ãƒ¡ãƒ³ãƒå¤‰æ•°ã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«ã‚ˆã‚Šã‚«ã‚¦ãƒ³ã‚¿ã®è¨ˆç®—ã‚„é–‹æ”¾ã‚’è¡Œã†
 		inline ~UniquePointer() noexcept { ReleasePointer(); }
 
 		//----------------------------------------------------------------------------------
 		//[Release]
-		//ƒ|ƒCƒ“ƒ^‚ÌŠJ•ú‚µ©g‚ğnullptr‚É‰Šú‰»‚·‚é
+		//ãƒã‚¤ãƒ³ã‚¿ã®é–‹æ”¾ã—è‡ªèº«ã‚’nullptrã«åˆæœŸåŒ–ã™ã‚‹
 		inline void Release() noexcept { ReleasePointer(); }
 		//----------------------------------------------------------------------------------
 		//[MovingDynamicCast]
-		//return: DynamicCast‚µ‚½SharedPointer, ©g‚ÍNull‚É‚È‚é
+		//return: DynamicCastã—ãŸSharedPointer, è‡ªèº«ã¯Nullã«ãªã‚‹
 		template<class DifferentType>
 		inline UniquePointer<DifferentType[]> MovingDynamicCast() noexcept;
 		//----------------------------------------------------------------------------------
 		//[MovingDownCast]
-		//return: DownCast‚µ‚½UniquePointer, ©g‚ÍNull‚É‚È‚é
+		//return: DownCastã—ãŸUniquePointer, è‡ªèº«ã¯Nullã«ãªã‚‹
 		template<class DifferentType>
 		inline UniquePointer<DifferentType[]> MovingDownCast() noexcept;
 		
 		//this raw pointer, not delete!! (get function property)
 		SGF_FUNCTION_PROPERTY PointerType* getPointer() const noexcept { return m_pointer; }
-		//pointer is owned(—LŒø)? (get function property)
+		//pointer is owned(æœ‰åŠ¹)? (get function property)
 		SGF_FUNCTION_PROPERTY bool getIsOwned() const noexcept { return (m_pointer != nullptr); }
 
 		//array size (get function property)
@@ -192,10 +192,10 @@ namespace SGFramework
 		inline bool operator ! () const noexcept { return m_pointer == nullptr; }
 
 	private:
-		//ƒ|ƒCƒ“ƒ^‚ÌŠJ•ú‚ğ‚İ‚é
+		//ãƒã‚¤ãƒ³ã‚¿ã®é–‹æ”¾ã‚’è©¦ã¿ã‚‹
 		inline void ReleasePointer() noexcept;
 
-		//ƒ|ƒCƒ“ƒ^
+		//ãƒã‚¤ãƒ³ã‚¿
 		PointerType* m_pointer;
 		//arraySize
 		uint m_arraySize;
@@ -209,15 +209,15 @@ namespace SGFramework
 
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//nullptr‰Šú‰»‚ğs‚¤
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//nullptråˆæœŸåŒ–ã‚’è¡Œã†
 	template<class PointerType>
 	inline UniquePointer<PointerType>::UniquePointer() noexcept
 		: m_pointer(nullptr) { }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//©g‚Ö‚ÌMove‚ğs‚¤
-	//ˆø”1: MoveŒ³
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//è‡ªèº«ã¸ã®Moveã‚’è¡Œã†
+	//å¼•æ•°1: Moveå…ƒ
 	template<class PointerType>
 	inline UniquePointer<PointerType>::UniquePointer(UniquePointer<PointerType>&& move) noexcept
 	 : m_pointer(move.m_pointer)
@@ -225,10 +225,10 @@ namespace SGFramework
 		move.m_pointer = nullptr;
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‰Šú‰»‚ğs‚¤
-	//ˆø”1: new‚µ‚½ƒ|ƒCƒ“ƒ^[
-	//ˆø”2: Auto gabage collection?, default = true
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//åˆæœŸåŒ–ã‚’è¡Œã†
+	//å¼•æ•°1: newã—ãŸãƒã‚¤ãƒ³ã‚¿ãƒ¼
+	//å¼•æ•°2: Auto gabage collection?, default = true
 	template<class PointerType>
 	template<class NewType>
 	inline UniquePointer<PointerType>::UniquePointer(NewType * newPointer, bool isAutoGabageCollection) noexcept
@@ -243,7 +243,7 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[MovingDynamicCast]
-	//return: DynamicCast‚µ‚½SharedPointer, ©g‚ÍNull‚É‚È‚é
+	//return: DynamicCastã—ãŸSharedPointer, è‡ªèº«ã¯Nullã«ãªã‚‹
 	template<class PointerType>
 	template<class DifferentType>
 	inline UniquePointer<DifferentType> UniquePointer<PointerType>::MovingDynamicCast() noexcept
@@ -264,7 +264,7 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[MovingDownCast]
-	//return: DownCast‚µ‚½UniquePointer, ©g‚ÍNull‚É‚È‚é
+	//return: DownCastã—ãŸUniquePointer, è‡ªèº«ã¯Nullã«ãªã‚‹
 	template<class PointerType>
 	template<class DifferentType>
 	inline UniquePointer<DifferentType> UniquePointer<PointerType>::MovingDownCast() noexcept
@@ -289,23 +289,23 @@ namespace SGFramework
 	template<class PointerType>
 	inline UniquePointer<PointerType>& UniquePointer<PointerType>::operator=(UniquePointer<PointerType>&& move) noexcept
 	{
-		//ˆá‚¤‚©‚Á‚½‚çƒ€[ƒu
+		//é•ã†ã‹ã£ãŸã‚‰ãƒ ãƒ¼ãƒ–
 		if (m_pointer != move.m_pointer)
 		{
-			//1“xŠJ•ú
+			//1åº¦é–‹æ”¾
 			ReleasePointer();
-			//ˆÚ“®
+			//ç§»å‹•
 			m_pointer = move.m_pointer;
 			move.m_pointer = nullptr;
 		}
 		return *this;
 	}
 	
-	//ƒ|ƒCƒ“ƒ^‚ÌŠJ•ú‚ğ‚İ‚é
+	//ãƒã‚¤ãƒ³ã‚¿ã®é–‹æ”¾ã‚’è©¦ã¿ã‚‹
 	template<class PointerType>
 	inline void UniquePointer<PointerType>::ReleasePointer() noexcept
 	{
-		//ƒ|ƒCƒ“ƒ^[‚ª‘¶İ->Destroy—\–ñ
+		//ãƒã‚¤ãƒ³ã‚¿ãƒ¼ãŒå­˜åœ¨->Destroyäºˆç´„
 		if (m_pointer)
 			GabageCollector::DestroyUnique(m_pointer, this);
 
@@ -320,15 +320,15 @@ namespace SGFramework
 
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//nullptr‰Šú‰»‚ğs‚¤
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//nullptråˆæœŸåŒ–ã‚’è¡Œã†
 	template<class PointerType>
 	inline UniquePointer<PointerType[]>::UniquePointer() noexcept
 		: m_pointer(nullptr), m_arraySize(0) { }
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//©g‚Ö‚ÌMove‚ğs‚¤
-	//ˆø”1: MoveŒ³
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//è‡ªèº«ã¸ã®Moveã‚’è¡Œã†
+	//å¼•æ•°1: Moveå…ƒ
 	template<class PointerType>
 	inline UniquePointer<PointerType[]>::UniquePointer(UniquePointer<PointerType[]>&& move) noexcept
 		: m_pointer(move.m_pointer), m_arraySize(move.m_arraySize)
@@ -337,10 +337,10 @@ namespace SGFramework
 		move.m_arraySize = 0;
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‰Šú‰»‚ğs‚¤
-	//ˆø”1: new‚µ‚½ƒ|ƒCƒ“ƒ^[
-	//ˆø”2: ”z—ñƒTƒCƒY
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//åˆæœŸåŒ–ã‚’è¡Œã†
+	//å¼•æ•°1: newã—ãŸãƒã‚¤ãƒ³ã‚¿ãƒ¼
+	//å¼•æ•°2: é…åˆ—ã‚µã‚¤ã‚º
 	template<class PointerType>
 	template<class NewType>
 	inline UniquePointer<PointerType[]>::UniquePointer(NewType * pointer, 
@@ -357,7 +357,7 @@ namespace SGFramework
 	
 	//----------------------------------------------------------------------------------
 	//[MovingDynamicCast]
-	//return: DynamicCast‚µ‚½SharedPointer, ©g‚ÍNull‚É‚È‚é
+	//return: DynamicCastã—ãŸSharedPointer, è‡ªèº«ã¯Nullã«ãªã‚‹
 	template<class PointerType>
 	template<class DifferentType>
 	inline UniquePointer<DifferentType[]> UniquePointer<PointerType[]>::MovingDynamicCast() noexcept
@@ -380,7 +380,7 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[MovingDownCast]
-	//return: DownCast‚µ‚½UniquePointer, ©g‚ÍNull‚É‚È‚é
+	//return: DownCastã—ãŸUniquePointer, è‡ªèº«ã¯Nullã«ãªã‚‹
 	template<class PointerType>
 	template<class DifferentType>
 	inline UniquePointer<DifferentType[]> UniquePointer<PointerType[]>::MovingDownCast() noexcept
@@ -406,12 +406,12 @@ namespace SGFramework
 	template<class PointerType>
 	inline UniquePointer<PointerType[]>& UniquePointer<PointerType[]>::operator=(UniquePointer<PointerType[]>&& move) noexcept
 	{
-		//ˆá‚¤‚©‚Á‚½‚çƒ€[ƒu
+		//é•ã†ã‹ã£ãŸã‚‰ãƒ ãƒ¼ãƒ–
 		if (m_pointer != move.m_pointer)
 		{
-			//1“xŠJ•ú
+			//1åº¦é–‹æ”¾
 			ReleasePointer();
-			//ˆÚ“®
+			//ç§»å‹•
 			m_pointer = move.m_pointer;
 			m_arraySize = move.m_arraySize;
 			move.m_pointer = nullptr;
@@ -420,11 +420,11 @@ namespace SGFramework
 		return *this;
 	}
 	
-	//ƒ|ƒCƒ“ƒ^‚ÌŠJ•ú‚ğ‚İ‚é
+	//ãƒã‚¤ãƒ³ã‚¿ã®é–‹æ”¾ã‚’è©¦ã¿ã‚‹
 	template<class PointerType>
 	inline void UniquePointer<PointerType[]>::ReleasePointer() noexcept
 	{
-		//ƒ|ƒCƒ“ƒ^[‚ª‘¶İ->Destroy—\–ñ
+		//ãƒã‚¤ãƒ³ã‚¿ãƒ¼ãŒå­˜åœ¨->Destroyäºˆç´„
 		if (m_pointer)
 			GabageCollector::DestroyUnique(m_pointer, this);
 

@@ -6,7 +6,7 @@ namespace SGFramework
 	WNDCLASSEX Application::WindowCreate(HINSTANCE hInstance, int nCmdShow)
 	{
 		std::wstring name = (m_productName + Time::CurrentTimeToString());
-		//ƒEƒBƒ“ƒhƒEƒNƒ‰ƒXì¬
+		//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚¯ãƒ©ã‚¹ä½œæˆ
 		WNDCLASSEX wCex =
 		{
 			sizeof(WNDCLASSEX),
@@ -23,7 +23,7 @@ namespace SGFramework
 			NULL
 		};
 
-		//ƒEƒBƒ“ƒhƒEì¬
+		//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ä½œæˆ
 		RegisterClassEx(&wCex);
 		HWND hWnd = CreateWindowEx(
 			0,
@@ -39,11 +39,11 @@ namespace SGFramework
 			hInstance,
 			NULL);
 
-		//‘ã“ü
+		//ä»£å…¥
 		Window::HwndHolder::AddHwnd(hWnd);
 		Window::HinstanceHolder::AddHinstance(hInstance);
 
-		//WindowƒTƒCƒY, PositionÄİ’è
+		//Windowã‚µã‚¤ã‚º, Positionå†è¨­å®š
 		{
 			RECT windowRect, clientRect;
 			POINT setSize = {};
@@ -56,7 +56,7 @@ namespace SGFramework
 				setSize.x, setSize.y, (SWP_NOZORDER | SWP_NOOWNERZORDER));
 		}
 
-		//Screenî•ñİ’è
+		//Screenæƒ…å ±è¨­å®š
 		{
 			RECT windowRect;
 			GetWindowRect(hWnd, &windowRect);

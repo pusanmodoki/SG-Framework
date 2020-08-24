@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-4‚Â‚Ìint’l‚ğˆµ‚¦‚éVector4Int \‘¢‘Ì
-Å‚à‘½—p‚·‚é\‘¢‘ÌƒVƒŠ[ƒY‚Ì1‚Â‚È‚Ì‚Å•Ê©ìVector‚ªŠÖŒW‚È‚¢‚à‚Ì‚Í‘S‚ÄinlineÀ‘•
+4ã¤ã®intå€¤ã‚’æ‰±ãˆã‚‹Vector4Int æ§‹é€ ä½“
+æœ€ã‚‚å¤šç”¨ã™ã‚‹æ§‹é€ ä½“ã‚·ãƒªãƒ¼ã‚ºã®1ã¤ãªã®ã§åˆ¥è‡ªä½œVectorãŒé–¢ä¿‚ãªã„ã‚‚ã®ã¯å…¨ã¦inlineå®Ÿè£…
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_VECTOR_VECTOR4INT_HPP_
 #define SGFRAMEWORK_HEADER_VECTOR_VECTOR4INT_HPP_
@@ -14,34 +14,34 @@
 //Framework namespace
 namespace SGFramework
 {
-	//ƒvƒƒgƒ^ƒCƒvéŒ¾
+	//ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—å®£è¨€
 	struct Vector2Int;
 	struct Vector3Int;
 	struct Vector4;
 	struct Vector4Ref;
 
-	//4‚Â‚Ìint’l‚ğˆµ‚¦‚éVector4Int \‘¢‘Ì
+	//4ã¤ã®intå€¤ã‚’æ‰±ãˆã‚‹Vector4Int æ§‹é€ ä½“
 	struct Vector4Int final
 	{
 		//----------------------------------------------------------------------------------
-		//inlneÀ‘•
+		//inlneå®Ÿè£…
 
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘S‚Ä0‚Éİ’è‚³‚ê‚é
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å…¨ã¦0ã«è¨­å®šã•ã‚Œã‚‹
 		inline constexpr Vector4Int();
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: x
-		//ˆø”2: y
-		//ˆø”3: z
-		//ˆø”4: w
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: x
+		//å¼•æ•°2: y
+		//å¼•æ•°3: z
+		//å¼•æ•°4: w
 		inline constexpr Vector4Int(int x, int y, int z, int w);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: int*
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: int*
 		inline Vector4Int(const int* array);
 
 		//----------------------------------------------------------------------------------
@@ -52,11 +52,11 @@ namespace SGFramework
 			static_cast<float>(z), static_cast<float>(w))); }
 		//----------------------------------------------------------------------------------
 		//[ToRotationMatrix]
-		//return: this‚ğQuaternion‚Æ‚µ‚½‰ñ“]s—ñ
+		//return: thisã‚’Quaternionã¨ã—ãŸå›è»¢è¡Œåˆ—
 		inline XmMatrix ToRotationMatrix() const noexcept { return DirectX::XMMatrixRotationQuaternion(this->ToXmVector()); }
 		//----------------------------------------------------------------------------------
 		//[ToRotationMatrix]
-		//ˆø”1: Apply
+		//å¼•æ•°1: Apply
 		inline XmMatrix ToRotationMatrix(XmMatrix& apply) const noexcept { apply = DirectX::XMMatrixRotationQuaternion(this->ToXmVector()); }
 		//----------------------------------------------------------------------------------
 		//[ToPhysX]
@@ -72,7 +72,7 @@ namespace SGFramework
 		Vector4Int& operator=(Vector4Int&&) = default;
 
 		//----------------------------------------------------------------------------------
-		//•Ï”
+		//å¤‰æ•°
 		union
 		{
 			struct
@@ -85,107 +85,107 @@ namespace SGFramework
 			int value[4];	//Value
 		};
 		
-		//int*ƒIƒyƒŒ[ƒ^[
+		//int*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator int* ();
-		//const int*ƒIƒyƒŒ[ƒ^[
+		//const int*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator const int*() const;
 
-		//+ƒIƒyƒŒ[ƒ^[  
+		//+ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 		inline Vector4Int operator +() const;
-		//-ƒIƒyƒŒ[ƒ^[  
+		//-ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 		inline Vector4Int operator -() const;
-		//==ƒIƒyƒŒ[ƒ^[
+		//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator ==(const Vector4Int& vec) const;
-		//!=ƒIƒyƒŒ[ƒ^[
+		//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator !=(const Vector4Int& vec) const;
 
-		//‰ÁZƒIƒyƒŒ[ƒ^[
+		//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector4Int operator +(const Vector4Int& vec) const;
-		//Œ¸ZƒIƒyƒŒ[ƒ^[
+		//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector4Int operator -(const Vector4Int& vec) const;
-		//æZƒIƒyƒŒ[ƒ^[
+		//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector4Int operator *(const Vector4Int& vec) const;
-		//æZƒIƒyƒŒ[ƒ^[(int)
+		//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 		inline Vector4Int operator *(int value) const;
-		//œZƒIƒyƒŒ[ƒ^[
+		//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector4Int operator /(const Vector4Int& vec) const;
-		//œZƒIƒyƒŒ[ƒ^[(int)
+		//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 		inline Vector4Int operator /(int value) const;
 
-		//+=ƒIƒyƒŒ[ƒ^[
+		//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector4Int &operator +=(const Vector4Int & vec);
-		//-=ƒIƒyƒŒ[ƒ^[
+		//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector4Int &operator -=(const Vector4Int & vec);
-		//*=ƒIƒyƒŒ[ƒ^[
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector4Int &operator *=(const Vector4Int & vec);
-		//*=ƒIƒyƒŒ[ƒ^[(int)
+		//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 		inline const Vector4Int &operator *=(int value);
-		// /=ƒIƒyƒŒ[ƒ^[
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Vector4Int &operator /=(const Vector4Int & vec);
-		// /=ƒIƒyƒŒ[ƒ^[(int)
+		// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 		inline const Vector4Int &operator /=(int value);
 
 		//----------------------------------------------------------------------------------
 		//[Absolute]
-		//return: â‘Î’l
+		//return: çµ¶å¯¾å€¤
 		inline constexpr Vector4Int Absolute() const noexcept;
 		//----------------------------------------------------------------------------------
 		//[Magnitude]
-		//return: ©g‚ÆVector(0,0, 0, 0)‚Ì‹——£
+		//return: è‡ªèº«ã¨Vector(0,0, 0, 0)ã®è·é›¢
 		inline constexpr float Magnitude() const;
 		//----------------------------------------------------------------------------------
 		//[ExactMagnitude]
-		//return: ©g‚ÆVector(0,0,0,0)‚Ì‹——£ (³Šm‚È’l‚¾‚ª•‰‰×‚ª‚‚¢)
+		//return: è‡ªèº«ã¨Vector(0,0,0,0)ã®è·é›¢ (æ­£ç¢ºãªå€¤ã ãŒè² è·ãŒé«˜ã„)
 		inline float ExactMagnitude() const;
 
 		//sgstring operator
 		inline operator sgstring() const { return ToString(); }
 		//----------------------------------------------------------------------------------
 		//[ToString]
-		//sgstringŒ`®‚Åo—Í‚·‚é
-		//return: sgstring•\Œ»‚µ‚½this
+		//sgstringå½¢å¼ã§å‡ºåŠ›ã™ã‚‹
+		//return: sgstringè¡¨ç¾ã—ãŸthis
 		inline sgstring ToString() const { return (L"(" + std::to_wstring(x) + L", " + std::to_wstring(y) + L", " + std::to_wstring(z) + L", " + std::to_wstring(w) + L")"); }
 		//----------------------------------------------------------------------------------
 		//[ToStdString]
-		//std::stringŒ`®‚Åo—Í‚·‚é
-		//return: std::string•\Œ»‚µ‚½this
+		//std::stringå½¢å¼ã§å‡ºåŠ›ã™ã‚‹
+		//return: std::stringè¡¨ç¾ã—ãŸthis
 		inline std::string ToStdString() const { return ("(" + std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + ", " + std::to_string(w) + ")"); }
 
 		//----------------------------------------------------------------------------------
-		//cppÀ‘•
+		//cppå®Ÿè£…
 		
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: Vector4
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: Vector4
 		Vector4Int(const Vector4& value);
 
 		//----------------------------------------------------------------------------------
 		//[ToFloat]
-		//Vector4‚É•ÏŠ·‚ğs‚¤
-		//return: Vector4‚É•ÏŠ·‚µ‚½this
+		//Vector4ã«å¤‰æ›ã‚’è¡Œã†
+		//return: Vector4ã«å¤‰æ›ã—ãŸthis
 		Vector4 ToFloat() const;
 
-		//Vector2IntƒIƒyƒŒ[ƒ^[
+		//Vector2Intã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		operator Vector2Int() const;
-		//Vector3IntƒIƒyƒŒ[ƒ^[
+		//Vector3Intã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		operator Vector3Int() const;
 
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector4Int& operator = (const Vector2Int& vec);
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector4Int& operator = (const Vector3Int& vec);
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector4Int& operator = (const Vector4& vec);
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		const Vector4Int& operator = (const Vector4Ref& vec);
 	};
 
 
 	//----------------------------------------------------------------------------------
 	//[wostream operator]
-	//ˆø”1: stream
-	//ˆø”2: this
+	//å¼•æ•°1: stream
+	//å¼•æ•°2: this
 	inline std::wostream& operator<<(std::wostream& stream, const Vector4Int& value)
 	{
 		const wchar* string = value.ToString();
@@ -195,89 +195,89 @@ namespace SGFramework
 
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘S‚Ä0‚Éİ’è‚³‚ê‚é
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//å…¨ã¦0ã«è¨­å®šã•ã‚Œã‚‹
 	inline constexpr Vector4Int::Vector4Int()
 		: x(0), y(0), z(0), w(0) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: x
-	//ˆø”2: y
-	//ˆø”3: z
-	//ˆø”4: w
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: x
+	//å¼•æ•°2: y
+	//å¼•æ•°3: z
+	//å¼•æ•°4: w
 	inline constexpr Vector4Int::Vector4Int(int x, int y, int z, int w)
 		: x(x), y(y), z(z), w(w) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: int*
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: int*
 	inline Vector4Int::Vector4Int(const int * array)
 		: x(array[0]), y(array[1]), z(array[2]), w(array[3]) {}
 
-	//int*ƒIƒyƒŒ[ƒ^[
+	//int*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4Int::operator int*() { return value; }
-	//const int*ƒIƒyƒŒ[ƒ^[
+	//const int*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4Int::operator const int*() const { return value; }
 
-	//+ƒIƒyƒŒ[ƒ^[  
+	//+ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 	inline Vector4Int Vector4Int::operator+() const { return Vector4Int(+this->x, +this->y, +this->z, +this->w); }
-	//-ƒIƒyƒŒ[ƒ^[  
+	//-ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼  
 	inline Vector4Int Vector4Int::operator-() const{ return Vector4Int(-this->x, -this->y, -this->z, -this->w); }
-	//==ƒIƒyƒŒ[ƒ^[
+	//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline bool Vector4Int::operator==(const Vector4Int& vec) const{ return (x == vec.x && y == vec.y && z == vec.z && w == vec.w); }
-	//!=ƒIƒyƒŒ[ƒ^[
+	//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline bool Vector4Int::operator!=(const Vector4Int& vec) const { return (x != vec.x || y != vec.y || z != vec.z || w != vec.w); }
 
-	//‰ÁZƒIƒyƒŒ[ƒ^[
+	//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4Int Vector4Int::operator+(const Vector4Int& vec) const { return Vector4Int(x + vec.x, y + vec.y, z + vec.z, w + vec.w); }
-	//Œ¸ZƒIƒyƒŒ[ƒ^[
+	//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4Int Vector4Int::operator-(const Vector4Int& vec) const { return Vector4Int(x - vec.x, y - vec.y, z - vec.z, w - vec.w); }
-	//æZƒIƒyƒŒ[ƒ^[
+	//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4Int Vector4Int::operator*(const Vector4Int& vec) const { return Vector4Int(x * vec.x, y * vec.y, z * vec.z, w * vec.w); }
-	//æZƒIƒyƒŒ[ƒ^[(int)
+	//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 	inline Vector4Int Vector4Int::operator*(int value) const { return Vector4Int(x * value, y * value, z * value, w * value); }
-	//œZƒIƒyƒŒ[ƒ^[
+	//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline Vector4Int Vector4Int::operator/(const Vector4Int& vec) const { return Vector4Int(x / vec.x, y / vec.y, z / vec.z, w / vec.w); }
-	//œZƒIƒyƒŒ[ƒ^[(int)
+	//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 	inline Vector4Int Vector4Int::operator/(int value) const { return Vector4Int(x / value, y / value, z / value, w / value); }
 
-	//+=ƒIƒyƒŒ[ƒ^[
+	//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector4Int & Vector4Int::operator+=(const Vector4Int & vec)
 	{
 		this->x += vec.x;		this->y += vec.y;
 		this->z += vec.z;		this->w += vec.w;
 		return *this;
 	}
-	//-=ƒIƒyƒŒ[ƒ^[
+	//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector4Int & Vector4Int::operator-=(const Vector4Int & vec)
 	{
 		this->x -= vec.x;		this->y -= vec.y;
 		this->z -= vec.z;		this->w -= vec.w;
 		return *this;
 	}
-	//*=ƒIƒyƒŒ[ƒ^[
+	//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector4Int & Vector4Int::operator*=(const Vector4Int & vec)
 	{
 		this->x *= vec.x;		this->y *= vec.y;
 		this->z *= vec.z;		this->w *= vec.w;
 		return *this;
 	}
-	//*=ƒIƒyƒŒ[ƒ^[(int)
+	//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 	inline const Vector4Int & Vector4Int::operator*=(int value)
 	{
 		this->x *= value;		this->y *= value;
 		this->z *= value;		this->w *= value;
 		return *this;
 	}
-	// /=ƒIƒyƒŒ[ƒ^[
+	// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	inline const Vector4Int & Vector4Int::operator/=(const Vector4Int & vec)
 	{
 		this->x /= vec.x;		this->y /= vec.y;
 		this->z /= vec.z;		this->w /= vec.w;
 		return *this;
 	}
-	// /=ƒIƒyƒŒ[ƒ^[(int)
+	// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼(int)
 	inline const Vector4Int & Vector4Int::operator/=(int value)
 	{
 		this->x /= value;		this->y /= value;
@@ -287,14 +287,14 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Absolute]
-	//return: â‘Î’l
+	//return: çµ¶å¯¾å€¤
 	inline constexpr Vector4Int Vector4Int::Absolute() const noexcept
 	{
 		return std::move(Vector4Int(x < 0 ? -x : x, y < 0 ? -y : y, z < 0 ? -z : z, w < 0 ? -w : w));
 	}
 	//----------------------------------------------------------------------------------
 	//[Magnitude]
-	//return: ©g‚ÆVector(0,0, 0, 0)‚Ì‹——£
+	//return: è‡ªèº«ã¨Vector(0,0, 0, 0)ã®è·é›¢
 	inline constexpr float Vector4Int::Magnitude() const
 	{
 		float f = static_cast<float>(x * x + y * y + z * z + w * w);
@@ -306,7 +306,7 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[ExactMagnitude]
-	//return: ©g‚ÆVector(0,0,0,0)‚Ì‹——£ (³Šm‚È’l‚¾‚ª•‰‰×‚ª‚‚¢)
+	//return: è‡ªèº«ã¨Vector(0,0,0,0)ã®è·é›¢ (æ­£ç¢ºãªå€¤ã ãŒè² è·ãŒé«˜ã„)
 	inline float Vector4Int::ExactMagnitude() const
 	{
 		return std::sqrtf(static_cast<float>(x * x + y * y + z * z + w * w));

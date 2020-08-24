@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Window namespace class���܂Ƃ߂�Window.hpp
+Window namespace classをまとめるWindow.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_WINDOW_HPP_
 #define SGFRAMEWORK_HEADER_WINDOW_HPP_

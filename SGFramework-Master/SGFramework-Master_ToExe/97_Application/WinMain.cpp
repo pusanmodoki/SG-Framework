@@ -28,8 +28,8 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	{
 		if (GetMessage(&Application::m_message, nullptr, 0, 0) > 0)
 		{
-			TranslateMessage(&Application::m_message);				// •¶šƒƒbƒZ[ƒW‚Ö‚ÌƒRƒ“ƒo[ƒg
-			DispatchMessage(&Application::m_message);				// ƒƒbƒZ[ƒW‚ğWindowProcedure‚Ö‘—‚é
+			TranslateMessage(&Application::m_message);				// æ–‡å­—ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã¸ã®ã‚³ãƒ³ãƒãƒ¼ãƒˆ
+			DispatchMessage(&Application::m_message);				// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’WindowProcedureã¸é€ã‚‹
 		}
 		else
 			break;

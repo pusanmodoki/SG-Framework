@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-BGM‚ğˆµ‚¤AudioAssetMusic class
+BGMã‚’æ‰±ã†AudioAssetMusic class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_AUDIO_ASSET_MUSIC_HPP_
 #define SGFRAMEWORK_HEADER_AUDIO_ASSET_MUSIC_HPP_
@@ -17,10 +17,10 @@ namespace SGFramework
 	class Audio::SubmixLayer;
 	class AssetManager;
 
-	//AssetŠÖ˜A‚ğŠi”[‚µ‚½Asset namespace
+	//Asseté–¢é€£ã‚’æ ¼ç´ã—ãŸAsset namespace
 	namespace Asset
 	{
-		//BGM‚ğˆµ‚¤AudioAssetMusic class
+		//BGMã‚’æ‰±ã†AudioAssetMusic class
 		class AudioAssetMusic final : public BaseClass::BaseAudioAsset
 		{
 		public:
@@ -30,114 +30,114 @@ namespace SGFramework
 			template <typename TAsset>
 			friend SharedPointer<TAsset> Asset::InstantiateAsset(const sgstring& filePath, bool isRegisterSharedAsset);
 
-			//Ä¶ƒLƒ…[
+			//å†ç”Ÿã‚­ãƒ¥ãƒ¼
 			struct PlayQueue
 			{
-				static constexpr byte cPlay = 0x01;				//Playƒtƒ‰ƒO
-				static constexpr byte cPause = 0x02;			//Pauseƒtƒ‰ƒO
-				static constexpr byte cStop = 0x04;				//Stopƒtƒ‰ƒO
-				static constexpr byte cReplay = 0x08;			//Replayƒtƒ‰ƒO
-				static constexpr byte cSeekBegin = 0x10;	//SeekBeginƒtƒ‰ƒO
+				static constexpr byte cPlay = 0x01;				//Playãƒ•ãƒ©ã‚°
+				static constexpr byte cPause = 0x02;			//Pauseãƒ•ãƒ©ã‚°
+				static constexpr byte cStop = 0x04;				//Stopãƒ•ãƒ©ã‚°
+				static constexpr byte cReplay = 0x08;			//Replayãƒ•ãƒ©ã‚°
+				static constexpr byte cSeekBegin = 0x10;	//SeekBeginãƒ•ãƒ©ã‚°
 
-				byte state = 0;	//ƒtƒ‰ƒO
+				byte state = 0;	//ãƒ•ãƒ©ã‚°
 			};
 
 			//----------------------------------------------------------------------------------
-			//[ƒfƒXƒgƒ‰ƒNƒ^]
-			//ƒAƒZƒbƒg‚ÌŠJ•ú‚ğs‚¤
+			//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ã‚¢ã‚»ãƒƒãƒˆã®é–‹æ”¾ã‚’è¡Œã†
 			inline ~AudioAssetMusic() { ReleaseVoice(); CloseBaseAsset(getType(), true); }
 
 
 			//----------------------------------------------------------------------------------
 			//[Open]
-			//ƒAƒZƒbƒg‚Ìƒ[ƒh‚ğs‚¤
-			//ˆø”1: ‰¹º‚ªŠ‘®‚·‚éSubmixLayer, default = not monoral root layer
-			//ˆø”2: ƒXƒgƒŠ[ƒ~ƒ“ƒO‚Ì•ªŠ„ŠÔŠu (ˆø”4 ~ 6‚Ì•b”‚Í‚±‚Ì’l‚Ì”{”‚Å‚ ‚é•K—v‚ª‚ ‚é), default = cDefault (0.2f)
-			//ˆø”3: Ä¶ŠJn•b”, default = cDefault (Begin)
-			//ˆø”4: ƒ‹[ƒvŠJn•b”, default = cDefault (Begin)
-			//ˆø”5: Ä¶I—¹•b”, default = cDefault (End)
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
+			//å¼•æ•°1: éŸ³å£°ãŒæ‰€å±ã™ã‚‹SubmixLayer, default = not monoral root layer
+			//å¼•æ•°2: ã‚¹ãƒˆãƒªãƒ¼ãƒŸãƒ³ã‚°ã®åˆ†å‰²é–“éš” (å¼•æ•°4 ~ 6ã®ç§’æ•°ã¯ã“ã®å€¤ã®å€æ•°ã§ã‚ã‚‹å¿…è¦ãŒã‚ã‚‹), default = cDefault (0.2f)
+			//å¼•æ•°3: å†ç”Ÿé–‹å§‹ç§’æ•°, default = cDefault (Begin)
+			//å¼•æ•°4: ãƒ«ãƒ¼ãƒ—æ™‚é–‹å§‹ç§’æ•°, default = cDefault (Begin)
+			//å¼•æ•°5: å†ç”Ÿçµ‚äº†ç§’æ•°, default = cDefault (End)
 			void Open(WeakPointer<Audio::SubmixLayer> submixLayer = Audio::submixRootLayer(), float setStreamingPlaybackInterval = 0.2f,
 				float setPlayBeginSeconds = cDefault, float setLoopBeginSeconds = cDefault, float setPlayEndSeconds = cDefault);
 
 			//----------------------------------------------------------------------------------
 			//[Reload]
-			//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
 			void Reload() override;
 			//----------------------------------------------------------------------------------
 			//[Close]
-			//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 			void Close()  override;
 
 
 			//----------------------------------------------------------------------------------
 			//[Play]
-			//Ä¶‚ğs‚¤, ÀÛ‚ÉÄ¶‚³‚ê‚é‚Ì‚Í1ƒtƒŒ[ƒ€Œã‚Æ‚È‚é
-			//ˆø”1: ƒ‹[ƒv‚Ì‰Â”Û, default = true
+			//å†ç”Ÿã‚’è¡Œã†, å®Ÿéš›ã«å†ç”Ÿã•ã‚Œã‚‹ã®ã¯1ãƒ•ãƒ¬ãƒ¼ãƒ å¾Œã¨ãªã‚‹
+			//å¼•æ•°1: ãƒ«ãƒ¼ãƒ—ã®å¯å¦, default = true
 			inline void Play(bool isLoop = true)
 			{
-				//Lock‚µ‚ÄƒLƒ…[’Ç‰Á
+				//Lockã—ã¦ã‚­ãƒ¥ãƒ¼è¿½åŠ 
 				AtomicOperation::LockAtomic(m_lock);
 				m_playQueue.state |= PlayQueue::cPlay;
 				m_isExitLoop = isLoop ^ true;
 				AtomicOperation::UnlockAtomic(m_lock);
 
-				//’Ê’m
+				//é€šçŸ¥
 				m_updateCondition.NotifyOne(m_cFlagPlay);
 			}
 			//----------------------------------------------------------------------------------
 			//[Stop]
-			//Ä¶‚ğ‘S‚Ä’â~‚·‚é, ÀÛ‚É’â~‚³‚ê‚é‚Ì‚Í1ƒtƒŒ[ƒ€Œã‚Æ‚È‚é
+			//å†ç”Ÿã‚’å…¨ã¦åœæ­¢ã™ã‚‹, å®Ÿéš›ã«åœæ­¢ã•ã‚Œã‚‹ã®ã¯1ãƒ•ãƒ¬ãƒ¼ãƒ å¾Œã¨ãªã‚‹
 			inline void Stop() override
 			{
-				//Lock‚µ‚ÄƒLƒ…[’Ç‰Á
+				//Lockã—ã¦ã‚­ãƒ¥ãƒ¼è¿½åŠ 
 				AtomicOperation::LockAtomic(m_lock);
 				m_playQueue.state |= PlayQueue::cStop;
 				AtomicOperation::UnlockAtomic(m_lock);
 
-				//’Ê’m
+				//é€šçŸ¥
 				m_updateCondition.NotifyOne(m_cFlagPlay);
 			}
 			//----------------------------------------------------------------------------------
 			//[Pause]
-			//Ä¶’†‚È‚çˆê’â~‚·‚é, ÀÛ‚ÉÀs‚³‚ê‚é‚Ì‚Í1ƒtƒŒ[ƒ€Œã‚Æ‚È‚é
+			//å†ç”Ÿä¸­ãªã‚‰ä¸€æ™‚åœæ­¢ã™ã‚‹, å®Ÿéš›ã«å®Ÿè¡Œã•ã‚Œã‚‹ã®ã¯1ãƒ•ãƒ¬ãƒ¼ãƒ å¾Œã¨ãªã‚‹
 			inline void Pause()
 			{
-				//Lock‚µ‚ÄƒLƒ…[’Ç‰Á
+				//Lockã—ã¦ã‚­ãƒ¥ãƒ¼è¿½åŠ 
 				AtomicOperation::LockAtomic(m_lock);
 				m_playQueue.state |= PlayQueue::cPause;
 				AtomicOperation::UnlockAtomic(m_lock);
 
-				//’Ê’m
+				//é€šçŸ¥
 				m_updateCondition.NotifyOne(m_cFlagPlay);
 			}
 			//----------------------------------------------------------------------------------
 			//[Replay]
-			//Å‰‚©‚çÄ¶‚³‚ê‚é, ÀÛ‚ÉÀs‚³‚ê‚é‚Ì‚Í1ƒtƒŒ[ƒ€Œã‚Æ‚È‚é
+			//æœ€åˆã‹ã‚‰å†ç”Ÿã•ã‚Œã‚‹, å®Ÿéš›ã«å®Ÿè¡Œã•ã‚Œã‚‹ã®ã¯1ãƒ•ãƒ¬ãƒ¼ãƒ å¾Œã¨ãªã‚‹
 			inline void Replay()
 			{
 				AtomicOperation::LockAtomic(m_lock);
 				m_playQueue.state |= PlayQueue::cReplay;
 				AtomicOperation::UnlockAtomic(m_lock);
 
-				//’Ê’m
+				//é€šçŸ¥
 				m_updateCondition.NotifyOne(m_cFlagPlay);
 			}
 			//----------------------------------------------------------------------------------
 			//[SeekBegin]
-			//Ä¶ˆÊ’u‚ğ‰ŠúˆÊ’u‚É–ß‚·, ÀÛ‚ÉÀs‚³‚ê‚é‚Ì‚Í1ƒtƒŒ[ƒ€Œã‚Æ‚È‚é
+			//å†ç”Ÿä½ç½®ã‚’åˆæœŸä½ç½®ã«æˆ»ã™, å®Ÿéš›ã«å®Ÿè¡Œã•ã‚Œã‚‹ã®ã¯1ãƒ•ãƒ¬ãƒ¼ãƒ å¾Œã¨ãªã‚‹
 			inline void SeekBegin()
 			{
 				AtomicOperation::LockAtomic(m_lock);
 				m_playQueue.state |= PlayQueue::cSeekBegin;
 				AtomicOperation::UnlockAtomic(m_lock);
 
-				//’Ê’m
+				//é€šçŸ¥
 				m_updateCondition.NotifyOne(m_cFlagPlay);
 			} 
 			//----------------------------------------------------------------------------------
 			//[ExitLoop]
-			//Œ»İ‚ÌÄ¶‚Åƒ‹[ƒvÄ¶‚ğI—¹‚·‚é
-			//ˆø”1: İ’è’l (Play, Stop, ReplayÀs‚Åfalse‚É‰Šú‰»)
+			//ç¾åœ¨ã®å†ç”Ÿã§ãƒ«ãƒ¼ãƒ—å†ç”Ÿã‚’çµ‚äº†ã™ã‚‹
+			//å¼•æ•°1: è¨­å®šå€¤ (Play, Stop, Replayå®Ÿè¡Œã§falseã«åˆæœŸåŒ–)
 			inline void ExitLoop(bool isSet) 
 			{
 				AtomicOperation::LockAtomic(m_lock);
@@ -146,23 +146,23 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[CheckError]
-			//return: Ä¶ƒGƒ‰[î•ñ, default-> S_OK
+			//return: å†ç”Ÿã‚¨ãƒ©ãƒ¼æƒ…å ±, default-> S_OK
 			inline HRESULT CheckError() { return m_callback.errorInfo; }
 
 			//get asset type (read function property)
 			SGF_FUNCTION_PROPERTY Asset::AssetType getType() override { return Asset::AssetType::AudioMusic; }
 
-			GetOnlyProperty<PlayQueue> playQueue;						//Ä¶ƒLƒ…[
-			GetOnlyProperty<float> streamingPlaybackInterval;			//ƒXƒgƒŠ[ƒ~ƒ“ƒOÄ¶ŠÔŠu
-			GetOnlyProperty<std::atomic_bool> isPlayNow;				//Ä¶’† -> true
-			GetOnlyProperty<std::atomic_bool> isFirstFullPlayback;	//1ƒ‹[ƒvI—¹‚Åtrue, Stop‚âReplayŠÖ”‚Åfalse‚ÉƒŠƒZƒbƒg
-			GetOnlyProperty<std::atomic_bool> isPauseNow;			//ˆêÄ¶’â~’† -> true
+			GetOnlyProperty<PlayQueue> playQueue;						//å†ç”Ÿã‚­ãƒ¥ãƒ¼
+			GetOnlyProperty<float> streamingPlaybackInterval;			//ã‚¹ãƒˆãƒªãƒ¼ãƒŸãƒ³ã‚°å†ç”Ÿé–“éš”
+			GetOnlyProperty<std::atomic_bool> isPlayNow;				//å†ç”Ÿä¸­ -> true
+			GetOnlyProperty<std::atomic_bool> isFirstFullPlayback;	//1ãƒ«ãƒ¼ãƒ—çµ‚äº†ã§true, Stopã‚„Replayé–¢æ•°ã§falseã«ãƒªã‚»ãƒƒãƒˆ
+			GetOnlyProperty<std::atomic_bool> isPauseNow;			//ä¸€æ™‚å†ç”Ÿåœæ­¢ä¸­ -> true
 
 		private:
-			//ƒR[ƒ‹ƒoƒbƒN
+			//ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯
 			struct MusicCallback : public IXAudio2VoiceCallback
 			{
-				//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+				//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 				inline MusicCallback(ConditionVariable::MultipleBit& updateCondition) : errorInfo(S_OK), updateCondition(updateCondition) {}
 				
 				void STDMETHODCALLTYPE OnVoiceProcessingPassStart(UINT32 BytesRequired) {}
@@ -174,77 +174,77 @@ namespace SGFramework
 				void STDMETHODCALLTYPE OnVoiceError(void *pBufferContext, HRESULT Error) { errorInfo = Error; }
 
 				std::atomic<HRESULT> errorInfo;				//ErrorInfo
-				ConditionVariable::MultipleBit& updateCondition;	//ƒAƒbƒvƒf[ƒgƒCƒxƒ“ƒg
+				ConditionVariable::MultipleBit& updateCondition;	//ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã‚¤ãƒ™ãƒ³ãƒˆ
 			};
 
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»‚ğs‚¤
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//åˆæœŸåŒ–ã‚’è¡Œã†
 			inline AudioAssetMusic() : BaseAudioAsset(), playQueue(m_playQueue),
 				streamingPlaybackInterval(m_streamingPlaybackInterval), isPauseNow(m_isPauseNow), 
 				m_updateCondition(m_cFlagsAll), isPlayNow(m_isPlayNow), isFirstFullPlayback(m_isFirstFullPlayback) {}
 
 			//----------------------------------------------------------------------------------
 			//[PlayUpdate]
-			//XV‚ğs‚¤, •ÊƒXƒŒƒbƒh“®ì
+			//æ›´æ–°ã‚’è¡Œã†, åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰å‹•ä½œ
 			void PlayUpdate();
 			
-			static constexpr uint m_cBufferMax = 2;						//ƒoƒbƒtƒ@Å‘å”
-			static constexpr uint m_cFlagPlay = 1;							//PlayŠÖ”’Ê’m
-			static constexpr uint m_cFlagUpdate = 2;						//ƒR[ƒ‹ƒoƒbƒN‚ÌƒAƒbƒvƒf[ƒg’Ê’m
-			static constexpr uint m_cFlagQuit = 4;							//I—¹’Ê’m
+			static constexpr uint m_cBufferMax = 2;						//ãƒãƒƒãƒ•ã‚¡æœ€å¤§æ•°
+			static constexpr uint m_cFlagPlay = 1;							//Playé–¢æ•°é€šçŸ¥
+			static constexpr uint m_cFlagUpdate = 2;						//ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã®ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆé€šçŸ¥
+			static constexpr uint m_cFlagQuit = 4;							//çµ‚äº†é€šçŸ¥
 			//All Flag
 			static constexpr uint m_cFlagsAll = m_cFlagPlay | m_cFlagUpdate | m_cFlagQuit;
 
-			XAUDIO2_BUFFER m_bufferInfo = {};							//ƒoƒbƒtƒ@[
+			XAUDIO2_BUFFER m_bufferInfo = {};							//ãƒãƒƒãƒ•ã‚¡ãƒ¼
 			XAUDIO2_VOICE_STATE m_state = {};						//state
-			std::thread m_updateThread;										//UpdateŠÖ”ƒXƒŒƒbƒh
-			MusicCallback m_callback = { m_updateCondition };		//ƒR[ƒ‹ƒoƒbƒN
-			ConditionVariable::MultipleBit m_updateCondition;		//ğŒ•Ï”
-			HMMIO m_mmioHandle = nullptr;								//MMIO‚Ìƒnƒ“ƒhƒ‹
-			uint64 m_useThread = 0;											//Š„‚è“–‚Ä‚ç‚ê‚½ƒXƒŒƒbƒhƒAƒtƒBƒjƒeƒB
-			PlayQueue m_playQueue;											//ƒLƒ…[
-			byte* m_buffers = nullptr;											//Ä¶ƒoƒbƒtƒ@[
-			byte* m_readPoint = nullptr;										//“Ç‚İ‚İƒ|ƒCƒ“ƒg
-			float m_streamingPlaybackInterval = 0.0f;					//ƒXƒgƒŠ[ƒ~ƒ“ƒOÄ¶ŠÔŠu
-			uint m_bufferLength = 0;											//ƒoƒbƒtƒ@[‚Ì’·‚³
-			uint m_readLength = 0;												//“Ç‚İ‚ñ‚¾’·‚³
-			int m_seek = 0;															//ƒV[ƒN‚µ‚Ä‚«‚½’·‚³
-			int m_beginOffset = 0;												//‰Šúƒ|ƒCƒ“ƒgƒIƒtƒZƒbƒg
-			int m_loopOffset = 0;													//ƒ‹[ƒv‰ŠúƒIƒtƒZƒbƒg
-			int m_beginPoint = 0;													//‰Šúƒ|ƒCƒ“ƒg
-			int m_endPoint = 0;													//I—¹ƒ|ƒCƒ“ƒg
-			std::atomic_bool m_isPauseNow = false;						//ˆêÄ¶’â~’† -> true
-			std::atomic_bool m_isPlayNow = false;						//Ä¶’† -> true
-			std::atomic_bool m_isFirstFullPlayback = false;			//1ƒ‹[ƒvI—¹‚Åtrue, Stop‚âReplayŠÖ”‚Åfalse‚ÉƒŠƒZƒbƒg
+			std::thread m_updateThread;										//Updateé–¢æ•°ã‚¹ãƒ¬ãƒƒãƒ‰
+			MusicCallback m_callback = { m_updateCondition };		//ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯
+			ConditionVariable::MultipleBit m_updateCondition;		//æ¡ä»¶å¤‰æ•°
+			HMMIO m_mmioHandle = nullptr;								//MMIOã®ãƒãƒ³ãƒ‰ãƒ«
+			uint64 m_useThread = 0;											//å‰²ã‚Šå½“ã¦ã‚‰ã‚ŒãŸã‚¹ãƒ¬ãƒƒãƒ‰ã‚¢ãƒ•ã‚£ãƒ‹ãƒ†ã‚£
+			PlayQueue m_playQueue;											//ã‚­ãƒ¥ãƒ¼
+			byte* m_buffers = nullptr;											//å†ç”Ÿãƒãƒƒãƒ•ã‚¡ãƒ¼
+			byte* m_readPoint = nullptr;										//èª­ã¿è¾¼ã¿ãƒã‚¤ãƒ³ãƒˆ
+			float m_streamingPlaybackInterval = 0.0f;					//ã‚¹ãƒˆãƒªãƒ¼ãƒŸãƒ³ã‚°å†ç”Ÿé–“éš”
+			uint m_bufferLength = 0;											//ãƒãƒƒãƒ•ã‚¡ãƒ¼ã®é•·ã•
+			uint m_readLength = 0;												//èª­ã¿è¾¼ã‚“ã é•·ã•
+			int m_seek = 0;															//ã‚·ãƒ¼ã‚¯ã—ã¦ããŸé•·ã•
+			int m_beginOffset = 0;												//åˆæœŸãƒã‚¤ãƒ³ãƒˆã‚ªãƒ•ã‚»ãƒƒãƒˆ
+			int m_loopOffset = 0;													//ãƒ«ãƒ¼ãƒ—åˆæœŸã‚ªãƒ•ã‚»ãƒƒãƒˆ
+			int m_beginPoint = 0;													//åˆæœŸãƒã‚¤ãƒ³ãƒˆ
+			int m_endPoint = 0;													//çµ‚äº†ãƒã‚¤ãƒ³ãƒˆ
+			std::atomic_bool m_isPauseNow = false;						//ä¸€æ™‚å†ç”Ÿåœæ­¢ä¸­ -> true
+			std::atomic_bool m_isPlayNow = false;						//å†ç”Ÿä¸­ -> true
+			std::atomic_bool m_isFirstFullPlayback = false;			//1ãƒ«ãƒ¼ãƒ—çµ‚äº†ã§true, Stopã‚„Replayé–¢æ•°ã§falseã«ãƒªã‚»ãƒƒãƒˆ
 			std::atomic_bool m_lock = false;									//lock
-			byte m_useBuffer = 0;												//g—pƒoƒbƒtƒ@
-			bool m_isExitLoop = false;											//ƒ‹[ƒvI—¹ƒtƒ‰ƒO
+			byte m_useBuffer = 0;												//ä½¿ç”¨ãƒãƒƒãƒ•ã‚¡
+			bool m_isExitLoop = false;											//ãƒ«ãƒ¼ãƒ—çµ‚äº†ãƒ•ãƒ©ã‚°
 
 		private:
 			//----------------------------------------------------------------------------------
 			//[PlayExecution]
-			//ÀÛ‚ÉÄ¶‚ğs‚¤
+			//å®Ÿéš›ã«å†ç”Ÿã‚’è¡Œã†
 			void PlayExecution(bool& isExitLoop);
 			//----------------------------------------------------------------------------------
 			//[StopExecution]
-			//ÀÛ‚É’â~‚ğs‚¤
+			//å®Ÿéš›ã«åœæ­¢ã‚’è¡Œã†
 			void StopExecution(bool& isExitLoop);
 			//----------------------------------------------------------------------------------
 			//[PauseExecution]
-			//ÀÛ‚Éˆê’â~‚ğs‚¤
+			//å®Ÿéš›ã«ä¸€æ™‚åœæ­¢ã‚’è¡Œã†
 			void PauseExecution();
 			//----------------------------------------------------------------------------------
 			//[ReplayExecution]
-			//ÀÛ‚ÉÄ¶‚ğs‚¤
+			//å®Ÿéš›ã«å†ç”Ÿã‚’è¡Œã†
 			void ReplayExecution(bool& isExitLoop);
 			//----------------------------------------------------------------------------------
 			//[SeekBeginExecution]
-			//ÀÛ‚ÉƒV[ƒN‚ğs‚¤
+			//å®Ÿéš›ã«ã‚·ãƒ¼ã‚¯ã‚’è¡Œã†
 			void SeekBeginExecution();
 			//----------------------------------------------------------------------------------
 			//[ReleaseVoice]
-			//‰¹º‚ğŠJ•ú‚·‚é
+			//éŸ³å£°ã‚’é–‹æ”¾ã™ã‚‹
 			void ReleaseVoice();
 		};
 	}

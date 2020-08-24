@@ -1,7 +1,7 @@
 /*----------------------------------------------------------------------------------
-3‚Â‚Ì’l‚ğˆµ‚¦‚éVector3 \‘¢‘Ì
-Å‚à‘½—p‚·‚é\‘¢‘ÌƒVƒŠ[ƒY‚Ì1‚Â‚È‚Ì‚Å•Ê©ìVector‚ªŠÖŒW‚È‚¢‚à‚Ì‚Í‘S‚ÄinlineÀ‘•
-	¨ŠÖ”‚ğ‹LÚ‚µ‚½Vector3.cpp
+3ã¤ã®å€¤ã‚’æ‰±ãˆã‚‹Vector3 æ§‹é€ ä½“
+æœ€ã‚‚å¤šç”¨ã™ã‚‹æ§‹é€ ä½“ã‚·ãƒªãƒ¼ã‚ºã®1ã¤ãªã®ã§åˆ¥è‡ªä½œVectorãŒé–¢ä¿‚ãªã„ã‚‚ã®ã¯å…¨ã¦inlineå®Ÿè£…
+	â†’é–¢æ•°ã‚’è¨˜è¼‰ã—ãŸVector3.cpp
 ------------------------------------------------------------------------------------*/
 #include <math.h>
 #include "Vector3.hpp"
@@ -15,50 +15,50 @@
 namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: Vector3Int
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: Vector3Int
 	Vector3::Vector3(const Vector3Int & vec)
 	{
 		this->x = static_cast<float>(vec.x);		this->y = static_cast<float>(vec.y);
 		this->z = static_cast<float>(vec.z);
 	}
 
-	//Vector2ƒIƒyƒŒ[ƒ^[
+	//Vector2ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector3::operator Vector2() const { return Vector2(x, y); }
-	//Vector4ƒIƒyƒŒ[ƒ^[
+	//Vector4ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector3::operator Vector4() const { return Vector4(x, y, z, 0.0f); }
-	//Vector3IntƒIƒyƒŒ[ƒ^[
+	//Vector3Intã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector3::operator Vector3Int() const 
 	{ return Vector3Int(static_cast<int>(x), static_cast<int>(y), static_cast<int>(z)); }
 
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector3& Vector3::operator=(const Vector2& vec)
 	{
 		this->x = vec.x;		this->y = vec.y;
 		this->z = 0.0f;
 		return *this;
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector3& Vector3::operator=(const Vector4& vec)
 	{
 		this->x = vec.x;		this->y = vec.y;
 		this->z = vec.z;
 		return *this;
 	}
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector3& Vector3::operator = (const Vector3Int& vec)
 	{
 		this->x = static_cast<float>(vec.x);		this->y = static_cast<float>(vec.y);
 		this->z = static_cast<float>(vec.z);
 		return *this;
 	}
-	//*ƒIƒyƒŒ[ƒ^[
+	//*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector3 Vector3::operator * (const Quaternion& quaternion) const
 	{
 		return DirectX::XMVector3Rotate(*this, quaternion);
 	}
-	//*=ƒIƒyƒŒ[ƒ^[
+	//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector3& Vector3::operator *= (const Quaternion& quaternion)
 	{
 		*this = DirectX::XMVector3Rotate(*this, quaternion);
@@ -70,12 +70,12 @@ namespace SGFramework
 	//Vector3Ref
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: Vector3Ref
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: Vector3Ref
 	Vector3::Vector3(const Vector3Ref & value) : DirectX::XMFLOAT3(value.x, value.y, value.z) {}
 	
-	//=ƒIƒyƒŒ[ƒ^[
+	//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector3 & Vector3::operator=(const Vector3Ref & vec)
 	{
 		x = vec.x; y = vec.y;
@@ -84,14 +84,14 @@ namespace SGFramework
 	}
 
 
-	//==ƒIƒyƒŒ[ƒ^[
+	//==ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	bool Vector3::operator ==(const Vector3Ref& vec) const
 	{
 		return (fabsf(x - vec.x) <= MathAF::cEpsilon
 			&& fabsf(y - vec.y) <= MathAF::cEpsilon
 			&& fabsf(z - vec.z) <= MathAF::cEpsilon);
 	}
-	//!=ƒIƒyƒŒ[ƒ^[
+	//!=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	bool Vector3::operator !=(const Vector3Ref& vec) const
 	{
 		return (fabsf(x - vec.x) <= MathAF::cEpsilon
@@ -99,49 +99,49 @@ namespace SGFramework
 			&& fabsf(z - vec.z) <= MathAF::cEpsilon);
 	}
 
-	//‰ÁZƒIƒyƒŒ[ƒ^[
+	//åŠ ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector3 Vector3::operator +(const Vector3Ref& vec) const
 	{
 		return Vector3(x + vec.x, y + vec.y, z + vec.z);
 	}
-	//Œ¸ZƒIƒyƒŒ[ƒ^[
+	//æ¸›ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector3 Vector3::operator -(const Vector3Ref& vec) const
 	{
 		return Vector3(x - vec.x, y - vec.y, z - vec.z);
 	}
-	//æZƒIƒyƒŒ[ƒ^[
+	//ä¹—ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector3 Vector3::operator *(const Vector3Ref& vec) const
 	{
 		return Vector3(x * vec.x, y * vec.y, z * vec.z);
 	}
-	//œZƒIƒyƒŒ[ƒ^[
+	//é™¤ç®—ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	Vector3 Vector3::operator /(const Vector3Ref& vec) const
 	{
 		return Vector3(x / vec.x, y / vec.y, z / vec.z);
 	}
 
-	//+=ƒIƒyƒŒ[ƒ^[
+	//+=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector3& Vector3::operator +=(const Vector3Ref& vec)
 	{
 		this->x += vec.x;		this->y += vec.y;
 		this->z += vec.z;
 		return *this;
 	}
-	//-=ƒIƒyƒŒ[ƒ^[
+	//-=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector3& Vector3::operator -=(const Vector3Ref& vec)
 	{
 		this->x -= vec.x;		this->y -= vec.y;
 		this->z -= vec.z;
 		return *this;
 	}
-	//*=ƒIƒyƒŒ[ƒ^[
+	//*=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector3& Vector3::operator *=(const Vector3Ref& vec)
 	{
 		this->x *= vec.x;		this->y *= vec.y;
 		this->z *= vec.z;
 		return *this;
 	}
-	// /=ƒIƒyƒŒ[ƒ^[
+	// /=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 	const Vector3& Vector3::operator /=(const Vector3Ref& vec)
 	{
 		this->x /= vec.x;		this->y /= vec.y;

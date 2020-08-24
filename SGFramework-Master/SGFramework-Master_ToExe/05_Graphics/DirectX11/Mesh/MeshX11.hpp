@@ -9,7 +9,7 @@
 // Framework namespace
 namespace SGFramework
 {
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ð‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		//GraphicsDetail namespace
@@ -81,9 +81,9 @@ namespace SGFramework
 
 
 			private:
-				std::vector<VertexType> m_vertexes;			//’¸“_ƒf[ƒ^
-				std::vector<uint> m_indexes;						//ƒCƒ“ƒfƒbƒNƒX
-				MaterialPointerType m_material;					//ƒ}ƒeƒŠƒAƒ‹
+				std::vector<VertexType> m_vertexes;			//é ‚ç‚¹ãƒ‡ãƒ¼ã‚¿
+				std::vector<uint> m_indexes;						//ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
+				MaterialPointerType m_material;					//ãƒžãƒ†ãƒªã‚¢ãƒ«
 
 				ID3D11Buffer* m_vertexBuffer = nullptr;		//Vertex buffer
 				ID3D11Buffer* m_indexBuffer = nullptr;		//Index buffer

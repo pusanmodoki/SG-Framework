@@ -1,25 +1,25 @@
-�����K��<����ȗ�O����>
+命名規則<特殊な例外あり>
 
-�}�N���萔, enum				->CONSTANT_CASE
-�N���X, �֐�, enum class		->UpperCamelCase
-�ϐ�									->camelCase
+マクロ定数, enum				->CONSTANT_CASE
+クラス, 関数, enum class		->UpperCamelCase
+変数									->camelCase
 
-//�擪
-private�ϐ�							->m_
-global�ϐ�							->g_
-const�萔							->c
+//先頭
+private変数							->m_
+global変数							->g_
+const定数							->c
 
-//�R�����g
-�ϐ�, �I�y���[�^�[, �N���X	->��s���//�R�����g
-�֐�									->��̍s��//----------------------------------------------------------------------------------, [�֐���], 
-												�֐��̐���, throw������ꍇthrow�̐���(throw: ~~\n), worning���o���ꍇworning�̐���(worning: ~~\n), void�ȊO�Ȃ�Ԃ�l�̐���(return: ~~\n), �����̐���(1: ~~\n, 2: ~~\n)
+//コメント
+変数, オペレーター, クラス	->一行上に//コメント
+関数									->上の行に//----------------------------------------------------------------------------------, [関数名], 
+												関数の説明, throwがある場合throwの説明(throw: ~~\n), worningを出す場合worningの説明(worning: ~~\n), void以外なら返り値の説明(return: ~~\n), 引数の説明(1: ~~\n, 2: ~~\n)
 
-//throw�e�L�X�g
-header								->L"Error!! �N���X��->�֐���"
-text									->L"�G���[���e"
-code									->HRESULT��������ꍇ
+//throwテキスト
+header								->L"Error!! クラス名->関数名"
+text									->L"エラー内容"
+code									->HRESULT等がある場合
 
-//��O
-�Estd�N���X���p�������N���X�́A�����̃����o�͑S��std�̖����K�����p������B�����o�̃����o�Ȃǂ͂��̌���ł͂Ȃ�
-�EDetail�̕t���l�[���X�y�[�X�͑��̏����ׂ̍��ȃp�[�c���\�b�h���i�[����B�g�p����ꍇ��Detail->�g�p����N���X���̏���namespace�����q�ɂ���
-�EDetail�̕t���l�[���X�y�[�X���̃��\�b�h�͐���҂݂̂��Q�Ƃ���΂悢�ꏊ�Ƃ��A�R�����g�̑啝�ȏȗ�(�����܂ŏȗ�)���Ă��悢
+//例外
+・stdクラスを継承したクラスは、直下のメンバは全てstdの命名規則を継承する。メンバのメンバなどはその限りではない
+・Detailの付くネームスペースは他の処理の細かなパーツメソッドを格納する。使用する場合はDetail->使用するクラス名の順にnamespaceを入れ子にする
+・Detailの付くネームスペース内のメソッドは制作者のみが参照すればよい場所とし、コメントの大幅な省略(あくまで省略)してもよい

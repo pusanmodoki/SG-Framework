@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-Binary TextŒ`®‚Ìƒtƒ@ƒCƒ‹‚ğˆµ‚¦‚éBinaryAsset class
-‘Î‰Šg’£q : sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt
+Binary Textå½¢å¼ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ‰±ãˆã‚‹BinaryAsset class
+å¯¾å¿œæ‹¡å¼µå­ : sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_BINARY_ASSET_HPP_
 #define SGFRAMEWORK_HEADER_BINARY_ASSET_HPP_
@@ -11,11 +11,11 @@ Binary TextŒ`®‚Ìƒtƒ@ƒCƒ‹‚ğˆµ‚¦‚éBinaryAsset class
 // Framework namespace
 namespace SGFramework
 {
-	//AssetŠÖ˜A‚ğŠi”[‚µ‚½Asset namespace
+	//Asseté–¢é€£ã‚’æ ¼ç´ã—ãŸAsset namespace
 	namespace Asset
 	{
-		//Binary TextŒ`®‚Ìƒtƒ@ƒCƒ‹‚ğˆµ‚¦‚éBinaryAsset class
-		//‘Î‰Šg’£q : sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt
+		//Binary Textå½¢å¼ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ‰±ãˆã‚‹BinaryAsset class
+		//å¯¾å¿œæ‹¡å¼µå­ : sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt
 		class BinaryAsset final : public BaseClass::BaseAsset
 		{
 		public:
@@ -27,61 +27,61 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Open]
-			//ƒtƒ@ƒCƒ‹‚ğŠJ‚­
-			//throw: ‘Î‰‚µ‚Ä‚¢‚È‚¢Šg’£q‚¾‚Á‚½ê‡
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã
+			//throw: å¯¾å¿œã—ã¦ã„ãªã„æ‹¡å¼µå­ã ã£ãŸå ´åˆ
 			inline void Open();
 
 			//----------------------------------------------------------------------------------
 			//[Write]
-			//ƒtƒ@ƒCƒ‹‚É‘‚«‚Ş, OpenÀsŒã‚É‰Â”\
-			//ˆø”1: ‘‚«‚Ş“à—e
-			//ˆø”2: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚ÅŠJ‚­‚©, default = false
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
+			//å¼•æ•°1: æ›¸ãè¾¼ã‚€å†…å®¹
+			//å¼•æ•°2: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ã§é–‹ãã‹, default = false
 			inline void Write(const std::vector<byte>& writeBytes, bool isAppend = false);
 			//----------------------------------------------------------------------------------
 			//[Reload]
-			//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤, OpenÀsŒã‚É‰Â”\
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
 			inline virtual void Reload();
 			//----------------------------------------------------------------------------------
 			//[Close]
-			//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é, OpenÀsŒã‚É‰Â”\
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
 			inline virtual void Close();
 
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//return: ƒAƒZƒbƒg‚Ì’†g
+			//return: ã‚¢ã‚»ãƒƒãƒˆã®ä¸­èº«
 			inline const std::vector<byte>& Read();
 
 			//get asset type (read function property)
 			SGF_FUNCTION_PROPERTY Asset::AssetType getType() override { return Asset::AssetType::Binary; }
 
-			GetOnlyProperty<std::vector<byte>> bytes;			//ƒAƒZƒbƒg‚Ì’†g
+			GetOnlyProperty<std::vector<byte>> bytes;			//ã‚¢ã‚»ãƒƒãƒˆã®ä¸­èº«
 
 		private:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//0‰Šú‰»‚ğs‚¤
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//0åˆæœŸåŒ–ã‚’è¡Œã†
 			inline BinaryAsset() : bytes(m_bytes), m_fileType(0) {}
 
-			static constexpr int m_cFlagSebt = 0x1;		//¯•Êƒtƒ‰ƒO sebtl
-			static constexpr int m_cFlagSebtl = 0x2;		//¯•Êƒtƒ‰ƒO sebt
-			static constexpr int m_cFlagOthers = 0x4;	//¯•Êƒtƒ‰ƒO ‚»‚Ì‘¼
+			static constexpr int m_cFlagSebt = 0x1;		//è­˜åˆ¥ãƒ•ãƒ©ã‚° sebtl
+			static constexpr int m_cFlagSebtl = 0x2;		//è­˜åˆ¥ãƒ•ãƒ©ã‚° sebt
+			static constexpr int m_cFlagOthers = 0x4;	//è­˜åˆ¥ãƒ•ãƒ©ã‚° ãã®ä»–
 
-			//Šg’£q•¶š—ñ sebt, sebtl
+			//æ‹¡å¼µå­æ–‡å­—åˆ— sebt, sebtl
 			static constexpr wchar m_cIdentificationSebtOrSebtl[2][7] = { L".sebt", L".sebtl" };
-			//Šg’£q•¶š—ñ ‚»‚Ì‘¼
+			//æ‹¡å¼µå­æ–‡å­—åˆ— ãã®ä»–
 			static constexpr wchar m_cIdentificationOthers[9][6] = { L".txt", L".cpp", L".hpp", L".html", L".htm", L".json", L".xml", L".yaml", L".fnt" };
 
-			std::vector<byte> m_bytes;		//ƒeƒLƒXƒg“à—e
+			std::vector<byte> m_bytes;		//ãƒ†ã‚­ã‚¹ãƒˆå†…å®¹
 			std::mutex m_mutex;				//mutex
-			byte m_fileType;							//ƒtƒ@ƒCƒ‹¯•Êƒtƒ‰ƒO
+			byte m_fileType;							//ãƒ•ã‚¡ã‚¤ãƒ«è­˜åˆ¥ãƒ•ãƒ©ã‚°
 		};
 
 
 		//----------------------------------------------------------------------------------
 		//[Open]
-		//ƒtƒ@ƒCƒ‹‚ğŠJ‚­
-		//throw: ‘Î‰‚µ‚Ä‚¢‚È‚¢Šg’£q‚¾‚Á‚½ê‡
-		//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã
+		//throw: å¯¾å¿œã—ã¦ã„ãªã„æ‹¡å¼µå­ã ã£ãŸå ´åˆ
+		//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
 		inline void BinaryAsset::Open()
 		{
 			//open?
@@ -92,7 +92,7 @@ namespace SGFramework
 			//mutex guard
 			std::lock_guard<std::mutex> guard(m_mutex);
 
-			//‚È‚¢‚©‚à‚µ‚ç‚ñ‚©‚ç‚Æ‚è‚ ‚¦‚¸ŠJ‚¢‚Æ‚­
+			//ãªã„ã‹ã‚‚ã—ã‚‰ã‚“ã‹ã‚‰ã¨ã‚Šã‚ãˆãšé–‹ã„ã¨ã
 			File::FileWriteStream fws;
 			fws.Open(name(), false, true);
 			fws.Close();
@@ -126,7 +126,7 @@ namespace SGFramework
 
 			//BaseAsset
 			if (isOpened) OpenBaseAsset();
-			//Šg’£qƒGƒ‰[
+			//æ‹¡å¼µå­ã‚¨ãƒ©ãƒ¼
 			else
 			{
 				//filed
@@ -139,12 +139,12 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Write]
-		//ƒtƒ@ƒCƒ‹‚É‘‚«‚Ş, OpenÀsŒã‚É‰Â”\
-		//ˆø”1: ‘‚«‚Ş“à—e
-		//ˆø”2: ’Ç‰Á‘‚«‚İƒ‚[ƒh‚ÅŠJ‚­‚©, default = false
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
+		//å¼•æ•°1: æ›¸ãè¾¼ã‚€å†…å®¹
+		//å¼•æ•°2: è¿½åŠ æ›¸ãè¾¼ã¿ãƒ¢ãƒ¼ãƒ‰ã§é–‹ãã‹, default = false
 		inline void BinaryAsset::Write(const std::vector<byte>& writeBytes, bool isAppend)
 		{
-			//ŠJ‚¢‚Ä‚È‚¢
+			//é–‹ã„ã¦ãªã„
 			if (IS_FALSE(getIsFileOpened())) return;
 
 			//mutex guard
@@ -159,7 +159,7 @@ namespace SGFramework
 			//others
 			else if ((m_fileType & m_cFlagOthers) != 0)
 				File::TextFileRW::WriteBinary(name, writeBytes);
-			//Šg’£qƒGƒ‰[
+			//æ‹¡å¼µå­ã‚¨ãƒ©ãƒ¼
 			else
 				throw InvalidArgument(L"Error!! BinaryAsset->Write",
 					L"Extension NotSupported: " + name.getValue());
@@ -172,10 +172,10 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Reload]
-		//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤, OpenÀsŒã‚É‰Â”\
+		//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
 		inline void BinaryAsset::Reload()
 		{
-			//ŠJ‚¢‚Ä‚È‚¢
+			//é–‹ã„ã¦ãªã„
 			if (IS_FALSE(getIsFileOpened())) return;
 
 			//mutex guard
@@ -204,7 +204,7 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[Close]
-		//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é, OpenÀsŒã‚É‰Â”\
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹, Openå®Ÿè¡Œå¾Œã«å¯èƒ½
 		inline void BinaryAsset::Close()
 		{
 			if (IS_FALSE(getIsFileOpened())) return;
@@ -215,7 +215,7 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[ReadNotArray]
-		//return: ƒAƒZƒbƒg‚Ì’†g
+		//return: ã‚¢ã‚»ãƒƒãƒˆã®ä¸­èº«
 		inline const std::vector<byte>& BinaryAsset::Read() { return m_bytes; }
 	}
 }

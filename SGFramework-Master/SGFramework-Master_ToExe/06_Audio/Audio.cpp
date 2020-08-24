@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-ƒI[ƒfƒBƒI‚ğŠÇ—‚·‚éAudio class
-	->•Ï”‚ÆŠÖ”‚ğ‹Lq‚·‚éAudio.cpp
+ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªã‚’ç®¡ç†ã™ã‚‹Audio class
+	->å¤‰æ•°ã¨é–¢æ•°ã‚’è¨˜è¿°ã™ã‚‹Audio.cpp
 ------------------------------------------------------------------------------------*/
 #include "Audio.hpp"
 #include "../07_Thread/Thread.hpp"
@@ -17,9 +17,9 @@ namespace SGFramework
 	GetOnlyProperty<SharedPointer<Audio::SubmixLayer>> Audio::submixRootLayer = m_submixRootLayer;
 	//MonoralRootLayer
 	GetOnlyProperty<SharedPointer<Audio::SubmixLayer>> Audio::submixMonoralRootLayer = m_submixMonoralRootLayer;
-	//‹K’è‚Ìƒ`ƒƒƒ“ƒlƒ‹”
+	//è¦å®šã®ãƒãƒ£ãƒ³ãƒãƒ«æ•°
 	GetOnlyProperty<uint> Audio::masterChannels = m_masterChannels;
-	//ƒ}ƒXƒ^[ƒTƒ“ƒvƒ‹ƒŒ[ƒg
+	//ãƒã‚¹ã‚¿ãƒ¼ã‚µãƒ³ãƒ—ãƒ«ãƒ¬ãƒ¼ãƒˆ
 	GetOnlyProperty<uint> Audio::sampleRate = m_sampleRate;
 
 	//IXAudio2
@@ -42,7 +42,7 @@ namespace SGFramework
 	std::vector<Detail::Audio::AudioMessage> Audio::m_messages;
 	//AudioMessages (use audio thread)
 	std::vector<Detail::Audio::AudioMessage> Audio::m_useThreadMessages;
-	//ƒTƒuƒ~ƒbƒNƒXƒŒƒCƒ„[
+	//ã‚µãƒ–ãƒŸãƒƒã‚¯ã‚¹ãƒ¬ã‚¤ãƒ¤ãƒ¼
 	std::vector< SharedPointer<Audio::SubmixLayer>> Audio::m_submixLayers;
 	//Submix Root
 	SharedPointer <Audio::SubmixLayer> Audio::m_submixRootLayer;
@@ -50,21 +50,21 @@ namespace SGFramework
 	SharedPointer<Audio::SubmixLayer> Audio::m_submixMonoralRootLayer;
 	//Audio thread
 	std::thread Audio::m_audioThread;
-	//Audio threadXVŠÔŠu(chrono)
+	//Audio threadæ›´æ–°é–“éš”(chrono)
 	std::chrono::milliseconds Audio::m_nowAudioUpdateInterval = std::chrono::milliseconds(20);
-	//Audio threadXVŠÔŠu(chrono)
+	//Audio threadæ›´æ–°é–“éš”(chrono)
 	std::chrono::milliseconds Audio::m_audioUpdateIntervalForChrono = std::chrono::milliseconds(20);
-	//Audio threadXVŠÔŠu(float)
+	//Audio threadæ›´æ–°é–“éš”(float)
 	float Audio::m_audioUpdateIntervalForFloat = 0.02f;
-	//ƒ`ƒƒƒ“ƒlƒ‹”
+	//ãƒãƒ£ãƒ³ãƒãƒ«æ•°
 	uint Audio::m_masterChannels = 0;
-	//ƒ}ƒXƒ^[ƒTƒ“ƒvƒ‹ƒŒ[ƒg
+	//ãƒã‚¹ã‚¿ãƒ¼ã‚µãƒ³ãƒ—ãƒ«ãƒ¬ãƒ¼ãƒˆ
 	uint Audio::m_sampleRate = 0;
-	//ƒTƒuƒ~ƒbƒNƒXƒŒƒCƒ„[ƒJƒEƒ“ƒ^
+	//ã‚µãƒ–ãƒŸãƒƒã‚¯ã‚¹ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚«ã‚¦ãƒ³ã‚¿
 	uint Audio::m_layerCounter = 1;
 	//message lock
 	std::atomic_bool Audio::m_lockMessages = false;
-	//audio thread I—¹ƒtƒ‰ƒO
+	//audio thread çµ‚äº†ãƒ•ãƒ©ã‚°
 	std::atomic_bool Audio::m_isEndUpdate = false;
 
 
@@ -79,11 +79,11 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[StartUp]
-	//‹N“®‰Šú‰»‚ğs‚¤
-	//ˆø”1: ƒ}ƒXƒ^[‰¹—Ê
-	//ˆø”2: ƒ`ƒƒƒ“ƒlƒ‹”
-	//ˆø”3: ƒTƒ“ƒvƒ‹ƒŒ[ƒg
-	//ˆø”4: ƒTƒuƒ~ƒbƒNƒXƒŒƒCƒ„[
+	//èµ·å‹•æ™‚åˆæœŸåŒ–ã‚’è¡Œã†
+	//å¼•æ•°1: ãƒã‚¹ã‚¿ãƒ¼éŸ³é‡
+	//å¼•æ•°2: ãƒãƒ£ãƒ³ãƒãƒ«æ•°
+	//å¼•æ•°3: ã‚µãƒ³ãƒ—ãƒ«ãƒ¬ãƒ¼ãƒˆ
+	//å¼•æ•°4: ã‚µãƒ–ãƒŸãƒƒã‚¯ã‚¹ãƒ¬ã‚¤ãƒ¤ãƒ¼
 	void Audio::StartUp(const ReadElement::Pack& masterVolume, const ReadElement::Pack& masterChannels, 
 		const ReadElement::Pack& sampleRate, const ReadElement::Pack& audioUpdateInterval, 
 		const ReadElement::Pack& audioSmoothReserve, const ReadElement::Groop& submixLayers)
@@ -103,9 +103,9 @@ namespace SGFramework
 			throw InvalidArgument(L"Error!! Audio->StartUp", L"XAudio2Create error", result);
 		}
 
-		//ƒ`ƒƒƒ“ƒlƒ‹ƒ}ƒXƒN
+		//ãƒãƒ£ãƒ³ãƒãƒ«ãƒã‚¹ã‚¯
 		uint channelMask = SPEAKER_MONO;
-		//ƒ`ƒƒƒ“ƒlƒ‹•ªŠò
+		//ãƒãƒ£ãƒ³ãƒãƒ«åˆ†å²
 		switch (m_masterChannels)
 		{
 		case 2:
@@ -133,23 +133,23 @@ namespace SGFramework
 			throw InvalidArgument(L"Error!! Audio->StartUp", L"CreateMasteringVoice error", result);
 		}
 
-		//Rootì¬
+		//Rootä½œæˆ
 		m_submixRootLayer = SharedPointer<SubmixLayer>(new SubmixLayer());
 		m_submixMonoralRootLayer = SharedPointer<SubmixLayer>(new SubmixLayer());
 
 		try
 		{
-			//’læ“¾
+			//å€¤å–å¾—
 			m_masterChannels = static_cast<uint>(masterChannels[0].valueInt);
 			m_sampleRate = static_cast<uint>(sampleRate[0].valueInt);
-			//Rootİ’è
+			//Rootè¨­å®š
 			m_submixRootLayer->SettingRoot(masterVolume[0].valueFloat);
 			m_submixMonoralRootLayer->SettingMonoralRoot(masterVolume[0].valueFloat);
-			//XVŠÔŠu“o˜^
+			//æ›´æ–°é–“éš”ç™»éŒ²
 			m_audioUpdateIntervalForFloat = audioUpdateInterval[0].valueFloat;
 			m_audioUpdateIntervalForChrono = std::chrono::milliseconds(static_cast<int>(audioUpdateInterval[0].valueFloat * 1000.0f));
 			m_nowAudioUpdateInterval = m_audioUpdateIntervalForChrono;
-			//Smooth”z—ñŠm•Û
+			//Smoothé…åˆ—ç¢ºä¿
 			m_smoothAudios.reserve(audioSmoothReserve[0].valueInt);
 		}
 		catch (...)
@@ -157,7 +157,7 @@ namespace SGFramework
 			throw;
 		}
 
-		//X3DAudio‰Šú‰»
+		//X3DAudioåˆæœŸåŒ–
 		result = X3DAudioInitialize(channelMask, X3DAUDIO_SPEED_OF_SOUND, m_x3dHandle);
 		if (FAILED(result))
 		{
@@ -165,25 +165,25 @@ namespace SGFramework
 			throw InvalidArgument(L"Error!! Audio->StartUp", L"X3DAudioInitialize error", result);
 		}
 
-		//SubmixLayer‚Ì”‚¾‚¯ƒŒƒCƒ„[’Ç‰Á
+		//SubmixLayerã®æ•°ã ã‘ãƒ¬ã‚¤ãƒ¤ãƒ¼è¿½åŠ 
 		for (const auto& e : submixLayers.packs)
 			m_submixLayers.emplace_back(SharedPointer<SubmixLayer>(new SubmixLayer(e.header, ++m_layerCounter)));
-		//Parentİ’èƒ‹[ƒv
+		//Parentè¨­å®šãƒ«ãƒ¼ãƒ—
 		for (uint i = 0; i <= m_layerCounter - 2; i++)
 		{
-			//e‚Æ‚¨‚à‚µ‚«•¶š—ñ‚ª‚ ‚é‚Í‚¸
+			//è¦ªã¨ãŠã‚‚ã—ãæ–‡å­—åˆ—ãŒã‚ã‚‹ã¯ãš
 			if (submixLayers[i].elements.size() >= 2)
 			{
 				try
 				{
 					//Find
 					auto parent = FindLayer(submixLayers[i][1].valueString);
-					//‚È‚¯‚ê‚Îthrow
+					//ãªã‘ã‚Œã°throw
 					if (IS_FALSE(parent.getIsValid())) 
 						throw InvalidArgument(L"Error!! Audio->StartUp", L"SubmixLayer Parent not found");
-					//İ’è
+					//è¨­å®š
 					m_submixLayers[i]->m_parent = std::move(parent);
-					//q‹Ÿ’Ç‰Á
+					//å­ä¾›è¿½åŠ 
 					m_submixLayers[i]->m_parent->m_childrens.emplace_back(m_submixLayers[i]);
 				}
 				catch (...)
@@ -191,17 +191,17 @@ namespace SGFramework
 					throw;
 				}
 			}
-			//‚È‚¢‚Ì‚Åq‹Ÿ
+			//ãªã„ã®ã§å­ä¾›
 			else
 			{
-				//İ’è
+				//è¨­å®š
 				m_submixLayers[i]->m_parent = m_submixRootLayer;
-				//q‹Ÿ’Ç‰Á
+				//å­ä¾›è¿½åŠ 
 				m_submixLayers[i]->m_parent->m_childrens.emplace_back(m_submixLayers[i]);
 			}
 		}
 
-		//SettingSubmixƒ‹[ƒv, volume‚ª•K—v‚È‚Ì‚Å•Ï‘¥“I
+		//SettingSubmixãƒ«ãƒ¼ãƒ—, volumeãŒå¿…è¦ãªã®ã§å¤‰å‰‡çš„
 		{
 			uint i = 0;
 			for (auto& e : m_submixLayers)
@@ -219,17 +219,17 @@ namespace SGFramework
 			}
 		}
 
-		//Smooth”z—ñŠm•Û
+		//Smoothé…åˆ—ç¢ºä¿
 		m_smoothSubmixes.reserve(m_submixLayers.size() + 2);
 
-		//Threadì¬
+		//Threadä½œæˆ
 		m_audioThread = std::thread(UpdateThread);
 		Thread::setAffinityAudioUpdate(m_audioThread.native_handle());
 	}
 
 	//----------------------------------------------------------------------------------
 	//[ShutDown]
-	//I—¹ˆ—‚ğs‚¤
+	//çµ‚äº†å‡¦ç†ã‚’è¡Œã†
 	void Audio::ShutDown()
 	{
 		if (m_masteringVoice == nullptr) return;

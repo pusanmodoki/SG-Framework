@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Raycastで使用するRaycastHit structure
+Raycast縺ｧ菴ｿ逕ｨ縺吶ｋRaycastHit structure
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_RAYCAST_HIT_HPP_
 #define SGFRAMEWORK_HEADER_RAYCAST_HIT_HPP_
@@ -9,7 +9,7 @@ Raycastで使用するRaycastHit structure
 //Framework namespace
 namespace SGFramework
 {
-	//Raycastで使用するRaycastHit structure
+	//Raycast縺ｧ菴ｿ逕ｨ縺吶ｋRaycastHit structure
 	struct RaycastHit
 	{
 		//friend
@@ -82,7 +82,7 @@ namespace SGFramework
 	private:
 		//----------------------------------------------------------------------------------
 		//[Init]
-		//Bufferをコピーする
+		//Buffer繧偵さ繝斐�ｼ縺吶ｋ
 		void Init(physx::PxRaycastBuffer& buffer)
 		{
 			(*const_cast<uint*>(&this->numHits)) = buffer.getNbAnyHits();

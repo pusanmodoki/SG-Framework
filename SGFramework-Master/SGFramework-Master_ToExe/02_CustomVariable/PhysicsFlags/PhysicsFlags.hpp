@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Physics‚ÅŽg—p‚·‚éEnum‚ðW‚ß‚½PhysicsFlags.hpp
+Physicsã§ä½¿ç”¨ã™ã‚‹Enumã‚’é›†ã‚ãŸPhysicsFlags.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_PHYSICS_FLAGS_HPP_
 #define SGFRAMEWORK_HEADER_PHYSICS_FLAGS_HPP_

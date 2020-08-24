@@ -10,6 +10,7 @@
 // Framework namespace
 namespace SGFramework
 {
+	//あ
 	class ModelNodeObject : public GameObject
 	{
 	public:

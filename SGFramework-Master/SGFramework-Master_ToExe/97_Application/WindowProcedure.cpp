@@ -7,7 +7,7 @@ namespace SGFramework
 	{
 		Input::ReceiveInputMessageWithWindowProcedure(message, wParam, lParam);
 
-		//ƒƒbƒZ[ƒWƒXƒCƒbƒ`
+		//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚¹ã‚¤ãƒƒãƒ
 		switch (message)
 		{
 		//Input
@@ -24,18 +24,18 @@ namespace SGFramework
 			return 0;
 		}
 
-		//•¶š—ñ
+		//æ–‡å­—åˆ—
 		case WM_CHAR:
 		{
 			GUI::m_inputCharacters.emplace_back(static_cast<uint>(wParam));
 			break;
 		}
 
-		//ƒEƒBƒ“ƒhƒE•ÏX
+		//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦å¤‰æ›´
 		case WM_EXITSIZEMOVE:
 		case WM_ACTIVATE:
 		{
-			//ƒNƒŠƒbƒvó‘Ô
+			//ã‚¯ãƒªãƒƒãƒ—çŠ¶æ…‹
 			if (IS_TRUE(Input::m_isMouseInsideFrame))
 			{
 				RECT rect;
@@ -45,39 +45,39 @@ namespace SGFramework
 			break;
 		}
 
-		//ƒRƒ}ƒ“ƒh
+		//ã‚³ãƒãƒ³ãƒ‰
 		case WM_SYSCOMMAND:
 		{
-			//AltF4–³Œø‚È‚çDefWindowProc‚ÅWM_CLOSE‚ğ‘—M‚µ‚È‚¢
+			//AltF4ç„¡åŠ¹ãªã‚‰DefWindowProcã§WM_CLOSEã‚’é€ä¿¡ã—ãªã„
 			if (wParam == SC_CLOSE && IS_FALSE(m_isEnableAltF4))
 				return 0;
 			break;
 		}
 
-		//ƒfƒXƒgƒƒCƒƒbƒZ[ƒW
+		//ãƒ‡ã‚¹ãƒˆãƒ­ã‚¤ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 		case WM_DESTROY:
 		{
 			Input::ShutdownWindowProcedure();
 			GUI::ShutdownWindowProcedure();
 			AtomicOperation::Init(m_isEndUpdate, true);
-			PostQuitMessage(0);			//ƒEƒBƒ“ƒhƒEíœ
+			PostQuitMessage(0);			//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦å‰Šé™¤
 			break;
 		}
 
-		//•Â‚¶‚é
+		//é–‰ã˜ã‚‹
 		case WM_CLOSE:
 		{
-			//•·‚­
+			//èã
 			if (wParam != m_cNotMessage && MessageBox(hWnd, m_quitMessage, m_quitHeader, MB_YESNO | MB_ICONQUESTION) == IDYES)
-				DestroyWindow(hWnd);	//ƒAƒvƒŠI—¹
+				DestroyWindow(hWnd);	//ã‚¢ãƒ—ãƒªçµ‚äº†
 			else if (wParam == m_cNotMessage)
-				DestroyWindow(hWnd);	//ƒAƒvƒŠI—¹
+				DestroyWindow(hWnd);	//ã‚¢ãƒ—ãƒªçµ‚äº†
 			else
 				message -= WM_CLOSE;
 			break;
 		}
 
-		//ƒfƒoƒCƒX•ÏX
+		//ãƒ‡ãƒã‚¤ã‚¹å¤‰æ›´
 		case WM_DEVICECHANGE:
 		{
 			//DBT_DEVNODES_CHANGED
@@ -89,22 +89,22 @@ namespace SGFramework
 		//default
 		default:
 		{
-			//FrameworkMessage ˆ—‚ğŒ¸‚ç‚µ‚½‚¢‚©‚çswitch‚ğ•ª‚¯‚é
+			//FrameworkMessage å‡¦ç†ã‚’æ¸›ã‚‰ã—ãŸã„ã‹ã‚‰switchã‚’åˆ†ã‘ã‚‹
 			if (message >= WM_SGFRAMEWORK_BEGIN)
 			{
 				switch (message)
 				{
-				//—áŠOƒƒbƒZ[ƒW->I—¹
+				//ä¾‹å¤–ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸->çµ‚äº†
 				case WM_SGFRAMEWORK_INVALID_MESSAGE:
 				{
 					AtomicOperation::LockGuard guard(m_lock);
 					for (auto& e : m_invalids)
 						InvalidMessageDirect(e);
-					DestroyWindow(hWnd);	//ƒAƒvƒŠI—¹
+					DestroyWindow(hWnd);	//ã‚¢ãƒ—ãƒªçµ‚äº†
 					return 0;
 				}
 
-				//WindowNameİ’è
+				//WindowNameè¨­å®š
 				case WM_SGFRAMEWORK_SET_WINDOW_NAME:
 				{
 					AtomicOperation::LockGuard guard(m_lock);
@@ -119,7 +119,7 @@ namespace SGFramework
 		}
 		}
 
-		//ƒƒbƒZ[ƒW‘—M
+		//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡
 		return DefWindowProc(hWnd, message, wParam, lParam);
 	}
 }

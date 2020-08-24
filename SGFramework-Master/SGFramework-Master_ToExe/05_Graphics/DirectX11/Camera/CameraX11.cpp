@@ -1,19 +1,19 @@
 /*----------------------------------------------------------------------------------
-DirectX11 Cameraを扱うCameraX11 class
+DirectX11 Camera繧呈桶縺�CameraX11 class
 ------------------------------------------------------------------------------------*/
 #include "CameraX11.hpp"
 
 // Framework namespace
 namespace SGFramework
 {
-	//フレームワークの管理をするAdministrator namespace
+	//繝輔Ξ繝ｼ繝繝ｯ繝ｼ繧ｯ縺ｮ邂｡逅�繧偵☆繧帰dministrator namespace
 	namespace Administrator
 	{
 		//GraphicsDetail namespace
 		namespace GraphicsDetail
 		{
-			CameraX11* CameraX11::m_setCamera = nullptr;	//最後に設定したカメラ
-			LayerMask CameraX11::m_setLayerMask = 0;			//最後に設定したレイヤーマスク
+			CameraX11* CameraX11::m_setCamera = nullptr;	//譛蠕後↓險ｭ螳壹＠縺溘き繝｡繝ｩ
+			LayerMask CameraX11::m_setLayerMask = 0;			//譛蠕後↓險ｭ螳壹＠縺溘Ξ繧､繝､繝ｼ繝槭せ繧ｯ
 		}
 	}
 }

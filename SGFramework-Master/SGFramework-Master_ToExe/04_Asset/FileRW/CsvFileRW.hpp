@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-CSVŒ`®‚Å“Ç‚İ‘‚«‚·‚éCsvFileRW namespace
+CSVå½¢å¼ã§èª­ã¿æ›¸ãã™ã‚‹CsvFileRW namespace
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_CSV_FILE_RW_HPP_
 #define SGFRAMEWORK_HEADER_CSV_FILE_RW_HPP_
@@ -20,47 +20,47 @@ namespace SGFramework
 		//CSV File
 		namespace CsvFileRW
 		{
-			//csvŠg’£q
+			//csvæ‹¡å¼µå­
 			constexpr wchar cCsvExtension[] = L".csv";
 
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//CSVŒ`®‚Åƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//return: “Ç‚İ‚ñ‚¾“à—e
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ƒoƒCƒiƒŠ“Ç‚İ‚İ, default = false
-			//ˆø”3: Šg’£qƒ`ƒFƒbƒN, default = true
+			//CSVå½¢å¼ã§ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//return: èª­ã¿è¾¼ã‚“ã å†…å®¹
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: ãƒã‚¤ãƒŠãƒªèª­ã¿è¾¼ã¿, default = false
+			//å¼•æ•°3: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯, default = true
 			inline FileText Read(const sgstring& path, bool isBinary = false, bool isCheckExtension = true)
 			{
-				WFileReadStream frs;//ƒtƒ@ƒCƒ‹ƒXƒgƒŠ[ƒ€
+				WFileReadStream frs;//ãƒ•ã‚¡ã‚¤ãƒ«ã‚¹ãƒˆãƒªãƒ¼ãƒ 
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cCsvExtension))
 					throw InvalidArgument(L"Error!! CsvFileRW->Read",
 						L"Extension NotFound: " + path + L" Read extension csv");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { frs.Open(path); }
 				catch (...) { throw; }
 
-				sgstring getline;		//getline—pƒoƒbƒtƒ@
-				uint lineCount = 0;	//s”
-				//file’†g
+				sgstring getline;		//getlineç”¨ãƒãƒƒãƒ•ã‚¡
+				uint lineCount = 0;	//è¡Œæ•°
+				//fileä¸­èº«
 				std::wstring readBuf = frs.Read();
 				//stringstream
 				std::wstringstream read(readBuf);
 
-				frs.Close();		//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+				frs.Close();		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 
-				//‘Ssgetline, s”ŒvZ
+				//å…¨è¡Œgetline, è¡Œæ•°è¨ˆç®—
 				while (std::getline(read, getline))
 					lineCount++;
 
 				read.clear();							//clear
 				read.seekg(0, std::ios::beg);	//seek
-				FileText result(lineCount);		//•Ô‚è’l
+				FileText result(lineCount);		//è¿”ã‚Šå€¤
 
-				//‘Ssgetline, vectorƒoƒbƒtƒ@‚É1s‚Ì—v‘f‚ğ•ªŠ„‘ã“ü
+				//å…¨è¡Œgetline, vectorãƒãƒƒãƒ•ã‚¡ã«1è¡Œã®è¦ç´ ã‚’åˆ†å‰²ä»£å…¥
 				while (std::getline(read, getline))
 					result.emplace_back(sgstring::functions::Split(getline, ',', true));
 				
@@ -71,35 +71,35 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Read]
-			//ƒeƒLƒXƒgŒ`®‚Åƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚Ş
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: “Ç‚İ‚ñ‚¾“à—e‚Ì‘ã“üæ
-			//ˆø”3: ƒoƒCƒiƒŠ“Ç‚İ‚İ, default = false
-			//ˆø”4: Šg’£qƒ`ƒFƒbƒN, default = true
+			//ãƒ†ã‚­ã‚¹ãƒˆå½¢å¼ã§ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: èª­ã¿è¾¼ã‚“ã å†…å®¹ã®ä»£å…¥å…ˆ
+			//å¼•æ•°3: ãƒã‚¤ãƒŠãƒªèª­ã¿è¾¼ã¿, default = false
+			//å¼•æ•°4: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯, default = true
 			inline void Read(const sgstring& path, FileText& write, bool isBinary = false, bool isCheckExtension = true)
 			{
-				FileReadStream frs;//ƒtƒ@ƒCƒ‹ƒXƒgƒŠ[ƒ€
+				FileReadStream frs;//ãƒ•ã‚¡ã‚¤ãƒ«ã‚¹ãƒˆãƒªãƒ¼ãƒ 
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cCsvExtension))
 					throw InvalidArgument(L"Error!! CsvFileRW->Read",
 						L"Extension NotFound: " + path + L" Read extension csv");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { frs.Open(path, true); }
 				catch (...) { throw; }
 
-				//ˆÃ†‰»‰ğœŒã•¶š—ñ
+				//æš—å·åŒ–è§£é™¤å¾Œæ–‡å­—åˆ—
 				sgstring readUnlcok = frs.ReadUnite();
-				//‰ğœ
+				//è§£é™¤
 				readUnlcok = EncryptionKey::Unlock(readUnlcok, EncryptionKey::DefaultKey());
-				frs.Close();		//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+				frs.Close();		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 
 				std::wstringstream read(readUnlcok);		//stringstream
-				sgstring getline;										//getline—pƒoƒbƒtƒ@
-				uint lineCount = 0;									//s”ƒJƒEƒ“ƒg
+				sgstring getline;										//getlineç”¨ãƒãƒƒãƒ•ã‚¡
+				uint lineCount = 0;									//è¡Œæ•°ã‚«ã‚¦ãƒ³ãƒˆ
 
-				//‘Ssgetline, s”ŒvZ
+				//å…¨è¡Œgetline, è¡Œæ•°è¨ˆç®—
 				while (std::getline(read, getline))
 					lineCount++;
 				
@@ -108,41 +108,41 @@ namespace SGFramework
 				write.clear();							//clear
 				write.reserve(lineCount);		//get of lineCount
 
-				//‘Ssgetline
+				//å…¨è¡Œgetline
 				while (std::getline(read, getline))
-					//vectorƒoƒbƒtƒ@‚É1s‚Ì—v‘f‚ğ•ªŠ„‘ã“ü
+					//vectorãƒãƒƒãƒ•ã‚¡ã«1è¡Œã®è¦ç´ ã‚’åˆ†å‰²ä»£å…¥
 					write.emplace_back(sgstring::functions::Split(getline, ',', true));
 			}
 
 			//----------------------------------------------------------------------------------
 			//[Write]
-			//ƒeƒLƒXƒgŒ`®‚Åƒtƒ@ƒCƒ‹‚ğ‘‚«‚Ş
-			//ˆø”1: ƒtƒ@ƒCƒ‹ƒpƒX (Šg’£qŠÜ‚Ş)
-			//ˆø”2: ‘‚«‚Ş“à—e 
-			//ˆø”3: ƒoƒCƒiƒŠ‘‚«‚İ, default = false
-			//ˆø”4: ’Ç‰Á‘‚«‚İ, default = false
-			//ˆø”5: Šg’£qƒ`ƒFƒbƒN, default = true
+			//ãƒ†ã‚­ã‚¹ãƒˆå½¢å¼ã§ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚€
+			//å¼•æ•°1: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ (æ‹¡å¼µå­å«ã‚€)
+			//å¼•æ•°2: æ›¸ãè¾¼ã‚€å†…å®¹ 
+			//å¼•æ•°3: ãƒã‚¤ãƒŠãƒªæ›¸ãè¾¼ã¿, default = false
+			//å¼•æ•°4: è¿½åŠ æ›¸ãè¾¼ã¿, default = false
+			//å¼•æ•°5: æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯, default = true
 			inline void Write(const sgstring& path, const FileText& write, bool isBinary = false, bool isAdd = false, bool isCheckExtension = true)
 			{
 				WFileWriteStream fws;
 
-				//Šg’£qƒ`ƒFƒbƒN
+				//æ‹¡å¼µå­ãƒã‚§ãƒƒã‚¯
 				if (isCheckExtension && !sgstring::functions::IsEndWith(path, cCsvExtension))
 					throw InvalidArgument(L"Error!! CsvFileRW->Write",
 						L"Extension NotFound: " + path + L" Read extension csv");
 
-				//ƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚È‚©‚Á‚½ê‡‚Íthrow•Ô‚·
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ãªã‹ã£ãŸå ´åˆã¯throwè¿”ã™
 				try { fws.Open(path, false, isAdd); }
 				catch (...) { throw; }
 
-				//‘S—v‘fƒ‹[ƒv
+				//å…¨è¦ç´ ãƒ«ãƒ¼ãƒ—
 				for (const auto& it : write)
 				{
-					//‘‚«‚İ—pstring‚É1—v‘f‚Ì‘‚«‚Ş“à—e‚ğ˜AŒ‹‚µ‚Ä‘ã“ü
+					//æ›¸ãè¾¼ã¿ç”¨stringã«1è¦ç´ ã®æ›¸ãè¾¼ã‚€å†…å®¹ã‚’é€£çµã—ã¦ä»£å…¥
 					sgstring string = sgstring::functions::Join(it, ',', true);
-					fws.Write(string);		//ƒtƒ@ƒCƒ‹‚É‘‚«‚İ
+					fws.Write(string);		//ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã¿
 				}
-				fws.Close();			//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+				fws.Close();			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Mesh‚ğ•`‰æ‚·‚éMeshRenderer class (Component)
+Meshã‚’æç”»ã™ã‚‹MeshRenderer class (Component)
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_MODEL_MESH_RENDERER_HPP_
 #define SGFRAMEWORK_HEADER_MODEL_MESH_RENDERER_HPP_
@@ -11,13 +11,13 @@ Mesh‚ğ•`‰æ‚·‚éMeshRenderer class (Component)
 // Framework namespace
 namespace SGFramework
 {
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		//GraphicsDetail namespace
 		namespace GraphicsDetail
 		{
-			//Mesh‚ğ•`‰æ‚·‚éMeshRenderer class (Component)
+			//Meshã‚’æç”»ã™ã‚‹MeshRenderer class (Component)
 			//template 1: Mesh->VertexType
 			//template 2: Mesh->MaterialPointerType
 			template<class MeshVertexType, class MeshMaterialPointerType>
@@ -28,10 +28,10 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[InitDrawInfos]
-				//•`‰æ‚É•K—v‚Èî•ñ‚ğ‚·‚×‚Ä‰Šú‰»‚·‚é
-				//ˆø”1: mesh
-				//ˆø”2: draw priority, default = 0
-				//ˆø”3: is drawing component callback, default = true
+				//æç”»ã«å¿…è¦ãªæƒ…å ±ã‚’ã™ã¹ã¦åˆæœŸåŒ–ã™ã‚‹
+				//å¼•æ•°1: mesh
+				//å¼•æ•°2: draw priority, default = 0
+				//å¼•æ•°3: is drawing component callback, default = true
 				inline void InitDrawInfos(SharedPointer
 					<MeshX11<MeshVertexType, MeshMaterialPointerType>> mesh, uint priority = 0, bool isAutoDraw = true)
 				{
@@ -44,7 +44,7 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[DrawManual]
-				//è“®‚ÅDarw‚ğs‚¤, Make Draw Command->SendDrawFunction—p
+				//æ‰‹å‹•ã§Darwã‚’è¡Œã†, Make Draw Command->SendDrawFunctionç”¨
 				inline void DrawManual()
 				{
 					m_meshUsingGraphics->Draw();
@@ -77,7 +77,7 @@ namespace SGFramework
 				SGF_FUNCTION_PROPERTY bool setIsAutoDrawCall(bool set) { ChangeCallbackFlags(CallbackFunctions::MakeDrawCommand, set); return m_isDrawCall = set; }
 
 			private:
-				//ƒ|ƒCƒ“ƒ^“¯Šú‚Ég—p‚·‚éPointerSyncObject class
+				//ãƒã‚¤ãƒ³ã‚¿åŒæœŸã«ä½¿ç”¨ã™ã‚‹PointerSyncObject class
 				class PointerSyncObject : public GraphicsObjectX11
 				{
 				public:
@@ -86,7 +86,7 @@ namespace SGFramework
 				private:
 					//----------------------------------------------------------------------------------
 					//[Sync]
-					//î•ñ‚ğ“¯Šú‚·‚é, ƒR[ƒ‹ƒoƒbƒNŠÖ”
+					//æƒ…å ±ã‚’åŒæœŸã™ã‚‹, ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 					void Sync() override 
 					{
 						if (m_reference.m_mesh.getIsValid())
@@ -98,12 +98,12 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[EnabledCallbacks]
-				//return: ©g‚ªCall‚³‚ê‚éCallback Flags, Component::CallbackFunctionsQÆ
+				//return: è‡ªèº«ãŒCallã•ã‚Œã‚‹Callback Flags, Component::CallbackFunctionså‚ç…§
 				inline uint EnableCallbacks() override { return CallbackFunctions::MakeDrawCommand; }
 				//----------------------------------------------------------------------------------
 				//[MakeDrawCommand]
-				//Update, Sync, LateUpdate ƒuƒƒbƒNŒã‚ÉCallback‚³‚ê‚é,
-				//		DrawCommand‚ğì¬‚·‚é‚½‚ß‚ÌŠÖ”
+				//Update, Sync, LateUpdate ãƒ–ãƒ­ãƒƒã‚¯å¾Œã«Callbackã•ã‚Œã‚‹,
+				//		DrawCommandã‚’ä½œæˆã™ã‚‹ãŸã‚ã®é–¢æ•°
 				inline void MakeDrawCommand() override
 				{
 					if (m_meshUsingGraphics.getIsValid() & getIsActiveAndEnabled())
@@ -137,7 +137,7 @@ namespace SGFramework
 				SharedPointer<MeshX11<MeshVertexType, MeshMaterialPointerType>> m_meshUsingGraphics;
 				//mesh
 				SharedPointer<MeshX11<MeshVertexType, MeshMaterialPointerType>> m_mesh;
-				//ƒ|ƒCƒ“ƒ^“¯Šú‚Ég—p
+				//ãƒã‚¤ãƒ³ã‚¿åŒæœŸã«ä½¿ç”¨
 				PointerSyncObject m_pointerSync;
 				//draw priority
 				std::atomic<uint> m_priority = 0;

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ƒ|ƒCƒ“ƒ^[ŒnƒNƒ‰ƒX‚ð‚Ü‚Æ‚ß‚éPointer.hpp
+ãƒã‚¤ãƒ³ã‚¿ãƒ¼ç³»ã‚¯ãƒ©ã‚¹ã‚’ã¾ã¨ã‚ã‚‹Pointer.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_POINTER_HPP_
 #define SGFRAMEWORK_HEADER_POINTER_HPP_
@@ -21,7 +21,7 @@ namespace SGFramework
 		{
 			//----------------------------------------------------------------------------------
 			//[MakeUnique::Auto]
-			//return: ¶¬‚µ‚½UniquePointer (Auto Gabage Collection)
+			//return: ç”Ÿæˆã—ãŸUniquePointer (Auto Gabage Collection)
 			template<class PointerType>
 			inline UniquePointer<PointerType> Auto()
 			{
@@ -29,8 +29,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeUnique::Auto]
-			//return: ¶¬‚µ‚½UniquePointer (Auto Gabage Collection)
-			//ˆø”1: ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚É“ü‚ê‚éˆø”ƒpƒbƒN
+			//return: ç”Ÿæˆã—ãŸUniquePointer (Auto Gabage Collection)
+			//å¼•æ•°1: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«å…¥ã‚Œã‚‹å¼•æ•°ãƒ‘ãƒƒã‚¯
 			template<class PointerType, class... Args>
 			inline UniquePointer<PointerType> Auto(Args&... args)
 			{
@@ -38,8 +38,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeUnique::Auto]
-			//return: ¶¬‚µ‚½UniquePointer (Auto Gabage Collection)
-			//ˆø”1: ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚É“ü‚ê‚éˆø”ƒpƒbƒN
+			//return: ç”Ÿæˆã—ãŸUniquePointer (Auto Gabage Collection)
+			//å¼•æ•°1: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«å…¥ã‚Œã‚‹å¼•æ•°ãƒ‘ãƒƒã‚¯
 			template<class PointerType, class... Args>
 			inline UniquePointer<PointerType> Auto(const Args&... args)
 			{
@@ -47,7 +47,7 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeUnique::Manual]
-			//return: ¶¬‚µ‚½UniquePointer (Manual Gabage Collection)
+			//return: ç”Ÿæˆã—ãŸUniquePointer (Manual Gabage Collection)
 			template<class PointerType>
 			inline UniquePointer<PointerType> Manual()
 			{
@@ -55,8 +55,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeUnique::Manual]
-			//return: ¶¬‚µ‚½UniquePointer (Manual Gabage Collection)
-			//ˆø”1: ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚É“ü‚ê‚éˆø”ƒpƒbƒN
+			//return: ç”Ÿæˆã—ãŸUniquePointer (Manual Gabage Collection)
+			//å¼•æ•°1: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«å…¥ã‚Œã‚‹å¼•æ•°ãƒ‘ãƒƒã‚¯
 			template<class PointerType, class... Args>
 			inline UniquePointer<PointerType> Manual(Args&... args)
 			{
@@ -64,8 +64,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeUnique::Manual]
-			//return: ¶¬‚µ‚½UniquePointer (Manual Gabage Collection)
-			//ˆø”1: ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚É“ü‚ê‚éˆø”ƒpƒbƒN
+			//return: ç”Ÿæˆã—ãŸUniquePointer (Manual Gabage Collection)
+			//å¼•æ•°1: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«å…¥ã‚Œã‚‹å¼•æ•°ãƒ‘ãƒƒã‚¯
 			template<class PointerType, class... Args>
 			inline UniquePointer<PointerType> Manual(const Args&... args)
 			{
@@ -79,8 +79,8 @@ namespace SGFramework
 		{
 			//----------------------------------------------------------------------------------
 			//[MakeUniqueArray::Auto]
-			//return: ¶¬‚µ‚½UniquePointer[Array] (Auto Gabage Collection)
-			//ˆø”1: ”z—ñƒTƒCƒY
+			//return: ç”Ÿæˆã—ãŸUniquePointer[Array] (Auto Gabage Collection)
+			//å¼•æ•°1: é…åˆ—ã‚µã‚¤ã‚º
 			template<class PointerType>
 			inline UniquePointer<PointerType[]> Auto(uint size)
 			{
@@ -89,8 +89,8 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[MakeUniqueArray::Auto]
-			//return: ¶¬‚µ‚½UniquePointer[Array] (Manual Gabage Collection)
-			//ˆø”1: ”z—ñƒTƒCƒY
+			//return: ç”Ÿæˆã—ãŸUniquePointer[Array] (Manual Gabage Collection)
+			//å¼•æ•°1: é…åˆ—ã‚µã‚¤ã‚º
 			template<class PointerType>
 			inline UniquePointer<PointerType[]> Manual(uint size)
 			{
@@ -104,7 +104,7 @@ namespace SGFramework
 		{
 			//----------------------------------------------------------------------------------
 			//[MakeSingleShared::Auto]
-			//return: ¶¬‚µ‚½SharedPointer (Used Single Thread, Auto Gabage Collection)
+			//return: ç”Ÿæˆã—ãŸSharedPointer (Used Single Thread, Auto Gabage Collection)
 			template<class PointerType>
 			inline SharedPointer<PointerType> Auto()
 			{
@@ -112,8 +112,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleShared::Auto]
-			//return: ¶¬‚µ‚½SharedPointer (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚É“ü‚ê‚éˆø”ƒpƒbƒN
+			//return: ç”Ÿæˆã—ãŸSharedPointer (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«å…¥ã‚Œã‚‹å¼•æ•°ãƒ‘ãƒƒã‚¯
 			template<class PointerType, class... Args>
 			inline SharedPointer<PointerType> Auto(Args&... args)
 			{
@@ -121,8 +121,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleShared::Auto]
-			//return: ¶¬‚µ‚½SharedPointer (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚É“ü‚ê‚éˆø”ƒpƒbƒN
+			//return: ç”Ÿæˆã—ãŸSharedPointer (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«å…¥ã‚Œã‚‹å¼•æ•°ãƒ‘ãƒƒã‚¯
 			template<class PointerType, class... Args>
 			inline SharedPointer<PointerType> Auto(const Args&... args)
 			{
@@ -131,7 +131,7 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[MakeSingleShared::Manual]
-			//return: ¶¬‚µ‚½SharedPointer (Used Single Thread, Manual Gabage Collection)
+			//return: ç”Ÿæˆã—ãŸSharedPointer (Used Single Thread, Manual Gabage Collection)
 			template<class PointerType>
 			inline SharedPointer<PointerType> Manual()
 			{
@@ -139,8 +139,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleShared::Manual]
-			//return: ¶¬‚µ‚½SharedPointer (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚É“ü‚ê‚éˆø”ƒpƒbƒN
+			//return: ç”Ÿæˆã—ãŸSharedPointer (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«å…¥ã‚Œã‚‹å¼•æ•°ãƒ‘ãƒƒã‚¯
 			template<class PointerType, class... Args>
 			inline SharedPointer<PointerType> Manual(Args&... args)
 			{
@@ -148,8 +148,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleShared::Manual]
-			//return: ¶¬‚µ‚½SharedPointer (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚É“ü‚ê‚éˆø”ƒpƒbƒN
+			//return: ç”Ÿæˆã—ãŸSharedPointer (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«å…¥ã‚Œã‚‹å¼•æ•°ãƒ‘ãƒƒã‚¯
 			template<class PointerType, class... Args>
 			inline SharedPointer<PointerType> Manual(const Args&... args)
 			{
@@ -163,7 +163,7 @@ namespace SGFramework
 		{
 			//----------------------------------------------------------------------------------
 			//[MaleMultiShared::Auto]
-			//return: ¶¬‚µ‚½SharedPointer (Used Multi Thread, Auto Gabage Collection)
+			//return: ç”Ÿæˆã—ãŸSharedPointer (Used Multi Thread, Auto Gabage Collection)
 			template<class PointerType>
 			inline SharedPointer<PointerType> Auto()
 			{
@@ -171,8 +171,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MaleMultiShared::Auto]
-			//return: ¶¬‚µ‚½SharedPointer (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚É“ü‚ê‚éˆø”ƒpƒbƒN
+			//return: ç”Ÿæˆã—ãŸSharedPointer (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«å…¥ã‚Œã‚‹å¼•æ•°ãƒ‘ãƒƒã‚¯
 			template<class PointerType, class... Args>
 			inline SharedPointer<PointerType> Auto(Args&... args)
 			{
@@ -180,8 +180,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MaleMultiShared::Auto]
-			//return: ¶¬‚µ‚½SharedPointer (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚É“ü‚ê‚éˆø”ƒpƒbƒN
+			//return: ç”Ÿæˆã—ãŸSharedPointer (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«å…¥ã‚Œã‚‹å¼•æ•°ãƒ‘ãƒƒã‚¯
 			template<class PointerType, class... Args>
 			inline SharedPointer<PointerType> Auto(const Args&... args)
 			{
@@ -190,7 +190,7 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[MaleMultiShared::Manual]
-			//return: ¶¬‚µ‚½SharedPointer (Used Multi Thread, Manual Gabage Collection)
+			//return: ç”Ÿæˆã—ãŸSharedPointer (Used Multi Thread, Manual Gabage Collection)
 			template<class PointerType>
 			inline SharedPointer<PointerType> Manual()
 			{
@@ -198,8 +198,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MaleMultiShared::Manual]
-			//return: ¶¬‚µ‚½SharedPointer (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚É“ü‚ê‚éˆø”ƒpƒbƒN
+			//return: ç”Ÿæˆã—ãŸSharedPointer (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«å…¥ã‚Œã‚‹å¼•æ•°ãƒ‘ãƒƒã‚¯
 			template<class PointerType, class... Args>
 			inline SharedPointer<PointerType> Manual(Args&... args)
 			{
@@ -207,8 +207,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MaleMultiShared::Manual]
-			//return: ¶¬‚µ‚½SharedPointer (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚É“ü‚ê‚éˆø”ƒpƒbƒN
+			//return: ç”Ÿæˆã—ãŸSharedPointer (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«å…¥ã‚Œã‚‹å¼•æ•°ãƒ‘ãƒƒã‚¯
 			template<class PointerType, class... Args>
 			inline SharedPointer<PointerType> Manual(const Args&... args)
 			{
@@ -221,8 +221,8 @@ namespace SGFramework
 		{
 			//----------------------------------------------------------------------------------
 			//[MakeSingleSharedArray::Auto]
-			//return: ¶¬‚µ‚½SharedPointer[Array] (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: ”z—ñƒTƒCƒY
+			//return: ç”Ÿæˆã—ãŸSharedPointer[Array] (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: é…åˆ—ã‚µã‚¤ã‚º
 			template<class PointerType, class... Args>
 			inline SharedPointer<PointerType> Auto(uint size)
 			{
@@ -231,8 +231,8 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[MakeSingleSharedArray::Manual]
-			//return: ¶¬‚µ‚½SharedPointer[Array] (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: ”z—ñƒTƒCƒY
+			//return: ç”Ÿæˆã—ãŸSharedPointer[Array] (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: é…åˆ—ã‚µã‚¤ã‚º
 			template<class PointerType>
 			inline SharedPointer<PointerType> Manual(uint size)
 			{
@@ -245,8 +245,8 @@ namespace SGFramework
 		{
 			//----------------------------------------------------------------------------------
 			//[MakeMultiSharedArray::Auto]
-			//return: ¶¬‚µ‚½SharedPointer[Array] (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: ”z—ñƒTƒCƒY
+			//return: ç”Ÿæˆã—ãŸSharedPointer[Array] (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: é…åˆ—ã‚µã‚¤ã‚º
 			template<class PointerType>
 			inline SharedPointer<PointerType[]> Auto(uint size)
 			{
@@ -255,8 +255,8 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[MakeMultiSharedArray::Manual]
-			//return: ¶¬‚µ‚½SharedPointer[Array] (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: ”z—ñƒTƒCƒY
+			//return: ç”Ÿæˆã—ãŸSharedPointer[Array] (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: é…åˆ—ã‚µã‚¤ã‚º
 			template<class PointerType>
 				inline SharedPointer<PointerType[]> Manual(uint size)
 			{
@@ -270,8 +270,8 @@ namespace SGFramework
 		{
 			//----------------------------------------------------------------------------------
 			//[MakeSingleClone::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Required UpdateManual (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Required UpdateManual (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Auto(const CloneBaseType* cloneSourcePointer)
 			{
@@ -279,8 +279,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleClone::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Auto(const UniquePointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -288,8 +288,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleClone::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Auto(const SharedPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -297,8 +297,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleClone::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Not Pointer = null (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Not Pointer = null (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Auto(WeakPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -306,8 +306,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleClone::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Required UpdateManual (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Required UpdateManual (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Auto(const CloneSharedPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -315,8 +315,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleClone::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Required UpdateManual (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Required UpdateManual (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Auto(CloneWeakPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -330,8 +330,8 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[MakeSingleClone::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Required UpdateManual (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Required UpdateManual (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Manual(const CloneBaseType* cloneSourcePointer)
 			{
@@ -339,8 +339,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleClone::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Manual(const UniquePointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -348,8 +348,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleClone::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Manual(const SharedPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -357,8 +357,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleClone::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Not Pointer = null (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Not Pointer = null (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Manual(WeakPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -366,8 +366,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleClone::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Required UpdateManual (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Required UpdateManual (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Manual(const CloneSharedPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -375,8 +375,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleClone::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Required UpdateManual (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Required UpdateManual (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Manual(CloneWeakPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -394,8 +394,8 @@ namespace SGFramework
 		{
 			//----------------------------------------------------------------------------------
 			//[MakeMultiClone::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Required UpdateManual (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Required UpdateManual (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Auto(const CloneBaseType* cloneSourcePointer)
 			{
@@ -403,8 +403,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiClone::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Auto(const UniquePointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -412,8 +412,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiClone::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Auto(const SharedPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -421,8 +421,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiClone::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Not Pointer = null (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Not Pointer = null (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Auto(WeakPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -430,8 +430,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiClone::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Required UpdateManual (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Required UpdateManual (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Auto(const CloneSharedPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -439,8 +439,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiClone::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Required UpdateManual (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Required UpdateManual (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Auto(CloneWeakPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -454,8 +454,8 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[MakeMultiClone::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Required UpdateManual (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Required UpdateManual (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Manual(const CloneBaseType* cloneSourcePointer)
 			{
@@ -463,8 +463,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiClone::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Manual(const UniquePointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -472,8 +472,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiClone::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Manual(const SharedPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -481,8 +481,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiClone::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Not Pointer = null (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Not Pointer = null (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Manual(WeakPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -490,8 +490,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiClone::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Required UpdateManual (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Required UpdateManual (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Manual(const CloneSharedPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -499,8 +499,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiClone::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer, Required UpdateManual (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer, Required UpdateManual (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType> Manual(CloneWeakPointer<CloneBaseType>& cloneSourcePointer)
 			{
@@ -518,9 +518,9 @@ namespace SGFramework
 		{
 			//----------------------------------------------------------------------------------
 			//[MakeSingleCloneArray::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Required UpdateManual (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
-			//ˆø”2: ”z—ñƒTƒCƒY
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Required UpdateManual (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
+			//å¼•æ•°2: é…åˆ—ã‚µã‚¤ã‚º
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Auto(const CloneBaseType* cloneSourcePointer, uint arraySize)
 			{
@@ -528,8 +528,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleCloneArray::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array] (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array] (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Auto(const UniquePointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -537,8 +537,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleCloneArray::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array] (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array] (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Auto(const SharedPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -546,8 +546,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleCloneArray::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Not Pointer = null (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Not Pointer = null (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Auto(WeakPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -555,8 +555,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleCloneArray::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Required UpdateManual (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Required UpdateManual (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Auto(const CloneSharedPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -565,8 +565,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleCloneArray::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Required UpdateManual (Used Single Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Required UpdateManual (Used Single Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Auto(CloneWeakPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -581,9 +581,9 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[MakeSingleCloneArray::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Required UpdateManual (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
-			//ˆø”2: ”z—ñƒTƒCƒY
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Required UpdateManual (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
+			//å¼•æ•°2: é…åˆ—ã‚µã‚¤ã‚º
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Manual(const CloneBaseType* cloneSourcePointer, uint arraySize)
 			{
@@ -591,8 +591,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleCloneArray::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Manual(const UniquePointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -600,8 +600,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleCloneArray::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Manual(const SharedPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -609,8 +609,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleCloneArray::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Not Pointer = null (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Not Pointer = null (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Manual(WeakPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -618,8 +618,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleCloneArray::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Required UpdateManual (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Required UpdateManual (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Manual(const CloneSharedPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -628,8 +628,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeSingleCloneArray::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Required UpdateManual (Used Single Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Required UpdateManual (Used Single Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Manual(CloneWeakPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -649,9 +649,9 @@ namespace SGFramework
 		{
 			//----------------------------------------------------------------------------------
 			//[MakeMultiCloneArray::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Required UpdateManual (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
-			//ˆø”2: ”z—ñƒTƒCƒY
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Required UpdateManual (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
+			//å¼•æ•°2: é…åˆ—ã‚µã‚¤ã‚º
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Auto(const CloneBaseType* cloneSourcePointer, uint arraySize)
 			{
@@ -659,8 +659,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiCloneArray::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array] (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array] (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Auto(const UniquePointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -668,8 +668,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiCloneArray::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array] (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array] (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Auto(const SharedPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -677,8 +677,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiCloneArray::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Not Pointer = null (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Not Pointer = null (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Auto(WeakPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -686,8 +686,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiCloneArray::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Required UpdateManual (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Required UpdateManual (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Auto(const CloneSharedPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -696,8 +696,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiCloneArray::Auto]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Required UpdateManual (Used Multi Thread, Auto Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Required UpdateManual (Used Multi Thread, Auto Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Auto(CloneWeakPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -712,9 +712,9 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[MakeMultiCloneArray::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Required UpdateManual (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
-			//ˆø”2: ”z—ñƒTƒCƒY
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Required UpdateManual (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
+			//å¼•æ•°2: é…åˆ—ã‚µã‚¤ã‚º
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Manual(const CloneBaseType* cloneSourcePointer, uint arraySize)
 			{
@@ -722,8 +722,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiCloneArray::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Manual(const UniquePointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -731,8 +731,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiCloneArray::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Manual(const SharedPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -740,8 +740,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiCloneArray::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Not Pointer = null (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Not Pointer = null (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Manual(WeakPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -749,8 +749,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiCloneArray::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Required UpdateManual (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Required UpdateManual (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Manual(const CloneSharedPointer<CloneBaseType[]>& cloneSourcePointer)
 			{
@@ -759,8 +759,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[MakeMultiCloneArray::Manual]
-			//return: ¶¬‚µ‚½CloneSharedPointer[Array], Required UpdateManual (Used Multi Thread, Manual Gabage Collection)
-			//ˆø”1: clone source pointer
+			//return: ç”Ÿæˆã—ãŸCloneSharedPointer[Array], Required UpdateManual (Used Multi Thread, Manual Gabage Collection)
+			//å¼•æ•°1: clone source pointer
 			template<class PointerType, class CloneBaseType>
 			inline SharedPointer<PointerType[]> Manual(CloneWeakPointer<CloneBaseType[]>& cloneSourcePointer)
 			{

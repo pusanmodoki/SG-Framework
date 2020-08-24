@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-ƒL[ƒ{[ƒh“ü—Í‚ğ’S“–‚·‚éKeyBordInput Class“àŠÖ”‚Å‚Ìˆø”‚Ég‚¤A
-ƒL[ƒ{[ƒhæ“¾—penum‚ğ“Z‚ß‚½KeyBordCode.h
+ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰å…¥åŠ›ã‚’æ‹…å½“ã™ã‚‹KeyBordInput Classå†…é–¢æ•°ã§ã®å¼•æ•°ã«ä½¿ã†ã€
+ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰å–å¾—ç”¨enumã‚’çºã‚ãŸKeyBordCode.h
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_INPUTCODE_KEYCODE_HPP_
 #define SGFRAMEWORK_HEADER_INPUTCODE_KEYCODE_HPP_
@@ -15,63 +15,63 @@
 namespace SGFramework
 {
 	//----------------------------------------------------------------------------------
-	//ƒL[ƒ{[ƒh”»’è‚Å”»’èƒL[‚Ìw’è‚Ég‚¤KeyCode	  
+	//ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰åˆ¤å®šã§åˆ¤å®šã‚­ãƒ¼ã®æŒ‡å®šã«ä½¿ã†KeyCode	  
 	struct KeyCode
 	{
 		enum Enum : int
 		{
 			//Windows key list
 #if defined(SGF_PLATFORM_WINDOWS)
-			//ƒVƒXƒeƒ€ƒL[ ---------------------------------------
+			//ã‚·ã‚¹ãƒ†ãƒ ã‚­ãƒ¼ ---------------------------------------
 			Shiht = VK_SHIFT,						//Shift
-			RightShiht = VK_RSHIFT,				//‰EShift
-			LeftShift = VK_LSHIFT,				//¶Shift
+			RightShiht = VK_RSHIFT,				//å³Shift
+			LeftShift = VK_LSHIFT,				//å·¦Shift
 			Alt = VK_MENU,							//Alt
-			LeftAlt = VK_LMENU,					//¶Alt
-			RightAlt = VK_RMENU,					//‰EAlt
+			LeftAlt = VK_LMENU,					//å·¦Alt
+			RightAlt = VK_RMENU,					//å³Alt
 			Control = VK_CONTROL,				//Ctrl
-			RightControl = VK_RCONTROL,		//‰ECtrl
-			LeftControl = VK_LCONTROL,		//¶ctrl
-			LeftWin = VK_LWIN,					//¶Windows
-			RightWin = VK_RWIN,					//‰EWindows
-			Up = VK_UP,								//ª
-			Left = VK_LEFT,							//©
-			Right = VK_RIGHT,						//¨
-			Down = VK_DOWN,						//«
+			RightControl = VK_RCONTROL,		//å³Ctrl
+			LeftControl = VK_LCONTROL,		//å·¦ctrl
+			LeftWin = VK_LWIN,					//å·¦Windows
+			RightWin = VK_RWIN,					//å³Windows
+			Up = VK_UP,								//â†‘
+			Left = VK_LEFT,							//â†
+			Right = VK_RIGHT,						//â†’
+			Down = VK_DOWN,						//â†“
 			PageUp = VK_PRIOR,					//PageUp
 			PageDown = VK_NEXT,				//PageDown
 			End = VK_END,							//End
 			Home = VK_HOME,						//Home
-			Escape = VK_ESCAPE,					//ƒGƒXƒP[ƒvƒL[(ESC)
-			BackSpace = VK_BACK,				//ƒoƒbƒNƒXƒy[ƒX
-			Tab = VK_TAB,							//ƒ^ƒu
-			Enter = VK_RETURN,					//ƒGƒ“ƒ^[
-			Space = VK_SPACE,						//ƒXƒy[ƒX				
+			Escape = VK_ESCAPE,					//ã‚¨ã‚¹ã‚±ãƒ¼ãƒ—ã‚­ãƒ¼(ESC)
+			BackSpace = VK_BACK,				//ãƒãƒƒã‚¯ã‚¹ãƒšãƒ¼ã‚¹
+			Tab = VK_TAB,							//ã‚¿ãƒ–
+			Enter = VK_RETURN,					//ã‚¨ãƒ³ã‚¿ãƒ¼
+			Space = VK_SPACE,						//ã‚¹ãƒšãƒ¼ã‚¹				
 			Delete = VK_DELETE,					//Delete
 			Pause = VK_PAUSE,						//Pause
 			CapsLock = VK_CAPITAL,				//CapsLock
 			Sleep = VK_SLEEP,						//Sleep
 			SnapShot = VK_SNAPSHOT,			//SnapShot
-			Kana = VK_KANA,						//‚©‚È
-			Kanji = VK_KANJI,						//Š¿š
-			Convert = VK_CONVERT,				//•ÏŠ·
-			NoConvert = VK_NONCONVERT,	//–³•ÏŠ·
+			Kana = VK_KANA,						//ã‹ãª
+			Kanji = VK_KANJI,						//æ¼¢å­—
+			Convert = VK_CONVERT,				//å¤‰æ›
+			NoConvert = VK_NONCONVERT,	//ç„¡å¤‰æ›
 			Insert = VK_INSERT,					//Insert
 			Help = VK_HELP,							//Help
 			Plus = VK_OEM_PLUS,					//+
 			Minus = VK_OEM_MINUS,				//-
 			Comma = VK_OEM_COMMA,		//,
 			Period = VK_OEM_PERIOD,			//.
-			Oem1 = VK_OEM_1,					//•Ä‘ƒL[ƒ{[ƒh‚Ìê‡,:ƒL[
-			Oem2 = VK_OEM_2,					//•Ä‘ƒL[ƒ{[ƒh‚Ìê‡/?ƒL[
-			Oem3 = VK_OEM_3,					//•Ä‘ƒL[ƒ{[ƒh‚Ìê‡'~ƒL[
-			Oem4 = VK_OEM_4,					//•Ä‘ƒL[ƒ{[ƒh‚Ìê‡[{ƒL[
-			Oem5 = VK_OEM_5,					//•Ä‘ƒL[ƒ{[ƒh‚Ìê‡/|ƒL[
-			Oem6 = VK_OEM_6,					//•Ä‘ƒL[ƒ{[ƒh‚Ìê‡]}ƒL[
-			Oem7 = VK_OEM_7,					//•Ä‘ƒL[ƒ{[ƒh‚Ìê‡ˆø—p•„ƒL[
+			Oem1 = VK_OEM_1,					//ç±³å›½ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã®å ´åˆ,:ã‚­ãƒ¼
+			Oem2 = VK_OEM_2,					//ç±³å›½ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã®å ´åˆ/?ã‚­ãƒ¼
+			Oem3 = VK_OEM_3,					//ç±³å›½ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã®å ´åˆ'~ã‚­ãƒ¼
+			Oem4 = VK_OEM_4,					//ç±³å›½ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã®å ´åˆ[{ã‚­ãƒ¼
+			Oem5 = VK_OEM_5,					//ç±³å›½ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã®å ´åˆ/|ã‚­ãƒ¼
+			Oem6 = VK_OEM_6,					//ç±³å›½ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã®å ´åˆ]}ã‚­ãƒ¼
+			Oem7 = VK_OEM_7,					//ç±³å›½ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã®å ´åˆå¼•ç”¨ç¬¦ã‚­ãƒ¼
 			Oem8 = VK_OEM_8,					//oem
 
-			//”šƒL[ ---------------------------------------------
+			//æ•°å­—ã‚­ãƒ¼ ---------------------------------------------
 			Num1 = '1',
 			Num2 = '2',
 			Num3 = '3',
@@ -83,7 +83,7 @@ namespace SGFramework
 			Num9 = '9',
 			Num0 = '0',
 
-			//ƒAƒ‹ƒtƒ@ƒxƒbƒgƒL[-------------------------------------------
+			//ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã‚­ãƒ¼-------------------------------------------
 			A = 'A',
 			B = 'B',
 			C = 'C',
@@ -111,7 +111,7 @@ namespace SGFramework
 			Y = 'Y',
 			Z = 'Z',
 
-			//ƒtƒ@ƒ“ƒNƒVƒ‡ƒ“ƒL[-------------------------------------------
+			//ãƒ•ã‚¡ãƒ³ã‚¯ã‚·ãƒ§ãƒ³ã‚­ãƒ¼-------------------------------------------
 			F1 = VK_F1,
 			F2 = VK_F2,
 			F3 = VK_F3,

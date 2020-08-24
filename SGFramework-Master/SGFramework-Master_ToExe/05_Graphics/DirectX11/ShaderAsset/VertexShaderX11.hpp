@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-DirectX11 VertexSHader‚ğˆµ‚¤VertexShaderAssetX11 class
+DirectX11 VertexSHaderã‚’æ‰±ã†VertexShaderAssetX11 class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_VERTEX_SHADER_ASSET_X11_HPP_
 #define SGFRAMEWORK_HEADER_VERTEX_SHADER_ASSET_X11_HPP_
@@ -10,7 +10,7 @@ DirectX11 VertexSHader‚ğˆµ‚¤VertexShaderAssetX11 class
 // Framework namespace
 namespace SGFramework
 {
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		class AssetManager;
@@ -18,7 +18,7 @@ namespace SGFramework
 		//GraphicsDetail namespace
 		namespace GraphicsDetail
 		{
-			//DirectX11 VertexSHader‚ğˆµ‚¤VertexShaderAssetX11 class
+			//DirectX11 VertexSHaderã‚’æ‰±ã†VertexShaderAssetX11 class
 			class VertexShaderAssetX11 final : public SGFramework::BaseClass::BaseShaderAssetX11
 			{
 			public:
@@ -26,19 +26,19 @@ namespace SGFramework
 				template <typename TAsset>
 				friend SharedPointer<TAsset> Asset::InstantiateAsset(const sgstring& filePath, bool isRegisterSharedAsset);
 
-				//D3D11_INPUT_ELEMENT_DESC‚ÉƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ğ’Ç‰Á‚µ‚½InputElement struct
+				//D3D11_INPUT_ELEMENT_DESCã«ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã‚’è¿½åŠ ã—ãŸInputElement struct
 				struct InputElement : public D3D11_INPUT_ELEMENT_DESC
 				{
 					//----------------------------------------------------------------------------------
-					//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-					//‰Šú‰»‚ğs‚¤
-					//ˆø”1: ƒZƒ}ƒ“ƒeƒBƒbƒN–¼
-					//ˆø”2: ƒZƒ}ƒ“ƒeƒBƒbƒNƒCƒ“ƒfƒbƒNƒX
-					//ˆø”3: ƒZƒ}ƒ“ƒeƒBƒbƒNƒCƒ“ƒfƒbƒNƒX
-					//ˆø”4: ƒCƒ“ƒvƒbƒgƒXƒƒbƒg, default = 0
-					//ˆø”5: ƒIƒtƒZƒbƒg, default = D3D11_APPEND_ALIGNED_ELEMENT
-					//ˆø”6: ƒCƒ“ƒvƒbƒgƒXƒƒbƒgƒNƒ‰ƒX, default = D3D11_INPUT_PER_VERTEX_DATA
-					//ˆø”7: ƒCƒ“ƒXƒ^ƒ“ƒXƒf[ƒ^ƒZƒpƒŒ[ƒg, default = 0
+					//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+					//åˆæœŸåŒ–ã‚’è¡Œã†
+					//å¼•æ•°1: ã‚»ãƒãƒ³ãƒ†ã‚£ãƒƒã‚¯å
+					//å¼•æ•°2: ã‚»ãƒãƒ³ãƒ†ã‚£ãƒƒã‚¯ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
+					//å¼•æ•°3: ã‚»ãƒãƒ³ãƒ†ã‚£ãƒƒã‚¯ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
+					//å¼•æ•°4: ã‚¤ãƒ³ãƒ—ãƒƒãƒˆã‚¹ãƒ­ãƒƒãƒˆ, default = 0
+					//å¼•æ•°5: ã‚ªãƒ•ã‚»ãƒƒãƒˆ, default = D3D11_APPEND_ALIGNED_ELEMENT
+					//å¼•æ•°6: ã‚¤ãƒ³ãƒ—ãƒƒãƒˆã‚¹ãƒ­ãƒƒãƒˆã‚¯ãƒ©ã‚¹, default = D3D11_INPUT_PER_VERTEX_DATA
+					//å¼•æ•°7: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãƒ‡ãƒ¼ã‚¿ã‚»ãƒ‘ãƒ¬ãƒ¼ãƒˆ, default = 0
 					inline InputElement(const std::string& semanticName, uint semanticIndex, DXGI_FORMAT format, uint inputSlot = 0,
 						uint alignedByteOffset = D3D11_APPEND_ALIGNED_ELEMENT,
 						D3D11_INPUT_CLASSIFICATION inputSlotClass = D3D11_INPUT_PER_VERTEX_DATA,
@@ -51,20 +51,20 @@ namespace SGFramework
 				};
 
 				//----------------------------------------------------------------------------------
-				//[ƒfƒXƒgƒ‰ƒNƒ^]
-				//ƒVƒF[ƒ_[ƒŠƒ\[ƒX‚ÌŠJ•ú‚ğs‚¤
+				//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+				//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒªã‚½ãƒ¼ã‚¹ã®é–‹æ”¾ã‚’è¡Œã†
 				inline ~VertexShaderAssetX11() override;
 
 				//----------------------------------------------------------------------------------
 				//[InstantiateDefaultShader3D]
-				//return: ¶¬‚µ‚½ƒfƒtƒHƒ‹ƒgƒVƒF[ƒ_[
+				//return: ç”Ÿæˆã—ãŸãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚·ã‚§ãƒ¼ãƒ€ãƒ¼
 				static inline SharedPointer<VertexShaderAssetX11> InstantiateDefaultShader3D()
 				{
 					return SharedPointer<VertexShaderAssetX11>();
 				}
 				//----------------------------------------------------------------------------------
 				//[InstantiateDefaultShader2D]
-				//return: ¶¬‚µ‚½ƒfƒtƒHƒ‹ƒgƒVƒF[ƒ_[
+				//return: ç”Ÿæˆã—ãŸãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚·ã‚§ãƒ¼ãƒ€ãƒ¼
 				static inline SharedPointer<VertexShaderAssetX11> InstantiateDefaultShader2D()
 				{
 					return SharedPointer<VertexShaderAssetX11>();
@@ -72,19 +72,19 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[Open]
-				//ƒVƒF[ƒ_[‚ğƒ[ƒh‚·‚é
-				//ˆø”1: INPUT_ELEMENT
-				//ˆø”2: ƒVƒF[ƒ_[ƒ‚ƒfƒ‹, default = "vs_5_0"
-				//ˆø”3: ƒGƒ“ƒgƒŠ[ƒ|ƒCƒ“ƒg, default = "main"
+				//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’ãƒ­ãƒ¼ãƒ‰ã™ã‚‹
+				//å¼•æ•°1: INPUT_ELEMENT
+				//å¼•æ•°2: ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒ¢ãƒ‡ãƒ«, default = "vs_5_0"
+				//å¼•æ•°3: ã‚¨ãƒ³ãƒˆãƒªãƒ¼ãƒã‚¤ãƒ³ãƒˆ, default = "main"
 				inline void Open(const std::vector<InputElement>& inputElements,
 					const std::string& shaderModel = "vs_5_0", const std::string& entryPoint = "main");
 				//----------------------------------------------------------------------------------
 				//[Reload]
-				//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤
+				//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
 				inline void Reload() override;
 				//----------------------------------------------------------------------------------
 				//[Close]
-				//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+				//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 				inline void Close() override;
 
 				//get asset type (read function property)
@@ -104,9 +104,9 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[CreateInputElements]
-				//Open‚Åg—p‚·‚éInputElement‚Ìvector‚ğì¬‚·‚é
-				//return: ì¬‚µ‚½vector
-				//ˆø”Pack: VSInputElement or VertexShader::InputElementƒRƒ“ƒXƒgƒ‰ƒNƒ^
+				//Openã§ä½¿ç”¨ã™ã‚‹InputElementã®vectorã‚’ä½œæˆã™ã‚‹
+				//return: ä½œæˆã—ãŸvector
+				//å¼•æ•°Pack: VSInputElement or VertexShader::InputElementã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 				template<class ...Args>
 				inline static std::vector<InputElement> CreateInputElements(const Args&... args);
 
@@ -119,35 +119,35 @@ namespace SGFramework
 
 			private:
 				//----------------------------------------------------------------------------------
-				//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-				//‰Šú‰»‚ğs‚¤
+				//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+				//åˆæœŸåŒ–ã‚’è¡Œã†
 				inline VertexShaderAssetX11() : BaseShaderAssetX11() {}
 
 				//----------------------------------------------------------------------------------
 				//[ReleaseShader]
-				//ƒVƒF[ƒ_[‚ğŠJ•ú‚·‚é
+				//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’é–‹æ”¾ã™ã‚‹
 				void ReleaseShader() override;
 
-				ID3D11VertexShader* m_vertexShader = nullptr;				//ƒVƒF[ƒ_[
-				ID3D11InputLayout*  m_vertexLayout = nullptr;				//ƒVƒF[ƒ_[ƒŒƒCƒAƒEƒg
-				//Reload—p
+				ID3D11VertexShader* m_vertexShader = nullptr;				//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼
+				ID3D11InputLayout*  m_vertexLayout = nullptr;				//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆ
+				//Reloadç”¨
 				std::vector<VertexShaderAssetX11::InputElement> m_inputElements;
-				//Reload—p
+				//Reloadç”¨
 				std::string m_shaderModel;
-				//Reload—p
+				//Reloadç”¨
 				std::string m_entryPoint;
 			};
 
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-			//‰Šú‰»‚ğs‚¤
-			//ˆø”1: ƒZƒ}ƒ“ƒeƒBƒbƒN–¼
-			//ˆø”2: ƒZƒ}ƒ“ƒeƒBƒbƒNƒCƒ“ƒfƒbƒNƒX
-			//ˆø”3: ƒZƒ}ƒ“ƒeƒBƒbƒNƒCƒ“ƒfƒbƒNƒX
-			//ˆø”4: ƒCƒ“ƒvƒbƒgƒXƒƒbƒg, default = 0
-			//ˆø”5: ƒIƒtƒZƒbƒg, default = D3D11_APPEND_ALIGNED_ELEMENT
-			//ˆø”6: ƒCƒ“ƒvƒbƒgƒXƒƒbƒgƒNƒ‰ƒX, default = D3D11_INPUT_PER_VERTEX_DATA
-			//ˆø”7: ƒCƒ“ƒXƒ^ƒ“ƒXƒf[ƒ^ƒZƒpƒŒ[ƒg, default = 0
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//åˆæœŸåŒ–ã‚’è¡Œã†
+			//å¼•æ•°1: ã‚»ãƒãƒ³ãƒ†ã‚£ãƒƒã‚¯å
+			//å¼•æ•°2: ã‚»ãƒãƒ³ãƒ†ã‚£ãƒƒã‚¯ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
+			//å¼•æ•°3: ã‚»ãƒãƒ³ãƒ†ã‚£ãƒƒã‚¯ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
+			//å¼•æ•°4: ã‚¤ãƒ³ãƒ—ãƒƒãƒˆã‚¹ãƒ­ãƒƒãƒˆ, default = 0
+			//å¼•æ•°5: ã‚ªãƒ•ã‚»ãƒƒãƒˆ, default = D3D11_APPEND_ALIGNED_ELEMENT
+			//å¼•æ•°6: ã‚¤ãƒ³ãƒ—ãƒƒãƒˆã‚¹ãƒ­ãƒƒãƒˆã‚¯ãƒ©ã‚¹, default = D3D11_INPUT_PER_VERTEX_DATA
+			//å¼•æ•°7: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãƒ‡ãƒ¼ã‚¿ã‚»ãƒ‘ãƒ¬ãƒ¼ãƒˆ, default = 0
 			inline VertexShaderAssetX11::InputElement::InputElement(const std::string& semanticName, uint semanticIndex, DXGI_FORMAT format, uint inputSlot,
 				uint alignedByteOffset, D3D11_INPUT_CLASSIFICATION inputSlotClass, uint instanceDataStepRate)
 			{
@@ -161,8 +161,8 @@ namespace SGFramework
 			}
 
 			//----------------------------------------------------------------------------------
-			//[ƒfƒXƒgƒ‰ƒNƒ^]
-			//ƒVƒF[ƒ_[ƒŠƒ\[ƒX‚ÌŠJ•ú‚ğs‚¤
+			//[ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+			//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒªã‚½ãƒ¼ã‚¹ã®é–‹æ”¾ã‚’è¡Œã†
 			inline VertexShaderAssetX11::~VertexShaderAssetX11()
 			{
 				ReleaseShader();
@@ -171,10 +171,10 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Open]
-			//ƒVƒF[ƒ_[‚ğƒ[ƒh‚·‚é
-			//ˆø”1: INPUT_ELEMENT
-			//ˆø”2: ƒVƒF[ƒ_[ƒ‚ƒfƒ‹, default = "vs_5_0"
-			//ˆø”3: ƒGƒ“ƒgƒŠ[ƒ|ƒCƒ“ƒg, default = "main"
+			//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’ãƒ­ãƒ¼ãƒ‰ã™ã‚‹
+			//å¼•æ•°1: INPUT_ELEMENT
+			//å¼•æ•°2: ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒ¢ãƒ‡ãƒ«, default = "vs_5_0"
+			//å¼•æ•°3: ã‚¨ãƒ³ãƒˆãƒªãƒ¼ãƒã‚¤ãƒ³ãƒˆ, default = "main"
 			inline void VertexShaderAssetX11::Open(const std::vector<VertexShaderAssetX11::InputElement>& inputElements,
 				const std::string& shaderModel, const std::string& entryPoint)
 			{
@@ -182,7 +182,7 @@ namespace SGFramework
 
 				setIsOpenFailed(false);
 
-				//‰Šú‰»
+				//åˆæœŸåŒ–
 				m_vertexShader = nullptr;
 				m_vertexLayout = nullptr;
 				m_inputElements = std::move(inputElements);
@@ -192,10 +192,10 @@ namespace SGFramework
 
 				try
 				{
-					//ƒVƒF[ƒ_[ƒRƒ“ƒpƒCƒ‹
+					//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«
 					Compile(name(), m_shaderModel, m_entryPoint);
 
-					//ì¬
+					//ä½œæˆ
 					auto result = SGFramework::Administrator::GraphicsX11::device->CreateVertexShader(
 						m_blob ? m_blob->GetBufferPointer() : m_byteData.data(),
 						m_blob ? m_blob->GetBufferSize() : m_byteData.size(),
@@ -208,7 +208,7 @@ namespace SGFramework
 						throw InvalidArgument(L"Error!! VertexShaderAssetX11->Open", L"CreateVertexShader	failed", result);
 					}
 
-					//ì¬
+					//ä½œæˆ
 					result = SGFramework::Administrator::GraphicsX11::device->CreateInputLayout(
 						m_inputElements.data(), static_cast<uint>(m_inputElements.size()),
 						m_blob ? m_blob->GetBufferPointer() : m_byteData.data(),
@@ -233,20 +233,20 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[Reload]
-			//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤
+			//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
 			inline void VertexShaderAssetX11::Reload()
 			{
 				if (IS_FALSE(getIsFileOpened())) return;
 			
-				//‚Ü‚¸ŠJ•ú
+				//ã¾ãšé–‹æ”¾
 				ReleaseShader();
 
 				try
 				{
-					//ƒVƒF[ƒ_[ƒRƒ“ƒpƒCƒ‹
+					//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«
 					Compile(name, m_shaderModel, m_entryPoint);
 
-					//ì¬
+					//ä½œæˆ
 					auto result = SGFramework::Administrator::GraphicsX11::device->CreateVertexShader(
 						m_blob ? m_blob->GetBufferPointer() : m_byteData.data(),
 						m_blob ? m_blob->GetBufferSize() : m_byteData.size(),
@@ -259,7 +259,7 @@ namespace SGFramework
 						throw InvalidArgument(L"Error!! VertexShaderAssetX11->Open", L"CreateVertexShader	failed", result);
 					}
 
-					//ì¬
+					//ä½œæˆ
 					result = SGFramework::Administrator::GraphicsX11::device->CreateInputLayout(
 						m_inputElements.data(), static_cast<uint>(m_inputElements.size()),
 						m_blob ? m_blob->GetBufferPointer() : m_byteData.data(), 
@@ -279,18 +279,18 @@ namespace SGFramework
 				}
 
 
-				//ƒŠƒ[ƒh
+				//ãƒªãƒ­ãƒ¼ãƒ‰
 				ReloadBaseAsset();
 			}
 
 			//----------------------------------------------------------------------------------
 			//[Close]
-			//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+			//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 			inline void VertexShaderAssetX11::Close()
 			{
 				if (IS_FALSE(getIsFileOpened())) return;
 				
-				//ƒVƒF[ƒ_[ŠJ•ú
+				//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼é–‹æ”¾
 				ReleaseShader();
 				//BaseAsset
 				CloseBaseAsset(getType(), false);
@@ -298,9 +298,9 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[CreateInputElements]
-			//Open‚Åg—p‚·‚éInputElement‚Ìvector‚ğì¬‚·‚é
-			//return: ì¬‚µ‚½vector
-			//ˆø”Pack: VSInputElement or VertexShader::InputElementƒRƒ“ƒXƒgƒ‰ƒNƒ^
+			//Openã§ä½¿ç”¨ã™ã‚‹InputElementã®vectorã‚’ä½œæˆã™ã‚‹
+			//return: ä½œæˆã—ãŸvector
+			//å¼•æ•°Pack: VSInputElement or VertexShader::InputElementã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 			template<class ...Args>
 			inline static std::vector<VertexShaderAssetX11::InputElement> VertexShaderAssetX11::CreateInputElements(const Args&... args)
 			{
@@ -381,7 +381,7 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[ReleaseShader]
-			//ƒVƒF[ƒ_[‚ğŠJ•ú‚·‚é
+			//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’é–‹æ”¾ã™ã‚‹
 			inline void VertexShaderAssetX11::ReleaseShader()
 			{
 				COM_RELEASE(m_vertexShader);

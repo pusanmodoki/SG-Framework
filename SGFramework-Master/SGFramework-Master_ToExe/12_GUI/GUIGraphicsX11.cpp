@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-GUI‚ğŠÇ—‚·‚éGUI class
+GUIã‚’ç®¡ç†ã™ã‚‹GUI class
 ------------------------------------------------------------------------------------*/
 #include "GUI.hpp"
 #include "../04_Asset/InstantiateAsset.hpp"
@@ -7,10 +7,10 @@ GUI‚ğŠÇ—‚·‚éGUI class
 // Framework namespace
 namespace SGFramework
 {
-	//\‘¢‘Ì, ƒOƒ[ƒoƒ‹•Ï”‚ğéŒ¾‚·‚éDetailGUIGraphics
+	//æ§‹é€ ä½“, ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°ã‚’å®£è¨€ã™ã‚‹DetailGUIGraphics
 	namespace DetailGUIGraphics
 	{
-		//Œ»İ‚ÌGraphicsİ’è‚ğ•Û‘¶‚·‚é‚½‚ß‚ÌStates
+		//ç¾åœ¨ã®Graphicsè¨­å®šã‚’ä¿å­˜ã™ã‚‹ãŸã‚ã®States
 		struct GUIBukupDirectX11States
 		{
 			UINT numScissorRects = 0, numViewports = 0;
@@ -62,22 +62,22 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[StratUpGraphicsX11]
-	//DirectX11‚ğg—p‚·‚é‰Šú‰»‚ğs‚¤
-	//ˆø”1: vertex shader path
-	//ˆø”1: pixel shader path
+	//DirectX11ã‚’ä½¿ç”¨ã™ã‚‹åˆæœŸåŒ–ã‚’è¡Œã†
+	//å¼•æ•°1: vertex shader path
+	//å¼•æ•°1: pixel shader path
 	void GUI::StratUpGraphicsX11(const sgstring& vertexShaderName,
 		const sgstring& pixelShaderName)
 	{
 		using namespace DetailGUIGraphics;
 
-		//ƒVƒF[ƒ_[‚ğŠJ‚­
+		//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’é–‹ã
 		m_vertexShader = Asset::InstantiateAsset<Asset::VertexShaderAsset>(vertexShaderName, false);
 		m_pixelShader = Asset::InstantiateAsset<Asset::PixelShaderAsset>(pixelShaderName, false);
 		
 		m_vertexShader->Open(std::move(Asset::VertexShaderAsset::getImGuiVertexInputElements()));
 		m_pixelShader->Open();
 
-		//ˆÈ‰ºAƒŠƒl[ƒ€‚âthrow‚È‚ÇŒy”÷‚È•ÏX‚Í‚ ‚é‚à‚Ì‚ÌŠî–{“I‚É‚Íimgui-master->sumple‚ÌƒRƒs[
+		//ä»¥ä¸‹ã€ãƒªãƒãƒ¼ãƒ ã‚„throwãªã©è»½å¾®ãªå¤‰æ›´ã¯ã‚ã‚‹ã‚‚ã®ã®åŸºæœ¬çš„ã«ã¯imgui-master->sumpleã®ã‚³ãƒ”ãƒ¼
 		
 		// Setup back-end capabilities flags
 		ImGuiIO& io = ImGui::GetIO();
@@ -226,12 +226,12 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[ShutDownGraphicsX11]
-	//DirectX11‚ğg—p‚·‚éI—¹ˆ—‚ğs‚¤
+	//DirectX11ã‚’ä½¿ç”¨ã™ã‚‹çµ‚äº†å‡¦ç†ã‚’è¡Œã†
 	void GUI::ShutDownGraphicsX11()
 	{
 		using namespace DetailGUIGraphics;
 
-		//Release‚ğs‚¤
+		//Releaseã‚’è¡Œã†
 		COM_RELEASE(g_vertexBuffer);
 		COM_RELEASE(g_indexBuffer);
 		COM_RELEASE(g_fontSampler);
@@ -244,14 +244,14 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[DrawGraphicsX11]
-	//ImGui::RenderŒã‚Ì•`‰æˆ—‚ğs‚¤
+	//ImGui::Renderå¾Œã®æç”»å‡¦ç†ã‚’è¡Œã†
 	void GUI::DrawGraphicsX11()
 	{ 
 		using namespace DetailGUIGraphics;
 
 		if (IS_FALSE(m_isUsing)) return;
 		
-		//ˆÈ‰ºAƒŠƒl[ƒ€‚âthrow‚È‚ÇŒy”÷‚È•ÏX‚Í‚ ‚é‚à‚Ì‚ÌŠî–{“I‚É‚Íimgui-master->sumple‚ÌƒRƒs[
+		//ä»¥ä¸‹ã€ãƒªãƒãƒ¼ãƒ ã‚„throwãªã©è»½å¾®ãªå¤‰æ›´ã¯ã‚ã‚‹ã‚‚ã®ã®åŸºæœ¬çš„ã«ã¯imgui-master->sumpleã®ã‚³ãƒ”ãƒ¼
 
 		ImDrawData* drawData = ImGui::GetDrawData();
 		// Avoid rendering when minimized
@@ -333,7 +333,7 @@ namespace SGFramework
 				{ 0.0f,         0.0f,           0.5f,       0.0f },
 				{ (R + L) / (L - R),  (T + B) / (B - T),    0.5f,       1.0f },
 			};
-			//ƒRƒ“ƒXƒ^ƒ“ƒgƒoƒbƒtƒ@XV
+			//ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡æ›´æ–°
 			memcpy_s(&Graphics::m_setConstantBufferScene.projectionMatrix, sizeof(Vector4x4), mvp, sizeof(Vector4x4));
 			Graphics::context->UpdateSubresource(Graphics::m_constantBufferScene, 0, nullptr, &Graphics::m_setConstantBufferScene, 0, 0);
 		}

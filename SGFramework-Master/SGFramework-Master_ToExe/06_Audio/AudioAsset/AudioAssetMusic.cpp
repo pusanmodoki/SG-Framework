@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-BGM‚ğˆµ‚¤AudioAssetMusic class
-	¨AudioAssetMusic.cpp
+BGMã‚’æ‰±ã†AudioAssetMusic class
+	â†’AudioAssetMusic.cpp
 ------------------------------------------------------------------------------------*/
 #include "../../03_MathAF/MathAF.hpp"
 #include "AudioAssetMusic.hpp"
@@ -10,23 +10,23 @@ BGM‚ğˆµ‚¤AudioAssetMusic class
 // Framework namespace
 namespace SGFramework
 {
-	//AssetŠÖ˜A‚ğŠi”[‚µ‚½Asset namespace
+	//Asseté–¢é€£ã‚’æ ¼ç´ã—ãŸAsset namespace
 	namespace Asset
 	{
 		//----------------------------------------------------------------------------------
 		//[Open]
-		//ƒAƒZƒbƒg‚Ìƒ[ƒh‚ğs‚¤
-		//ˆø”1: ‰¹º‚ªŠ‘®‚·‚éSubmixLayer,d default = not monoral root layer
-		//ˆø”2: ƒXƒgƒŠ[ƒ~ƒ“ƒO‚Ì•ªŠ„ŠÔŠu (ˆø”4 ~ 6‚Ì•b”‚Í‚±‚Ì’l‚Ì”{”‚Å‚ ‚é•K—v‚ª‚ ‚é), default = cDefault (0.2f)
-		//ˆø”3: Ä¶ŠJn•b”, default = cDefault (Begin)
-		//ˆø”4: ƒ‹[ƒvŠJn•b”, default = cDefault (Begin)
-		//ˆø”5: Ä¶I—¹•b”, default = cDefault (End)
+		//ã‚¢ã‚»ãƒƒãƒˆã®ãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
+		//å¼•æ•°1: éŸ³å£°ãŒæ‰€å±ã™ã‚‹SubmixLayer,d default = not monoral root layer
+		//å¼•æ•°2: ã‚¹ãƒˆãƒªãƒ¼ãƒŸãƒ³ã‚°ã®åˆ†å‰²é–“éš” (å¼•æ•°4 ~ 6ã®ç§’æ•°ã¯ã“ã®å€¤ã®å€æ•°ã§ã‚ã‚‹å¿…è¦ãŒã‚ã‚‹), default = cDefault (0.2f)
+		//å¼•æ•°3: å†ç”Ÿé–‹å§‹ç§’æ•°, default = cDefault (Begin)
+		//å¼•æ•°4: ãƒ«ãƒ¼ãƒ—æ™‚é–‹å§‹ç§’æ•°, default = cDefault (Begin)
+		//å¼•æ•°5: å†ç”Ÿçµ‚äº†ç§’æ•°, default = cDefault (End)
 		void AudioAssetMusic::Open(WeakPointer<Audio::SubmixLayer> submixLayer, float setStreamingPlaybackInterval,
 			float setPlayBeginSeconds, float setLoopBeginSeconds, float setPlayEndSeconds)
 		{
 			if (IS_TRUE(getIsFileOpened())) return;
 
-			//XAudio–¢‰Šú‰»‚ÅI—¹
+			//XAudioæœªåˆæœŸåŒ–ã§çµ‚äº†
 			if (Audio::m_xaudio2 == nullptr)
 			{
 				setIsOpenFailed(true);
@@ -44,7 +44,7 @@ namespace SGFramework
 			MMRESULT mmret = {};
 			HRESULT result;
 
-			//mmioŒ`®‚Åƒtƒ@ƒCƒ‹ƒI[ƒvƒ“
+			//mmioå½¢å¼ã§ãƒ•ã‚¡ã‚¤ãƒ«ã‚ªãƒ¼ãƒ—ãƒ³
 			m_mmioHandle = mmioOpen(const_cast<wchar*>(name().c_str()), &mmioinfo, MMIO_READ);
 			if (m_mmioHandle == nullptr)
 			{
@@ -89,7 +89,7 @@ namespace SGFramework
 				throw InvalidArgument(L"Error!! AudioAssetMusic->Open", L"mmioDescend Failed");
 			}
 
-			//ƒ\[ƒXƒ{ƒCƒXì¬
+			//ã‚½ãƒ¼ã‚¹ãƒœã‚¤ã‚¹ä½œæˆ
 			IXAudio2SourceVoice* voice = nullptr;
 			result = Audio::m_xaudio2->CreateSourceVoice(&voice, &format.Format, XAUDIO2_VOICE_NOPITCH,
 				XAUDIO2_DEFAULT_FREQ_RATIO, &m_callback, &submixLayer->m_sends, nullptr);
@@ -103,49 +103,49 @@ namespace SGFramework
 
 			//SeekPoint
 			m_beginPoint = mmioSeek(m_mmioHandle, 0, SEEK_CUR);
-			//•b”‘ã“ü
+			//ç§’æ•°ä»£å…¥
 			m_audioSeconds =
 				static_cast<float>(((m_beginPoint + mmioSeek(m_mmioHandle, 0, SEEK_END)) / format.Format.nBlockAlign) / format.Format.nSamplesPerSec);
-			//Å‰‚ÉƒV[ƒN‚ğ–ß‚·
+			//æœ€åˆã«ã‚·ãƒ¼ã‚¯ã‚’æˆ»ã™
 			mmioSeek(m_mmioHandle, m_beginPoint, SEEK_SET);
 
-			//ƒfƒtƒHƒ‹ƒg‚©”Û‚©‚Å•ªŠò‚µAƒfƒtƒHƒ‹ƒg‚Ìê‡‚Í0‚ğ‘ã“ü‚·‚é
+			//ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‹å¦ã‹ã§åˆ†å²ã—ã€ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®å ´åˆã¯0ã‚’ä»£å…¥ã™ã‚‹
 			if (IS_FALSE(MathAF::IsMinusSign(setPlayBeginSeconds))) m_playBeginSeconds = setPlayBeginSeconds;
 			else m_playBeginSeconds = 0.0f;
 			if (IS_FALSE(MathAF::IsMinusSign(setLoopBeginSeconds))) m_loopBeginSeconds = setLoopBeginSeconds;
 			else m_loopBeginSeconds = 0.0f;		
-			//‘ã“ü
+			//ä»£å…¥
 			m_playEndSeconds = setPlayEndSeconds;
 			m_streamingPlaybackInterval = setStreamingPlaybackInterval;
 			m_sourceSampleRate = format.Format.nSamplesPerSec;
 			m_channels = format.Format.nChannels;
 			m_submixLayerID = submixLayer->m_layerID;
 		
-			//ƒoƒCƒg’PˆÊƒIƒtƒZƒbƒgì¬
+			//ãƒã‚¤ãƒˆå˜ä½ã‚ªãƒ•ã‚»ãƒƒãƒˆä½œæˆ
 			m_beginOffset = static_cast<int>(static_cast<float>(format.Format.nAvgBytesPerSec) * m_playBeginSeconds);
 			m_loopOffset = static_cast<int>(static_cast<float>(format.Format.nAvgBytesPerSec) * m_loopBeginSeconds);
 			
-			//I—¹ƒ|ƒCƒ“ƒgİ’è
+			//çµ‚äº†ãƒã‚¤ãƒ³ãƒˆè¨­å®š
 			if (IS_FALSE(MathAF::IsMinusSign(m_playEndSeconds)))
 				m_endPoint = static_cast<int>(static_cast<float>(format.Format.nAvgBytesPerSec) * m_playEndSeconds);
 			else m_endPoint = VariableLimit::cIntMax;		
 
-			//BeginOffset‚ ‚éê‡ƒV[ƒN
+			//BeginOffsetã‚ã‚‹å ´åˆã‚·ãƒ¼ã‚¯
 			if (m_beginOffset)
 				m_beginPoint = mmioSeek(m_mmioHandle, m_beginOffset, SEEK_CUR);
 			
-			//ƒoƒbƒtƒ@’·‚³w’è
+			//ãƒãƒƒãƒ•ã‚¡é•·ã•æŒ‡å®š
 			m_bufferLength = format.Format.nAvgBytesPerSec / static_cast<ulong>(1.0f / setStreamingPlaybackInterval);
 			//new buffer
 			m_buffers = new byte[m_bufferLength * m_cBufferMax];
-			//‰Šú“Ç‚İ‚İƒ|ƒCƒ“ƒgİ’è
+			//åˆæœŸèª­ã¿è¾¼ã¿ãƒã‚¤ãƒ³ãƒˆè¨­å®š
 			m_readPoint = m_buffers;
 			//read
 			m_readLength = mmioRead(m_mmioHandle, reinterpret_cast<HPSTR>(m_readPoint), m_bufferLength);
-			//ƒV[ƒN‰ÁZ
+			//ã‚·ãƒ¼ã‚¯åŠ ç®—
 			m_seek += m_readLength;
 
-			//Ä¶î•ñ‚ğİ’è
+			//å†ç”Ÿæƒ…å ±ã‚’è¨­å®š
 			m_bufferInfo.AudioBytes = m_readLength;
 			m_bufferInfo.pAudioData = m_readPoint;
 			m_bufferInfo.PlayBegin = 0;
@@ -156,18 +156,18 @@ namespace SGFramework
 			//BaseAsset
 			OpenBaseAsset();
 			
-			//Update•ÊƒXƒŒƒbƒh‚ÅŠJn
+			//Updateåˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰ã§é–‹å§‹
 			m_updateThread = std::thread([this]() { this->PlayUpdate(); });
 		}
 
 		//----------------------------------------------------------------------------------
 		//[Reload]
-		//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤
+		//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
 		void AudioAssetMusic::Reload()
 		{
 			if (IS_FALSE(getIsFileOpened())) return;
 		
-			//Open‚É•K—v‚Èî•ñ‚ğ‹L˜^
+			//Openã«å¿…è¦ãªæƒ…å ±ã‚’è¨˜éŒ²
 			sgstring path = name;
 			const auto& submixLayer = Audio::getLayer(m_submixLayerID);
 			float setStreamingPlaybackInterval = m_streamingPlaybackInterval;
@@ -184,7 +184,7 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Close]
-		//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 		void AudioAssetMusic::Close()
 		{
 			if (IS_FALSE(getIsFileOpened())) return;
@@ -198,28 +198,28 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[PlayUpdate]
-		//XV‚ğs‚¤, •ÊƒXƒŒƒbƒh“®ì
+		//æ›´æ–°ã‚’è¡Œã†, åˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰å‹•ä½œ
 		void AudioAssetMusic::PlayUpdate()
 		{
-			//UseThread–¢İ’è‚È‚çg—pƒXƒŒƒbƒh‚ğŠ„‚è“–‚Ä & İ’è
+			//UseThreadæœªè¨­å®šãªã‚‰ä½¿ç”¨ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’å‰²ã‚Šå½“ã¦ & è¨­å®š
 			if (m_useThread == 0)
 				m_useThread = Thread::AutoThreadAllocation(m_updateThread.native_handle());
-			//Š„‚è“–‚ÄÏ‚İ‚È‚ç‚»‚ÌƒXƒŒƒbƒh‚ğw’è
+			//å‰²ã‚Šå½“ã¦æ¸ˆã¿ãªã‚‰ãã®ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’æŒ‡å®š
 			else
 				Thread::ThreadAllocation(m_updateThread.native_handle(), m_useThread);
 
-			//“o˜^
+			//ç™»éŒ²
 			Thread::RegisterRunningFrameworkThread();
 
-			//Ä¶ƒ‹[ƒv
+			//å†ç”Ÿãƒ«ãƒ¼ãƒ—
 			while (true)
 			{
-				//’Ê’m‘Ò‹@
+				//é€šçŸ¥å¾…æ©Ÿ
 				uint waitResult = m_updateCondition.Wait();
-				//Ä¶ƒtƒ‰ƒO
+				//å†ç”Ÿãƒ•ãƒ©ã‚°
 				bool isPlayStart = false;
 
-				//ƒAƒbƒvƒf[ƒgI—¹‚È‚çƒ‹[ƒv”²‚¯‚é
+				//ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆçµ‚äº†ãªã‚‰ãƒ«ãƒ¼ãƒ—æŠœã‘ã‚‹
 				if (waitResult & m_cFlagQuit) break;
 
 				uint state = 0;
@@ -228,7 +228,7 @@ namespace SGFramework
 					//Lock 
 					AtomicOperation::LockAtomic(m_lock);
 
-					//ƒLƒ…[, flagƒRƒs[ 
+					//ã‚­ãƒ¥ãƒ¼, flagã‚³ãƒ”ãƒ¼ 
 					state = m_playQueue.state;
 					m_playQueue.state = 0;
 					isExitLoop = m_isExitLoop;
@@ -262,30 +262,30 @@ namespace SGFramework
 					PauseExecution();
 
 
-				//ƒAƒbƒvƒf[ƒgƒCƒxƒ“ƒg‚ ‚è
+				//ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã‚¤ãƒ™ãƒ³ãƒˆã‚ã‚Š
 				if ((waitResult & m_cFlagUpdate) || IS_TRUE(isPlayStart))
 				{
-					//ƒXƒe[ƒgæ“¾
+					//ã‚¹ãƒ†ãƒ¼ãƒˆå–å¾—
 					m_voice->GetState(&m_state);
 
-					//ƒoƒbƒtƒ@[‚É‹l‚ß‚ß‚é‚¾‚¯‹l‚ß‚Ş
+					//ãƒãƒƒãƒ•ã‚¡ãƒ¼ã«è©°ã‚è¾¼ã‚ã‚‹ã ã‘è©°ã‚è¾¼ã‚€
 					while (m_state.BuffersQueued < m_cBufferMax)
 					{
-						//“Ç‚İ‚İƒ|ƒCƒ“ƒgÄİ’è
+						//èª­ã¿è¾¼ã¿ãƒã‚¤ãƒ³ãƒˆå†è¨­å®š
 						m_readPoint = m_buffers + m_bufferLength * m_useBuffer;
-						//Ÿ‰ñg—pƒoƒbƒtƒ@İ’è
+						//æ¬¡å›ä½¿ç”¨ãƒãƒƒãƒ•ã‚¡è¨­å®š
 						m_useBuffer = (m_useBuffer + 1) % m_cBufferMax;
 						//Read
 						m_readLength = mmioRead(m_mmioHandle, reinterpret_cast<HPSTR>(m_readPoint), m_bufferLength);
 
-						//Seek‰ÁZ
+						//SeekåŠ ç®—
 						m_seek += m_readLength;
-						//I—¹ğŒ‚É•K—v
+						//çµ‚äº†æ¡ä»¶ã«å¿…è¦
 						m_state.BuffersQueued++;
 
-						//Flagİ’è
+						//Flagè¨­å®š
 						m_bufferInfo.Flags = XAUDIO2_END_OF_STREAM;
-						//‚Ü‚¾“Ç‚İ‚ß‚é‚È‚ç0‚ÉFlagİ’è
+						//ã¾ã èª­ã¿è¾¼ã‚ã‚‹ãªã‚‰0ã«Flagè¨­å®š
 						if (m_readLength >= m_bufferLength)
 						{
 							if (IS_TRUE(m_isFirstFullPlayback.load()))
@@ -300,33 +300,33 @@ namespace SGFramework
 							}
 						}
 
-						//ƒoƒbƒtƒ@[İ’è
+						//ãƒãƒƒãƒ•ã‚¡ãƒ¼è¨­å®š
 						m_bufferInfo.AudioBytes = m_readLength;
 						m_bufferInfo.pAudioData = m_readPoint;
-						//ƒoƒbƒtƒ@[’Ç‰Á
+						//ãƒãƒƒãƒ•ã‚¡ãƒ¼è¿½åŠ 
 						m_voice->SubmitSourceBuffer(&m_bufferInfo);
 
-						//Flag‚ªI—¹İ’è‚È‚ç
+						//FlagãŒçµ‚äº†è¨­å®šãªã‚‰
 						if (m_bufferInfo.Flags & XAUDIO2_END_OF_STREAM)
 						{
-							//ƒ‹[ƒvI—¹ƒtƒ‰ƒO‚ ‚è‚È‚ç~‚ß‚ÄI—¹
+							//ãƒ«ãƒ¼ãƒ—çµ‚äº†ãƒ•ãƒ©ã‚°ã‚ã‚Šãªã‚‰æ­¢ã‚ã¦çµ‚äº†
 							if (IS_TRUE(isExitLoop))
 							{
 								StopExecution(isExitLoop);
 								continue;
 							}
 
-							//ƒ‹[ƒv2‰ñ–Ú‚©”Û‚©‚Å•ªŠò‚µAƒ‹[ƒvƒ|ƒCƒ“ƒg‚Ü‚ÅƒV[ƒN
+							//ãƒ«ãƒ¼ãƒ—2å›ç›®ã‹å¦ã‹ã§åˆ†å²ã—ã€ãƒ«ãƒ¼ãƒ—ãƒã‚¤ãƒ³ãƒˆã¾ã§ã‚·ãƒ¼ã‚¯
 							if (IS_TRUE(m_isFirstFullPlayback.load()))
 								mmioSeek(m_mmioHandle, -m_seek, SEEK_CUR);
 							else
 							{
 								mmioSeek(m_mmioHandle, (-m_seek) - m_beginOffset + m_loopOffset, SEEK_CUR);
-								//ƒ‹[ƒvŠ®—¹
+								//ãƒ«ãƒ¼ãƒ—å®Œäº†
 								AtomicOperation::Init(m_isFirstFullPlayback, true);
 							}
 
-							//ƒV[ƒN‰Šú‰»
+							//ã‚·ãƒ¼ã‚¯åˆæœŸåŒ–
 							m_seek = 0;
 						}
 					}
@@ -337,7 +337,7 @@ namespace SGFramework
 					//Lock 
 					AtomicOperation::LockAtomic(m_lock);
 
-					//ƒtƒ‰ƒOƒRƒs[ 
+					//ãƒ•ãƒ©ã‚°ã‚³ãƒ”ãƒ¼ 
 					m_isExitLoop = isExitLoop;
 					
 					//Unlock 
@@ -345,19 +345,19 @@ namespace SGFramework
 				}
 			}
 
-			//“o˜^‰ğœ
+			//ç™»éŒ²è§£é™¤
 			Thread::UnRegisterRunningFrameworkThread();
 		}
 
 		//----------------------------------------------------------------------------------
 		//[PlayExecution]
-		//ÀÛ‚ÉÄ¶‚ğs‚¤
+		//å®Ÿéš›ã«å†ç”Ÿã‚’è¡Œã†
 		void AudioAssetMusic::PlayExecution(bool& isExitLoop)
 		{
-			//Ä¶‚µ‚Ä‚¢‚È‚¢ or ƒ|[ƒY’†
+			//å†ç”Ÿã—ã¦ã„ãªã„ or ãƒãƒ¼ã‚ºä¸­
 			if (IS_FALSE(m_isPlayNow.load()) | m_isPauseNow.load())
 			{
-				//ƒ|[ƒY’†‚Å‚È‚¢‚È‚çƒoƒbƒtƒ@’Ç‰Á
+				//ãƒãƒ¼ã‚ºä¸­ã§ãªã„ãªã‚‰ãƒãƒƒãƒ•ã‚¡è¿½åŠ 
 				if (IS_FALSE(m_isPauseNow.load()))
 				{
 					m_voice->GetState(&m_state);
@@ -366,9 +366,9 @@ namespace SGFramework
 						m_voice->SubmitSourceBuffer(&m_bufferInfo);
 					}
 				}
-				//Ä¶
+				//å†ç”Ÿ
 				m_voice->Start();
-				//ƒtƒ‰ƒOİ’è
+				//ãƒ•ãƒ©ã‚°è¨­å®š
 				AtomicOperation::Init(m_isPlayNow, true);
 				AtomicOperation::Init(m_isPauseNow, false);
 			}
@@ -376,63 +376,63 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[StopExecution]
-		//ÀÛ‚É’â~‚ğs‚¤
+		//å®Ÿéš›ã«åœæ­¢ã‚’è¡Œã†
 		void AudioAssetMusic::StopExecution(bool& isExitLoop)
 		{
-			//Ä¶’†
+			//å†ç”Ÿä¸­
 			if (IS_TRUE(m_isPlayNow.load()))
 			{
-				//ƒ|[ƒY’†‚Å‚È‚¢‚È‚ç’â~
+				//ãƒãƒ¼ã‚ºä¸­ã§ãªã„ãªã‚‰åœæ­¢
 				if (IS_FALSE(m_isPauseNow.load())) 
 					m_voice->Stop();
 				
-				//ƒtƒ‰ƒO‰Šú‰»
+				//ãƒ•ãƒ©ã‚°åˆæœŸåŒ–
 				AtomicOperation::Init(m_isPlayNow, false);
 				AtomicOperation::Init(m_isPauseNow, false);
 				AtomicOperation::Init(m_isFirstFullPlayback, false);
 				isExitLoop = false;
-				//ƒoƒbƒtƒ@ƒNƒŠƒA
+				//ãƒãƒƒãƒ•ã‚¡ã‚¯ãƒªã‚¢
 				m_voice->FlushSourceBuffers();
 
-				//‰Šúƒ|ƒCƒ“ƒg‚ÖƒV[ƒN
+				//åˆæœŸãƒã‚¤ãƒ³ãƒˆã¸ã‚·ãƒ¼ã‚¯
 				mmioSeek(m_mmioHandle, m_beginPoint, SEEK_SET);
-				//ƒV[ƒN‰Šú‰»
+				//ã‚·ãƒ¼ã‚¯åˆæœŸåŒ–
 				m_seek = 0;
 			}
 		}
 
 		//----------------------------------------------------------------------------------
 		//[PauseExecution]
-		//ÀÛ‚Éˆê’â~‚ğs‚¤
+		//å®Ÿéš›ã«ä¸€æ™‚åœæ­¢ã‚’è¡Œã†
 		void AudioAssetMusic::PauseExecution()
 		{
-			//Ä¶’† & ƒ|[ƒY’†‚Å‚Í‚È‚¢
+			//å†ç”Ÿä¸­ & ãƒãƒ¼ã‚ºä¸­ã§ã¯ãªã„
 			if (m_isPlayNow.load() & IS_FALSE(m_isPauseNow.load()))
 			{
-				//’â~
+				//åœæ­¢
 				m_voice->Stop();
-				//ƒtƒ‰ƒOİ’è
+				//ãƒ•ãƒ©ã‚°è¨­å®š
 				AtomicOperation::Init(m_isPauseNow, true);
 			}
 		}
 
 		//----------------------------------------------------------------------------------
 		//[ReplayExecution]
-		//ÀÛ‚ÉÄ¶‚ğs‚¤
+		//å®Ÿéš›ã«å†ç”Ÿã‚’è¡Œã†
 		void AudioAssetMusic::ReplayExecution(bool& isExitLoop)
 		{
-			//’â~‚µƒoƒbƒtƒ@ƒNƒŠƒA
+			//åœæ­¢ã—ãƒãƒƒãƒ•ã‚¡ã‚¯ãƒªã‚¢
 			m_voice->Stop();
 			m_voice->FlushSourceBuffers();
 
-			//‰Šúƒ|ƒCƒ“ƒg‚ÖƒV[ƒN, ƒV[ƒN•Ï”‰Šú‰»
+			//åˆæœŸãƒã‚¤ãƒ³ãƒˆã¸ã‚·ãƒ¼ã‚¯, ã‚·ãƒ¼ã‚¯å¤‰æ•°åˆæœŸåŒ–
 			mmioSeek(m_mmioHandle, m_beginPoint, SEEK_SET);
 			m_seek = 0;
 
-			//Ä¶
+			//å†ç”Ÿ
 			m_voice->Start();
 
-			//ƒtƒ‰ƒO‰Šú‰»
+			//ãƒ•ãƒ©ã‚°åˆæœŸåŒ–
 			AtomicOperation::Init(m_isPlayNow, true);
 			AtomicOperation::Init(m_isPauseNow, false);
 			AtomicOperation::Init(m_isFirstFullPlayback, false);
@@ -441,27 +441,27 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[SeekBeginExecution]
-		//ÀÛ‚ÉƒV[ƒN‚ğs‚¤
+		//å®Ÿéš›ã«ã‚·ãƒ¼ã‚¯ã‚’è¡Œã†
 		void AudioAssetMusic::SeekBeginExecution()
 		{
-			//ƒV[ƒN, ƒV[ƒN•Ï”‰Šú‰»
+			//ã‚·ãƒ¼ã‚¯, ã‚·ãƒ¼ã‚¯å¤‰æ•°åˆæœŸåŒ–
 			mmioSeek(m_mmioHandle, m_beginPoint, SEEK_SET);
 			m_seek = 0;
 		}
 
 		//----------------------------------------------------------------------------------
 		//[ReleaseVoice]
-		//‰¹º‚ğŠJ•ú‚·‚é
-		//ˆø”1: getPack()->Release?, default = false
+		//éŸ³å£°ã‚’é–‹æ”¾ã™ã‚‹
+		//å¼•æ•°1: getPack()->Release?, default = false
 		void AudioAssetMusic::ReleaseVoice()
 		{
 			{
 				AtomicOperation::LockGuard guard(m_lock);
 				if (m_updateThread.joinable())
 				{
-					//ƒAƒbƒvƒf[ƒg’Ê’m
+					//ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆé€šçŸ¥
 					m_updateCondition.NotifyOne(m_cFlagQuit);
-					//ƒAƒbƒvƒf[ƒgÀsƒXƒŒƒbƒhI—¹‘Ò‹@
+					//ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå®Ÿè¡Œã‚¹ãƒ¬ãƒƒãƒ‰çµ‚äº†å¾…æ©Ÿ
 					m_updateThread.join();
 				}
 				else
@@ -471,14 +471,14 @@ namespace SGFramework
 			if (m_voice == nullptr || Audio::m_masteringVoice == nullptr)
 				return;
 
-			//ƒ{ƒCƒXíœ
+			//ãƒœã‚¤ã‚¹å‰Šé™¤
 			m_voice.Release(true);
-			//ƒƒ‚ƒŠ‰ğ•ú
+			//ãƒ¡ãƒ¢ãƒªè§£æ”¾
 			delete[] m_buffers;
-			//MMIOƒnƒ“ƒhƒ‹‚ğ•Â‚¶‚é
+			//MMIOãƒãƒ³ãƒ‰ãƒ«ã‚’é–‰ã˜ã‚‹
 			mmioClose(m_mmioHandle, 0);
 			
-			//‰Šú’l‚É‚·‚×‚Ä‰Šú‰»
+			//åˆæœŸå€¤ã«ã™ã¹ã¦åˆæœŸåŒ–
 			m_playQueue.state = 0;
 			m_audioSeconds = 0.0f;
 			m_playBeginSeconds = 0.0f;

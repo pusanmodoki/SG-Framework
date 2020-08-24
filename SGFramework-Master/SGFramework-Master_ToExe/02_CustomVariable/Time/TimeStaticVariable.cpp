@@ -1,41 +1,41 @@
 /*----------------------------------------------------------------------------------
-ŠÔ‚ğˆ—‚·‚éTime Class
-	¨static•Ï”‚ğ‹Lq‚·‚éTimeStaticVariable.cpp
+æ™‚é–“ã‚’å‡¦ç†ã™ã‚‹Time Class
+	â†’staticå¤‰æ•°ã‚’è¨˜è¿°ã™ã‚‹TimeStaticVariable.cpp
 ------------------------------------------------------------------------------------*/
 #include "Time.hpp"
 
 //Framework namespace
 namespace SGFramework
 {
-	//public ƒQƒbƒ^[
+	//public ã‚²ãƒƒã‚¿ãƒ¼
 	//double
-	GetOnlyProperty<double> Time::timeWithClock(m_frequencyTime);								//Clockƒx[ƒX‚ÌŠÔ
-	GetOnlyProperty<double> Time::fixedInterval(m_fixedInterval);									//İ’èÏ‚İ‚ÌFixedXVŠÔŠu(‰Šú’lƒvƒŠƒZƒbƒg)
+	GetOnlyProperty<double> Time::timeWithClock(m_frequencyTime);								//Clockãƒ™ãƒ¼ã‚¹ã®æ™‚é–“
+	GetOnlyProperty<double> Time::fixedInterval(m_fixedInterval);									//è¨­å®šæ¸ˆã¿ã®Fixedæ›´æ–°é–“éš”(åˆæœŸå€¤ãƒ—ãƒªã‚»ãƒƒãƒˆ)
 	//float
 	GetOnlyProperty<float> Time::fps(m_fps);																	//fps
-	GetOnlyProperty<float> Time::targetFrameRate(m_refreshRate);									//ƒ^[ƒQƒbƒgƒtƒŒ[ƒ€ƒŒ[ƒg
-	GetOnlyProperty<float> Time::worldTimeScale(m_worldTimeScale);								//ŠedeltaTime‚É‚©‚¯‚é”{—¦
+	GetOnlyProperty<float> Time::targetFrameRate(m_refreshRate);									//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¬ãƒ¼ãƒˆ
+	GetOnlyProperty<float> Time::worldTimeScale(m_worldTimeScale);								//å„deltaTimeã«ã‹ã‘ã‚‹å€ç‡
 	//float NotFixed
-	GetOnlyProperty<float> Time::time(m_time);																//StartÀs‚©‚ç‚ÌŒo‰ß•b”
-	GetOnlyProperty<float> Time::worldDeltaTime(m_worldDeltaTime);								//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ
-	GetOnlyProperty<float> Time::unScaledWorldDeltaTime(m_worldUnScaledDeltaTime);	//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ(Scale‚ğ‚©‚¯‚È‚¢)
+	GetOnlyProperty<float> Time::time(m_time);																//Startå®Ÿè¡Œæ™‚ã‹ã‚‰ã®çµŒéç§’æ•°
+	GetOnlyProperty<float> Time::worldDeltaTime(m_worldDeltaTime);								//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“
+	GetOnlyProperty<float> Time::unScaledWorldDeltaTime(m_worldUnScaledDeltaTime);	//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“(Scaleã‚’ã‹ã‘ãªã„)
 	//float Fixed		
-	GetOnlyProperty<float> Time::fixedTime(m_fixedTime);												//StartÀs‚©‚ç‚ÌŒo‰ß•b”(fixedFreame‚ÉXV)
-	GetOnlyProperty<float> Time::fixedDeltaTime(m_fixedDeltaTime);								//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ(fixed)
-	GetOnlyProperty<float> Time::unScaledFixedDeltaTime(m_unScaledFixedDeltaTime);	//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ(Scale‚ğ‚©‚¯‚È‚¢, fixed)		
+	GetOnlyProperty<float> Time::fixedTime(m_fixedTime);												//Startå®Ÿè¡Œæ™‚ã‹ã‚‰ã®çµŒéç§’æ•°(fixedFreameã«æ›´æ–°)
+	GetOnlyProperty<float> Time::fixedDeltaTime(m_fixedDeltaTime);								//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“(fixed)
+	GetOnlyProperty<float> Time::unScaledFixedDeltaTime(m_unScaledFixedDeltaTime);	//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“(Scaleã‚’ã‹ã‘ãªã„, fixed)		
 	//TimeLayer[0]
 	GetOnlyProperty<SharedPointer<Time::TimeLayer>> Time::rootTimeLayer(m_rootLayer);
 	//bool
-	GetOnlyProperty<bool> Time::isUpdateFreame(m_isUpdateFreame);							//UpdateÀsƒtƒŒ[ƒ€‚©
-	GetOnlyProperty<bool> Time::isFixedUpdateFreame(m_isFixedUpdateFreame);				//FixedXVƒtƒŒ[ƒ€‚©
+	GetOnlyProperty<bool> Time::isUpdateFreame(m_isUpdateFreame);							//Updateå®Ÿè¡Œãƒ•ãƒ¬ãƒ¼ãƒ ã‹
+	GetOnlyProperty<bool> Time::isFixedUpdateFreame(m_isFixedUpdateFreame);				//Fixedæ›´æ–°ãƒ•ãƒ¬ãƒ¼ãƒ ã‹
 
 	//private
 
 	//TimeGetter
 	TimeProcessing::TimeGetterDouble Time::m_timeGetter;
-	//FPS§ŒÀ
+	//FPSåˆ¶é™
 	TimeProcessing::FPSLimiter Time::m_fpsLimiter;
-	//FPSŒv‘ªŠÔ§ŒÀ
+	//FPSè¨ˆæ¸¬æ™‚é–“åˆ¶é™
 	TimeProcessing::TimeLimiter Time::m_fpsInstrumentationLimiter;
 	//rootLayer
 	SharedPointer<Time::TimeLayer> Time::m_rootLayer;
@@ -43,30 +43,30 @@ namespace SGFramework
 	std::unordered_map<uint, SharedPointer<Time::TimeLayer>> Time::m_layerMap;
 
 	//double
-	double Time::m_frequencyTime = 0;					//Œ»İŠÔ
-	double Time::m_startUpTime = 0;						//StartÀs
-	double Time::m_updateStartTime = 0;				//delta—p‘O‰ñƒtƒŒ[ƒ€‚©‚ç‚Ìƒ^ƒCƒ€
-	double Time::m_fixedInterval = 0;						//FixedXVŠÔŠu(‰Šú’lƒvƒŠƒZƒbƒg)
-	double Time::m_fixedStartTime = 0;					//FixedŠÄ‹ŠJn
+	double Time::m_frequencyTime = 0;					//ç¾åœ¨æ™‚é–“
+	double Time::m_startUpTime = 0;						//Startå®Ÿè¡Œæ™‚åˆ»
+	double Time::m_updateStartTime = 0;				//deltaç”¨å‰å›ãƒ•ãƒ¬ãƒ¼ãƒ ã‹ã‚‰ã®ã‚¿ã‚¤ãƒ 
+	double Time::m_fixedInterval = 0;						//Fixedæ›´æ–°é–“éš”(åˆæœŸå€¤ãƒ—ãƒªã‚»ãƒƒãƒˆ)
+	double Time::m_fixedStartTime = 0;					//Fixedç›£è¦–é–‹å§‹æ™‚åˆ»
 
 	//float
-	float Time::m_fps = 0.0f;									//Œ»İFPS
-	float Time::m_worldTimeScale = 1.0f;					//ŠedeltaTime‚É‚©‚¯‚é”{—¦
-	float Time::m_refreshRate = 0.0f;						//‰æ–ÊXVŠÔŠu, ‰Šú‰»—p‚ÉŠ
+	float Time::m_fps = 0.0f;									//ç¾åœ¨FPS
+	float Time::m_worldTimeScale = 1.0f;					//å„deltaTimeã«ã‹ã‘ã‚‹å€ç‡
+	float Time::m_refreshRate = 0.0f;						//ç”»é¢æ›´æ–°é–“éš”, åˆæœŸåŒ–ç”¨ã«æ‰€æŒ
 	//float NotFixed
-	float Time::m_time = 0.0f;									//StartÀs‚©‚ç‚ÌŒo‰ß•b”
-	float Time::m_worldDeltaTime = 0.0f;					//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ
-	float Time::m_worldUnScaledDeltaTime = 0.0f;	//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ(Scale‚ğ‚©‚¯‚È‚¢)
+	float Time::m_time = 0.0f;									//Startå®Ÿè¡Œæ™‚ã‹ã‚‰ã®çµŒéç§’æ•°
+	float Time::m_worldDeltaTime = 0.0f;					//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“
+	float Time::m_worldUnScaledDeltaTime = 0.0f;	//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“(Scaleã‚’ã‹ã‘ãªã„)
 	//float Fixed
-	float Time::m_fixedTime = 0.0f;							//StartÀs‚©‚ç‚ÌŒo‰ß•b”(fixedFreame‚ÉXV)
-	float Time::m_fixedDeltaTime = 0.0f;					//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ(fixed)
-	float Time::m_unScaledFixedDeltaTime = 0.0f;	//ƒtƒŒ[ƒ€‚²‚Æ‚ÌŠÔ(Scale‚ğ‚©‚¯‚È‚¢, fixed)
+	float Time::m_fixedTime = 0.0f;							//Startå®Ÿè¡Œæ™‚ã‹ã‚‰ã®çµŒéç§’æ•°(fixedFreameã«æ›´æ–°)
+	float Time::m_fixedDeltaTime = 0.0f;					//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“(fixed)
+	float Time::m_unScaledFixedDeltaTime = 0.0f;	//ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã®æ™‚é–“(Scaleã‚’ã‹ã‘ãªã„, fixed)
 	//uint
-	uint Time::m_frameCount = 0;							//ƒtƒŒ[ƒ€”ƒJƒEƒ“ƒg
-	uint Time::m_fixedCount = 0;								//FixedXV‰ñ”
-	uint Time::m_layerCount = 0;								//ƒŒƒCƒ„[ƒJƒEƒ“ƒg
+	uint Time::m_frameCount = 0;							//ãƒ•ãƒ¬ãƒ¼ãƒ æ•°ã‚«ã‚¦ãƒ³ãƒˆ
+	uint Time::m_fixedCount = 0;								//Fixedæ›´æ–°å›æ•°
+	uint Time::m_layerCount = 0;								//ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚«ã‚¦ãƒ³ãƒˆ
 	//bool
-	bool Time::m_isUpdateFreame = false;				//UpdateƒtƒŒ[ƒ€‚©
-	bool Time::m_isFixedUpdateFreame = false;		//FixedUpdateƒtƒŒ[ƒ€‚©
-	bool Time::m_isAllowUpdate = true;					//Update‚ğ‹–‰Â‚·‚é‚©
+	bool Time::m_isUpdateFreame = false;				//Updateãƒ•ãƒ¬ãƒ¼ãƒ ã‹
+	bool Time::m_isFixedUpdateFreame = false;		//FixedUpdateãƒ•ãƒ¬ãƒ¼ãƒ ã‹
+	bool Time::m_isAllowUpdate = true;					//Updateã‚’è¨±å¯ã™ã‚‹ã‹
 }

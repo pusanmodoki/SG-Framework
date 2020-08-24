@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-3DSE‚ğˆµ‚¤AudioAssetEffect3D class
+3DSEã‚’æ‰±ã†AudioAssetEffect3D class
 	->AudioAssetEffect3D.cpp
 ------------------------------------------------------------------------------------*/
 #include "AudioAssetEffect3D.hpp"
@@ -7,22 +7,22 @@
 // Framework namespace
 namespace SGFramework
 {
-	//AssetŠÖ˜A‚ğŠi”[‚µ‚½Asset namespace
+	//Asseté–¢é€£ã‚’æ ¼ç´ã—ãŸAsset namespace
 	namespace Asset
 	{
 		//----------------------------------------------------------------------------------
 		//[Open]
-		//ƒAƒZƒbƒg‚Ìƒ[ƒh‚ğs‚¤
-		//ˆø”1: ‰¹º‚ªŠ‘®‚·‚éSubmixLayer, default = monoral root layer
-		//ˆø”2: ƒ\[ƒX‚Ì” (Å‘å“¯Ä¶”)
-		//ˆø”3: Ä¶ŠÔŠu
-		//ˆø”4: ƒXƒ€[ƒY‚É•·‚±‚¦‚é”ÍˆÍ
-		//ˆø”5: ˆø”5‚ÌŠp“x
-		//ˆø”6: ‰¹—ÊƒJ[ƒu‹——£‚ÌƒXƒP[ƒ‰[ 
-		//ˆø”7: ƒhƒbƒvƒ‰[Œø‰Ê‚ÌƒXƒP[ƒ‰[
-		//ˆø”8: Ä¶ŠJn•b”, default = cDefault (Begin)
-		//ˆø”9: ƒ‹[ƒvŠJn•b”, default = cDefault (Begin)
-		//ˆø”10: Ä¶I—¹•b”, default = cDefault (End)
+		//ã‚¢ã‚»ãƒƒãƒˆã®ãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
+		//å¼•æ•°1: éŸ³å£°ãŒæ‰€å±ã™ã‚‹SubmixLayer, default = monoral root layer
+		//å¼•æ•°2: ã‚½ãƒ¼ã‚¹ã®æ•° (æœ€å¤§åŒæ™‚å†ç”Ÿæ•°)
+		//å¼•æ•°3: å†ç”Ÿé–“éš”
+		//å¼•æ•°4: ã‚¹ãƒ ãƒ¼ã‚ºã«èã“ãˆã‚‹ç¯„å›²
+		//å¼•æ•°5: å¼•æ•°5ã®è§’åº¦
+		//å¼•æ•°6: éŸ³é‡ã‚«ãƒ¼ãƒ–è·é›¢ã®ã‚¹ã‚±ãƒ¼ãƒ©ãƒ¼ 
+		//å¼•æ•°7: ãƒ‰ãƒƒãƒ—ãƒ©ãƒ¼åŠ¹æœã®ã‚¹ã‚±ãƒ¼ãƒ©ãƒ¼
+		//å¼•æ•°8: å†ç”Ÿé–‹å§‹ç§’æ•°, default = cDefault (Begin)
+		//å¼•æ•°9: ãƒ«ãƒ¼ãƒ—æ™‚é–‹å§‹ç§’æ•°, default = cDefault (Begin)
+		//å¼•æ•°10: å†ç”Ÿçµ‚äº†ç§’æ•°, default = cDefault (End)
 		void AudioAssetEffect3D::Open(WeakPointer<Audio::SubmixLayer> submixLayer,
 			uint amountOfSource, float playbackInterval, float innerRadius, float innerRadiusAngle, float curveDistanceScaler, 
 			float dopplerScaler, float setPlayBeginSeconds, float setLoopBeginSeconds, float setPlayEndSeconds)
@@ -42,7 +42,7 @@ namespace SGFramework
 				Audio::m_masteringVoice->GetVoiceDetails(&detalis);
 				m_x3dBuffer.Init(new float[detalis.InputChannels]);
 
-				//ƒGƒ~ƒbƒ^[î•ñİ’è
+				//ã‚¨ãƒŸãƒƒã‚¿ãƒ¼æƒ…å ±è¨­å®š
 				m_emitter.ChannelCount = m_channels;
 				m_emitter.ChannelRadius = 0.0f;
 				m_emitter.CurveDistanceScaler = curveDistanceScaler;
@@ -65,11 +65,11 @@ namespace SGFramework
 				OpenBaseAsset();	
 
 
-				//Messageì¬
+				//Messageä½œæˆ
 				AudioMessage message(MessageType::Effect3DFlag | MessageType::AddEffect3D);
 				message.attachment.addEffect3D.asset = m_thisPointer.DynamicCast<AudioAssetEffect3D>();
 				message.attachment.addEffect3D.instanceID = instanceID();
-				//Message‘—M
+				//Messageé€ä¿¡
 				Audio::SendAudioMessage(message);
 			}
 			catch (...) { throw; }
@@ -77,12 +77,12 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Reload]
-		//ƒAƒZƒbƒg‚ÌƒŠƒ[ƒh‚ğs‚¤
+		//ã‚¢ã‚»ãƒƒãƒˆã®ãƒªãƒ­ãƒ¼ãƒ‰ã‚’è¡Œã†
 		void AudioAssetEffect3D::Reload()
 		{
 			if (IS_FALSE(getIsFileOpened())) return;
 			
-			//Open‚É•K—v‚Èî•ñ‚ğ‹L˜^
+			//Openã«å¿…è¦ãªæƒ…å ±ã‚’è¨˜éŒ²
 			sgstring path = name;
 			const auto& submixLayer = Audio::getLayer(m_submixLayerID);
 			uint setAmountOfSource = m_amountOfSource;
@@ -91,7 +91,7 @@ namespace SGFramework
 			float setLoopBeginSeconds = m_loopBeginSeconds;
 			float setPlayEndSeconds = m_playEndSeconds;
 			
-			//ƒGƒ~ƒbƒ^[•Û‘¶
+			//ã‚¨ãƒŸãƒƒã‚¿ãƒ¼ä¿å­˜
 			AtomicOperation::LockAtomic(m_lock);
 			auto emitterBuffer = m_emitterBuffer;
 			AtomicOperation::UnlockAtomic(m_lock);
@@ -104,7 +104,7 @@ namespace SGFramework
 				0.0f, 0.0f, 0.0f, 0.0f,
 				setPlayBeginSeconds, setLoopBeginSeconds, setPlayEndSeconds);
 
-			//ƒGƒ~ƒbƒ^[XV
+			//ã‚¨ãƒŸãƒƒã‚¿ãƒ¼æ›´æ–°
 			AtomicOperation::LockAtomic(m_lock);
 			m_emitter = emitterBuffer;
 			m_emitterBuffer = emitterBuffer;
@@ -113,7 +113,7 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Close]
-		//ƒtƒ@ƒCƒ‹‚ğ•Â‚¶‚é
+		//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‰ã˜ã‚‹
 		void AudioAssetEffect3D::Close()
 		{
 			if (IS_FALSE(getIsFileOpened())) return;
@@ -126,84 +126,84 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[PlayExecution]
-		//ÀÛ‚ÉÄ¶‚ğs‚¤
+		//å®Ÿéš›ã«å†ç”Ÿã‚’è¡Œã†
 		void AudioAssetEffect3D::PlayExecution(const Vector3 & position, const Vector3 & velocityPerSec,
 			const Vector3 & forward, const Vector3 & up, uint loopCount)
 		{
-			//Ä¶ŠÔŠu‚É–‚½‚È‚¢ê‡Ä¶‚¹‚¸I—¹
+			//å†ç”Ÿé–“éš”ã«æº€ãŸãªã„å ´åˆå†ç”Ÿã›ãšçµ‚äº†
 			if (Time::time - m_playElapased < m_playbackInterval) return;
 			m_playElapased = Time::time;
 
-			//X3DAudio—p
+			//X3DAudioç”¨
 			X3DAUDIO_DSP_SETTINGS dsp = {};
 			XAUDIO2_FILTER_PARAMETERS filterParameters = {};
-			//Ä¶Š®—¹ƒtƒ‰ƒO
+			//å†ç”Ÿå®Œäº†ãƒ•ãƒ©ã‚°
 			bool isPlayCompleted = false;
 
-			//DSPİ’è
+			//DSPè¨­å®š
 			dsp.DstChannelCount = Audio::m_masterChannels;
 			dsp.SrcChannelCount = m_channels;
 			dsp.pMatrixCoefficients = m_x3dBuffer;
-			//ƒGƒ~ƒbƒ^[İ’è
+			//ã‚¨ãƒŸãƒƒã‚¿ãƒ¼è¨­å®š
 			m_emitter.Position = position;
 			m_emitter.OrientFront = forward;
 			m_emitter.OrientTop = up;
 			m_emitter.Velocity = velocityPerSec;
 
-			//useVoice == -1 -> ƒƒCƒ“ƒ{ƒCƒX
+			//useVoice == -1 -> ãƒ¡ã‚¤ãƒ³ãƒœã‚¤ã‚¹
 			if (m_useVoice == -1)
 			{
 				//GetState
 				m_voice->GetState(&m_state);
-				//Ä¶‚µ‚Ä‚¢‚È‚¯‚ê‚Î
+				//å†ç”Ÿã—ã¦ã„ãªã‘ã‚Œã°
 				if (m_state.BuffersQueued == 0)
 				{
-					//X3DAudioŒvZ
+					//X3DAudioè¨ˆç®—
 					X3DAudioCalculate(Audio::m_x3dHandle, &Audio::m_x3dListener, &m_emitter, m_flags, &dsp);
-					//ƒtƒBƒ‹ƒ^İ’è
+					//ãƒ•ã‚£ãƒ«ã‚¿è¨­å®š
 					filterParameters.Type = LowPassFilter;
 					filterParameters.Frequency = 2.0f * sinf(MathAF::cPi / 6.0f * dsp.LPFDirectCoefficient);
 					filterParameters.OneOverQ = 1.0f;
 
-					//Voice‚ÉŒvZŒ‹‰Ê‚ğİ’è
+					//Voiceã«è¨ˆç®—çµæœã‚’è¨­å®š
 					m_voice->SetOutputMatrix(Audio::m_masteringVoice, m_channels, Audio::m_masterChannels, dsp.pMatrixCoefficients);
 					m_voice->SetFrequencyRatio(dsp.DopplerFactor);
 					m_voice->SetOutputMatrix(Audio::getLayer(m_submixLayerID)->m_voice, 1, 1, &dsp.ReverbLevel);
 					m_voice->SetFilterParameters(&filterParameters);
 
-					//ƒ‹[ƒvƒJƒEƒ“ƒg‘ã“ü
+					//ãƒ«ãƒ¼ãƒ—ã‚«ã‚¦ãƒ³ãƒˆä»£å…¥
 					m_bufferInfo.LoopCount = loopCount;
-					//Ä¶
+					//å†ç”Ÿ
 					m_voice->FlushSourceBuffers();
 					m_voice->SubmitSourceBuffer(&m_bufferInfo);
 					m_voice->Start();
 					isPlayCompleted = true;
 				}
 			}
-			//ƒTƒuƒ{ƒCƒX
+			//ã‚µãƒ–ãƒœã‚¤ã‚¹
 			else
 			{
 				//GetState
 				m_subVoices[m_useVoice]->GetState(&m_state);
-				//Ä¶‚µ‚Ä‚¢‚È‚¯‚ê‚Î
+				//å†ç”Ÿã—ã¦ã„ãªã‘ã‚Œã°
 				if (m_state.BuffersQueued == 0)
 				{
-					//X3DAudioŒvZ
+					//X3DAudioè¨ˆç®—
 					X3DAudioCalculate(Audio::m_x3dHandle, &Audio::m_x3dListener, &m_emitter, m_flags, &dsp);
-					//ƒtƒBƒ‹ƒ^İ’è
+					//ãƒ•ã‚£ãƒ«ã‚¿è¨­å®š
 					filterParameters.Type = LowPassFilter;
 					filterParameters.Frequency = 2.0f * sinf(X3DAUDIO_PI / 6.0f * dsp.LPFDirectCoefficient);
 					filterParameters.OneOverQ = 1.0f;
 
-					//Voice‚ÉŒvZŒ‹‰Ê‚ğİ’è
+					//Voiceã«è¨ˆç®—çµæœã‚’è¨­å®š
 					m_subVoices[m_useVoice]->SetOutputMatrix(Audio::m_masteringVoice, m_channels, Audio::m_masterChannels, dsp.pMatrixCoefficients);
 					m_subVoices[m_useVoice]->SetFrequencyRatio(dsp.DopplerFactor);
 					m_subVoices[m_useVoice]->SetOutputMatrix(Audio::getLayer(m_submixLayerID)->m_voice, m_channels, 1, &dsp.ReverbLevel);
 					m_subVoices[m_useVoice]->SetFilterParameters(&filterParameters);
 
-					//ƒ‹[ƒvƒJƒEƒ“ƒg‘ã“ü
+					//ãƒ«ãƒ¼ãƒ—ã‚«ã‚¦ãƒ³ãƒˆä»£å…¥
 					m_bufferInfo.LoopCount = loopCount;
-					//Ä¶
+					//å†ç”Ÿ
 					m_subVoices[m_useVoice]->FlushSourceBuffers();
 					m_subVoices[m_useVoice]->SubmitSourceBuffer(&m_bufferInfo);
 					m_subVoices[m_useVoice]->Start();
@@ -211,14 +211,14 @@ namespace SGFramework
 				}
 			}
 
-			//Ä¶‚Å‚«‚½
+			//å†ç”Ÿã§ããŸ
 			if (isPlayCompleted)
 			{
-				//Ä¶ŠÔŠu‰Šú‰»
+				//å†ç”Ÿé–“éš”åˆæœŸåŒ–
 				m_playElapased = 0.0f;
-				//ƒJƒEƒ“ƒ^[‰ÁZ
+				//ã‚«ã‚¦ãƒ³ã‚¿ãƒ¼åŠ ç®—
 				++m_useVoice;
-				//’´‰ßİ’è
+				//è¶…éè¨­å®š
 				if (m_useVoice >= m_subVoices.size())
 					m_useVoice = -1;
 			}
@@ -226,14 +226,14 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[StopExecution]
-		//ÀÛ‚É’â~‚ğs‚¤
+		//å®Ÿéš›ã«åœæ­¢ã‚’è¡Œã†
 		void AudioAssetEffect3D::StopExecution()
 		{
-			//’â~‚µ‰Šú‰»
+			//åœæ­¢ã—åˆæœŸåŒ–
 			m_voice->Stop();
 			m_voice->FlushSourceBuffers();
 			
-			//ƒTƒuƒ{ƒCƒX‚à’â~
+			//ã‚µãƒ–ãƒœã‚¤ã‚¹ã‚‚åœæ­¢
 			for (auto& e : m_subVoices)
 			{
 				e->Stop();
@@ -243,7 +243,7 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[ReleaseVoice]
-		//‰¹º‚ğŠJ•ú‚·‚é
+		//éŸ³å£°ã‚’é–‹æ”¾ã™ã‚‹
 		void AudioAssetEffect3D::ReleaseVoice()
 		{
 			using namespace Detail::Audio;
@@ -255,7 +255,7 @@ namespace SGFramework
 
 			AtomicOperation::LockAtomic(m_lock);
 
-			//‰Šú’l‚É‚·‚×‚Ä‰Šú‰»
+			//åˆæœŸå€¤ã«ã™ã¹ã¦åˆæœŸåŒ–
 			ZeroMemory(&m_emitter, sizeof(m_emitter));
 			ZeroMemory(&m_emitterBuffer, sizeof(m_emitterBuffer));
 			m_flags = m_cDefaultFlags;
@@ -266,10 +266,10 @@ namespace SGFramework
 			AtomicOperation::UnlockAtomic(m_lock);
 
 
-			//Messageì¬
+			//Messageä½œæˆ
 			AudioMessage message(MessageType::Effect3DFlag | MessageType::RemoveEffect3D);
 			message.attachment.onlyInstanceID = instanceID();
-			//Message‘—M
+			//Messageé€ä¿¡
 			Audio::SendAudioMessage(message);
 		}
 	}

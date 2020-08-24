@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------------
-‰ñ“]‚ğˆµ‚¦‚éQuaternion \‘¢‘Ì
-Å‚à‘½—p‚·‚é\‘¢‘ÌƒVƒŠ[ƒY‚Ì1‚Â‚È‚Ì‚Å•Ê©ìVector‚ªŠÖŒW‚È‚¢‚à‚Ì‚Í‘S‚ÄinlineÀ‘•
+å›è»¢ã‚’æ‰±ãˆã‚‹Quaternion æ§‹é€ ä½“
+æœ€ã‚‚å¤šç”¨ã™ã‚‹æ§‹é€ ä½“ã‚·ãƒªãƒ¼ã‚ºã®1ã¤ãªã®ã§åˆ¥è‡ªä½œVectorãŒé–¢ä¿‚ãªã„ã‚‚ã®ã¯å…¨ã¦inlineå®Ÿè£…
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_QUATERNION_HPP_
 #define SGFRAMEWORK_HEADER_QUATERNION_HPP_
@@ -17,41 +17,41 @@
 //Framework namespace
 namespace SGFramework
 {
-	//‰ñ“]‚ğˆµ‚¦‚éQuaternion \‘¢‘Ì, ‰ñ“]‡˜‚ÍZXY
+	//å›è»¢ã‚’æ‰±ãˆã‚‹Quaternion æ§‹é€ ä½“, å›è»¢é †åºã¯ZXY
 	struct Quaternion final : public DirectX::XMFLOAT4
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//identity‚Éİ’è‚³‚ê‚é
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//identityã«è¨­å®šã•ã‚Œã‚‹
 		inline constexpr Quaternion();
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‚·‚é
-		//ˆø”1: x
-		//ˆø”2: y
-		//ˆø”3: z
-		//ˆø”4: w
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥ã™ã‚‹
+		//å¼•æ•°1: x
+		//å¼•æ•°2: y
+		//å¼•æ•°3: z
+		//å¼•æ•°4: w
 		inline constexpr Quaternion(float x, float y, float z, float w);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‚·‚é
-		//ˆø”1 : XmVector(XMVECTOR)
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥ã™ã‚‹
+		//å¼•æ•°1 : XmVector(XMVECTOR)
 		inline Quaternion(const XmVector& xmVector);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‚·‚é
-		//ˆø”1: Matrix(XMMATRIX)
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥ã™ã‚‹
+		//å¼•æ•°1: Matrix(XMMATRIX)
 		inline Quaternion(const Matrix& matrix);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: PxVec4
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: PxVec4
 		inline constexpr Quaternion(const physx::PxQuat& quaternion);
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//‘ã“ü‰Šú‰»‚·‚é
-		//ˆø”1: aiQuaternion
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+		//å¼•æ•°1: aiQuaternion
 		inline constexpr Quaternion(const aiQuaternion& quaternion);
 		
 		DEFAULT_COPY_MOVE_FUNCTIONS(Quaternion);
@@ -66,7 +66,7 @@ namespace SGFramework
 		inline Matrix ToMatrix() const noexcept { return std::move(DirectX::XMMatrixRotationQuaternion(DirectX::XMLoadFloat4(this))); }
 		//----------------------------------------------------------------------------------
 		//[ToMatrix]
-		//ˆø”1: Apply
+		//å¼•æ•°1: Apply
 		inline void ToMatrix(Matrix& apply) const noexcept { apply = std::move(DirectX::XMMatrixRotationQuaternion(DirectX::XMLoadFloat4(this))); }
 		//----------------------------------------------------------------------------------
 		//[ToPhysX]
@@ -74,7 +74,7 @@ namespace SGFramework
 		inline physx::PxQuat ToPhysX() const noexcept { return std::move(physx::PxQuat(x, y, z, w)); }
 		//----------------------------------------------------------------------------------
 		//[ToPhysX]
-		//ˆø”1: Apply
+		//å¼•æ•°1: Apply
 		inline void ToPhysX(physx::PxQuat& apply) const noexcept { apply = std::move(physx::PxQuat(x, y, z, w)); }
 		//----------------------------------------------------------------------------------
 		//[ToAssimp]
@@ -82,13 +82,13 @@ namespace SGFramework
 		inline aiQuaternion ToAssimp() const noexcept { return std::move(aiQuaternion(x, y, z, w)); }
 		//----------------------------------------------------------------------------------
 		//[ToAssimp]
-		//ˆø”1: Apply
+		//å¼•æ•°1: Apply
 		inline void ToAssimp(aiQuaternion apply) const noexcept { apply = std::move(aiQuaternion(x, y, z, w)); }
 		//----------------------------------------------------------------------------------
 		//[ToAngleAxis]
-		//‰ñ“]‚ğÀ•W‚É‘Î‚·‚éŠp“x‚Ì’l (AngleAxis) ‚É•ÏŠ·‚·‚é
-		//ˆø”1: axis (‘‚«‚İ)
-		//ˆø”2: angle (‘‚«‚İ)
+		//å›è»¢ã‚’åº§æ¨™ã«å¯¾ã™ã‚‹è§’åº¦ã®å€¤ (AngleAxis) ã«å¤‰æ›ã™ã‚‹
+		//å¼•æ•°1: axis (æ›¸ãè¾¼ã¿)
+		//å¼•æ•°2: angle (æ›¸ãè¾¼ã¿)
 		inline void ToAngleAxis(Vector3& axis, float& angle) const  noexcept
 		{
 			DirectX::XMVECTOR vec;
@@ -99,10 +99,10 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[ToDirectionVectors]
-		//•ûŒüƒxƒNƒgƒ‹ (up, right, forward) ‚É•ÏŠ·‚·‚é
-		//ˆø”1: right (‘‚«‚İ)
-		//ˆø”2: up (‘‚«‚İ)
-		//ˆø”3: forward (‘‚«‚İ)
+		//æ–¹å‘ãƒ™ã‚¯ãƒˆãƒ« (up, right, forward) ã«å¤‰æ›ã™ã‚‹
+		//å¼•æ•°1: right (æ›¸ãè¾¼ã¿)
+		//å¼•æ•°2: up (æ›¸ãè¾¼ã¿)
+		//å¼•æ•°3: forward (æ›¸ãè¾¼ã¿)
 		inline void ToDirectionVectors(Vector3* right, Vector3* up, Vector3* forward) const noexcept
 		{
 			XmVector quaternion = DirectX::XMLoadFloat4(this);
@@ -115,8 +115,8 @@ namespace SGFramework
 		}	
 		//----------------------------------------------------------------------------------
 		//[ToString]
-		//•¶š—ñ‚É•ÏŠ·‚·‚é
-		//return: •ÏŠ·‚µ‚½•¶š—ñ
+		//æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+		//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
 		inline sgstring ToString() const noexcept
 		{
 			//Get
@@ -126,8 +126,8 @@ namespace SGFramework
 		}
 		//----------------------------------------------------------------------------------
 		//[ToStdString]
-		//•¶š—ñ‚É•ÏŠ·‚·‚é
-		//return: •ÏŠ·‚µ‚½•¶š—ñ
+		//æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹
+		//return: å¤‰æ›ã—ãŸæ–‡å­—åˆ—
 		inline std::string ToStdString() const noexcept
 		{
 			//Get
@@ -138,8 +138,8 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[getEulerAngles]
-		//ƒIƒCƒ‰[Šp (x, y, z) ‚É•ÏŠ·‚·‚é
-		//return: ƒIƒCƒ‰[Šp (x, y, z)
+		//ã‚ªã‚¤ãƒ©ãƒ¼è§’ (x, y, z) ã«å¤‰æ›ã™ã‚‹
+		//return: ã‚ªã‚¤ãƒ©ãƒ¼è§’ (x, y, z)
 		SGF_FUNCTION_PROPERTY Vector3 getEulerAngles() const noexcept
 		{
 			//Get
@@ -167,30 +167,30 @@ namespace SGFramework
 		//----------------------------------------------------------------------------------
 		//operators
 
-		//sgstringƒIƒyƒŒ[ƒ^[
+		//sgstringã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator sgstring() const { return ToString(); }
-		//XmVector (XMVECTOR) ƒIƒyƒŒ[ƒ^[
+		//XmVector (XMVECTOR) ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator XmVector() const { return DirectX::XMLoadFloat4(this); }
-		//MatrixƒIƒyƒŒ[ƒ^[
+		//Matrixã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator Matrix() const { return DirectX::XMMatrixRotationQuaternion(this->operator XmVector()); }
-		//float*ƒIƒyƒŒ[ƒ^[
+		//float*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator float*() { return (float*)this; }
-		//const float*ƒIƒyƒŒ[ƒ^[
+		//const float*ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline operator const float*() const { return (float*)this; }
 
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Quaternion& operator = (const XmVector& mathQuaternion) { DirectX::XMStoreFloat4(this, mathQuaternion);  return *this; }
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Quaternion& operator = (const Matrix& matrix) { *this = DirectX::XMQuaternionRotationMatrix(matrix); return *this; }
-		//=ƒIƒyƒŒ[ƒ^[
+		//=ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Quaternion& operator = (const DirectX::XMMATRIX& matrix) { *this = DirectX::XMQuaternionRotationMatrix(matrix); return *this; }
-		// * ƒIƒyƒŒ[ƒ^[
+		// * ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Quaternion operator * (const Quaternion& quaternion) const { return DirectX::XMQuaternionMultiply(*this, quaternion); }
-		// * ƒIƒyƒŒ[ƒ^[
+		// * ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline Vector3 operator * (const Vector3& vec) const { return DirectX::XMVector3Rotate(vec, *this); }
-		//*= ƒIƒyƒŒ[ƒ^[
+		//*= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline const Quaternion& operator *= (const Quaternion& quaternion) { *this = DirectX::XMQuaternionMultiply(*this, quaternion); return *this; }
-		//== ƒIƒyƒŒ[ƒ^[
+		//== ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator == (const Quaternion& quaternion) const
 		{
 			return (fabsf(x - quaternion.x) < MathAF::cEpsilon
@@ -198,7 +198,7 @@ namespace SGFramework
 				&& fabsf(z - quaternion.z) < MathAF::cEpsilon
 				&& fabsf(w - quaternion.w) < MathAF::cEpsilon);
 		}
-		//!= ƒIƒyƒŒ[ƒ^[
+		//!= ã‚ªãƒšãƒ¬ãƒ¼ã‚¿ãƒ¼
 		inline bool operator != (const Quaternion& quaternion) const
 		{
 			return (fabsf(x - quaternion.x) > MathAF::cEpsilon
@@ -207,101 +207,101 @@ namespace SGFramework
 				&& fabsf(w - quaternion.w) > MathAF::cEpsilon);
 		}
 
-		//ŒvZƒ‰ƒCƒuƒ‰ƒŠ
+		//è¨ˆç®—ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 
 
 		//----------------------------------------------------------------------------------
 		//[Inverse]<Calculation Library Function>
-		//‹tƒNƒH[ƒ^ƒjƒIƒ“‚É•ÏŠ·‚·‚é
-		//return: ‹tƒNƒH[ƒ^ƒjƒIƒ“
-		//ˆø”1: •ÏŠ·‚·‚équaternion
+		//é€†ã‚¯ã‚©ãƒ¼ã‚¿ãƒ‹ã‚ªãƒ³ã«å¤‰æ›ã™ã‚‹
+		//return: é€†ã‚¯ã‚©ãƒ¼ã‚¿ãƒ‹ã‚ªãƒ³
+		//å¼•æ•°1: å¤‰æ›ã™ã‚‹quaternion
 		inline static Quaternion Inverse(const Quaternion & quaternion) noexcept;
 		//----------------------------------------------------------------------------------
 		//[LookForward]<Calculation Library Function>
-		//return: forward‚ğŒü‚­Quaternion
-		//ˆø”1: forward
-		//ˆø”2: ã•ûŒü: default = Vector3::up
+		//return: forwardã‚’å‘ãQuaternion
+		//å¼•æ•°1: forward
+		//å¼•æ•°2: ä¸Šæ–¹å‘: default = Vector3::up
 		inline static Quaternion LookForward(const Vector3 & forward, const Vector3 & upwards = Const::Vector3::up) noexcept;
 		//----------------------------------------------------------------------------------
 		//[LookAt]<Calculation Library Function>
-		//position‚©‚çtarget‚ğŒ©‚éŒ`‚Ì‰ñ“]‚ğŒvZ‚·‚é
-		//return: position‚©‚çtarget‚ğŒ©‚éŒ`‚Ì‰ñ“]
-		//ˆø”1: position
-		//ˆø”2: target
-		//ˆø”3: ã•ûŒü: default = Vector3::up
+		//positionã‹ã‚‰targetã‚’è¦‹ã‚‹å½¢ã®å›è»¢ã‚’è¨ˆç®—ã™ã‚‹
+		//return: positionã‹ã‚‰targetã‚’è¦‹ã‚‹å½¢ã®å›è»¢
+		//å¼•æ•°1: position
+		//å¼•æ•°2: target
+		//å¼•æ•°3: ä¸Šæ–¹å‘: default = Vector3::up
 		inline static Quaternion LookAt(const Vector3 & position, const Vector3 & target, const Vector3 & upwards = Const::Vector3::up) noexcept;
 		//----------------------------------------------------------------------------------
 		//[LookAt2D]<Calculation Library Function>
-		//position‚©‚çtarget‚ğŒ©‚éŒ`‚Ì‰ñ“]‚ğŒvZ‚·‚é(2D”Å)
-		//return: position‚©‚çtarget‚ğŒ©‚éŒ`‚Ì‰ñ“](²w’è)
-		//ˆø”1: position
-		//ˆø”2: target
-		//ˆø”3: ‰ñ“]² (X or Y): default = true (X)
+		//positionã‹ã‚‰targetã‚’è¦‹ã‚‹å½¢ã®å›è»¢ã‚’è¨ˆç®—ã™ã‚‹(2Dç‰ˆ)
+		//return: positionã‹ã‚‰targetã‚’è¦‹ã‚‹å½¢ã®å›è»¢(è»¸æŒ‡å®š)
+		//å¼•æ•°1: position
+		//å¼•æ•°2: target
+		//å¼•æ•°3: å›è»¢è»¸ (X or Y): default = true (X)
 		inline static Quaternion LookAt2D(const Vector3 & position, const Vector3 & target, bool isAxisX = true) noexcept;
 		//----------------------------------------------------------------------------------
 		//[FromToRotation]<Calculation Library Function>
-		//from‚©‚çto‚Ö‰ñ“]‚·‚éQuaternion‚ğŒvZ‚·‚é
-		//return: from‚©‚çto‚Ö‚Ì‰ñ“]
-		//ˆø”1: from (³‹K‰»Ï)
-		//ˆø”2: to (³‹K‰»Ï)
+		//fromã‹ã‚‰toã¸å›è»¢ã™ã‚‹Quaternionã‚’è¨ˆç®—ã™ã‚‹
+		//return: fromã‹ã‚‰toã¸ã®å›è»¢
+		//å¼•æ•°1: from (æ­£è¦åŒ–æ¸ˆ)
+		//å¼•æ•°2: to (æ­£è¦åŒ–æ¸ˆ)
 		inline static Quaternion FromToRotation(const Vector3& fromDirection, const Vector3& toDirection) noexcept;
 		//----------------------------------------------------------------------------------
 		//[AngleAxis]<Calculation Library Function>
-		//axis‚Ìü‚è‚ğangle“x‰ñ“]‚·‚éQuaternion‚ğŒvZ‚·‚é
-		//return: axis‚Ìü‚è‚ğangle“x‰ñ“]‚·‚éQuaternion
-		//ˆø”1: ‰ñ“]²
-		//ˆø”2: Šp“x (degree)
+		//axisã®å‘¨ã‚Šã‚’angleåº¦å›è»¢ã™ã‚‹Quaternionã‚’è¨ˆç®—ã™ã‚‹
+		//return: axisã®å‘¨ã‚Šã‚’angleåº¦å›è»¢ã™ã‚‹Quaternion
+		//å¼•æ•°1: å›è»¢è»¸
+		//å¼•æ•°2: è§’åº¦ (degree)
 		inline static Quaternion AngleAxis(const Vector3 & axis, float angle) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Euler]<Calculation Library Function>
-		//ƒIƒCƒ‰[Šp (x, y, z) ‚ğŠî‚ÉQuaternion‚ğŒvZ‚·‚é, ‰ñ“]‡‚ÍYXZ
-		//return: ƒIƒCƒ‰[Šp (x, y, z) ‚ğŠî‚É‚µ‚½Quaternion
-		//ˆø”1: ‰ñ“] (degrees)
+		//ã‚ªã‚¤ãƒ©ãƒ¼è§’ (x, y, z) ã‚’åŸºã«Quaternionã‚’è¨ˆç®—ã™ã‚‹, å›è»¢é †ã¯YXZ
+		//return: ã‚ªã‚¤ãƒ©ãƒ¼è§’ (x, y, z) ã‚’åŸºã«ã—ãŸQuaternion
+		//å¼•æ•°1: å›è»¢ (degrees)
 		inline static Quaternion Euler(const Vector3 & eulerAngles) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Lerp3D]<Calculation Library Function>
-		//from‚Æto‚ÌŠÔ‚ğt‚ÅüŒ`•âŠ®‚µ‚½‚à‚Ì‚ğ•Ô‹p‚·‚é, •âŠ®‚É‚Í3ŸŠÖ”•âŠ®‚ğg‚¤
-		//return: from‚©‚çto‚Ö‚ÌüŒ`(3ŸŠÖ”)•âŠÔ
-		//ˆø”1: from
-		//ˆø”2: to
-		//ˆø”3: •âŠ®‚Ì“x‡‚¢(0 ~ 1)
+		//fromã¨toã®é–“ã‚’tã§ç·šå½¢è£œå®Œã—ãŸã‚‚ã®ã‚’è¿”å´ã™ã‚‹, è£œå®Œã«ã¯3æ¬¡é–¢æ•°è£œå®Œã‚’ä½¿ã†
+		//return: fromã‹ã‚‰toã¸ã®ç·šå½¢(3æ¬¡é–¢æ•°)è£œé–“
+		//å¼•æ•°1: from
+		//å¼•æ•°2: to
+		//å¼•æ•°3: è£œå®Œã®åº¦åˆã„(0 ~ 1)
 		inline static Quaternion Lerp3D(const Quaternion & from, const Quaternion& to, float t) noexcept;
 		//----------------------------------------------------------------------------------
 		//[LerpDirect]<Calculation Library Function>
-		//from‚Æto‚ÌŠÔ‚ğt‚ÅüŒ`•âŠ®‚µ‚½‚à‚Ì‚ğ•Ô‹p‚·‚é, •âŠ®‚É‚Í‚½‚¾‚ÌüŒ`•âŠÔ‚ğg‚¤
-		//return: from‚©‚çto‚Ö‚ÌüŒ`•âŠÔ
-		//ˆø”1: from
-		//ˆø”2: to
-		//ˆø”3: •âŠ®‚Ì“x‡‚¢(0 ~ 1)
+		//fromã¨toã®é–“ã‚’tã§ç·šå½¢è£œå®Œã—ãŸã‚‚ã®ã‚’è¿”å´ã™ã‚‹, è£œå®Œã«ã¯ãŸã ã®ç·šå½¢è£œé–“ã‚’ä½¿ã†
+		//return: fromã‹ã‚‰toã¸ã®ç·šå½¢è£œé–“
+		//å¼•æ•°1: from
+		//å¼•æ•°2: to
+		//å¼•æ•°3: è£œå®Œã®åº¦åˆã„(0 ~ 1)
 		inline static Quaternion LerpDirect(const Quaternion& from, const Quaternion& to, float t) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Slerp]<Calculation Library Function>
-		//this‚Æto‚ÌŠÔ‚ğt‚Å‹…–ÊüŒ`•âŠÔ‚µ‚½‚à‚Ì‚ğŒvZ‚·‚é
-		//return: from‚©‚çto‚Ö‚Ì‹…–ÊüŒ`•âŠÔ
-		//ˆø”1: from
-		//ˆø”2: to
-		//ˆø”3: •âŠ®‚Ì“x‡‚¢(0 ~ 1)
+		//thisã¨toã®é–“ã‚’tã§çƒé¢ç·šå½¢è£œé–“ã—ãŸã‚‚ã®ã‚’è¨ˆç®—ã™ã‚‹
+		//return: fromã‹ã‚‰toã¸ã®çƒé¢ç·šå½¢è£œé–“
+		//å¼•æ•°1: from
+		//å¼•æ•°2: to
+		//å¼•æ•°3: è£œå®Œã®åº¦åˆã„(0 ~ 1)
 		inline static Quaternion Slerp(const Quaternion& from, const Quaternion& to, float t) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Dot]<Calculation Library Function>
-		//quaternion1‚Æquaternion2‚Ì“àÏ‚ğŒvZ‚·‚é
-		//return: quaternion1‚Æquaternion2‚Ì“àÏ
-		//ˆø”1: quaternion1
-		//ˆø”2: quaternion2
+		//quaternion1ã¨quaternion2ã®å†…ç©ã‚’è¨ˆç®—ã™ã‚‹
+		//return: quaternion1ã¨quaternion2ã®å†…ç©
+		//å¼•æ•°1: quaternion1
+		//å¼•æ•°2: quaternion2
 		inline float Dot(const Quaternion& quaternion1, const Quaternion& quaternion2) noexcept;
 		//----------------------------------------------------------------------------------
 		//[Vector3Rotate]<Calculation Library Function>
-		//ƒxƒNƒgƒ‹•ûŒü‚ğquaternion‚ğg‚Á‚Ä‰ñ“]‚³‚¹‚é
-		//return: ‰ñ“]‚µ‚½ƒxƒNƒgƒ‹
-		//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹
-		//ˆø”2: ‰ñ“]‚Ég‚¤quaternion
+		//ãƒ™ã‚¯ãƒˆãƒ«æ–¹å‘ã‚’quaternionã‚’ä½¿ã£ã¦å›è»¢ã•ã›ã‚‹
+		//return: å›è»¢ã—ãŸãƒ™ã‚¯ãƒˆãƒ«
+		//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«
+		//å¼•æ•°2: å›è»¢ã«ä½¿ã†quaternion
 		inline static Vector3 Vector3Rotate(const Vector3 & vec, const Quaternion & quaternion) noexcept;
 	};
 
 	//----------------------------------------------------------------------------------
 	//[wostream operator]
-	//ˆø”1: stream
-	//ˆø”2: this
+	//å¼•æ•°1: stream
+	//å¼•æ•°2: this
 	inline std::wostream& operator<<(std::wostream& stream, const Quaternion& value)
 	{
 		const wchar* string = value.ToString();
@@ -310,45 +310,45 @@ namespace SGFramework
 	}
 
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//identity‚Éİ’è‚³‚ê‚é
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//identityã«è¨­å®šã•ã‚Œã‚‹
 	inline constexpr Quaternion::Quaternion() : XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‚·‚é
-	//ˆø”1: x
-	//ˆø”2: y
-	//ˆø”3: z
-	//ˆø”4: w
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥ã™ã‚‹
+	//å¼•æ•°1: x
+	//å¼•æ•°2: y
+	//å¼•æ•°3: z
+	//å¼•æ•°4: w
 	inline constexpr Quaternion::Quaternion(float x, float y, float z, float w) : XMFLOAT4(x, y, z, w) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‚·‚é
-	//ˆø”1 : XmVector(XMVECTOR)
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥ã™ã‚‹
+	//å¼•æ•°1 : XmVector(XMVECTOR)
 	inline Quaternion::Quaternion(const XmVector & mathQuaternion)
 	{
 		//Set
 		DirectX::XMStoreFloat4(this, mathQuaternion);
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‚·‚é
-	//ˆø”1: Matrix(XMMATRIX)
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥ã™ã‚‹
+	//å¼•æ•°1: Matrix(XMMATRIX)
 	inline Quaternion::Quaternion(const Matrix & matrix)
 	{
 		//Set
 		DirectX::XMStoreFloat4(this, DirectX::XMQuaternionRotationMatrix(matrix));
 	}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: PxVec4
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: PxVec4
 	inline constexpr Quaternion::Quaternion(const physx::PxQuat & quaternion)
 		: Quaternion(quaternion.x, quaternion.y, quaternion.z, quaternion.w) {}
 	//----------------------------------------------------------------------------------
-	//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-	//‘ã“ü‰Šú‰»‚·‚é
-	//ˆø”1: aiQuaternion
+	//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+	//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+	//å¼•æ•°1: aiQuaternion
 	inline constexpr Quaternion::Quaternion(const aiQuaternion & quaternion)
 		: Quaternion(quaternion.x, quaternion.y, quaternion.z, quaternion.w) {}
 
@@ -356,45 +356,45 @@ namespace SGFramework
 
 	//----------------------------------------------------------------------------------
 	//[Inverse]<Calculation Library Function>
-	//‹tƒNƒH[ƒ^ƒjƒIƒ“‚É•ÏŠ·‚·‚é
-	//return: ‹tƒNƒH[ƒ^ƒjƒIƒ“
-	//ˆø”1: •ÏŠ·‚·‚équaternion
+	//é€†ã‚¯ã‚©ãƒ¼ã‚¿ãƒ‹ã‚ªãƒ³ã«å¤‰æ›ã™ã‚‹
+	//return: é€†ã‚¯ã‚©ãƒ¼ã‚¿ãƒ‹ã‚ªãƒ³
+	//å¼•æ•°1: å¤‰æ›ã™ã‚‹quaternion
 	inline Quaternion Quaternion::Inverse(const Quaternion & quaternion) noexcept
 	{
 		return std::move(DirectX::XMQuaternionInverse(DirectX::XMLoadFloat4(&quaternion)));
 	}
 	//----------------------------------------------------------------------------------
 	//[LookForward]<Calculation Library Function>
-	//return: forward‚ğŒü‚­Quaternion
-	//ˆø”1: forward
-	//ˆø”2: ã•ûŒü: default = Vector3::up
+	//return: forwardã‚’å‘ãQuaternion
+	//å¼•æ•°1: forward
+	//å¼•æ•°2: ä¸Šæ–¹å‘: default = Vector3::up
 	inline Quaternion Quaternion::LookForward(const Vector3 & forward, const Vector3 & upwards) noexcept
 	{
 		return std::move(Matrix::LookForward(forward, upwards));
 	}
 	//----------------------------------------------------------------------------------
 	//[LookAt]<Calculation Library Function>
-	//position‚©‚çtarget‚ğŒ©‚éŒ`‚Ì‰ñ“]‚ğŒvZ‚·‚é
-	//return: position‚©‚çtarget‚ğŒ©‚éŒ`‚Ì‰ñ“]
-	//ˆø”1: position
-	//ˆø”2: target
-	//ˆø”3: ã•ûŒü: default = Vector3::up
+	//positionã‹ã‚‰targetã‚’è¦‹ã‚‹å½¢ã®å›è»¢ã‚’è¨ˆç®—ã™ã‚‹
+	//return: positionã‹ã‚‰targetã‚’è¦‹ã‚‹å½¢ã®å›è»¢
+	//å¼•æ•°1: position
+	//å¼•æ•°2: target
+	//å¼•æ•°3: ä¸Šæ–¹å‘: default = Vector3::up
 	inline Quaternion Quaternion::LookAt(const Vector3 & position, const Vector3 & target, const Vector3 & upwards) noexcept
 	{
 		return std::move(Matrix::LookAt(position, target, upwards));
 	}
 	//----------------------------------------------------------------------------------
 	//[LookAt2D]<Calculation Library Function>
-	//position‚©‚çtarget‚ğŒ©‚éŒ`‚Ì‰ñ“]‚ğŒvZ‚·‚é(2D”Å)
-	//return: position‚©‚çtarget‚ğŒ©‚éŒ`‚Ì‰ñ“](²w’è)
-	//ˆø”1: position
-	//ˆø”2: target
-	//ˆø”3: ‰ñ“]² (X or Y): default = true (X)
+	//positionã‹ã‚‰targetã‚’è¦‹ã‚‹å½¢ã®å›è»¢ã‚’è¨ˆç®—ã™ã‚‹(2Dç‰ˆ)
+	//return: positionã‹ã‚‰targetã‚’è¦‹ã‚‹å½¢ã®å›è»¢(è»¸æŒ‡å®š)
+	//å¼•æ•°1: position
+	//å¼•æ•°2: target
+	//å¼•æ•°3: å›è»¢è»¸ (X or Y): default = true (X)
 	inline Quaternion Quaternion::LookAt2D(const Vector3 & position, const Vector3 & target, bool isAxisX) noexcept
 	{
-		//•ûŒüƒxƒNƒgƒ‹
+		//æ–¹å‘ãƒ™ã‚¯ãƒˆãƒ«
 		Vector3 direction = target - position;
-		//Šp“xŒ¸Z—p
+		//è§’åº¦æ¸›ç®—ç”¨
 		float forwardDiff;
 		if (isAxisX)	forwardDiff = 0.0f;
 		else forwardDiff = 90.0f;
@@ -404,10 +404,10 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[FromToRotation]<Calculation Library Function>
-	//from‚©‚çto‚Ö‰ñ“]‚·‚éQuaternion‚ğŒvZ‚·‚é
-	//return: from‚©‚çto‚Ö‚Ì‰ñ“]
-	//ˆø”1: from (³‹K‰»Ï)
-	//ˆø”2: to (³‹K‰»Ï)
+	//fromã‹ã‚‰toã¸å›è»¢ã™ã‚‹Quaternionã‚’è¨ˆç®—ã™ã‚‹
+	//return: fromã‹ã‚‰toã¸ã®å›è»¢
+	//å¼•æ•°1: from (æ­£è¦åŒ–æ¸ˆ)
+	//å¼•æ•°2: to (æ­£è¦åŒ–æ¸ˆ)
 	inline Quaternion Quaternion::FromToRotation(const Vector3 & fromDirection, const Vector3 & toDirection) noexcept
 	{
 		//temp
@@ -427,19 +427,19 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[AngleAxis]<Calculation Library Function>
-	//axis‚Ìü‚è‚ğangle“x‰ñ“]‚·‚éQuaternion‚ğŒvZ‚·‚é
-	//return: axis‚Ìü‚è‚ğangle“x‰ñ“]‚·‚éQuaternion
-	//ˆø”1: ‰ñ“]²
-	//ˆø”2: Šp“x (degree)
+	//axisã®å‘¨ã‚Šã‚’angleåº¦å›è»¢ã™ã‚‹Quaternionã‚’è¨ˆç®—ã™ã‚‹
+	//return: axisã®å‘¨ã‚Šã‚’angleåº¦å›è»¢ã™ã‚‹Quaternion
+	//å¼•æ•°1: å›è»¢è»¸
+	//å¼•æ•°2: è§’åº¦ (degree)
 	inline Quaternion Quaternion::AngleAxis(const Vector3 & axis, float angle) noexcept
 	{
 		return std::move(DirectX::XMQuaternionRotationAxis(axis, angle * MathAF::cDegToRad));
 	}
 	//----------------------------------------------------------------------------------
 	//[Euler]<Calculation Library Function>
-	//ƒIƒCƒ‰[Šp (x, y, z) ‚ğŠî‚ÉQuaternion‚ğŒvZ‚·‚é, ‰ñ“]‡‚ÍYXZ
-	//return: ƒIƒCƒ‰[Šp (x, y, z) ‚ğŠî‚É‚µ‚½Quaternion
-	//ˆø”1: ‰ñ“] (degrees)
+	//ã‚ªã‚¤ãƒ©ãƒ¼è§’ (x, y, z) ã‚’åŸºã«Quaternionã‚’è¨ˆç®—ã™ã‚‹, å›è»¢é †ã¯YXZ
+	//return: ã‚ªã‚¤ãƒ©ãƒ¼è§’ (x, y, z) ã‚’åŸºã«ã—ãŸQuaternion
+	//å¼•æ•°1: å›è»¢ (degrees)
 	inline Quaternion Quaternion::Euler(const Vector3 & eulerAngles) noexcept
 	{
 		return std::move(DirectX::XMQuaternionRotationRollPitchYaw(
@@ -447,26 +447,26 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[Lerp3D]<Calculation Library Function>
-	//from‚Æto‚ÌŠÔ‚ğt‚ÅüŒ`•âŠ®‚µ‚½‚à‚Ì‚ğ•Ô‹p‚·‚é, •âŠ®‚É‚Í3ŸŠÖ”•âŠ®‚ğg‚¤
-	//return: from‚©‚çto‚Ö‚ÌüŒ`(3ŸŠÖ”)•âŠÔ
-	//ˆø”1: from
-	//ˆø”2: to
-	//ˆø”3: •âŠ®‚Ì“x‡‚¢(0 ~ 1)
+	//fromã¨toã®é–“ã‚’tã§ç·šå½¢è£œå®Œã—ãŸã‚‚ã®ã‚’è¿”å´ã™ã‚‹, è£œå®Œã«ã¯3æ¬¡é–¢æ•°è£œå®Œã‚’ä½¿ã†
+	//return: fromã‹ã‚‰toã¸ã®ç·šå½¢(3æ¬¡é–¢æ•°)è£œé–“
+	//å¼•æ•°1: from
+	//å¼•æ•°2: to
+	//å¼•æ•°3: è£œå®Œã®åº¦åˆã„(0 ~ 1)
 	inline Quaternion Quaternion::Lerp3D(const Quaternion & from, const Quaternion & to, float t) noexcept
 	{
 		if (t > 1.0f) t = 1.0f;	else if (t < 0.0f) t = 0.0f;
-		//3ŸŠÖ”•âŠÔ
+		//3æ¬¡é–¢æ•°è£œé–“
 		float rate = t * t * (3.0f - 2.0f * t);
 
 		return std::move(DirectX::XMQuaternionMultiply(from * (1.0f - rate), to * rate));
 	}
 	//----------------------------------------------------------------------------------
 	//[LerpDirect]<Calculation Library Function>
-	//from‚Æto‚ÌŠÔ‚ğt‚ÅüŒ`•âŠ®‚µ‚½‚à‚Ì‚ğ•Ô‹p‚·‚é, •âŠ®‚É‚Í‚½‚¾‚ÌüŒ`•âŠÔ‚ğg‚¤
-	//return: from‚©‚çto‚Ö‚ÌüŒ`•âŠÔ
-	//ˆø”1: from
-	//ˆø”2: to
-	//ˆø”3: •âŠ®‚Ì“x‡‚¢(0 ~ 1)
+	//fromã¨toã®é–“ã‚’tã§ç·šå½¢è£œå®Œã—ãŸã‚‚ã®ã‚’è¿”å´ã™ã‚‹, è£œå®Œã«ã¯ãŸã ã®ç·šå½¢è£œé–“ã‚’ä½¿ã†
+	//return: fromã‹ã‚‰toã¸ã®ç·šå½¢è£œé–“
+	//å¼•æ•°1: from
+	//å¼•æ•°2: to
+	//å¼•æ•°3: è£œå®Œã®åº¦åˆã„(0 ~ 1)
 	inline Quaternion Quaternion::LerpDirect(const Quaternion & from, const Quaternion & to, float t) noexcept
 	{
 		if (t > 1.0f) t = 1.0f;	else if (t < 0.0f) t = 0.0f;
@@ -474,11 +474,11 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[Slerp]<Calculation Library Function>
-	//this‚Æto‚ÌŠÔ‚ğt‚Å‹…–ÊüŒ`•âŠÔ‚µ‚½‚à‚Ì‚ğŒvZ‚·‚é
-	//return: from‚©‚çto‚Ö‚Ì‹…–ÊüŒ`•âŠÔ
-	//ˆø”1: from
-	//ˆø”2: to
-	//ˆø”3: •âŠ®‚Ì“x‡‚¢(0 ~ 1)
+	//thisã¨toã®é–“ã‚’tã§çƒé¢ç·šå½¢è£œé–“ã—ãŸã‚‚ã®ã‚’è¨ˆç®—ã™ã‚‹
+	//return: fromã‹ã‚‰toã¸ã®çƒé¢ç·šå½¢è£œé–“
+	//å¼•æ•°1: from
+	//å¼•æ•°2: to
+	//å¼•æ•°3: è£œå®Œã®åº¦åˆã„(0 ~ 1)
 	inline Quaternion Quaternion::Slerp(const Quaternion & from, const Quaternion & to, float t) noexcept
 	{
 		if (t > 1.0f) t = 1.0f;	else if (t < 0.0f) t = 0.0f;
@@ -486,10 +486,10 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[Dot]<Calculation Library Function>
-	//quaternion1‚Æquaternion2‚Ì“àÏ‚ğŒvZ‚·‚é
-	//return: quaternion1‚Æquaternion2‚Ì“àÏ
-	//ˆø”1: quaternion1
-	//ˆø”2: quaternion2
+	//quaternion1ã¨quaternion2ã®å†…ç©ã‚’è¨ˆç®—ã™ã‚‹
+	//return: quaternion1ã¨quaternion2ã®å†…ç©
+	//å¼•æ•°1: quaternion1
+	//å¼•æ•°2: quaternion2
 	inline float Quaternion::Dot(const Quaternion & quaternion1, const Quaternion & quaternion2) noexcept
 	{
 		return quaternion1.x * quaternion2.x + quaternion1.y * quaternion2.y 
@@ -497,10 +497,10 @@ namespace SGFramework
 	}
 	//----------------------------------------------------------------------------------
 	//[Vector3Rotate]<Calculation Library Function>
-	//ƒxƒNƒgƒ‹•ûŒü‚ğquaternion‚ğg‚Á‚Ä‰ñ“]‚³‚¹‚é
-	//return: ‰ñ“]‚µ‚½ƒxƒNƒgƒ‹
-	//ˆø”1: ‘ÎÛƒxƒNƒgƒ‹
-	//ˆø”2: ‰ñ“]‚Ég‚¤quaternion
+	//ãƒ™ã‚¯ãƒˆãƒ«æ–¹å‘ã‚’quaternionã‚’ä½¿ã£ã¦å›è»¢ã•ã›ã‚‹
+	//return: å›è»¢ã—ãŸãƒ™ã‚¯ãƒˆãƒ«
+	//å¼•æ•°1: å¯¾è±¡ãƒ™ã‚¯ãƒˆãƒ«
+	//å¼•æ•°2: å›è»¢ã«ä½¿ã†quaternion
 	inline Vector3 Quaternion::Vector3Rotate(const Vector3 & vec, const Quaternion & quaternion) noexcept
 	{
 		return std::move(DirectX::XMVector3Rotate(vec, quaternion));

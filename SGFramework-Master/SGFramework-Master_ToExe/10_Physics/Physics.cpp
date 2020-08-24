@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-•¨—ƒGƒ“ƒWƒ“(PhysX)‚ğŠÇ—‚·‚éPhysics class
+ç‰©ç†ã‚¨ãƒ³ã‚¸ãƒ³(PhysX)ã‚’ç®¡ç†ã™ã‚‹Physics class
 ------------------------------------------------------------------------------------*/
 #include "../07_Thread/Thread.hpp"
 #include "Physics.hpp"
@@ -18,7 +18,7 @@ namespace SGFramework
 	PointerProperty<physx::PxScene*> Physics::physicsScene(m_scene);
 	//PhysX->PxControllerManager
 	PointerProperty<physx::PxControllerManager*> Physics::controllerManager(m_controllerManager);
-	//Default PhysicsMaterial (staticFriction = 0.5f, dynamicFriction = 0.5f, restitution(”½”­ŒW”) = 0.1f)
+	//Default PhysicsMaterial (staticFriction = 0.5f, dynamicFriction = 0.5f, restitution(åç™ºä¿‚æ•°) = 0.1f)
 	GetOnlyProperty<PhysicsMaterial> Physics::defaultPhysicsMaterial(m_defaultMaterial);
 
 	//actors map
@@ -39,9 +39,9 @@ namespace SGFramework
 	std::vector<Physics::LostPair> Physics::m_lostPairs;
 	//found pair vector
 	std::vector<Physics::HitPair> Physics::m_foundPairs;
-	//—Dæmessage
+	//å„ªå…ˆmessage
 	std::vector<Detail::Physics::PhysicsMessage> Physics::m_preferentMessages;
-	//—Dæmessage (use thread)
+	//å„ªå…ˆmessage (use thread)
 	std::unordered_set<uint> Physics::m_preferentRegisterInstanceIDs;
 	//message
 	std::vector<Detail::Physics::PhysicsMessage> Physics::m_messages;
@@ -101,8 +101,8 @@ namespace SGFramework
 	//----------------------------------------------------------------------------------
 	//[StartUp]
 	//throw: failed start up
-	//ˆø”1: gravity
-	//ˆø”2: HitPair->Init Num Reserve
+	//å¼•æ•°1: gravity
+	//å¼•æ•°2: HitPair->Init Num Reserve
 	void Physics::StartUp(const ReadElement::Pack& gravity,
 		const ReadElement::Pack& hitPairVectorReserves)
 	{
@@ -177,7 +177,7 @@ namespace SGFramework
 
 			sceneDesc.flags |= physx::PxSceneFlag::eENABLE_GPU_DYNAMICS;
 			sceneDesc.flags |= physx::PxSceneFlag::eENABLE_PCM;
-			sceneDesc.gpuMaxNumPartitions = 8;//2‚Ì‚×‚«æ‚¾‚¯‚Á‚Û‚¢
+			sceneDesc.gpuMaxNumPartitions = 8;//2ã®ã¹ãä¹—ã ã‘ã£ã½ã„
 			sceneDesc.broadPhaseType = physx::PxBroadPhaseType::eGPU;
 		}
 
@@ -207,7 +207,7 @@ namespace SGFramework
 		m_foundPairs.reserve(hitPairVectorReserves[0].valueInt);
 		m_lostPairs.reserve(hitPairVectorReserves[0].valueInt);
 
-		//thread‹N“®
+		//threadèµ·å‹•
 		m_physicsThread = std::thread(PhysicsThread);
 		Thread::setAffinityPhysicsUpdate(m_physicsThread.native_handle());
 	}

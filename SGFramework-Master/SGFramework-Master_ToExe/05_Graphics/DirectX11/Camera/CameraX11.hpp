@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-DirectX11 Camera‚ğˆµ‚¤CameraX11 class
+DirectX11 Cameraã‚’æ‰±ã†CameraX11 class
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_CAMERA_X11_HPP_
 #define SGFRAMEWORK_HEADER_CAMERA_X11_HPP_
@@ -15,13 +15,13 @@ DirectX11 Camera‚ğˆµ‚¤CameraX11 class
 // Framework namespace
 namespace SGFramework
 {
-	//ƒtƒŒ[ƒ€ƒ[ƒN‚ÌŠÇ—‚ğ‚·‚éAdministrator namespace
+	//ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®ç®¡ç†ã‚’ã™ã‚‹Administrator namespace
 	namespace Administrator
 	{
 		//GraphicsDetail namespace
 		namespace GraphicsDetail
 		{
-			//DirectX11 Camera‚ğˆµ‚¤CameraX11 class
+			//DirectX11 Cameraã‚’æ‰±ã†CameraX11 class
 			class CameraX11 : public ComponentX11
 			{
 			public:
@@ -29,31 +29,31 @@ namespace SGFramework
 				friend class SGFramework::Administrator::GraphicsX11;
 				friend class SGFramework::Administrator::GraphicsDetail::ComponentX11;
 
-				//ƒrƒ…[ƒ|[ƒg‚ğİ’è‚·‚éViewPort
+				//ãƒ“ãƒ¥ãƒ¼ãƒãƒ¼ãƒˆã‚’è¨­å®šã™ã‚‹ViewPort
 				struct ViewPort
 				{
 					//----------------------------------------------------------------------------------
-					//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-					//‘ã“ü‰Šú‰»‚·‚é
-					//ˆø”1: ¶ãÀ•W, ‰æ–ÊƒTƒCƒY‚É‘Î‚·‚é0.0f ~ 1.0f‚Ü‚Å‚Ì”{—¦
-					//ˆø”2: •`‰æƒTƒCƒY, ‰æ–ÊƒTƒCƒY‚É‘Î‚·‚é0.0f ~ 1.0f‚Ü‚Å‚Ì”{—¦
-					//ˆø”3: ”íÊŠE[“xÅ¬’l
-					//ˆø”4: ”íÊŠE[“xÅ‘å’l
+					//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+					//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+					//å¼•æ•°1: å·¦ä¸Šåº§æ¨™, ç”»é¢ã‚µã‚¤ã‚ºã«å¯¾ã™ã‚‹0.0f ~ 1.0fã¾ã§ã®å€ç‡
+					//å¼•æ•°2: æç”»ã‚µã‚¤ã‚º, ç”»é¢ã‚µã‚¤ã‚ºã«å¯¾ã™ã‚‹0.0f ~ 1.0fã¾ã§ã®å€ç‡
+					//å¼•æ•°3: è¢«å†™ç•Œæ·±åº¦æœ€å°å€¤
+					//å¼•æ•°4: è¢«å†™ç•Œæ·±åº¦æœ€å¤§å€¤
 					inline ViewPort(const Vector2& topLeftPosition = Const::Vector2::zero,
 						const Vector2& drawSizePerScreen = Const::Vector2::one,
 						float depthMin = 0.0f, float depthMax = 1.0f)
 						: topLeftPosition(topLeftPosition), drawSizePerScreen(drawSizePerScreen), depthMin(depthMin), depthMax(depthMax) {}
 					//----------------------------------------------------------------------------------
-					//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-					//‘ã“ü‰Šú‰»‚·‚é
-					//ˆø”1: ƒRƒs[
+					//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+					//ä»£å…¥åˆæœŸåŒ–ã™ã‚‹
+					//å¼•æ•°1: ã‚³ãƒ”ãƒ¼
 					inline ViewPort(const ViewPort& copy) { memcpy_s(this, sizeof(ViewPort), &copy, sizeof(ViewPort)); }
 			
 					//----------------------------------------------------------------------------------
 					//[ConvertDrawViewPort]	
-					//ƒTƒCƒY”{—¦‚ğÀÛ‚Ì’l‚Ö•ÏŠ·‚µ•`‰æ—p‚ÌViewPort‚Ö‚Æ•ÏŠ·‚·‚é
-					//©g‚Ì’l‚ğ•ÏX‚·‚é‚Ì‚Å’ˆÓICamera‚ÍƒoƒbƒNƒOƒ‰ƒEƒ“ƒh‚Å©“®•â³‚ğ‚©‚¯‚Ä‚¢‚Ü‚·B
-					//CameraŒp³ƒNƒ‰ƒX‚Å‚Ìbuffer‚É‘Î‚µ‚Ä‚Ìg—p‚ÍŒµ‹ÖI
+					//ã‚µã‚¤ã‚ºå€ç‡ã‚’å®Ÿéš›ã®å€¤ã¸å¤‰æ›ã—æç”»ç”¨ã®ViewPortã¸ã¨å¤‰æ›ã™ã‚‹
+					//è‡ªèº«ã®å€¤ã‚’å¤‰æ›´ã™ã‚‹ã®ã§æ³¨æ„ï¼Cameraã¯ãƒãƒƒã‚¯ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰ã§è‡ªå‹•è£œæ­£ã‚’ã‹ã‘ã¦ã„ã¾ã™ã€‚
+					//Cameraç¶™æ‰¿ã‚¯ãƒ©ã‚¹ã§ã®bufferã«å¯¾ã—ã¦ã®ä½¿ç”¨ã¯å³ç¦ï¼
 					inline void ConvertDrawViewPort()
 					{	
 						topLeftPosition.x *= SGFramework::Administrator::GraphicsX11::screen.screenSizeFloat->x;
@@ -67,20 +67,20 @@ namespace SGFramework
 					//copy operator
 					inline const ViewPort& operator = (const ViewPort& viewPort) { memcpy_s(this, sizeof(ViewPort), &viewPort, sizeof(ViewPort)); return *this; }
 
-					Vector2 topLeftPosition;			//¶ãÀ•W, ‰æ–ÊƒTƒCƒY‚É‘Î‚·‚é0.0f ~ 1.0f‚Ü‚Å‚Ì”{—¦
-					Vector2 drawSizePerScreen;	//•`‰æƒTƒCƒY, ‰æ–ÊƒTƒCƒY‚É‘Î‚·‚é0.0f ~ 1.0f‚Ü‚Å‚Ì”{—¦
-					float depthMin;						//”íÊŠE[“xÅ¬’l
-					float depthMax;						//”íÊŠE[“xÅ‘å’l
+					Vector2 topLeftPosition;			//å·¦ä¸Šåº§æ¨™, ç”»é¢ã‚µã‚¤ã‚ºã«å¯¾ã™ã‚‹0.0f ~ 1.0fã¾ã§ã®å€ç‡
+					Vector2 drawSizePerScreen;	//æç”»ã‚µã‚¤ã‚º, ç”»é¢ã‚µã‚¤ã‚ºã«å¯¾ã™ã‚‹0.0f ~ 1.0fã¾ã§ã®å€ç‡
+					float depthMin;						//è¢«å†™ç•Œæ·±åº¦æœ€å°å€¤
+					float depthMax;						//è¢«å†™ç•Œæ·±åº¦æœ€å¤§å€¤
 				};
 
 				//----------------------------------------------------------------------------------
 				//[StartUp]
-				//ƒJƒƒ‰‚Ì‰Šúİ’è‚ğs‚¤, ‚±‚ê‚ğÀs‚µ‚È‚¢ê‡³í‚É“®ì‚µ‚È‚¢
-				//ˆø”1: •`‰æƒŒƒCƒ„[ƒ}ƒXƒN, defualt = All layers mask
-				//ˆø”2: nearClip, default = 1.0f
-				//ˆø”3: farClip, default = 1000.0f
-				//ˆø”4: fov, default = MathAF::cPiDiv2
-				//ˆø”5: ƒrƒ…[ƒ|[ƒg, default = ViewPort()
+				//ã‚«ãƒ¡ãƒ©ã®åˆæœŸè¨­å®šã‚’è¡Œã†, ã“ã‚Œã‚’å®Ÿè¡Œã—ãªã„å ´åˆæ­£å¸¸ã«å‹•ä½œã—ãªã„
+				//å¼•æ•°1: æç”»ãƒ¬ã‚¤ãƒ¤ãƒ¼ãƒã‚¹ã‚¯, defualt = All layers mask
+				//å¼•æ•°2: nearClip, default = 1.0f
+				//å¼•æ•°3: farClip, default = 1000.0f
+				//å¼•æ•°4: fov, default = MathAF::cPiDiv2
+				//å¼•æ•°5: ãƒ“ãƒ¥ãƒ¼ãƒãƒ¼ãƒˆ, default = ViewPort()
 				inline void StartUp(LayerMask layerMask = LayerMask::getAllLayersMask(),
 					float nearClip = 1.0f, float farClip = 1000.0f, 
 					float fov = MathAF::cPiDiv2, const ViewPort& viewPort = ViewPort());
@@ -88,9 +88,9 @@ namespace SGFramework
 				//graphics set camera matrix(graphics thread only property)
 				SGF_FUNCTION_PROPERTY void setCameraMatrix();
 
-				//look at(–ˆƒtƒŒ[ƒ€‰Šú‰»‚³‚ê‚Ü‚·, İ’è‚µ‚È‚©‚Á‚½ê‡‚Íforward‚ğİ’è‚µ‚Ü‚·) (get only property)
+				//look at(æ¯ãƒ•ãƒ¬ãƒ¼ãƒ åˆæœŸåŒ–ã•ã‚Œã¾ã™, è¨­å®šã—ãªã‹ã£ãŸå ´åˆã¯forwardã‚’è¨­å®šã—ã¾ã™) (get only property)
 				SGF_FUNCTION_PROPERTY Vector3 getLookAt() {  return m_lookAt; }
-				//look at(–ˆƒtƒŒ[ƒ€‰Šú‰»‚³‚ê‚Ü‚·, İ’è‚µ‚È‚©‚Á‚½ê‡‚Íforward‚ğİ’è‚µ‚Ü‚·) (set only property)
+				//look at(æ¯ãƒ•ãƒ¬ãƒ¼ãƒ åˆæœŸåŒ–ã•ã‚Œã¾ã™, è¨­å®šã—ãªã‹ã£ãŸå ´åˆã¯forwardã‚’è¨­å®šã—ã¾ã™) (set only property)
 				//argument 1: set value
 				SGF_FUNCTION_PROPERTY Vector3 setLookAt(const Vector3& set) { m_isLookAt = true; return m_lookAt = set; }
 
@@ -124,9 +124,9 @@ namespace SGFramework
 				//argument 1: set value
 				SGF_FUNCTION_PROPERTY float setFov(float set) { return m_drawBuffers.fov = set; }
 
-			//protected—pŒ^éŒ¾
+			//protectedç”¨å‹å®£è¨€
 			private:
-				//•`‰æ—pƒoƒbƒtƒ@ƒpƒbƒN
+				//æç”»ç”¨ãƒãƒƒãƒ•ã‚¡ãƒ‘ãƒƒã‚¯
 				struct DrawBuffers
 				{
 					ViewPort viewPort = ViewPort();		//ViewPort
@@ -139,7 +139,7 @@ namespace SGFramework
 			//protected
 			protected:
 				//----------------------------------------------------------------------------------
-				//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
+				//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 				CameraX11() : m_drawBuffers(), m_buffersUseGraphics(), m_syncObject(*this),
 					m_projectionMatrix(), m_viewMatrix(), m_lookAt(), m_lookAtUseGrapics(),
 					m_isCreateProjection(true), m_isCreateView(true), m_isLookAt(false), m_isLookAtUseGrapics(false) {}
@@ -164,11 +164,11 @@ namespace SGFramework
 				inline virtual void OnTriggerExit(const ContactInfo& contactInfo) {}
 				inline virtual void ChangeUpperHierarchy(WeakPointer<TransformX11> newParent, WeakPointer<TransformX11> oldParent) {}
 
-				//Draw—pİ’è (LookAt‚Í•Ê“rŠÖ”‚©‚çÀs)
+				//Drawç”¨è¨­å®š (LookAtã¯åˆ¥é€”é–¢æ•°ã‹ã‚‰å®Ÿè¡Œ)
 				DrawBuffers m_drawBuffers;
 
 			private:
-				//Sync—pƒIƒuƒWƒFƒNƒg
+				//Syncç”¨ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 				struct SyncObject : GraphicsObjectX11
 				{
 					//----------------------------------------------------------------------------------
@@ -177,7 +177,7 @@ namespace SGFramework
 
 					//----------------------------------------------------------------------------------
 					//[Sync]
-					//î•ñ‚ğ“¯Šú‚·‚é, ƒR[ƒ‹ƒoƒbƒNŠÖ”
+					//æƒ…å ±ã‚’åŒæœŸã™ã‚‹, ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 					inline void Sync()
 					{
 						memcpy_s(&reference.m_buffersUseGraphics, sizeof(DrawBuffers),
@@ -198,14 +198,14 @@ namespace SGFramework
 
 				//----------------------------------------------------------------------------------
 				//[InitCameraSetting]
-				//ƒJƒƒ‰‚ÌƒZƒbƒgî•ñ‚ğ‰Šú‰»‚·‚é
+				//ã‚«ãƒ¡ãƒ©ã®ã‚»ãƒƒãƒˆæƒ…å ±ã‚’åˆæœŸåŒ–ã™ã‚‹
 				inline static void InitCameraSetting() { m_setCamera = nullptr; m_setLayerMask = 0; }
 	
-				static CameraX11* m_setCamera;			//ÅŒã‚Éİ’è‚µ‚½ƒJƒƒ‰
-				static LayerMask m_setLayerMask;			//ÅŒã‚Éİ’è‚µ‚½ƒŒƒCƒ„[ƒ}ƒXƒN
+				static CameraX11* m_setCamera;			//æœ€å¾Œã«è¨­å®šã—ãŸã‚«ãƒ¡ãƒ©
+				static LayerMask m_setLayerMask;			//æœ€å¾Œã«è¨­å®šã—ãŸãƒ¬ã‚¤ãƒ¤ãƒ¼ãƒã‚¹ã‚¯
 
 				DrawBuffers m_buffersUseGraphics;		//Buffer (Use graphics thread)
-				SyncObject m_syncObject;						//Sync—p
+				SyncObject m_syncObject;						//Syncç”¨
 				Vector4x4 m_projectionMatrix;				//Projection
 				Vector4x4 m_viewMatrix;						//View
 				Vector3 m_lookAt;									//LookAt
@@ -218,13 +218,13 @@ namespace SGFramework
 
 			//----------------------------------------------------------------------------------
 			//[StartUp]
-			//ƒJƒƒ‰‚Ì‰Šúİ’è‚ğs‚¤, ‚±‚ê‚ğÀs‚µ‚È‚¢ê‡³í‚É“®ì‚µ‚È‚¢
-			//ˆø”1: •`‰æƒŒƒCƒ„[ƒ}ƒXƒN, defualt = All layers mask
-			//ˆø”2: LookAt‚ªs‚í‚ê‚È‚©‚Á‚½ƒtƒŒ[ƒ€‚ÉÀs‚³‚ê‚éLookAt = forward * this‚Ì’l, default = 10.0f
-			//ˆø”3: nearClip, default = 1.0f
-			//ˆø”4: farClip, default = 1000.0f
-			//ˆø”5: fov, default = MathAF::cPiDiv2
-			//ˆø”6: ƒrƒ…[ƒ|[ƒg, default = ViewPort()
+			//ã‚«ãƒ¡ãƒ©ã®åˆæœŸè¨­å®šã‚’è¡Œã†, ã“ã‚Œã‚’å®Ÿè¡Œã—ãªã„å ´åˆæ­£å¸¸ã«å‹•ä½œã—ãªã„
+			//å¼•æ•°1: æç”»ãƒ¬ã‚¤ãƒ¤ãƒ¼ãƒã‚¹ã‚¯, defualt = All layers mask
+			//å¼•æ•°2: LookAtãŒè¡Œã‚ã‚Œãªã‹ã£ãŸãƒ•ãƒ¬ãƒ¼ãƒ ã«å®Ÿè¡Œã•ã‚Œã‚‹LookAt = forward * thisã®å€¤, default = 10.0f
+			//å¼•æ•°3: nearClip, default = 1.0f
+			//å¼•æ•°4: farClip, default = 1000.0f
+			//å¼•æ•°5: fov, default = MathAF::cPiDiv2
+			//å¼•æ•°6: ãƒ“ãƒ¥ãƒ¼ãƒãƒ¼ãƒˆ, default = ViewPort()
 			inline void CameraX11::StartUp(LayerMask layerMask, float nearClip, 
 				float farClip, float fov, const ViewPort & viewPort)
 			{
@@ -244,10 +244,10 @@ namespace SGFramework
 			{
 				using GraphicsX11 = SGFramework::Administrator::GraphicsX11;
 				
-				//‚·‚Å‚Éİ’èÏ‚İ‚È‚ç‚ÎI—¹
+				//ã™ã§ã«è¨­å®šæ¸ˆã¿ãªã‚‰ã°çµ‚äº†
 				if (m_setCamera == this) return;
 
-				//İ’è
+				//è¨­å®š
 				m_setCamera = this;
 				m_setLayerMask = m_buffersUseGraphics.layerMask;
 
@@ -284,7 +284,7 @@ namespace SGFramework
 				GraphicsX11::m_setConstantBufferScene.viewMatrix = m_viewMatrix.getTranspose();
 
 				//Set Light params
-				//Vector4‚È‚Ì‚Å’¼Úæ“¾
+				//Vector4ãªã®ã§ç›´æ¥å–å¾—
 				GraphicsX11::m_setConstantBufferLight.eyePosition = transform->m_drawMatrix.getVector4(3);
 				GraphicsX11::m_setConstantBufferLight.eyeDirection = transform->m_drawMatrix.getVector4(2);	
 

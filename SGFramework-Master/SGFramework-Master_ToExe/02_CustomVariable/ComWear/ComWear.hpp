@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-ConditionVariableŒnƒNƒ‰ƒX‚Ìƒx[ƒX‚Æ‚È‚éBaseConditionVariable class
+ConditionVariableç³»ã‚¯ãƒ©ã‚¹ã®ãƒ™ãƒ¼ã‚¹ã¨ãªã‚‹BaseConditionVariable class
 ----------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_COM_WEAR_HPP_
 #define SGFRAMEWORK_HEADER_COM_WEAR_HPP_
@@ -12,23 +12,23 @@ namespace SGFramework
 	//Base Classes
 	namespace BaseClass
 	{
-		//Pointer‚ğCOM‰»‚³‚¹‚éBaseComWear class
-		//template 1: COM‰»‚³‚¹‚éƒ|ƒCƒ“ƒ^[‚ÌŒ^
+		//Pointerã‚’COMåŒ–ã•ã›ã‚‹BaseComWear class
+		//template 1: COMåŒ–ã•ã›ã‚‹ãƒã‚¤ãƒ³ã‚¿ãƒ¼ã®å‹
 		template<class WearClass>
 		class BaseComWear
 		{
 		public:
 			//----------------------------------------------------------------------------------
 			//[AddRef]
-			//ƒJƒEƒ“ƒ^‚ğ‰ÁZ‚³‚¹‚é
-			//return: ÀsŒã‚ÌƒJƒEƒ“ƒ^”, ƒ|ƒCƒ“ƒ^‚ª–³Œø‚¾‚Á‚½ê‡null
+			//ã‚«ã‚¦ãƒ³ã‚¿ã‚’åŠ ç®—ã•ã›ã‚‹
+			//return: å®Ÿè¡Œå¾Œã®ã‚«ã‚¦ãƒ³ã‚¿æ•°, ãƒã‚¤ãƒ³ã‚¿ãŒç„¡åŠ¹ã ã£ãŸå ´åˆnull
 			inline uint AddRef() { if (m_pointer == nullptr) return 0; return AtomicOperation::Add(m_counter, 1); }
 
 			//<property> com pointer
 			SGF_PROPERTY WearClass* _getPointer() const { return m_pointer; }
 			//<property> now refecence count
 			SGF_PROPERTY WearClass* _getNumReference() const { return m_counter != nullptr ? m_counter->load() : 0; }
-			//<property> pointer is valid(—LŒø)?
+			//<property> pointer is valid(æœ‰åŠ¹)?
 			SGF_PROPERTY bool _getIsValid() const { return m_counter != nullptr && *m_counter > 0; }
 			
 			//pointer operator
@@ -42,13 +42,13 @@ namespace SGFramework
 
 		protected:
 			//----------------------------------------------------------------------------------
-			//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
+			//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 			BaseComWear() : m_pointer(nullptr), m_counter(nullptr) {}
 
 			//----------------------------------------------------------------------------------
 			//[InitBaseMembers]
-			//ƒ|ƒCƒ“ƒ^, ƒJƒEƒ“ƒ^‰Šú‰»
-			//ˆø”1: ƒ|ƒCƒ“ƒ^
+			//ãƒã‚¤ãƒ³ã‚¿, ã‚«ã‚¦ãƒ³ã‚¿åˆæœŸåŒ–
+			//å¼•æ•°1: ãƒã‚¤ãƒ³ã‚¿
 			inline void InitBaseMembers(WearClass* pointer)
 			{
 				m_pointer = pointer;
@@ -56,30 +56,30 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[UnInitBaseMembers]
-			//ƒJƒEƒ“ƒ^íœ
+			//ã‚«ã‚¦ãƒ³ã‚¿å‰Šé™¤
 			inline void UnInitBaseMembers() { DELETE_POINTER(m_counter); }
 
-			WearClass* m_pointer;					//ƒ|ƒCƒ“ƒ^
-			std::atomic<uint>* m_counter;		//ƒJƒEƒ“ƒ^
+			WearClass* m_pointer;					//ãƒã‚¤ãƒ³ã‚¿
+			std::atomic<uint>* m_counter;		//ã‚«ã‚¦ãƒ³ã‚¿
 		};
 	}
 
-	//Pointer‚ğCOM‰»‚³‚¹ARelease‚Édelete‚·‚éComWearDelete class
-	//template 1: COM‰»‚³‚¹‚éƒ|ƒCƒ“ƒ^[‚ÌŒ^
+	//Pointerã‚’COMåŒ–ã•ã›ã€Releaseæ™‚ã«deleteã™ã‚‹ComWearDelete class
+	//template 1: COMåŒ–ã•ã›ã‚‹ãƒã‚¤ãƒ³ã‚¿ãƒ¼ã®å‹
 	template<class WearClass>
 	class ComWearDelete : public BaseClass::BaseComWear<WearClass>
 	{
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//ˆø”1: ƒ|ƒCƒ“ƒ^
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//å¼•æ•°1: ãƒã‚¤ãƒ³ã‚¿
 		inline ComWearDelete(WearClass* pointer) { this->InitBaseMembers(pointer); }
 
 		//----------------------------------------------------------------------------------
 		//[Init]
-		//ReleaseÀsŒã‰Šú‰»‚ğs‚¤, ˆ—ãƒŠ[ƒN‚ª‹N‚±‚é‰Â”\«‚ ‚è, ’ˆÓ‚³‚ê‚½‚µ
-		//ˆø”1: ƒ|ƒCƒ“ƒ^
-		//ˆø”2: now pointer is array?, default = false
+		//Releaseå®Ÿè¡Œå¾ŒåˆæœŸåŒ–ã‚’è¡Œã†, å‡¦ç†ä¸Šãƒªãƒ¼ã‚¯ãŒèµ·ã“ã‚‹å¯èƒ½æ€§ã‚ã‚Š, æ³¨æ„ã•ã‚ŒãŸã—
+		//å¼•æ•°1: ãƒã‚¤ãƒ³ã‚¿
+		//å¼•æ•°2: now pointer is array?, default = false
 		inline void Init(WearClass* pointer, bool isArray = false)
 		{
 			Release(isArray, true);
@@ -88,16 +88,16 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Release]
-		//ƒJƒEƒ“ƒ^‚ğŒ¸Z‚³‚¹A0‚É‚È‚Á‚½ê‡delete‚ÅŠJ•ú‚ğs‚¤
-		//return: ÀsŒã‚ÌƒJƒEƒ“ƒ^”, ƒ|ƒCƒ“ƒ^‚ª–³Œø‚¾‚Á‚½ê‡null
-		//ˆø”1: array pointer?, default = false
-		//ˆø”2: ƒJƒEƒ“ƒ^‚ª0‚É‚È‚ç‚È‚©‚Á‚½ê‡‚à‹­§“I‚Énullptr‚ğ‘ã“ü‚·‚é‚©, default = false
+		//ã‚«ã‚¦ãƒ³ã‚¿ã‚’æ¸›ç®—ã•ã›ã€0ã«ãªã£ãŸå ´åˆdeleteã§é–‹æ”¾ã‚’è¡Œã†
+		//return: å®Ÿè¡Œå¾Œã®ã‚«ã‚¦ãƒ³ã‚¿æ•°, ãƒã‚¤ãƒ³ã‚¿ãŒç„¡åŠ¹ã ã£ãŸå ´åˆnull
+		//å¼•æ•°1: array pointer?, default = false
+		//å¼•æ•°2: ã‚«ã‚¦ãƒ³ã‚¿ãŒ0ã«ãªã‚‰ãªã‹ã£ãŸå ´åˆã‚‚å¼·åˆ¶çš„ã«nullptrã‚’ä»£å…¥ã™ã‚‹ã‹, default = false
 		inline uint Release(bool isArray = false, bool isForceInitNull = false)
 		{ 
 			//null?
 			if (this->m_pointer == nullptr) return 0;
 
-			//ƒJƒEƒ“ƒ^Œ¸Z, 0‚È‚çdelete
+			//ã‚«ã‚¦ãƒ³ã‚¿æ¸›ç®—, 0ãªã‚‰delete
 			uint result = AtomicOperation::Subtract(*this->m_counter, 1);
 			if (result == 0)
 			{
@@ -116,8 +116,8 @@ namespace SGFramework
 		}
 	};
 
-	//Pointer‚ğCOM‰»‚³‚¹ARelease‚ÉReleaseFunction‚ğÀs‚·‚éComWearFunction class
-	//template 1: COM‰»‚³‚¹‚éƒ|ƒCƒ“ƒ^[‚ÌŒ^
+	//Pointerã‚’COMåŒ–ã•ã›ã€Releaseæ™‚ã«ReleaseFunctionã‚’å®Ÿè¡Œã™ã‚‹ComWearFunction class
+	//template 1: COMåŒ–ã•ã›ã‚‹ãƒã‚¤ãƒ³ã‚¿ãƒ¼ã®å‹
 	template<class WearClass>
 	class ComWearFunction : public BaseClass::BaseComWear<WearClass>
 	{
@@ -127,23 +127,23 @@ namespace SGFramework
 		struct FunctionCaller;
 	public:
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
 		inline ComWearFunction() : m_function(nullptr) {}
 		//----------------------------------------------------------------------------------
-		//[ƒRƒ“ƒXƒgƒ‰ƒNƒ^]
-		//template 1: ƒ|ƒCƒ“ƒ^[‚ğŠJ•ú‚³‚¹‚éƒƒ“ƒoŠÖ”
-		//ˆø”1: ƒ|ƒCƒ“ƒ^
-		//ˆø”2: ŠJ•ú‚³‚¹‚éŠÖ”ƒ|ƒCƒ“ƒ^
+		//[ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿]
+		//template 1: ãƒã‚¤ãƒ³ã‚¿ãƒ¼ã‚’é–‹æ”¾ã•ã›ã‚‹ãƒ¡ãƒ³ãƒé–¢æ•°
+		//å¼•æ•°1: ãƒã‚¤ãƒ³ã‚¿
+		//å¼•æ•°2: é–‹æ”¾ã•ã›ã‚‹é–¢æ•°ãƒã‚¤ãƒ³ã‚¿
 		template<typename ReleaseFunction>
 		inline ComWearFunction(WearClass* pointer, ReleaseFunction function)
 			: m_function(new FunctionCaller<WearClass, ReleaseFunction>(function)) { this->InitBaseMembers(pointer); }
 
 		//----------------------------------------------------------------------------------
 		//[Init]
-		//ReleaseÀsŒã‰Šú‰»‚ğs‚¤, ˆ—ãƒŠ[ƒN‚ª‹N‚±‚é‰Â”\«‚ ‚è, ’ˆÓ‚³‚ê‚½‚µ
-		//template 1: ƒ|ƒCƒ“ƒ^[‚ğŠJ•ú‚³‚¹‚éƒƒ“ƒoŠÖ”
-		//ˆø”1: ƒ|ƒCƒ“ƒ^
-		//ˆø”2: ŠJ•ú‚³‚¹‚éŠÖ”ƒ|ƒCƒ“ƒ^
+		//Releaseå®Ÿè¡Œå¾ŒåˆæœŸåŒ–ã‚’è¡Œã†, å‡¦ç†ä¸Šãƒªãƒ¼ã‚¯ãŒèµ·ã“ã‚‹å¯èƒ½æ€§ã‚ã‚Š, æ³¨æ„ã•ã‚ŒãŸã—
+		//template 1: ãƒã‚¤ãƒ³ã‚¿ãƒ¼ã‚’é–‹æ”¾ã•ã›ã‚‹ãƒ¡ãƒ³ãƒé–¢æ•°
+		//å¼•æ•°1: ãƒã‚¤ãƒ³ã‚¿
+		//å¼•æ•°2: é–‹æ”¾ã•ã›ã‚‹é–¢æ•°ãƒã‚¤ãƒ³ã‚¿
 		template<typename ReleaseFunction>
 		inline void Init(WearClass* pointer, ReleaseFunction function)
 		{
@@ -154,14 +154,14 @@ namespace SGFramework
 
 		//----------------------------------------------------------------------------------
 		//[Release]
-		//ƒJƒEƒ“ƒ^‚ğŒ¸Z‚³‚¹A0‚É‚È‚Á‚½ê‡ReleaseFunction‚ÅŠJ•ú‚ğs‚¤
-		//return: ÀsŒã‚ÌƒJƒEƒ“ƒ^”, ƒ|ƒCƒ“ƒ^‚ª–³Œø‚¾‚Á‚½ê‡null
-		//ˆø”1: ƒJƒEƒ“ƒ^‚ª0‚É‚È‚ç‚È‚©‚Á‚½ê‡‚à‹­§“I‚Énullptr‚ğ‘ã“ü‚·‚é‚©, false„§
+		//ã‚«ã‚¦ãƒ³ã‚¿ã‚’æ¸›ç®—ã•ã›ã€0ã«ãªã£ãŸå ´åˆReleaseFunctionã§é–‹æ”¾ã‚’è¡Œã†
+		//return: å®Ÿè¡Œå¾Œã®ã‚«ã‚¦ãƒ³ã‚¿æ•°, ãƒã‚¤ãƒ³ã‚¿ãŒç„¡åŠ¹ã ã£ãŸå ´åˆnull
+		//å¼•æ•°1: ã‚«ã‚¦ãƒ³ã‚¿ãŒ0ã«ãªã‚‰ãªã‹ã£ãŸå ´åˆã‚‚å¼·åˆ¶çš„ã«nullptrã‚’ä»£å…¥ã™ã‚‹ã‹, falseæ¨å¥¨
 		inline uint Release(bool isForceInitNull)
 		{
 			if (this->m_pointer == nullptr) return 0;
 
-			//ƒJƒEƒ“ƒ^Œ¸Z, 0‚È‚çŠÖ”Às
+			//ã‚«ã‚¦ãƒ³ã‚¿æ¸›ç®—, 0ãªã‚‰é–¢æ•°å®Ÿè¡Œ
 			uint result = AtomicOperation::Subtract(*this->m_counter, 1);
 			if (result == 0)
 			{
@@ -181,36 +181,36 @@ namespace SGFramework
 		}
 
 	private:
-		//ŠÖ”•Û‘¶—pƒNƒ‰ƒX
+		//é–¢æ•°ä¿å­˜ç”¨ã‚¯ãƒ©ã‚¹
 		template<class WearClass>
 		struct BaseFunctionCaller
 		{
-			//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+			//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 			inline virtual ~BaseFunctionCaller() {}
-			//ŠJ•ú
+			//é–‹æ”¾
 			virtual void Release(WearClass*& pointer) = 0;
 		};
-		//ŠÖ”•Û‘¶—pƒNƒ‰ƒX
+		//é–¢æ•°ä¿å­˜ç”¨ã‚¯ãƒ©ã‚¹
 		template<class WearClass, typename ReleaseFunction>
 		struct FunctionCaller : public BaseFunctionCaller<WearClass>
 		{
-			//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+			//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 			inline FunctionCaller(ReleaseFunction function) : function(function) {}
-			//ƒfƒXƒgƒ‰ƒNƒ^
+			//ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 			inline ~FunctionCaller() {}
 
-			//ŠJ•ú
+			//é–‹æ”¾
 			inline void Release(WearClass*& pointer) override
 			{
 				(pointer->*function)();
 				pointer = nullptr;
 			}
 
-			//ŠÖ”ƒ|ƒCƒ“ƒ^
+			//é–¢æ•°ãƒã‚¤ãƒ³ã‚¿
 			ReleaseFunction function;
 		};
 
-		BaseFunctionCaller<WearClass>* m_function;		//ŠJ•ú—pƒƒ“ƒoŠÖ”ƒ|ƒCƒ“ƒ^
+		BaseFunctionCaller<WearClass>* m_function;		//é–‹æ”¾ç”¨ãƒ¡ãƒ³ãƒé–¢æ•°ãƒã‚¤ãƒ³ã‚¿
 	};
 }
 

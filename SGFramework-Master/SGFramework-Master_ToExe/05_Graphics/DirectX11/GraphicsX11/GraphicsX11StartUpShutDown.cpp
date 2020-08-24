@@ -1,4 +1,4 @@
-﻿#include "GraphicsX11.hpp"
+#include "GraphicsX11.hpp"
 #include "../../../07_Thread/Thread.hpp"
 #include "assimp/matrix4x4.h"
 #undef near

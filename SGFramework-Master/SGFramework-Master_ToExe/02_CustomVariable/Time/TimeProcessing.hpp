@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------
-Timeˆ—‚ğ‚·‚éƒNƒ‰ƒX‚ğW‚ß‚½TimeProcessing.hpp
+Timeå‡¦ç†ã‚’ã™ã‚‹ã‚¯ãƒ©ã‚¹ã‚’é›†ã‚ãŸTimeProcessing.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_TIME_PROCESSING_HPP_
 #define SGFRAMEWORK_HEADER_TIME_PROCESSING_HPP_
@@ -8,102 +8,102 @@ Timeˆ—‚ğ‚·‚éƒNƒ‰ƒX‚ğW‚ß‚½TimeProcessing.hpp
 //Framework namespace
 namespace SGFramework
 {
-	//TimeŠÖ˜AƒNƒ‰ƒX
+	//Timeé–¢é€£ã‚¯ãƒ©ã‚¹
 	namespace TimeProcessing
 	{
-		//Œ»İ(ƒNƒƒbƒNƒx[ƒX)‚ğæ“¾‚·‚éTimeGetter class
+		//ç¾åœ¨æ™‚åˆ»(ã‚¯ãƒ­ãƒƒã‚¯ãƒ™ãƒ¼ã‚¹)ã‚’å–å¾—ã™ã‚‹TimeGetter class
 		class TimeGetter
 		{
 		public:
 			//----------------------------------------------------------------------------------
 			//[() operator]
-			//return: Œ»İ(ƒNƒƒbƒNƒx[ƒX)
+			//return: ç¾åœ¨æ™‚åˆ»(ã‚¯ãƒ­ãƒƒã‚¯ãƒ™ãƒ¼ã‚¹)
 			inline float operator() ()
 			{
-				LARGE_INTEGER frequency;						//Œ»İü”g”•Û‘¶
-				LARGE_INTEGER timeCounter;					//Œ»İƒJƒEƒ“ƒ^[•Û‘¶			
-				//ü”g”æ“¾
+				LARGE_INTEGER frequency;						//ç¾åœ¨å‘¨æ³¢æ•°ä¿å­˜
+				LARGE_INTEGER timeCounter;					//ç¾åœ¨ã‚«ã‚¦ãƒ³ã‚¿ãƒ¼ä¿å­˜			
+				//å‘¨æ³¢æ•°å–å¾—
 				QueryPerformanceFrequency(&frequency);
-				//ƒJƒEƒ“ƒ^[æ“¾
+				//ã‚«ã‚¦ãƒ³ã‚¿ãƒ¼å–å¾—
 				QueryPerformanceCounter(&timeCounter);
-				//Œ»İŠÔ‚ğ•Ô‚·
+				//ç¾åœ¨æ™‚é–“ã‚’è¿”ã™
 				return static_cast<float>(timeCounter.QuadPart) / static_cast<float>(frequency.QuadPart);
 			}
 		};
 
-		//Œ»İ(ƒNƒƒbƒNƒx[ƒX)‚ğæ“¾‚·‚éTimeGetterDouble class(double)
+		//ç¾åœ¨æ™‚åˆ»(ã‚¯ãƒ­ãƒƒã‚¯ãƒ™ãƒ¼ã‚¹)ã‚’å–å¾—ã™ã‚‹TimeGetterDouble class(double)
 		class TimeGetterDouble
 		{
 		public:
 			//----------------------------------------------------------------------------------
 			//[() operator]
-			//return: Œ»İ(ƒNƒƒbƒNƒx[ƒX)
+			//return: ç¾åœ¨æ™‚åˆ»(ã‚¯ãƒ­ãƒƒã‚¯ãƒ™ãƒ¼ã‚¹)
 			inline double operator() ()
 			{
-				LARGE_INTEGER frequency;						//Œ»İü”g”•Û‘¶
-				LARGE_INTEGER timeCounter;					//Œ»İƒJƒEƒ“ƒ^[•Û‘¶			
-				//ü”g”æ“¾
+				LARGE_INTEGER frequency;						//ç¾åœ¨å‘¨æ³¢æ•°ä¿å­˜
+				LARGE_INTEGER timeCounter;					//ç¾åœ¨ã‚«ã‚¦ãƒ³ã‚¿ãƒ¼ä¿å­˜			
+				//å‘¨æ³¢æ•°å–å¾—
 				QueryPerformanceFrequency(&frequency);
-				//ƒJƒEƒ“ƒ^[æ“¾
+				//ã‚«ã‚¦ãƒ³ã‚¿ãƒ¼å–å¾—
 				QueryPerformanceCounter(&timeCounter);
-				//Œ»İŠÔ‚ğ•Ô‚·
+				//ç¾åœ¨æ™‚é–“ã‚’è¿”ã™
 				return static_cast<double>(timeCounter.QuadPart) / static_cast<double>(frequency.QuadPart);
 			}
 		};
 
-		//Start()‚©‚çStop()‚Ü‚Å‚ÌŠÔ‚ğ‘ª‚éStopWatch class
+		//Start()ã‹ã‚‰Stop()ã¾ã§ã®æ™‚é–“ã‚’æ¸¬ã‚‹StopWatch class
 		class StopWatch
 		{
 		public:
 			//----------------------------------------------------------------------------------
 			//[Start]
-			//ƒXƒgƒbƒvƒEƒHƒbƒ`‚ğŠJn‚·‚é
+			//ã‚¹ãƒˆãƒƒãƒ—ã‚¦ã‚©ãƒƒãƒã‚’é–‹å§‹ã™ã‚‹
 			inline void Start()
 			{
-				//‰Šú‰»
+				//åˆæœŸåŒ–
 				m_elapasedTime = 0.0f;
 				m_startTime = m_timeGetter();
 			}
 			//----------------------------------------------------------------------------------
 			//[Resume]
-			//Stop’†‚ÌƒXƒgƒbƒvƒEƒHƒbƒ`‚ğÄŠJ‚·‚é
+			//Stopä¸­ã®ã‚¹ãƒˆãƒƒãƒ—ã‚¦ã‚©ãƒƒãƒã‚’å†é–‹ã™ã‚‹
 			inline void Resume()
 			{
-				//‰Šú‰»
+				//åˆæœŸåŒ–
 				m_startTime = m_timeGetter();
 			}
 			//----------------------------------------------------------------------------------
 			//[Stop]
-			//ƒXƒgƒbƒvƒEƒHƒbƒ`‚ğ’â~‚·‚é, ‚±‚±‚Å‰‚ß‚ÄelapasedMilliSecond ‚É’l‚ª“ü‚é
+			//ã‚¹ãƒˆãƒƒãƒ—ã‚¦ã‚©ãƒƒãƒã‚’åœæ­¢ã™ã‚‹, ã“ã“ã§åˆã‚ã¦elapasedMilliSecond ã«å€¤ãŒå…¥ã‚‹
 			inline void Stop()
 			{
-				//Œ»İ‚ğæ“¾‚µ‚ÄŒ¸Z‚µƒ~ƒŠ•b‚É‚·‚é‚½‚ß‚É*1000
+				//ç¾åœ¨æ™‚åˆ»ã‚’å–å¾—ã—ã¦æ¸›ç®—ã—ãƒŸãƒªç§’ã«ã™ã‚‹ãŸã‚ã«*1000
 				double stopTime = m_timeGetter();
 				m_elapasedTime = (stopTime - m_startTime) * 1000.0f;
 			}
 
-			//Start‚©‚çStop‚Ü‚Å‚Ì•b”(ƒ~ƒŠ•b)
+			//Startã‹ã‚‰Stopã¾ã§ã®ç§’æ•°(ãƒŸãƒªç§’)
 			GetOnlyProperty<double> elapasedMilliSecond = GetOnlyProperty<double>(m_elapasedTime);
 			//StartTime
 			GetOnlyProperty<double> startTime = GetOnlyProperty<double>(m_startTime);
 
 		private:
-			TimeGetterDouble m_timeGetter;		//Timeæ“¾—p
-			double m_startTime = 0.0f;				//ŠJn
-			double m_elapasedTime = 0.0f;			//Start‚©‚çStop‚Ü‚Å‚ÌŠÔ
+			TimeGetterDouble m_timeGetter;		//Timeå–å¾—ç”¨
+			double m_startTime = 0.0f;				//é–‹å§‹æ™‚åˆ»
+			double m_elapasedTime = 0.0f;			//Startã‹ã‚‰Stopã¾ã§ã®æ™‚é–“
 		};
 
-		//FPS§ŒÀ‚ğ‚©‚¯‚éFPSLimiter
+		//FPSåˆ¶é™ã‚’ã‹ã‘ã‚‹FPSLimiter
 		class FPSLimiter
 		{
 		public:
 			//----------------------------------------------------------------------------------
 			//[Start]
-			//§ŒÀ‚ğŠJn‚·‚é
-			//ˆø”1: §ŒÀFPS
+			//åˆ¶é™ã‚’é–‹å§‹ã™ã‚‹
+			//å¼•æ•°1: åˆ¶é™FPS
 			inline void Start(double fps)
 			{
-				//‰Šú‰»
+				//åˆæœŸåŒ–
 				TimeGetter timeGetter;
 				m_startTime = timeGetter();
 				m_fps = fps;
@@ -111,8 +111,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ChangeFPS]
-			//§ŒÀFPS‚ğ•ÏX‚·‚é
-			//ˆø”1: §ŒÀFPS
+			//åˆ¶é™FPSã‚’å¤‰æ›´ã™ã‚‹
+			//å¼•æ•°1: åˆ¶é™FPS
 			inline void ChangeFPS(double fps)
 			{
 				m_fps = fps;
@@ -120,7 +120,7 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[operator ()]
-			//return: Œ»İ‚ªStart‚Åw’è‚µ‚½§ŒÀƒtƒŒ[ƒ€‚ÉŠY“–‚·‚éê‡‚Ítrue
+			//return: ç¾åœ¨ãŒStartã§æŒ‡å®šã—ãŸåˆ¶é™ãƒ•ãƒ¬ãƒ¼ãƒ ã«è©²å½“ã™ã‚‹å ´åˆã¯true
 			inline bool operator() ()
 			{
 				TimeGetter timeGetter;
@@ -128,18 +128,18 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[operator ()]
-			//return: Œ»İ‚ªStart‚Åw’è‚µ‚½§ŒÀƒtƒŒ[ƒ€‚ÉŠY“–‚·‚éê‡‚Ítrue
-			//ˆø”1: Œ»İ(ƒNƒƒbƒNƒx[ƒX)
+			//return: ç¾åœ¨ãŒStartã§æŒ‡å®šã—ãŸåˆ¶é™ãƒ•ãƒ¬ãƒ¼ãƒ ã«è©²å½“ã™ã‚‹å ´åˆã¯true
+			//å¼•æ•°1: ç¾åœ¨æ™‚åˆ»(ã‚¯ãƒ­ãƒƒã‚¯ãƒ™ãƒ¼ã‚¹)
 			inline bool operator() (double nowTime)
 			{
-				//Time‚ªİ’èfps’´‰ß
+				//TimeãŒè¨­å®šfpsè¶…é
 				if ((nowTime - m_startTime) >= m_interval)
 				{
-					//Time‰Šú‰»
+					//TimeåˆæœŸåŒ–
 					m_startTime = nowTime;
-					return true;		//true•Ô‹p
+					return true;		//trueè¿”å´
 				}
-				//ˆá‚¤ê‡false•Ô‚·
+				//é•ã†å ´åˆfalseè¿”ã™
 				else
 					return false;
 			}
@@ -151,22 +151,22 @@ namespace SGFramework
 			//Interval
 			GetOnlyProperty<double> interval = m_interval;
 		private:
-			double m_fps = 0;					//§ŒÀFPS
-			double m_startTime = 0;		//ŠJn
-			double m_interval = 0;			//true•Ô‹pŠÔŠu
+			double m_fps = 0;					//åˆ¶é™FPS
+			double m_startTime = 0;		//é–‹å§‹æ™‚åˆ»
+			double m_interval = 0;			//trueè¿”å´é–“éš”
 		};
 
-		//ŠÔ§ŒÀ‚ğ‚©‚¯‚éTImeLimiter
+		//æ™‚é–“åˆ¶é™ã‚’ã‹ã‘ã‚‹TImeLimiter
 		class TimeLimiter
 		{
 		public:
 			//----------------------------------------------------------------------------------
 			//[Start]
-			//§ŒÀ‚ğŠJn‚·‚é
-			//ˆø”1: §ŒÀŠÔ
+			//åˆ¶é™ã‚’é–‹å§‹ã™ã‚‹
+			//å¼•æ•°1: åˆ¶é™æ™‚é–“
 			inline void Start(double limit) 
 			{
-				//‰Šú‰»
+				//åˆæœŸåŒ–
 				TimeGetter timeGetter;
 				m_startTime = timeGetter();
 				m_limit = limit;
@@ -174,15 +174,15 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[ChangeLimit]
-			//§ŒÀ‚ğ•ÏX‚·‚é
-			//ˆø”1: §ŒÀŠÔ
+			//åˆ¶é™æ™‚åˆ»ã‚’å¤‰æ›´ã™ã‚‹
+			//å¼•æ•°1: åˆ¶é™æ™‚é–“
 			inline void ChangeLimit(double limit)
 			{
 				m_limit = limit;
 			}
 			//----------------------------------------------------------------------------------
 			//[operator ()]
-			//return: Œ»İ‚ªStart‚Åw’è‚µ‚½§ŒÀŠÔŒo‰ßƒtƒŒ[ƒ€‚ÉŠY“–‚·‚éê‡‚Ítrue
+			//return: ç¾åœ¨ãŒStartã§æŒ‡å®šã—ãŸåˆ¶é™æ™‚é–“çµŒéãƒ•ãƒ¬ãƒ¼ãƒ ã«è©²å½“ã™ã‚‹å ´åˆã¯true
 			inline bool operator() ()
 			{
 				TimeGetter timeGetter;
@@ -190,21 +190,21 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[operator ()]
-			//return: Œ»İ‚ªStart‚Åw’è‚µ‚½§ŒÀŠÔŒo‰ßƒtƒŒ[ƒ€‚ÉŠY“–‚·‚éê‡‚Ítrue
-			//ˆø”1: Œ»İ(ƒNƒƒbƒNƒx[ƒX)
+			//return: ç¾åœ¨ãŒStartã§æŒ‡å®šã—ãŸåˆ¶é™æ™‚é–“çµŒéãƒ•ãƒ¬ãƒ¼ãƒ ã«è©²å½“ã™ã‚‹å ´åˆã¯true
+			//å¼•æ•°1: ç¾åœ¨æ™‚åˆ»(ã‚¯ãƒ­ãƒƒã‚¯ãƒ™ãƒ¼ã‚¹)
 			inline bool operator() (double nowTime)
 			{
 				m_deltaTime = (nowTime - m_startTime);
 				
-				//Time‚ªİ’èfps’´‰ß
+				//TimeãŒè¨­å®šfpsè¶…é
 				if (m_deltaTime >= m_limit)
 				{
-					//Time‰Šú‰»
+					//TimeåˆæœŸåŒ–
 					m_previousStartTime = m_startTime;
 					m_startTime = nowTime;
-					return true;		//true•Ô‹p
+					return true;		//trueè¿”å´
 				}
-				//ˆá‚¤ê‡false•Ô‚·
+				//é•ã†å ´åˆfalseè¿”ã™
 				else
 					return false;
 			}
@@ -213,28 +213,28 @@ namespace SGFramework
 			GetOnlyProperty <double> previousStartTime = GetOnlyProperty<double>(m_previousStartTime);
 
 		private:
-			double m_limit = 0.0f;						//§ŒÀŠÔ
-			double m_startTime = 0.0f;				//ŠJn
-			double m_previousStartTime = 0.0f;	//‘OŠJn
+			double m_limit = 0.0f;						//åˆ¶é™æ™‚é–“
+			double m_startTime = 0.0f;				//é–‹å§‹æ™‚åˆ»
+			double m_previousStartTime = 0.0f;	//å‰é–‹å§‹æ™‚åˆ»
 			double m_deltaTime = 0.0f;				//delta
 		};
 
-		//ŠÔ‚ğŒv‘ª‚·‚éTimeCounter
+		//æ™‚é–“ã‚’è¨ˆæ¸¬ã™ã‚‹TimeCounter
 		class TimeCounter
 		{
 		public:
 			//----------------------------------------------------------------------------------
 			//[Start]
-			//Œv‘ª‚ğŠJn‚·‚é
+			//è¨ˆæ¸¬ã‚’é–‹å§‹ã™ã‚‹
 			inline void Start()
 			{
-				//‰Šú‰»
+				//åˆæœŸåŒ–
 				TimeGetter timeGetter;
 				m_startTime = timeGetter();
 			}
 			//----------------------------------------------------------------------------------
 			//[operator ()]
-			//Start‚©‚ç‚ÌŒo‰ßŠÔ‚ğ•Ô‹p
+			//Startã‹ã‚‰ã®çµŒéæ™‚é–“ã‚’è¿”å´
 			inline float operator () ()
 			{
 				TimeGetter timeGetter;
@@ -242,8 +242,8 @@ namespace SGFramework
 			}
 			//----------------------------------------------------------------------------------
 			//[operator ()]
-			//Start‚©‚ç‚ÌŒo‰ßŠÔ‚ğ•Ô‹p
-			//ˆø”1: Œ»İ(ƒNƒƒbƒNƒx[ƒX)
+			//Startã‹ã‚‰ã®çµŒéæ™‚é–“ã‚’è¿”å´
+			//å¼•æ•°1: ç¾åœ¨æ™‚åˆ»(ã‚¯ãƒ­ãƒƒã‚¯ãƒ™ãƒ¼ã‚¹)
 			inline float operator() (float nowTime)
 			{
 				//return
@@ -254,7 +254,7 @@ namespace SGFramework
 			GetOnlyProperty<float> startTime = GetOnlyProperty<float>(m_startTime);
 
 		private:
-			float m_startTime = 0.0f;			//ŠJn
+			float m_startTime = 0.0f;			//é–‹å§‹æ™‚åˆ»
 		};
 	}
 
