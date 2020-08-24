@@ -1,0 +1,1009 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="01_LibraryImport">
+      <UniqueIdentifier>{5cc44d1d-8a4d-430d-9c49-e8cbfffca689}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable">
+      <UniqueIdentifier>{9f22bd7f-62ea-40ff-92ac-d13c59404a8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03_MathAF">
+      <UniqueIdentifier>{56ce0350-c7cc-434f-ab8b-b77e7754a6a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04_Asset">
+      <UniqueIdentifier>{7a03518f-894d-45cb-ab1d-1d515a866fcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics">
+      <UniqueIdentifier>{be531729-2526-4dff-b01f-4299f18ed94c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06_Audio">
+      <UniqueIdentifier>{15f6078d-6839-49fe-8f2f-f7929127dff8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07_Thread">
+      <UniqueIdentifier>{24d3b163-4a65-4837-b7be-df1376e25055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="08_Input">
+      <UniqueIdentifier>{68f76d2c-57ed-40c6-b3b9-9178acf7694f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="09_Scene">
+      <UniqueIdentifier>{7541d185-4ff5-4070-a66f-757a310374dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="10_Physics">
+      <UniqueIdentifier>{2c896ac6-c6da-40c8-8907-fe0d3414b881}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="11_GameObject">
+      <UniqueIdentifier>{707ce978-4e06-4fd5-8ca4-1031453c6cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="12_GUI">
+      <UniqueIdentifier>{616309b8-8aba-440e-bbba-e90de4663042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Atomic">
+      <UniqueIdentifier>{fc843be7-e85a-47e3-8e65-8697135a3a7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\CharacterCode">
+      <UniqueIdentifier>{dac24929-311e-4109-b8a2-e6fd96511985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Color">
+      <UniqueIdentifier>{98d13539-334f-4896-8291-c5a456bd402d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\ConditionVariable">
+      <UniqueIdentifier>{62093ed3-64d3-437c-a0c2-11146c0f95b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\ConstLibrary">
+      <UniqueIdentifier>{fe02ce2a-816c-4d96-9395-df35854d64e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\ConstAndUsing">
+      <UniqueIdentifier>{ef9c2619-30dc-4fb5-bae0-96854f358d73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\DebugMode">
+      <UniqueIdentifier>{2bcc7ee0-de63-47cf-9440-0c72761ce376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\DeletePointer">
+      <UniqueIdentifier>{d9ebb882-9e97-41cc-b573-fa713cd065fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\GpuAccelerator">
+      <UniqueIdentifier>{a30ff822-b4b0-4970-9c1d-e043660eef21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\InputCode">
+      <UniqueIdentifier>{61378883-2625-4591-9ac3-584614f0d31a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\InvalidArgument">
+      <UniqueIdentifier>{86492016-0307-46da-ac98-ab1aa84dc1d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\LayerAndTag">
+      <UniqueIdentifier>{01c1614e-2905-4536-bfb5-7fee87e7c205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Matrix">
+      <UniqueIdentifier>{ea1dbd89-c290-493c-a2fb-761d9119ce76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Object">
+      <UniqueIdentifier>{df49cfff-b34d-41f6-b3f1-3a11d9b47f09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\PhysicsFlags">
+      <UniqueIdentifier>{420adf4f-a43c-4408-ab84-f7f11ffcc6c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Tuple">
+      <UniqueIdentifier>{1a0dfa9b-6aca-4533-b500-521f4fa70299}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\UV">
+      <UniqueIdentifier>{9d2d01b8-b5b2-491f-b721-afadb087c66d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\VariableLimit">
+      <UniqueIdentifier>{6cda188f-d95e-4752-90e2-00fce49c9421}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Vector">
+      <UniqueIdentifier>{e8fbd6a2-4041-4263-b304-4a82030c1709}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Pointer">
+      <UniqueIdentifier>{d74b8905-27c6-47eb-ba21-b4411538f21a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Property">
+      <UniqueIdentifier>{974baa26-23a8-48c9-bff7-273f4ef3704c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Quaternion">
+      <UniqueIdentifier>{9b60b29d-c70b-40ba-87f7-079f05a1250b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Random">
+      <UniqueIdentifier>{a975395e-37f8-4fe4-80a4-9657331185c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\ReadElement">
+      <UniqueIdentifier>{d6b8b069-0d2e-47e0-b44c-88a9a9d95fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Singleton">
+      <UniqueIdentifier>{ccae1c17-8f70-43f2-b7c9-e16655136f1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\String">
+      <UniqueIdentifier>{e342932e-11de-4cf6-af64-b7467f2b8fc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Time">
+      <UniqueIdentifier>{d2928072-aab9-4367-b00e-5ac4161b8b87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\TriggerCollider">
+      <UniqueIdentifier>{9761ab5b-7b65-4041-94d5-bc0a19a913e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Vector\Window">
+      <UniqueIdentifier>{ceb1d72a-c946-4ea8-89c7-12963109c1a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Vector\Vector2Ref">
+      <UniqueIdentifier>{cb73deec-9df0-4786-b0bf-140613f06d2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Vector\Vector4x4">
+      <UniqueIdentifier>{694725b5-5ec6-40a8-87e4-5d50f0d44b11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Vector\Vector4Ref">
+      <UniqueIdentifier>{c4c7a577-e3c2-49b1-8e45-10be8d3d98d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Vector\Vector4Int">
+      <UniqueIdentifier>{9854b36f-853e-4f8c-b3bc-add69060f3da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Vector\Vector4">
+      <UniqueIdentifier>{9e4641d4-90a8-4f7c-aecd-61019f483c97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Vector\Vector3Ref">
+      <UniqueIdentifier>{0a2210ce-ecee-4237-8aab-d0badf43f31d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Vector\Vector3Int">
+      <UniqueIdentifier>{0c02c164-8199-453b-8a29-d0811f435721}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Vector\Vector3">
+      <UniqueIdentifier>{21a0a70a-ba9c-4cfa-a32b-ce0d04dcea14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Vector\Vector2Int">
+      <UniqueIdentifier>{5ec9d69c-d8a7-4c07-9d59-bc5332b65097}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\Vector\Vector2">
+      <UniqueIdentifier>{af449da0-88ef-4fef-ab6c-82bb6270806b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04_Asset\Asset">
+      <UniqueIdentifier>{ea7b201f-ec38-4f52-9c6f-93c7f70e7789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04_Asset\FileRW">
+      <UniqueIdentifier>{f5cb5b6d-c190-4e9d-98fd-3fb37b14e05c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04_Asset\FileStream">
+      <UniqueIdentifier>{07bcbf18-e521-4f3f-8e37-8b7eebcba213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\Animation">
+      <UniqueIdentifier>{4f8e9aaa-396e-45ba-bfe4-9e72d5316f87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\DirectX11">
+      <UniqueIdentifier>{c39b355c-1761-4b2a-b685-726d60204553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\DrawCommand">
+      <UniqueIdentifier>{c558d5ac-66d0-42ca-a777-534f29104ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\Screen">
+      <UniqueIdentifier>{95998f9c-e6b3-4ff7-9729-270d41c14359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\Vertex">
+      <UniqueIdentifier>{555efe4e-a7f4-4e7f-b884-87076f39b71a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\DirectX11\Camera">
+      <UniqueIdentifier>{eba253f8-2cee-4dd8-98cf-75b9f4c16601}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\DirectX11\GraphicsX11">
+      <UniqueIdentifier>{7a7c37f2-f775-43e1-8784-021e1a53b3a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\DirectX11\Light">
+      <UniqueIdentifier>{21f0c76f-7681-4b0d-9e82-aaa2cf24e5f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\DirectX11\Material">
+      <UniqueIdentifier>{1d436a9b-1e16-48d9-9dcb-d27efac9572b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\DirectX11\Mesh">
+      <UniqueIdentifier>{00b3f43b-1270-4c42-8d2f-18829c52f8d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\DirectX11\ModelAsset">
+      <UniqueIdentifier>{ed2c4f07-1676-4180-a04f-701826e54d09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\DirectX11\ShaderAsset">
+      <UniqueIdentifier>{99b3c99d-60de-4283-858d-6892186e880a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\DirectX11\TextureAsset">
+      <UniqueIdentifier>{706cad61-48c8-424e-bd45-118f956f5ac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\DirectX11\Transform">
+      <UniqueIdentifier>{93bd5be5-3554-459f-97e0-9c4f5b3943bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\DirectX11\Polygon">
+      <UniqueIdentifier>{b03ee3fe-da3b-4ea2-a4f3-6fd1e1e8b258}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05_Graphics\DirectX11\GraphicsObject">
+      <UniqueIdentifier>{70d70e06-6374-4222-ba57-cb033e0cdf49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06_Audio\AudioAsset">
+      <UniqueIdentifier>{b6168173-d918-44f1-8882-ca9c189af72b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="10_Physics\Collider">
+      <UniqueIdentifier>{fc1c9839-d927-4286-a7d6-4eda0d07e44b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="10_Physics\RaycastHit">
+      <UniqueIdentifier>{8f7047f8-1c28-4087-803c-d5c6a20101ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="10_Physics\RigidBody">
+      <UniqueIdentifier>{5b1b9f3a-5e80-46bf-887e-f2f2bf10f819}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97_Application">
+      <UniqueIdentifier>{9547936d-0ffb-4374-8b0f-fbbffaa0f0ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98_Texts">
+      <UniqueIdentifier>{33dee62b-0d17-4f52-b4c5-bc5a862e6e5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97_Application\Main">
+      <UniqueIdentifier>{8394e2b2-b1d1-4f0f-b64a-bd3a0496443d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97_Application\Settings">
+      <UniqueIdentifier>{2adec3e1-708e-486d-9550-3644d217a593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99_ExternalLibrarys">
+      <UniqueIdentifier>{f2ba8de0-24cf-4838-a69a-438c09b0afd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99_ExternalLibrarys\ImGui">
+      <UniqueIdentifier>{4ec23bcc-c3da-4d4d-9ecb-af5dc53a00b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99_ExternalLibrarys\DirectXtex">
+      <UniqueIdentifier>{5e5cd1e6-2dca-4f80-bc6f-0c7b7cd12ea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="999_DebugSource">
+      <UniqueIdentifier>{f155b21c-1133-4744-8206-2991e9d38547}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="998_DemoSource">
+      <UniqueIdentifier>{18574b33-a16b-43f8-8bd7-a7e34e923b0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="998_DemoSource\Academy">
+      <UniqueIdentifier>{a3c2c5cf-b6ae-40b5-9958-bfc0152e3577}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="998_DemoSource\Asset">
+      <UniqueIdentifier>{db7d1de0-5ab8-4f99-a4fb-d40ecf852586}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="998_DemoSource\Shader">
+      <UniqueIdentifier>{25238f77-23a9-4249-b4ea-6b937713c438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="998_DemoSource\Shader\UseDemo">
+      <UniqueIdentifier>{40da89d8-eb7e-4e16-bd4c-895c1752e593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02_CustomVariable\ComWear">
+      <UniqueIdentifier>{696043f1-bc20-463f-8da0-66fc3aeae4d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06_Audio\AudioDetail">
+      <UniqueIdentifier>{0d4d5bc5-e9b9-4810-865e-ab68e8053746}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="10_Physics\PhysicsDetail">
+      <UniqueIdentifier>{c1e828b5-cd9c-464a-9789-56de56914bbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="10_Physics\PhysicsFunction">
+      <UniqueIdentifier>{020e8b08-29a4-4c80-85fc-cd9b621e2645}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="01_LibraryImport\GameClassImport.hpp">
+      <Filter>01_LibraryImport</Filter>
+    </ClInclude>
+    <ClInclude Include="01_LibraryImport\LibraryImport.hpp">
+      <Filter>01_LibraryImport</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Atomic\Atomic.hpp">
+      <Filter>02_CustomVariable\Atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\CharacterCode\CharacterCode.hpp">
+      <Filter>02_CustomVariable\CharacterCode</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Color\Color.hpp">
+      <Filter>02_CustomVariable\Color</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\ConditionVariable\ConditionVariable.hpp">
+      <Filter>02_CustomVariable\ConditionVariable</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Const\Const.hpp">
+      <Filter>02_CustomVariable\ConstLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Const\ConstVector.hpp">
+      <Filter>02_CustomVariable\ConstLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\ConstAndUsing\ConstAndUsing.hpp">
+      <Filter>02_CustomVariable\ConstAndUsing</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\DebugMode\DebugMode.hpp">
+      <Filter>02_CustomVariable\DebugMode</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\DeletePointer\DeletePointer.hpp">
+      <Filter>02_CustomVariable\DeletePointer</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\GpuAccelerator\GpuAccelerator.hpp">
+      <Filter>02_CustomVariable\GpuAccelerator</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\InputCode\InputCode.hpp">
+      <Filter>02_CustomVariable\InputCode</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\InputCode\JoystickCode.hpp">
+      <Filter>02_CustomVariable\InputCode</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\InputCode\KeyBordCode.hpp">
+      <Filter>02_CustomVariable\InputCode</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\InputCode\MouseCode.hpp">
+      <Filter>02_CustomVariable\InputCode</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\InvalidArgument\InvalidArgument.hpp">
+      <Filter>02_CustomVariable\InvalidArgument</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\LayerAndTag\Tag.hpp">
+      <Filter>02_CustomVariable\LayerAndTag</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\LayerAndTag\Layer.hpp">
+      <Filter>02_CustomVariable\LayerAndTag</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Matrix\Matrix.hpp">
+      <Filter>02_CustomVariable\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Object\Object.hpp">
+      <Filter>02_CustomVariable\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\PhysicsFlags\PhysicsFlags.hpp">
+      <Filter>02_CustomVariable\PhysicsFlags</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Pointer\BasePointer.hpp">
+      <Filter>02_CustomVariable\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Pointer\ClonePointer.hpp">
+      <Filter>02_CustomVariable\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Pointer\GarbageCollector.hpp">
+      <Filter>02_CustomVariable\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Pointer\LockWeakGuard.hpp">
+      <Filter>02_CustomVariable\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Pointer\Pointer.hpp">
+      <Filter>02_CustomVariable\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Pointer\SharedPointer.hpp">
+      <Filter>02_CustomVariable\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Pointer\UniquePointer.hpp">
+      <Filter>02_CustomVariable\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Property\Property.hpp">
+      <Filter>02_CustomVariable\Property</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Quarernion\Quaternion.hpp">
+      <Filter>02_CustomVariable\Quaternion</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Random\Random.hpp">
+      <Filter>02_CustomVariable\Random</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\ReadElement\ReadElement.hpp">
+      <Filter>02_CustomVariable\ReadElement</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Singleton\Singleton.hpp">
+      <Filter>02_CustomVariable\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\String\SGString.hpp">
+      <Filter>02_CustomVariable\String</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\String\StdStringFunction.hpp">
+      <Filter>02_CustomVariable\String</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\String\String.hpp">
+      <Filter>02_CustomVariable\String</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Time\TimeProcessing.hpp">
+      <Filter>02_CustomVariable\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Time\Time.hpp">
+      <Filter>02_CustomVariable\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\TriggerCollider\TriggerCollider.hpp">
+      <Filter>02_CustomVariable\TriggerCollider</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Tuple\Tuple.hpp">
+      <Filter>02_CustomVariable\Tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\UV\UV.hpp">
+      <Filter>02_CustomVariable\UV</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\VariableLimit\VariableLimit.hpp">
+      <Filter>02_CustomVariable\VariableLimit</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Window\Window.hpp">
+      <Filter>02_CustomVariable\Vector\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Window\HinstanceHolder\HinstanceHolder.hpp">
+      <Filter>02_CustomVariable\Vector\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Window\HwndHolder\HwndHolder.hpp">
+      <Filter>02_CustomVariable\Vector\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\CustomVariable.hpp">
+      <Filter>02_CustomVariable</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Vector\Vector2\Vector2.hpp">
+      <Filter>02_CustomVariable\Vector\Vector2</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Vector\Vector2\Int\Vector2Int.hpp">
+      <Filter>02_CustomVariable\Vector\Vector2Int</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Vector\Vector2\Ref\Vector2Ref.hpp">
+      <Filter>02_CustomVariable\Vector\Vector2Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Vector\Vector3\Vector3.hpp">
+      <Filter>02_CustomVariable\Vector\Vector3</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Vector\Vector3\Ref\Vector3Ref.hpp">
+      <Filter>02_CustomVariable\Vector\Vector3Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Vector\Vector3\Int\Vector3Int.hpp">
+      <Filter>02_CustomVariable\Vector\Vector3Int</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Vector\Vector4\Vector4.hpp">
+      <Filter>02_CustomVariable\Vector\Vector4</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Vector\Vector4\Int\Vector4Int.hpp">
+      <Filter>02_CustomVariable\Vector\Vector4Int</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Vector\Vector4\Ref\Vector4Ref.hpp">
+      <Filter>02_CustomVariable\Vector\Vector4Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Vector\Vector4\4x4\Vector4x4.hpp">
+      <Filter>02_CustomVariable\Vector\Vector4x4</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\Vector\Vector.hpp">
+      <Filter>02_CustomVariable\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="03_MathAF\MathAFFloatEdit.hpp">
+      <Filter>03_MathAF</Filter>
+    </ClInclude>
+    <ClInclude Include="03_MathAF\MathAF.hpp">
+      <Filter>03_MathAF</Filter>
+    </ClInclude>
+    <ClInclude Include="03_MathAF\MathAFBasis.hpp">
+      <Filter>03_MathAF</Filter>
+    </ClInclude>
+    <ClInclude Include="03_MathAF\MathAFCalculation.hpp">
+      <Filter>03_MathAF</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\Asset\BinaryAsset.hpp">
+      <Filter>04_Asset\Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\Asset\TextAsset.hpp">
+      <Filter>04_Asset\Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\Asset\BaseAsset.hpp">
+      <Filter>04_Asset\Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\FileRW\SecFileRW.hpp">
+      <Filter>04_Asset\FileRW</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\FileRW\TextFileRW.hpp">
+      <Filter>04_Asset\FileRW</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\FileRW\CsvFileRW.hpp">
+      <Filter>04_Asset\FileRW</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\FileRW\EncryptionKey.hpp">
+      <Filter>04_Asset\FileRW</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\FileRW\FileRW.hpp">
+      <Filter>04_Asset\FileRW</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\FileRW\FileText.hpp">
+      <Filter>04_Asset\FileRW</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\FileRW\SebtFileRW.hpp">
+      <Filter>04_Asset\FileRW</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\FileStream\FileReadStream.hpp">
+      <Filter>04_Asset\FileStream</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\FileStream\FileStream.hpp">
+      <Filter>04_Asset\FileStream</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\FileStream\FileWriteStream.hpp">
+      <Filter>04_Asset\FileStream</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\AssetManager.hpp">
+      <Filter>04_Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="04_Asset\InstantiateAsset.hpp">
+      <Filter>04_Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\MeshUsing.hpp">
+      <Filter>05_Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\ModelAssetUsing.hpp">
+      <Filter>05_Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\TransformUsing.hpp">
+      <Filter>05_Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\Graphics.hpp">
+      <Filter>05_Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\GraphicsUsing.hpp">
+      <Filter>05_Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\MaterialUsing.hpp">
+      <Filter>05_Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\Animation\ModelNodeObject.hpp">
+      <Filter>05_Graphics\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\Animation\Animation.hpp">
+      <Filter>05_Graphics\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\Animation\Animator.hpp">
+      <Filter>05_Graphics\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\Vertex\Vertex.hpp">
+      <Filter>05_Graphics\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\Screen\Screen.hpp">
+      <Filter>05_Graphics\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DrawCommand\DrawCommand.hpp">
+      <Filter>05_Graphics\DrawCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\GraphicsX11\GraphicsX11ConstantBuffer.hpp">
+      <Filter>05_Graphics\DirectX11\GraphicsX11</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\GraphicsX11\GraphicsX11.hpp">
+      <Filter>05_Graphics\DirectX11\GraphicsX11</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\Light\BaseLightX11.hpp">
+      <Filter>05_Graphics\DirectX11\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\Light\DirectionLightX11.hpp">
+      <Filter>05_Graphics\DirectX11\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\Light\HemiSphereLightX11.hpp">
+      <Filter>05_Graphics\DirectX11\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\Light\LightX11.hpp">
+      <Filter>05_Graphics\DirectX11\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\Light\PointLightX11.hpp">
+      <Filter>05_Graphics\DirectX11\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\Material\MaterialX11.hpp">
+      <Filter>05_Graphics\DirectX11\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\Mesh\MeshRendererX11.hpp">
+      <Filter>05_Graphics\DirectX11\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\Mesh\MeshX11.hpp">
+      <Filter>05_Graphics\DirectX11\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\ModelAsset\ModelAssetX11.hpp">
+      <Filter>05_Graphics\DirectX11\ModelAsset</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\Polygon\PolygonX11.hpp">
+      <Filter>05_Graphics\DirectX11\Polygon</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\ShaderAsset\PixelShaderAssetX11.hpp">
+      <Filter>05_Graphics\DirectX11\ShaderAsset</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\ShaderAsset\ShaderAssetX11.hpp">
+      <Filter>05_Graphics\DirectX11\ShaderAsset</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\ShaderAsset\VertexShaderX11.hpp">
+      <Filter>05_Graphics\DirectX11\ShaderAsset</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\TextureAsset\TextureAssetX11.hpp">
+      <Filter>05_Graphics\DirectX11\TextureAsset</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\Transform\TransformX11.hpp">
+      <Filter>05_Graphics\DirectX11\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\GraphicsObject\GraphicsObjectX11.hpp">
+      <Filter>05_Graphics\DirectX11\GraphicsObject</Filter>
+    </ClInclude>
+    <ClInclude Include="06_Audio\Audio.hpp">
+      <Filter>06_Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="06_Audio\AudioAsset\AudioAssetEffect3D.hpp">
+      <Filter>06_Audio\AudioAsset</Filter>
+    </ClInclude>
+    <ClInclude Include="06_Audio\AudioAsset\AudioAssetMusic.hpp">
+      <Filter>06_Audio\AudioAsset</Filter>
+    </ClInclude>
+    <ClInclude Include="06_Audio\AudioAsset\AudioAsset.hpp">
+      <Filter>06_Audio\AudioAsset</Filter>
+    </ClInclude>
+    <ClInclude Include="06_Audio\AudioAsset\AudioAssetEffect.hpp">
+      <Filter>06_Audio\AudioAsset</Filter>
+    </ClInclude>
+    <ClInclude Include="07_Thread\Thread.hpp">
+      <Filter>07_Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="08_Input\Input.hpp">
+      <Filter>08_Input</Filter>
+    </ClInclude>
+    <ClInclude Include="09_Scene\SceneManager.hpp">
+      <Filter>09_Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="09_Scene\Scene.hpp">
+      <Filter>09_Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\Collider\BoxCollider.hpp">
+      <Filter>10_Physics\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\Collider\CapsuleCollider.hpp">
+      <Filter>10_Physics\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\Collider\MeshCollider.hpp">
+      <Filter>10_Physics\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\Collider\PlaneCollider.hpp">
+      <Filter>10_Physics\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\Collider\SphereCollider.hpp">
+      <Filter>10_Physics\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\Collider\BaseCollider.hpp">
+      <Filter>10_Physics\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\RaycastHit\OverlapHit.hpp">
+      <Filter>10_Physics\RaycastHit</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\RaycastHit\RaycastHit.hpp">
+      <Filter>10_Physics\RaycastHit</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\RaycastHit\SweepHit.hpp">
+      <Filter>10_Physics\RaycastHit</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\RigidBody\RigidBody.hpp">
+      <Filter>10_Physics\RigidBody</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\Physics.hpp">
+      <Filter>10_Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\PhysicsInclude.hpp">
+      <Filter>10_Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\PhysicsMaterial.hpp">
+      <Filter>10_Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\PhysXInclude.hpp">
+      <Filter>10_Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\ContactInfo.hpp">
+      <Filter>10_Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="11_GameObject\GameObject.hpp">
+      <Filter>11_GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="12_GUI\GUI.hpp">
+      <Filter>12_GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="97_Application\Application.hpp">
+      <Filter>97_Application</Filter>
+    </ClInclude>
+    <ClInclude Include="97_Application\Setting\ApplicationSettingTiedInfo.hpp">
+      <Filter>97_Application\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="97_Application\Setting\ApplicationSetting.hpp">
+      <Filter>97_Application\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibrarys\ImGui\imconfig.h">
+      <Filter>99_ExternalLibrarys\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibrarys\ImGui\imgui.h">
+      <Filter>99_ExternalLibrarys\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibrarys\ImGui\imgui_internal.h">
+      <Filter>99_ExternalLibrarys\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibrarys\ImGui\imstb_rectpack.h">
+      <Filter>99_ExternalLibrarys\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibrarys\ImGui\imstb_textedit.h">
+      <Filter>99_ExternalLibrarys\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibrarys\ImGui\imstb_truetype.h">
+      <Filter>99_ExternalLibrarys\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibrarys\DirectXTex\DDSTextureLoader\DDSTextureLoader.h">
+      <Filter>99_ExternalLibrarys\DirectXtex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibrarys\DirectXTex\WICTextureLoader\WICTextureLoader.h">
+      <Filter>99_ExternalLibrarys\DirectXtex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibrarys\DirectXTex\DirectXTex\DirectXTex.h">
+      <Filter>99_ExternalLibrarys\DirectXtex</Filter>
+    </ClInclude>
+    <ClInclude Include="998_DemoApplication\DemoScene.hpp">
+      <Filter>998_DemoSource</Filter>
+    </ClInclude>
+    <ClInclude Include="05_Graphics\DirectX11\Camera\CameraX11.hpp">
+      <Filter>05_Graphics\DirectX11\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="998_DemoApplication\Character.hpp">
+      <Filter>998_DemoSource</Filter>
+    </ClInclude>
+    <ClInclude Include="998_DemoApplication\DemoMusicPlayer.hpp">
+      <Filter>998_DemoSource</Filter>
+    </ClInclude>
+    <ClInclude Include="998_DemoApplication\Sphere.hpp">
+      <Filter>998_DemoSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SGFramwork.hpp" />
+    <ClInclude Include="02_CustomVariable\ComWear\ComWear.hpp">
+      <Filter>02_CustomVariable\ComWear</Filter>
+    </ClInclude>
+    <ClInclude Include="06_Audio\AudioDetail\AudioMessagePack.hpp">
+      <Filter>06_Audio\AudioDetail</Filter>
+    </ClInclude>
+    <ClInclude Include="06_Audio\AudioDetail\AudioMessage.hpp">
+      <Filter>06_Audio\AudioDetail</Filter>
+    </ClInclude>
+    <ClInclude Include="06_Audio\AudioListener.hpp">
+      <Filter>06_Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\PhysicsFunction\PhysicsFilterShader.hpp">
+      <Filter>10_Physics\PhysicsFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\PhysicsFunction\PhysicsProcessingMessage.hpp">
+      <Filter>10_Physics\PhysicsFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\Detail\PhysicsMessagePack.hpp">
+      <Filter>10_Physics\PhysicsDetail</Filter>
+    </ClInclude>
+    <ClInclude Include="10_Physics\Detail\PhysicsMessage.hpp">
+      <Filter>10_Physics\PhysicsDetail</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="02_CustomVariable\CharacterCode\CharacterCode.cpp">
+      <Filter>02_CustomVariable\CharacterCode</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\DebugMode\DebugMode.cpp">
+      <Filter>02_CustomVariable\DebugMode</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\LayerAndTag\LayerAndTag.cpp">
+      <Filter>02_CustomVariable\LayerAndTag</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Pointer\GarbageCollector.cpp">
+      <Filter>02_CustomVariable\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Random\Random.cpp">
+      <Filter>02_CustomVariable\Random</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\String\SGString.cpp">
+      <Filter>02_CustomVariable\String</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Time\TimeStaticVariable.cpp">
+      <Filter>02_CustomVariable\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Window\HinstanceHolder\HinstanceHolder.cpp">
+      <Filter>02_CustomVariable\Vector\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Window\HwndHolder\HwndHolder.cpp">
+      <Filter>02_CustomVariable\Vector\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Vector\Vector2\Vector2.cpp">
+      <Filter>02_CustomVariable\Vector\Vector2</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Vector\Vector2\Int\Vector2Int.cpp">
+      <Filter>02_CustomVariable\Vector\Vector2Int</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Vector\Vector2\Ref\Vector2Ref.cpp">
+      <Filter>02_CustomVariable\Vector\Vector2Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Vector\Vector3\Vector3.cpp">
+      <Filter>02_CustomVariable\Vector\Vector3</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Vector\Vector3\Ref\Vector3Ref.cpp">
+      <Filter>02_CustomVariable\Vector\Vector3Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Vector\Vector3\Int\Vector3Int.cpp">
+      <Filter>02_CustomVariable\Vector\Vector3Int</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Vector\Vector4\Vector4.cpp">
+      <Filter>02_CustomVariable\Vector\Vector4</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Vector\Vector4\Int\Vector4Int.cpp">
+      <Filter>02_CustomVariable\Vector\Vector4Int</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\Vector\Vector4\Ref\Vector4Ref.cpp">
+      <Filter>02_CustomVariable\Vector\Vector4Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="04_Asset\Asset\BaseAsset.cpp">
+      <Filter>04_Asset\Asset</Filter>
+    </ClCompile>
+    <ClCompile Include="04_Asset\AssetManager.cpp">
+      <Filter>04_Asset</Filter>
+    </ClCompile>
+    <ClCompile Include="05_Graphics\Screen\Screen.cpp">
+      <Filter>05_Graphics\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="05_Graphics\DirectX11\Camera\CameraX11.cpp">
+      <Filter>05_Graphics\DirectX11\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="05_Graphics\DirectX11\GraphicsX11\GraphicsX11Update.cpp">
+      <Filter>05_Graphics\DirectX11\GraphicsX11</Filter>
+    </ClCompile>
+    <ClCompile Include="05_Graphics\DirectX11\GraphicsX11\GraphicsX11StartUpShutDown.cpp">
+      <Filter>05_Graphics\DirectX11\GraphicsX11</Filter>
+    </ClCompile>
+    <ClCompile Include="05_Graphics\DirectX11\GraphicsX11\GraphicsX11Variable.cpp">
+      <Filter>05_Graphics\DirectX11\GraphicsX11</Filter>
+    </ClCompile>
+    <ClCompile Include="05_Graphics\DirectX11\Light\LightX11.cpp">
+      <Filter>05_Graphics\DirectX11\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="05_Graphics\DirectX11\ModelAsset\ModelAssetX11.cpp">
+      <Filter>05_Graphics\DirectX11\ModelAsset</Filter>
+    </ClCompile>
+    <ClCompile Include="05_Graphics\DirectX11\Transform\TransformX11.cpp">
+      <Filter>05_Graphics\DirectX11\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="06_Audio\AudioSubmixLayer.cpp">
+      <Filter>06_Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="06_Audio\Audio.cpp">
+      <Filter>06_Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="06_Audio\AudioAsset\AudioAssetMusic.cpp">
+      <Filter>06_Audio\AudioAsset</Filter>
+    </ClCompile>
+    <ClCompile Include="06_Audio\AudioAsset\AudioAssetEffect.cpp">
+      <Filter>06_Audio\AudioAsset</Filter>
+    </ClCompile>
+    <ClCompile Include="06_Audio\AudioAsset\AudioAssetEffect3D.cpp">
+      <Filter>06_Audio\AudioAsset</Filter>
+    </ClCompile>
+    <ClCompile Include="07_Thread\ThreadUpdate.cpp">
+      <Filter>07_Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="07_Thread\Thread.cpp">
+      <Filter>07_Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="08_Input\Input.cpp">
+      <Filter>08_Input</Filter>
+    </ClCompile>
+    <ClCompile Include="08_Input\InputUpdateParts.cpp">
+      <Filter>08_Input</Filter>
+    </ClCompile>
+    <ClCompile Include="09_Scene\SceneManager.cpp">
+      <Filter>09_Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="10_Physics\RigidBody\RigidBody.cpp">
+      <Filter>10_Physics\RigidBody</Filter>
+    </ClCompile>
+    <ClCompile Include="10_Physics\PhysicsRaycast.cpp">
+      <Filter>10_Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="10_Physics\Physics.cpp">
+      <Filter>10_Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="11_GameObject\GameObject.cpp">
+      <Filter>11_GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="12_GUI\GUIDebugStream.cpp">
+      <Filter>12_GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="12_GUI\GUIGraphicsX11.cpp">
+      <Filter>12_GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="12_GUI\GUI.cpp">
+      <Filter>12_GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="97_Application\Application.cpp">
+      <Filter>97_Application</Filter>
+    </ClCompile>
+    <ClCompile Include="97_Application\ApplicationWindowCreate.cpp">
+      <Filter>97_Application</Filter>
+    </ClCompile>
+    <ClCompile Include="97_Application\ApplicationStartUpShutDown.cpp">
+      <Filter>97_Application</Filter>
+    </ClCompile>
+    <ClCompile Include="97_Application\Setting\ApplicationSetting.cpp">
+      <Filter>97_Application</Filter>
+    </ClCompile>
+    <ClCompile Include="97_Application\WinMain.cpp">
+      <Filter>97_Application\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="97_Application\WindowProcedure.cpp">
+      <Filter>97_Application\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="97_Application\ApplicationMain.cpp">
+      <Filter>97_Application\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="97_Application\ApplicationImportSetting.cpp">
+      <Filter>97_Application\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibrarys\ImGui\imgui.cpp">
+      <Filter>99_ExternalLibrarys\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibrarys\ImGui\imgui_demo.cpp">
+      <Filter>99_ExternalLibrarys\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibrarys\ImGui\imgui_draw.cpp">
+      <Filter>99_ExternalLibrarys\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibrarys\ImGui\imgui_widgets.cpp">
+      <Filter>99_ExternalLibrarys\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibrarys\DirectXTex\DDSTextureLoader\DDSTextureLoader.cpp">
+      <Filter>99_ExternalLibrarys\DirectXtex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibrarys\DirectXTex\WICTextureLoader\WICTextureLoader.cpp">
+      <Filter>99_ExternalLibrarys\DirectXtex</Filter>
+    </ClCompile>
+    <ClCompile Include="998_DemoApplication\DemoScene.cpp">
+      <Filter>998_DemoSource</Filter>
+    </ClCompile>
+    <ClCompile Include="998_DemoApplication\Character.cpp">
+      <Filter>998_DemoSource</Filter>
+    </ClCompile>
+    <ClCompile Include="998_DemoApplication\Sphere.cpp">
+      <Filter>998_DemoSource</Filter>
+    </ClCompile>
+    <ClCompile Include="07_Thread\ThreadAudioGraphics.cpp">
+      <Filter>07_Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="06_Audio\AudioThread.cpp">
+      <Filter>06_Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="06_Audio\AudioAsset\BaseAudioSEAsset.cpp">
+      <Filter>06_Audio\AudioAsset</Filter>
+    </ClCompile>
+    <ClCompile Include="06_Audio\AudioSmooth.cpp">
+      <Filter>06_Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="10_Physics\PhysicsThread.cpp">
+      <Filter>10_Physics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="98_Texts\Naming convention.txt">
+      <Filter>98_Texts</Filter>
+    </Text>
+    <Text Include="999_DebugSource\Todo.txt">
+      <Filter>999_DebugSource</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ExternalLibrarys\DirectXTex\DirectXTex\DirectXTex.inl">
+      <Filter>99_ExternalLibrarys\DirectXtex</Filter>
+    </None>
+    <None Include="Assets\Settings\SGFApplicationSetting.sec">
+      <Filter>998_DemoSource\Asset</Filter>
+    </None>
+    <None Include="Assets\Shader\RootHeader.hlsli">
+      <Filter>998_DemoSource\Shader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Assets\Shader\VertexStandard.hlsl">
+      <Filter>998_DemoSource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\PixelDirectTexture.hlsl">
+      <Filter>998_DemoSource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\PixelDirectTextureBlackAndWhite.hlsl">
+      <Filter>998_DemoSource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\PixelDirectTextureSepia.hlsl">
+      <Filter>998_DemoSource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\PixelStandard.hlsl">
+      <Filter>998_DemoSource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\VertexDirect2D.hlsl">
+      <Filter>998_DemoSource\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\VertexModelStandard.hlsl">
+      <Filter>998_DemoSource\Shader\UseDemo</Filter>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\PixelModelStandard.hlsl">
+      <Filter>998_DemoSource\Shader\UseDemo</Filter>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\PixelDirect.hlsl">
+      <Filter>998_DemoSource\Shader\UseDemo</Filter>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\VertexDirect3D.hlsl">
+      <Filter>998_DemoSource\Shader\UseDemo</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

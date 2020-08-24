@@ -1,0 +1,98 @@
+//StartGroop = [StartGroop]Header, EndGroop = [EndGroop]//,
+
+//Application//,
+productName,Framework Demo,
+version,0.1,
+quitMessage,終了しますか？,
+quitHeader,確認,
+isEnableCloseButton,1,
+isEnableAltF4,1,
+
+//GabageCollector//,
+numDeleteCapacity,200000
+numDeleteOfOneFlame,10000000
+
+//Graphics//,
+screenValueX,0.8,
+screenValueY,0.8,
+aspectRadioX,16,
+aspectRadioY,9,
+clearColor,0.2,0.2,0.8,1,
+isFullScreen,0, //不具合発生中、封印
+isVsync,0,
+depth,1000.0,
+near,1.0,
+
+//Thread//,
+numThreadFunctionLines,16,
+numMaxUsingThreads,100,
+
+//Time//,
+fixedInterval,0.02,
+isNoRestrictionsFPS, 1,//isVsyncも0にしなければ動作しません
+
+//Time::TimeLayers Include,
+//RootName = root
+[StartGroop]timeLayers,
+time1,1.0,
+time2,1.0,root,
+time3,1.0,time2,
+[EndGroop],
+
+//Audio//,
+masterVolume,1.0,
+masterChannels,3,
+sampleRate,44100,
+audioUpdateInterval, 0.02,
+audioSmoothReserve, 10,
+
+//Audio::SubmixLayers Include,
+[StartGroop]submixLayers,
+submix1,1.0,
+submix2,1.0,submix1,
+submix3,1.0,submix2,
+[EndGroop],
+
+//Input//
+rapidInterval, 1.0,
+mouseDedZone, 0.01,
+joystickDedZone, 0.1,
+windowDedZone, 0.01,
+isMouseInsideFrame, 0,
+
+//Physics//
+gravity, 0, -9.81, 0,
+//HitPair->Init Num Reserve//
+hitPairVectorReserves, 200,
+
+//GUI//
+isUsingGUI,1
+fontScalePerDpi, 0.2,
+guiVertexShaderPath[Debug],Assets/Settings/GUIVertexShaderDebug.cso
+guiPixelShaderPath[Debug],Assets/Settings/GUIPixelShaderDebug.cso
+guiVertexShaderPath[Release],Assets/Settings/GUIVertexShaderRelease.cso
+guiPixelShaderPath[Release],Assets/Settings/GUIPixelShaderRelease.cso
+
+
+//Tag Automatic assignment->Default : 1//,
+//Content one TagName per line only. Numbers are assigned automatically//
+[StartGroop]Tags,
+[EndGroop],
+
+//Layer Automatic assignment->Default : 0x00000001//
+//Content one LayerName per line only. Numbers are assigned automatically//
+//Value0 = layer name, Value1... = Hit Layers. Hit = 1, Not hit = 0. Value1 Layer = Default//
+//RootName = root, MonoralRootName = monoralRoot//
+//[Sample]
+//TestLayer1,1
+//TestLayer2,0,1
+//TestLayer3,1,0,1
+[StartGroop]Layers,
+TestLayer1,1
+TestLayer2,0,1
+TestLayer3,1,1,1
+[EndGroop],
+
+
+
+numDemoCopyModels,0

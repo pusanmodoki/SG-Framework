@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{DB078B3A-D6E1-48D4-B1FB-162182A97BA7}</ProjectGuid>
+    <RootNamespace>SGFrameworkMasterToExe</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\Assimp\Include;..\PhysX\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../ExternalLibrarys\Assimp\Include;../ExternalLibrarys\ImGui;../ExternalLibrarys\DirectXTex;../ExternalLibrarys\PhysX\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\ExternalLibrarys\Assimp\Lib\Debug;..\ExternalLibrarys\PhysX\Debug;..\ExternalLibrarys\DirectXTex\Lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\Assimp\Include;..\PhysX\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../ExternalLibrarys\Assimp\Include;../ExternalLibrarys\ImGui;../ExternalLibrarys\DirectXTex;../ExternalLibrarys\PhysX\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\ExternalLibrarys\Assimp\Lib\Release;..\ExternalLibrarys\PhysX\Release;..\ExternalLibrarys\DirectXTex\Lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ExternalLibrarys\DirectXTex\DDSTextureLoader\DDSTextureLoader.h" />
+    <ClInclude Include="..\ExternalLibrarys\DirectXTex\DirectXTex\DirectXTex.h" />
+    <ClInclude Include="..\ExternalLibrarys\DirectXTex\WICTextureLoader\WICTextureLoader.h" />
+    <ClInclude Include="..\ExternalLibrarys\ImGui\imconfig.h" />
+    <ClInclude Include="..\ExternalLibrarys\ImGui\imgui.h" />
+    <ClInclude Include="..\ExternalLibrarys\ImGui\imgui_internal.h" />
+    <ClInclude Include="..\ExternalLibrarys\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="..\ExternalLibrarys\ImGui\imstb_textedit.h" />
+    <ClInclude Include="..\ExternalLibrarys\ImGui\imstb_truetype.h" />
+    <ClInclude Include="01_LibraryImport\GameClassImport.hpp" />
+    <ClInclude Include="01_LibraryImport\LibraryImport.hpp" />
+    <ClInclude Include="02_CustomVariable\Atomic\Atomic.hpp" />
+    <ClInclude Include="02_CustomVariable\CharacterCode\CharacterCode.hpp" />
+    <ClInclude Include="02_CustomVariable\Color\Color.hpp" />
+    <ClInclude Include="02_CustomVariable\ComWear\ComWear.hpp" />
+    <ClInclude Include="02_CustomVariable\ConditionVariable\ConditionVariable.hpp" />
+    <ClInclude Include="02_CustomVariable\ConstAndUsing\ConstAndUsing.hpp" />
+    <ClInclude Include="02_CustomVariable\Const\Const.hpp" />
+    <ClInclude Include="02_CustomVariable\Const\ConstVector.hpp" />
+    <ClInclude Include="02_CustomVariable\CustomVariable.hpp" />
+    <ClInclude Include="02_CustomVariable\DebugMode\DebugMode.hpp" />
+    <ClInclude Include="02_CustomVariable\DeletePointer\DeletePointer.hpp" />
+    <ClInclude Include="02_CustomVariable\GpuAccelerator\GpuAccelerator.hpp" />
+    <ClInclude Include="02_CustomVariable\InputCode\InputCode.hpp" />
+    <ClInclude Include="02_CustomVariable\InputCode\JoystickCode.hpp" />
+    <ClInclude Include="02_CustomVariable\InputCode\KeyBordCode.hpp" />
+    <ClInclude Include="02_CustomVariable\InputCode\MouseCode.hpp" />
+    <ClInclude Include="02_CustomVariable\InvalidArgument\InvalidArgument.hpp" />
+    <ClInclude Include="02_CustomVariable\LayerAndTag\Layer.hpp" />
+    <ClInclude Include="02_CustomVariable\LayerAndTag\Tag.hpp" />
+    <ClInclude Include="02_CustomVariable\Matrix\Matrix.hpp" />
+    <ClInclude Include="02_CustomVariable\Object\Object.hpp" />
+    <ClInclude Include="02_CustomVariable\PhysicsFlags\PhysicsFlags.hpp" />
+    <ClInclude Include="02_CustomVariable\Pointer\BasePointer.hpp" />
+    <ClInclude Include="02_CustomVariable\Pointer\ClonePointer.hpp" />
+    <ClInclude Include="02_CustomVariable\Pointer\GarbageCollector.hpp" />
+    <ClInclude Include="02_CustomVariable\Pointer\LockWeakGuard.hpp" />
+    <ClInclude Include="02_CustomVariable\Pointer\Pointer.hpp" />
+    <ClInclude Include="02_CustomVariable\Pointer\SharedPointer.hpp" />
+    <ClInclude Include="02_CustomVariable\Pointer\UniquePointer.hpp" />
+    <ClInclude Include="02_CustomVariable\Property\Property.hpp" />
+    <ClInclude Include="02_CustomVariable\Quarernion\Quaternion.hpp" />
+    <ClInclude Include="02_CustomVariable\Random\Random.hpp" />
+    <ClInclude Include="02_CustomVariable\ReadElement\ReadElement.hpp" />
+    <ClInclude Include="02_CustomVariable\Singleton\Singleton.hpp" />
+    <ClInclude Include="02_CustomVariable\String\SGString.hpp" />
+    <ClInclude Include="02_CustomVariable\String\StdStringFunction.hpp" />
+    <ClInclude Include="02_CustomVariable\String\String.hpp" />
+    <ClInclude Include="02_CustomVariable\Time\Time.hpp" />
+    <ClInclude Include="02_CustomVariable\Time\TimeProcessing.hpp" />
+    <ClInclude Include="02_CustomVariable\TriggerCollider\TriggerCollider.hpp" />
+    <ClInclude Include="02_CustomVariable\Tuple\Tuple.hpp" />
+    <ClInclude Include="02_CustomVariable\UV\UV.hpp" />
+    <ClInclude Include="02_CustomVariable\VariableLimit\VariableLimit.hpp" />
+    <ClInclude Include="02_CustomVariable\Vector\Vector.hpp" />
+    <ClInclude Include="02_CustomVariable\Vector\Vector2\Int\Vector2Int.hpp" />
+    <ClInclude Include="02_CustomVariable\Vector\Vector2\Ref\Vector2Ref.hpp" />
+    <ClInclude Include="02_CustomVariable\Vector\Vector2\Vector2.hpp" />
+    <ClInclude Include="02_CustomVariable\Vector\Vector3\Int\Vector3Int.hpp" />
+    <ClInclude Include="02_CustomVariable\Vector\Vector3\Ref\Vector3Ref.hpp" />
+    <ClInclude Include="02_CustomVariable\Vector\Vector3\Vector3.hpp" />
+    <ClInclude Include="02_CustomVariable\Vector\Vector4\4x4\Vector4x4.hpp" />
+    <ClInclude Include="02_CustomVariable\Vector\Vector4\Int\Vector4Int.hpp" />
+    <ClInclude Include="02_CustomVariable\Vector\Vector4\Ref\Vector4Ref.hpp" />
+    <ClInclude Include="02_CustomVariable\Vector\Vector4\Vector4.hpp" />
+    <ClInclude Include="02_CustomVariable\Window\HinstanceHolder\HinstanceHolder.hpp" />
+    <ClInclude Include="02_CustomVariable\Window\HwndHolder\HwndHolder.hpp" />
+    <ClInclude Include="02_CustomVariable\Window\Window.hpp" />
+    <ClInclude Include="03_MathAF\MathAF.hpp" />
+    <ClInclude Include="03_MathAF\MathAFBasis.hpp" />
+    <ClInclude Include="03_MathAF\MathAFCalculation.hpp" />
+    <ClInclude Include="03_MathAF\MathAFFloatEdit.hpp" />
+    <ClInclude Include="04_Asset\AssetManager.hpp" />
+    <ClInclude Include="04_Asset\Asset\BaseAsset.hpp" />
+    <ClInclude Include="04_Asset\Asset\BinaryAsset.hpp" />
+    <ClInclude Include="04_Asset\Asset\TextAsset.hpp" />
+    <ClInclude Include="04_Asset\FileRW\CsvFileRW.hpp" />
+    <ClInclude Include="04_Asset\FileRW\EncryptionKey.hpp" />
+    <ClInclude Include="04_Asset\FileRW\FileRW.hpp" />
+    <ClInclude Include="04_Asset\FileRW\FileText.hpp" />
+    <ClInclude Include="04_Asset\FileRW\SebtFileRW.hpp" />
+    <ClInclude Include="04_Asset\FileRW\SecFileRW.hpp" />
+    <ClInclude Include="04_Asset\FileRW\TextFileRW.hpp" />
+    <ClInclude Include="04_Asset\FileStream\FileReadStream.hpp" />
+    <ClInclude Include="04_Asset\FileStream\FileStream.hpp" />
+    <ClInclude Include="04_Asset\FileStream\FileWriteStream.hpp" />
+    <ClInclude Include="04_Asset\InstantiateAsset.hpp" />
+    <ClInclude Include="05_Graphics\Animation\Animation.hpp" />
+    <ClInclude Include="05_Graphics\Animation\Animator.hpp" />
+    <ClInclude Include="05_Graphics\Animation\ModelNodeObject.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\Camera\CameraX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\GraphicsObject\GraphicsObjectX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\GraphicsX11\GraphicsX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\GraphicsX11\GraphicsX11ConstantBuffer.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\Light\BaseLightX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\Light\DirectionLightX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\Light\HemiSphereLightX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\Light\LightX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\Light\PointLightX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\Material\MaterialX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\Mesh\MeshRendererX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\Mesh\MeshX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\ModelAsset\ModelAssetX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\Polygon\PolygonX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\ShaderAsset\PixelShaderAssetX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\ShaderAsset\ShaderAssetX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\ShaderAsset\VertexShaderX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\TextureAsset\TextureAssetX11.hpp" />
+    <ClInclude Include="05_Graphics\DirectX11\Transform\TransformX11.hpp" />
+    <ClInclude Include="05_Graphics\DrawCommand\DrawCommand.hpp" />
+    <ClInclude Include="05_Graphics\Graphics.hpp" />
+    <ClInclude Include="05_Graphics\GraphicsUsing.hpp" />
+    <ClInclude Include="05_Graphics\MaterialUsing.hpp" />
+    <ClInclude Include="05_Graphics\MeshUsing.hpp" />
+    <ClInclude Include="05_Graphics\ModelAssetUsing.hpp" />
+    <ClInclude Include="05_Graphics\Screen\Screen.hpp" />
+    <ClInclude Include="05_Graphics\TransformUsing.hpp" />
+    <ClInclude Include="05_Graphics\Vertex\Vertex.hpp" />
+    <ClInclude Include="06_Audio\Audio.hpp" />
+    <ClInclude Include="06_Audio\AudioAsset\AudioAsset.hpp" />
+    <ClInclude Include="06_Audio\AudioAsset\AudioAssetEffect.hpp" />
+    <ClInclude Include="06_Audio\AudioAsset\AudioAssetEffect3D.hpp" />
+    <ClInclude Include="06_Audio\AudioAsset\AudioAssetMusic.hpp" />
+    <ClInclude Include="06_Audio\AudioDetail\AudioMessage.hpp" />
+    <ClInclude Include="06_Audio\AudioDetail\AudioMessagePack.hpp" />
+    <ClInclude Include="06_Audio\AudioListener.hpp" />
+    <ClInclude Include="07_Thread\Thread.hpp" />
+    <ClInclude Include="08_Input\Input.hpp" />
+    <ClInclude Include="09_Scene\Scene.hpp" />
+    <ClInclude Include="09_Scene\SceneManager.hpp" />
+    <ClInclude Include="10_Physics\Collider\BaseCollider.hpp" />
+    <ClInclude Include="10_Physics\Collider\BoxCollider.hpp" />
+    <ClInclude Include="10_Physics\Collider\CapsuleCollider.hpp" />
+    <ClInclude Include="10_Physics\Collider\MeshCollider.hpp" />
+    <ClInclude Include="10_Physics\Collider\PlaneCollider.hpp" />
+    <ClInclude Include="10_Physics\Collider\SphereCollider.hpp" />
+    <ClInclude Include="10_Physics\ContactInfo.hpp" />
+    <ClInclude Include="10_Physics\Detail\PhysicsMessage.hpp" />
+    <ClInclude Include="10_Physics\Detail\PhysicsMessagePack.hpp" />
+    <ClInclude Include="10_Physics\Physics.hpp" />
+    <ClInclude Include="10_Physics\PhysicsFunction\PhysicsFilterShader.hpp" />
+    <ClInclude Include="10_Physics\PhysicsFunction\PhysicsProcessingMessage.hpp" />
+    <ClInclude Include="10_Physics\PhysicsInclude.hpp" />
+    <ClInclude Include="10_Physics\PhysicsMaterial.hpp" />
+    <ClInclude Include="10_Physics\PhysXInclude.hpp" />
+    <ClInclude Include="10_Physics\RaycastHit\OverlapHit.hpp" />
+    <ClInclude Include="10_Physics\RaycastHit\RaycastHit.hpp" />
+    <ClInclude Include="10_Physics\RaycastHit\SweepHit.hpp" />
+    <ClInclude Include="10_Physics\RigidBody\RigidBody.hpp" />
+    <ClInclude Include="11_GameObject\GameObject.hpp" />
+    <ClInclude Include="12_GUI\GUI.hpp" />
+    <ClInclude Include="97_Application\Application.hpp" />
+    <ClInclude Include="97_Application\Setting\ApplicationSetting.hpp" />
+    <ClInclude Include="97_Application\Setting\ApplicationSettingTiedInfo.hpp" />
+    <ClInclude Include="998_DemoApplication\Character.hpp" />
+    <ClInclude Include="998_DemoApplication\DemoMusicPlayer.hpp" />
+    <ClInclude Include="998_DemoApplication\DemoScene.hpp" />
+    <ClInclude Include="998_DemoApplication\Sphere.hpp" />
+    <ClInclude Include="SGFramwork.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ExternalLibrarys\DirectXTex\DDSTextureLoader\DDSTextureLoader.cpp" />
+    <ClCompile Include="..\ExternalLibrarys\DirectXTex\WICTextureLoader\WICTextureLoader.cpp" />
+    <ClCompile Include="..\ExternalLibrarys\ImGui\imgui.cpp" />
+    <ClCompile Include="..\ExternalLibrarys\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="..\ExternalLibrarys\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="..\ExternalLibrarys\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="02_CustomVariable\CharacterCode\CharacterCode.cpp" />
+    <ClCompile Include="02_CustomVariable\DebugMode\DebugMode.cpp" />
+    <ClCompile Include="02_CustomVariable\LayerAndTag\LayerAndTag.cpp" />
+    <ClCompile Include="02_CustomVariable\Pointer\GarbageCollector.cpp" />
+    <ClCompile Include="02_CustomVariable\Random\Random.cpp" />
+    <ClCompile Include="02_CustomVariable\String\SGString.cpp" />
+    <ClCompile Include="02_CustomVariable\Time\TimeStaticVariable.cpp" />
+    <ClCompile Include="02_CustomVariable\Vector\Vector2\Int\Vector2Int.cpp" />
+    <ClCompile Include="02_CustomVariable\Vector\Vector2\Ref\Vector2Ref.cpp" />
+    <ClCompile Include="02_CustomVariable\Vector\Vector2\Vector2.cpp" />
+    <ClCompile Include="02_CustomVariable\Vector\Vector3\Int\Vector3Int.cpp" />
+    <ClCompile Include="02_CustomVariable\Vector\Vector3\Ref\Vector3Ref.cpp" />
+    <ClCompile Include="02_CustomVariable\Vector\Vector3\Vector3.cpp" />
+    <ClCompile Include="02_CustomVariable\Vector\Vector4\Int\Vector4Int.cpp" />
+    <ClCompile Include="02_CustomVariable\Vector\Vector4\Ref\Vector4Ref.cpp" />
+    <ClCompile Include="02_CustomVariable\Vector\Vector4\Vector4.cpp" />
+    <ClCompile Include="02_CustomVariable\Window\HinstanceHolder\HinstanceHolder.cpp" />
+    <ClCompile Include="02_CustomVariable\Window\HwndHolder\HwndHolder.cpp" />
+    <ClCompile Include="04_Asset\AssetManager.cpp" />
+    <ClCompile Include="04_Asset\Asset\BaseAsset.cpp" />
+    <ClCompile Include="05_Graphics\DirectX11\Camera\CameraX11.cpp" />
+    <ClCompile Include="05_Graphics\DirectX11\GraphicsX11\GraphicsX11StartUpShutDown.cpp" />
+    <ClCompile Include="05_Graphics\DirectX11\GraphicsX11\GraphicsX11Update.cpp" />
+    <ClCompile Include="05_Graphics\DirectX11\GraphicsX11\GraphicsX11Variable.cpp" />
+    <ClCompile Include="05_Graphics\DirectX11\Light\LightX11.cpp" />
+    <ClCompile Include="05_Graphics\DirectX11\ModelAsset\ModelAssetX11.cpp" />
+    <ClCompile Include="05_Graphics\DirectX11\Transform\TransformX11.cpp" />
+    <ClCompile Include="05_Graphics\Screen\Screen.cpp" />
+    <ClCompile Include="06_Audio\Audio.cpp" />
+    <ClCompile Include="06_Audio\AudioAsset\AudioAssetEffect.cpp" />
+    <ClCompile Include="06_Audio\AudioAsset\AudioAssetEffect3D.cpp" />
+    <ClCompile Include="06_Audio\AudioAsset\AudioAssetMusic.cpp" />
+    <ClCompile Include="06_Audio\AudioAsset\BaseAudioSEAsset.cpp" />
+    <ClCompile Include="06_Audio\AudioSubmixLayer.cpp" />
+    <ClCompile Include="06_Audio\AudioThread.cpp" />
+    <ClCompile Include="06_Audio\AudioSmooth.cpp" />
+    <ClCompile Include="07_Thread\Thread.cpp" />
+    <ClCompile Include="07_Thread\ThreadAudioGraphics.cpp" />
+    <ClCompile Include="07_Thread\ThreadUpdate.cpp" />
+    <ClCompile Include="08_Input\Input.cpp" />
+    <ClCompile Include="08_Input\InputUpdateParts.cpp" />
+    <ClCompile Include="09_Scene\SceneManager.cpp" />
+    <ClCompile Include="10_Physics\Physics.cpp" />
+    <ClCompile Include="10_Physics\PhysicsRaycast.cpp" />
+    <ClCompile Include="10_Physics\PhysicsThread.cpp" />
+    <ClCompile Include="10_Physics\RigidBody\RigidBody.cpp" />
+    <ClCompile Include="11_GameObject\GameObject.cpp" />
+    <ClCompile Include="12_GUI\GUI.cpp" />
+    <ClCompile Include="12_GUI\GUIDebugStream.cpp" />
+    <ClCompile Include="12_GUI\GUIGraphicsX11.cpp" />
+    <ClCompile Include="97_Application\Application.cpp" />
+    <ClCompile Include="97_Application\ApplicationImportSetting.cpp" />
+    <ClCompile Include="97_Application\ApplicationMain.cpp" />
+    <ClCompile Include="97_Application\ApplicationStartUpShutDown.cpp" />
+    <ClCompile Include="97_Application\ApplicationWindowCreate.cpp" />
+    <ClCompile Include="97_Application\Setting\ApplicationSetting.cpp" />
+    <ClCompile Include="97_Application\WindowProcedure.cpp" />
+    <ClCompile Include="97_Application\WinMain.cpp" />
+    <ClCompile Include="998_DemoApplication\Character.cpp" />
+    <ClCompile Include="998_DemoApplication\DemoScene.cpp" />
+    <ClCompile Include="998_DemoApplication\Sphere.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="98_Texts\Naming convention.txt" />
+    <Text Include="999_DebugSource\Todo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ExternalLibrarys\DirectXTex\DirectXTex\DirectXTex.inl" />
+    <None Include="Assets\Settings\SGFApplicationSetting.sec" />
+    <None Include="Assets\Shader\RootHeader.hlsli" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Assets\Shader\PixelDirect.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\PixelDirectTexture.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\PixelDirectTextureBlackAndWhite.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\PixelDirectTextureSepia.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\PixelModelStandard.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\PixelStandard.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\VertexDirect2D.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\VertexDirect3D.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\VertexModelStandard.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Assets\Shader\VertexStandard.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,37 @@
+/*----------------------------------------------------------------------------------
+ÉwÉbÉ_êÈåæÇçsÇ§ CustomVariable.h
+------------------------------------------------------------------------------------*/
+#ifndef SGFRAMEWORK_HEADER_CUSTOM_VARIABLE_HPP_
+#define SGFRAMEWORK_HEADER_CUSTOM_VARIABLE_HPP_
+#include "InvalidArgument/InvalidArgument.hpp"
+#include "Atomic/Atomic.hpp"
+#include "CharacterCode/CharacterCode.hpp"
+#include "Color/Color.hpp"
+#include "ComWear/ComWear.hpp"
+#include "ConditionVariable/ConditionVariable.hpp"
+#include "Const/Const.hpp"
+#include "ConstAndUsing/ConstAndUsing.hpp"
+#include "DebugMode/DebugMode.hpp"
+#include "DeletePointer/DeletePointer.hpp"
+#include "GpuAccelerator/GpuAccelerator.hpp"
+#include "InputCode/InputCode.hpp"
+#include "LayerAndTag/Layer.hpp"
+#include "LayerAndTag/Tag.hpp"
+#include "Matrix/Matrix.hpp"
+#include "Object/Object.hpp"
+#include "PhysicsFlags/PhysicsFlags.hpp"
+#include "Pointer/Pointer.hpp"
+#include "Property/Property.hpp"
+#include "Quarernion/Quaternion.hpp"
+#include "Random/Random.hpp"
+#include "ReadElement/ReadElement.hpp"
+#include "Singleton/Singleton.hpp"
+#include "String/String.hpp"
+#include "Time/Time.hpp"
+#include "TriggerCollider/TriggerCollider.hpp"
+#include "Tuple/Tuple.hpp"
+#include "UV/UV.hpp"
+#include "VariableLimit/VariableLimit.hpp"
+#include "Vector/Vector.hpp"
+#include "Window/Window.hpp"
+#endif // !SGFRAMEWORK_HEADER_CUSTOM_VARIABLE_HPP_

@@ -1,0 +1,67 @@
+RigidBodyなどPhysics->OnEnable, Disable
+
+
+
+
+
+
+
+
+SyncObject, SyncSystem
+
+Sync Callback
+Sync Value -> static用, sync時同期
+
+
+collider->rigid body検索 & addchildren対策
+addchirdren callback
+comment
+
+
+
+Time tm
+AssetPackageClass
+
+Vector, Quaternionなど一部関数直書き
+
+
+Polygon
+ClonePointer
+Transform->ClonePointer
+
+Transform動作確認まだ
+WinMainにModelちょっと書いてる
+Nodeに直接MeshRendrer的なのくっつけるか否か
+
+01_LibraryImport
+02_CustomVariable
+03_cMath
+04_DirectX->Shader
+05_TextureManager
+06_ModelManager
+07_AudioManager
+08_FileManager
+09_AssetManager->AssetPackege
+10_DebugGui
+11_Input
+12_TagManager
+13_GameScene
+14_GameObject
+
+
+スレッド割当
+
+1-WinMainスレッド & Audio, Graphics処理スレッド
+2-AppMain
+残り-汎用
+
+重ねて割当->順番に割当
+Debug専用->AssetManager
+Audio->Streaming
+
+//Rendrerにバッファ持たせよう
+
+
+//		uint sceneID;
+//		int layer;
+//		Tag tag;

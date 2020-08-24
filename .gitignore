@@ -30,3 +30,23 @@
 *.exe
 *.out
 *.app
+
+
+# User-specific files
+.vs/
+ipch/
+*.suo
+*.user
+*.sln.docstates
+
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+build/
+[Bb]in/
+[Oo]bj/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
