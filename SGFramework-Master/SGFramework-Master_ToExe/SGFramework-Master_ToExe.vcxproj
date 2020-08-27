@@ -129,6 +129,8 @@
     <ClInclude Include="02_CustomVariable\ConditionVariable\ConditionVariable.hpp" />
     <ClInclude Include="02_CustomVariable\Const\Const.hpp" />
     <ClInclude Include="02_CustomVariable\Const\ConstVector.hpp" />
+    <ClInclude Include="02_CustomVariable\String\SGString.hpp" />
+    <ClInclude Include="02_CustomVariable\String\StringF.hpp" />
     <ClInclude Include="02_CustomVariable\Variables.hpp" />
     <ClInclude Include="02_CustomVariable\Exception\Exception.hpp" />
     <ClInclude Include="02_CustomVariable\InputCode\InputCode.hpp" />
@@ -153,9 +155,6 @@
     <ClInclude Include="02_CustomVariable\Random\Random.hpp" />
     <ClInclude Include="02_CustomVariable\ReadElement\ReadElement.hpp" />
     <ClInclude Include="02_CustomVariable\Singleton\Singleton.hpp" />
-    <ClInclude Include="02_CustomVariable\String\SGString.hpp" />
-    <ClInclude Include="02_CustomVariable\String\StdStringFunction.hpp" />
-    <ClInclude Include="02_CustomVariable\String\String.hpp" />
     <ClInclude Include="02_CustomVariable\Time\Time.hpp" />
     <ClInclude Include="02_CustomVariable\Time\TimeProcessing.hpp" />
     <ClInclude Include="02_CustomVariable\TriggerCollider\TriggerCollider.hpp" />

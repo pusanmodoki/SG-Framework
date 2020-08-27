@@ -38,16 +38,16 @@ namespace SGFramework
 		//引数1: タグ名
 		inline Layer(const sgstring& layerName) : m_layer(cMissingLayer)
 		{
-			auto find = m_layers.find(layerName);
+			auto find = m_layersKeyName.find(layerName);
 
 			//有効
-			if (find != m_layers.end())
+			if (find != m_layersKeyName.end())
 				*this = find->second;
 			//無効
 			else
 			{
 				m_layer = cMissingLayer;
-				throw Exception::InvalidArgumentException(L"Error! Layer->Constructor", L"Missing Layer Name : " + layerName);
+				throw Exception::InvalidArgumentException("Layer", "Constructor", "Missing Layer Name : " + layerName.to_std_string());
 			}
 		}
 		//----------------------------------------------------------------------------------
@@ -90,9 +90,9 @@ namespace SGFramework
 		//引数1: LayerName 
 		inline static Layer SearchLayer(const sgstring& layerName) 
 		{
-			auto find = m_layers.find(layerName);
+			auto find = m_layersKeyName.find(layerName);
 
-			if (find != m_layers.end())
+			if (find != m_layersKeyName.end())
 				return find->second;
 			else
 				throw InvalidArgument(L"Error! Layer->SearchLayer", L"Missing Layer Name : " + layerName);
@@ -135,7 +135,7 @@ namespace SGFramework
 		{
 			//result
 			std::vector<sgstring> result;
-			for (auto& e : m_layers) result.emplace_back(e.first);
+			for (auto& e : m_layersKeyName) result.emplace_back(e.first);
 			return std::move(result);
 		}
 		//all layer ids<static>(get function property)
@@ -143,7 +143,7 @@ namespace SGFramework
 		{
 			//result
 			std::vector<uint> result;
-			for (auto& e : m_layers) result.emplace_back(e.second);
+			for (auto& e : m_layersKeyName) result.emplace_back(e.second);
 			return std::move(result);
 		}
 		//layer->collision mask<static>(get function property)
@@ -240,7 +240,7 @@ namespace SGFramework
 		inline static void ReadLayers(const ReadElement::Groop& layers);
 
 		//Layer名マップ
-		static std::unordered_map<std::wstring, Layer> m_layers;
+		static std::unordered_map<std::wstring, Layer> m_layersKeyName;
 		//Layer名マップ
 		static std::unordered_map<uint, Layer> m_layersKeyID;
 		//LayerHitTable
@@ -282,7 +282,7 @@ namespace SGFramework
 		template<class ...Args>
 		inline LayerMask(const Args&... layerIDs) : value(0)
 		{
-			uint size = static_cast<uint>(Layer::m_layers.size());
+			uint size = static_cast<uint>(Layer::m_layersKeyName.size());
 
 			for (uint& e : { layerIDs... })
 			{
@@ -305,8 +305,8 @@ namespace SGFramework
 		{
 			for (sgstring& e : { layerNames... })
 			{
-				if (Layer::m_layers.find(e) != Layer::m_layers.end())
-					value |= 1 << Layer::m_layers.at(e);
+				if (Layer::m_layersKeyName.find(e) != Layer::m_layersKeyName.end())
+					value |= 1 << Layer::m_layersKeyName.at(e);
 				else
 				{
 					value = Layer::cMissingLayer;
@@ -321,7 +321,7 @@ namespace SGFramework
 		template<class ...Args>
 		inline void InitializeUsingIDs(const Args&... layerIDs)
 		{
-			uint size = static_cast<uint>(Layer::m_layers.size());
+			uint size = static_cast<uint>(Layer::m_layersKeyName.size());
 
 			for (uint& e : { layerIDs... })
 			{
@@ -355,8 +355,8 @@ namespace SGFramework
 
 			for (sgstring& e : { layerNames... })
 			{
-				if (Layer::m_layers.find(e) != Layer::m_layers.end())
-					result.value |= 1 << Layer::m_layers.at(e);
+				if (Layer::m_layersKeyName.find(e) != Layer::m_layersKeyName.end())
+					result.value |= 1 << Layer::m_layersKeyName.at(e);
 				else
 				{
 					result.value = Layer::cMissingLayer;
@@ -375,7 +375,7 @@ namespace SGFramework
 		static inline LayerMask CreateUsingIDs(const Args&... layerIDs)
 		{
 			LayerMask result;	
-			uint size = static_cast<uint>(Layer::m_layers.size());
+			uint size = static_cast<uint>(Layer::m_layersKeyName.size());
 
 			for (uint& e : { layerIDs... })
 			{
@@ -488,14 +488,14 @@ namespace SGFramework
 		uint layerID = 1;
 
 		//Default登録
-		m_layers.try_emplace(cDefaultLayerName, Layer(cDefaultLayerID, cDefaultLayerName));
+		m_layersKeyName.try_emplace(cDefaultLayerName, Layer(cDefaultLayerID, cDefaultLayerName));
 		m_layersKeyID.try_emplace(cDefaultLayerID, Layer(cDefaultLayerID, cDefaultLayerName));
 
 		//登録ループ
 		for (auto& e : layers.packs)
 		{	
 			//Layer登録
-			m_layers.try_emplace(e.header, Layer(layerID, e.header));
+			m_layersKeyName.try_emplace(e.header, Layer(layerID, e.header));
 			m_layersKeyID.try_emplace(layerID, Layer(layerID, e.header));
 			layerID++;
 		}

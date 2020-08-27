@@ -30,10 +30,10 @@ namespace SGFramework
 		//atomic<T>をロックフリーアルゴリズムを用いて初期化する
 		//template: atomic type
 		//return: 代入結果 (atomicに代入済み)
-		//引数1: atomic (atomic type)
-		//引数2: 初期化する値
+		//argument 1: atomic (atomic type)
+		//argument 2: 初期化する値
 		template <class T>
-		inline T Init(std::atomic<T>& atomic, T init)
+		inline T Init(std::atomic<T>& atomic, T init) noexcept
 		{
 			T expected = atomic.load();
 
@@ -46,10 +46,10 @@ namespace SGFramework
 		//atomic<T>をロックフリーアルゴリズムを用いて初期化する
 		//template: atomic type
 		//return: 代入結果 (atomicに代入済み)
-		//引数1: atomic (atomic type)
-		//引数2: 初期化する値
+		//argument 1: atomic (atomic type)
+		//argument 2: 初期化する値
 		template <class T, class CastType>
-		inline T Init(std::atomic<T>& atomic, CastType init)
+		inline T Init(std::atomic<T>& atomic, CastType init) noexcept
 		{
 			static_assert(std::is_convertible_v<CastType, T>, "Only castable type is supported");
 
@@ -67,8 +67,8 @@ namespace SGFramework
 		//[And]
 		//atomic<bool>をロックフリーアルゴリズムを用いてAND演算する
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (bool)
-		inline bool And(std::atomic<bool>& atomicBoolean, bool andFlag)
+		//argument 1: atomic (bool)
+		inline bool And(std::atomic<bool>& atomicBoolean, bool andFlag) noexcept
 		{
 			bool expected = atomicBoolean.load();
 
@@ -80,8 +80,8 @@ namespace SGFramework
 		//[Or]
 		//atomic<bool>をロックフリーアルゴリズムを用いてOR演算する
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (bool)
-		inline bool Or(std::atomic<bool>& atomicBoolean, bool orFlag)
+		//argument 1: atomic (bool)
+		inline bool Or(std::atomic<bool>& atomicBoolean, bool orFlag) noexcept
 		{
 			bool expected = atomicBoolean.load();
 
@@ -93,8 +93,8 @@ namespace SGFramework
 		//[Xor]
 		//atomic<bool>をロックフリーアルゴリズムを用いてOR演算する
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (bool)
-		inline bool Xor(std::atomic<bool>& atomicBoolean, bool xorFlag)
+		//argument 1: atomic (bool)
+		inline bool Xor(std::atomic<bool>& atomicBoolean, bool xorFlag) noexcept
 		{
 			bool expected = atomicBoolean.load();
 
@@ -106,8 +106,8 @@ namespace SGFramework
 		//[BitInversion]
 		//atomic<bool>をロックフリーアルゴリズムを用いてビット反転させる
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (bool)
-		inline bool BitInversion(std::atomic<bool>& atomicBoolean)
+		//argument 1: atomic (bool)
+		inline bool BitInversion(std::atomic<bool>& atomicBoolean) noexcept
 		{
 			bool expected = atomicBoolean.load();
 
@@ -126,8 +126,8 @@ namespace SGFramework
 		//----------------------------------------------------------------------------------
 		//[LockAtomic]
 		//atomic<bool>を用いてLockする
-		//引数1: atomic (bool)
-		inline void LockAtomic(std::atomic<bool>& atomicBoolean)
+		//argument 1: atomic (bool)
+		inline void LockAtomic(std::atomic<bool>& atomicBoolean) noexcept
 		{
 			bool expected = false;
 
@@ -137,8 +137,8 @@ namespace SGFramework
 		//[TryLockAtomic]
 		//atomic<bool>を用いてLockを試す
 		//return: Lockに成功した場合true
-		//引数1: atomic (bool)
-		inline bool TryLockAtomic(std::atomic<bool>& atomicBoolean)
+		//argument 1: atomic (bool)
+		inline bool TryLockAtomic(std::atomic<bool>& atomicBoolean) noexcept
 		{
 			bool expected = false;
 
@@ -148,9 +148,9 @@ namespace SGFramework
 		//[TryCycleLockAtomic]
 		//atomic<bool>を用いてLockをcycle回数試す
 		//return: Lockに成功した場合true
-		//引数1: atomic (bool)
-		//引数2: cycle, forループ回数
-		inline bool TryCycleLockAtomic(std::atomic<bool>& atomicBoolean, unsigned int cycle)
+		//argument 1: atomic (bool)
+		//argument 2: cycle, forループ回数
+		inline bool TryCycleLockAtomic(std::atomic<bool>& atomicBoolean, unsigned int cycle) noexcept
 		{
 			bool expected = false;
 
@@ -166,13 +166,14 @@ namespace SGFramework
 		//----------------------------------------------------------------------------------
 		//[UnlockAtomic]
 		//atomic<bool>を用いてUnlockする
-		//引数1: atomic (bool)
-		inline void UnlockAtomic(std::atomic<bool>& atomicBoolean)
+		//argument 1: atomic (bool)
+		inline void UnlockAtomic(std::atomic<bool>& atomicBoolean) noexcept
 		{
 			bool expected = true;
 
 			while (1 ^ atomicBoolean.compare_exchange_weak(expected, false)) { expected = true; }
 		}
+
 		//Atomic版LockGuard
 		class LockGuard
 		{
@@ -210,10 +211,10 @@ namespace SGFramework
 		//atomic<T>をロックフリーアルゴリズムを用いて加算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
-		//引数2: 加算する値
+		//argument 1: atomic (integral type)
+		//argument 2: 加算する値
 		template <class T>
-		inline T Add(std::atomic<T>& atomicIntegral, T add)
+		inline T Add(std::atomic<T>& atomicIntegral, T add) noexcept
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 
@@ -228,10 +229,10 @@ namespace SGFramework
 		//atomic<T>をロックフリーアルゴリズムを用いて減算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
-		//引数2: 減算する値
+		//argument 1: atomic (integral type)
+		//argument 2: 減算する値
 		template <class T>
-		inline T Subtract(std::atomic<T>& atomicIntegral, T sub)
+		inline T Subtract(std::atomic<T>& atomicIntegral, T sub) noexcept
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 
@@ -246,10 +247,10 @@ namespace SGFramework
 		//atomic<T>をロックフリーアルゴリズムを用いて乗算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
-		//引数2: 乗算する値
+		//argument 1: atomic (integral type)
+		//argument 2: 乗算する値
 		template <class T>
-		inline T Multiply(std::atomic<T>& atomicIntegral, T multi)
+		inline T Multiply(std::atomic<T>& atomicIntegral, T multi) noexcept
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 
@@ -260,14 +261,14 @@ namespace SGFramework
 			return atomicIntegral.load();
 		}
 		//----------------------------------------------------------------------------------
-		//[Divide]
+		//[Divide]<possibly throw>
 		//atomic<T>をロックフリーアルゴリズムを用いて除算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
-		//引数2: 除算する値
+		//argument 1: atomic (integral type)
+		//argument 2: 除算する値
 		template <class T>
-		inline T Divide(std::atomic<T>& atomicIntegral, T div)
+		inline T Divide(std::atomic<T>& atomicIntegral, T div) noexcept
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 #ifdef SGF_DEBUG
@@ -286,9 +287,9 @@ namespace SGFramework
 		//atomic<integral type>をロックフリーアルゴリズムを用いてAND演算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
+		//argument 1: atomic (integral type)
 		template <class T>
-		inline T And(std::atomic<T>& atomicIntegral, T andFlag)
+		inline T And(std::atomic<T>& atomicIntegral, T andFlag) noexcept
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 
@@ -303,9 +304,9 @@ namespace SGFramework
 		//atomic<integral type>をロックフリーアルゴリズムを用いてOR演算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
+		//argument 1: atomic (integral type)
 		template <class T>
-		inline T Or(std::atomic<T>& atomicIntegral, T orFlag)
+		inline T Or(std::atomic<T>& atomicIntegral, T orFlag) noexcept
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 
@@ -320,9 +321,9 @@ namespace SGFramework
 		//atomic<integral type>をロックフリーアルゴリズムを用いてOR演算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
+		//argument 1: atomic (integral type)
 		template <class T>
-		inline T Xor(std::atomic<T>& atomicIntegral, T xorFlag)
+		inline T Xor(std::atomic<T>& atomicIntegral, T xorFlag) noexcept
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 
@@ -337,9 +338,9 @@ namespace SGFramework
 		//atomic<integral type>をロックフリーアルゴリズムを用いてビット反転させる
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
+		//argument 1: atomic (integral type)
 		template <class T>
-		inline T BitInversion(std::atomic<T>& atomicIntegral)
+		inline T BitInversion(std::atomic<T>& atomicIntegral) noexcept
 		{
 			static_assert(std::is_integral_v<T>, "Only integral type is supported");
 			static constexpr unsigned long long cMaxBit = std::numeric_limits<unsigned long long>::max();
@@ -356,10 +357,10 @@ namespace SGFramework
 		//atomic<T>をロックフリーアルゴリズムを用いて加算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
-		//引数2: 加算する値
+		//argument 1: atomic (integral type)
+		//argument 2: 加算する値
 		template <class T, class CastType>
-		inline T Add(std::atomic<T>& atomicIntegral, CastType add)
+		inline T Add(std::atomic<T>& atomicIntegral, CastType add) noexcept
 		{
 			static_assert(std::is_convertible_v<CastType, T>, "Only castable type is supported");
 
@@ -370,10 +371,10 @@ namespace SGFramework
 		//atomic<T>をロックフリーアルゴリズムを用いて減算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
-		//引数2: 減算する値
+		//argument 1: atomic (integral type)
+		//argument 2: 減算する値
 		template <class T, class CastType>
-		inline T Subtract(std::atomic<T>& atomicIntegral, CastType sub)
+		inline T Subtract(std::atomic<T>& atomicIntegral, CastType sub) noexcept
 		{
 			static_assert(std::is_convertible_v<CastType, T>, "Only castable type is supported");
 
@@ -384,28 +385,28 @@ namespace SGFramework
 		//atomic<T>をロックフリーアルゴリズムを用いて乗算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
-		//引数2: 乗算する値
+		//argument 1: atomic (integral type)
+		//argument 2: 乗算する値
 		template <class T, class CastType>
-		inline T Multiply(std::atomic<T>& atomicIntegral, CastType multi)
+		inline T Multiply(std::atomic<T>& atomicIntegral, CastType multi) noexcept
 		{
 			static_assert(std::is_convertible_v<CastType, T>, "Only castable type is supported");
 
 			return Multiply(atomicIntegral, static_cast<T>(multi));
 		}
 		//----------------------------------------------------------------------------------
-		//[Divide]
+		//[Divide]<possibly throw>
 		//atomic<T>をロックフリーアルゴリズムを用いて除算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
-		//引数2: 除算する値
+		//argument 1: atomic (integral type)
+		//argument 2: 除算する値
 		template <class T, class CastType>
-		inline T Divide(std::atomic<T>& atomicIntegral, CastType div)
+		inline T Divide(std::atomic<T>& atomicIntegral, CastType div) noexcept
 		{
 			static_assert(std::is_convertible_v<CastType, T>, "Only castable type is supported");
 
-			return Divide(atomicIntegral, static_cast<T>(div));
+			return TRY_CATCH_ON_DEBUG(Divide(atomicIntegral, static_cast<T>(div)), throw);
 		}
 
 		//----------------------------------------------------------------------------------
@@ -413,9 +414,9 @@ namespace SGFramework
 		//atomic<integral type>をロックフリーアルゴリズムを用いてAND演算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
+		//argument 1: atomic (integral type)
 		template <class T, class CastType>
-		inline T And(std::atomic<T>& atomicIntegral, CastType andFlag)
+		inline T And(std::atomic<T>& atomicIntegral, CastType andFlag) noexcept
 		{
 			static_assert(std::is_convertible_v<CastType, T>, "Only castable type is supported");
 
@@ -426,9 +427,9 @@ namespace SGFramework
 		//atomic<integral type>をロックフリーアルゴリズムを用いてOR演算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
+		//argument 1: atomic (integral type)
 		template <class T, class CastType>
-		inline T Or(std::atomic<T>& atomicIntegral, CastType orFlag)
+		inline T Or(std::atomic<T>& atomicIntegral, CastType orFlag) noexcept
 		{
 			static_assert(std::is_convertible_v<CastType, T>, "Only castable type is supported");
 
@@ -439,9 +440,9 @@ namespace SGFramework
 		//atomic<integral type>をロックフリーアルゴリズムを用いてOR演算する
 		//template: integral type
 		//return: 計算結果 (atomicに代入済み)
-		//引数1: atomic (integral type)
+		//argument 1: atomic (integral type)
 		template <class T, class CastType>
-		inline T Xor(std::atomic<T>& atomicIntegral, CastType xorFlag)
+		inline T Xor(std::atomic<T>& atomicIntegral, CastType xorFlag) noexcept
 		{
 			static_assert(std::is_convertible_v<CastType, T>, "Only castable type is supported");
 
@@ -460,10 +461,10 @@ namespace SGFramework
 		//atomic<T*>をロックフリーアルゴリズムを用いて加算する
 		//return: 計算結果 (atomicに代入済み)
 		//template: integral type
-		//引数1: atomic (integral type)
-		//引数2: 加算する値
+		//argument 1: atomic (integral type)
+		//argument 2: 加算する値
 		template <class T>
-		inline T* Add(std::atomic<T*>& atomicPointer, int add)
+		inline T* Add(std::atomic<T*>& atomicPointer, int add) noexcept
 		{
 			static_assert(std::is_pointer_v<T>, "Only pointer type is supported");
 
@@ -478,10 +479,10 @@ namespace SGFramework
 		//atomic<T>をロックフリーアルゴリズムを用いて減算する
 		//return: 計算結果 (atomicに代入済み)
 		//template: integral type
-		//引数1: atomic (integral type)
-		//引数2: 減算する値
+		//argument 1: atomic (integral type)
+		//argument 2: 減算する値
 		template <class T>
-		inline T* Subtract(std::atomic<T*>& atomicPointer, int sub)
+		inline T* Subtract(std::atomic<T*>& atomicPointer, int sub) noexcept
 		{
 			static_assert(std::is_pointer_v<T>, "Only pointer type is supported");
 

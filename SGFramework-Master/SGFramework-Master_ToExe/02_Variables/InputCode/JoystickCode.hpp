@@ -15,6 +15,8 @@ namespace SGFramework
 	{
 		enum Enum : ushort
 		{
+			//Windows(XInput) key list
+#if defined(SGF_PLATFORM_WINDOWS)
 			A = 0x1000,				//Aボタン
 			B = 0x2000,				//Bボタン
 			X = 0x4000,				//Xボタン
@@ -33,6 +35,7 @@ namespace SGFramework
 			//XboxOne専用------------------------------------------------------
 			Menu = 0x10,			//メニューボタン(Startボタン)
 			View = 0x20,				//ビューボタン(Backボタン)
+#endif
 		};
 	};
 }

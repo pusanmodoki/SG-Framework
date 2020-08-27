@@ -42,7 +42,10 @@ ipch/
 
 # Build results
 [Dd]ebug/
+[Dd]ebugInReleaseWinDx/
+[Dd]ebugWinDx/
 [Rr]elease/
+[Rr]eleaseWinDx/
 build/
 [Bb]in/
 [Oo]bj/

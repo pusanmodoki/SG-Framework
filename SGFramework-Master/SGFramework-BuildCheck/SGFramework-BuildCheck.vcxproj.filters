@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Original source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Framework source">
+      <UniqueIdentifier>{a264cb20-6144-42c7-a016-370f0e593fe8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\02_Variables">
+      <UniqueIdentifier>{32f3ecaa-4b86-492f-b260-40b5cee29da3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\02_Variables\MacroAndUsing">
+      <UniqueIdentifier>{f7e0e10e-d2d0-4ce2-96de-a33cfb3d2f5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\02_Variables\Atomic">
+      <UniqueIdentifier>{e8e92fac-4038-4f97-9caf-77b35ffe6213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\02_Variables\CharacteCode">
+      <UniqueIdentifier>{02863fac-9a8f-4e1c-a0f4-d740fc0adbe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\02_Variables\Color">
+      <UniqueIdentifier>{c31c8944-12b2-4a0c-ab87-b742ba6fe045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\02_Variables\ConstVariables">
+      <UniqueIdentifier>{0096201a-224d-4338-9ff6-3ce482b1c7fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\02_Variables\Exception">
+      <UniqueIdentifier>{307bf354-a177-461c-94b9-30ee9f2b481d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\02_Variables\InputCode">
+      <UniqueIdentifier>{d0173195-238f-4e91-8d7f-00979fdae43e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\02_Variables\Stringf">
+      <UniqueIdentifier>{addc594b-7af2-4f8c-bdb1-b76a5df5ce9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\02_Variables\LayerAndTag-n">
+      <UniqueIdentifier>{f7f10fe7-8398-495e-b679-4251995a147d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\02_Variables\ReadElement">
+      <UniqueIdentifier>{e3a1089d-dcd5-48c4-b3d4-bce4418ac000}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>Original source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SGFramework-Master_ToExe\02_Variables\CharacterCode\CharacterCode.cpp">
+      <Filter>Framework source\02_Variables\CharacteCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SGFramework-Master_ToExe\02_Variables\ConstVariables\ConstVariables.cpp">
+      <Filter>Framework source\02_Variables\ConstVariables</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Atomic\Atomic.hpp">
+      <Filter>Framework source\02_Variables\Atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\CharacterCode\CharacterCode.hpp">
+      <Filter>Framework source\02_Variables\CharacteCode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Color\Color.hpp">
+      <Filter>Framework source\02_Variables\Color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\Exception.hpp">
+      <Filter>Framework source\02_Variables\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\InputCode\InputCode.hpp">
+      <Filter>Framework source\02_Variables\InputCode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\InputCode\JoystickCode.hpp">
+      <Filter>Framework source\02_Variables\InputCode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\InputCode\KeyBordCode.hpp">
+      <Filter>Framework source\02_Variables\InputCode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\InputCode\MouseCode.hpp">
+      <Filter>Framework source\02_Variables\InputCode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\MacroAndUsing\MacroAndUsing.hpp">
+      <Filter>Framework source\02_Variables\MacroAndUsing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Variables.hpp">
+      <Filter>Framework source\02_Variables</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\Stringf.hpp">
+      <Filter>Framework source\02_Variables\Stringf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfConvert.hpp">
+      <Filter>Framework source\02_Variables\Stringf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfOtherFunctions.hpp">
+      <Filter>Framework source\02_Variables\Stringf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfTo.hpp">
+      <Filter>Framework source\02_Variables\Stringf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfUsingAndStructure.hpp">
+      <Filter>Framework source\02_Variables\Stringf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\ReadElement\ReadElement.hpp">
+      <Filter>Framework source\02_Variables\ReadElement</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionBacktrace.hpp">
+      <Filter>Framework source\02_Variables\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\Header.h">
+      <Filter>Framework source\02_Variables\Exception</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

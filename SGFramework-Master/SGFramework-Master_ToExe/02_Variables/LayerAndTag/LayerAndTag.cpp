@@ -10,7 +10,7 @@
 namespace SGFramework
 {
 	//Layer名マップ
-	std::unordered_map<std::wstring, Layer> Layer::m_layers;
+	std::unordered_map<std::wstring, Layer> Layer::m_layersKeyName;
 	//Layer名マップ
 	std::unordered_map<uint, Layer> Layer::m_layersKeyID;
 	//LayerHitTable

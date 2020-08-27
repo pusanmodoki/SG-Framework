@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="01_LibraryImport">
-      <UniqueIdentifier>{5cc44d1d-8a4d-430d-9c49-e8cbfffca689}</UniqueIdentifier>
-    </Filter>
     <Filter Include="03_MathAF">
       <UniqueIdentifier>{56ce0350-c7cc-434f-ab8b-b77e7754a6a8}</UniqueIdentifier>
     </Filter>
@@ -268,14 +265,11 @@
     <Filter Include="02_Variables\Window">
       <UniqueIdentifier>{ceb1d72a-c946-4ea8-89c7-12963109c1a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01_LibraryImport">
+      <UniqueIdentifier>{6c2092d4-ca67-4bff-b642-50288259256f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="01_LibraryImport\GameClassImport.hpp">
-      <Filter>01_LibraryImport</Filter>
-    </ClInclude>
-    <ClInclude Include="01_LibraryImport\LibraryImport.hpp">
-      <Filter>01_LibraryImport</Filter>
-    </ClInclude>
     <ClInclude Include="02_CustomVariable\Atomic\Atomic.hpp">
       <Filter>02_Variables\Atomic</Filter>
     </ClInclude>
@@ -356,15 +350,6 @@
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Singleton\Singleton.hpp">
       <Filter>02_Variables\Singleton</Filter>
-    </ClInclude>
-    <ClInclude Include="02_CustomVariable\String\SGString.hpp">
-      <Filter>02_Variables\String</Filter>
-    </ClInclude>
-    <ClInclude Include="02_CustomVariable\String\StdStringFunction.hpp">
-      <Filter>02_Variables\String</Filter>
-    </ClInclude>
-    <ClInclude Include="02_CustomVariable\String\String.hpp">
-      <Filter>02_Variables\String</Filter>
     </ClInclude>
     <ClInclude Include="02_CustomVariable\Time\TimeProcessing.hpp">
       <Filter>02_Variables\Time</Filter>
@@ -736,6 +721,18 @@
     <ClInclude Include="02_CustomVariable\Variables.hpp">
       <Filter>02_Variables</Filter>
     </ClInclude>
+    <ClInclude Include="02_CustomVariable\String\StringF.hpp">
+      <Filter>02_Variables\String</Filter>
+    </ClInclude>
+    <ClInclude Include="02_CustomVariable\String\SGString.hpp">
+      <Filter>02_Variables\String</Filter>
+    </ClInclude>
+    <ClInclude Include="01_LibraryImport\GameClassImport.hpp">
+      <Filter>01_LibraryImport</Filter>
+    </ClInclude>
+    <ClInclude Include="01_LibraryImport\LibraryImport.hpp">
+      <Filter>01_LibraryImport</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="02_CustomVariable\CharacterCode\CharacterCode.cpp">
@@ -749,9 +746,6 @@
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Random\Random.cpp">
       <Filter>02_Variables\Random</Filter>
-    </ClCompile>
-    <ClCompile Include="02_CustomVariable\String\SGString.cpp">
-      <Filter>02_Variables\String</Filter>
     </ClCompile>
     <ClCompile Include="02_CustomVariable\Time\TimeStaticVariable.cpp">
       <Filter>02_Variables\Time</Filter>
@@ -938,6 +932,9 @@
     </ClCompile>
     <ClCompile Include="02_CustomVariable\ConstVariables\ConstVariables.cpp">
       <Filter>02_Variables\ConstVariables</Filter>
+    </ClCompile>
+    <ClCompile Include="02_CustomVariable\String\SGString.cpp">
+      <Filter>02_Variables\String</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
