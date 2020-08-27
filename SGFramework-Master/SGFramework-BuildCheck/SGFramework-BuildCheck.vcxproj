@@ -201,6 +201,7 @@
   <ItemGroup>
     <ClCompile Include="..\SGFramework-Master_ToExe\02_Variables\CharacterCode\CharacterCode.cpp" />
     <ClCompile Include="..\SGFramework-Master_ToExe\02_Variables\ConstVariables\ConstVariables.cpp" />
+    <ClCompile Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionBacktrace.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>

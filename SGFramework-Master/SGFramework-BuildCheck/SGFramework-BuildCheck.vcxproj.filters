@@ -52,6 +52,9 @@
     <ClCompile Include="..\SGFramework-Master_ToExe\02_Variables\ConstVariables\ConstVariables.cpp">
       <Filter>Framework source\02_Variables\ConstVariables</Filter>
     </ClCompile>
+    <ClCompile Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionBacktrace.cpp">
+      <Filter>Framework source\02_Variables\Exception</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Atomic\Atomic.hpp">

@@ -3,6 +3,7 @@
 #include <windows.h>
 #include <stdlib.h>
 #include <dbghelp.h>
+#include <stdlib.h>
 #include <string>
 #elif __GNUC__
 #include <execinfo.h>
