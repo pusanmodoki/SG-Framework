@@ -202,15 +202,18 @@
     <ClCompile Include="..\SGFramework-Master_ToExe\02_Variables\CharacterCode\CharacterCode.cpp" />
     <ClCompile Include="..\SGFramework-Master_ToExe\02_Variables\ConstVariables\ConstVariables.cpp" />
     <ClCompile Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionBacktrace.cpp" />
+    <ClCompile Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionWindowWin64.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Atomic\Atomic.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\CharacterCode\CharacterCode.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Color\Color.hpp" />
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\BaseException.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\Exception.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionBacktrace.hpp" />
-    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\Header.h" />
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionDeriveds.hpp" />
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionWindow.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\InputCode\InputCode.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\InputCode\JoystickCode.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\InputCode\KeyBordCode.hpp" />

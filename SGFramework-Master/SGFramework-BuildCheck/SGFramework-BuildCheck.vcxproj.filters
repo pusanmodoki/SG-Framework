@@ -55,6 +55,9 @@
     <ClCompile Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionBacktrace.cpp">
       <Filter>Framework source\02_Variables\Exception</Filter>
     </ClCompile>
+    <ClCompile Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionWindowWin64.cpp">
+      <Filter>Framework source\02_Variables\Exception</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Atomic\Atomic.hpp">
@@ -65,9 +68,6 @@
     </ClInclude>
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Color\Color.hpp">
       <Filter>Framework source\02_Variables\Color</Filter>
-    </ClInclude>
-    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\Exception.hpp">
-      <Filter>Framework source\02_Variables\Exception</Filter>
     </ClInclude>
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\InputCode\InputCode.hpp">
       <Filter>Framework source\02_Variables\InputCode</Filter>
@@ -108,7 +108,16 @@
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionBacktrace.hpp">
       <Filter>Framework source\02_Variables\Exception</Filter>
     </ClInclude>
-    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\Header.h">
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionDeriveds.hpp">
+      <Filter>Framework source\02_Variables\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\BaseException.hpp">
+      <Filter>Framework source\02_Variables\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\Exception.hpp">
+      <Filter>Framework source\02_Variables\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionWindow.hpp">
       <Filter>Framework source\02_Variables\Exception</Filter>
     </ClInclude>
   </ItemGroup>

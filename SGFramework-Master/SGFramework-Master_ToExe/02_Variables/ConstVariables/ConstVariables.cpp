@@ -1,5 +1,6 @@
 /*----------------------------------------------------------------------------------
-02_Variable内のconst static変数を定義するConstVariables.cpp
+<ConstVariables.cpp> contents->02_Variable内のconst static変数
+制作者: Shota Uemura
 ------------------------------------------------------------------------------------*/
 #include "../Color/Color.hpp"
 

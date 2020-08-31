@@ -1,5 +1,6 @@
 /*----------------------------------------------------------------------------------
-ファイルの文字コード変換定数を列挙するCharacterCode namespace
+<CharacterCode.cpp> contents->ファイルの文字コード変換定数を列挙するCharacterCode namespace
+制作者: Shota Uemura
 ------------------------------------------------------------------------------------*/
 #include "CharacterCode.hpp"
 

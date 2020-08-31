@@ -81,6 +81,9 @@ using, 定数などを記述するMacroAndUsing.h
 #define TRY_CATCH_ON_DEBUG(tryBlock, catchBlock) tryBlock;
 #endif
 
+//Windows Version
+#if defined(SGF_PLATFORM_WINDOWS) 
+
 //SGFrameworkが使用するメッセージの最初の番号
 #define WM_SGFRAMEWORK_BEGIN (WM_APP + 0x2000)
 //SGFrameworkが使用するInput用メッセージ
@@ -91,8 +94,16 @@ using, 定数などを記述するMacroAndUsing.h
 #define WM_SGFRAMEWORK_INVALID_MESSAGE (WM_SGFRAMEWORK_BEGIN + 2)
 //SGFrameworkが使用するImguiメッセージ
 #define WM_SGFRAMEWORK_UPDATE_GUI (WM_SGFRAMEWORK_BEGIN + 3)
+//SGFrameworkが使用するExceptionWindow Closeメッセージ
+#define WM_SGFRAMEWORK_CLOSE_EXCEPTION_WINDOW (WM_SGFRAMEWORK_BEGIN + 4)
 //SGFrameworkが使用するメッセージ番号の終端
 #define WM_SGFRAMEWORK_END (WM_APP + 0x20010);
+
+//CreateWindow->hMenuに使われるException子ウィンドウ用マスク
+#define CREATE_WINDOW_HMENU_CHILDLEN_MASK_EXCEPTION 0x1000000000000000
+//CREATE_WINDOW_HMENU_CHILDLEN_MASK_EXCEPTIONを用いたID
+#define CREATE_WINDOW_HMENU_VALUE_CHILDLEN_EXCEPTION(value) (reinterpret_cast<HMENU>(0x1000000000000000 | value))
+#endif//Windows Version
 
 //Framework namespace
 namespace SGFramework

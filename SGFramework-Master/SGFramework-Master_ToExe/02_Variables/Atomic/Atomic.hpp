@@ -1,5 +1,6 @@
 /*----------------------------------------------------------------------------------
-std::atomicを操作するAtomic namespaceを記述したAtomic.hpp
+<Atomic.hpp> contents->std::atomicを操作するAtomic namespace
+制作者: Shota Uemura
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_ATOMIC_HPP_
 #define SGFRAMEWORK_HEADER_ATOMIC_HPP_
@@ -406,7 +407,7 @@ namespace SGFramework
 		{
 			static_assert(std::is_convertible_v<CastType, T>, "Only castable type is supported");
 
-			return TRY_CATCH_ON_DEBUG(Divide(atomicIntegral, static_cast<T>(div)), throw);
+			TRY_CATCH_ON_DEBUG(return Divide(atomicIntegral, static_cast<T>(div)), throw);
 		}
 
 		//----------------------------------------------------------------------------------

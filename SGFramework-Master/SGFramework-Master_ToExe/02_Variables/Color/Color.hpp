@@ -1,6 +1,7 @@
 /*----------------------------------------------------------------------------------
-色を扱うカラー structureを記述したColor.hpp
-----------------------------------------------------------------------------------*/
+<Color.hpp> contents->色を扱うカラー structure
+制作者: Shota Uemura
+------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_COLOR_HPP_
 #define SGFRAMEWORK_HEADER_COLOR_HPP_
 #include "../MacroAndUsing/MacroAndUsing.hpp"

@@ -1,5 +1,6 @@
 /*----------------------------------------------------------------------------------
-ファイルの文字コード変換定数を列挙するCharacterCode namespace
+<CharacterCode.hpp> contents->ファイルの文字コード変換定数を列挙するCharacterCode namespace
+制作者: Shota Uemura
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_CHARACTER_CODE_HPP_
 #define SGFRAMEWORK_HEADER_CHARACTER_CODE_HPP_
