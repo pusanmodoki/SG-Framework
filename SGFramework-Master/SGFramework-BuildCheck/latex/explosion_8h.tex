@@ -1,0 +1,112 @@
+\hypertarget{explosion_8h}{}\doxysection{D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/explosion.h 繝輔ぃ繧､繝ｫ}
+\label{explosion_8h}\index{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/explosion.h@{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/explosion.h}}
+
+
+爆発処理関連  
+
+
+{\ttfamily \#include \char`\"{}dx11mathutil.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Dat\+File\+Loader.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Direct\+X\+Math.\+h$>$}\newline
+\doxysubsection*{繧ｯ繝ｩ繧ｹ}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_my_vertex}{My\+Vertex}}
+\item 
+struct \mbox{\hyperlink{struct_my_connect}{My\+Connect}}
+\item 
+struct \mbox{\hyperlink{struct_my_triangle}{My\+Triangle}}
+\end{DoxyCompactItemize}
+\doxysubsection*{髢｢謨ｰ}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{explosion_8h_abfee34b5e9d606f3042704f5bd86a256}{Triangle\+Transforms}} (const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4\+X4 \&mat)
+\item 
+void \mbox{\hyperlink{explosion_8h_a0698588e03541e524c56121af89dd3b2}{Xfile\+To\+Triangle}} (\mbox{\hyperlink{class_dat_file_loader}{Dat\+File\+Loader}} $\ast$datfiledata)
+\item 
+void \mbox{\hyperlink{explosion_8h_aed11f361d9d7d8aeb6dd7f98aa45a912}{Explosion\+Init}} (\mbox{\hyperlink{class_dat_file_loader}{Dat\+File\+Loader}} $\ast$datfiledata)
+\item 
+void \mbox{\hyperlink{explosion_8h_a560f9d84206ebb1eb5a3550a9e0095c0}{Explosion\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 爆発の構+X申+V処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{explosion_8h_afd88aeb9fbda2ffed920d1b5273da2ed}{Explosion\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em 爆発を表`{}画する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{explosion_8h_ad88db9d0a3db238f3acb2773acc96858}{Explosion\+Exit}} ()
+\begin{DoxyCompactList}\small\item\em 爆発処理の後始末 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{隧ｳ隗｣}
+爆発処理関連 
+
+\begin{DoxyNote}{隕壹∴譖ｸ縺閤
+~\newline
+ 
+\end{DoxyNote}
+\begin{DoxyAuthor}{闡苓�}
+
+\end{DoxyAuthor}
+
+
+\doxysubsection{髢｢謨ｰ隧ｳ隗｣}
+\mbox{\Hypertarget{explosion_8h_afd88aeb9fbda2ffed920d1b5273da2ed}\label{explosion_8h_afd88aeb9fbda2ffed920d1b5273da2ed}} 
+\index{explosion.h@{explosion.h}!ExplosionDraw@{ExplosionDraw}}
+\index{ExplosionDraw@{ExplosionDraw}!explosion.h@{explosion.h}}
+\doxysubsubsection{\texorpdfstring{ExplosionDraw()}{ExplosionDraw()}}
+{\footnotesize\ttfamily void Explosion\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+爆発を表`{}画する 
+
+
+\begin{DoxyParams}{蠑墓焚}
+{\em ± & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{explosion_8h_ad88db9d0a3db238f3acb2773acc96858}\label{explosion_8h_ad88db9d0a3db238f3acb2773acc96858}} 
+\index{explosion.h@{explosion.h}!ExplosionExit@{ExplosionExit}}
+\index{ExplosionExit@{ExplosionExit}!explosion.h@{explosion.h}}
+\doxysubsubsection{\texorpdfstring{ExplosionExit()}{ExplosionExit()}}
+{\footnotesize\ttfamily void Explosion\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+爆発処理の後始末 
+
+
+\begin{DoxyParams}{蠑墓焚}
+{\em ± & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{explosion_8h_aed11f361d9d7d8aeb6dd7f98aa45a912}\label{explosion_8h_aed11f361d9d7d8aeb6dd7f98aa45a912}} 
+\index{explosion.h@{explosion.h}!ExplosionInit@{ExplosionInit}}
+\index{ExplosionInit@{ExplosionInit}!explosion.h@{explosion.h}}
+\doxysubsubsection{\texorpdfstring{ExplosionInit()}{ExplosionInit()}}
+{\footnotesize\ttfamily void Explosion\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dat_file_loader}{Dat\+File\+Loader}} $\ast$}]{datfiledata }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{explosion_8h_a560f9d84206ebb1eb5a3550a9e0095c0}\label{explosion_8h_a560f9d84206ebb1eb5a3550a9e0095c0}} 
+\index{explosion.h@{explosion.h}!ExplosionUpdate@{ExplosionUpdate}}
+\index{ExplosionUpdate@{ExplosionUpdate}!explosion.h@{explosion.h}}
+\doxysubsubsection{\texorpdfstring{ExplosionUpdate()}{ExplosionUpdate()}}
+{\footnotesize\ttfamily void Explosion\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+爆発の構+X申+V処理 
+
+
+\begin{DoxyParams}{蠑墓焚}
+{\em ± & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{explosion_8h_abfee34b5e9d606f3042704f5bd86a256}\label{explosion_8h_abfee34b5e9d606f3042704f5bd86a256}} 
+\index{explosion.h@{explosion.h}!TriangleTransforms@{TriangleTransforms}}
+\index{TriangleTransforms@{TriangleTransforms}!explosion.h@{explosion.h}}
+\doxysubsubsection{\texorpdfstring{TriangleTransforms()}{TriangleTransforms()}}
+{\footnotesize\ttfamily void Triangle\+Transforms (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{explosion_8h_a0698588e03541e524c56121af89dd3b2}\label{explosion_8h_a0698588e03541e524c56121af89dd3b2}} 
+\index{explosion.h@{explosion.h}!XfileToTriangle@{XfileToTriangle}}
+\index{XfileToTriangle@{XfileToTriangle}!explosion.h@{explosion.h}}
+\doxysubsubsection{\texorpdfstring{XfileToTriangle()}{XfileToTriangle()}}
+{\footnotesize\ttfamily void Xfile\+To\+Triangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dat_file_loader}{Dat\+File\+Loader}} $\ast$}]{datfiledata }\end{DoxyParamCaption})}
+

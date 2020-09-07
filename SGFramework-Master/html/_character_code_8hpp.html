@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/02_Variables/CharacterCode/CharacterCode.hpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_0cf03c12e51ae64724f6ec73d30b9672.html">02_Variables</a></li><li class="navelem"><a class="el" href="dir_9855e22c783f29832264425a1a84b3c8.html">CharacterCode</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">名前空間</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">CharacterCode.hpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ファイルの文字コード変換定数をプロパティで提供するCharacterCode namespace  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;codecvt&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;locale&gt;</code><br />
+</div>
+<p><a href="_character_code_8hpp_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+名前空間</h2></td></tr>
+<tr class="memitem:namespace_s_g_framework"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework.html">SGFramework</a></td></tr>
+<tr class="memdesc:namespace_s_g_framework"><td class="mdescLeft">&#160;</td><td class="mdescRight">SG-Framework namespace <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_s_g_framework_1_1_character_code"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_character_code.html">SGFramework::CharacterCode</a></td></tr>
+<tr class="memdesc:namespace_s_g_framework_1_1_character_code"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルの文字コード変換定数をプロパティで提供するCharacterCode namespace <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:aa05243475d8e94a2091f5291a6db9552"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_character_code.html#aa05243475d8e94a2091f5291a6db9552">SGFramework::CharacterCode::g_cBomIsUTF8</a> [3] = { 0xEF, 0xBB, 0xBF }</td></tr>
+<tr class="separator:aa05243475d8e94a2091f5291a6db9552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae709fda144176d1807847008024d5f73"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_character_code.html#ae709fda144176d1807847008024d5f73">SGFramework::CharacterCode::g_cBomIsUTF16BE</a> [2] = { 0xFE, 0xFF }</td></tr>
+<tr class="separator:ae709fda144176d1807847008024d5f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba2398dabf1910e4774e2b9cbd47c7cb"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_character_code.html#aba2398dabf1910e4774e2b9cbd47c7cb">SGFramework::CharacterCode::g_cBomIsUTF16LE</a> [2] = { 0xFF, 0xFE }</td></tr>
+<tr class="separator:aba2398dabf1910e4774e2b9cbd47c7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ファイルの文字コード変換定数をプロパティで提供するCharacterCode namespace </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/02_Variables/未実装/Pointer/Pointer.hpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_0cf03c12e51ae64724f6ec73d30b9672.html">02_Variables</a></li><li class="navelem"><a class="el" href="dir_06c5a77703cbb5bfafd4b0eea230505d.html">未実装</a></li><li class="navelem"><a class="el" href="dir_acdf5fd9ea94547b4d34436c56f4e173.html">Pointer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">名前空間</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">Pointer.hpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_garbage_collector_8hpp_source.html">GarbageCollector.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_shared_pointer_8hpp_source.html">SharedPointer.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_unique_pointer_8hpp_source.html">UniquePointer.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_clone_pointer_8hpp_source.html">ClonePointer.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_lock_weak_guard_8hpp_source.html">LockWeakGuard.hpp</a>&quot;</code><br />
+</div>
+<p><a href="_pointer_8hpp_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+名前空間</h2></td></tr>
+<tr class="memitem:namespace_s_g_framework"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework.html">SGFramework</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_s_g_framework_1_1_pointer"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer.html">SGFramework::Pointer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_s_g_framework_1_1_pointer_1_1_make_unique"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_unique.html">SGFramework::Pointer::MakeUnique</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_s_g_framework_1_1_pointer_1_1_make_unique_array"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_unique_array.html">SGFramework::Pointer::MakeUniqueArray</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_s_g_framework_1_1_pointer_1_1_make_single_shared"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_shared.html">SGFramework::Pointer::MakeSingleShared</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared.html">SGFramework::Pointer::MakeMultiShared</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_s_g_framework_1_1_pointer_1_1_make_single_shared_array"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_shared_array.html">SGFramework::Pointer::MakeSingleSharedArray</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared_array"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared_array.html">SGFramework::Pointer::MakeMultiSharedArray</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_s_g_framework_1_1_pointer_1_1_make_single_clone"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone.html">SGFramework::Pointer::MakeSingleClone</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone.html">SGFramework::Pointer::MakeMultiClone</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array.html">SGFramework::Pointer::MakeSingleCloneArray</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array.html">SGFramework::Pointer::MakeMultiCloneArray</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:accbb3c2c59124364e6092f9061143bdd"><td class="memTemplParams" colspan="2">template&lt;class PointerType &gt; </td></tr>
+<tr class="memitem:accbb3c2c59124364e6092f9061143bdd"><td class="memTemplItemLeft" align="right" valign="top">UniquePointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_unique.html#accbb3c2c59124364e6092f9061143bdd">SGFramework::Pointer::MakeUnique::Auto</a> ()</td></tr>
+<tr class="separator:accbb3c2c59124364e6092f9061143bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa15df39140b40ddf8e93e63d2826d1e6"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class... Args&gt; </td></tr>
+<tr class="memitem:aa15df39140b40ddf8e93e63d2826d1e6"><td class="memTemplItemLeft" align="right" valign="top">UniquePointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_unique.html#aa15df39140b40ddf8e93e63d2826d1e6">SGFramework::Pointer::MakeUnique::Auto</a> (Args &amp;... args)</td></tr>
+<tr class="separator:aa15df39140b40ddf8e93e63d2826d1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbbccd2cd073b0bf34d57f1d9dec9d1f"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class... Args&gt; </td></tr>
+<tr class="memitem:afbbccd2cd073b0bf34d57f1d9dec9d1f"><td class="memTemplItemLeft" align="right" valign="top">UniquePointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_unique.html#afbbccd2cd073b0bf34d57f1d9dec9d1f">SGFramework::Pointer::MakeUnique::Auto</a> (const Args &amp;... args)</td></tr>
+<tr class="separator:afbbccd2cd073b0bf34d57f1d9dec9d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e595b8c37ea38d176b2ea2f71dc30e"><td class="memTemplParams" colspan="2">template&lt;class PointerType &gt; </td></tr>
+<tr class="memitem:a27e595b8c37ea38d176b2ea2f71dc30e"><td class="memTemplItemLeft" align="right" valign="top">UniquePointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_unique.html#a27e595b8c37ea38d176b2ea2f71dc30e">SGFramework::Pointer::MakeUnique::Manual</a> ()</td></tr>
+<tr class="separator:a27e595b8c37ea38d176b2ea2f71dc30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f0f1b69d6b5cfadc9af0207a4373642"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class... Args&gt; </td></tr>
+<tr class="memitem:a1f0f1b69d6b5cfadc9af0207a4373642"><td class="memTemplItemLeft" align="right" valign="top">UniquePointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_unique.html#a1f0f1b69d6b5cfadc9af0207a4373642">SGFramework::Pointer::MakeUnique::Manual</a> (Args &amp;... args)</td></tr>
+<tr class="separator:a1f0f1b69d6b5cfadc9af0207a4373642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22c4a27dea3d556a921e359a76e536c"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class... Args&gt; </td></tr>
+<tr class="memitem:af22c4a27dea3d556a921e359a76e536c"><td class="memTemplItemLeft" align="right" valign="top">UniquePointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_unique.html#af22c4a27dea3d556a921e359a76e536c">SGFramework::Pointer::MakeUnique::Manual</a> (const Args &amp;... args)</td></tr>
+<tr class="separator:af22c4a27dea3d556a921e359a76e536c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad6a4121ca963e6825a2c1d8c88e6577"><td class="memTemplParams" colspan="2">template&lt;class PointerType &gt; </td></tr>
+<tr class="memitem:aad6a4121ca963e6825a2c1d8c88e6577"><td class="memTemplItemLeft" align="right" valign="top">UniquePointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_unique_array.html#aad6a4121ca963e6825a2c1d8c88e6577">SGFramework::Pointer::MakeUniqueArray::Auto</a> (uint size)</td></tr>
+<tr class="separator:aad6a4121ca963e6825a2c1d8c88e6577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f67d8a4dd43e7964a53cfc48db8a76b"><td class="memTemplParams" colspan="2">template&lt;class PointerType &gt; </td></tr>
+<tr class="memitem:a0f67d8a4dd43e7964a53cfc48db8a76b"><td class="memTemplItemLeft" align="right" valign="top">UniquePointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_unique_array.html#a0f67d8a4dd43e7964a53cfc48db8a76b">SGFramework::Pointer::MakeUniqueArray::Manual</a> (uint size)</td></tr>
+<tr class="separator:a0f67d8a4dd43e7964a53cfc48db8a76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8583bc19aff66a4fd1ad69943439e9d7"><td class="memTemplParams" colspan="2">template&lt;class PointerType &gt; </td></tr>
+<tr class="memitem:a8583bc19aff66a4fd1ad69943439e9d7"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_shared.html#a8583bc19aff66a4fd1ad69943439e9d7">SGFramework::Pointer::MakeSingleShared::Auto</a> ()</td></tr>
+<tr class="separator:a8583bc19aff66a4fd1ad69943439e9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a397d1fae75ec3adede5dc6863f1c1aea"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class... Args&gt; </td></tr>
+<tr class="memitem:a397d1fae75ec3adede5dc6863f1c1aea"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_shared.html#a397d1fae75ec3adede5dc6863f1c1aea">SGFramework::Pointer::MakeSingleShared::Auto</a> (Args &amp;... args)</td></tr>
+<tr class="separator:a397d1fae75ec3adede5dc6863f1c1aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d11a82f03be7e02ce1e7600c59fa65"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class... Args&gt; </td></tr>
+<tr class="memitem:a06d11a82f03be7e02ce1e7600c59fa65"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_shared.html#a06d11a82f03be7e02ce1e7600c59fa65">SGFramework::Pointer::MakeSingleShared::Auto</a> (const Args &amp;... args)</td></tr>
+<tr class="separator:a06d11a82f03be7e02ce1e7600c59fa65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab323174881bd0044d156ff9369cdce6a"><td class="memTemplParams" colspan="2">template&lt;class PointerType &gt; </td></tr>
+<tr class="memitem:ab323174881bd0044d156ff9369cdce6a"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_shared.html#ab323174881bd0044d156ff9369cdce6a">SGFramework::Pointer::MakeSingleShared::Manual</a> ()</td></tr>
+<tr class="separator:ab323174881bd0044d156ff9369cdce6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a155a9feb2e8605508b7206bd139523c5"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class... Args&gt; </td></tr>
+<tr class="memitem:a155a9feb2e8605508b7206bd139523c5"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_shared.html#a155a9feb2e8605508b7206bd139523c5">SGFramework::Pointer::MakeSingleShared::Manual</a> (Args &amp;... args)</td></tr>
+<tr class="separator:a155a9feb2e8605508b7206bd139523c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab505028905bd0329e7ac098272e9c5d7"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class... Args&gt; </td></tr>
+<tr class="memitem:ab505028905bd0329e7ac098272e9c5d7"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_shared.html#ab505028905bd0329e7ac098272e9c5d7">SGFramework::Pointer::MakeSingleShared::Manual</a> (const Args &amp;... args)</td></tr>
+<tr class="separator:ab505028905bd0329e7ac098272e9c5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f9178ea4b386c14075c9ed43d60c702"><td class="memTemplParams" colspan="2">template&lt;class PointerType &gt; </td></tr>
+<tr class="memitem:a4f9178ea4b386c14075c9ed43d60c702"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared.html#a4f9178ea4b386c14075c9ed43d60c702">SGFramework::Pointer::MakeMultiShared::Auto</a> ()</td></tr>
+<tr class="separator:a4f9178ea4b386c14075c9ed43d60c702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac27a7374a67d142f93852b15567c321b"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class... Args&gt; </td></tr>
+<tr class="memitem:ac27a7374a67d142f93852b15567c321b"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared.html#ac27a7374a67d142f93852b15567c321b">SGFramework::Pointer::MakeMultiShared::Auto</a> (Args &amp;... args)</td></tr>
+<tr class="separator:ac27a7374a67d142f93852b15567c321b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001868ba051cdacc40693202499f97a1"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class... Args&gt; </td></tr>
+<tr class="memitem:a001868ba051cdacc40693202499f97a1"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared.html#a001868ba051cdacc40693202499f97a1">SGFramework::Pointer::MakeMultiShared::Auto</a> (const Args &amp;... args)</td></tr>
+<tr class="separator:a001868ba051cdacc40693202499f97a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa21bc2f1671d91d2bf63cc9fb83291b"><td class="memTemplParams" colspan="2">template&lt;class PointerType &gt; </td></tr>
+<tr class="memitem:afa21bc2f1671d91d2bf63cc9fb83291b"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared.html#afa21bc2f1671d91d2bf63cc9fb83291b">SGFramework::Pointer::MakeMultiShared::Manual</a> ()</td></tr>
+<tr class="separator:afa21bc2f1671d91d2bf63cc9fb83291b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e5ac2e98c37e9b3265f28ed7b43655"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class... Args&gt; </td></tr>
+<tr class="memitem:a25e5ac2e98c37e9b3265f28ed7b43655"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared.html#a25e5ac2e98c37e9b3265f28ed7b43655">SGFramework::Pointer::MakeMultiShared::Manual</a> (Args &amp;... args)</td></tr>
+<tr class="separator:a25e5ac2e98c37e9b3265f28ed7b43655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96317b0e1050053de3529f0e6c3c045f"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class... Args&gt; </td></tr>
+<tr class="memitem:a96317b0e1050053de3529f0e6c3c045f"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared.html#a96317b0e1050053de3529f0e6c3c045f">SGFramework::Pointer::MakeMultiShared::Manual</a> (const Args &amp;... args)</td></tr>
+<tr class="separator:a96317b0e1050053de3529f0e6c3c045f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4c1076f01813f74bc2e5aa4fea67863"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class... Args&gt; </td></tr>
+<tr class="memitem:ad4c1076f01813f74bc2e5aa4fea67863"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_shared_array.html#ad4c1076f01813f74bc2e5aa4fea67863">SGFramework::Pointer::MakeSingleSharedArray::Auto</a> (uint size)</td></tr>
+<tr class="separator:ad4c1076f01813f74bc2e5aa4fea67863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8dccf017d7603414538b22109bc96a7"><td class="memTemplParams" colspan="2">template&lt;class PointerType &gt; </td></tr>
+<tr class="memitem:aa8dccf017d7603414538b22109bc96a7"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_shared_array.html#aa8dccf017d7603414538b22109bc96a7">SGFramework::Pointer::MakeSingleSharedArray::Manual</a> (uint size)</td></tr>
+<tr class="separator:aa8dccf017d7603414538b22109bc96a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a81b41b724ee7b8151ab41b72d8d5ed"><td class="memTemplParams" colspan="2">template&lt;class PointerType &gt; </td></tr>
+<tr class="memitem:a4a81b41b724ee7b8151ab41b72d8d5ed"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared_array.html#a4a81b41b724ee7b8151ab41b72d8d5ed">SGFramework::Pointer::MakeMultiSharedArray::Auto</a> (uint size)</td></tr>
+<tr class="separator:a4a81b41b724ee7b8151ab41b72d8d5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83120f1dee2d389ecb67717383648ff5"><td class="memTemplParams" colspan="2">template&lt;class PointerType &gt; </td></tr>
+<tr class="memitem:a83120f1dee2d389ecb67717383648ff5"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared_array.html#a83120f1dee2d389ecb67717383648ff5">SGFramework::Pointer::MakeMultiSharedArray::Manual</a> (uint size)</td></tr>
+<tr class="separator:a83120f1dee2d389ecb67717383648ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b37e8bdd648c7ffbe147fd6696b6cb4"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a1b37e8bdd648c7ffbe147fd6696b6cb4"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone.html#a1b37e8bdd648c7ffbe147fd6696b6cb4">SGFramework::Pointer::MakeSingleClone::Auto</a> (const CloneBaseType *cloneSourcePointer)</td></tr>
+<tr class="separator:a1b37e8bdd648c7ffbe147fd6696b6cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f2c43bf9ef43b17c1fbf99371fc243c"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a7f2c43bf9ef43b17c1fbf99371fc243c"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone.html#a7f2c43bf9ef43b17c1fbf99371fc243c">SGFramework::Pointer::MakeSingleClone::Auto</a> (const UniquePointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a7f2c43bf9ef43b17c1fbf99371fc243c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e500da301c468b754eba268d8aa6d0a"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a5e500da301c468b754eba268d8aa6d0a"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone.html#a5e500da301c468b754eba268d8aa6d0a">SGFramework::Pointer::MakeSingleClone::Auto</a> (const SharedPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a5e500da301c468b754eba268d8aa6d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8e0008472ceb524f61921614350b83f"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:ab8e0008472ceb524f61921614350b83f"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone.html#ab8e0008472ceb524f61921614350b83f">SGFramework::Pointer::MakeSingleClone::Auto</a> (WeakPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:ab8e0008472ceb524f61921614350b83f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb08430d403c5e720fc41698a2c9b356"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:adb08430d403c5e720fc41698a2c9b356"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone.html#adb08430d403c5e720fc41698a2c9b356">SGFramework::Pointer::MakeSingleClone::Auto</a> (const CloneSharedPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:adb08430d403c5e720fc41698a2c9b356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a869682996066ae74d2791f1e551b5a50"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a869682996066ae74d2791f1e551b5a50"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone.html#a869682996066ae74d2791f1e551b5a50">SGFramework::Pointer::MakeSingleClone::Auto</a> (CloneWeakPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a869682996066ae74d2791f1e551b5a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7943838a9b2eabb437b873b808528f4"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:ae7943838a9b2eabb437b873b808528f4"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone.html#ae7943838a9b2eabb437b873b808528f4">SGFramework::Pointer::MakeSingleClone::Manual</a> (const CloneBaseType *cloneSourcePointer)</td></tr>
+<tr class="separator:ae7943838a9b2eabb437b873b808528f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c03911a81db43638ad5a465ce6a6887"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a9c03911a81db43638ad5a465ce6a6887"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone.html#a9c03911a81db43638ad5a465ce6a6887">SGFramework::Pointer::MakeSingleClone::Manual</a> (const UniquePointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a9c03911a81db43638ad5a465ce6a6887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6790f6756ebb381a088fc6a2d158c433"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a6790f6756ebb381a088fc6a2d158c433"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone.html#a6790f6756ebb381a088fc6a2d158c433">SGFramework::Pointer::MakeSingleClone::Manual</a> (const SharedPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a6790f6756ebb381a088fc6a2d158c433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b203cdc0f2a59f23b98947216c2d95"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a49b203cdc0f2a59f23b98947216c2d95"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone.html#a49b203cdc0f2a59f23b98947216c2d95">SGFramework::Pointer::MakeSingleClone::Manual</a> (WeakPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a49b203cdc0f2a59f23b98947216c2d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a81d27e959e9d1ac913b661cb4041c"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a18a81d27e959e9d1ac913b661cb4041c"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone.html#a18a81d27e959e9d1ac913b661cb4041c">SGFramework::Pointer::MakeSingleClone::Manual</a> (const CloneSharedPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a18a81d27e959e9d1ac913b661cb4041c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e7d8f3d20111a13defe2bfd7405f7b"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a44e7d8f3d20111a13defe2bfd7405f7b"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone.html#a44e7d8f3d20111a13defe2bfd7405f7b">SGFramework::Pointer::MakeSingleClone::Manual</a> (CloneWeakPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a44e7d8f3d20111a13defe2bfd7405f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa23906413d3bf502f80f6e081c6b2713"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:aa23906413d3bf502f80f6e081c6b2713"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone.html#aa23906413d3bf502f80f6e081c6b2713">SGFramework::Pointer::MakeMultiClone::Auto</a> (const CloneBaseType *cloneSourcePointer)</td></tr>
+<tr class="separator:aa23906413d3bf502f80f6e081c6b2713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ebbde9c49710d5b48f6b57adef6505"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a89ebbde9c49710d5b48f6b57adef6505"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone.html#a89ebbde9c49710d5b48f6b57adef6505">SGFramework::Pointer::MakeMultiClone::Auto</a> (const UniquePointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a89ebbde9c49710d5b48f6b57adef6505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14dd629cdfe432a232a7f4dd6bf6daac"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a14dd629cdfe432a232a7f4dd6bf6daac"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone.html#a14dd629cdfe432a232a7f4dd6bf6daac">SGFramework::Pointer::MakeMultiClone::Auto</a> (const SharedPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a14dd629cdfe432a232a7f4dd6bf6daac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72179f89a7b0474aba442acbac6c7487"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a72179f89a7b0474aba442acbac6c7487"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone.html#a72179f89a7b0474aba442acbac6c7487">SGFramework::Pointer::MakeMultiClone::Auto</a> (WeakPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a72179f89a7b0474aba442acbac6c7487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a681ab9b47f508b1cf80671d7b4635736"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a681ab9b47f508b1cf80671d7b4635736"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone.html#a681ab9b47f508b1cf80671d7b4635736">SGFramework::Pointer::MakeMultiClone::Auto</a> (const CloneSharedPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a681ab9b47f508b1cf80671d7b4635736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5855c92323d7488274a06419cef332ff"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a5855c92323d7488274a06419cef332ff"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone.html#a5855c92323d7488274a06419cef332ff">SGFramework::Pointer::MakeMultiClone::Auto</a> (CloneWeakPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a5855c92323d7488274a06419cef332ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96aa6b2a9ebb6c64a254cfa8fb56893"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:ae96aa6b2a9ebb6c64a254cfa8fb56893"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone.html#ae96aa6b2a9ebb6c64a254cfa8fb56893">SGFramework::Pointer::MakeMultiClone::Manual</a> (const CloneBaseType *cloneSourcePointer)</td></tr>
+<tr class="separator:ae96aa6b2a9ebb6c64a254cfa8fb56893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae85b9fb6a5fea95098aff7b23242d017"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:ae85b9fb6a5fea95098aff7b23242d017"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone.html#ae85b9fb6a5fea95098aff7b23242d017">SGFramework::Pointer::MakeMultiClone::Manual</a> (const UniquePointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:ae85b9fb6a5fea95098aff7b23242d017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e332d7a794a7c2595f4edc4b61c77c"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a26e332d7a794a7c2595f4edc4b61c77c"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone.html#a26e332d7a794a7c2595f4edc4b61c77c">SGFramework::Pointer::MakeMultiClone::Manual</a> (const SharedPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a26e332d7a794a7c2595f4edc4b61c77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fa36be5f9aa307b3d0189df3b50ed1f"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a7fa36be5f9aa307b3d0189df3b50ed1f"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone.html#a7fa36be5f9aa307b3d0189df3b50ed1f">SGFramework::Pointer::MakeMultiClone::Manual</a> (WeakPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a7fa36be5f9aa307b3d0189df3b50ed1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a01ccd4f4946fa9b63aabf53e2cb81c"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a6a01ccd4f4946fa9b63aabf53e2cb81c"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone.html#a6a01ccd4f4946fa9b63aabf53e2cb81c">SGFramework::Pointer::MakeMultiClone::Manual</a> (const CloneSharedPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a6a01ccd4f4946fa9b63aabf53e2cb81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80699d7812ea5a3ee09d187dce1a5c3c"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a80699d7812ea5a3ee09d187dce1a5c3c"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone.html#a80699d7812ea5a3ee09d187dce1a5c3c">SGFramework::Pointer::MakeMultiClone::Manual</a> (CloneWeakPointer&lt; CloneBaseType &gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a80699d7812ea5a3ee09d187dce1a5c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128d3b3c81066d2dd75c0e4709cd7c31"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a128d3b3c81066d2dd75c0e4709cd7c31"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array.html#a128d3b3c81066d2dd75c0e4709cd7c31">SGFramework::Pointer::MakeSingleCloneArray::Auto</a> (const CloneBaseType *cloneSourcePointer, uint arraySize)</td></tr>
+<tr class="separator:a128d3b3c81066d2dd75c0e4709cd7c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa229695cd78c83b89a29fcad9bf2978"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:aaa229695cd78c83b89a29fcad9bf2978"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array.html#aaa229695cd78c83b89a29fcad9bf2978">SGFramework::Pointer::MakeSingleCloneArray::Auto</a> (const UniquePointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:aaa229695cd78c83b89a29fcad9bf2978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c49b0c4ffc8fdd27f1cd3c64767c43"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a71c49b0c4ffc8fdd27f1cd3c64767c43"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array.html#a71c49b0c4ffc8fdd27f1cd3c64767c43">SGFramework::Pointer::MakeSingleCloneArray::Auto</a> (const SharedPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a71c49b0c4ffc8fdd27f1cd3c64767c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e16c13642db76ef04fd1f8dec205797"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a3e16c13642db76ef04fd1f8dec205797"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array.html#a3e16c13642db76ef04fd1f8dec205797">SGFramework::Pointer::MakeSingleCloneArray::Auto</a> (WeakPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a3e16c13642db76ef04fd1f8dec205797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abec1319e30935aa04b609d40b25e6f64"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:abec1319e30935aa04b609d40b25e6f64"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array.html#abec1319e30935aa04b609d40b25e6f64">SGFramework::Pointer::MakeSingleCloneArray::Auto</a> (const CloneSharedPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:abec1319e30935aa04b609d40b25e6f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38872bb6aab51062b024ccb056c107b5"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a38872bb6aab51062b024ccb056c107b5"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array.html#a38872bb6aab51062b024ccb056c107b5">SGFramework::Pointer::MakeSingleCloneArray::Auto</a> (CloneWeakPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a38872bb6aab51062b024ccb056c107b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee75c0fc2817d88814344d3c62fbe491"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:aee75c0fc2817d88814344d3c62fbe491"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array.html#aee75c0fc2817d88814344d3c62fbe491">SGFramework::Pointer::MakeSingleCloneArray::Manual</a> (const CloneBaseType *cloneSourcePointer, uint arraySize)</td></tr>
+<tr class="separator:aee75c0fc2817d88814344d3c62fbe491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06f2b2e9f7176bb7ad641d52348d677"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:ae06f2b2e9f7176bb7ad641d52348d677"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array.html#ae06f2b2e9f7176bb7ad641d52348d677">SGFramework::Pointer::MakeSingleCloneArray::Manual</a> (const UniquePointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:ae06f2b2e9f7176bb7ad641d52348d677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4d099adce20819ae050c60d700aa9e1"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:ad4d099adce20819ae050c60d700aa9e1"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array.html#ad4d099adce20819ae050c60d700aa9e1">SGFramework::Pointer::MakeSingleCloneArray::Manual</a> (const SharedPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:ad4d099adce20819ae050c60d700aa9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2140a27c1de64f6e60bf048074f46e2"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:ab2140a27c1de64f6e60bf048074f46e2"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array.html#ab2140a27c1de64f6e60bf048074f46e2">SGFramework::Pointer::MakeSingleCloneArray::Manual</a> (WeakPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:ab2140a27c1de64f6e60bf048074f46e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5514ab2649a447431dc39298e3574a13"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a5514ab2649a447431dc39298e3574a13"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array.html#a5514ab2649a447431dc39298e3574a13">SGFramework::Pointer::MakeSingleCloneArray::Manual</a> (const CloneSharedPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a5514ab2649a447431dc39298e3574a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f8bf934059f4470ae929fd6d9c8acb"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:ab8f8bf934059f4470ae929fd6d9c8acb"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array.html#ab8f8bf934059f4470ae929fd6d9c8acb">SGFramework::Pointer::MakeSingleCloneArray::Manual</a> (CloneWeakPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:ab8f8bf934059f4470ae929fd6d9c8acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae09308d491ec98d0dc4dd3b3a9eb7561"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:ae09308d491ec98d0dc4dd3b3a9eb7561"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array.html#ae09308d491ec98d0dc4dd3b3a9eb7561">SGFramework::Pointer::MakeMultiCloneArray::Auto</a> (const CloneBaseType *cloneSourcePointer, uint arraySize)</td></tr>
+<tr class="separator:ae09308d491ec98d0dc4dd3b3a9eb7561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3cc9aa00adbf67a8fd1d6ad7aba71f8"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:aa3cc9aa00adbf67a8fd1d6ad7aba71f8"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array.html#aa3cc9aa00adbf67a8fd1d6ad7aba71f8">SGFramework::Pointer::MakeMultiCloneArray::Auto</a> (const UniquePointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:aa3cc9aa00adbf67a8fd1d6ad7aba71f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2209e97ab90ec1304b6cd9a3a097a4eb"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a2209e97ab90ec1304b6cd9a3a097a4eb"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array.html#a2209e97ab90ec1304b6cd9a3a097a4eb">SGFramework::Pointer::MakeMultiCloneArray::Auto</a> (const SharedPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a2209e97ab90ec1304b6cd9a3a097a4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada3ca46e3085eb7e8152d13a3f98815b"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:ada3ca46e3085eb7e8152d13a3f98815b"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array.html#ada3ca46e3085eb7e8152d13a3f98815b">SGFramework::Pointer::MakeMultiCloneArray::Auto</a> (WeakPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:ada3ca46e3085eb7e8152d13a3f98815b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5235f570bd456d90d968f14d09fc82a4"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a5235f570bd456d90d968f14d09fc82a4"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array.html#a5235f570bd456d90d968f14d09fc82a4">SGFramework::Pointer::MakeMultiCloneArray::Auto</a> (const CloneSharedPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a5235f570bd456d90d968f14d09fc82a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0fc00b056ff9c468adb388fb4c5a9d"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a5f0fc00b056ff9c468adb388fb4c5a9d"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array.html#a5f0fc00b056ff9c468adb388fb4c5a9d">SGFramework::Pointer::MakeMultiCloneArray::Auto</a> (CloneWeakPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a5f0fc00b056ff9c468adb388fb4c5a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a642f783e747a4e783d7fedc6b13f9aeb"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a642f783e747a4e783d7fedc6b13f9aeb"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array.html#a642f783e747a4e783d7fedc6b13f9aeb">SGFramework::Pointer::MakeMultiCloneArray::Manual</a> (const CloneBaseType *cloneSourcePointer, uint arraySize)</td></tr>
+<tr class="separator:a642f783e747a4e783d7fedc6b13f9aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe2612e3a38e0d4944993dd42e6acba2"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:abe2612e3a38e0d4944993dd42e6acba2"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array.html#abe2612e3a38e0d4944993dd42e6acba2">SGFramework::Pointer::MakeMultiCloneArray::Manual</a> (const UniquePointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:abe2612e3a38e0d4944993dd42e6acba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb5ede88d05e153c258f1b7571a1b6f"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:aabb5ede88d05e153c258f1b7571a1b6f"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array.html#aabb5ede88d05e153c258f1b7571a1b6f">SGFramework::Pointer::MakeMultiCloneArray::Manual</a> (const SharedPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:aabb5ede88d05e153c258f1b7571a1b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d3c0d519f4743206f7d710a225e060"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:ae8d3c0d519f4743206f7d710a225e060"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array.html#ae8d3c0d519f4743206f7d710a225e060">SGFramework::Pointer::MakeMultiCloneArray::Manual</a> (WeakPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:ae8d3c0d519f4743206f7d710a225e060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7470b2ee491df316ca7abee62c5bb3"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a6f7470b2ee491df316ca7abee62c5bb3"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array.html#a6f7470b2ee491df316ca7abee62c5bb3">SGFramework::Pointer::MakeMultiCloneArray::Manual</a> (const CloneSharedPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a6f7470b2ee491df316ca7abee62c5bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7311026fc8a42f2db5fc07dc9e718d72"><td class="memTemplParams" colspan="2">template&lt;class PointerType , class CloneBaseType &gt; </td></tr>
+<tr class="memitem:a7311026fc8a42f2db5fc07dc9e718d72"><td class="memTemplItemLeft" align="right" valign="top">SharedPointer&lt; PointerType[]&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array.html#a7311026fc8a42f2db5fc07dc9e718d72">SGFramework::Pointer::MakeMultiCloneArray::Manual</a> (CloneWeakPointer&lt; CloneBaseType[]&gt; &amp;cloneSourcePointer)</td></tr>
+<tr class="separator:a7311026fc8a42f2db5fc07dc9e718d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

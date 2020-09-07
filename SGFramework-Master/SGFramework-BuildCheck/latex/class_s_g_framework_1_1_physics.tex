@@ -1,0 +1,250 @@
+\hypertarget{class_s_g_framework_1_1_physics}{}\doxysection{S\+G\+Framework\+::Physics クラス}
+\label{class_s_g_framework_1_1_physics}\index{SGFramework::Physics@{SGFramework::Physics}}
+
+
+{\ttfamily \#include $<$Physics.\+hpp$>$}
+
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_physics_1_1_lock_guard_physics}{Lock\+Guard\+Physics}}
+\end{DoxyCompactItemize}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_physics_a031b87c30beee798e2f8d4108c64bdad}{D\+E\+L\+E\+T\+E\+\_\+\+A\+L\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}} (\mbox{\hyperlink{class_s_g_framework_1_1_physics}{Physics}})
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_s_g_framework_1_1_physics_a4ab26058dbdc452c4a262b55953e55df}{Raycast}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&origin, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&direction, float distance=\mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a8aa59d2395f84daef682a57d41a57178}{Math\+A\+F\+::c\+Infinity}}, \mbox{\hyperlink{struct_s_g_framework_1_1_raycast_hit}{Raycast\+Hit}} $\ast$raycast\+Hit=nullptr, const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&layer\+Mask=\mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}(), bool is\+Multi\+Hit=false)
+\item 
+static bool \mbox{\hyperlink{class_s_g_framework_1_1_physics_abd0d16074cab154a6fb07c6ea90951ba}{Box\+Cast}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&origin, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&direction, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&size, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&rotation, float distance=\mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a8aa59d2395f84daef682a57d41a57178}{Math\+A\+F\+::c\+Infinity}}, \mbox{\hyperlink{struct_s_g_framework_1_1_sweep_hit}{Sweep\+Hit}} $\ast$hit=nullptr, const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&layer\+Mask=\mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}())
+\item 
+static bool \mbox{\hyperlink{class_s_g_framework_1_1_physics_abcb9db7098e195711a89795d690b93af}{Sphere\+Cast}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&origin, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&direction, float radius, float distance=\mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a8aa59d2395f84daef682a57d41a57178}{Math\+A\+F\+::c\+Infinity}}, \mbox{\hyperlink{struct_s_g_framework_1_1_sweep_hit}{Sweep\+Hit}} $\ast$hit=nullptr, const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&layer\+Mask=\mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}())
+\item 
+static bool \mbox{\hyperlink{class_s_g_framework_1_1_physics_a3d3e76e0653769bbfd827d0f1cee0f03}{Capsule\+Cast}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&origin, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&direction, float radius, float height, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&rotation, float distance=\mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a8aa59d2395f84daef682a57d41a57178}{Math\+A\+F\+::c\+Infinity}}, \mbox{\hyperlink{struct_s_g_framework_1_1_sweep_hit}{Sweep\+Hit}} $\ast$hit=nullptr, const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&layer\+Mask=\mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}())
+\item 
+static bool \mbox{\hyperlink{class_s_g_framework_1_1_physics_add37b7e58f0ac76e8c42031815783e97}{Overlap\+Box}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&position, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&rotation, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&size, \mbox{\hyperlink{struct_s_g_framework_1_1_overlap_hit}{Overlap\+Hit}} $\ast$hit=nullptr, const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&layer\+Mask=\mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}())
+\item 
+static bool \mbox{\hyperlink{class_s_g_framework_1_1_physics_a108ec4f782585b3e3a930d10f09f1024}{Overlap\+Sphere}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&position, float radius, \mbox{\hyperlink{struct_s_g_framework_1_1_overlap_hit}{Overlap\+Hit}} $\ast$hit=nullptr, const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&layer\+Mask=\mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}())
+\item 
+static bool \mbox{\hyperlink{class_s_g_framework_1_1_physics_a6f19f8544389769d14602be7c6c6ee33}{Overlap\+Capsule}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&position, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&rotation, float radius, float height, \mbox{\hyperlink{struct_s_g_framework_1_1_overlap_hit}{Overlap\+Hit}} $\ast$hit=nullptr, const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&layer\+Mask=\mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}())
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_physics_a43d461277f3a76e3d5a353f889b16c4d}{get\+Gravity}} ()
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_physics_a83b5b8071ab3eae26a400218069544f9}{set\+Gravity}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&set)
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_physics_a427d95316967404e8146c9d2f43cf30f}{c\+All\+Layers}} = \mbox{\hyperlink{namespace_s_g_framework_1_1_variable_limit_a4e28295c9e1b4be9503f9b15a981f543}{Variable\+Limit\+::c\+Uint\+Max}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_pointer_property}{Pointer\+Property}}$<$ physx\+::\+Px\+Physics $\ast$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_physics_ad78d57273b2822fd10db209481187c7c}{physics\+Factory}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_pointer_property}{Pointer\+Property}}$<$ physx\+::\+Px\+Scene $\ast$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_physics_a02361f7db3ce86184bb99c6c1f88781a}{physics\+Scene}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_pointer_property}{Pointer\+Property}}$<$ physx\+::\+Px\+Controller\+Manager $\ast$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_physics_a811376faa21811e798f7da4904207bb4}{controller\+Manager}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_physics_material}{Physics\+Material}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_physics_a89182a290c38ff465f1e2d4f0a438876}{default\+Physics\+Material}}
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_physics_a23f25bcc02a0e94c2f5a4188496b04d0}{Application}}
+\item 
+struct \mbox{\hyperlink{class_s_g_framework_1_1_physics_ae0d24590e3f2ad748ad54745fdf07d6c}{Contact\+Info}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_physics_a333949ea84b6a659db1fb2709ecb631e}{Base\+Class\+::\+Base\+Rigid\+Body}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_physics_a9ee23f4a4b202eb57b5c4428cf1ad2fc}{Base\+Class\+::\+Base\+Collider}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_physics_a1ee863840cafd77693cc9f22b56529ec}{Rigid\+Body\+Static}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_physics_a8b430cd2420e9b310155f368cc92f4af}{Rigid\+Body\+Dynamic}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_physics_a5c44bcc0dacdde1fd8d3d0a73b40a187}{Box\+Collider}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_physics_ab5aba08524880cc6e05bb71500c7b708}{Capsule\+Collider}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_physics_ac47698a50448820b4c35c041f181dc2f}{Mesh\+Collider}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_physics_a208f1c311dfeb4fad17c5a556721e986}{Plane\+Collider}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_physics_a15793375868d0302266e8d1ca58e3cf2}{Sphere\+Collider}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_abd0d16074cab154a6fb07c6ea90951ba}\label{class_s_g_framework_1_1_physics_abd0d16074cab154a6fb07c6ea90951ba}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!BoxCast@{BoxCast}}
+\index{BoxCast@{BoxCast}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{BoxCast()}{BoxCast()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Physics\+::\+Box\+Cast (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{origin,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{direction,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{size,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{rotation,  }\item[{float}]{distance = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a8aa59d2395f84daef682a57d41a57178}{Math\+A\+F\+::c\+Infinity}}},  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_sweep_hit}{Sweep\+Hit}} $\ast$}]{hit = {\ttfamily nullptr},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&}]{layer\+Mask = {\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a3d3e76e0653769bbfd827d0f1cee0f03}\label{class_s_g_framework_1_1_physics_a3d3e76e0653769bbfd827d0f1cee0f03}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!CapsuleCast@{CapsuleCast}}
+\index{CapsuleCast@{CapsuleCast}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{CapsuleCast()}{CapsuleCast()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Physics\+::\+Capsule\+Cast (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{origin,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{direction,  }\item[{float}]{radius,  }\item[{float}]{height,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{rotation,  }\item[{float}]{distance = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a8aa59d2395f84daef682a57d41a57178}{Math\+A\+F\+::c\+Infinity}}},  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_sweep_hit}{Sweep\+Hit}} $\ast$}]{hit = {\ttfamily nullptr},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&}]{layer\+Mask = {\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a031b87c30beee798e2f8d4108c64bdad}\label{class_s_g_framework_1_1_physics_a031b87c30beee798e2f8d4108c64bdad}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS@{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}}
+\index{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS@{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS()}{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Physics\+::\+D\+E\+L\+E\+T\+E\+\_\+\+A\+L\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_physics}{Physics}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a43d461277f3a76e3d5a353f889b16c4d}\label{class_s_g_framework_1_1_physics_a43d461277f3a76e3d5a353f889b16c4d}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!getGravity@{getGravity}}
+\index{getGravity@{getGravity}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{getGravity()}{getGravity()}}
+{\footnotesize\ttfamily static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Physics\+::get\+Gravity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_add37b7e58f0ac76e8c42031815783e97}\label{class_s_g_framework_1_1_physics_add37b7e58f0ac76e8c42031815783e97}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!OverlapBox@{OverlapBox}}
+\index{OverlapBox@{OverlapBox}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{OverlapBox()}{OverlapBox()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Physics\+::\+Overlap\+Box (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{rotation,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{size,  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_overlap_hit}{Overlap\+Hit}} $\ast$}]{hit = {\ttfamily nullptr},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&}]{layer\+Mask = {\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a6f19f8544389769d14602be7c6c6ee33}\label{class_s_g_framework_1_1_physics_a6f19f8544389769d14602be7c6c6ee33}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!OverlapCapsule@{OverlapCapsule}}
+\index{OverlapCapsule@{OverlapCapsule}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{OverlapCapsule()}{OverlapCapsule()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Physics\+::\+Overlap\+Capsule (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{rotation,  }\item[{float}]{radius,  }\item[{float}]{height,  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_overlap_hit}{Overlap\+Hit}} $\ast$}]{hit = {\ttfamily nullptr},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&}]{layer\+Mask = {\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a108ec4f782585b3e3a930d10f09f1024}\label{class_s_g_framework_1_1_physics_a108ec4f782585b3e3a930d10f09f1024}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!OverlapSphere@{OverlapSphere}}
+\index{OverlapSphere@{OverlapSphere}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{OverlapSphere()}{OverlapSphere()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Physics\+::\+Overlap\+Sphere (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position,  }\item[{float}]{radius,  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_overlap_hit}{Overlap\+Hit}} $\ast$}]{hit = {\ttfamily nullptr},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&}]{layer\+Mask = {\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a4ab26058dbdc452c4a262b55953e55df}\label{class_s_g_framework_1_1_physics_a4ab26058dbdc452c4a262b55953e55df}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!Raycast@{Raycast}}
+\index{Raycast@{Raycast}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{Raycast()}{Raycast()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Physics\+::\+Raycast (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{origin,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{direction,  }\item[{float}]{distance = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a8aa59d2395f84daef682a57d41a57178}{Math\+A\+F\+::c\+Infinity}}},  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_raycast_hit}{Raycast\+Hit}} $\ast$}]{raycast\+Hit = {\ttfamily nullptr},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&}]{layer\+Mask = {\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}()},  }\item[{bool}]{is\+Multi\+Hit = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a83b5b8071ab3eae26a400218069544f9}\label{class_s_g_framework_1_1_physics_a83b5b8071ab3eae26a400218069544f9}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!setGravity@{setGravity}}
+\index{setGravity@{setGravity}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{setGravity()}{setGravity()}}
+{\footnotesize\ttfamily static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Physics\+::set\+Gravity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_abcb9db7098e195711a89795d690b93af}\label{class_s_g_framework_1_1_physics_abcb9db7098e195711a89795d690b93af}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!SphereCast@{SphereCast}}
+\index{SphereCast@{SphereCast}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{SphereCast()}{SphereCast()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Physics\+::\+Sphere\+Cast (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{origin,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{direction,  }\item[{float}]{radius,  }\item[{float}]{distance = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a8aa59d2395f84daef682a57d41a57178}{Math\+A\+F\+::c\+Infinity}}},  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_sweep_hit}{Sweep\+Hit}} $\ast$}]{hit = {\ttfamily nullptr},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask}{Layer\+Mask}} \&}]{layer\+Mask = {\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_layer_mask_ae922e95d7242c799eabaf146c9ffeff3}{Layer\+Mask\+::get\+All\+Layers\+Mask}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a23f25bcc02a0e94c2f5a4188496b04d0}\label{class_s_g_framework_1_1_physics_a23f25bcc02a0e94c2f5a4188496b04d0}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!Application@{Application}}
+\index{Application@{Application}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{Application}{Application}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_application}{Application}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a9ee23f4a4b202eb57b5c4428cf1ad2fc}\label{class_s_g_framework_1_1_physics_a9ee23f4a4b202eb57b5c4428cf1ad2fc}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!BaseClass::BaseCollider@{BaseClass::BaseCollider}}
+\index{BaseClass::BaseCollider@{BaseClass::BaseCollider}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{BaseClass::BaseCollider}{BaseClass::BaseCollider}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider}{Base\+Class\+::\+Base\+Collider}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a333949ea84b6a659db1fb2709ecb631e}\label{class_s_g_framework_1_1_physics_a333949ea84b6a659db1fb2709ecb631e}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!BaseClass::BaseRigidBody@{BaseClass::BaseRigidBody}}
+\index{BaseClass::BaseRigidBody@{BaseClass::BaseRigidBody}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{BaseClass::BaseRigidBody}{BaseClass::BaseRigidBody}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body}{Base\+Class\+::\+Base\+Rigid\+Body}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a5c44bcc0dacdde1fd8d3d0a73b40a187}\label{class_s_g_framework_1_1_physics_a5c44bcc0dacdde1fd8d3d0a73b40a187}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!BoxCollider@{BoxCollider}}
+\index{BoxCollider@{BoxCollider}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{BoxCollider}{BoxCollider}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_box_collider}{Box\+Collider}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_ab5aba08524880cc6e05bb71500c7b708}\label{class_s_g_framework_1_1_physics_ab5aba08524880cc6e05bb71500c7b708}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!CapsuleCollider@{CapsuleCollider}}
+\index{CapsuleCollider@{CapsuleCollider}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{CapsuleCollider}{CapsuleCollider}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_capsule_collider}{Capsule\+Collider}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_ae0d24590e3f2ad748ad54745fdf07d6c}\label{class_s_g_framework_1_1_physics_ae0d24590e3f2ad748ad54745fdf07d6c}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!ContactInfo@{ContactInfo}}
+\index{ContactInfo@{ContactInfo}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{ContactInfo}{ContactInfo}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_ac47698a50448820b4c35c041f181dc2f}\label{class_s_g_framework_1_1_physics_ac47698a50448820b4c35c041f181dc2f}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!MeshCollider@{MeshCollider}}
+\index{MeshCollider@{MeshCollider}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{MeshCollider}{MeshCollider}}
+{\footnotesize\ttfamily friend class Mesh\+Collider\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a208f1c311dfeb4fad17c5a556721e986}\label{class_s_g_framework_1_1_physics_a208f1c311dfeb4fad17c5a556721e986}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!PlaneCollider@{PlaneCollider}}
+\index{PlaneCollider@{PlaneCollider}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{PlaneCollider}{PlaneCollider}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_plane_collider}{Plane\+Collider}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a8b430cd2420e9b310155f368cc92f4af}\label{class_s_g_framework_1_1_physics_a8b430cd2420e9b310155f368cc92f4af}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!RigidBodyDynamic@{RigidBodyDynamic}}
+\index{RigidBodyDynamic@{RigidBodyDynamic}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{RigidBodyDynamic}{RigidBodyDynamic}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic}{Rigid\+Body\+Dynamic}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a1ee863840cafd77693cc9f22b56529ec}\label{class_s_g_framework_1_1_physics_a1ee863840cafd77693cc9f22b56529ec}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!RigidBodyStatic@{RigidBodyStatic}}
+\index{RigidBodyStatic@{RigidBodyStatic}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{RigidBodyStatic}{RigidBodyStatic}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_static}{Rigid\+Body\+Static}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a15793375868d0302266e8d1ca58e3cf2}\label{class_s_g_framework_1_1_physics_a15793375868d0302266e8d1ca58e3cf2}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!SphereCollider@{SphereCollider}}
+\index{SphereCollider@{SphereCollider}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{SphereCollider}{SphereCollider}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_sphere_collider}{Sphere\+Collider}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a427d95316967404e8146c9d2f43cf30f}\label{class_s_g_framework_1_1_physics_a427d95316967404e8146c9d2f43cf30f}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!cAllLayers@{cAllLayers}}
+\index{cAllLayers@{cAllLayers}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{cAllLayers}{cAllLayers}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Physics\+::c\+All\+Layers = \mbox{\hyperlink{namespace_s_g_framework_1_1_variable_limit_a4e28295c9e1b4be9503f9b15a981f543}{Variable\+Limit\+::c\+Uint\+Max}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a811376faa21811e798f7da4904207bb4}\label{class_s_g_framework_1_1_physics_a811376faa21811e798f7da4904207bb4}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!controllerManager@{controllerManager}}
+\index{controllerManager@{controllerManager}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{controllerManager}{controllerManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_pointer_property}{Pointer\+Property}}$<$ physx\+::\+Px\+Controller\+Manager $\ast$ $>$ S\+G\+Framework\+::\+Physics\+::controller\+Manager\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a89182a290c38ff465f1e2d4f0a438876}\label{class_s_g_framework_1_1_physics_a89182a290c38ff465f1e2d4f0a438876}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!defaultPhysicsMaterial@{defaultPhysicsMaterial}}
+\index{defaultPhysicsMaterial@{defaultPhysicsMaterial}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{defaultPhysicsMaterial}{defaultPhysicsMaterial}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_physics_material}{Physics\+Material}} $>$ S\+G\+Framework\+::\+Physics\+::default\+Physics\+Material\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_ad78d57273b2822fd10db209481187c7c}\label{class_s_g_framework_1_1_physics_ad78d57273b2822fd10db209481187c7c}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!physicsFactory@{physicsFactory}}
+\index{physicsFactory@{physicsFactory}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{physicsFactory}{physicsFactory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_pointer_property}{Pointer\+Property}}$<$ physx\+::\+Px\+Physics $\ast$ $>$ S\+G\+Framework\+::\+Physics\+::physics\+Factory\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_physics_a02361f7db3ce86184bb99c6c1f88781a}\label{class_s_g_framework_1_1_physics_a02361f7db3ce86184bb99c6c1f88781a}} 
+\index{SGFramework::Physics@{SGFramework::Physics}!physicsScene@{physicsScene}}
+\index{physicsScene@{physicsScene}!SGFramework::Physics@{SGFramework::Physics}}
+\doxysubsubsection{\texorpdfstring{physicsScene}{physicsScene}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_pointer_property}{Pointer\+Property}}$<$ physx\+::\+Px\+Scene $\ast$ $>$ S\+G\+Framework\+::\+Physics\+::physics\+Scene\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/10\+\_\+\+Physics/\mbox{\hyperlink{_physics_8hpp}{Physics.\+hpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/10\+\_\+\+Physics/\mbox{\hyperlink{_physics_8cpp}{Physics.\+cpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/10\+\_\+\+Physics/\+Physics\+Function/\mbox{\hyperlink{_physics_filter_shader_8hpp}{Physics\+Filter\+Shader.\+hpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/10\+\_\+\+Physics/\+Physics\+Function/\mbox{\hyperlink{_physics_processing_message_8hpp}{Physics\+Processing\+Message.\+hpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/10\+\_\+\+Physics/\mbox{\hyperlink{_physics_raycast_8cpp}{Physics\+Raycast.\+cpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/10\+\_\+\+Physics/\mbox{\hyperlink{_physics_thread_8cpp}{Physics\+Thread.\+cpp}}\end{DoxyCompactItemize}

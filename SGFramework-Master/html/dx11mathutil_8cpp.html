@@ -1,0 +1,1167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/998_DemoApplication/AcademySource/dx11mathutil.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_e0e4c557ebc218887fb43396bcf8db4f.html">998_DemoApplication</a></li><li class="navelem"><a class="el" href="dir_184bc37a952b722a29d3658ce9868392.html">AcademySource</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">dx11mathutil.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;DX11mathutil.h&quot;</code><br />
+<code>#include &quot;memory.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ac10c54fe12ff60d0ca85bafc9e79bc91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#ac10c54fe12ff60d0ca85bafc9e79bc91">DX11MakeWorldMatrix</a> (XMFLOAT4X4 &amp;inoutmat, XMFLOAT3 &amp;angle, XMFLOAT3 &amp;trans)</td></tr>
+<tr class="separator:ac10c54fe12ff60d0ca85bafc9e79bc91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b4d11f10f8042ae045c28518b7fb2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#ac0b4d11f10f8042ae045c28518b7fb2d">DX11Vec3MulMatrix</a> (DirectX::XMFLOAT3 &amp;outvec, const DirectX::XMFLOAT3 &amp;invec, const DirectX::XMFLOAT4X4 &amp;mat)</td></tr>
+<tr class="separator:ac0b4d11f10f8042ae045c28518b7fb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998cb230090838a065b3b6fbeeba23c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a998cb230090838a065b3b6fbeeba23c9">DX11Vec3Cross</a> (DirectX::XMFLOAT3 &amp;outvec, DirectX::XMFLOAT3 &amp;invec1, DirectX::XMFLOAT3 &amp;invec2)</td></tr>
+<tr class="separator:a998cb230090838a065b3b6fbeeba23c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df46e34867e8e32495bbd812de8afd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a6df46e34867e8e32495bbd812de8afd3">DX11Vec3Dot</a> (float &amp;dot, const DirectX::XMFLOAT3 &amp;invec1, const DirectX::XMFLOAT3 &amp;invec2)</td></tr>
+<tr class="separator:a6df46e34867e8e32495bbd812de8afd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf5e7e14db8c1e366d6cbb0e9c573e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#adbf5e7e14db8c1e366d6cbb0e9c573e8">DX11Vec3Normalize</a> (DirectX::XMFLOAT3 &amp;outvec, DirectX::XMFLOAT3 &amp;invec)</td></tr>
+<tr class="separator:adbf5e7e14db8c1e366d6cbb0e9c573e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa49387ed05f17665b316a4f1f747d89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#aaa49387ed05f17665b316a4f1f747d89">DX11MtxIdentity</a> (DirectX::XMFLOAT4X4 &amp;mat)</td></tr>
+<tr class="separator:aaa49387ed05f17665b316a4f1f747d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2befe8578c8c039227788fdb2aace1b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a2befe8578c8c039227788fdb2aace1b1">DX11GetQtfromMatrix</a> (const XMFLOAT4X4 &amp;mat, XMFLOAT4 &amp;qt)</td></tr>
+<tr class="separator:a2befe8578c8c039227788fdb2aace1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd79437746a1f316f0e8108f550f4486"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#abd79437746a1f316f0e8108f550f4486">DX11QtRotationAxis</a> (XMFLOAT4 &amp;qt, XMFLOAT4 &amp;axis, float angle)</td></tr>
+<tr class="separator:abd79437746a1f316f0e8108f550f4486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51ae073b2b35c01cd5fc5ed051637cd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a51ae073b2b35c01cd5fc5ed051637cd0">DX11QtMul</a> (XMFLOAT4 &amp;outqt, const XMFLOAT4 &amp;qt1, const XMFLOAT4 &amp;qt2)</td></tr>
+<tr class="separator:a51ae073b2b35c01cd5fc5ed051637cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a549537740d0e6d7cc13d35a68faccd11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a549537740d0e6d7cc13d35a68faccd11">DX11MtxFromQt</a> (XMFLOAT4X4 &amp;outmtx, const XMFLOAT4 &amp;qt)</td></tr>
+<tr class="separator:a549537740d0e6d7cc13d35a68faccd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8414636bd9df7fb4ce840877f0427135"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a8414636bd9df7fb4ce840877f0427135">DX11MtxTranspose</a> (XMFLOAT4X4 &amp;outmtx, const XMFLOAT4X4 &amp;inmtx)</td></tr>
+<tr class="separator:a8414636bd9df7fb4ce840877f0427135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f73783443395c899697cb8e61c55fbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a0f73783443395c899697cb8e61c55fbf">DX11QtNormalize</a> (XMFLOAT4 &amp;inqt, XMFLOAT4 &amp;outqt)</td></tr>
+<tr class="separator:a0f73783443395c899697cb8e61c55fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b849c948ba15bd1f9466b74cafc22bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a3b849c948ba15bd1f9466b74cafc22bc">DX11Vec4Length</a> (XMFLOAT4 &amp;vec, float &amp;length)</td></tr>
+<tr class="separator:a3b849c948ba15bd1f9466b74cafc22bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b779f3659ce77513f634ad5f66a4e35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a7b779f3659ce77513f634ad5f66a4e35">DX11Vec3Length</a> (XMFLOAT3 &amp;vec, float &amp;length)</td></tr>
+<tr class="separator:a7b779f3659ce77513f634ad5f66a4e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace03a934fe3f356b7724b29344b1084c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#ace03a934fe3f356b7724b29344b1084c">DX11p2pLength</a> (const XMFLOAT3 &amp;p1, const XMFLOAT3 &amp;p2, float &amp;length)</td></tr>
+<tr class="separator:ace03a934fe3f356b7724b29344b1084c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5ad772d733ee559697bdbfdcd99ddb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a5d5ad772d733ee559697bdbfdcd99ddb">DX11MtxTranslation</a> (const XMFLOAT3 &amp;trans, XMFLOAT4X4 &amp;matrix)</td></tr>
+<tr class="separator:a5d5ad772d733ee559697bdbfdcd99ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6e711ef8e11fd06edac100ed500775"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a2e6e711ef8e11fd06edac100ed500775">DX11QtSlerp</a> (const XMFLOAT4 &amp;fromqt, const XMFLOAT4 &amp;toqt, float t, XMFLOAT4 &amp;ansqt)</td></tr>
+<tr class="separator:a2e6e711ef8e11fd06edac100ed500775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66da36ac1f955c55ea96f212062bac0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a66da36ac1f955c55ea96f212062bac0d">DX11QtIdentity</a> (XMFLOAT4 &amp;qt)</td></tr>
+<tr class="separator:a66da36ac1f955c55ea96f212062bac0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93457004707f7e9231917fe90f34fb8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a93457004707f7e9231917fe90f34fb8e">DX11MtxRotationAxis</a> (const XMFLOAT3 &amp;axis, float angle, XMFLOAT4X4 &amp;outmtx)</td></tr>
+<tr class="separator:a93457004707f7e9231917fe90f34fb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1393bd30f121145e42450947ef44b73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#ae1393bd30f121145e42450947ef44b73">DX11MtxMultiply</a> (XMFLOAT4X4 &amp;ansmtx, const XMFLOAT4X4 &amp;p1mtx, const XMFLOAT4X4 &amp;p2mtx)</td></tr>
+<tr class="separator:ae1393bd30f121145e42450947ef44b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac35f78fadf1113657a0a36f02e91c28b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#ac35f78fadf1113657a0a36f02e91c28b">DX11MtxInverse</a> (XMFLOAT4X4 &amp;ansmtx, const XMFLOAT4X4 &amp;mtx)</td></tr>
+<tr class="separator:ac35f78fadf1113657a0a36f02e91c28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17cae4b76acb47ec9c26fa3ba5c43780"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a17cae4b76acb47ec9c26fa3ba5c43780">IsInFrustum</a> (const XMFLOAT3 &amp;pos, const XMFLOAT4X4 &amp;matrix)</td></tr>
+<tr class="separator:a17cae4b76acb47ec9c26fa3ba5c43780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44c0c964619f0a987f382411ed143b67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a44c0c964619f0a987f382411ed143b67">IsInFrustum</a> (const XMFLOAT3 &amp;pos, const XMFLOAT4X4 &amp;matrix, float ans[])</td></tr>
+<tr class="separator:a44c0c964619f0a987f382411ed143b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b0651d02e110e66a29a77f7c026250"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a20b0651d02e110e66a29a77f7c026250">IsInFrustum</a> (const XMFLOAT3 &amp;pos, const XMFLOAT4X4 &amp;matrix, float ans[], <a class="el" href="struct_p_l_a_n_e.html">PLANE</a> *plane)</td></tr>
+<tr class="separator:a20b0651d02e110e66a29a77f7c026250"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951dc3adf58e0effdaa0c16a9c5ce1dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a951dc3adf58e0effdaa0c16a9c5ce1dd">IsInFrustum</a> (const XMFLOAT3 &amp;pos, float radius, const XMFLOAT4X4 &amp;matrix, float ans[], bool canseeflag[], <a class="el" href="struct_p_l_a_n_e.html">PLANE</a> *plane)</td></tr>
+<tr class="separator:a951dc3adf58e0effdaa0c16a9c5ce1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a124657a6944806be85a8fcbe0bc6232f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a124657a6944806be85a8fcbe0bc6232f">GetPlanefromProjectionmatrix</a> (<a class="el" href="struct_p_l_a_n_e.html">PLANE</a> *p, const XMFLOAT4X4 &amp;matrix)</td></tr>
+<tr class="separator:a124657a6944806be85a8fcbe0bc6232f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819aa49fbd3f9436864c4115d03d4675"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a819aa49fbd3f9436864c4115d03d4675">GetPlanefromProjectionmatrixWithNormalize</a> (<a class="el" href="struct_p_l_a_n_e.html">PLANE</a> *p, const XMFLOAT4X4 &amp;matrix)</td></tr>
+<tr class="separator:a819aa49fbd3f9436864c4115d03d4675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e55259933280cbb99e2238f3faadc52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a1e55259933280cbb99e2238f3faadc52">DX11MtxRotationX</a> (float angle, XMFLOAT4X4 &amp;outmtx)</td></tr>
+<tr class="separator:a1e55259933280cbb99e2238f3faadc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb93b86c90eeabffe2684432a4a3332e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#acb93b86c90eeabffe2684432a4a3332e">DX11MtxRotationY</a> (float angle, XMFLOAT4X4 &amp;outmtx)</td></tr>
+<tr class="separator:acb93b86c90eeabffe2684432a4a3332e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53ac29f45e93e976aba2dc61e3958190"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a53ac29f45e93e976aba2dc61e3958190">DX11MtxRotationZ</a> (float angle, XMFLOAT4X4 &amp;outmtx)</td></tr>
+<tr class="separator:a53ac29f45e93e976aba2dc61e3958190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafffcbae2d09df5f5dcdfea418c363d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#aafffcbae2d09df5f5dcdfea418c363d5">DX11MtxScale</a> (float sx, float sy, float sz, XMFLOAT4X4 &amp;outmtx)</td></tr>
+<tr class="separator:aafffcbae2d09df5f5dcdfea418c363d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3084a41fea36cb87e2c4f91407b017"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#a0b3084a41fea36cb87e2c4f91407b017">haltonseq</a> (unsigned int no, unsigned int base)</td></tr>
+<tr class="separator:a0b3084a41fea36cb87e2c4f91407b017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af874991286087dd77ca321df3e64e892"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dx11mathutil_8cpp.html#af874991286087dd77ca321df3e64e892">DX11MatrixIdentity</a> (DirectX::XMFLOAT4X4 &amp;mat)</td></tr>
+<tr class="separator:af874991286087dd77ca321df3e64e892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a2befe8578c8c039227788fdb2aace1b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2befe8578c8c039227788fdb2aace1b1">&#9670;&nbsp;</a></span>DX11GetQtfromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11GetQtfromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>mat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>qt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac10c54fe12ff60d0ca85bafc9e79bc91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac10c54fe12ff60d0ca85bafc9e79bc91">&#9670;&nbsp;</a></span>DX11MakeWorldMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11MakeWorldMatrix </td>
+          <td>(</td>
+          <td class="paramtype">XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>inoutmat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>trans</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af874991286087dd77ca321df3e64e892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af874991286087dd77ca321df3e64e892">&#9670;&nbsp;</a></span>DX11MatrixIdentity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11MatrixIdentity </td>
+          <td>(</td>
+          <td class="paramtype">DirectX::XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>mat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a549537740d0e6d7cc13d35a68faccd11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a549537740d0e6d7cc13d35a68faccd11">&#9670;&nbsp;</a></span>DX11MtxFromQt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11MtxFromQt </td>
+          <td>(</td>
+          <td class="paramtype">XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>outmtx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>qt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa49387ed05f17665b316a4f1f747d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa49387ed05f17665b316a4f1f747d89">&#9670;&nbsp;</a></span>DX11MtxIdentity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11MtxIdentity </td>
+          <td>(</td>
+          <td class="paramtype">DirectX::XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>mat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac35f78fadf1113657a0a36f02e91c28b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac35f78fadf1113657a0a36f02e91c28b">&#9670;&nbsp;</a></span>DX11MtxInverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11MtxInverse </td>
+          <td>(</td>
+          <td class="paramtype">XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>ansmtx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>mtx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1393bd30f121145e42450947ef44b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1393bd30f121145e42450947ef44b73">&#9670;&nbsp;</a></span>DX11MtxMultiply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11MtxMultiply </td>
+          <td>(</td>
+          <td class="paramtype">XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>ansmtx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>p1mtx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>p2mtx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93457004707f7e9231917fe90f34fb8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93457004707f7e9231917fe90f34fb8e">&#9670;&nbsp;</a></span>DX11MtxRotationAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11MtxRotationAxis </td>
+          <td>(</td>
+          <td class="paramtype">const XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>outmtx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e55259933280cbb99e2238f3faadc52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e55259933280cbb99e2238f3faadc52">&#9670;&nbsp;</a></span>DX11MtxRotationX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11MtxRotationX </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>outmtx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb93b86c90eeabffe2684432a4a3332e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb93b86c90eeabffe2684432a4a3332e">&#9670;&nbsp;</a></span>DX11MtxRotationY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11MtxRotationY </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>outmtx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53ac29f45e93e976aba2dc61e3958190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53ac29f45e93e976aba2dc61e3958190">&#9670;&nbsp;</a></span>DX11MtxRotationZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11MtxRotationZ </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>outmtx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafffcbae2d09df5f5dcdfea418c363d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafffcbae2d09df5f5dcdfea418c363d5">&#9670;&nbsp;</a></span>DX11MtxScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11MtxScale </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>sx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>sy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>sz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>outmtx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d5ad772d733ee559697bdbfdcd99ddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d5ad772d733ee559697bdbfdcd99ddb">&#9670;&nbsp;</a></span>DX11MtxTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11MtxTranslation </td>
+          <td>(</td>
+          <td class="paramtype">const XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>trans</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8414636bd9df7fb4ce840877f0427135"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8414636bd9df7fb4ce840877f0427135">&#9670;&nbsp;</a></span>DX11MtxTranspose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11MtxTranspose </td>
+          <td>(</td>
+          <td class="paramtype">XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>outmtx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>inmtx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace03a934fe3f356b7724b29344b1084c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace03a934fe3f356b7724b29344b1084c">&#9670;&nbsp;</a></span>DX11p2pLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11p2pLength </td>
+          <td>(</td>
+          <td class="paramtype">const XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66da36ac1f955c55ea96f212062bac0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66da36ac1f955c55ea96f212062bac0d">&#9670;&nbsp;</a></span>DX11QtIdentity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11QtIdentity </td>
+          <td>(</td>
+          <td class="paramtype">XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>qt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51ae073b2b35c01cd5fc5ed051637cd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51ae073b2b35c01cd5fc5ed051637cd0">&#9670;&nbsp;</a></span>DX11QtMul()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11QtMul </td>
+          <td>(</td>
+          <td class="paramtype">XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>outqt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>qt1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>qt2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f73783443395c899697cb8e61c55fbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f73783443395c899697cb8e61c55fbf">&#9670;&nbsp;</a></span>DX11QtNormalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11QtNormalize </td>
+          <td>(</td>
+          <td class="paramtype">XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>inqt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>outqt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd79437746a1f316f0e8108f550f4486"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd79437746a1f316f0e8108f550f4486">&#9670;&nbsp;</a></span>DX11QtRotationAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11QtRotationAxis </td>
+          <td>(</td>
+          <td class="paramtype">XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>qt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e6e711ef8e11fd06edac100ed500775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e6e711ef8e11fd06edac100ed500775">&#9670;&nbsp;</a></span>DX11QtSlerp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11QtSlerp </td>
+          <td>(</td>
+          <td class="paramtype">const XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>fromqt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>toqt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>ansqt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a998cb230090838a065b3b6fbeeba23c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a998cb230090838a065b3b6fbeeba23c9">&#9670;&nbsp;</a></span>DX11Vec3Cross()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11Vec3Cross </td>
+          <td>(</td>
+          <td class="paramtype">DirectX::XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>outvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DirectX::XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>invec1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DirectX::XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>invec2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6df46e34867e8e32495bbd812de8afd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6df46e34867e8e32495bbd812de8afd3">&#9670;&nbsp;</a></span>DX11Vec3Dot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11Vec3Dot </td>
+          <td>(</td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>dot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DirectX::XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>invec1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DirectX::XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>invec2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b779f3659ce77513f634ad5f66a4e35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b779f3659ce77513f634ad5f66a4e35">&#9670;&nbsp;</a></span>DX11Vec3Length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11Vec3Length </td>
+          <td>(</td>
+          <td class="paramtype">XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0b4d11f10f8042ae045c28518b7fb2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b4d11f10f8042ae045c28518b7fb2d">&#9670;&nbsp;</a></span>DX11Vec3MulMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11Vec3MulMatrix </td>
+          <td>(</td>
+          <td class="paramtype">DirectX::XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>outvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DirectX::XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>invec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DirectX::XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>mat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbf5e7e14db8c1e366d6cbb0e9c573e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbf5e7e14db8c1e366d6cbb0e9c573e8">&#9670;&nbsp;</a></span>DX11Vec3Normalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11Vec3Normalize </td>
+          <td>(</td>
+          <td class="paramtype">DirectX::XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>outvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DirectX::XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>invec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b849c948ba15bd1f9466b74cafc22bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b849c948ba15bd1f9466b74cafc22bc">&#9670;&nbsp;</a></span>DX11Vec4Length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11Vec4Length </td>
+          <td>(</td>
+          <td class="paramtype">XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a124657a6944806be85a8fcbe0bc6232f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a124657a6944806be85a8fcbe0bc6232f">&#9670;&nbsp;</a></span>GetPlanefromProjectionmatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetPlanefromProjectionmatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_p_l_a_n_e.html">PLANE</a> *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a819aa49fbd3f9436864c4115d03d4675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819aa49fbd3f9436864c4115d03d4675">&#9670;&nbsp;</a></span>GetPlanefromProjectionmatrixWithNormalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetPlanefromProjectionmatrixWithNormalize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_p_l_a_n_e.html">PLANE</a> *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b3084a41fea36cb87e2c4f91407b017"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3084a41fea36cb87e2c4f91407b017">&#9670;&nbsp;</a></span>haltonseq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float haltonseq </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>no</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>base</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17cae4b76acb47ec9c26fa3ba5c43780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17cae4b76acb47ec9c26fa3ba5c43780">&#9670;&nbsp;</a></span>IsInFrustum() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsInFrustum </td>
+          <td>(</td>
+          <td class="paramtype">const XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44c0c964619f0a987f382411ed143b67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44c0c964619f0a987f382411ed143b67">&#9670;&nbsp;</a></span>IsInFrustum() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsInFrustum </td>
+          <td>(</td>
+          <td class="paramtype">const XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ans</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20b0651d02e110e66a29a77f7c026250"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20b0651d02e110e66a29a77f7c026250">&#9670;&nbsp;</a></span>IsInFrustum() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsInFrustum </td>
+          <td>(</td>
+          <td class="paramtype">const XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ans</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_p_l_a_n_e.html">PLANE</a> *&#160;</td>
+          <td class="paramname"><em>plane</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a951dc3adf58e0effdaa0c16a9c5ce1dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951dc3adf58e0effdaa0c16a9c5ce1dd">&#9670;&nbsp;</a></span>IsInFrustum() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsInFrustum </td>
+          <td>(</td>
+          <td class="paramtype">const XMFLOAT3 &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ans</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>canseeflag</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_p_l_a_n_e.html">PLANE</a> *&#160;</td>
+          <td class="paramname"><em>plane</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

@@ -1,0 +1,109 @@
+\hypertarget{class_s_g_framework_1_1_condition_variable_advance}{}\doxysection{S\+G\+Framework\+::Condition\+Variable\+Advance クラス}
+\label{class_s_g_framework_1_1_condition_variable_advance}\index{SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}}
+
+
+{\ttfamily \#include $<$Condition\+Variable.\+hpp$>$}
+
+S\+G\+Framework\+::Condition\+Variable\+Advance の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_g_framework_1_1_condition_variable_advance}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_advance_aa02b874f5d881c0bcf3b32a7d54e535e}{Condition\+Variable\+Advance}} ()
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_advance_a3a705ee661df7f83e980c77aec20f81d}{Condition\+Variable\+Advance}} (const \mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_advance}{Condition\+Variable\+Advance}} \&copy)
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_one}{Condition\+Variable\+One}} \& \mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_advance_a84bc7f8a427ab44afeb67697baea493c}{operator=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_one}{Condition\+Variable\+One}} \&)=delete
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_advance_a191fbde0170b4796af9d9371014873c6}{Register\+Thread}} (const std\+::thread\+::id \&thread\+ID)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_advance_ad5fd98740c0eeed42dbc958a56a0fdd6}{Notify\+One}} (std\+::thread\+::id thread\+ID)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_advance_aa6cdb28bb1fad02b698e4b5acb9d2e0e}{Notify\+All}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_advance_ab01727ab3fa6fbfa8bd10cae1d0e9bdb}{Wait}} ()
+\item 
+{\footnotesize template$<$class Rep , class Period $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_advance_a43c52a63a4afbc30aaac8fd39b0314ec}{Wait\+For}} (const std\+::chrono\+::duration$<$ Rep, Period $>$ \&relative\+Wait\+Time)
+\item 
+{\footnotesize template$<$class Clock , class Duration $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_advance_a3008c8dcac1a2cbbbf8d83c928dd0efc}{Wait\+Until}} (const std\+::chrono\+::time\+\_\+point$<$ Clock, Duration $>$ \&absolute\+Time)
+\item 
+\mbox{\hyperlink{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}{S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}} bool \mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_advance_a3a5d46468f5ad479535f0fba34b19179}{\+\_\+is\+Predicate}} (std\+::thread\+::id thread\+ID)
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_condition_variable_advance_aa02b874f5d881c0bcf3b32a7d54e535e}\label{class_s_g_framework_1_1_condition_variable_advance_aa02b874f5d881c0bcf3b32a7d54e535e}} 
+\index{SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}!ConditionVariableAdvance@{ConditionVariableAdvance}}
+\index{ConditionVariableAdvance@{ConditionVariableAdvance}!SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}}
+\doxysubsubsection{\texorpdfstring{ConditionVariableAdvance()}{ConditionVariableAdvance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Condition\+Variable\+Advance\+::\+Condition\+Variable\+Advance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_condition_variable_advance_a3a705ee661df7f83e980c77aec20f81d}\label{class_s_g_framework_1_1_condition_variable_advance_a3a705ee661df7f83e980c77aec20f81d}} 
+\index{SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}!ConditionVariableAdvance@{ConditionVariableAdvance}}
+\index{ConditionVariableAdvance@{ConditionVariableAdvance}!SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}}
+\doxysubsubsection{\texorpdfstring{ConditionVariableAdvance()}{ConditionVariableAdvance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Condition\+Variable\+Advance\+::\+Condition\+Variable\+Advance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_advance}{Condition\+Variable\+Advance}} \&}]{copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_condition_variable_advance_a3a5d46468f5ad479535f0fba34b19179}\label{class_s_g_framework_1_1_condition_variable_advance_a3a5d46468f5ad479535f0fba34b19179}} 
+\index{SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}!\_isPredicate@{\_isPredicate}}
+\index{\_isPredicate@{\_isPredicate}!SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}}
+\doxysubsubsection{\texorpdfstring{\_isPredicate()}{\_isPredicate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}{S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}} bool S\+G\+Framework\+::\+Condition\+Variable\+Advance\+::\+\_\+is\+Predicate (\begin{DoxyParamCaption}\item[{std\+::thread\+::id}]{thread\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_condition_variable_advance_aa6cdb28bb1fad02b698e4b5acb9d2e0e}\label{class_s_g_framework_1_1_condition_variable_advance_aa6cdb28bb1fad02b698e4b5acb9d2e0e}} 
+\index{SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}!NotifyAll@{NotifyAll}}
+\index{NotifyAll@{NotifyAll}!SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}}
+\doxysubsubsection{\texorpdfstring{NotifyAll()}{NotifyAll()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Condition\+Variable\+Advance\+::\+Notify\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_condition_variable_advance_ad5fd98740c0eeed42dbc958a56a0fdd6}\label{class_s_g_framework_1_1_condition_variable_advance_ad5fd98740c0eeed42dbc958a56a0fdd6}} 
+\index{SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}!NotifyOne@{NotifyOne}}
+\index{NotifyOne@{NotifyOne}!SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}}
+\doxysubsubsection{\texorpdfstring{NotifyOne()}{NotifyOne()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Condition\+Variable\+Advance\+::\+Notify\+One (\begin{DoxyParamCaption}\item[{std\+::thread\+::id}]{thread\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_condition_variable_advance_a84bc7f8a427ab44afeb67697baea493c}\label{class_s_g_framework_1_1_condition_variable_advance_a84bc7f8a427ab44afeb67697baea493c}} 
+\index{SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_one}{Condition\+Variable\+One}}\& S\+G\+Framework\+::\+Condition\+Variable\+Advance\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_condition_variable_one}{Condition\+Variable\+One}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_condition_variable_advance_a191fbde0170b4796af9d9371014873c6}\label{class_s_g_framework_1_1_condition_variable_advance_a191fbde0170b4796af9d9371014873c6}} 
+\index{SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}!RegisterThread@{RegisterThread}}
+\index{RegisterThread@{RegisterThread}!SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}}
+\doxysubsubsection{\texorpdfstring{RegisterThread()}{RegisterThread()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Condition\+Variable\+Advance\+::\+Register\+Thread (\begin{DoxyParamCaption}\item[{const std\+::thread\+::id \&}]{thread\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_condition_variable_advance_ab01727ab3fa6fbfa8bd10cae1d0e9bdb}\label{class_s_g_framework_1_1_condition_variable_advance_ab01727ab3fa6fbfa8bd10cae1d0e9bdb}} 
+\index{SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}!Wait@{Wait}}
+\index{Wait@{Wait}!SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}}
+\doxysubsubsection{\texorpdfstring{Wait()}{Wait()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Condition\+Variable\+Advance\+::\+Wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_condition_variable_advance_a43c52a63a4afbc30aaac8fd39b0314ec}\label{class_s_g_framework_1_1_condition_variable_advance_a43c52a63a4afbc30aaac8fd39b0314ec}} 
+\index{SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}!WaitFor@{WaitFor}}
+\index{WaitFor@{WaitFor}!SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}}
+\doxysubsubsection{\texorpdfstring{WaitFor()}{WaitFor()}}
+{\footnotesize\ttfamily template$<$class Rep , class Period $>$ \\
+bool S\+G\+Framework\+::\+Condition\+Variable\+Advance\+::\+Wait\+For (\begin{DoxyParamCaption}\item[{const std\+::chrono\+::duration$<$ Rep, Period $>$ \&}]{relative\+Wait\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_condition_variable_advance_a3008c8dcac1a2cbbbf8d83c928dd0efc}\label{class_s_g_framework_1_1_condition_variable_advance_a3008c8dcac1a2cbbbf8d83c928dd0efc}} 
+\index{SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}!WaitUntil@{WaitUntil}}
+\index{WaitUntil@{WaitUntil}!SGFramework::ConditionVariableAdvance@{SGFramework::ConditionVariableAdvance}}
+\doxysubsubsection{\texorpdfstring{WaitUntil()}{WaitUntil()}}
+{\footnotesize\ttfamily template$<$class Clock , class Duration $>$ \\
+bool S\+G\+Framework\+::\+Condition\+Variable\+Advance\+::\+Wait\+Until (\begin{DoxyParamCaption}\item[{const std\+::chrono\+::time\+\_\+point$<$ Clock, Duration $>$ \&}]{absolute\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Condition\+Variable/\mbox{\hyperlink{_condition_variable_8hpp}{Condition\+Variable.\+hpp}}\end{DoxyCompactItemize}

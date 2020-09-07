@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/02_Variables/未実装/Pointer/LockWeakGuard.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_0cf03c12e51ae64724f6ec73d30b9672.html">02_Variables</a></li><li class="navelem"><a class="el" href="dir_06c5a77703cbb5bfafd4b0eea230505d.html">未実装</a></li><li class="navelem"><a class="el" href="dir_acdf5fd9ea94547b4d34436c56f4e173.html">Pointer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">LockWeakGuard.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_lock_weak_guard_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">コンストラクタでLockShared, デストラクタでUnlockSharedする</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">LockWeakGuard class</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_LOCK_WEAK_GUARD_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_LOCK_WEAK_GUARD_HPP_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">//コンストラクタでLockShared, デストラクタでUnlockSharedする</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//LockWeakGuard class</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Weak&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_lock_weak_guard.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html">LockWeakGuard</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">//delete</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_lock_weak_guard.html#acd76623738f96b1aeb9e4773b845fafa">   18</a></span>&#160;        <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html#acd76623738f96b1aeb9e4773b845fafa">LockWeakGuard</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_lock_weak_guard.html#a7275d137920c2f37a41aea3bc9b3b16a">   19</a></span>&#160;        <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html#a7275d137920c2f37a41aea3bc9b3b16a">LockWeakGuard</a>(<span class="keyword">const</span> <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html">LockWeakGuard</a>&amp; copy) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_lock_weak_guard.html#a7e96e764dcd696df977b898a4810bc36">   20</a></span>&#160;        <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html#a7e96e764dcd696df977b898a4810bc36">LockWeakGuard</a>(<span class="keyword">const</span> <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html">LockWeakGuard</a>&amp;&amp; move) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_lock_weak_guard.html#a8130eb8c6995127dca13b84c959c9d3d">   21</a></span>&#160;        <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html">LockWeakGuard</a>&amp; <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html#a8130eb8c6995127dca13b84c959c9d3d">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html">LockWeakGuard</a>&amp; copy) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_lock_weak_guard.html#a772d50397fcb7e876dc6b8db233503f4">   22</a></span>&#160;        <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html">LockWeakGuard</a>&amp; <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html#a772d50397fcb7e876dc6b8db233503f4">operator=</a>(<a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html">LockWeakGuard</a>&amp;&amp; move) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">//LockSharedを行う</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">//引数1: WeakPointer</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_lock_weak_guard.html#a75f4049d4ffd3d8b031fa0ba839a3a50">   28</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">explicit</span> <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html#a75f4049d4ffd3d8b031fa0ba839a3a50">LockWeakGuard</a>(Weak&amp; weak) : m_weak(weak)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            m_isResult = m_weak.getIsLocked();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa36e55e8a36a5db4160db2dc04fde1a4">IS_FALSE</a>(m_isResult))</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                m_isResult = m_weak.LockShared();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">//[デストラクタ]</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">//UnlockSharedを行う</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_lock_weak_guard.html#ab3589100ae989c283061aac82b68c633">   38</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html#ab3589100ae989c283061aac82b68c633">~LockWeakGuard</a>()</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            m_weak.UnlockShared();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">//return is Locked</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_lock_weak_guard.html#a1abbd8e0556a59930e93606e86c501f4">   44</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html#a1abbd8e0556a59930e93606e86c501f4">getIsLocked</a>() { <span class="keywordflow">return</span> m_isResult; }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">//return is Locked</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_lock_weak_guard.html#a84341802ae9f31479b3b48330bb12361">   46</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">operator</span> bool() { <span class="keywordflow">return</span> m_isResult; }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">//return is Not Locked</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_lock_weak_guard.html#a5167b70c513ef59e4842e0c5ba44d9de">   48</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_g_framework_1_1_lock_weak_guard.html#a5167b70c513ef59e4842e0c5ba44d9de">operator !</a>() { <span class="keywordflow">return</span> !m_isResult; }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        Weak&amp; m_weak;   <span class="comment">//WeakPointerの参照</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">bool</span> m_isResult;        <span class="comment">//result</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_LOCK_WEAK_GUARD_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_s_g_framework_1_1_lock_weak_guard_html_a1abbd8e0556a59930e93606e86c501f4"><div class="ttname"><a href="class_s_g_framework_1_1_lock_weak_guard.html#a1abbd8e0556a59930e93606e86c501f4">SGFramework::LockWeakGuard::getIsLocked</a></div><div class="ttdeci">bool getIsLocked()</div><div class="ttdef"><b>Definition:</b> LockWeakGuard.hpp:44</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_lock_weak_guard_html_a75f4049d4ffd3d8b031fa0ba839a3a50"><div class="ttname"><a href="class_s_g_framework_1_1_lock_weak_guard.html#a75f4049d4ffd3d8b031fa0ba839a3a50">SGFramework::LockWeakGuard::LockWeakGuard</a></div><div class="ttdeci">LockWeakGuard(Weak &amp;weak)</div><div class="ttdef"><b>Definition:</b> LockWeakGuard.hpp:28</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_lock_weak_guard_html_a772d50397fcb7e876dc6b8db233503f4"><div class="ttname"><a href="class_s_g_framework_1_1_lock_weak_guard.html#a772d50397fcb7e876dc6b8db233503f4">SGFramework::LockWeakGuard::operator=</a></div><div class="ttdeci">LockWeakGuard &amp; operator=(LockWeakGuard &amp;&amp;move)=delete</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_lock_weak_guard_html_a8130eb8c6995127dca13b84c959c9d3d"><div class="ttname"><a href="class_s_g_framework_1_1_lock_weak_guard.html#a8130eb8c6995127dca13b84c959c9d3d">SGFramework::LockWeakGuard::operator=</a></div><div class="ttdeci">LockWeakGuard &amp; operator=(const LockWeakGuard &amp;copy)=delete</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_aa36e55e8a36a5db4160db2dc04fde1a4"><div class="ttname"><a href="_macro_and_using_8hpp.html#aa36e55e8a36a5db4160db2dc04fde1a4">IS_FALSE</a></div><div class="ttdeci">#define IS_FALSE(val)</div><div class="ttdoc">false判定高速化, 見やすさ向上マクロ(高速化は環境依存？)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:66</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_lock_weak_guard_html_acd76623738f96b1aeb9e4773b845fafa"><div class="ttname"><a href="class_s_g_framework_1_1_lock_weak_guard.html#acd76623738f96b1aeb9e4773b845fafa">SGFramework::LockWeakGuard::LockWeakGuard</a></div><div class="ttdeci">LockWeakGuard()=delete</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_lock_weak_guard_html_a7275d137920c2f37a41aea3bc9b3b16a"><div class="ttname"><a href="class_s_g_framework_1_1_lock_weak_guard.html#a7275d137920c2f37a41aea3bc9b3b16a">SGFramework::LockWeakGuard::LockWeakGuard</a></div><div class="ttdeci">LockWeakGuard(const LockWeakGuard &amp;copy)=delete</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_lock_weak_guard_html_a5167b70c513ef59e4842e0c5ba44d9de"><div class="ttname"><a href="class_s_g_framework_1_1_lock_weak_guard.html#a5167b70c513ef59e4842e0c5ba44d9de">SGFramework::LockWeakGuard::operator!</a></div><div class="ttdeci">bool operator!()</div><div class="ttdef"><b>Definition:</b> LockWeakGuard.hpp:48</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_lock_weak_guard_html_a7e96e764dcd696df977b898a4810bc36"><div class="ttname"><a href="class_s_g_framework_1_1_lock_weak_guard.html#a7e96e764dcd696df977b898a4810bc36">SGFramework::LockWeakGuard::LockWeakGuard</a></div><div class="ttdeci">LockWeakGuard(const LockWeakGuard &amp;&amp;move)=delete</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_lock_weak_guard_html_ab3589100ae989c283061aac82b68c633"><div class="ttname"><a href="class_s_g_framework_1_1_lock_weak_guard.html#ab3589100ae989c283061aac82b68c633">SGFramework::LockWeakGuard::~LockWeakGuard</a></div><div class="ttdeci">~LockWeakGuard()</div><div class="ttdef"><b>Definition:</b> LockWeakGuard.hpp:38</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_lock_weak_guard_html"><div class="ttname"><a href="class_s_g_framework_1_1_lock_weak_guard.html">SGFramework::LockWeakGuard</a></div><div class="ttdef"><b>Definition:</b> LockWeakGuard.hpp:15</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

@@ -1,0 +1,112 @@
+\hypertarget{class_c_model}{}\doxysection{C\+Model クラス}
+\label{class_c_model}\index{CModel@{CModel}}
+
+
+{\ttfamily \#include $<$C\+Model.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_c_model_a865ffcc8f29137a98f845d8e79280d7d}{Init}} (const char $\ast$filename, const char $\ast$vsfile, const char $\ast$psfile)
+\item 
+bool \mbox{\hyperlink{class_c_model_ad2b3bd72242e7aac0882dcc25a3f0252}{Init2}} (const char $\ast$filename, const sgstring \&vsfile, const sgstring \&psfile)
+\item 
+void \mbox{\hyperlink{class_c_model_a19869a384935c5af8f56b4de33315ade}{Uninit}} ()
+\item 
+void \mbox{\hyperlink{class_c_model_aa70a59737fe61d6a0dd153229150b12e}{Uninit2}} ()
+\item 
+void \mbox{\hyperlink{class_c_model_a1ee375bdff3ed165e2f6a7c67132310f}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_c_model_af103caf3360948bd944c265a1fd1115f}{Update2}} ()
+\item 
+void \mbox{\hyperlink{class_c_model_a1c73e144a6a5c03637e6e341b9095023}{Draw}} (bool a)
+\item 
+void \mbox{\hyperlink{class_c_model_a506c2c3a1f2218de67b2a509fe67724d}{Draw2}} (bool a)
+\item 
+\mbox{\hyperlink{class_dat_file_loader}{Dat\+File\+Loader}} $\ast$ \mbox{\hyperlink{class_c_model_a1c7d969addb543fc5a644adc57c03da4}{Get\+Dat\+File\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+Shared\+Pointer$<$ Transform $>$ \mbox{\hyperlink{class_c_model_aa1625c2356c44c9916634c1c31172d32}{transform}}
+\item 
+Vector4x4 \mbox{\hyperlink{class_c_model_aeb81dfde5a9dbbd2df4724b9abd3e27f}{matrix}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_c_model_a1c73e144a6a5c03637e6e341b9095023}\label{class_c_model_a1c73e144a6a5c03637e6e341b9095023}} 
+\index{CModel@{CModel}!Draw@{Draw}}
+\index{Draw@{Draw}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void C\+Model\+::\+Draw (\begin{DoxyParamCaption}\item[{bool}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_model_a506c2c3a1f2218de67b2a509fe67724d}\label{class_c_model_a506c2c3a1f2218de67b2a509fe67724d}} 
+\index{CModel@{CModel}!Draw2@{Draw2}}
+\index{Draw2@{Draw2}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{Draw2()}{Draw2()}}
+{\footnotesize\ttfamily void C\+Model\+::\+Draw2 (\begin{DoxyParamCaption}\item[{bool}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_model_a1c7d969addb543fc5a644adc57c03da4}\label{class_c_model_a1c7d969addb543fc5a644adc57c03da4}} 
+\index{CModel@{CModel}!GetDatFileData@{GetDatFileData}}
+\index{GetDatFileData@{GetDatFileData}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{GetDatFileData()}{GetDatFileData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dat_file_loader}{Dat\+File\+Loader}}$\ast$ C\+Model\+::\+Get\+Dat\+File\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_model_a865ffcc8f29137a98f845d8e79280d7d}\label{class_c_model_a865ffcc8f29137a98f845d8e79280d7d}} 
+\index{CModel@{CModel}!Init@{Init}}
+\index{Init@{Init}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool C\+Model\+::\+Init (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{vsfile,  }\item[{const char $\ast$}]{psfile }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_model_ad2b3bd72242e7aac0882dcc25a3f0252}\label{class_c_model_ad2b3bd72242e7aac0882dcc25a3f0252}} 
+\index{CModel@{CModel}!Init2@{Init2}}
+\index{Init2@{Init2}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{Init2()}{Init2()}}
+{\footnotesize\ttfamily bool C\+Model\+::\+Init2 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const sgstring \&}]{vsfile,  }\item[{const sgstring \&}]{psfile }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_model_a19869a384935c5af8f56b4de33315ade}\label{class_c_model_a19869a384935c5af8f56b4de33315ade}} 
+\index{CModel@{CModel}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void C\+Model\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_model_aa70a59737fe61d6a0dd153229150b12e}\label{class_c_model_aa70a59737fe61d6a0dd153229150b12e}} 
+\index{CModel@{CModel}!Uninit2@{Uninit2}}
+\index{Uninit2@{Uninit2}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{Uninit2()}{Uninit2()}}
+{\footnotesize\ttfamily void C\+Model\+::\+Uninit2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_model_a1ee375bdff3ed165e2f6a7c67132310f}\label{class_c_model_a1ee375bdff3ed165e2f6a7c67132310f}} 
+\index{CModel@{CModel}!Update@{Update}}
+\index{Update@{Update}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void C\+Model\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_model_af103caf3360948bd944c265a1fd1115f}\label{class_c_model_af103caf3360948bd944c265a1fd1115f}} 
+\index{CModel@{CModel}!Update2@{Update2}}
+\index{Update2@{Update2}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{Update2()}{Update2()}}
+{\footnotesize\ttfamily void C\+Model\+::\+Update2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_c_model_aeb81dfde5a9dbbd2df4724b9abd3e27f}\label{class_c_model_aeb81dfde5a9dbbd2df4724b9abd3e27f}} 
+\index{CModel@{CModel}!matrix@{matrix}}
+\index{matrix@{matrix}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{matrix}{matrix}}
+{\footnotesize\ttfamily Vector4x4 C\+Model\+::matrix}
+
+\mbox{\Hypertarget{class_c_model_aa1625c2356c44c9916634c1c31172d32}\label{class_c_model_aa1625c2356c44c9916634c1c31172d32}} 
+\index{CModel@{CModel}!transform@{transform}}
+\index{transform@{transform}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily Shared\+Pointer$<$Transform$>$ C\+Model\+::transform}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/\mbox{\hyperlink{_c_model_8h}{C\+Model.\+h}}\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/\mbox{\hyperlink{_c_model_8cpp}{C\+Model.\+cpp}}\end{DoxyCompactItemize}

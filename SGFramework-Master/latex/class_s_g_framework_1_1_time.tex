@@ -1,0 +1,233 @@
+\hypertarget{class_s_g_framework_1_1_time}{}\doxysection{S\+G\+Framework\+::Time クラス}
+\label{class_s_g_framework_1_1_time}\index{SGFramework::Time@{SGFramework::Time}}
+
+
+{\ttfamily \#include $<$Time.\+hpp$>$}
+
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+Layer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_time_a6f8f6a1f61bc23dc69bd2a0d90827140}{D\+E\+L\+E\+T\+E\+\_\+\+A\+L\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}} (\mbox{\hyperlink{class_s_g_framework_1_1_time}{Time}})
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+Layer}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_a71e24eb469c68ec96fa8828322bd7d9e}{Find\+Time\+Layer}} (const sgstring \&layer\+Name)
+\item 
+static void \mbox{\hyperlink{class_s_g_framework_1_1_time_ad94eaf04957723bf57322db794ac2c50}{Reset\+World\+Time\+Scale}} (float value)
+\item 
+static sgstring \mbox{\hyperlink{class_s_g_framework_1_1_time_a2352afc591963341004b6912597dec23}{Current\+Time\+To\+String}} ()
+\item 
+static std\+::string \mbox{\hyperlink{class_s_g_framework_1_1_time_af58323dde7e29db85bd9cce0943cbd37}{Current\+Time\+To\+Std\+String}} ()
+\item 
+static void \mbox{\hyperlink{class_s_g_framework_1_1_time_acb9865f7bd3074158557e0a2b868597f}{Current\+Time}} (int $\ast$sec, int $\ast$min, int $\ast$hour)
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+Layer}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_aa12aec1f5d3f18e48842f0befe768155}{get\+Time\+Layer}} (\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} id)
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_time_a91deef2bca083f1cff98ec8ef0a370b2}{get\+Time\+Layer\+ID}} (const sgstring \&layer\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+friend \mbox{\hyperlink{class_s_g_framework_1_1_time_abf187ff60a5a861390c22b42e1949f66}{Time\+Layer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ double $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_aeb28ed79f7501515e2be861cb0b7b970}{time\+With\+Clock}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ double $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_a3bac19ee6d257c69eef7fc79ec7f2715}{fixed\+Interval}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_a89e72f62e2ea9026eb4143762087b438}{fps}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_ab8905d35b7b81bac18d09b060aa6ea5c}{target\+Frame\+Rate}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_ac06223c55a321603869ee190c0e6171f}{world\+Time\+Scale}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_ab278d59d1d6c211b1631affb13f4c24b}{time}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_a2e4449d96ef4781082feadfb5371866c}{world\+Delta\+Time}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_ace1d360eddebc11afe2ce969c1a2aa63}{un\+Scaled\+World\+Delta\+Time}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_a219b259272c41a239b1489ef8bf8b65e}{fixed\+Time}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_a1c91af9f2c4c8e53bbdebbd7ce1e8d62}{fixed\+Delta\+Time}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_a7f583897eab3780c9e03bacad6eec3ec}{un\+Scaled\+Fixed\+Delta\+Time}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+Layer}} $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_a1b3cc27879556d9cc05cd68b54795605}{root\+Time\+Layer}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ bool $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_a29615a6f729e4a9ffe7a5e495ba1a1fd}{is\+Update\+Freame}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ bool $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_a8ed43850185aad7b76599b8215e18d2a}{is\+Fixed\+Update\+Freame}}
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_time_a23f25bcc02a0e94c2f5a4188496b04d0}{Application}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_acb9865f7bd3074158557e0a2b868597f}\label{class_s_g_framework_1_1_time_acb9865f7bd3074158557e0a2b868597f}} 
+\index{SGFramework::Time@{SGFramework::Time}!CurrentTime@{CurrentTime}}
+\index{CurrentTime@{CurrentTime}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{CurrentTime()}{CurrentTime()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Time\+::\+Current\+Time (\begin{DoxyParamCaption}\item[{int $\ast$}]{sec,  }\item[{int $\ast$}]{min,  }\item[{int $\ast$}]{hour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_af58323dde7e29db85bd9cce0943cbd37}\label{class_s_g_framework_1_1_time_af58323dde7e29db85bd9cce0943cbd37}} 
+\index{SGFramework::Time@{SGFramework::Time}!CurrentTimeToStdString@{CurrentTimeToStdString}}
+\index{CurrentTimeToStdString@{CurrentTimeToStdString}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{CurrentTimeToStdString()}{CurrentTimeToStdString()}}
+{\footnotesize\ttfamily std\+::string S\+G\+Framework\+::\+Time\+::\+Current\+Time\+To\+Std\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a2352afc591963341004b6912597dec23}\label{class_s_g_framework_1_1_time_a2352afc591963341004b6912597dec23}} 
+\index{SGFramework::Time@{SGFramework::Time}!CurrentTimeToString@{CurrentTimeToString}}
+\index{CurrentTimeToString@{CurrentTimeToString}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{CurrentTimeToString()}{CurrentTimeToString()}}
+{\footnotesize\ttfamily sgstring S\+G\+Framework\+::\+Time\+::\+Current\+Time\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a6f8f6a1f61bc23dc69bd2a0d90827140}\label{class_s_g_framework_1_1_time_a6f8f6a1f61bc23dc69bd2a0d90827140}} 
+\index{SGFramework::Time@{SGFramework::Time}!DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS@{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}}
+\index{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS@{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS()}{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Time\+::\+D\+E\+L\+E\+T\+E\+\_\+\+A\+L\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_time}{Time}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a71e24eb469c68ec96fa8828322bd7d9e}\label{class_s_g_framework_1_1_time_a71e24eb469c68ec96fa8828322bd7d9e}} 
+\index{SGFramework::Time@{SGFramework::Time}!FindTimeLayer@{FindTimeLayer}}
+\index{FindTimeLayer@{FindTimeLayer}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{FindTimeLayer()}{FindTimeLayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+::\+Time\+Layer}} $>$ S\+G\+Framework\+::\+Time\+::\+Find\+Time\+Layer (\begin{DoxyParamCaption}\item[{const sgstring \&}]{layer\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_aa12aec1f5d3f18e48842f0befe768155}\label{class_s_g_framework_1_1_time_aa12aec1f5d3f18e48842f0befe768155}} 
+\index{SGFramework::Time@{SGFramework::Time}!getTimeLayer@{getTimeLayer}}
+\index{getTimeLayer@{getTimeLayer}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{getTimeLayer()}{getTimeLayer()}}
+{\footnotesize\ttfamily static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+Layer}}$>$ S\+G\+Framework\+::\+Time\+::get\+Time\+Layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a91deef2bca083f1cff98ec8ef0a370b2}\label{class_s_g_framework_1_1_time_a91deef2bca083f1cff98ec8ef0a370b2}} 
+\index{SGFramework::Time@{SGFramework::Time}!getTimeLayerID@{getTimeLayerID}}
+\index{getTimeLayerID@{getTimeLayerID}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{getTimeLayerID()}{getTimeLayerID()}}
+{\footnotesize\ttfamily static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Time\+::get\+Time\+Layer\+ID (\begin{DoxyParamCaption}\item[{const sgstring \&}]{layer\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_ad94eaf04957723bf57322db794ac2c50}\label{class_s_g_framework_1_1_time_ad94eaf04957723bf57322db794ac2c50}} 
+\index{SGFramework::Time@{SGFramework::Time}!ResetWorldTimeScale@{ResetWorldTimeScale}}
+\index{ResetWorldTimeScale@{ResetWorldTimeScale}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{ResetWorldTimeScale()}{ResetWorldTimeScale()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Time\+::\+Reset\+World\+Time\+Scale (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a23f25bcc02a0e94c2f5a4188496b04d0}\label{class_s_g_framework_1_1_time_a23f25bcc02a0e94c2f5a4188496b04d0}} 
+\index{SGFramework::Time@{SGFramework::Time}!Application@{Application}}
+\index{Application@{Application}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{Application}{Application}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_application}{Application}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a1c91af9f2c4c8e53bbdebbd7ce1e8d62}\label{class_s_g_framework_1_1_time_a1c91af9f2c4c8e53bbdebbd7ce1e8d62}} 
+\index{SGFramework::Time@{SGFramework::Time}!fixedDeltaTime@{fixedDeltaTime}}
+\index{fixedDeltaTime@{fixedDeltaTime}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{fixedDeltaTime}{fixedDeltaTime}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ S\+G\+Framework\+::\+Time\+::fixed\+Delta\+Time\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a3bac19ee6d257c69eef7fc79ec7f2715}\label{class_s_g_framework_1_1_time_a3bac19ee6d257c69eef7fc79ec7f2715}} 
+\index{SGFramework::Time@{SGFramework::Time}!fixedInterval@{fixedInterval}}
+\index{fixedInterval@{fixedInterval}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{fixedInterval}{fixedInterval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ double $>$ S\+G\+Framework\+::\+Time\+::fixed\+Interval\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a219b259272c41a239b1489ef8bf8b65e}\label{class_s_g_framework_1_1_time_a219b259272c41a239b1489ef8bf8b65e}} 
+\index{SGFramework::Time@{SGFramework::Time}!fixedTime@{fixedTime}}
+\index{fixedTime@{fixedTime}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{fixedTime}{fixedTime}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ S\+G\+Framework\+::\+Time\+::fixed\+Time\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a89e72f62e2ea9026eb4143762087b438}\label{class_s_g_framework_1_1_time_a89e72f62e2ea9026eb4143762087b438}} 
+\index{SGFramework::Time@{SGFramework::Time}!fps@{fps}}
+\index{fps@{fps}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{fps}{fps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ S\+G\+Framework\+::\+Time\+::fps\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a8ed43850185aad7b76599b8215e18d2a}\label{class_s_g_framework_1_1_time_a8ed43850185aad7b76599b8215e18d2a}} 
+\index{SGFramework::Time@{SGFramework::Time}!isFixedUpdateFreame@{isFixedUpdateFreame}}
+\index{isFixedUpdateFreame@{isFixedUpdateFreame}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{isFixedUpdateFreame}{isFixedUpdateFreame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ bool $>$ S\+G\+Framework\+::\+Time\+::is\+Fixed\+Update\+Freame\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a29615a6f729e4a9ffe7a5e495ba1a1fd}\label{class_s_g_framework_1_1_time_a29615a6f729e4a9ffe7a5e495ba1a1fd}} 
+\index{SGFramework::Time@{SGFramework::Time}!isUpdateFreame@{isUpdateFreame}}
+\index{isUpdateFreame@{isUpdateFreame}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{isUpdateFreame}{isUpdateFreame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ bool $>$ S\+G\+Framework\+::\+Time\+::is\+Update\+Freame\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a1b3cc27879556d9cc05cd68b54795605}\label{class_s_g_framework_1_1_time_a1b3cc27879556d9cc05cd68b54795605}} 
+\index{SGFramework::Time@{SGFramework::Time}!rootTimeLayer@{rootTimeLayer}}
+\index{rootTimeLayer@{rootTimeLayer}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{rootTimeLayer}{rootTimeLayer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+::\+Time\+Layer}} $>$ $>$ S\+G\+Framework\+::\+Time\+::root\+Time\+Layer\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_ab8905d35b7b81bac18d09b060aa6ea5c}\label{class_s_g_framework_1_1_time_ab8905d35b7b81bac18d09b060aa6ea5c}} 
+\index{SGFramework::Time@{SGFramework::Time}!targetFrameRate@{targetFrameRate}}
+\index{targetFrameRate@{targetFrameRate}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{targetFrameRate}{targetFrameRate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ S\+G\+Framework\+::\+Time\+::target\+Frame\+Rate\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_ab278d59d1d6c211b1631affb13f4c24b}\label{class_s_g_framework_1_1_time_ab278d59d1d6c211b1631affb13f4c24b}} 
+\index{SGFramework::Time@{SGFramework::Time}!time@{time}}
+\index{time@{time}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ S\+G\+Framework\+::\+Time\+::time\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_abf187ff60a5a861390c22b42e1949f66}\label{class_s_g_framework_1_1_time_abf187ff60a5a861390c22b42e1949f66}} 
+\index{SGFramework::Time@{SGFramework::Time}!TimeLayer@{TimeLayer}}
+\index{TimeLayer@{TimeLayer}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{TimeLayer}{TimeLayer}}
+{\footnotesize\ttfamily friend \mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{S\+G\+Framework\+::\+Time\+::\+Time\+Layer}}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_aeb28ed79f7501515e2be861cb0b7b970}\label{class_s_g_framework_1_1_time_aeb28ed79f7501515e2be861cb0b7b970}} 
+\index{SGFramework::Time@{SGFramework::Time}!timeWithClock@{timeWithClock}}
+\index{timeWithClock@{timeWithClock}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{timeWithClock}{timeWithClock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ double $>$ S\+G\+Framework\+::\+Time\+::time\+With\+Clock\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a7f583897eab3780c9e03bacad6eec3ec}\label{class_s_g_framework_1_1_time_a7f583897eab3780c9e03bacad6eec3ec}} 
+\index{SGFramework::Time@{SGFramework::Time}!unScaledFixedDeltaTime@{unScaledFixedDeltaTime}}
+\index{unScaledFixedDeltaTime@{unScaledFixedDeltaTime}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{unScaledFixedDeltaTime}{unScaledFixedDeltaTime}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ S\+G\+Framework\+::\+Time\+::un\+Scaled\+Fixed\+Delta\+Time\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_ace1d360eddebc11afe2ce969c1a2aa63}\label{class_s_g_framework_1_1_time_ace1d360eddebc11afe2ce969c1a2aa63}} 
+\index{SGFramework::Time@{SGFramework::Time}!unScaledWorldDeltaTime@{unScaledWorldDeltaTime}}
+\index{unScaledWorldDeltaTime@{unScaledWorldDeltaTime}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{unScaledWorldDeltaTime}{unScaledWorldDeltaTime}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ S\+G\+Framework\+::\+Time\+::un\+Scaled\+World\+Delta\+Time\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_a2e4449d96ef4781082feadfb5371866c}\label{class_s_g_framework_1_1_time_a2e4449d96ef4781082feadfb5371866c}} 
+\index{SGFramework::Time@{SGFramework::Time}!worldDeltaTime@{worldDeltaTime}}
+\index{worldDeltaTime@{worldDeltaTime}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{worldDeltaTime}{worldDeltaTime}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ S\+G\+Framework\+::\+Time\+::world\+Delta\+Time\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_ac06223c55a321603869ee190c0e6171f}\label{class_s_g_framework_1_1_time_ac06223c55a321603869ee190c0e6171f}} 
+\index{SGFramework::Time@{SGFramework::Time}!worldTimeScale@{worldTimeScale}}
+\index{worldTimeScale@{worldTimeScale}!SGFramework::Time@{SGFramework::Time}}
+\doxysubsubsection{\texorpdfstring{worldTimeScale}{worldTimeScale}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ S\+G\+Framework\+::\+Time\+::world\+Time\+Scale\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Time/\mbox{\hyperlink{_time_8hpp}{Time.\+hpp}}\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Time/\mbox{\hyperlink{_time_static_variable_8cpp}{Time\+Static\+Variable.\+cpp}}\end{DoxyCompactItemize}

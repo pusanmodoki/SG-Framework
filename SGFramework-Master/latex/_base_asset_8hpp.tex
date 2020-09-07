@@ -1,0 +1,59 @@
+\hypertarget{_base_asset_8hpp}{}\doxysection{S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/04\+\_\+\+Asset/\+Asset/\+Base\+Asset.hpp ファイル}
+\label{_base_asset_8hpp}\index{SGFramework-\/Master\_ToExe/04\_Asset/Asset/BaseAsset.hpp@{SGFramework-\/Master\_ToExe/04\_Asset/Asset/BaseAsset.hpp}}
+{\ttfamily \#include $<$Windows.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include \char`\"{}../../02\+\_\+\+Custom\+Variable/\+Custom\+Variable.\+hpp\char`\"{}}\newline
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_system_time}{S\+G\+Framework\+::\+System\+Time}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_file_time}{S\+G\+Framework\+::\+File\+Time}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_asset}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Asset}}
+\item 
+struct \mbox{\hyperlink{struct_s_g_framework_1_1_base_class_1_1_base_asset_1_1_file_size_with}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Asset\+::\+File\+Size\+With}}
+\end{DoxyCompactItemize}
+\doxysubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework}{S\+G\+Framework}}
+\begin{DoxyCompactList}\small\item\em S\+G-\/\+Framework namespace \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_asset}{S\+G\+Framework\+::\+Asset}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_administrator}{S\+G\+Framework\+::\+Administrator}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_base_class}{S\+G\+Framework\+::\+Base\+Class}}
+\end{DoxyCompactItemize}
+\doxysubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{S\+G\+Framework\+::\+Asset\+::\+Asset\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daabbb93ef26e3c101ff11cdd21cab08a94}{S\+G\+Framework\+::\+Asset\+::\+Asset\+Type\+::\+Null}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa6ce976e8f061b2b5cfe4d0c50c3405dd}{S\+G\+Framework\+::\+Asset\+::\+Asset\+Type\+::\+Binary}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa9dffbf69ffba8bc38bc4e01abf4b1675}{S\+G\+Framework\+::\+Asset\+::\+Asset\+Type\+::\+Text}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaeb3ca4dac3e206977e0b7d998eefcc33}{S\+G\+Framework\+::\+Asset\+::\+Asset\+Type\+::\+Vertex\+Shader}}, 
+\newline
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa54d3d36aabc3abac323576e3d22a3d2c}{S\+G\+Framework\+::\+Asset\+::\+Asset\+Type\+::\+Pixel\+Shader}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaa3e8ae43188ae76d38f414b2bdb0077b}{S\+G\+Framework\+::\+Asset\+::\+Asset\+Type\+::\+Texture}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaa559b87068921eec05086ce5485e9784}{S\+G\+Framework\+::\+Asset\+::\+Asset\+Type\+::\+Model}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaf1358f8b8fcc4d483d9648088292966b}{S\+G\+Framework\+::\+Asset\+::\+Asset\+Type\+::\+Audio\+Music}}, 
+\newline
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daae46c1b73df5ad3d7956d32e3939fb879}{S\+G\+Framework\+::\+Asset\+::\+Asset\+Type\+::\+Audio\+Effect}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa7f0b9e0ebe3ca71b4bff51868ca4fb12}{S\+G\+Framework\+::\+Asset\+::\+Asset\+Type\+::\+Audio\+Effect3D}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\+Asset $>$ }\\Shared\+Pointer$<$ T\+Asset $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_ad512f0eb01593582e1507de561c2f71f}{S\+G\+Framework\+::\+Asset\+::\+Instantiate\+Asset}} (const sgstring \&file\+Path, bool is\+Register\+Shared\+Asset)
+\item 
+sgstring \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_a78b94f16304e145945bd30412acc0aa3}{S\+G\+Framework\+::\+Asset\+::\+String\+For\+Asset\+Type}} (Asset\+Type type)
+\item 
+std\+::string \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_a8ce2b877f0f3db9a1b79601d44d8f805}{S\+G\+Framework\+::\+Asset\+::\+Std\+String\+For\+Asset\+Type}} (Asset\+Type type)
+\item 
+std\+::wostream \& \mbox{\hyperlink{namespace_s_g_framework_a7d0c5fc50d5f5c9bad16f4eea8252d28}{S\+G\+Framework\+::operator$<$$<$}} (std\+::wostream \&stream, const System\+Time \&value)
+\item 
+std\+::wostream \& \mbox{\hyperlink{namespace_s_g_framework_a8ac466c0ee199d6f8fe14ee7edeb911d}{S\+G\+Framework\+::operator$<$$<$}} (std\+::wostream \&stream, const File\+Time \&value)
+\end{DoxyCompactItemize}

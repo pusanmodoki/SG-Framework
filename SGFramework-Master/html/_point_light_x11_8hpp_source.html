@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/05_Graphics/DirectX11/Light/PointLightX11.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_3179bfb1337b5dc243543deb8f1fb9cf.html">05_Graphics</a></li><li class="navelem"><a class="el" href="dir_2a4559de03f6cae991f9fd49f0dc1978.html">DirectX11</a></li><li class="navelem"><a class="el" href="dir_e083bba98044b263680e19dafd65fe3f.html">Light</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PointLightX11.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_point_light_x11_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">DirectX11 PointLightを扱うPointLightX11 class</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_POINT_LIGHT_X11_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_POINT_LIGHT_X11_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../../../02_CustomVariable/CustomVariable.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_base_light_x11_8hpp.html">BaseLightX11.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Framework namespace</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//フレームワークの管理をするAdministrator namespace</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">namespace </span>Administrator</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">//GraphicsDetail namespace</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">namespace </span>GraphicsDetail</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="comment">//friend</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">class </span>GraphicsX11;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="comment">//DirectX11 PointLightを扱うPointLightX11 class</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html">   22</a></span>&#160;            <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html">PointLightX11</a> final : <span class="keyword">public</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_light_x11.html">SGFramework::BaseClass::BaseLightX11</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="comment">//friend</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#a685be118a7983cdf84f14f00ef7c310e">   26</a></span>&#160;                <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html">SGFramework::Administrator::GraphicsX11</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#a2278ef2b312246561519bdf4e4e9a9eb">   28</a></span>&#160;                <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#a2278ef2b312246561519bdf4e4e9a9eb">DELETE_ALL_DEFAULT_CLASS_FUNCTIONS</a>(<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html">PointLightX11</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="comment">//セットする要素を内包するElement class</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="comment">//mutexによる保護は行わないので注意</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html">   32</a></span>&#160;                <span class="keyword">struct </span><a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html">Element</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    <span class="comment">//default</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#aa2801c1e533b644ca629b661336dc639">   35</a></span>&#160;                    <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#aa2801c1e533b644ca629b661336dc639">Element</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="comment">//代入初期化する</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    <span class="comment">//引数1: ライトの位置</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    <span class="comment">//引数2: ライトの色</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    <span class="comment">//引数3: ライトの明るさ倍率</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    <span class="comment">//引数4: ライトが有効か否か</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a2e896a73f7a5cd7d34f84ed8f3202094">   43</a></span>&#160;                    <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a2e896a73f7a5cd7d34f84ed8f3202094">Element</a>(<span class="keyword">const</span> <a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a>&amp; <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#adfab708878bf520143ed08cf24577bb2">position</a>, <span class="keyword">const</span> <a class="code" href="struct_s_g_framework_1_1_color.html">Color</a>&amp; <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#ac797de520884e22d0e9c643e7f3cd4c8">color</a>, <span class="keywordtype">float</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a281995d434f1c9cd19f879cb429ae204">power</a>, <span class="keywordtype">bool</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a2e85f28e1801c6b5a67b377c1beac9c0">isEnabled</a>)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                        : <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#adfab708878bf520143ed08cf24577bb2">position</a>(<a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#adfab708878bf520143ed08cf24577bb2">position</a>), <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#ac797de520884e22d0e9c643e7f3cd4c8">color</a>(<a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#ac797de520884e22d0e9c643e7f3cd4c8">color</a>), <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a281995d434f1c9cd19f879cb429ae204">power</a>(<a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a281995d434f1c9cd19f879cb429ae204">power</a>), <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a2e85f28e1801c6b5a67b377c1beac9c0">isEnabled</a>(<a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a2e85f28e1801c6b5a67b377c1beac9c0">isEnabled</a>) {}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#adfab708878bf520143ed08cf24577bb2">   46</a></span>&#160;                    <a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#adfab708878bf520143ed08cf24577bb2">position</a> = <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">Const::Vector3::zero</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#ac797de520884e22d0e9c643e7f3cd4c8">   47</a></span>&#160;                    <a class="code" href="struct_s_g_framework_1_1_color.html">Color</a> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#ac797de520884e22d0e9c643e7f3cd4c8">color</a> = Const::Color::white;              <span class="comment">//ライトの色</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a281995d434f1c9cd19f879cb429ae204">   48</a></span>&#160;                    <span class="keywordtype">float</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a281995d434f1c9cd19f879cb429ae204">power</a> = 1.0f;                                     <span class="comment">//ライトの明るさ倍率</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a2e85f28e1801c6b5a67b377c1beac9c0">   49</a></span>&#160;                    <span class="keywordtype">bool</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a2e85f28e1801c6b5a67b377c1beac9c0">isEnabled</a> = <span class="keyword">true</span>;                              <span class="comment">//ライトが有効か否か</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                };</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="comment">//now parameters &lt;static&gt;(get function property)</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="comment">//argument 1: index (index &lt; cPointLightMax)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#a2f4ab7ba997598c9c3304f6cdf85fc30">   55</a></span>&#160;                SGF_FUNCTION_PROPERTY <span class="keyword">static</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html">Element</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#a2f4ab7ba997598c9c3304f6cdf85fc30">getParameter</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html">Element</a>(m_pack.positions[index], m_pack.colors[index],</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                        m_pack.powers[index], m_pack.isEnableds[index] &gt; 0.0f ? <span class="keyword">true</span> : <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="comment">//set parameters[index] &lt;static&gt;(set function property)</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="comment">//return: set complete = true, failed (index &lt; cPointLightMax) = false</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="comment">//argument 1: index (index &lt; cPointLightMax)</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="comment">//argument 2: ライトの方向</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="comment">//argument 3: ライトの色</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="comment">//argument 4: ライトの明るさ倍率</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="comment">//argument 5: ライトが有効か否か, default = true</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#abfbf268454b4b2aaccf0dffa45120913">   67</a></span>&#160;                SGF_FUNCTION_PROPERTY <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#abfbf268454b4b2aaccf0dffa45120913">setParameter</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index, <span class="keyword">const</span> <a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a>&amp; position, <span class="keyword">const</span> <a class="code" href="struct_s_g_framework_1_1_color.html">Color</a>&amp; color, <span class="keywordtype">float</span> power, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    <span class="keywordflow">if</span> (index &lt; <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#af30d526b5c37f2f9bd6c327437eedc17">cPointLightMax</a>)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        m_pack.positions[index].setVector3(position, 0.0f);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                        m_pack.colors[index] = color;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                        m_pack.powers[index] = power;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        m_pack.isEnableds[index] = <a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(isEnabled) ? 1.0f : 0.0f;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                        <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_light_x11.html#a680361bf24e5f2fd2643cd01ceb036b3">m_isChangeds</a>[<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_light_x11.html#a4a6513ac663b62addea94ddb492bd039">m_cIsChangedPoint</a>] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="comment">//set parameters[index] &lt;static&gt;(set function property)</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="comment">//return: set complete = true, failed (index &lt; cPointLightMax) = false</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="comment">//argument 1: index (index &lt; cPointLightMax)</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="comment">//argument 2: Element</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#adf824bb737a0c3ae4550f5d7e8aa3473">   85</a></span>&#160;                SGF_FUNCTION_PROPERTY <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#adf824bb737a0c3ae4550f5d7e8aa3473">setParameter</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index, <span class="keyword">const</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html">Element</a>&amp; element)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="keywordflow">if</span> (index &lt; <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#af30d526b5c37f2f9bd6c327437eedc17">cPointLightMax</a>)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        m_pack.positions[index].setVector3(element.<a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#adfab708878bf520143ed08cf24577bb2">position</a>, 0.0f);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                        m_pack.colors[index] = element.<a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#ac797de520884e22d0e9c643e7f3cd4c8">color</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                        m_pack.powers[index] = element.<a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a281995d434f1c9cd19f879cb429ae204">power</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                        m_pack.isEnableds[index] = <a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(element.<a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a2e85f28e1801c6b5a67b377c1beac9c0">isEnabled</a>) ? 1.0f : 0.0f;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                        <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_light_x11.html#a680361bf24e5f2fd2643cd01ceb036b3">m_isChangeds</a>[<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_light_x11.html#a4a6513ac663b62addea94ddb492bd039">m_cIsChangedPoint</a>] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="comment">//set parameters loop &lt;static&gt;(set function property)</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="comment">//argument 1: elements variable length arguments, setting start -&gt; index 0</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="keyword">template</span>&lt;<span class="keyword">class </span>...Elements&gt;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#a72064e90bd9de0d61cd619230befc961">  102</a></span>&#160;                SGF_FUNCTION_PROPERTY <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#a72064e90bd9de0d61cd619230befc961">setParameters</a>(<span class="keyword">const</span> Elements&amp;... elements)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> i = 0, size = <span class="keyword">static_cast&lt;</span><a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a><span class="keyword">&gt;</span>(<span class="keyword">sizeof</span>...(elements));</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : { elements })</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                        <span class="keywordflow">if</span> (i &lt; <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#af30d526b5c37f2f9bd6c327437eedc17">cPointLightMax</a> &amp;&amp; i &lt; size)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                        {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                            <span class="keyword">const</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html">Element</a>&amp; element = e;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                            m_pack.positions[i].setVector3(element.<a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#adfab708878bf520143ed08cf24577bb2">position</a>, 0.0f);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                            m_pack.colors[i] = element.<a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#ac797de520884e22d0e9c643e7f3cd4c8">color</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                            m_pack.powers[i] = element.<a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a281995d434f1c9cd19f879cb429ae204">power</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                            m_pack.isEnableds[i] = <a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(element.<a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a2e85f28e1801c6b5a67b377c1beac9c0">isEnabled</a>) ? 1.0f : 0.0f;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_light_x11.html#a680361bf24e5f2fd2643cd01ceb036b3">m_isChangeds</a>[<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_light_x11.html#a4a6513ac663b62addea94ddb492bd039">m_cIsChangedPoint</a>] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                            ++i;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                <span class="comment">//light is enabled? &lt;static&gt;(get function property)</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <span class="comment">//argument 1: index (index &lt; cPointLightMax)</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#ad2a9294ee891a4ed2bf88c8b90d26d3f">  124</a></span>&#160;                SGF_FUNCTION_PROPERTY <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#ad2a9294ee891a4ed2bf88c8b90d26d3f">getIsEnabled</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                    <span class="keywordflow">return</span> m_pack.isEnableds[index] &gt; 0.0f ? true : <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <span class="comment">//set light is enabled? &lt;static&gt;(set function property)</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <span class="comment">//argument 1: index (index &lt; cPointLightMax)</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                <span class="comment">//argument 2: set value</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#a20a1147ba8421e4816463ffd4576af42">  131</a></span>&#160;                SGF_FUNCTION_PROPERTY <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#a20a1147ba8421e4816463ffd4576af42">setIsEnabled</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index, <span class="keywordtype">bool</span> isEnabled)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                    <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_light_x11.html#a680361bf24e5f2fd2643cd01ceb036b3">m_isChangeds</a>[<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_light_x11.html#a4a6513ac663b62addea94ddb492bd039">m_cIsChangedPoint</a>] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    <span class="keywordflow">return</span> m_pack.isEnableds[index] = isEnabled ? 1.0f : 0.0f;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                <span class="comment">//PointLight最大数</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#af30d526b5c37f2f9bd6c327437eedc17">  138</a></span>&#160;                <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#af30d526b5c37f2f9bd6c327437eedc17">cPointLightMax</a> = 4;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <span class="comment">//渡しやすいように</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <span class="keyword">struct </span>Pack</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                    <span class="comment">//ライトの位置</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                    <a class="code" href="struct_s_g_framework_1_1_vector4.html">Vector4</a> positions[<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#af30d526b5c37f2f9bd6c327437eedc17">cPointLightMax</a>];</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                    <span class="comment">//ライトの色</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    <a class="code" href="struct_s_g_framework_1_1_color.html">Color</a> colors[<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#af30d526b5c37f2f9bd6c327437eedc17">cPointLightMax</a>];</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    <span class="comment">//ライトの明るさ倍率</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                    <span class="keywordtype">float</span> powers[<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#af30d526b5c37f2f9bd6c327437eedc17">cPointLightMax</a>];</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                    <span class="comment">//ライトが有効か否か</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                    <span class="keywordtype">float</span> isEnableds[<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#af30d526b5c37f2f9bd6c327437eedc17">cPointLightMax</a>];</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                };</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                <span class="comment">//value pack</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                <span class="keyword">static</span> Pack m_pack;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            };</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#endif //!SGFRAMEWORK_HEADER_POINT_LIGHT_X11_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_s_g_framework_1_1_color_html"><div class="ttname"><a href="struct_s_g_framework_1_1_color.html">SGFramework::Color</a></div><div class="ttdef"><b>Definition:</b> Color.hpp:15</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_html_a2f4ab7ba997598c9c3304f6cdf85fc30"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#a2f4ab7ba997598c9c3304f6cdf85fc30">SGFramework::Administrator::GraphicsDetail::PointLightX11::getParameter</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY Element getParameter(uint index)</div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:55</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_html_ad2a9294ee891a4ed2bf88c8b90d26d3f"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#ad2a9294ee891a4ed2bf88c8b90d26d3f">SGFramework::Administrator::GraphicsDetail::PointLightX11::getIsEnabled</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY bool getIsEnabled(uint index)</div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:124</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_html_a2278ef2b312246561519bdf4e4e9a9eb"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#a2278ef2b312246561519bdf4e4e9a9eb">SGFramework::Administrator::GraphicsDetail::PointLightX11::DELETE_ALL_DEFAULT_CLASS_FUNCTIONS</a></div><div class="ttdeci">DELETE_ALL_DEFAULT_CLASS_FUNCTIONS(PointLightX11)</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element_html_aa2801c1e533b644ca629b661336dc639"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#aa2801c1e533b644ca629b661336dc639">SGFramework::Administrator::GraphicsDetail::PointLightX11::Element::Element</a></div><div class="ttdeci">Element()=default</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_html_af30d526b5c37f2f9bd6c327437eedc17"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#af30d526b5c37f2f9bd6c327437eedc17">SGFramework::Administrator::GraphicsDetail::PointLightX11::cPointLightMax</a></div><div class="ttdeci">static constexpr uint cPointLightMax</div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:138</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_light_x11_html_a4a6513ac663b62addea94ddb492bd039"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_light_x11.html#a4a6513ac663b62addea94ddb492bd039">SGFramework::BaseClass::BaseLightX11::m_cIsChangedPoint</a></div><div class="ttdeci">static constexpr uint m_cIsChangedPoint</div><div class="ttdef"><b>Definition:</b> BaseLightX11.hpp:20</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_html_a72064e90bd9de0d61cd619230befc961"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#a72064e90bd9de0d61cd619230befc961">SGFramework::Administrator::GraphicsDetail::PointLightX11::setParameters</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY void setParameters(const Elements &amp;... elements)</div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:102</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html">SGFramework::Administrator::GraphicsX11</a></div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:46</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html">SGFramework::Administrator::GraphicsDetail::PointLightX11</a></div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:23</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_ac773f04184a04dfbb5820902d31f4c87"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">SGFramework::Const::Vector3::zero</a></div><div class="ttdeci">constexpr SGFramework::Vector3 zero(0.0f, 0.0f, 0.0f)</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_light_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_light_x11.html">SGFramework::BaseClass::BaseLightX11</a></div><div class="ttdef"><b>Definition:</b> BaseLightX11.hpp:16</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_html_adf824bb737a0c3ae4550f5d7e8aa3473"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#adf824bb737a0c3ae4550f5d7e8aa3473">SGFramework::Administrator::GraphicsDetail::PointLightX11::setParameter</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY bool setParameter(uint index, const Element &amp;element)</div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:85</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdoc">uint = unsigned int</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:157</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element_html_a2e896a73f7a5cd7d34f84ed8f3202094"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a2e896a73f7a5cd7d34f84ed8f3202094">SGFramework::Administrator::GraphicsDetail::PointLightX11::Element::Element</a></div><div class="ttdeci">Element(const Vector3 &amp;position, const Color &amp;color, float power, bool isEnabled)</div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:43</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_light_x11_html_a680361bf24e5f2fd2643cd01ceb036b3"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_light_x11.html#a680361bf24e5f2fd2643cd01ceb036b3">SGFramework::BaseClass::BaseLightX11::m_isChangeds</a></div><div class="ttdeci">static bool m_isChangeds[3]</div><div class="ttdef"><b>Definition:</b> BaseLightX11.hpp:23</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector3_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a></div><div class="ttdef"><b>Definition:</b> Vector3.hpp:28</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_aa2eae4e8c99ada2e0afd8011beca63c4"><div class="ttname"><a href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a></div><div class="ttdeci">#define IS_TRUE(val)</div><div class="ttdoc">true判定高速化, 見やすさ向上マクロ(高速化は環境依存？)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:64</div></div>
+<div class="ttc" id="a_base_light_x11_8hpp_html"><div class="ttname"><a href="_base_light_x11_8hpp.html">BaseLightX11.hpp</a></div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element_html"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html">SGFramework::Administrator::GraphicsDetail::PointLightX11::Element</a></div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:33</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element_html_a281995d434f1c9cd19f879cb429ae204"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a281995d434f1c9cd19f879cb429ae204">SGFramework::Administrator::GraphicsDetail::PointLightX11::Element::power</a></div><div class="ttdeci">float power</div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:48</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector4_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector4.html">SGFramework::Vector4</a></div><div class="ttdef"><b>Definition:</b> Vector4.hpp:26</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element_html_ac797de520884e22d0e9c643e7f3cd4c8"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#ac797de520884e22d0e9c643e7f3cd4c8">SGFramework::Administrator::GraphicsDetail::PointLightX11::Element::color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:47</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element_html_a2e85f28e1801c6b5a67b377c1beac9c0"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#a2e85f28e1801c6b5a67b377c1beac9c0">SGFramework::Administrator::GraphicsDetail::PointLightX11::Element::isEnabled</a></div><div class="ttdeci">bool isEnabled</div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:49</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element_html_adfab708878bf520143ed08cf24577bb2"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_1_1_element.html#adfab708878bf520143ed08cf24577bb2">SGFramework::Administrator::GraphicsDetail::PointLightX11::Element::position</a></div><div class="ttdeci">Vector3 position</div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:46</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_html_a20a1147ba8421e4816463ffd4576af42"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#a20a1147ba8421e4816463ffd4576af42">SGFramework::Administrator::GraphicsDetail::PointLightX11::setIsEnabled</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY bool setIsEnabled(uint index, bool isEnabled)</div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:131</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11_html_abfbf268454b4b2aaccf0dffa45120913"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_point_light_x11.html#abfbf268454b4b2aaccf0dffa45120913">SGFramework::Administrator::GraphicsDetail::PointLightX11::setParameter</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY bool setParameter(uint index, const Vector3 &amp;position, const Color &amp;color, float power, bool isEnabled=true)</div><div class="ttdef"><b>Definition:</b> PointLightX11.hpp:67</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

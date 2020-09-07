@@ -8,7 +8,6 @@
 #include <string>
 #include <sstream>
 #include <exception>
-#include "ExceptionBacktrace.hpp"
 
 //Windows Version
 #if defined(SGF_PLATFORM_WINDOWS)
@@ -18,7 +17,9 @@
 #error "Unsupported platform."
 #endif//endif
 
-#include "../MacroAndUsing/MacroAndUsing.hpp"
+#include "../../01_MacroAndLibrarys/MacroAndLibrarys.hpp"
+#include "ExceptionBacktrace.hpp"
+#include "ExceptionWindow.hpp"
 
 //Framework namespace
 namespace SGFramework
@@ -65,24 +66,24 @@ namespace SGFramework
 				{
 					//Windows Version
 #if defined(SGF_PLATFORM_WINDOWS)
-					MessageBoxA(_hwnd(), _windowText().c_str(), cWindowHeader, MB_OK | MB_ICONERROR);
+					Exception::ExceptionWindow::ShowWindow(cWindowHeader, _windowText());
 #else
 #error "Unsupported platform."
 #endif//Windows Version
 				}
 
 				//<property> std::exception::what
-				SGF_PROPERTY virtual const std::string _what() const noexcept { return what(); }
+				SGF_INLINE_PROPERTY virtual const std::string _what() const noexcept { return what(); }
 				//<property> _exceptionName() + _exceptionText() + std::exception::what(); 
-				SGF_PROPERTY virtual const std::string _whatAll() const noexcept { return _exceptionName() + "::" + _exceptionText() + "\n\n" + what(); }
+				SGF_INLINE_PROPERTY virtual const std::string _whatAll() const noexcept { return _exceptionName() + "::" + _exceptionText() + "\n\n" + what(); }
 
 				//<property, virtual> exception class name
-				SGF_PROPERTY virtual const std::string _exceptionName() const noexcept = 0;
+				SGF_INLINE_PROPERTY virtual const std::string _exceptionName() const noexcept = 0;
 				//<property, virtual> exception text
-				SGF_PROPERTY virtual const std::string _exceptionText() const noexcept = 0;
+				SGF_INLINE_PROPERTY virtual const std::string _exceptionText() const noexcept = 0;
 
 				//<property> error window text
-				SGF_PROPERTY const std::string _windowText() const noexcept { return _exceptionName() + "::" + _exceptionText() + "\n\n" + what(); }
+				SGF_INLINE_PROPERTY const std::string _windowText() const noexcept { return _exceptionName() + "::" + _exceptionText() + "\n\n" + what(); }
 			
 				//error window herder
 				static constexpr char cWindowHeader[] = "SGFramework error!!";
@@ -100,7 +101,7 @@ namespace SGFramework
 				//引数1: ウィンドウハンドル
 				inline static void StartupWin64(HWND hwnd) { _hwnd() = hwnd; }
 				//<property, static> hwnd
-				SGF_PROPERTY static HWND& _hwnd() { static HWND instance = nullptr; return instance; }
+				SGF_INLINE_PROPERTY static HWND& _hwnd() { static HWND instance = nullptr; return instance; }
 #else
 #error "Unsupported platform."
 #endif//Windows Version

@@ -1,0 +1,162 @@
+\hypertarget{namespace_s_g_framework_1_1_asset}{}\doxysection{S\+G\+Framework\+::Asset 名前空間}
+\label{namespace_s_g_framework_1_1_asset}\index{SGFramework::Asset@{SGFramework::Asset}}
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect}{Audio\+Asset\+Effect}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d}{Audio\+Asset\+Effect3D}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_music}{Audio\+Asset\+Music}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_binary_asset}{Binary\+Asset}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset}{Text\+Asset}}
+\end{DoxyCompactItemize}
+\doxysubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_aabc86fb55a25e8d41ad754c3b8dc33b6}{Vertex\+Shader\+Asset}} = \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_vertex_shader_asset_x11}{Administrator\+::\+Graphics\+Detail\+::\+Vertex\+Shader\+Asset\+X11}}
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_a5f7bfbc4a9121619c35a5eeea791b8fb}{Pixel\+Shader\+Asset}} = \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_pixel_shader_asset_x11}{Administrator\+::\+Graphics\+Detail\+::\+Pixel\+Shader\+Asset\+X11}}
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_a9101b8d4ba2ee3b1308046d03311ed2c}{Texture\+Asset}} = \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_texture_asset_x11}{Administrator\+::\+Graphics\+Detail\+::\+Texture\+Asset\+X11}}
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_a546c99c6bfe199b32469e327d3b54fb8}{Model\+Asset}} = \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_model_asset_x11}{Administrator\+::\+Graphics\+Detail\+::\+Model\+Asset\+X11}}
+\end{DoxyCompactItemize}
+\doxysubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{Asset\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daabbb93ef26e3c101ff11cdd21cab08a94}{Asset\+Type\+::\+Null}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa6ce976e8f061b2b5cfe4d0c50c3405dd}{Asset\+Type\+::\+Binary}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa9dffbf69ffba8bc38bc4e01abf4b1675}{Asset\+Type\+::\+Text}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaeb3ca4dac3e206977e0b7d998eefcc33}{Asset\+Type\+::\+Vertex\+Shader}}, 
+\newline
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa54d3d36aabc3abac323576e3d22a3d2c}{Asset\+Type\+::\+Pixel\+Shader}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaa3e8ae43188ae76d38f414b2bdb0077b}{Asset\+Type\+::\+Texture}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaa559b87068921eec05086ce5485e9784}{Asset\+Type\+::\+Model}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaf1358f8b8fcc4d483d9648088292966b}{Asset\+Type\+::\+Audio\+Music}}, 
+\newline
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daae46c1b73df5ad3d7956d32e3939fb879}{Asset\+Type\+::\+Audio\+Effect}}, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa7f0b9e0ebe3ca71b4bff51868ca4fb12}{Asset\+Type\+::\+Audio\+Effect3D}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\+Asset $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ T\+Asset $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_ad512f0eb01593582e1507de561c2f71f}{Instantiate\+Asset}} (const sgstring \&file\+Path, bool is\+Register\+Shared\+Asset)
+\item 
+sgstring \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_a78b94f16304e145945bd30412acc0aa3}{String\+For\+Asset\+Type}} (\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{Asset\+Type}} type)
+\item 
+std\+::string \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_a8ce2b877f0f3db9a1b79601d44d8f805}{Std\+String\+For\+Asset\+Type}} (\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{Asset\+Type}} type)
+\item 
+{\footnotesize template$<$typename T\+Asset $>$ }\\\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{Asset\+Type}} \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_acfcbac06941930658c15c3c6e8246df8}{Find\+Asset\+Type}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{型定義詳解}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_a546c99c6bfe199b32469e327d3b54fb8}\label{namespace_s_g_framework_1_1_asset_a546c99c6bfe199b32469e327d3b54fb8}} 
+\index{SGFramework::Asset@{SGFramework::Asset}!ModelAsset@{ModelAsset}}
+\index{ModelAsset@{ModelAsset}!SGFramework::Asset@{SGFramework::Asset}}
+\doxysubsubsection{\texorpdfstring{ModelAsset}{ModelAsset}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_model_asset_x11}{Administrator\+::\+Graphics\+Detail\+::\+Model\+Asset\+X11}} \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_a546c99c6bfe199b32469e327d3b54fb8}{S\+G\+Framework\+::\+Asset\+::\+Model\+Asset}}}
+
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_a5f7bfbc4a9121619c35a5eeea791b8fb}\label{namespace_s_g_framework_1_1_asset_a5f7bfbc4a9121619c35a5eeea791b8fb}} 
+\index{SGFramework::Asset@{SGFramework::Asset}!PixelShaderAsset@{PixelShaderAsset}}
+\index{PixelShaderAsset@{PixelShaderAsset}!SGFramework::Asset@{SGFramework::Asset}}
+\doxysubsubsection{\texorpdfstring{PixelShaderAsset}{PixelShaderAsset}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_pixel_shader_asset_x11}{Administrator\+::\+Graphics\+Detail\+::\+Pixel\+Shader\+Asset\+X11}} \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_a5f7bfbc4a9121619c35a5eeea791b8fb}{S\+G\+Framework\+::\+Asset\+::\+Pixel\+Shader\+Asset}}}
+
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_a9101b8d4ba2ee3b1308046d03311ed2c}\label{namespace_s_g_framework_1_1_asset_a9101b8d4ba2ee3b1308046d03311ed2c}} 
+\index{SGFramework::Asset@{SGFramework::Asset}!TextureAsset@{TextureAsset}}
+\index{TextureAsset@{TextureAsset}!SGFramework::Asset@{SGFramework::Asset}}
+\doxysubsubsection{\texorpdfstring{TextureAsset}{TextureAsset}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_texture_asset_x11}{Administrator\+::\+Graphics\+Detail\+::\+Texture\+Asset\+X11}} \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_a9101b8d4ba2ee3b1308046d03311ed2c}{S\+G\+Framework\+::\+Asset\+::\+Texture\+Asset}}}
+
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_aabc86fb55a25e8d41ad754c3b8dc33b6}\label{namespace_s_g_framework_1_1_asset_aabc86fb55a25e8d41ad754c3b8dc33b6}} 
+\index{SGFramework::Asset@{SGFramework::Asset}!VertexShaderAsset@{VertexShaderAsset}}
+\index{VertexShaderAsset@{VertexShaderAsset}!SGFramework::Asset@{SGFramework::Asset}}
+\doxysubsubsection{\texorpdfstring{VertexShaderAsset}{VertexShaderAsset}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_vertex_shader_asset_x11}{Administrator\+::\+Graphics\+Detail\+::\+Vertex\+Shader\+Asset\+X11}} \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_aabc86fb55a25e8d41ad754c3b8dc33b6}{S\+G\+Framework\+::\+Asset\+::\+Vertex\+Shader\+Asset}}}
+
+
+
+\doxysubsection{列挙型詳解}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}\label{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}} 
+\index{SGFramework::Asset@{SGFramework::Asset}!AssetType@{AssetType}}
+\index{AssetType@{AssetType}!SGFramework::Asset@{SGFramework::Asset}}
+\doxysubsubsection{\texorpdfstring{AssetType}{AssetType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{S\+G\+Framework\+::\+Asset\+::\+Asset\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Null@{Null}!SGFramework::Asset@{SGFramework::Asset}}\index{SGFramework::Asset@{SGFramework::Asset}!Null@{Null}}}\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daabbb93ef26e3c101ff11cdd21cab08a94}\label{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daabbb93ef26e3c101ff11cdd21cab08a94}} 
+Null&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Binary@{Binary}!SGFramework::Asset@{SGFramework::Asset}}\index{SGFramework::Asset@{SGFramework::Asset}!Binary@{Binary}}}\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa6ce976e8f061b2b5cfe4d0c50c3405dd}\label{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa6ce976e8f061b2b5cfe4d0c50c3405dd}} 
+Binary&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Text@{Text}!SGFramework::Asset@{SGFramework::Asset}}\index{SGFramework::Asset@{SGFramework::Asset}!Text@{Text}}}\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa9dffbf69ffba8bc38bc4e01abf4b1675}\label{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa9dffbf69ffba8bc38bc4e01abf4b1675}} 
+Text&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VertexShader@{VertexShader}!SGFramework::Asset@{SGFramework::Asset}}\index{SGFramework::Asset@{SGFramework::Asset}!VertexShader@{VertexShader}}}\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaeb3ca4dac3e206977e0b7d998eefcc33}\label{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaeb3ca4dac3e206977e0b7d998eefcc33}} 
+Vertex\+Shader&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PixelShader@{PixelShader}!SGFramework::Asset@{SGFramework::Asset}}\index{SGFramework::Asset@{SGFramework::Asset}!PixelShader@{PixelShader}}}\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa54d3d36aabc3abac323576e3d22a3d2c}\label{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa54d3d36aabc3abac323576e3d22a3d2c}} 
+Pixel\+Shader&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Texture@{Texture}!SGFramework::Asset@{SGFramework::Asset}}\index{SGFramework::Asset@{SGFramework::Asset}!Texture@{Texture}}}\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaa3e8ae43188ae76d38f414b2bdb0077b}\label{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaa3e8ae43188ae76d38f414b2bdb0077b}} 
+Texture&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Model@{Model}!SGFramework::Asset@{SGFramework::Asset}}\index{SGFramework::Asset@{SGFramework::Asset}!Model@{Model}}}\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaa559b87068921eec05086ce5485e9784}\label{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaa559b87068921eec05086ce5485e9784}} 
+Model&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AudioMusic@{AudioMusic}!SGFramework::Asset@{SGFramework::Asset}}\index{SGFramework::Asset@{SGFramework::Asset}!AudioMusic@{AudioMusic}}}\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaf1358f8b8fcc4d483d9648088292966b}\label{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daaf1358f8b8fcc4d483d9648088292966b}} 
+Audio\+Music&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AudioEffect@{AudioEffect}!SGFramework::Asset@{SGFramework::Asset}}\index{SGFramework::Asset@{SGFramework::Asset}!AudioEffect@{AudioEffect}}}\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daae46c1b73df5ad3d7956d32e3939fb879}\label{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daae46c1b73df5ad3d7956d32e3939fb879}} 
+Audio\+Effect&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AudioEffect3D@{AudioEffect3D}!SGFramework::Asset@{SGFramework::Asset}}\index{SGFramework::Asset@{SGFramework::Asset}!AudioEffect3D@{AudioEffect3D}}}\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa7f0b9e0ebe3ca71b4bff51868ca4fb12}\label{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97daa7f0b9e0ebe3ca71b4bff51868ca4fb12}} 
+Audio\+Effect3D&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_acfcbac06941930658c15c3c6e8246df8}\label{namespace_s_g_framework_1_1_asset_acfcbac06941930658c15c3c6e8246df8}} 
+\index{SGFramework::Asset@{SGFramework::Asset}!FindAssetType@{FindAssetType}}
+\index{FindAssetType@{FindAssetType}!SGFramework::Asset@{SGFramework::Asset}}
+\doxysubsubsection{\texorpdfstring{FindAssetType()}{FindAssetType()}}
+{\footnotesize\ttfamily template$<$typename T\+Asset $>$ \\
+\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{Asset\+Type}} S\+G\+Framework\+::\+Asset\+::\+Find\+Asset\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_ad512f0eb01593582e1507de561c2f71f}\label{namespace_s_g_framework_1_1_asset_ad512f0eb01593582e1507de561c2f71f}} 
+\index{SGFramework::Asset@{SGFramework::Asset}!InstantiateAsset@{InstantiateAsset}}
+\index{InstantiateAsset@{InstantiateAsset}!SGFramework::Asset@{SGFramework::Asset}}
+\doxysubsubsection{\texorpdfstring{InstantiateAsset()}{InstantiateAsset()}}
+{\footnotesize\ttfamily template$<$typename T\+Asset $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ T\+Asset $>$ S\+G\+Framework\+::\+Asset\+::\+Instantiate\+Asset (\begin{DoxyParamCaption}\item[{const sgstring \&}]{file\+Path,  }\item[{bool}]{is\+Register\+Shared\+Asset = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_a8ce2b877f0f3db9a1b79601d44d8f805}\label{namespace_s_g_framework_1_1_asset_a8ce2b877f0f3db9a1b79601d44d8f805}} 
+\index{SGFramework::Asset@{SGFramework::Asset}!StdStringForAssetType@{StdStringForAssetType}}
+\index{StdStringForAssetType@{StdStringForAssetType}!SGFramework::Asset@{SGFramework::Asset}}
+\doxysubsubsection{\texorpdfstring{StdStringForAssetType()}{StdStringForAssetType()}}
+{\footnotesize\ttfamily std\+::string S\+G\+Framework\+::\+Asset\+::\+Std\+String\+For\+Asset\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{Asset\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_asset_a78b94f16304e145945bd30412acc0aa3}\label{namespace_s_g_framework_1_1_asset_a78b94f16304e145945bd30412acc0aa3}} 
+\index{SGFramework::Asset@{SGFramework::Asset}!StringForAssetType@{StringForAssetType}}
+\index{StringForAssetType@{StringForAssetType}!SGFramework::Asset@{SGFramework::Asset}}
+\doxysubsubsection{\texorpdfstring{StringForAssetType()}{StringForAssetType()}}
+{\footnotesize\ttfamily sgstring S\+G\+Framework\+::\+Asset\+::\+String\+For\+Asset\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{Asset\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+

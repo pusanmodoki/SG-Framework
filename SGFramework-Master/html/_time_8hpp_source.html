@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/02_Variables/未実装/Time/Time.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_0cf03c12e51ae64724f6ec73d30b9672.html">02_Variables</a></li><li class="navelem"><a class="el" href="dir_06c5a77703cbb5bfafd4b0eea230505d.html">未実装</a></li><li class="navelem"><a class="el" href="dir_055b30c37812158255b36edaf22b402c.html">Time</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Time.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_time_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">時間を処理するTime Class</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_TIME_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_TIME_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../ConstAndUsing/ConstAndUsing.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../Property/Property.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../String/String.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../Window/HwndHolder/HwndHolder.hpp&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../ReadElement/ReadElement.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_time_processing_8hpp.html">TimeProcessing.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../InvalidArgument/InvalidArgument.hpp&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../Pointer/Pointer.hpp&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//時間を処理するTime Class</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html">   24</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_time.html">Time</a> final</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">//TimeScaleのLayer class</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html">TimeLayer</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">//friend</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#abf187ff60a5a861390c22b42e1949f66">   30</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_s_g_framework_1_1_time.html#abf187ff60a5a861390c22b42e1949f66">TimeLayer</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a23f25bcc02a0e94c2f5a4188496b04d0">   31</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_application.html">Application</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a6f8f6a1f61bc23dc69bd2a0d90827140">   33</a></span>&#160;        <a class="code" href="class_s_g_framework_1_1_time.html#a6f8f6a1f61bc23dc69bd2a0d90827140">DELETE_ALL_DEFAULT_CLASS_FUNCTIONS</a>(<a class="code" href="class_s_g_framework_1_1_time.html">Time</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">//[Start]</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">//タイム処理の初期化を行う</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> StartTimeProcessing(<span class="keyword">const</span> ReadElement::Pack&amp; isNoRestrictionsFPS,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">const</span> ReadElement::Pack&amp; <a class="code" href="class_s_g_framework_1_1_time.html#a3bac19ee6d257c69eef7fc79ec7f2715">fixedInterval</a>, <span class="keyword">const</span> ReadElement::Groop&amp; layers, <span class="keywordtype">bool</span> isRemote);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">//[FixedUpdate]</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">//Fixedタイム処理の更新を行う</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">//return: Fixed更新フレームか否か, n回trueを繰り返す</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> FixedUpdate();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">//[FixedLastUpdate]</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">//Fixedタイム処理の最終更新を行う</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">//補正モードの確認を行うためフレーム実行処理の中に入れること</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> FixedLastUpdate();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">//[Update]</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">//タイム処理の更新を行う</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">//return: 更新フレームか否か</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> Update();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//[FindTimeLayer]</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">//TimeLayerを取得する</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">//return: layerNameに該当するレイヤー, 見つからない場合は空ポインタ</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">//引数1: レイヤー名(getTimeLayerより重い)</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;TimeLayer&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#a71e24eb469c68ec96fa8828322bd7d9e">FindTimeLayer</a>(<span class="keyword">const</span> sgstring&amp; layerName);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//[ResetWorldTimeScale]</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">//RootLayerのタイムスケールを設定する</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">//0にするとタイム系変数が完全にストップする</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="comment">//引数1: 設定する値(0~)</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_time.html#ad94eaf04957723bf57322db794ac2c50">ResetWorldTimeScale</a>(<span class="keywordtype">float</span> value);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">//[CurrentTimeToString]</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">//return: &quot;[時:分:秒]&quot;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> sgstring <a class="code" href="class_s_g_framework_1_1_time.html#a2352afc591963341004b6912597dec23">CurrentTimeToString</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">//[CurrentTimeToStdString]</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">//return: &quot;[時:分:秒]&quot;</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> std::string <a class="code" href="class_s_g_framework_1_1_time.html#af58323dde7e29db85bd9cce0943cbd37">CurrentTimeToStdString</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">//[CurrentTime]</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">//sec, min, hour各引数がNULLでなければ現在時刻を代入する</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_time.html#acb9865f7bd3074158557e0a2b868597f">CurrentTime</a>(<span class="keywordtype">int</span>* sec, <span class="keywordtype">int</span>* min, <span class="keywordtype">int</span>* hour);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">//time layer[id], &lt;static&gt;(get function property)</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">//return: layer[id] pointer,  not found-&gt;null</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">//argument 1: layer id</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#aa12aec1f5d3f18e48842f0befe768155">   89</a></span>&#160;        SGF_FUNCTION_PROPERTY <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;TimeLayer&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#aa12aec1f5d3f18e48842f0befe768155">getTimeLayer</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">if</span> (m_layerCount &gt; <span class="keywordtype">id</span>) <span class="keywordflow">return</span> m_layerMap[id];</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">else</span> <a class="code" href="class_s_g_framework_1_1_shared_pointer.html#ae9a48ef8af8aaa71022b06ef72d21db7">SharedPointer&lt;TimeLayer&gt;::getNull</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">//time layer-&gt;id, &lt;static&gt;(get function property)</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="comment">//return: layer-&gt;id,  not found-&gt;TimeLayer::cInvalidID</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">//argument 1: layer name</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a91deef2bca083f1cff98ec8ef0a370b2">   97</a></span>&#160;        SGF_FUNCTION_PROPERTY <span class="keyword">static</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_time.html#a91deef2bca083f1cff98ec8ef0a370b2">getTimeLayerID</a>(<span class="keyword">const</span> sgstring&amp; layerName)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; it : m_layerMap)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">if</span> (it.second-&gt;layerName() == layerName) <span class="keywordflow">return</span> it.second-&gt;layerID;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#ad5bce5ec0e4762f986046372681dccea">TimeLayer::cInvaridID</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="comment">//ゲッター</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">//double</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#aeb28ed79f7501515e2be861cb0b7b970">  106</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;double&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#aeb28ed79f7501515e2be861cb0b7b970">timeWithClock</a>;                   <span class="comment">//Clockベースの時間</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a3bac19ee6d257c69eef7fc79ec7f2715">  107</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;double&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#a3bac19ee6d257c69eef7fc79ec7f2715">fixedInterval</a>;                       <span class="comment">//設定済みのFixed更新間隔(初期値プリセット)</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="comment">//float</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a89e72f62e2ea9026eb4143762087b438">  109</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#a89e72f62e2ea9026eb4143762087b438">fps</a>;                                      <span class="comment">//fps</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#ab8905d35b7b81bac18d09b060aa6ea5c">  110</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#ab8905d35b7b81bac18d09b060aa6ea5c">targetFrameRate</a>;                  <span class="comment">//ターゲットフレームレート</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#ac06223c55a321603869ee190c0e6171f">  111</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#ac06223c55a321603869ee190c0e6171f">worldTimeScale</a>;                   <span class="comment">//各deltaTimeにかける倍率</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">//float NotFixed</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#ab278d59d1d6c211b1631affb13f4c24b">  113</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#ab278d59d1d6c211b1631affb13f4c24b">time</a>;                                 <span class="comment">//Start実行時からの経過秒数</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a2e4449d96ef4781082feadfb5371866c">  114</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#a2e4449d96ef4781082feadfb5371866c">worldDeltaTime</a>;                   <span class="comment">//フレームごとの時間</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#ace1d360eddebc11afe2ce969c1a2aa63">  115</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#ace1d360eddebc11afe2ce969c1a2aa63">unScaledWorldDeltaTime</a>;       <span class="comment">//フレームごとの時間(Scaleをかけない)</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="comment">//float Fixed       </span></div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a219b259272c41a239b1489ef8bf8b65e">  117</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#a219b259272c41a239b1489ef8bf8b65e">fixedTime</a>;                                <span class="comment">//Start実行時からの経過秒数(fixedFreameに更新)</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a1c91af9f2c4c8e53bbdebbd7ce1e8d62">  118</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#a1c91af9f2c4c8e53bbdebbd7ce1e8d62">fixedDeltaTime</a>;                       <span class="comment">//フレームごとの時間(fixed)</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a7f583897eab3780c9e03bacad6eec3ec">  119</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#a7f583897eab3780c9e03bacad6eec3ec">unScaledFixedDeltaTime</a>;       <span class="comment">//フレームごとの時間(Scaleをかけない, fixed)        </span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="comment">//TimeLayer[0]</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a1b3cc27879556d9cc05cd68b54795605">  121</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;SharedPointer&lt;TimeLayer&gt;</a>&gt; <a class="code" href="class_s_g_framework_1_1_time.html#a1b3cc27879556d9cc05cd68b54795605">rootTimeLayer</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="comment">//bool</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a29615a6f729e4a9ffe7a5e495ba1a1fd">  123</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;bool&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#a29615a6f729e4a9ffe7a5e495ba1a1fd">isUpdateFreame</a>;                    <span class="comment">//Update実行フレームか</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a8ed43850185aad7b76599b8215e18d2a">  124</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;bool&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#a8ed43850185aad7b76599b8215e18d2a">isFixedUpdateFreame</a>;           <span class="comment">//Fixed更新フレームか</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">//TimeScaleのLayer class</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html">  127</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html">TimeLayer</a> final</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a4638b7e7c4a9d32a59f736fe6e5ff8a2">  130</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_time.html">Time</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="comment">//get parent layer property property(read only), if null = not parent</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a887dc4807bcd79c3469c01aa06a6e6f3">  133</a></span>&#160;            SGF_FUNCTION_PROPERTY <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;TimeLayer&gt;</a> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a887dc4807bcd79c3469c01aa06a6e6f3">getParent</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_parent; }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="comment">//get childrens iterator cbegin property(read only)</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a9e252634855d4c66a8a91cbcb408b277">  135</a></span>&#160;            SGF_FUNCTION_PROPERTY <span class="keyword">auto</span> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a9e252634855d4c66a8a91cbcb408b277">getChildrensIteratorBegin</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_childrens.cbegin(); }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="comment">//get childrens iterator cend property(read only)</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a8768da115a8aae0ed62f94d480f93a93">  137</a></span>&#160;            SGF_FUNCTION_PROPERTY <span class="keyword">auto</span> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a8768da115a8aae0ed62f94d480f93a93">getChildrensIteratorEnd</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_childrens.cend(); }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="comment">//get num childrens property(read only)</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#ac4388b6373ea166fca989705e34dee05">  139</a></span>&#160;            SGF_FUNCTION_PROPERTY <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#ac4388b6373ea166fca989705e34dee05">getNumChildrens</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a><span class="keyword">&gt;</span>(m_childrens.size()); }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="comment">//set this time scale property(set only)</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="comment">//argument 1: 設定スケール (0~)</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#aa5f3a9c77a4a31cb93e35ab66cbb656e">  142</a></span>&#160;            SGF_FUNCTION_PROPERTY <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#aa5f3a9c77a4a31cb93e35ab66cbb656e">setScale</a>(<span class="keywordtype">float</span> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a4cb3d890877d4f5ab6a62ac4c51bf20e">timeScale</a>) { m_timeScale = <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a4cb3d890877d4f5ab6a62ac4c51bf20e">timeScale</a>; <span class="keywordflow">if</span> (m_timeScale &lt; 0.0f) m_timeScale = 0.0f; }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="comment">//set childrens time scale property(set only)</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="comment">//argument 1: 設定スケール (0~)</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a2e6adb2400b7778612b5da0b3b1e10ff">  145</a></span>&#160;            SGF_FUNCTION_PROPERTY <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a2e6adb2400b7778612b5da0b3b1e10ff">setScaleToChildrens</a>(<span class="keywordtype">float</span> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a4cb3d890877d4f5ab6a62ac4c51bf20e">timeScale</a>) { <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; it : m_childrens) it-&gt;setScale(<a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a4cb3d890877d4f5ab6a62ac4c51bf20e">timeScale</a>); }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a59b3cf96feb611b4ce49ac1ea164fe68">  147</a></span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a59b3cf96feb611b4ce49ac1ea164fe68">cRootName</a>[] = L<span class="stringliteral">&quot;root&quot;</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#ad5bce5ec0e4762f986046372681dccea">  148</a></span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#ad5bce5ec0e4762f986046372681dccea">cInvaridID</a> = <a class="code" href="namespace_s_g_framework_1_1_variable_limit.html#a4e28295c9e1b4be9503f9b15a981f543">VariableLimit::cUintMax</a>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a4cb3d890877d4f5ab6a62ac4c51bf20e">  150</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a4cb3d890877d4f5ab6a62ac4c51bf20e">timeScale</a>;                       <span class="comment">//現在のタイムスケール, Rootから自身までのすべてのsettingScaleをかけた値になる</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a6ff1fa097352111feb55745a98f6a82f">  151</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a6ff1fa097352111feb55745a98f6a82f">settingScale</a>;                    <span class="comment">//タイムスケール設定値</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a5a13384e8579d866dda5093277f8b8f6">  152</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a5a13384e8579d866dda5093277f8b8f6">deltaTime</a>;                       <span class="comment">//このレイヤーのdeltaTime</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a83f40b40edfe3e4f2267be6a7749c89d">  153</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a83f40b40edfe3e4f2267be6a7749c89d">fixedDeltaTime</a>;              <span class="comment">//このレイヤーのfixedDeltaTime</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a901ebb87ef9dda84c379430a04a8c3e2">  154</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a901ebb87ef9dda84c379430a04a8c3e2">unscaledDeltaTime</a>;       <span class="comment">//unscaledDeltaTime * this time scale</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a1afa819b78814b9b6afab64fa546d76a">  155</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;float&gt;</a> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a1afa819b78814b9b6afab64fa546d76a">unscaledFixedDeltaTime</a>;  <span class="comment">//unscaledDeltaTime * this time scale</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a8399b0d9ad0c9128b5a97d5577711ec1">  156</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;sgstring&gt;</a> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a8399b0d9ad0c9128b5a97d5577711ec1">layerName</a>;                <span class="comment">//レイヤー名</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a13e85939bcd2b8122130dcbc04137ddf">  157</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;uint&gt;</a> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a13e85939bcd2b8122130dcbc04137ddf">layerID</a>;                          <span class="comment">//レイヤーID</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html">TimeLayer</a>();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="comment">//[InitRoot]</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="comment">//Rootレイヤー用, 初期設定を行う</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> InitRoot();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="comment">//[Init]</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="comment">//Root以外のレイヤー用, 初期設定を行う</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="comment">//引数1: this Pointer</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="comment">//引数2: 親レイヤー</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="comment">//引数3: レイヤー名</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="comment">//引数4: 設定スケール</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="comment">//引数5: レイヤーID</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespace_s_g_framework_1_1_atomic.html#aa74003ea2ff69348cf11120966582c0e">Init</a>(<a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;TimeLayer&gt;</a>&amp; thisPointer,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;TimeLayer&gt;</a>&amp; parent, <span class="keyword">const</span> sgstring&amp; myLayerName, <span class="keywordtype">float</span> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a6ff1fa097352111feb55745a98f6a82f">settingScale</a>, <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a13e85939bcd2b8122130dcbc04137ddf">layerID</a>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="comment">//[Update]</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="comment">//deltaTimeの更新を行う</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> Update();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="comment">//子レイヤー</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            std::vector&lt;WeakPointer&lt;TimeLayer&gt;&gt; m_childrens;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            sgstring m_layerName;                           <span class="comment">//レイヤー名</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;TimeLayer&gt;</a> m_parent;        <span class="comment">//親レイヤー</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keywordtype">float</span> m_timeScale;                                  <span class="comment">//現在スケール</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordtype">float</span> m_settingScale;                               <span class="comment">//設定スケール</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordtype">float</span> m_deltaTime;                                  <span class="comment">//deltaTime</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordtype">float</span> m_fixedDeltaTime;                         <span class="comment">//fixedDeltaTime</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordtype">float</span> m_unscaledDeltaTime;                  <span class="comment">//unscaledDeltaTime * this time scale</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordtype">float</span> m_unscaledFixedDeltaTime;             <span class="comment">//unscaledDeltaTime * this time scale</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_layerID;                                     <span class="comment">//レイヤーID</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        };</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="comment">//force allow update = true&lt;static&gt; (set only property)</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        SGF_FUNCTION_PROPERTY <span class="keyword">static</span> <span class="keywordtype">void</span> setFourceUpdate() { m_isAllowUpdate = <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="comment">//TimeGetter</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_time_processing_1_1_time_getter_double.html">TimeProcessing::TimeGetterDouble</a> m_timeGetter;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="comment">//FPS制限</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter.html">TimeProcessing::FPSLimiter</a> m_fpsLimiter;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="comment">//FPS計測時間制限</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_time_processing_1_1_time_limiter.html">TimeProcessing::TimeLimiter</a> m_fpsInstrumentationLimiter;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="comment">//rootLayer</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;TimeLayer&gt;</a> m_rootLayer;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="comment">//LayerMap</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keyword">static</span> std::unordered_map&lt;uint, SharedPointer&lt;TimeLayer&gt;&gt; m_layerMap;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="comment">//double</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">double</span> m_frequencyTime;                      <span class="comment">//現在時間</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">double</span> m_startUpTime;                            <span class="comment">//Start実行時刻</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">double</span> m_updateStartTime;                    <span class="comment">//delta用前回フレームからのタイム</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">double</span> m_fixedInterval;                          <span class="comment">//Fixed更新間隔(初期値プリセット)</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">double</span> m_fixedStartTime;                     <span class="comment">//Fixed監視開始時刻</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="comment">//float</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">float</span> m_fps;                                         <span class="comment">//現在FPS</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">float</span> m_worldTimeScale;                      <span class="comment">//各deltaTimeにかける倍率</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">float</span> m_refreshRate;                             <span class="comment">//画面更新間隔, 初期化用に所持</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="comment">//float NotFixed</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">float</span> m_time;                                        <span class="comment">//Start実行時からの経過秒数</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">float</span> m_worldDeltaTime;                      <span class="comment">//フレームごとの時間</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">float</span> m_worldUnScaledDeltaTime;          <span class="comment">//フレームごとの時間(Scaleをかけない)</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="comment">//float Fixed</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">float</span> m_fixedTime;                                   <span class="comment">//Start実行時からの経過秒数(fixedFreameに更新)</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">float</span> m_fixedDeltaTime;                          <span class="comment">//フレームごとの時間(fixed)</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">float</span> m_unScaledFixedDeltaTime;          <span class="comment">//フレームごとの時間(Scaleをかけない, fixed)</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="comment">//uint</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_frameCount;                               <span class="comment">//フレーム数カウント</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_fixedCount;                               <span class="comment">//Fixed更新回数</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_layerCount;                               <span class="comment">//レイヤーカウント</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="comment">//bool</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> m_isUpdateFreame;                       <span class="comment">//Updateフレームか</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> m_isFixedUpdateFreame;              <span class="comment">//FixedUpdateフレームか</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> m_isAllowUpdate;                            <span class="comment">//Updateを許可するか</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    };</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">//[Start]</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="comment">//タイム処理の初期化を行う</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> Time::StartTimeProcessing(<span class="keyword">const</span> ReadElement::Pack&amp; isNoRestrictionsFPS,</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keyword">const</span> ReadElement::Pack&amp; fixedInterval, <span class="keyword">const</span> ReadElement::Groop&amp; layers, <span class="keywordtype">bool</span> isRemote)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="comment">//リフレッシュレート取得</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa36e55e8a36a5db4160db2dc04fde1a4">IS_FALSE</a>(isRemote))</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            m_refreshRate = Administrator::GetRefreshRate(<a class="code" href="class_s_g_framework_1_1_window_1_1_hwnd_holder.html#a2f2c10c00abbc7413ff046e0580cfa36">Window::HwndHolder::main</a>);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            m_refreshRate = 30.0f;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">if</span> (isNoRestrictionsFPS[0].valueInt)</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            m_refreshRate = <a class="code" href="namespace_s_g_framework_1_1_variable_limit.html#ad903290137ff278111d1446fe99bd0e2">VariableLimit::cFloatMax</a>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="comment">//Interval代入</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        m_fixedInterval = <a class="code" href="class_s_g_framework_1_1_time.html#a3bac19ee6d257c69eef7fc79ec7f2715">fixedInterval</a>[0].valueFloat;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="comment">//RootLayer設定</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        m_rootLayer = SharedPointer&lt;TimeLayer&gt;(<span class="keyword">new</span> <a class="code" href="class_s_g_framework_1_1_time.html#abf187ff60a5a861390c22b42e1949f66">TimeLayer</a>());</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        m_rootLayer-&gt;InitRoot();</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        m_layerMap.try_emplace(0, m_rootLayer);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        m_layerCount = 1;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : layers.packs)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="keyword">auto</span> pointer = SharedPointer&lt;TimeLayer&gt;(<span class="keyword">new</span> <a class="code" href="class_s_g_framework_1_1_time.html#abf187ff60a5a861390c22b42e1949f66">TimeLayer</a>());</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keyword">auto</span> parent = std::move(e.elements.size() &gt;= 2</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                ? <a class="code" href="class_s_g_framework_1_1_time.html#a71e24eb469c68ec96fa8828322bd7d9e">FindTimeLayer</a>(e[1].valueString) : m_rootLayer);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            pointer-&gt;Init(pointer, parent, e.header, e[0].valueFloat, m_layerCount);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            m_layerMap.try_emplace(m_layerCount++, pointer);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        m_fpsLimiter.<a class="code" href="class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter.html#aa86a9b011b5d4d070dbea3283111053a">Start</a>(m_refreshRate);      <span class="comment">//FPS制限開始</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        m_fpsInstrumentationLimiter.<a class="code" href="class_s_g_framework_1_1_time_processing_1_1_time_limiter.html#ace90f76ae080dd1b74b91c8857999228">Start</a>(1.0f);    <span class="comment">//FPS計測制限開始</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        m_startUpTime = m_timeGetter();         <span class="comment">//Start実行時刻</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="comment">//代入</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        m_frequencyTime = m_startUpTime;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        m_updateStartTime = m_startUpTime;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        m_fixedStartTime = m_startUpTime;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">while</span> (m_time &lt; 1.0f)</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(Time::FixedUpdate()))</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                Time::FixedLastUpdate();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            Time::Update();</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="comment">//[FixedUpdate]</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="comment">//Fixedタイム処理の更新を行う</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">//return: Fixed更新フレームか否か, n回trueを繰り返す</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> Time::FixedUpdate()</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">double</span> delta = 0;    <span class="comment">//Intervl確認ループ用</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="comment">//Get Time</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        m_frequencyTime = m_timeGetter();</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="comment">//FPS Update</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">if</span> (m_fpsInstrumentationLimiter(m_frequencyTime))</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        {</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            <span class="comment">//Set FPS</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            m_fps = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(m_frameCount) / (m_frequencyTime - m_fpsInstrumentationLimiter.<a class="code" href="class_s_g_framework_1_1_time_processing_1_1_time_limiter.html#ace097307719d560b046d7c5a077b74f7">previousStartTime</a>));</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="comment">//Reset Counter</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            m_frameCount = 0;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">if</span> (m_fps &lt; m_refreshRate)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                m_fpsLimiter.<a class="code" href="class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter.html#ad92427b95c1bbdcc9cccc6f67234a8b6">ChangeFPS</a>(m_refreshRate * 1.01f);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (m_fps &gt; m_refreshRate + 1.0f)</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                m_fpsLimiter.<a class="code" href="class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter.html#ad92427b95c1bbdcc9cccc6f67234a8b6">ChangeFPS</a>(m_refreshRate* 0.99f);</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">if</span> (m_frequencyTime - m_fixedStartTime &gt; m_fixedInterval * 3)</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            m_fpsLimiter.<a class="code" href="class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter.html#aa86a9b011b5d4d070dbea3283111053a">Start</a>(m_refreshRate);      <span class="comment">//FPS制限開始</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            m_fpsInstrumentationLimiter.<a class="code" href="class_s_g_framework_1_1_time_processing_1_1_time_limiter.html#ace90f76ae080dd1b74b91c8857999228">Start</a>(1.0f);    <span class="comment">//FPS計測制限開始</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="comment">//fixed更新強制</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            m_fixedStartTime = m_frequencyTime - m_fixedInterval;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            m_fixedCount = 0;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="comment">//FixedCountがまだ残っている</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordflow">if</span> (m_fixedCount &gt; 1)</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        {</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            --m_fixedCount;     <span class="comment">//カウンター減算</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <span class="comment">//Fixed更新回数がまだあり累計更新時間がFixedIntervalを超過した場合更新を諦める</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <span class="keywordflow">if</span> (m_fixedCount &gt; 1 &amp;&amp; m_timeGetter() - m_fixedStartTime &gt; m_fixedInterval)</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                m_fixedCount = 0;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            <span class="comment">//true返却</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <span class="keywordflow">return</span> m_isFixedUpdateFreame = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="comment">//現在のFixed差分時間取得</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        delta = m_frequencyTime - m_fixedStartTime;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="comment">//カウンター初期化</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        m_fixedCount = 0;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="comment">//Interval確認ループ</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">while</span> (delta &gt; m_fixedInterval)</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            ++m_fixedCount;             <span class="comment">//カウンター加算</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            delta -= m_fixedInterval;   <span class="comment">//delta減算</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="comment">//カウンター0超過 -&gt; Fixed Update Frame</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordflow">if</span> (m_fixedCount &gt; 0)</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        {</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="comment">//Get FixedApplicationElapasedTime</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            m_fixedTime = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(m_frequencyTime - m_startUpTime);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <span class="comment">//Get FixedDeltaTime</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            m_unScaledFixedDeltaTime = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(m_frequencyTime - m_fixedStartTime);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            <span class="comment">//delta設定</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            m_fixedDeltaTime = m_unScaledFixedDeltaTime * m_worldTimeScale;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            m_time = m_fixedTime;                           <span class="comment">//Time代入</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            m_fixedStartTime += m_fixedInterval;    <span class="comment">//StartTime更新</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            <span class="keywordflow">return</span> m_isFixedUpdateFreame = <span class="keyword">true</span>;    <span class="comment">//true返却</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="comment">//Updateは許す</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        m_isAllowUpdate = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="comment">//false返却</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordflow">return</span> m_isFixedUpdateFreame = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="comment">//[FixedLastUpdate]</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="comment">//Fixedタイム処理の最終更新を行う</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="comment">//補正モードの確認を行うためフレーム実行処理の中に入れること</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> Time::FixedLastUpdate()</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    {</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="comment">//FPS Update</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">if</span> (m_fpsInstrumentationLimiter(m_frequencyTime))</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        {</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            <span class="comment">//Set FPS</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            m_fps = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(m_frameCount) / (m_frequencyTime - m_fpsInstrumentationLimiter.<a class="code" href="class_s_g_framework_1_1_time_processing_1_1_time_limiter.html#ace097307719d560b046d7c5a077b74f7">previousStartTime</a>));</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            <span class="comment">//Reset Counter</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            m_frameCount = 0;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            <span class="keywordflow">if</span> (m_fps &lt; m_refreshRate)</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                m_fpsLimiter.<a class="code" href="class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter.html#ad92427b95c1bbdcc9cccc6f67234a8b6">ChangeFPS</a>(m_refreshRate * 1.01f);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (m_fps &gt; m_refreshRate + 1.0f)</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                m_fpsLimiter.<a class="code" href="class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter.html#ad92427b95c1bbdcc9cccc6f67234a8b6">ChangeFPS</a>(m_refreshRate* 0.99f);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        }</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="comment">//FixedUpdate実行秒数がInterval超過-&gt;Update更新を許可しない</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="comment">//超過していなければUpdate更新を許可する</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordflow">if</span> (m_timeGetter() - m_fixedStartTime &lt; m_fixedInterval)</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            m_isAllowUpdate = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            m_isAllowUpdate = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    }</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="comment">//[Update]</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="comment">//タイム処理の更新を行う</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="comment">//return: 更新フレームか否か</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> Time::Update()</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    {</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="comment">//Update更新が許可されていない場合はfalse返却</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordflow">if</span> (m_isAllowUpdate ^ <span class="keyword">true</span>) <span class="keywordflow">return</span> m_isUpdateFreame = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <span class="comment">//Get ApplicationElapasedTime</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        m_time = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(m_frequencyTime - m_startUpTime);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="comment">//UpdateFrame</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        <span class="keywordflow">if</span> (m_fpsLimiter(m_frequencyTime))</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        {</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            <span class="comment">//Get</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            m_worldUnScaledDeltaTime = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(m_frequencyTime - m_updateStartTime);</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            <span class="keywordflow">if</span> (m_worldUnScaledDeltaTime &gt; 1.0f)</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                m_worldUnScaledDeltaTime = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(m_fpsLimiter.<a class="code" href="class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter.html#a4ca16c738056949c7e59c72a41d22220">interval</a>());</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            m_worldDeltaTime = m_worldUnScaledDeltaTime * m_worldTimeScale;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            <span class="comment">//TimeLayer Update</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; it : m_layerMap) it.second-&gt;Update();</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;            <span class="comment">//Save Time</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;            m_updateStartTime = m_frequencyTime;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;            <span class="comment">//FPS Counter++</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            m_frameCount++;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;            <span class="comment">//return true</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            <span class="keywordflow">return</span> m_isUpdateFreame = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        }</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        <span class="comment">//NotUpdateFrame</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        {</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            <span class="comment">//return false</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            <span class="keywordflow">return</span> m_isUpdateFreame = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        }</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    }</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="comment">//[FindTimeLayer]</span></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="comment">//TimeLayerを取得する</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="comment">//return: layerNameに該当するレイヤー, 見つからない場合は空ポインタ</span></div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="comment">//引数1: レイヤー名(getTimeLayerより重い)</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a71e24eb469c68ec96fa8828322bd7d9e">  445</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Time::TimeLayer&gt;</a> <a class="code" href="class_s_g_framework_1_1_time.html#a71e24eb469c68ec96fa8828322bd7d9e">Time::FindTimeLayer</a>(<span class="keyword">const</span> sgstring&amp; layerName)</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    {</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; it : m_layerMap)</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;            <span class="keywordflow">if</span> (it.second-&gt;layerName() == layerName) <span class="keywordflow">return</span> it.second;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_s_g_framework_1_1_shared_pointer.html#ae9a48ef8af8aaa71022b06ef72d21db7">SharedPointer&lt;Time::TimeLayer&gt;::getNull</a>();</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    }</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="comment">//[ResetWorldTimeScale]</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="comment">//RootLayerのタイムスケールを設定する</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="comment">//0にするとタイム系変数が完全にストップする</span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="comment">//引数1: 設定する値(0~)</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#ad94eaf04957723bf57322db794ac2c50">  457</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_time.html#ad94eaf04957723bf57322db794ac2c50">Time::ResetWorldTimeScale</a>(<span class="keywordtype">float</span> value)</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    {</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        m_worldTimeScale = value;       <span class="comment">//設定</span></div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        <span class="keywordflow">if</span> (m_worldTimeScale &lt; 0.0f)    m_worldTimeScale = 0.0f;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160; </div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="comment">//Delta Update</span></div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        m_worldDeltaTime = m_worldUnScaledDeltaTime * m_worldTimeScale;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        <span class="comment">//Root設定</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        m_rootLayer-&gt;Update();</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        <span class="comment">//Update</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; it : m_layerMap)</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;            it.second-&gt;Update();</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160; </div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        <span class="comment">//Fixed設定</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        m_fixedDeltaTime = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(m_fixedInterval) * m_worldTimeScale;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    }</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="comment">//[CurrentTimeToString]</span></div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    <span class="comment">//return: &quot;[時:分:秒]&quot;</span></div>
+<div class="line"><a name="l00476"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#a2352afc591963341004b6912597dec23">  476</a></span>&#160;    <span class="keyword">inline</span> sgstring <a class="code" href="class_s_g_framework_1_1_time.html#a2352afc591963341004b6912597dec23">Time::CurrentTimeToString</a>()</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    {</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        tm tm;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        time_t getTime;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160; </div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        <a class="code" href="class_s_g_framework_1_1_time.html#ab278d59d1d6c211b1631affb13f4c24b">::time</a>(&amp;getTime);</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        localtime_s(&amp;tm, &amp;getTime);</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160; </div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        <span class="keywordflow">return</span> sgstring(L<span class="stringliteral">&quot;[&quot;</span> + std::to_wstring(tm.tm_hour) + L<span class="stringliteral">&quot;:&quot;</span> +</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;            std::to_wstring(tm.tm_min) + L<span class="stringliteral">&quot;:&quot;</span> + std::to_wstring(tm.tm_sec) + L<span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    }</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    <span class="comment">//[CurrentTimeToStdString]</span></div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="comment">//return: &quot;[時:分:秒]&quot;</span></div>
+<div class="line"><a name="l00490"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#af58323dde7e29db85bd9cce0943cbd37">  490</a></span>&#160;    <span class="keyword">inline</span> std::string <a class="code" href="class_s_g_framework_1_1_time.html#af58323dde7e29db85bd9cce0943cbd37">Time::CurrentTimeToStdString</a>()</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    {</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        tm tm;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        time_t getTime;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160; </div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        <a class="code" href="class_s_g_framework_1_1_time.html#ab278d59d1d6c211b1631affb13f4c24b">::time</a>(&amp;getTime);</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        localtime_s(&amp;tm, &amp;getTime);</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160; </div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;        <span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;[&quot;</span> + std::to_string(tm.tm_hour) + <span class="stringliteral">&quot;:&quot;</span> +</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;            std::to_string(tm.tm_min) + <span class="stringliteral">&quot;:&quot;</span> + std::to_string(tm.tm_sec) + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    }</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    <span class="comment">//[CurrentTime]</span></div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    <span class="comment">//sec, min, hour各引数がNULLでなければ現在時刻を代入する</span></div>
+<div class="line"><a name="l00504"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_time.html#acb9865f7bd3074158557e0a2b868597f">  504</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_time.html#acb9865f7bd3074158557e0a2b868597f">Time::CurrentTime</a>(<span class="keywordtype">int</span> * sec, <span class="keywordtype">int</span> * min, <span class="keywordtype">int</span> * hour)</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    {</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        tm t;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        mktime(&amp;t);</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        <span class="keywordflow">if</span> (sec != NULL) *sec = t.tm_sec;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        <span class="keywordflow">if</span> (min != NULL) *min = t.tm_min;</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="keywordflow">if</span> (hour != NULL) *hour = t.tm_hour;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    }</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160; </div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160; </div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    <span class="keyword">inline</span> Time::TimeLayer::TimeLayer()</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        : timeScale(m_timeScale), settingScale(m_settingScale), deltaTime(m_deltaTime),</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        fixedDeltaTime(m_fixedDeltaTime), unscaledDeltaTime(m_unscaledDeltaTime),</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        unscaledFixedDeltaTime(m_unscaledFixedDeltaTime), layerName(m_layerName), layerID(m_layerID) {}</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    <span class="comment">//[InitRoot]</span></div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    <span class="comment">//Rootレイヤー用, 初期設定を行う</span></div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> Time::TimeLayer::InitRoot()</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    {</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;        m_layerName = <a class="code" href="class_s_g_framework_1_1_time_1_1_time_layer.html#a59b3cf96feb611b4ce49ac1ea164fe68">cRootName</a>;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        m_parent.setNull();</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;        m_settingScale = 1.0f;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        m_layerID = 0;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;        m_timeScale = m_settingScale;</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        m_deltaTime = Time::m_worldDeltaTime * m_timeScale;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        m_fixedDeltaTime = Time::m_fixedDeltaTime * m_timeScale;</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        m_unscaledDeltaTime = Time::m_worldUnScaledDeltaTime * m_timeScale;</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        m_unscaledFixedDeltaTime = Time::m_unScaledFixedDeltaTime* m_timeScale;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        Update();</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    }</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <span class="comment">//[Init]</span></div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <span class="comment">//Root以外のレイヤー用, 初期設定を行う</span></div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    <span class="comment">//引数1: this Pointer</span></div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    <span class="comment">//引数2: 親レイヤー</span></div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    <span class="comment">//引数3: レイヤー名</span></div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="comment">//引数4: 設定スケール</span></div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    <span class="comment">//引数5: レイヤーID</span></div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespace_s_g_framework_1_1_atomic.html#aa74003ea2ff69348cf11120966582c0e">Time::TimeLayer::Init</a>(SharedPointer&lt;TimeLayer&gt;&amp; thisPointer,</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        SharedPointer&lt;TimeLayer&gt;&amp; parent, <span class="keyword">const</span> sgstring &amp; myLayerName, <span class="keywordtype">float</span> settingScale, <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> layerID)</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    {</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;        <span class="keywordflow">if</span> (parent.getIsValid())</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;            parent-&gt;m_childrens.emplace_back(thisPointer);</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;        {</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;            m_rootLayer-&gt;m_childrens.emplace_back(thisPointer);</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;            m_parent = m_rootLayer;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        }</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160; </div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;        m_parent = parent;</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;        m_layerName = myLayerName;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        m_settingScale = settingScale;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;        m_layerID = layerID;</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;        m_timeScale = m_settingScale;</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        m_deltaTime = Time::m_worldDeltaTime * m_timeScale;</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        m_fixedDeltaTime = Time::m_fixedDeltaTime * m_timeScale;</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        m_unscaledDeltaTime = Time::m_worldUnScaledDeltaTime * m_timeScale;</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        m_unscaledFixedDeltaTime = Time::m_unScaledFixedDeltaTime* m_timeScale;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        Update();</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    }</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160; </div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <span class="comment">//[Update]</span></div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    <span class="comment">//deltaTimeの更新を行う</span></div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> Time::TimeLayer::Update()</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    {</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;        <span class="comment">//Rootレイヤー</span></div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;        <span class="keywordflow">if</span> (m_layerID == 0)</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;        {</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;            <span class="comment">//world値をそのまま設定</span></div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;            m_deltaTime = <a class="code" href="class_s_g_framework_1_1_time.html#a2e4449d96ef4781082feadfb5371866c">Time::worldDeltaTime</a> * m_timeScale;</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;            m_fixedDeltaTime = <a class="code" href="class_s_g_framework_1_1_time.html#a1c91af9f2c4c8e53bbdebbd7ce1e8d62">Time::fixedDeltaTime</a> * m_timeScale;</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;            m_unscaledDeltaTime = Time::m_worldUnScaledDeltaTime * m_timeScale;</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;            m_unscaledFixedDeltaTime = Time::m_unScaledFixedDeltaTime* m_timeScale;</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;        }</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;        <span class="comment">//それ以外</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;        {</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;            <span class="comment">//自身のものをひとまず設定</span></div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;            m_timeScale = m_settingScale;</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;            <span class="comment">//親を取得(Rootがあるのでエラーは起きない)</span></div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;            <span class="keyword">auto</span> layer = m_parent.TryGetInstance();</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;            <span class="comment">//掛け算ループ, Rootにたどり着くまで終わらない</span></div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;            <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;                m_timeScale = m_timeScale * layer-&gt;settingScale;</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;                layer = layer-&gt;m_parent.TryGetInstance();</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;            } <span class="keywordflow">while</span> (layer != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160; </div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;            <span class="comment">//deltaTime設定</span></div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;            m_deltaTime = <a class="code" href="class_s_g_framework_1_1_time.html#a2e4449d96ef4781082feadfb5371866c">Time::worldDeltaTime</a> * m_timeScale;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;            m_fixedDeltaTime = <a class="code" href="class_s_g_framework_1_1_time.html#a1c91af9f2c4c8e53bbdebbd7ce1e8d62">Time::fixedDeltaTime</a> * m_timeScale;</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;            m_unscaledDeltaTime = Time::m_worldUnScaledDeltaTime * m_timeScale;</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;            m_unscaledFixedDeltaTime = Time::m_unScaledFixedDeltaTime* m_timeScale;</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        }</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    }</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;}</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_TIME_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_ab278d59d1d6c211b1631affb13f4c24b"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#ab278d59d1d6c211b1631affb13f4c24b">SGFramework::Time::time</a></div><div class="ttdeci">static GetOnlyProperty&lt; float &gt; time</div><div class="ttdef"><b>Definition:</b> Time.hpp:113</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_a887dc4807bcd79c3469c01aa06a6e6f3"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#a887dc4807bcd79c3469c01aa06a6e6f3">SGFramework::Time::TimeLayer::getParent</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY WeakPointer&lt; TimeLayer &gt; getParent() const</div><div class="ttdef"><b>Definition:</b> Time.hpp:133</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_a8399b0d9ad0c9128b5a97d5577711ec1"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#a8399b0d9ad0c9128b5a97d5577711ec1">SGFramework::Time::TimeLayer::layerName</a></div><div class="ttdeci">GetOnlyProperty&lt; sgstring &gt; layerName</div><div class="ttdef"><b>Definition:</b> Time.hpp:156</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_ad5bce5ec0e4762f986046372681dccea"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#ad5bce5ec0e4762f986046372681dccea">SGFramework::Time::TimeLayer::cInvaridID</a></div><div class="ttdeci">static constexpr uint cInvaridID</div><div class="ttdef"><b>Definition:</b> Time.hpp:148</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html"><div class="ttname"><a href="class_s_g_framework_1_1_time.html">SGFramework::Time</a></div><div class="ttdef"><b>Definition:</b> Time.hpp:25</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_a3bac19ee6d257c69eef7fc79ec7f2715"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#a3bac19ee6d257c69eef7fc79ec7f2715">SGFramework::Time::fixedInterval</a></div><div class="ttdeci">static GetOnlyProperty&lt; double &gt; fixedInterval</div><div class="ttdef"><b>Definition:</b> Time.hpp:107</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_a83f40b40edfe3e4f2267be6a7749c89d"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#a83f40b40edfe3e4f2267be6a7749c89d">SGFramework::Time::TimeLayer::fixedDeltaTime</a></div><div class="ttdeci">GetOnlyProperty&lt; float &gt; fixedDeltaTime</div><div class="ttdef"><b>Definition:</b> Time.hpp:153</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_ac06223c55a321603869ee190c0e6171f"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#ac06223c55a321603869ee190c0e6171f">SGFramework::Time::worldTimeScale</a></div><div class="ttdeci">static GetOnlyProperty&lt; float &gt; worldTimeScale</div><div class="ttdef"><b>Definition:</b> Time.hpp:111</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_a1afa819b78814b9b6afab64fa546d76a"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#a1afa819b78814b9b6afab64fa546d76a">SGFramework::Time::TimeLayer::unscaledFixedDeltaTime</a></div><div class="ttdeci">GetOnlyProperty&lt; float &gt; unscaledFixedDeltaTime</div><div class="ttdef"><b>Definition:</b> Time.hpp:155</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_html_ad92427b95c1bbdcc9cccc6f67234a8b6"><div class="ttname"><a href="class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter.html#ad92427b95c1bbdcc9cccc6f67234a8b6">SGFramework::TimeProcessing::FPSLimiter::ChangeFPS</a></div><div class="ttdeci">void ChangeFPS(double fps)</div><div class="ttdef"><b>Definition:</b> TimeProcessing.hpp:116</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_aa12aec1f5d3f18e48842f0befe768155"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#aa12aec1f5d3f18e48842f0befe768155">SGFramework::Time::getTimeLayer</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY SharedPointer&lt; TimeLayer &gt; getTimeLayer(uint id)</div><div class="ttdef"><b>Definition:</b> Time.hpp:89</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_html"><div class="ttname"><a href="class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter.html">SGFramework::TimeProcessing::FPSLimiter</a></div><div class="ttdef"><b>Definition:</b> TimeProcessing.hpp:98</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_application_html"><div class="ttname"><a href="class_s_g_framework_1_1_application.html">SGFramework::Application</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:15</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_a901ebb87ef9dda84c379430a04a8c3e2"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#a901ebb87ef9dda84c379430a04a8c3e2">SGFramework::Time::TimeLayer::unscaledDeltaTime</a></div><div class="ttdeci">GetOnlyProperty&lt; float &gt; unscaledDeltaTime</div><div class="ttdef"><b>Definition:</b> Time.hpp:154</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_a2e6adb2400b7778612b5da0b3b1e10ff"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#a2e6adb2400b7778612b5da0b3b1e10ff">SGFramework::Time::TimeLayer::setScaleToChildrens</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY void setScaleToChildrens(float timeScale)</div><div class="ttdef"><b>Definition:</b> Time.hpp:145</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_variable_limit_html_a4e28295c9e1b4be9503f9b15a981f543"><div class="ttname"><a href="namespace_s_g_framework_1_1_variable_limit.html#a4e28295c9e1b4be9503f9b15a981f543">SGFramework::VariableLimit::cUintMax</a></div><div class="ttdeci">constexpr uint cUintMax</div><div class="ttdef"><b>Definition:</b> VariableLimit.hpp:63</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html">SGFramework::Time::TimeLayer</a></div><div class="ttdef"><b>Definition:</b> Time.hpp:128</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_a1b3cc27879556d9cc05cd68b54795605"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#a1b3cc27879556d9cc05cd68b54795605">SGFramework::Time::rootTimeLayer</a></div><div class="ttdeci">static GetOnlyProperty&lt; SharedPointer&lt; TimeLayer &gt; &gt; rootTimeLayer</div><div class="ttdef"><b>Definition:</b> Time.hpp:121</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_processing_1_1_time_limiter_html"><div class="ttname"><a href="class_s_g_framework_1_1_time_processing_1_1_time_limiter.html">SGFramework::TimeProcessing::TimeLimiter</a></div><div class="ttdef"><b>Definition:</b> TimeProcessing.hpp:161</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_aa36e55e8a36a5db4160db2dc04fde1a4"><div class="ttname"><a href="_macro_and_using_8hpp.html#aa36e55e8a36a5db4160db2dc04fde1a4">IS_FALSE</a></div><div class="ttdeci">#define IS_FALSE(val)</div><div class="ttdoc">false判定高速化, 見やすさ向上マクロ(高速化は環境依存？)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:66</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_a71e24eb469c68ec96fa8828322bd7d9e"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#a71e24eb469c68ec96fa8828322bd7d9e">SGFramework::Time::FindTimeLayer</a></div><div class="ttdeci">static SharedPointer&lt; TimeLayer &gt; FindTimeLayer(const sgstring &amp;layerName)</div><div class="ttdef"><b>Definition:</b> Time.hpp:445</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_a9e252634855d4c66a8a91cbcb408b277"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#a9e252634855d4c66a8a91cbcb408b277">SGFramework::Time::TimeLayer::getChildrensIteratorBegin</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY auto getChildrensIteratorBegin() const</div><div class="ttdef"><b>Definition:</b> Time.hpp:135</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_html_a4ca16c738056949c7e59c72a41d22220"><div class="ttname"><a href="class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter.html#a4ca16c738056949c7e59c72a41d22220">SGFramework::TimeProcessing::FPSLimiter::interval</a></div><div class="ttdeci">GetOnlyProperty&lt; double &gt; interval</div><div class="ttdef"><b>Definition:</b> TimeProcessing.hpp:152</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_variable_limit_html_ad903290137ff278111d1446fe99bd0e2"><div class="ttname"><a href="namespace_s_g_framework_1_1_variable_limit.html#ad903290137ff278111d1446fe99bd0e2">SGFramework::VariableLimit::cFloatMax</a></div><div class="ttdeci">constexpr float cFloatMax</div><div class="ttdef"><b>Definition:</b> VariableLimit.hpp:74</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_processing_1_1_time_getter_double_html"><div class="ttname"><a href="class_s_g_framework_1_1_time_processing_1_1_time_getter_double.html">SGFramework::TimeProcessing::TimeGetterDouble</a></div><div class="ttdef"><b>Definition:</b> TimeProcessing.hpp:36</div></div>
+<div class="ttc" id="a_time_processing_8hpp_html"><div class="ttname"><a href="_time_processing_8hpp.html">TimeProcessing.hpp</a></div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_a1c91af9f2c4c8e53bbdebbd7ce1e8d62"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#a1c91af9f2c4c8e53bbdebbd7ce1e8d62">SGFramework::Time::fixedDeltaTime</a></div><div class="ttdeci">static GetOnlyProperty&lt; float &gt; fixedDeltaTime</div><div class="ttdef"><b>Definition:</b> Time.hpp:118</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_a7f583897eab3780c9e03bacad6eec3ec"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#a7f583897eab3780c9e03bacad6eec3ec">SGFramework::Time::unScaledFixedDeltaTime</a></div><div class="ttdeci">static GetOnlyProperty&lt; float &gt; unScaledFixedDeltaTime</div><div class="ttdef"><b>Definition:</b> Time.hpp:119</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_get_only_property_html"><div class="ttname"><a href="class_s_g_framework_1_1_get_only_property.html">SGFramework::GetOnlyProperty&lt; double &gt;</a></div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html">SGFramework::SharedPointer</a></div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:22</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_a29615a6f729e4a9ffe7a5e495ba1a1fd"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#a29615a6f729e4a9ffe7a5e495ba1a1fd">SGFramework::Time::isUpdateFreame</a></div><div class="ttdeci">static GetOnlyProperty&lt; bool &gt; isUpdateFreame</div><div class="ttdef"><b>Definition:</b> Time.hpp:123</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_a91deef2bca083f1cff98ec8ef0a370b2"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#a91deef2bca083f1cff98ec8ef0a370b2">SGFramework::Time::getTimeLayerID</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY uint getTimeLayerID(const sgstring &amp;layerName)</div><div class="ttdef"><b>Definition:</b> Time.hpp:97</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_a8ed43850185aad7b76599b8215e18d2a"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#a8ed43850185aad7b76599b8215e18d2a">SGFramework::Time::isFixedUpdateFreame</a></div><div class="ttdeci">static GetOnlyProperty&lt; bool &gt; isFixedUpdateFreame</div><div class="ttdef"><b>Definition:</b> Time.hpp:124</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_a6f8f6a1f61bc23dc69bd2a0d90827140"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#a6f8f6a1f61bc23dc69bd2a0d90827140">SGFramework::Time::DELETE_ALL_DEFAULT_CLASS_FUNCTIONS</a></div><div class="ttdeci">DELETE_ALL_DEFAULT_CLASS_FUNCTIONS(Time)</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_aa5f3a9c77a4a31cb93e35ab66cbb656e"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#aa5f3a9c77a4a31cb93e35ab66cbb656e">SGFramework::Time::TimeLayer::setScale</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY void setScale(float timeScale)</div><div class="ttdef"><b>Definition:</b> Time.hpp:142</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_html_aa86a9b011b5d4d070dbea3283111053a"><div class="ttname"><a href="class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter.html#aa86a9b011b5d4d070dbea3283111053a">SGFramework::TimeProcessing::FPSLimiter::Start</a></div><div class="ttdeci">void Start(double fps)</div><div class="ttdef"><b>Definition:</b> TimeProcessing.hpp:104</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdoc">uint = unsigned int</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:157</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_abf187ff60a5a861390c22b42e1949f66"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#abf187ff60a5a861390c22b42e1949f66">SGFramework::Time::TimeLayer</a></div><div class="ttdeci">friend TimeLayer</div><div class="ttdef"><b>Definition:</b> Time.hpp:28</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_acb9865f7bd3074158557e0a2b868597f"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#acb9865f7bd3074158557e0a2b868597f">SGFramework::Time::CurrentTime</a></div><div class="ttdeci">static void CurrentTime(int *sec, int *min, int *hour)</div><div class="ttdef"><b>Definition:</b> Time.hpp:504</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_ace1d360eddebc11afe2ce969c1a2aa63"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#ace1d360eddebc11afe2ce969c1a2aa63">SGFramework::Time::unScaledWorldDeltaTime</a></div><div class="ttdeci">static GetOnlyProperty&lt; float &gt; unScaledWorldDeltaTime</div><div class="ttdef"><b>Definition:</b> Time.hpp:115</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_window_1_1_hwnd_holder_html_a2f2c10c00abbc7413ff046e0580cfa36"><div class="ttname"><a href="class_s_g_framework_1_1_window_1_1_hwnd_holder.html#a2f2c10c00abbc7413ff046e0580cfa36">SGFramework::Window::HwndHolder::main</a></div><div class="ttdeci">static PointerProperty&lt; HWND &gt; main</div><div class="ttdef"><b>Definition:</b> HwndHolder.hpp:51</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_ad94eaf04957723bf57322db794ac2c50"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#ad94eaf04957723bf57322db794ac2c50">SGFramework::Time::ResetWorldTimeScale</a></div><div class="ttdeci">static void ResetWorldTimeScale(float value)</div><div class="ttdef"><b>Definition:</b> Time.hpp:457</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_aa2eae4e8c99ada2e0afd8011beca63c4"><div class="ttname"><a href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a></div><div class="ttdeci">#define IS_TRUE(val)</div><div class="ttdoc">true判定高速化, 見やすさ向上マクロ(高速化は環境依存？)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:64</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_weak_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_weak_pointer.html">SGFramework::WeakPointer</a></div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:266</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_a4cb3d890877d4f5ab6a62ac4c51bf20e"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#a4cb3d890877d4f5ab6a62ac4c51bf20e">SGFramework::Time::TimeLayer::timeScale</a></div><div class="ttdeci">GetOnlyProperty&lt; float &gt; timeScale</div><div class="ttdef"><b>Definition:</b> Time.hpp:150</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_a59b3cf96feb611b4ce49ac1ea164fe68"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#a59b3cf96feb611b4ce49ac1ea164fe68">SGFramework::Time::TimeLayer::cRootName</a></div><div class="ttdeci">static constexpr wchar cRootName[]</div><div class="ttdef"><b>Definition:</b> Time.hpp:147</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_a5a13384e8579d866dda5093277f8b8f6"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#a5a13384e8579d866dda5093277f8b8f6">SGFramework::Time::TimeLayer::deltaTime</a></div><div class="ttdeci">GetOnlyProperty&lt; float &gt; deltaTime</div><div class="ttdef"><b>Definition:</b> Time.hpp:152</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_atomic_html_aa74003ea2ff69348cf11120966582c0e"><div class="ttname"><a href="namespace_s_g_framework_1_1_atomic.html#aa74003ea2ff69348cf11120966582c0e">SGFramework::Atomic::Init</a></div><div class="ttdeci">T Init(std::atomic&lt; T &gt; &amp;atomic, T init) noexcept</div><div class="ttdoc">std::atomicをロックフリーアルゴリズムを用いて初期化する</div><div class="ttdef"><b>Definition:</b> Atomic.hpp:57</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_a2352afc591963341004b6912597dec23"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#a2352afc591963341004b6912597dec23">SGFramework::Time::CurrentTimeToString</a></div><div class="ttdeci">static sgstring CurrentTimeToString()</div><div class="ttdef"><b>Definition:</b> Time.hpp:476</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_a13e85939bcd2b8122130dcbc04137ddf"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#a13e85939bcd2b8122130dcbc04137ddf">SGFramework::Time::TimeLayer::layerID</a></div><div class="ttdeci">GetOnlyProperty&lt; uint &gt; layerID</div><div class="ttdef"><b>Definition:</b> Time.hpp:157</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_a2e4449d96ef4781082feadfb5371866c"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#a2e4449d96ef4781082feadfb5371866c">SGFramework::Time::worldDeltaTime</a></div><div class="ttdeci">static GetOnlyProperty&lt; float &gt; worldDeltaTime</div><div class="ttdef"><b>Definition:</b> Time.hpp:114</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a7f41ac37dc0d3ba6fa22b37126f944cb"><div class="ttname"><a href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">SGFramework::wchar</a></div><div class="ttdeci">wchar_t wchar</div><div class="ttdoc">wchar = wchar_t</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:153</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_a6ff1fa097352111feb55745a98f6a82f"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#a6ff1fa097352111feb55745a98f6a82f">SGFramework::Time::TimeLayer::settingScale</a></div><div class="ttdeci">GetOnlyProperty&lt; float &gt; settingScale</div><div class="ttdef"><b>Definition:</b> Time.hpp:151</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_processing_1_1_time_limiter_html_ace097307719d560b046d7c5a077b74f7"><div class="ttname"><a href="class_s_g_framework_1_1_time_processing_1_1_time_limiter.html#ace097307719d560b046d7c5a077b74f7">SGFramework::TimeProcessing::TimeLimiter::previousStartTime</a></div><div class="ttdeci">GetOnlyProperty&lt; double &gt; previousStartTime</div><div class="ttdef"><b>Definition:</b> TimeProcessing.hpp:213</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_aeb28ed79f7501515e2be861cb0b7b970"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#aeb28ed79f7501515e2be861cb0b7b970">SGFramework::Time::timeWithClock</a></div><div class="ttdeci">static GetOnlyProperty&lt; double &gt; timeWithClock</div><div class="ttdef"><b>Definition:</b> Time.hpp:106</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_a219b259272c41a239b1489ef8bf8b65e"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#a219b259272c41a239b1489ef8bf8b65e">SGFramework::Time::fixedTime</a></div><div class="ttdeci">static GetOnlyProperty&lt; float &gt; fixedTime</div><div class="ttdef"><b>Definition:</b> Time.hpp:117</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_ac4388b6373ea166fca989705e34dee05"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#ac4388b6373ea166fca989705e34dee05">SGFramework::Time::TimeLayer::getNumChildrens</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY uint getNumChildrens() const</div><div class="ttdef"><b>Definition:</b> Time.hpp:139</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_af58323dde7e29db85bd9cce0943cbd37"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#af58323dde7e29db85bd9cce0943cbd37">SGFramework::Time::CurrentTimeToStdString</a></div><div class="ttdeci">static std::string CurrentTimeToStdString()</div><div class="ttdef"><b>Definition:</b> Time.hpp:490</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_a89e72f62e2ea9026eb4143762087b438"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#a89e72f62e2ea9026eb4143762087b438">SGFramework::Time::fps</a></div><div class="ttdeci">static GetOnlyProperty&lt; float &gt; fps</div><div class="ttdef"><b>Definition:</b> Time.hpp:109</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_1_1_time_layer_html_a8768da115a8aae0ed62f94d480f93a93"><div class="ttname"><a href="class_s_g_framework_1_1_time_1_1_time_layer.html#a8768da115a8aae0ed62f94d480f93a93">SGFramework::Time::TimeLayer::getChildrensIteratorEnd</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY auto getChildrensIteratorEnd() const</div><div class="ttdef"><b>Definition:</b> Time.hpp:137</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_processing_1_1_time_limiter_html_ace90f76ae080dd1b74b91c8857999228"><div class="ttname"><a href="class_s_g_framework_1_1_time_processing_1_1_time_limiter.html#ace90f76ae080dd1b74b91c8857999228">SGFramework::TimeProcessing::TimeLimiter::Start</a></div><div class="ttdeci">void Start(double limit)</div><div class="ttdef"><b>Definition:</b> TimeProcessing.hpp:167</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html_ae9a48ef8af8aaa71022b06ef72d21db7"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html#ae9a48ef8af8aaa71022b06ef72d21db7">SGFramework::SharedPointer::getNull</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY SharedPointer&lt; PointerType &gt; getNull() noexcept</div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:86</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_html_ab8905d35b7b81bac18d09b060aa6ea5c"><div class="ttname"><a href="class_s_g_framework_1_1_time.html#ab8905d35b7b81bac18d09b060aa6ea5c">SGFramework::Time::targetFrameRate</a></div><div class="ttdeci">static GetOnlyProperty&lt; float &gt; targetFrameRate</div><div class="ttdef"><b>Definition:</b> Time.hpp:110</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

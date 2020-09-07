@@ -1,0 +1,101 @@
+\hypertarget{class_c_direct_x_graphics}{}\doxysection{C\+Direct\+X\+Graphics クラス}
+\label{class_c_direct_x_graphics}\index{CDirectXGraphics@{CDirectXGraphics}}
+
+
+{\ttfamily \#include $<$C\+Directx\+Graphics.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_direct_x_graphics_ab19e1f0adafda8239186c1e29dbc4eb8}{C\+Direct\+X\+Graphics}} ()
+\item 
+bool \mbox{\hyperlink{class_c_direct_x_graphics_ad2ff6f759f42978dcc9e560b1bad4b16}{Init}} (H\+W\+ND h\+Wnd, unsigned int Width, unsigned int Height, bool fullscreen=false)
+\item 
+void \mbox{\hyperlink{class_c_direct_x_graphics_a0c6f73fc7ecc15cf25ebeb4b85a763f1}{Exit}} ()
+\item 
+I\+D3\+D11\+Device $\ast$ \mbox{\hyperlink{class_c_direct_x_graphics_a983b42c098f23f801401fb5bf00676ca}{Get\+D\+X\+Device}} () const
+\item 
+I\+D3\+D11\+Device\+Context $\ast$ \mbox{\hyperlink{class_c_direct_x_graphics_ab7fb8fa2665421c6ebaffa803908ea30}{Get\+Immediate\+Context}} () const
+\item 
+I\+D\+X\+G\+I\+Swap\+Chain $\ast$ \mbox{\hyperlink{class_c_direct_x_graphics_af8e373c9109c612c23509e1e207e241f}{Get\+Swap\+Chain}} () const
+\item 
+I\+D3\+D11\+Render\+Target\+View $\ast$ \mbox{\hyperlink{class_c_direct_x_graphics_a5182d76a51dd74ebd3e78543876f6e9b}{Get\+Render\+Target\+View}} () const
+\item 
+I\+D3\+D11\+Depth\+Stencil\+View $\ast$ \mbox{\hyperlink{class_c_direct_x_graphics_a5acefc0f7976fc5e37da5e3882a074f8}{Get\+Depth\+Stencil\+View}} () const
+\item 
+void \mbox{\hyperlink{class_c_direct_x_graphics_aa3af20deb5ac134bb433970aca4cb61a}{Turn\+On\+Alpha\+Blending}} ()
+\item 
+void \mbox{\hyperlink{class_c_direct_x_graphics_a6557e1c3bb478875646d76977239d268}{Turn\+Off\+Alpha\+Blending}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_c_direct_x_graphics_ab19e1f0adafda8239186c1e29dbc4eb8}\label{class_c_direct_x_graphics_ab19e1f0adafda8239186c1e29dbc4eb8}} 
+\index{CDirectXGraphics@{CDirectXGraphics}!CDirectXGraphics@{CDirectXGraphics}}
+\index{CDirectXGraphics@{CDirectXGraphics}!CDirectXGraphics@{CDirectXGraphics}}
+\doxysubsubsection{\texorpdfstring{CDirectXGraphics()}{CDirectXGraphics()}}
+{\footnotesize\ttfamily C\+Direct\+X\+Graphics\+::\+C\+Direct\+X\+Graphics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_c_direct_x_graphics_a0c6f73fc7ecc15cf25ebeb4b85a763f1}\label{class_c_direct_x_graphics_a0c6f73fc7ecc15cf25ebeb4b85a763f1}} 
+\index{CDirectXGraphics@{CDirectXGraphics}!Exit@{Exit}}
+\index{Exit@{Exit}!CDirectXGraphics@{CDirectXGraphics}}
+\doxysubsubsection{\texorpdfstring{Exit()}{Exit()}}
+{\footnotesize\ttfamily void C\+Direct\+X\+Graphics\+::\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_direct_x_graphics_a5acefc0f7976fc5e37da5e3882a074f8}\label{class_c_direct_x_graphics_a5acefc0f7976fc5e37da5e3882a074f8}} 
+\index{CDirectXGraphics@{CDirectXGraphics}!GetDepthStencilView@{GetDepthStencilView}}
+\index{GetDepthStencilView@{GetDepthStencilView}!CDirectXGraphics@{CDirectXGraphics}}
+\doxysubsubsection{\texorpdfstring{GetDepthStencilView()}{GetDepthStencilView()}}
+{\footnotesize\ttfamily I\+D3\+D11\+Depth\+Stencil\+View$\ast$ C\+Direct\+X\+Graphics\+::\+Get\+Depth\+Stencil\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_direct_x_graphics_a983b42c098f23f801401fb5bf00676ca}\label{class_c_direct_x_graphics_a983b42c098f23f801401fb5bf00676ca}} 
+\index{CDirectXGraphics@{CDirectXGraphics}!GetDXDevice@{GetDXDevice}}
+\index{GetDXDevice@{GetDXDevice}!CDirectXGraphics@{CDirectXGraphics}}
+\doxysubsubsection{\texorpdfstring{GetDXDevice()}{GetDXDevice()}}
+{\footnotesize\ttfamily I\+D3\+D11\+Device$\ast$ C\+Direct\+X\+Graphics\+::\+Get\+D\+X\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_direct_x_graphics_ab7fb8fa2665421c6ebaffa803908ea30}\label{class_c_direct_x_graphics_ab7fb8fa2665421c6ebaffa803908ea30}} 
+\index{CDirectXGraphics@{CDirectXGraphics}!GetImmediateContext@{GetImmediateContext}}
+\index{GetImmediateContext@{GetImmediateContext}!CDirectXGraphics@{CDirectXGraphics}}
+\doxysubsubsection{\texorpdfstring{GetImmediateContext()}{GetImmediateContext()}}
+{\footnotesize\ttfamily I\+D3\+D11\+Device\+Context$\ast$ C\+Direct\+X\+Graphics\+::\+Get\+Immediate\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_direct_x_graphics_a5182d76a51dd74ebd3e78543876f6e9b}\label{class_c_direct_x_graphics_a5182d76a51dd74ebd3e78543876f6e9b}} 
+\index{CDirectXGraphics@{CDirectXGraphics}!GetRenderTargetView@{GetRenderTargetView}}
+\index{GetRenderTargetView@{GetRenderTargetView}!CDirectXGraphics@{CDirectXGraphics}}
+\doxysubsubsection{\texorpdfstring{GetRenderTargetView()}{GetRenderTargetView()}}
+{\footnotesize\ttfamily I\+D3\+D11\+Render\+Target\+View$\ast$ C\+Direct\+X\+Graphics\+::\+Get\+Render\+Target\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_direct_x_graphics_af8e373c9109c612c23509e1e207e241f}\label{class_c_direct_x_graphics_af8e373c9109c612c23509e1e207e241f}} 
+\index{CDirectXGraphics@{CDirectXGraphics}!GetSwapChain@{GetSwapChain}}
+\index{GetSwapChain@{GetSwapChain}!CDirectXGraphics@{CDirectXGraphics}}
+\doxysubsubsection{\texorpdfstring{GetSwapChain()}{GetSwapChain()}}
+{\footnotesize\ttfamily I\+D\+X\+G\+I\+Swap\+Chain$\ast$ C\+Direct\+X\+Graphics\+::\+Get\+Swap\+Chain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_direct_x_graphics_ad2ff6f759f42978dcc9e560b1bad4b16}\label{class_c_direct_x_graphics_ad2ff6f759f42978dcc9e560b1bad4b16}} 
+\index{CDirectXGraphics@{CDirectXGraphics}!Init@{Init}}
+\index{Init@{Init}!CDirectXGraphics@{CDirectXGraphics}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool C\+Direct\+X\+Graphics\+::\+Init (\begin{DoxyParamCaption}\item[{H\+W\+ND}]{h\+Wnd,  }\item[{unsigned int}]{Width,  }\item[{unsigned int}]{Height,  }\item[{bool}]{fullscreen = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_direct_x_graphics_a6557e1c3bb478875646d76977239d268}\label{class_c_direct_x_graphics_a6557e1c3bb478875646d76977239d268}} 
+\index{CDirectXGraphics@{CDirectXGraphics}!TurnOffAlphaBlending@{TurnOffAlphaBlending}}
+\index{TurnOffAlphaBlending@{TurnOffAlphaBlending}!CDirectXGraphics@{CDirectXGraphics}}
+\doxysubsubsection{\texorpdfstring{TurnOffAlphaBlending()}{TurnOffAlphaBlending()}}
+{\footnotesize\ttfamily void C\+Direct\+X\+Graphics\+::\+Turn\+Off\+Alpha\+Blending (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_direct_x_graphics_aa3af20deb5ac134bb433970aca4cb61a}\label{class_c_direct_x_graphics_aa3af20deb5ac134bb433970aca4cb61a}} 
+\index{CDirectXGraphics@{CDirectXGraphics}!TurnOnAlphaBlending@{TurnOnAlphaBlending}}
+\index{TurnOnAlphaBlending@{TurnOnAlphaBlending}!CDirectXGraphics@{CDirectXGraphics}}
+\doxysubsubsection{\texorpdfstring{TurnOnAlphaBlending()}{TurnOnAlphaBlending()}}
+{\footnotesize\ttfamily void C\+Direct\+X\+Graphics\+::\+Turn\+On\+Alpha\+Blending (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/\mbox{\hyperlink{_c_directx_graphics_8h}{C\+Directx\+Graphics.\+h}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/\mbox{\hyperlink{_c_direct_x_graphics_8cpp}{C\+Direct\+X\+Graphics.\+cpp}}\end{DoxyCompactItemize}

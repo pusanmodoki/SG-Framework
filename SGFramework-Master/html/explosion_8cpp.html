@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/998_DemoApplication/AcademySource/explosion.cpp „Éï„Ç°„Ç§„É´</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- ÊßãÁØâ: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Ê§úÁ¥¢');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Ê§úÁ¥¢');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_e0e4c557ebc218887fb43396bcf8db4f.html">998_DemoApplication</a></li><li class="navelem"><a class="el" href="dir_184bc37a952b722a29d3658ce9868392.html">AcademySource</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Èñ¢Êï∞</a> &#124;
+<a href="#var-members">Â§âÊï∞</a>  </div>
+  <div class="headertitle">
+<div class="title">explosion.cpp „Éï„Ç°„Ç§„É´</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><br  />
+  
+<a href="#details">[Ë©≥Ëß£]</a></p>
+<div class="textblock"><code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;DirectXMath.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="explosion_8h_source.html">explosion.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_dat_file_loader_8h_source.html">DatFileLoader.h</a>&quot;</code><br />
+<code>#include &quot;shader.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_d_x11util_8h_source.html">DX11util.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dx11mathutil_8h_source.html">dx11mathutil.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_d_x11_settransform_8h_source.html">DX11Settransform.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Èñ¢Êï∞</h2></td></tr>
+<tr class="memitem:ac43d52c6befb4acc3edb258d5a9fc2d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#ac43d52c6befb4acc3edb258d5a9fc2d9">InitTriangleVertexBuffer</a> (<a class="el" href="struct_my_triangle.html">MyTriangle</a> *mytriangle)</td></tr>
+<tr class="separator:ac43d52c6befb4acc3edb258d5a9fc2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfee34b5e9d606f3042704f5bd86a256"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#abfee34b5e9d606f3042704f5bd86a256">TriangleTransforms</a> (const DirectX::XMFLOAT4X4 &amp;mat)</td></tr>
+<tr class="separator:abfee34b5e9d606f3042704f5bd86a256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0698588e03541e524c56121af89dd3b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#a0698588e03541e524c56121af89dd3b2">XfileToTriangle</a> (<a class="el" href="class_dat_file_loader.html">DatFileLoader</a> *datfiledata)</td></tr>
+<tr class="separator:a0698588e03541e524c56121af89dd3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed11f361d9d7d8aeb6dd7f98aa45a912"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#aed11f361d9d7d8aeb6dd7f98aa45a912">ExplosionInit</a> (<a class="el" href="class_dat_file_loader.html">DatFileLoader</a> *datfiledata)</td></tr>
+<tr class="separator:aed11f361d9d7d8aeb6dd7f98aa45a912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a341d49cd015ea9b69b1ca720e1fad37b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#a341d49cd015ea9b69b1ca720e1fad37b">ExplosionUpdate</a> ()</td></tr>
+<tr class="memdesc:a341d49cd015ea9b69b1ca720e1fad37b"><td class="mdescLeft">&#160;</td><td class="mdescRight">îöî≠ÇÃçXêVèàóù  <a href="explosion_8cpp.html#a341d49cd015ea9b69b1ca720e1fad37b">[Ë©≥Ëß£]</a><br /></td></tr>
+<tr class="separator:a341d49cd015ea9b69b1ca720e1fad37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f06e38e4e7b840595d35ee8d19eeb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#a60f06e38e4e7b840595d35ee8d19eeb9">ExplosionDraw</a> ()</td></tr>
+<tr class="memdesc:a60f06e38e4e7b840595d35ee8d19eeb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">îöî≠Çï`âÊÇ∑ÇÈ  <a href="explosion_8cpp.html#a60f06e38e4e7b840595d35ee8d19eeb9">[Ë©≥Ëß£]</a><br /></td></tr>
+<tr class="separator:a60f06e38e4e7b840595d35ee8d19eeb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91642fe999619c5a3df186842efa7312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#a91642fe999619c5a3df186842efa7312">ExplosionExit</a> ()</td></tr>
+<tr class="memdesc:a91642fe999619c5a3df186842efa7312"><td class="mdescLeft">&#160;</td><td class="mdescRight">îöî≠èàóùÇÃå„énññ  <a href="explosion_8cpp.html#a91642fe999619c5a3df186842efa7312">[Ë©≥Ëß£]</a><br /></td></tr>
+<tr class="separator:a91642fe999619c5a3df186842efa7312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Â§âÊï∞</h2></td></tr>
+<tr class="memitem:a9383f6712b127b16bbc0112f983d9baa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_my_vertex.html">MyVertex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#a9383f6712b127b16bbc0112f983d9baa">g_LocalVertex</a> = nullptr</td></tr>
+<tr class="separator:a9383f6712b127b16bbc0112f983d9baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab02cb869f515d06f0092b928610712e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#ab02cb869f515d06f0092b928610712e8">g_NumVertex</a> =0</td></tr>
+<tr class="separator:ab02cb869f515d06f0092b928610712e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfda27c74fd1a1ae79561d0ec71495d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_my_connect.html">MyConnect</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#acfda27c74fd1a1ae79561d0ec71495d4">g_Connect</a> = nullptr</td></tr>
+<tr class="separator:acfda27c74fd1a1ae79561d0ec71495d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02152a02c6cc93631fa19bd03315a282"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#a02152a02c6cc93631fa19bd03315a282">g_NumFace</a> =0</td></tr>
+<tr class="separator:a02152a02c6cc93631fa19bd03315a282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a927fe02f546c77bda37862c0c0028a69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_my_triangle.html">MyTriangle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#a927fe02f546c77bda37862c0c0028a69">g_pTriangle</a> = nullptr</td></tr>
+<tr class="separator:a927fe02f546c77bda37862c0c0028a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49434ded1e483e79b1d71642b129a0e"><td class="memItemLeft" align="right" valign="top">ID3D11ShaderResourceView *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#aa49434ded1e483e79b1d71642b129a0e">g_srv</a></td></tr>
+<tr class="separator:aa49434ded1e483e79b1d71642b129a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5d1a52210766255fe448658c331281"><td class="memItemLeft" align="right" valign="top">ID3D11VertexShader *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#a4d5d1a52210766255fe448658c331281">g_pVertexShader</a> =nullptr</td></tr>
+<tr class="separator:a4d5d1a52210766255fe448658c331281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0dfb082149f1b52da84ea4761db2d3b"><td class="memItemLeft" align="right" valign="top">ID3D11PixelShader *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#aa0dfb082149f1b52da84ea4761db2d3b">g_pPixelShader</a> =nullptr</td></tr>
+<tr class="separator:aa0dfb082149f1b52da84ea4761db2d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a584b4226a98548f9f04c57aac0d71ac8"><td class="memItemLeft" align="right" valign="top">ID3D11InputLayout *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#a584b4226a98548f9f04c57aac0d71ac8">g_pVertexLayout</a> =nullptr</td></tr>
+<tr class="separator:a584b4226a98548f9f04c57aac0d71ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a905e70b31ff1b8ac7c542369fe1039d4"><td class="memItemLeft" align="right" valign="top">ID3D11Buffer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#a905e70b31ff1b8ac7c542369fe1039d4">g_pVertexBuffer</a> = nullptr</td></tr>
+<tr class="separator:a905e70b31ff1b8ac7c542369fe1039d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70bc4ad2a0e4e0d6046318cbbeaa1d49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_my_vertex.html">MyVertex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="explosion_8cpp.html#a70bc4ad2a0e4e0d6046318cbbeaa1d49">g_firstpvertex</a> = nullptr</td></tr>
+<tr class="separator:a70bc4ad2a0e4e0d6046318cbbeaa1d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ë©≥Ëß£</h2>
+<div class="textblock"><p><br  />
+ </p>
+<dl class="section note"><dt>Ë¶ö„ÅàÊõ∏„Åç</dt><dd>îöî≠èàóùÇÃÇΩÇﬂÇÃä÷êîåQ(1Ç¬ÇÃí∏ì_ÉoÉbÉtÉ@Ç…Ç‹Ç∆ÇﬂÇÈ) </dd></dl>
+<dl class="section author"><dt>ËëóËÄÖ</dt><dd><br  />
+ </dd></dl>
+</div><h2 class="groupheader">Èñ¢Êï∞Ë©≥Ëß£</h2>
+<a id="a60f06e38e4e7b840595d35ee8d19eeb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f06e38e4e7b840595d35ee8d19eeb9">&#9670;&nbsp;</a></span>ExplosionDraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ExplosionDraw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>îöî≠Çï`âÊÇ∑ÇÈ </p>
+<dl class="params"><dt>ÂºïÊï∞</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Å</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a91642fe999619c5a3df186842efa7312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91642fe999619c5a3df186842efa7312">&#9670;&nbsp;</a></span>ExplosionExit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ExplosionExit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>îöî≠èàóùÇÃå„énññ </p>
+<dl class="params"><dt>ÂºïÊï∞</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Å</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aed11f361d9d7d8aeb6dd7f98aa45a912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed11f361d9d7d8aeb6dd7f98aa45a912">&#9670;&nbsp;</a></span>ExplosionInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ExplosionInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_dat_file_loader.html">DatFileLoader</a> *&#160;</td>
+          <td class="paramname"><em>datfiledata</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a341d49cd015ea9b69b1ca720e1fad37b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a341d49cd015ea9b69b1ca720e1fad37b">&#9670;&nbsp;</a></span>ExplosionUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ExplosionUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>îöî≠ÇÃçXêVèàóù </p>
+<dl class="params"><dt>ÂºïÊï∞</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Å</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac43d52c6befb4acc3edb258d5a9fc2d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac43d52c6befb4acc3edb258d5a9fc2d9">&#9670;&nbsp;</a></span>InitTriangleVertexBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitTriangleVertexBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_my_triangle.html">MyTriangle</a> *&#160;</td>
+          <td class="paramname"><em>mytriangle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfee34b5e9d606f3042704f5bd86a256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfee34b5e9d606f3042704f5bd86a256">&#9670;&nbsp;</a></span>TriangleTransforms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TriangleTransforms </td>
+          <td>(</td>
+          <td class="paramtype">const DirectX::XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>mat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0698588e03541e524c56121af89dd3b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0698588e03541e524c56121af89dd3b2">&#9670;&nbsp;</a></span>XfileToTriangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XfileToTriangle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_dat_file_loader.html">DatFileLoader</a> *&#160;</td>
+          <td class="paramname"><em>datfiledata</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Â§âÊï∞Ë©≥Ëß£</h2>
+<a id="acfda27c74fd1a1ae79561d0ec71495d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfda27c74fd1a1ae79561d0ec71495d4">&#9670;&nbsp;</a></span>g_Connect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_my_connect.html">MyConnect</a>* g_Connect = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70bc4ad2a0e4e0d6046318cbbeaa1d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70bc4ad2a0e4e0d6046318cbbeaa1d49">&#9670;&nbsp;</a></span>g_firstpvertex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_my_vertex.html">MyVertex</a>* g_firstpvertex = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9383f6712b127b16bbc0112f983d9baa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9383f6712b127b16bbc0112f983d9baa">&#9670;&nbsp;</a></span>g_LocalVertex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_my_vertex.html">MyVertex</a>* g_LocalVertex = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02152a02c6cc93631fa19bd03315a282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02152a02c6cc93631fa19bd03315a282">&#9670;&nbsp;</a></span>g_NumFace</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int g_NumFace =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab02cb869f515d06f0092b928610712e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab02cb869f515d06f0092b928610712e8">&#9670;&nbsp;</a></span>g_NumVertex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int g_NumVertex =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0dfb082149f1b52da84ea4761db2d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0dfb082149f1b52da84ea4761db2d3b">&#9670;&nbsp;</a></span>g_pPixelShader</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D11PixelShader* g_pPixelShader =nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a927fe02f546c77bda37862c0c0028a69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a927fe02f546c77bda37862c0c0028a69">&#9670;&nbsp;</a></span>g_pTriangle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_my_triangle.html">MyTriangle</a>* g_pTriangle = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a905e70b31ff1b8ac7c542369fe1039d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a905e70b31ff1b8ac7c542369fe1039d4">&#9670;&nbsp;</a></span>g_pVertexBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D11Buffer* g_pVertexBuffer = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a584b4226a98548f9f04c57aac0d71ac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a584b4226a98548f9f04c57aac0d71ac8">&#9670;&nbsp;</a></span>g_pVertexLayout</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D11InputLayout* g_pVertexLayout =nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d5d1a52210766255fe448658c331281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d5d1a52210766255fe448658c331281">&#9670;&nbsp;</a></span>g_pVertexShader</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D11VertexShader* g_pVertexShader =nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa49434ded1e483e79b1d71642b129a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa49434ded1e483e79b1d71642b129a0e">&#9670;&nbsp;</a></span>g_srv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D11ShaderResourceView* g_srv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+ÊßãÁØâ:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

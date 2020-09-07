@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/02_Variables/未実装/PhysicsFlags/PhysicsFlags.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_0cf03c12e51ae64724f6ec73d30b9672.html">02_Variables</a></li><li class="navelem"><a class="el" href="dir_06c5a77703cbb5bfafd4b0eea230505d.html">未実装</a></li><li class="navelem"><a class="el" href="dir_228d820fa9b9c3ebf4ea1d72fa9f5c0b.html">PhysicsFlags</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PhysicsFlags.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_physics_flags_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Physicsで使用するEnumを集めたPhysicsFlags.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_PHYSICS_FLAGS_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_PHYSICS_FLAGS_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment">//Using RigidBody-&gt;AddForce, AddTorque</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_force_mode.html">   11</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_s_g_framework_1_1_force_mode.html">ForceMode</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41e">   13</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41e">Enum</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41eaf861927223aeaa57d5bb8f393462eb3e">   15</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41eaf861927223aeaa57d5bb8f393462eb3e">Force</a>,              </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41eabf260c54350431ea4eef1f0aee196f5b">   16</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41eabf260c54350431ea4eef1f0aee196f5b">Impluse</a>,            </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41ea0f4567470aa06412f64cbe62d31f7c90">   17</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41ea0f4567470aa06412f64cbe62d31f7c90">VelocityChange</a>, </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <a class="code" href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41eaf18455a189f8914de0187c54070f159c">Acceleration</a>        </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41eaf18455a189f8914de0187c54070f159c">   19</a></span>&#160;        };</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    };</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//Using RigidBody-&gt;setLockFlag, setLockFlags</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_rigid_body_lock.html">   22</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html">RigidBodyLock</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83c">   24</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83c">Enum</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83cad06ae1fca61162d2c0896febba006bfc">   26</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83cad06ae1fca61162d2c0896febba006bfc">VelocityX</a> = (1 &lt;&lt; 0),</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca069542b0b5b12ac4274fd6b365c1a685">   27</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca069542b0b5b12ac4274fd6b365c1a685">VelocityY</a> = (1 &lt;&lt; 1),</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca01c0f9f4e77e231d98a525d5d8ea5dfa">   28</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca01c0f9f4e77e231d98a525d5d8ea5dfa">VelocityZ</a> = (1 &lt;&lt; 2),</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca6985466aec9e25e078a533170d0f9b7c">   29</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca6985466aec9e25e078a533170d0f9b7c">VelocityXZ</a> = <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83cad06ae1fca61162d2c0896febba006bfc">VelocityX</a> | <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca01c0f9f4e77e231d98a525d5d8ea5dfa">VelocityZ</a>,</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca3dc877c02180c941dd044eaf6d55ffab">   30</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca3dc877c02180c941dd044eaf6d55ffab">VelocityXY</a> = <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83cad06ae1fca61162d2c0896febba006bfc">VelocityX</a> | <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca069542b0b5b12ac4274fd6b365c1a685">VelocityY</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83cad54e3b5c424c6f4f6eec38b8f149cd7b">   31</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83cad54e3b5c424c6f4f6eec38b8f149cd7b">VelocityAll</a> = <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83cad06ae1fca61162d2c0896febba006bfc">VelocityX</a> | <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca069542b0b5b12ac4274fd6b365c1a685">VelocityY</a> | <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca01c0f9f4e77e231d98a525d5d8ea5dfa">VelocityZ</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca51a82d21ec6252235879c117633b86ec">   33</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca51a82d21ec6252235879c117633b86ec">RotationX</a> = (1 &lt;&lt; 3),</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca116b0af5b9ea158bb5b146ad675abf9e">   34</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca116b0af5b9ea158bb5b146ad675abf9e">RotationY</a> = (1 &lt;&lt; 4),</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca1daf06cd36491c01a104fb3363a35319">   35</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca1daf06cd36491c01a104fb3363a35319">RotationZ</a> = (1 &lt;&lt; 5),</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca539ef5a3a00bd18357ac48c43d3b7ccf">   36</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca539ef5a3a00bd18357ac48c43d3b7ccf">RotationAll</a> = <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca51a82d21ec6252235879c117633b86ec">RotationX</a> | <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca116b0af5b9ea158bb5b146ad675abf9e">RotationY</a> | <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca1daf06cd36491c01a104fb3363a35319">RotationZ</a>,</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca6965622267e57db40de889a71fc5ec96">   37</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca6965622267e57db40de889a71fc5ec96">VelocityAndRotationAll</a> = <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83cad54e3b5c424c6f4f6eec38b8f149cd7b">VelocityAll</a> | <a class="code" href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca539ef5a3a00bd18357ac48c43d3b7ccf">RotationAll</a>,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    };</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//Colldier type</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="namespace_s_g_framework.html#a7f80cd2c5e4e4d0fe2b905c703f1373b">   41</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespace_s_g_framework.html#a7f80cd2c5e4e4d0fe2b905c703f1373b">ColliderType</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="class_sphere.html">Sphere</a>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        Plane,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        Capsule,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        Box,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        ConvexMesh,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        TriangleMesh,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        HeightField,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="namespace_s_g_framework.html#a7f80cd2c5e4e4d0fe2b905c703f1373bab7095f057db3fefa7325ad93a04e14fd">Invalid</a> = -1</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif //!SGFRAMEWORK_HEADER_PHYSICS_FLAGS_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_s_g_framework_1_1_force_mode_html_ac9867bd4886e918e350e6b4e8db5e41eaf861927223aeaa57d5bb8f393462eb3e"><div class="ttname"><a href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41eaf861927223aeaa57d5bb8f393462eb3e">SGFramework::ForceMode::Force</a></div><div class="ttdeci">@ Force</div><div class="ttdoc">parameter has unit of mass * distance/ time^2, i.e. a force</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:15</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a7f80cd2c5e4e4d0fe2b905c703f1373bab7095f057db3fefa7325ad93a04e14fd"><div class="ttname"><a href="namespace_s_g_framework.html#a7f80cd2c5e4e4d0fe2b905c703f1373bab7095f057db3fefa7325ad93a04e14fd">SGFramework::ColliderType::Sphere</a></div><div class="ttdeci">@ Sphere</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_force_mode_html"><div class="ttname"><a href="struct_s_g_framework_1_1_force_mode.html">SGFramework::ForceMode</a></div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:12</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_rigid_body_lock_html_af1b618f43c0536361331f55bdc7ed83ca6985466aec9e25e078a533170d0f9b7c"><div class="ttname"><a href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca6985466aec9e25e078a533170d0f9b7c">SGFramework::RigidBodyLock::VelocityXZ</a></div><div class="ttdeci">@ VelocityXZ</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:29</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_force_mode_html_ac9867bd4886e918e350e6b4e8db5e41eaf18455a189f8914de0187c54070f159c"><div class="ttname"><a href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41eaf18455a189f8914de0187c54070f159c">SGFramework::ForceMode::Acceleration</a></div><div class="ttdeci">@ Acceleration</div><div class="ttdoc">parameter has unit of distance/ time^2, i.e. an acceleration. It gets treated just like a force excep...</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:18</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_rigid_body_lock_html_af1b618f43c0536361331f55bdc7ed83ca3dc877c02180c941dd044eaf6d55ffab"><div class="ttname"><a href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca3dc877c02180c941dd044eaf6d55ffab">SGFramework::RigidBodyLock::VelocityXY</a></div><div class="ttdeci">@ VelocityXY</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:30</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_rigid_body_lock_html_af1b618f43c0536361331f55bdc7ed83ca51a82d21ec6252235879c117633b86ec"><div class="ttname"><a href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca51a82d21ec6252235879c117633b86ec">SGFramework::RigidBodyLock::RotationX</a></div><div class="ttdeci">@ RotationX</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:33</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_rigid_body_lock_html_af1b618f43c0536361331f55bdc7ed83ca116b0af5b9ea158bb5b146ad675abf9e"><div class="ttname"><a href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca116b0af5b9ea158bb5b146ad675abf9e">SGFramework::RigidBodyLock::RotationY</a></div><div class="ttdeci">@ RotationY</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:34</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_rigid_body_lock_html_af1b618f43c0536361331f55bdc7ed83c"><div class="ttname"><a href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83c">SGFramework::RigidBodyLock::Enum</a></div><div class="ttdeci">Enum</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:25</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_rigid_body_lock_html_af1b618f43c0536361331f55bdc7ed83ca01c0f9f4e77e231d98a525d5d8ea5dfa"><div class="ttname"><a href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca01c0f9f4e77e231d98a525d5d8ea5dfa">SGFramework::RigidBodyLock::VelocityZ</a></div><div class="ttdeci">@ VelocityZ</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:28</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_rigid_body_lock_html_af1b618f43c0536361331f55bdc7ed83cad54e3b5c424c6f4f6eec38b8f149cd7b"><div class="ttname"><a href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83cad54e3b5c424c6f4f6eec38b8f149cd7b">SGFramework::RigidBodyLock::VelocityAll</a></div><div class="ttdeci">@ VelocityAll</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:31</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_rigid_body_lock_html_af1b618f43c0536361331f55bdc7ed83ca069542b0b5b12ac4274fd6b365c1a685"><div class="ttname"><a href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca069542b0b5b12ac4274fd6b365c1a685">SGFramework::RigidBodyLock::VelocityY</a></div><div class="ttdeci">@ VelocityY</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:27</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_force_mode_html_ac9867bd4886e918e350e6b4e8db5e41e"><div class="ttname"><a href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41e">SGFramework::ForceMode::Enum</a></div><div class="ttdeci">Enum</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:14</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_force_mode_html_ac9867bd4886e918e350e6b4e8db5e41ea0f4567470aa06412f64cbe62d31f7c90"><div class="ttname"><a href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41ea0f4567470aa06412f64cbe62d31f7c90">SGFramework::ForceMode::VelocityChange</a></div><div class="ttdeci">@ VelocityChange</div><div class="ttdoc">parameter has unit of distance / time, i.e. the effect is mass independent: a velocity change.</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:17</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_rigid_body_lock_html_af1b618f43c0536361331f55bdc7ed83ca539ef5a3a00bd18357ac48c43d3b7ccf"><div class="ttname"><a href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca539ef5a3a00bd18357ac48c43d3b7ccf">SGFramework::RigidBodyLock::RotationAll</a></div><div class="ttdeci">@ RotationAll</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:36</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_rigid_body_lock_html_af1b618f43c0536361331f55bdc7ed83cad06ae1fca61162d2c0896febba006bfc"><div class="ttname"><a href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83cad06ae1fca61162d2c0896febba006bfc">SGFramework::RigidBodyLock::VelocityX</a></div><div class="ttdeci">@ VelocityX</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:26</div></div>
+<div class="ttc" id="aclass_sphere_html"><div class="ttname"><a href="class_sphere.html">Sphere</a></div><div class="ttdef"><b>Definition:</b> Sphere.hpp:8</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_force_mode_html_ac9867bd4886e918e350e6b4e8db5e41eabf260c54350431ea4eef1f0aee196f5b"><div class="ttname"><a href="struct_s_g_framework_1_1_force_mode.html#ac9867bd4886e918e350e6b4e8db5e41eabf260c54350431ea4eef1f0aee196f5b">SGFramework::ForceMode::Impluse</a></div><div class="ttdeci">@ Impluse</div><div class="ttdoc">parameter has unit of mass * distance /time</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:16</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_rigid_body_lock_html_af1b618f43c0536361331f55bdc7ed83ca1daf06cd36491c01a104fb3363a35319"><div class="ttname"><a href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca1daf06cd36491c01a104fb3363a35319">SGFramework::RigidBodyLock::RotationZ</a></div><div class="ttdeci">@ RotationZ</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:35</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_rigid_body_lock_html_af1b618f43c0536361331f55bdc7ed83ca6965622267e57db40de889a71fc5ec96"><div class="ttname"><a href="struct_s_g_framework_1_1_rigid_body_lock.html#af1b618f43c0536361331f55bdc7ed83ca6965622267e57db40de889a71fc5ec96">SGFramework::RigidBodyLock::VelocityAndRotationAll</a></div><div class="ttdeci">@ VelocityAndRotationAll</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:37</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_rigid_body_lock_html"><div class="ttname"><a href="struct_s_g_framework_1_1_rigid_body_lock.html">SGFramework::RigidBodyLock</a></div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:23</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a7f80cd2c5e4e4d0fe2b905c703f1373b"><div class="ttname"><a href="namespace_s_g_framework.html#a7f80cd2c5e4e4d0fe2b905c703f1373b">SGFramework::ColliderType</a></div><div class="ttdeci">ColliderType</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:42</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

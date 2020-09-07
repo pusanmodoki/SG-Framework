@@ -1,0 +1,163 @@
+\hypertarget{class_s_g_framework_1_1_thread}{}\doxysection{S\+G\+Framework\+::Thread クラス}
+\label{class_s_g_framework_1_1_thread}\index{SGFramework::Thread@{SGFramework::Thread}}
+
+
+{\ttfamily \#include $<$Thread.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_thread_abac5ab656e4e676c87d51570d237b60b}{D\+E\+L\+E\+T\+E\+\_\+\+A\+L\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}} (\mbox{\hyperlink{class_s_g_framework_1_1_thread}{Thread}})
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{namespace_s_g_framework_ae22f6e3de0e16d4376368e48f9d7ade3}{uint64}} \mbox{\hyperlink{class_s_g_framework_1_1_thread_aa26c244fd76755ac88ce5afc2ff1da32}{Auto\+Thread\+Allocation}} (const H\+A\+N\+D\+LE \&thread\+Handle)
+\item 
+static void \mbox{\hyperlink{class_s_g_framework_1_1_thread_a98cd53d2fbcdde3c7627e466afd12dbe}{Thread\+Allocation}} (const H\+A\+N\+D\+LE \&thread\+Handle, \mbox{\hyperlink{namespace_s_g_framework_ae22f6e3de0e16d4376368e48f9d7ade3}{uint64}} use\+Thread)
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_thread_a99867caf7355dabe9f8ef02995605bb1}{get\+Num\+Running\+Framework\+Threads}} ()
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_thread_ab3dbf7bd19847867370c3f07742108af}{get\+Num\+Framework\+Using\+Hardware\+Threads}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_thread_a6b4bca628bbc392d339c147aec3470ac}{num\+Update\+Threads}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_thread_ae153f3165550a17227d9d1fa9a3a2f7a}{num\+Function\+Lines}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_thread_a2788fadeb949053674168ea23c270bd2}{num\+Hardware\+Threads}}
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_thread_a23f25bcc02a0e94c2f5a4188496b04d0}{Application}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_thread_a211f008bd6a46efe478fe81d31e28933}{Audio}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_thread_a2bfcbae6c8e1d7af93c5ac1200b1535c}{Physics}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_thread_a404869f3b79639a1e408f50cad4430cf}{Administrator\+::\+Graphics\+X11}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_thread_af8fc6b942d1b69e45daa46533dba00c7}{Administrator\+::\+Graphics\+GL}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_thread_a186f098ef42c07abf2664cb53320b811}{Administrator\+::\+Asset\+Manager}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_thread_a6b3deae32cf8d44e322c6886e795c5dc}{Asset\+::\+Audio\+Asset\+Music}}
+\item 
+int \mbox{\hyperlink{class_s_g_framework_1_1_thread_a29d4b5b2b7636134cea110589d02f2ef}{W\+I\+N\+A\+P\+I\+::\+Win\+Main}} (\+\_\+\+In\+\_\+ H\+I\+N\+S\+T\+A\+N\+CE h\+Instance, \+\_\+\+In\+\_\+opt\+\_\+ H\+I\+N\+S\+T\+A\+N\+CE h\+Prev\+Instance, \+\_\+\+In\+\_\+ L\+P\+S\+TR lp\+Cmd\+Line, \+\_\+\+In\+\_\+ int n\+Cmd\+Show)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_aa26c244fd76755ac88ce5afc2ff1da32}\label{class_s_g_framework_1_1_thread_aa26c244fd76755ac88ce5afc2ff1da32}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!AutoThreadAllocation@{AutoThreadAllocation}}
+\index{AutoThreadAllocation@{AutoThreadAllocation}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{AutoThreadAllocation()}{AutoThreadAllocation()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespace_s_g_framework_ae22f6e3de0e16d4376368e48f9d7ade3}{uint64}} S\+G\+Framework\+::\+Thread\+::\+Auto\+Thread\+Allocation (\begin{DoxyParamCaption}\item[{const H\+A\+N\+D\+LE \&}]{thread\+Handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_abac5ab656e4e676c87d51570d237b60b}\label{class_s_g_framework_1_1_thread_abac5ab656e4e676c87d51570d237b60b}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS@{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}}
+\index{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS@{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS()}{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Thread\+::\+D\+E\+L\+E\+T\+E\+\_\+\+A\+L\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_thread}{Thread}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_ab3dbf7bd19847867370c3f07742108af}\label{class_s_g_framework_1_1_thread_ab3dbf7bd19847867370c3f07742108af}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!getNumFrameworkUsingHardwareThreads@{getNumFrameworkUsingHardwareThreads}}
+\index{getNumFrameworkUsingHardwareThreads@{getNumFrameworkUsingHardwareThreads}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{getNumFrameworkUsingHardwareThreads()}{getNumFrameworkUsingHardwareThreads()}}
+{\footnotesize\ttfamily static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Thread\+::get\+Num\+Framework\+Using\+Hardware\+Threads (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_a99867caf7355dabe9f8ef02995605bb1}\label{class_s_g_framework_1_1_thread_a99867caf7355dabe9f8ef02995605bb1}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!getNumRunningFrameworkThreads@{getNumRunningFrameworkThreads}}
+\index{getNumRunningFrameworkThreads@{getNumRunningFrameworkThreads}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{getNumRunningFrameworkThreads()}{getNumRunningFrameworkThreads()}}
+{\footnotesize\ttfamily static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Thread\+::get\+Num\+Running\+Framework\+Threads (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_a98cd53d2fbcdde3c7627e466afd12dbe}\label{class_s_g_framework_1_1_thread_a98cd53d2fbcdde3c7627e466afd12dbe}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!ThreadAllocation@{ThreadAllocation}}
+\index{ThreadAllocation@{ThreadAllocation}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{ThreadAllocation()}{ThreadAllocation()}}
+{\footnotesize\ttfamily static void S\+G\+Framework\+::\+Thread\+::\+Thread\+Allocation (\begin{DoxyParamCaption}\item[{const H\+A\+N\+D\+LE \&}]{thread\+Handle,  }\item[{\mbox{\hyperlink{namespace_s_g_framework_ae22f6e3de0e16d4376368e48f9d7ade3}{uint64}}}]{use\+Thread }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_a186f098ef42c07abf2664cb53320b811}\label{class_s_g_framework_1_1_thread_a186f098ef42c07abf2664cb53320b811}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!Administrator::AssetManager@{Administrator::AssetManager}}
+\index{Administrator::AssetManager@{Administrator::AssetManager}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{Administrator::AssetManager}{Administrator::AssetManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_asset_manager}{Administrator\+::\+Asset\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_af8fc6b942d1b69e45daa46533dba00c7}\label{class_s_g_framework_1_1_thread_af8fc6b942d1b69e45daa46533dba00c7}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!Administrator::GraphicsGL@{Administrator::GraphicsGL}}
+\index{Administrator::GraphicsGL@{Administrator::GraphicsGL}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{Administrator::GraphicsGL}{Administrator::GraphicsGL}}
+{\footnotesize\ttfamily friend class Administrator\+::\+Graphics\+GL\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_a404869f3b79639a1e408f50cad4430cf}\label{class_s_g_framework_1_1_thread_a404869f3b79639a1e408f50cad4430cf}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!Administrator::GraphicsX11@{Administrator::GraphicsX11}}
+\index{Administrator::GraphicsX11@{Administrator::GraphicsX11}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{Administrator::GraphicsX11}{Administrator::GraphicsX11}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_x11}{Administrator\+::\+Graphics\+X11}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_a23f25bcc02a0e94c2f5a4188496b04d0}\label{class_s_g_framework_1_1_thread_a23f25bcc02a0e94c2f5a4188496b04d0}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!Application@{Application}}
+\index{Application@{Application}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{Application}{Application}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_application}{Application}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_a6b3deae32cf8d44e322c6886e795c5dc}\label{class_s_g_framework_1_1_thread_a6b3deae32cf8d44e322c6886e795c5dc}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!Asset::AudioAssetMusic@{Asset::AudioAssetMusic}}
+\index{Asset::AudioAssetMusic@{Asset::AudioAssetMusic}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{Asset::AudioAssetMusic}{Asset::AudioAssetMusic}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_music}{Asset\+::\+Audio\+Asset\+Music}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_a211f008bd6a46efe478fe81d31e28933}\label{class_s_g_framework_1_1_thread_a211f008bd6a46efe478fe81d31e28933}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!Audio@{Audio}}
+\index{Audio@{Audio}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{Audio}{Audio}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_audio}{Audio}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_a2bfcbae6c8e1d7af93c5ac1200b1535c}\label{class_s_g_framework_1_1_thread_a2bfcbae6c8e1d7af93c5ac1200b1535c}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!Physics@{Physics}}
+\index{Physics@{Physics}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{Physics}{Physics}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_physics}{Physics}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_a29d4b5b2b7636134cea110589d02f2ef}\label{class_s_g_framework_1_1_thread_a29d4b5b2b7636134cea110589d02f2ef}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!WINAPI::WinMain@{WINAPI::WinMain}}
+\index{WINAPI::WinMain@{WINAPI::WinMain}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{WINAPI::WinMain}{WINAPI::WinMain}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{_win_main_8cpp_a649028f00e62144f15f268d14bc6dae0}{W\+I\+N\+A\+P\+I\+::\+Win\+Main}} (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Instance,  }\item[{\+\_\+\+In\+\_\+opt\+\_\+ H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Prev\+Instance,  }\item[{\+\_\+\+In\+\_\+ L\+P\+S\+TR}]{lp\+Cmd\+Line,  }\item[{\+\_\+\+In\+\_\+ int}]{n\+Cmd\+Show }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_ae153f3165550a17227d9d1fa9a3a2f7a}\label{class_s_g_framework_1_1_thread_ae153f3165550a17227d9d1fa9a3a2f7a}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!numFunctionLines@{numFunctionLines}}
+\index{numFunctionLines@{numFunctionLines}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{numFunctionLines}{numFunctionLines}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ S\+G\+Framework\+::\+Thread\+::num\+Function\+Lines\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_a2788fadeb949053674168ea23c270bd2}\label{class_s_g_framework_1_1_thread_a2788fadeb949053674168ea23c270bd2}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!numHardwareThreads@{numHardwareThreads}}
+\index{numHardwareThreads@{numHardwareThreads}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{numHardwareThreads}{numHardwareThreads}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ S\+G\+Framework\+::\+Thread\+::num\+Hardware\+Threads\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_thread_a6b4bca628bbc392d339c147aec3470ac}\label{class_s_g_framework_1_1_thread_a6b4bca628bbc392d339c147aec3470ac}} 
+\index{SGFramework::Thread@{SGFramework::Thread}!numUpdateThreads@{numUpdateThreads}}
+\index{numUpdateThreads@{numUpdateThreads}!SGFramework::Thread@{SGFramework::Thread}}
+\doxysubsubsection{\texorpdfstring{numUpdateThreads}{numUpdateThreads}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ S\+G\+Framework\+::\+Thread\+::num\+Update\+Threads\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/07\+\_\+\+Thread/\mbox{\hyperlink{_thread_8hpp}{Thread.\+hpp}}\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/07\+\_\+\+Thread/\mbox{\hyperlink{_thread_8cpp}{Thread.\+cpp}}\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/07\+\_\+\+Thread/\mbox{\hyperlink{_thread_audio_graphics_8cpp}{Thread\+Audio\+Graphics.\+cpp}}\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/07\+\_\+\+Thread/\mbox{\hyperlink{_thread_update_8cpp}{Thread\+Update.\+cpp}}\end{DoxyCompactItemize}

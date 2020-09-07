@@ -38,9 +38,9 @@ namespace SGFramework
 				: BaseException(addressName, functionName, errorText, errorCode, isGetBacktrace) {}
 
 			//<property, virtual> exception class name
-			SGF_PROPERTY virtual const std::string _exceptionName() const noexcept override { return "DefaultException"; }
+			SGF_INLINE_PROPERTY virtual const std::string _exceptionName() const noexcept override { return "DefaultException"; }
 			//<property, virtual> exception text
-			SGF_PROPERTY virtual const std::string _exceptionText() const noexcept override { return "Unknown exception."; }
+			SGF_INLINE_PROPERTY virtual const std::string _exceptionText() const noexcept override { return "Unknown exception."; }
 		};
 
 		//無効な引数が原因の際に使われるInvalidArgumentException class
@@ -68,9 +68,9 @@ namespace SGFramework
 				: BaseException(addressName, functionName, errorText, errorCode, isGetBacktrace) {}
 
 			//<property, virtual> exception class name
-			SGF_PROPERTY const std::string _exceptionName() const noexcept override { return "InvalidArgumentException"; }
+			SGF_INLINE_PROPERTY const std::string _exceptionName() const noexcept override { return "InvalidArgumentException"; }
 			//<property, virtual> exception text
-			SGF_PROPERTY const std::string _exceptionText() const noexcept override { return "invalid argument."; }
+			SGF_INLINE_PROPERTY const std::string _exceptionText() const noexcept override { return "invalid argument."; }
 		};
 
 
@@ -99,9 +99,9 @@ namespace SGFramework
 				: BaseException(addressName, functionName, errorText, errorCode, isGetBacktrace) {}
 
 			//<property, virtual> exception class name
-			SGF_PROPERTY const std::string _exceptionName() const noexcept override { return "InvalidFunctionCallException"; }
+			SGF_INLINE_PROPERTY const std::string _exceptionName() const noexcept override { return "InvalidFunctionCallException"; }
 			//<property, virtual> exception text
-			SGF_PROPERTY const std::string _exceptionText() const noexcept override { return "invalid function call."; }
+			SGF_INLINE_PROPERTY const std::string _exceptionText() const noexcept override { return "invalid function call."; }
 		};
 
 
@@ -130,9 +130,9 @@ namespace SGFramework
 				: BaseException(addressName, functionName, errorText, errorCode, isGetBacktrace) {}
 
 			//<property, virtual> exception class name
-			SGF_PROPERTY const std::string _exceptionName() const noexcept override { return "InvalidTemplateArgumentException"; }
+			SGF_INLINE_PROPERTY const std::string _exceptionName() const noexcept override { return "InvalidTemplateArgumentException"; }
 			//<property, virtual> exception text
-			SGF_PROPERTY const std::string _exceptionText() const noexcept override { return "invalid template argment."; }
+			SGF_INLINE_PROPERTY const std::string _exceptionText() const noexcept override { return "invalid template argment."; }
 		};
 	}
 }

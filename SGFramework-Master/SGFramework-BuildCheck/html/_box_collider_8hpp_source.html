@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/10_Physics/Collider/BoxCollider.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_143bd857002117c0903e75b9b3cb038e.html">10_Physics</a></li><li class="navelem"><a class="el" href="dir_210c4b43072df869dd6b81d124f8a15c.html">Collider</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">BoxCollider.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_box_collider_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Box状当たり判定を提供するBoxCollider class</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">BuildColliderを実行するまで当たり判定は機能しないので注意</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_BOX_COLLIDER_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_BOX_COLLIDER_HPP_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_base_collider_8hpp.html">BaseCollider.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../PhysicsMaterial.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../Physics.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//Box状当たり判定を提供するBoxCollider class</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">//BuildColliderを実行するまで当たり判定は機能しないので注意</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_box_collider.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_box_collider.html">BoxCollider</a> : <span class="keyword">public</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html">BaseClass::BaseCollider</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">//box scale(transform-&gt;getWorldScale * this value) (read function property)</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_box_collider.html#aabdc66674737b6708f8846850a493c98">   20</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> <a class="code" href="class_s_g_framework_1_1_box_collider.html#aabdc66674737b6708f8846850a493c98">getScale</a>() { <span class="keywordflow">return</span> m_scale * 2.0f; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">//box scale(transform-&gt;getWorldScale * this value) (read function property)</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">//argument 1: set value</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_box_collider.html#a7523fb1f70cb233cac69361e9c8b350c">   23</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> <a class="code" href="class_s_g_framework_1_1_box_collider.html#a7523fb1f70cb233cac69361e9c8b350c">setScale</a>(<span class="keyword">const</span> <a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a>&amp; set)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">using namespace </span>Detail::Physics;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            m_scale = set * 0.5f;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a47fca3bebacd500988734532b43bc0fd">m_shape</a>)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="comment">//message作成</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                PhysicsMessage message(MessageType::BoxColliderMessageFlag | MessageType::BoxSetScaleV3, <a class="code" href="class_s_g_framework_1_1_object.html#aa4ea7385b13efc6b88990c394bb0b8b2">instanceID</a>());</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                message.attachment.vector3 = m_scale * <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a25df37a4894475f8af90549d5fe1fa84">transform</a>-&gt;getWorldScale();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="comment">//send message</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                Physics::SendPhysicsMessage(message);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">return</span> set;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">//attachd is rigid body static or kinematic only? (read function property)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_box_collider.html#ad4262e257f22fba5916426eefbecca3d">   39</a></span>&#160;        SGF_FUNCTION_PROPERTY <span class="keywordtype">bool</span> <a class="code" href="class_s_g_framework_1_1_box_collider.html#ad4262e257f22fba5916426eefbecca3d">getIsStaticOnlly</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">//[BuildCollider]</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">//Colliderを生成する</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">//引数1: box scale (transform-&gt;getWorldScale * this value)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">//引数2: collider is trigger?, default = false</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">//引数3: used hit callback?, default = ture</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">//引数4: collider center, default = zero</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">//引数5: physics material, default = defaultMaterial</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_box_collider.html#a91264ce7c7f98ee1bad11dcfa5481652">   49</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_box_collider.html#a91264ce7c7f98ee1bad11dcfa5481652">BuildCollider</a>(<span class="keyword">const</span> <a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a>&amp; scale, <span class="keywordtype">bool</span> isTrigger = <span class="keyword">false</span>, <span class="keywordtype">bool</span> isUsedCallback = <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keyword">const</span> <a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a>&amp; center = <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">Const::Vector3::zero</a>,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keyword">const</span> <a class="code" href="class_s_g_framework_1_1_physics_material.html">PhysicsMaterial</a>&amp; material = <a class="code" href="class_s_g_framework_1_1_physics.html#a89182a290c38ff465f1e2d4f0a438876">Physics::defaultPhysicsMaterial</a>())</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keyword">using namespace </span>Detail::Physics;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="comment">//Set</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a4436279e90304731e2b6e8cdd9ba4b7c">m_isTrigger</a> = isTrigger;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            m_scale = scale;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            m_transformScale = <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a25df37a4894475f8af90549d5fe1fa84">transform</a>-&gt;getWorldScale();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a397ac1e781b06717e3710990b0c858bc">m_center</a> = center;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a3f71432a3591fbf91907b2586f0876f2">m_material</a> = material;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a1bbddb1fad958597a83eeb1118ea4863">m_isUsedCallback</a> = isUsedCallback;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="comment">//message作成</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            PhysicsMessage message(MessageType::PointerMessageFlag | MessageType::RegisterColliderCL, <a class="code" href="class_s_g_framework_1_1_object.html#aa4ea7385b13efc6b88990c394bb0b8b2">instanceID</a>());</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            message.attachment.collider = <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a69fff20a641469ae4f4f39cbf95afe68">m_thisPointer</a>.DynamicCast&lt;<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html">BaseClass::BaseCollider</a>&gt;();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">//send message</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            Physics::SendPhysicsMessage(message);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="comment">//message.Release();</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">//[CreateShape]</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">//実際にShapeを作成する</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> CreateShape()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">        </span>{   </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="comment">//flag setting</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            physx::PxShapeFlags flag = physx::PxShapeFlag::eSCENE_QUERY_SHAPE;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a4436279e90304731e2b6e8cdd9ba4b7c">m_isTrigger</a>)) flag |= physx::PxShapeFlag::eTRIGGER_SHAPE;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">else</span> flag |= physx::PxShapeFlag::eSIMULATION_SHAPE;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(IsDebug::isValue())) flag |= physx::PxShapeFlag::eVISUALIZATION;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="comment">//create shape</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a47fca3bebacd500988734532b43bc0fd">m_shape</a> = <a class="code" href="class_s_g_framework_1_1_physics.html#ad78d57273b2822fd10db209481187c7c">Physics::physicsFactory</a>-&gt;createShape(physx::PxBoxGeometry(</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                (m_scale * m_transformScale).ToPhysX()), *<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a3f71432a3591fbf91907b2586f0876f2">m_material</a>(), <span class="keyword">true</span>, flag);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="comment">//type setting</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a46561004bf409ac5de96d158ed36b047">m_type</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="namespace_s_g_framework.html#a7f80cd2c5e4e4d0fe2b905c703f1373b">ColliderType</a><span class="keyword">&gt;</span>(<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a47fca3bebacd500988734532b43bc0fd">m_shape</a>-&gt;getGeometryType());</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="comment">//filter setting</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#aab159a04b27ef49172d94d78194ab714">InitFilterMask</a>(<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a1bbddb1fad958597a83eeb1118ea4863">m_isUsedCallback</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="comment">//userData = this instance id</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a47fca3bebacd500988734532b43bc0fd">m_shape</a>-&gt;userData = <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(<a class="code" href="class_s_g_framework_1_1_object.html#aa4ea7385b13efc6b88990c394bb0b8b2">instanceID</a>()));</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">//equal rigidbody transfoem</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a069fd0a9a9c80d1a7b8e73bc45198b3e">m_isEqualRigidTransform</a>))</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a47fca3bebacd500988734532b43bc0fd">m_shape</a>-&gt;setLocalPose(physx::PxTransform(<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#ade4a79751be8af8c270b0a18036381fd">CalculateCenter</a>().<a class="code" href="struct_s_g_framework_1_1_vector3.html#acf0ad93bf5a10672d9aaf6b83cfbdd94">ToPhysX</a>(), <a class="code" href="namespace_s_g_framework_1_1_const_1_1_quaternion.html#a05084bdcdd15ab3dd19e4be6f96952ec">Const::Quaternion::identity</a>.<a class="code" href="struct_s_g_framework_1_1_quaternion.html#a91693b36e48f4750735054c2fd8b404d">ToPhysX</a>()));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="comment">//not equal rigidbody transfoem</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a47fca3bebacd500988734532b43bc0fd">m_shape</a>-&gt;setLocalPose(physx::PxTransform(</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                (<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a25df37a4894475f8af90549d5fe1fa84">transform</a>-&gt;getWorldPosition() - <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a25df37a4894475f8af90549d5fe1fa84">transform</a>-&gt;getParent()-&gt;getWorldPosition() + <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#ade4a79751be8af8c270b0a18036381fd">CalculateCenter</a>()).ToPhysX(),</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    (<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a25df37a4894475f8af90549d5fe1fa84">transform</a>-&gt;getWorldRotation() * <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a25df37a4894475f8af90549d5fe1fa84">transform</a>-&gt;getParent()-&gt;getWorldRotation().getInverse()).ToPhysX()));</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="comment">//attach</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a49bfc51a199036e1d6e1ec6360e7d05c">m_actor</a>-&gt;attachShape(*<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a47fca3bebacd500988734532b43bc0fd">m_shape</a>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="comment">//[ChangeScale]</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="comment">//Scaleを変更する</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> ChangeScale()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="comment">//get</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            Vector3 get = <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a25df37a4894475f8af90549d5fe1fa84">transform</a>-&gt;getWorldScale();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="comment">//bufと違えば変更</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">if</span> (m_transformScale != get)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a47fca3bebacd500988734532b43bc0fd">m_shape</a>-&gt;setGeometry(physx::PxBoxGeometry((m_scale  * get).ToPhysX()));</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="comment">//buf保存</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            m_transformScale = get;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        Vector3 m_transformScale = <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">Const::Vector3::zero</a>;    <span class="comment">//transform scale</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        Vector3 m_scale = <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">Const::Vector3::zero</a>;                 <span class="comment">//collider scale</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    };</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif //!SGFRAMEWORK_HEADER_BOX_COLLIDER_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_collider_html_a47fca3bebacd500988734532b43bc0fd"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a47fca3bebacd500988734532b43bc0fd">SGFramework::BaseClass::BaseCollider::m_shape</a></div><div class="ttdeci">physx::PxShape * m_shape</div><div class="ttdef"><b>Definition:</b> BaseCollider.hpp:366</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_box_collider_html"><div class="ttname"><a href="class_s_g_framework_1_1_box_collider.html">SGFramework::BoxCollider</a></div><div class="ttdef"><b>Definition:</b> BoxCollider.hpp:17</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_collider_html_a1bbddb1fad958597a83eeb1118ea4863"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a1bbddb1fad958597a83eeb1118ea4863">SGFramework::BaseClass::BaseCollider::m_isUsedCallback</a></div><div class="ttdeci">bool m_isUsedCallback</div><div class="ttdef"><b>Definition:</b> BaseCollider.hpp:376</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_collider_html_aab159a04b27ef49172d94d78194ab714"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#aab159a04b27ef49172d94d78194ab714">SGFramework::BaseClass::BaseCollider::InitFilterMask</a></div><div class="ttdeci">void InitFilterMask(bool isUsedCallback)</div><div class="ttdef"><b>Definition:</b> BaseCollider.hpp:219</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_box_collider_html_a7523fb1f70cb233cac69361e9c8b350c"><div class="ttname"><a href="class_s_g_framework_1_1_box_collider.html#a7523fb1f70cb233cac69361e9c8b350c">SGFramework::BoxCollider::setScale</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY Vector3 setScale(const Vector3 &amp;set)</div><div class="ttdef"><b>Definition:</b> BoxCollider.hpp:23</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_quaternion_html_a05084bdcdd15ab3dd19e4be6f96952ec"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_quaternion.html#a05084bdcdd15ab3dd19e4be6f96952ec">SGFramework::Const::Quaternion::identity</a></div><div class="ttdeci">constexpr SGFramework::Quaternion identity</div><div class="ttdef"><b>Definition:</b> Const.hpp:21</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_box_collider_html_aabdc66674737b6708f8846850a493c98"><div class="ttname"><a href="class_s_g_framework_1_1_box_collider.html#aabdc66674737b6708f8846850a493c98">SGFramework::BoxCollider::getScale</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY Vector3 getScale()</div><div class="ttdef"><b>Definition:</b> BoxCollider.hpp:20</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_quaternion_html_a91693b36e48f4750735054c2fd8b404d"><div class="ttname"><a href="struct_s_g_framework_1_1_quaternion.html#a91693b36e48f4750735054c2fd8b404d">SGFramework::Quaternion::ToPhysX</a></div><div class="ttdeci">physx::PxQuat ToPhysX() const noexcept</div><div class="ttdef"><b>Definition:</b> Quaternion.hpp:74</div></div>
+<div class="ttc" id="a_base_collider_8hpp_html"><div class="ttname"><a href="_base_collider_8hpp.html">BaseCollider.hpp</a></div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_ac773f04184a04dfbb5820902d31f4c87"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">SGFramework::Const::Vector3::zero</a></div><div class="ttdeci">constexpr SGFramework::Vector3 zero(0.0f, 0.0f, 0.0f)</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_collider_html_ade4a79751be8af8c270b0a18036381fd"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#ade4a79751be8af8c270b0a18036381fd">SGFramework::BaseClass::BaseCollider::CalculateCenter</a></div><div class="ttdeci">Vector3 CalculateCenter()</div><div class="ttdef"><b>Definition:</b> BaseCollider.hpp:243</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector3_html_acf0ad93bf5a10672d9aaf6b83cfbdd94"><div class="ttname"><a href="struct_s_g_framework_1_1_vector3.html#acf0ad93bf5a10672d9aaf6b83cfbdd94">SGFramework::Vector3::ToPhysX</a></div><div class="ttdeci">physx::PxVec3 ToPhysX() const noexcept</div><div class="ttdef"><b>Definition:</b> Vector3.hpp:77</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_html_a89182a290c38ff465f1e2d4f0a438876"><div class="ttname"><a href="class_s_g_framework_1_1_physics.html#a89182a290c38ff465f1e2d4f0a438876">SGFramework::Physics::defaultPhysicsMaterial</a></div><div class="ttdeci">static GetOnlyProperty&lt; PhysicsMaterial &gt; defaultPhysicsMaterial</div><div class="ttdef"><b>Definition:</b> Physics.hpp:165</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_box_collider_html_a91264ce7c7f98ee1bad11dcfa5481652"><div class="ttname"><a href="class_s_g_framework_1_1_box_collider.html#a91264ce7c7f98ee1bad11dcfa5481652">SGFramework::BoxCollider::BuildCollider</a></div><div class="ttdeci">void BuildCollider(const Vector3 &amp;scale, bool isTrigger=false, bool isUsedCallback=true, const Vector3 &amp;center=Const::Vector3::zero, const PhysicsMaterial &amp;material=Physics::defaultPhysicsMaterial())</div><div class="ttdef"><b>Definition:</b> BoxCollider.hpp:49</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_html_a25df37a4894475f8af90549d5fe1fa84"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a25df37a4894475f8af90549d5fe1fa84">SGFramework::Administrator::GraphicsDetail::ComponentX11::transform</a></div><div class="ttdeci">WeakPointer&lt; TransformX11 &gt; transform</div><div class="ttdef"><b>Definition:</b> TransformX11.hpp:1417</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_collider_html_a397ac1e781b06717e3710990b0c858bc"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a397ac1e781b06717e3710990b0c858bc">SGFramework::BaseClass::BaseCollider::m_center</a></div><div class="ttdeci">Vector3 m_center</div><div class="ttdef"><b>Definition:</b> BaseCollider.hpp:371</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_box_collider_html_ad4262e257f22fba5916426eefbecca3d"><div class="ttname"><a href="class_s_g_framework_1_1_box_collider.html#ad4262e257f22fba5916426eefbecca3d">SGFramework::BoxCollider::getIsStaticOnlly</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY bool getIsStaticOnlly() override</div><div class="ttdef"><b>Definition:</b> BoxCollider.hpp:39</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_object_html_aa4ea7385b13efc6b88990c394bb0b8b2"><div class="ttname"><a href="class_s_g_framework_1_1_object.html#aa4ea7385b13efc6b88990c394bb0b8b2">SGFramework::Object::instanceID</a></div><div class="ttdeci">GetOnlyProperty&lt; uint &gt; instanceID</div><div class="ttdef"><b>Definition:</b> Object.hpp:69</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_material_html"><div class="ttname"><a href="class_s_g_framework_1_1_physics_material.html">SGFramework::PhysicsMaterial</a></div><div class="ttdef"><b>Definition:</b> PhysicsMaterial.hpp:17</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_collider_html"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_collider.html">SGFramework::BaseClass::BaseCollider</a></div><div class="ttdef"><b>Definition:</b> BaseCollider.hpp:18</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_collider_html_a4436279e90304731e2b6e8cdd9ba4b7c"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a4436279e90304731e2b6e8cdd9ba4b7c">SGFramework::BaseClass::BaseCollider::m_isTrigger</a></div><div class="ttdeci">bool m_isTrigger</div><div class="ttdef"><b>Definition:</b> BaseCollider.hpp:375</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector3_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a></div><div class="ttdef"><b>Definition:</b> Vector3.hpp:28</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_aa2eae4e8c99ada2e0afd8011beca63c4"><div class="ttname"><a href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a></div><div class="ttdeci">#define IS_TRUE(val)</div><div class="ttdoc">true判定高速化, 見やすさ向上マクロ(高速化は環境依存？)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:64</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_collider_html_a069fd0a9a9c80d1a7b8e73bc45198b3e"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a069fd0a9a9c80d1a7b8e73bc45198b3e">SGFramework::BaseClass::BaseCollider::m_isEqualRigidTransform</a></div><div class="ttdeci">bool m_isEqualRigidTransform</div><div class="ttdef"><b>Definition:</b> BaseCollider.hpp:372</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_collider_html_a46561004bf409ac5de96d158ed36b047"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a46561004bf409ac5de96d158ed36b047">SGFramework::BaseClass::BaseCollider::m_type</a></div><div class="ttdeci">ColliderType m_type</div><div class="ttdef"><b>Definition:</b> BaseCollider.hpp:370</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_collider_html_a3f71432a3591fbf91907b2586f0876f2"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a3f71432a3591fbf91907b2586f0876f2">SGFramework::BaseClass::BaseCollider::m_material</a></div><div class="ttdeci">PhysicsMaterial m_material</div><div class="ttdef"><b>Definition:</b> BaseCollider.hpp:369</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_collider_html_a49bfc51a199036e1d6e1ec6360e7d05c"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_collider.html#a49bfc51a199036e1d6e1ec6360e7d05c">SGFramework::BaseClass::BaseCollider::m_actor</a></div><div class="ttdeci">physx::PxRigidActor * m_actor</div><div class="ttdef"><b>Definition:</b> BaseCollider.hpp:368</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_html_ad78d57273b2822fd10db209481187c7c"><div class="ttname"><a href="class_s_g_framework_1_1_physics.html#ad78d57273b2822fd10db209481187c7c">SGFramework::Physics::physicsFactory</a></div><div class="ttdeci">static PointerProperty&lt; physx::PxPhysics * &gt; physicsFactory</div><div class="ttdef"><b>Definition:</b> Physics.hpp:159</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a7f80cd2c5e4e4d0fe2b905c703f1373b"><div class="ttname"><a href="namespace_s_g_framework.html#a7f80cd2c5e4e4d0fe2b905c703f1373b">SGFramework::ColliderType</a></div><div class="ttdeci">ColliderType</div><div class="ttdef"><b>Definition:</b> PhysicsFlags.hpp:42</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_html_a69fff20a641469ae4f4f39cbf95afe68"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a69fff20a641469ae4f4f39cbf95afe68">SGFramework::Administrator::GraphicsDetail::ComponentX11::m_thisPointer</a></div><div class="ttdeci">WeakPointer&lt; ComponentX11 &gt; m_thisPointer</div><div class="ttdef"><b>Definition:</b> TransformX11.hpp:1438</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

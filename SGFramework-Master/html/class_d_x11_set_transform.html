@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: DX11SetTransform クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="class_d_x11_set_transform-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">DX11SetTransform クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_d_x11_settransform_8h_source.html">DX11Settransform.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_x11_set_transform_1_1_constant_buffer_projection.html">ConstantBufferProjection</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_x11_set_transform_1_1_constant_buffer_view.html">ConstantBufferView</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_x11_set_transform_1_1_constant_buffer_world.html">ConstantBufferWorld</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a98b18e9a984e456c5a81ac53c8d6af3b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_x11_set_transform.html#a98b18e9a984e456c5a81ac53c8d6af3b">TYPE</a> { <a class="el" href="class_d_x11_set_transform.html#a98b18e9a984e456c5a81ac53c8d6af3ba5289492cf082446ca4a6eec9f72f1ec3">TYPE::WORLD</a>, 
+<a class="el" href="class_d_x11_set_transform.html#a98b18e9a984e456c5a81ac53c8d6af3ba5824b315fdbb0f42abfe1bb03f78c270">TYPE::VIEW</a>, 
+<a class="el" href="class_d_x11_set_transform.html#a98b18e9a984e456c5a81ac53c8d6af3baf4ba3e491fc18c6a9379b4e3b2aa503e">TYPE::PROJECTION</a>
+ }</td></tr>
+<tr class="separator:a98b18e9a984e456c5a81ac53c8d6af3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a98a00cc1950a7df72ff5d53c17db98d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_x11_set_transform.html#a98a00cc1950a7df72ff5d53c17db98d8">DX11SetTransform</a> (const <a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a> &amp;)=delete</td></tr>
+<tr class="separator:a98a00cc1950a7df72ff5d53c17db98d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb38c4b21dadf49fc4bee55285168329"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_x11_set_transform.html#abb38c4b21dadf49fc4bee55285168329">operator=</a> (const <a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a> &amp;)=delete</td></tr>
+<tr class="separator:abb38c4b21dadf49fc4bee55285168329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4096f12ee42d96ad37c41d2ef88d5014"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_x11_set_transform.html#a4096f12ee42d96ad37c41d2ef88d5014">DX11SetTransform</a> (<a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a4096f12ee42d96ad37c41d2ef88d5014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a925874a42d1f4bb34de8c97ba7a36a34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_x11_set_transform.html#a925874a42d1f4bb34de8c97ba7a36a34">operator=</a> (<a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a925874a42d1f4bb34de8c97ba7a36a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec100dc1b460becededc3258adb13a45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_x11_set_transform.html#aec100dc1b460becededc3258adb13a45">Uninit</a> ()</td></tr>
+<tr class="separator:aec100dc1b460becededc3258adb13a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23fe36cd769086fd31da9dbfc7b7c095"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_x11_set_transform.html#a23fe36cd769086fd31da9dbfc7b7c095">Init</a> ()</td></tr>
+<tr class="separator:a23fe36cd769086fd31da9dbfc7b7c095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2ea5badbcee0b5102568ffc0acd6355"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_x11_set_transform.html#ab2ea5badbcee0b5102568ffc0acd6355">SetTransform</a> (<a class="el" href="class_d_x11_set_transform.html#a98b18e9a984e456c5a81ac53c8d6af3b">TYPE</a> type, const DirectX::XMFLOAT4X4 &amp;matrix)</td></tr>
+<tr class="separator:ab2ea5badbcee0b5102568ffc0acd6355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6234190bde139f857b5e9e4249576a7b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_x11_set_transform.html#a6234190bde139f857b5e9e4249576a7b">GetInstance</a> ()</td></tr>
+<tr class="separator:a6234190bde139f857b5e9e4249576a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a98b18e9a984e456c5a81ac53c8d6af3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98b18e9a984e456c5a81ac53c8d6af3b">&#9670;&nbsp;</a></span>TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_d_x11_set_transform.html#a98b18e9a984e456c5a81ac53c8d6af3b">DX11SetTransform::TYPE</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a98b18e9a984e456c5a81ac53c8d6af3ba5289492cf082446ca4a6eec9f72f1ec3"></a>WORLD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a98b18e9a984e456c5a81ac53c8d6af3ba5824b315fdbb0f42abfe1bb03f78c270"></a>VIEW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a98b18e9a984e456c5a81ac53c8d6af3baf4ba3e491fc18c6a9379b4e3b2aa503e"></a>PROJECTION&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a98a00cc1950a7df72ff5d53c17db98d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98a00cc1950a7df72ff5d53c17db98d8">&#9670;&nbsp;</a></span>DX11SetTransform() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DX11SetTransform::DX11SetTransform </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4096f12ee42d96ad37c41d2ef88d5014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4096f12ee42d96ad37c41d2ef88d5014">&#9670;&nbsp;</a></span>DX11SetTransform() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DX11SetTransform::DX11SetTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a6234190bde139f857b5e9e4249576a7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6234190bde139f857b5e9e4249576a7b">&#9670;&nbsp;</a></span>GetInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a>* DX11SetTransform::GetInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23fe36cd769086fd31da9dbfc7b7c095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23fe36cd769086fd31da9dbfc7b7c095">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DX11SetTransform::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb38c4b21dadf49fc4bee55285168329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb38c4b21dadf49fc4bee55285168329">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a>&amp; DX11SetTransform::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a925874a42d1f4bb34de8c97ba7a36a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925874a42d1f4bb34de8c97ba7a36a34">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a>&amp; DX11SetTransform::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_d_x11_set_transform.html">DX11SetTransform</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2ea5badbcee0b5102568ffc0acd6355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2ea5badbcee0b5102568ffc0acd6355">&#9670;&nbsp;</a></span>SetTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11SetTransform::SetTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_d_x11_set_transform.html#a98b18e9a984e456c5a81ac53c8d6af3b">TYPE</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DirectX::XMFLOAT4X4 &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec100dc1b460becededc3258adb13a45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec100dc1b460becededc3258adb13a45">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DX11SetTransform::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SGFramework-Master_ToExe/998_DemoApplication/AcademySource/<a class="el" href="_d_x11_settransform_8h_source.html">DX11Settransform.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/998_DemoApplication/AcademySource/dx11mathutil.h „ÇΩ„Éº„Çπ„Éï„Ç°„Ç§„É´</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- ÊßãÁØâ: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Ê§úÁ¥¢');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Ê§úÁ¥¢');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_e0e4c557ebc218887fb43396bcf8db4f.html">998_DemoApplication</a></li><li class="navelem"><a class="el" href="dir_184bc37a952b722a29d3658ce9868392.html">AcademySource</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">dx11mathutil.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="dx11mathutil_8h.html">[Ë©≥Ëß£]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include    &lt;DirectXMath.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using namespace </span>DirectX;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="struct_p_l_a_n_e.html">    6</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_p_l_a_n_e.html">PLANE</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="struct_p_l_a_n_e.html#ac167021d7057ac15ebb183ec02aee1b0">    7</a></span>&#160;    <span class="keywordtype">float</span> a, b, c, <a class="code" href="struct_p_l_a_n_e.html#ac167021d7057ac15ebb183ec02aee1b0">d</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;};</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#afea0fe7f741ebfba3370d18ab8d8aedb">DX11MakeWorldMatrix</a>(XMFLOAT4X4&amp; mat, XMFLOAT3&amp; angle, XMFLOAT3&amp; trans);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#ac0b4d11f10f8042ae045c28518b7fb2d">DX11Vec3MulMatrix</a>(DirectX::XMFLOAT3&amp; outvec, <span class="keyword">const</span> DirectX::XMFLOAT3&amp; invec, <span class="keyword">const</span> DirectX::XMFLOAT4X4&amp; mat);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a998cb230090838a065b3b6fbeeba23c9">DX11Vec3Cross</a>(DirectX::XMFLOAT3&amp; outvec, DirectX::XMFLOAT3&amp; invec1, DirectX::XMFLOAT3&amp; invec2);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a6df46e34867e8e32495bbd812de8afd3">DX11Vec3Dot</a>(<span class="keywordtype">float</span>&amp; dot, <span class="keyword">const</span> DirectX::XMFLOAT3&amp; invec1, <span class="keyword">const</span> DirectX::XMFLOAT3&amp; invec2);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#adbf5e7e14db8c1e366d6cbb0e9c573e8">DX11Vec3Normalize</a>(DirectX::XMFLOAT3&amp; outvec, DirectX::XMFLOAT3&amp; invec);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#aaa49387ed05f17665b316a4f1f747d89">DX11MtxIdentity</a>(DirectX::XMFLOAT4X4&amp; mat);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a2befe8578c8c039227788fdb2aace1b1">DX11GetQtfromMatrix</a>(<span class="keyword">const</span> XMFLOAT4X4&amp; mat, XMFLOAT4&amp; qt);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#abd79437746a1f316f0e8108f550f4486">DX11QtRotationAxis</a>(XMFLOAT4&amp; qt, XMFLOAT4&amp; axis, <span class="keywordtype">float</span> angle);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a51ae073b2b35c01cd5fc5ed051637cd0">DX11QtMul</a>(XMFLOAT4&amp; outqt, <span class="keyword">const</span> XMFLOAT4&amp; qt1, <span class="keyword">const</span> XMFLOAT4&amp; qt2);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a549537740d0e6d7cc13d35a68faccd11">DX11MtxFromQt</a>(XMFLOAT4X4&amp; outmtx, <span class="keyword">const</span> XMFLOAT4&amp; qt);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a0f73783443395c899697cb8e61c55fbf">DX11QtNormalize</a>(XMFLOAT4&amp; inqt, XMFLOAT4&amp; outqt);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a3b849c948ba15bd1f9466b74cafc22bc">DX11Vec4Length</a>(XMFLOAT4&amp; vec, <span class="keywordtype">float</span>&amp; length);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#ace03a934fe3f356b7724b29344b1084c">DX11p2pLength</a>(<span class="keyword">const</span> XMFLOAT3&amp; p1, <span class="keyword">const</span> XMFLOAT3&amp; p2, <span class="keywordtype">float</span>&amp; length);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a5d5ad772d733ee559697bdbfdcd99ddb">DX11MtxTranslation</a>(<span class="keyword">const</span> XMFLOAT3&amp; trans, XMFLOAT4X4&amp; matrix);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a2e6e711ef8e11fd06edac100ed500775">DX11QtSlerp</a>(<span class="keyword">const</span> XMFLOAT4&amp; fromqt, <span class="keyword">const</span> XMFLOAT4&amp; toqt, <span class="keywordtype">float</span> t, XMFLOAT4&amp; ansqt);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a66da36ac1f955c55ea96f212062bac0d">DX11QtIdentity</a>(XMFLOAT4&amp; qt);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a7b779f3659ce77513f634ad5f66a4e35">DX11Vec3Length</a>(XMFLOAT3&amp; vec, <span class="keywordtype">float</span>&amp; length);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a93457004707f7e9231917fe90f34fb8e">DX11MtxRotationAxis</a>(<span class="keyword">const</span> XMFLOAT3&amp; axis, <span class="keywordtype">float</span> angle, XMFLOAT4X4&amp; outmtx);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#ae1393bd30f121145e42450947ef44b73">DX11MtxMultiply</a>(XMFLOAT4X4&amp; ansmtx, <span class="keyword">const</span> XMFLOAT4X4&amp; p1mtx, <span class="keyword">const</span> XMFLOAT4X4&amp; p2mtx);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="dx11mathutil_8h.html#a17cae4b76acb47ec9c26fa3ba5c43780">IsInFrustum</a>(<span class="keyword">const</span> XMFLOAT3&amp; pos, <span class="keyword">const</span> XMFLOAT4X4&amp; matrix);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a17cae4b76acb47ec9c26fa3ba5c43780">IsInFrustum</a>(<span class="keyword">const</span> XMFLOAT3&amp; pos, <span class="keyword">const</span> XMFLOAT4X4&amp; matrix, <span class="keywordtype">float</span> ans[]);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="dx11mathutil_8h.html#a17cae4b76acb47ec9c26fa3ba5c43780">IsInFrustum</a>(<span class="keyword">const</span> XMFLOAT3&amp; pos, <span class="keyword">const</span> XMFLOAT4X4&amp; matrix, <span class="keywordtype">float</span> ans[], <a class="code" href="struct_p_l_a_n_e.html">PLANE</a>* plane);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="dx11mathutil_8h.html#a17cae4b76acb47ec9c26fa3ba5c43780">IsInFrustum</a>(</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">const</span> XMFLOAT3&amp; pos,                    <span class="comment">// BSíÜêSç¿ïW</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">float</span> radius,                           <span class="comment">// îºåa</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">const</span> XMFLOAT4X4&amp; matrix,               <span class="comment">// ÉrÉÖÅ[ïœä∑çsóÒÅñÉvÉçÉWÉFÉNÉVÉáÉìïœä∑çsóÒ </span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">float</span> ans[],                            <span class="comment">// ïΩñ Ç∆ÇÃãóó£</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span>  canseeflag[],                     <span class="comment">// ÉtÉâÉXÉ^ÉÄïΩñ Ç∆ÇaÇrÇÃä÷åW</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="struct_p_l_a_n_e.html">PLANE</a>* plane);                          <span class="comment">// ïΩñ ï˚íˆéÆ;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a124657a6944806be85a8fcbe0bc6232f">GetPlanefromProjectionmatrix</a>(<a class="code" href="struct_p_l_a_n_e.html">PLANE</a>* p, <span class="keyword">const</span> XMFLOAT4X4&amp; matrix);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a819aa49fbd3f9436864c4115d03d4675">GetPlanefromProjectionmatrixWithNormalize</a>(<a class="code" href="struct_p_l_a_n_e.html">PLANE</a>* p, <span class="keyword">const</span> XMFLOAT4X4&amp; matrix);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#ac35f78fadf1113657a0a36f02e91c28b">DX11MtxInverse</a>(XMFLOAT4X4&amp; ansmtx, <span class="keyword">const</span> XMFLOAT4X4&amp; mtx);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a8414636bd9df7fb4ce840877f0427135">DX11MtxTranspose</a>(XMFLOAT4X4&amp; outmtx, <span class="keyword">const</span> XMFLOAT4X4&amp; inmtx);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a1e55259933280cbb99e2238f3faadc52">DX11MtxRotationX</a>(<span class="keywordtype">float</span> angle, XMFLOAT4X4&amp; outmtx);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#acb93b86c90eeabffe2684432a4a3332e">DX11MtxRotationY</a>(<span class="keywordtype">float</span> angle, XMFLOAT4X4&amp; outmtx);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#a53ac29f45e93e976aba2dc61e3958190">DX11MtxRotationZ</a>(<span class="keywordtype">float</span> angle, XMFLOAT4X4&amp; outmtx);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#aafffcbae2d09df5f5dcdfea418c363d5">DX11MtxScale</a>(<span class="keywordtype">float</span> sx, <span class="keywordtype">float</span> sy, <span class="keywordtype">float</span> sz, XMFLOAT4X4&amp; outmtx);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">float</span> <a class="code" href="dx11mathutil_8h.html#a0b3084a41fea36cb87e2c4f91407b017">haltonseq</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> no, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> base);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="dx11mathutil_8h.html#af874991286087dd77ca321df3e64e892">DX11MatrixIdentity</a>(DirectX::XMFLOAT4X4&amp; mat);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="adx11mathutil_8h_html_a6df46e34867e8e32495bbd812de8afd3"><div class="ttname"><a href="dx11mathutil_8h.html#a6df46e34867e8e32495bbd812de8afd3">DX11Vec3Dot</a></div><div class="ttdeci">void DX11Vec3Dot(float &amp;dot, const DirectX::XMFLOAT3 &amp;invec1, const DirectX::XMFLOAT3 &amp;invec2)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:61</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_ac35f78fadf1113657a0a36f02e91c28b"><div class="ttname"><a href="dx11mathutil_8h.html#ac35f78fadf1113657a0a36f02e91c28b">DX11MtxInverse</a></div><div class="ttdeci">void DX11MtxInverse(XMFLOAT4X4 &amp;ansmtx, const XMFLOAT4X4 &amp;mtx)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:336</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_aafffcbae2d09df5f5dcdfea418c363d5"><div class="ttname"><a href="dx11mathutil_8h.html#aafffcbae2d09df5f5dcdfea418c363d5">DX11MtxScale</a></div><div class="ttdeci">void DX11MtxScale(float sx, float sy, float sz, XMFLOAT4X4 &amp;outmtx)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:605</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_abd79437746a1f316f0e8108f550f4486"><div class="ttname"><a href="dx11mathutil_8h.html#abd79437746a1f316f0e8108f550f4486">DX11QtRotationAxis</a></div><div class="ttdeci">void DX11QtRotationAxis(XMFLOAT4 &amp;qt, XMFLOAT4 &amp;axis, float angle)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:125</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_afea0fe7f741ebfba3370d18ab8d8aedb"><div class="ttname"><a href="dx11mathutil_8h.html#afea0fe7f741ebfba3370d18ab8d8aedb">DX11MakeWorldMatrix</a></div><div class="ttdeci">void DX11MakeWorldMatrix(XMFLOAT4X4 &amp;mat, XMFLOAT3 &amp;angle, XMFLOAT3 &amp;trans)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:9</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a2e6e711ef8e11fd06edac100ed500775"><div class="ttname"><a href="dx11mathutil_8h.html#a2e6e711ef8e11fd06edac100ed500775">DX11QtSlerp</a></div><div class="ttdeci">void DX11QtSlerp(const XMFLOAT4 &amp;fromqt, const XMFLOAT4 &amp;toqt, float t, XMFLOAT4 &amp;ansqt)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:270</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a0f73783443395c899697cb8e61c55fbf"><div class="ttname"><a href="dx11mathutil_8h.html#a0f73783443395c899697cb8e61c55fbf">DX11QtNormalize</a></div><div class="ttdeci">void DX11QtNormalize(XMFLOAT4 &amp;inqt, XMFLOAT4 &amp;outqt)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:188</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a66da36ac1f955c55ea96f212062bac0d"><div class="ttname"><a href="dx11mathutil_8h.html#a66da36ac1f955c55ea96f212062bac0d">DX11QtIdentity</a></div><div class="ttdeci">void DX11QtIdentity(XMFLOAT4 &amp;qt)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:287</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a3b849c948ba15bd1f9466b74cafc22bc"><div class="ttname"><a href="dx11mathutil_8h.html#a3b849c948ba15bd1f9466b74cafc22bc">DX11Vec4Length</a></div><div class="ttdeci">void DX11Vec4Length(XMFLOAT4 &amp;vec, float &amp;length)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:203</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a819aa49fbd3f9436864c4115d03d4675"><div class="ttname"><a href="dx11mathutil_8h.html#a819aa49fbd3f9436864c4115d03d4675">GetPlanefromProjectionmatrixWithNormalize</a></div><div class="ttdeci">void GetPlanefromProjectionmatrixWithNormalize(PLANE *p, const XMFLOAT4X4 &amp;matrix)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:503</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a93457004707f7e9231917fe90f34fb8e"><div class="ttname"><a href="dx11mathutil_8h.html#a93457004707f7e9231917fe90f34fb8e">DX11MtxRotationAxis</a></div><div class="ttdeci">void DX11MtxRotationAxis(const XMFLOAT3 &amp;axis, float angle, XMFLOAT4X4 &amp;outmtx)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:300</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_af874991286087dd77ca321df3e64e892"><div class="ttname"><a href="dx11mathutil_8h.html#af874991286087dd77ca321df3e64e892">DX11MatrixIdentity</a></div><div class="ttdeci">void DX11MatrixIdentity(DirectX::XMFLOAT4X4 &amp;mat)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:642</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_acb93b86c90eeabffe2684432a4a3332e"><div class="ttname"><a href="dx11mathutil_8h.html#acb93b86c90eeabffe2684432a4a3332e">DX11MtxRotationY</a></div><div class="ttdeci">void DX11MtxRotationY(float angle, XMFLOAT4X4 &amp;outmtx)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:573</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_ae1393bd30f121145e42450947ef44b73"><div class="ttname"><a href="dx11mathutil_8h.html#ae1393bd30f121145e42450947ef44b73">DX11MtxMultiply</a></div><div class="ttdeci">void DX11MtxMultiply(XMFLOAT4X4 &amp;ansmtx, const XMFLOAT4X4 &amp;p1mtx, const XMFLOAT4X4 &amp;p2mtx)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:321</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_aaa49387ed05f17665b316a4f1f747d89"><div class="ttname"><a href="dx11mathutil_8h.html#aaa49387ed05f17665b316a4f1f747d89">DX11MtxIdentity</a></div><div class="ttdeci">void DX11MtxIdentity(DirectX::XMFLOAT4X4 &amp;mat)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:98</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_ace03a934fe3f356b7724b29344b1084c"><div class="ttname"><a href="dx11mathutil_8h.html#ace03a934fe3f356b7724b29344b1084c">DX11p2pLength</a></div><div class="ttdeci">void DX11p2pLength(const XMFLOAT3 &amp;p1, const XMFLOAT3 &amp;p2, float &amp;length)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:244</div></div>
+<div class="ttc" id="astruct_p_l_a_n_e_html"><div class="ttname"><a href="struct_p_l_a_n_e.html">PLANE</a></div><div class="ttdef"><b>Definition:</b> dx11mathutil.h:6</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a51ae073b2b35c01cd5fc5ed051637cd0"><div class="ttname"><a href="dx11mathutil_8h.html#a51ae073b2b35c01cd5fc5ed051637cd0">DX11QtMul</a></div><div class="ttdeci">void DX11QtMul(XMFLOAT4 &amp;outqt, const XMFLOAT4 &amp;qt1, const XMFLOAT4 &amp;qt2)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:140</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a7b779f3659ce77513f634ad5f66a4e35"><div class="ttname"><a href="dx11mathutil_8h.html#a7b779f3659ce77513f634ad5f66a4e35">DX11Vec3Length</a></div><div class="ttdeci">void DX11Vec3Length(XMFLOAT3 &amp;vec, float &amp;length)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:221</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a2befe8578c8c039227788fdb2aace1b1"><div class="ttname"><a href="dx11mathutil_8h.html#a2befe8578c8c039227788fdb2aace1b1">DX11GetQtfromMatrix</a></div><div class="ttdeci">void DX11GetQtfromMatrix(const XMFLOAT4X4 &amp;mat, XMFLOAT4 &amp;qt)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:110</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_ac0b4d11f10f8042ae045c28518b7fb2d"><div class="ttname"><a href="dx11mathutil_8h.html#ac0b4d11f10f8042ae045c28518b7fb2d">DX11Vec3MulMatrix</a></div><div class="ttdeci">void DX11Vec3MulMatrix(DirectX::XMFLOAT3 &amp;outvec, const DirectX::XMFLOAT3 &amp;invec, const DirectX::XMFLOAT4X4 &amp;mat)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:27</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a53ac29f45e93e976aba2dc61e3958190"><div class="ttname"><a href="dx11mathutil_8h.html#a53ac29f45e93e976aba2dc61e3958190">DX11MtxRotationZ</a></div><div class="ttdeci">void DX11MtxRotationZ(float angle, XMFLOAT4X4 &amp;outmtx)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:589</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a1e55259933280cbb99e2238f3faadc52"><div class="ttname"><a href="dx11mathutil_8h.html#a1e55259933280cbb99e2238f3faadc52">DX11MtxRotationX</a></div><div class="ttdeci">void DX11MtxRotationX(float angle, XMFLOAT4X4 &amp;outmtx)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:557</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a0b3084a41fea36cb87e2c4f91407b017"><div class="ttname"><a href="dx11mathutil_8h.html#a0b3084a41fea36cb87e2c4f91407b017">haltonseq</a></div><div class="ttdeci">float haltonseq(unsigned int no, unsigned int base)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:624</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a124657a6944806be85a8fcbe0bc6232f"><div class="ttname"><a href="dx11mathutil_8h.html#a124657a6944806be85a8fcbe0bc6232f">GetPlanefromProjectionmatrix</a></div><div class="ttdeci">void GetPlanefromProjectionmatrix(PLANE *p, const XMFLOAT4X4 &amp;matrix)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:458</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a5d5ad772d733ee559697bdbfdcd99ddb"><div class="ttname"><a href="dx11mathutil_8h.html#a5d5ad772d733ee559697bdbfdcd99ddb">DX11MtxTranslation</a></div><div class="ttdeci">void DX11MtxTranslation(const XMFLOAT3 &amp;trans, XMFLOAT4X4 &amp;matrix)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:259</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_adbf5e7e14db8c1e366d6cbb0e9c573e8"><div class="ttname"><a href="dx11mathutil_8h.html#adbf5e7e14db8c1e366d6cbb0e9c573e8">DX11Vec3Normalize</a></div><div class="ttdeci">void DX11Vec3Normalize(DirectX::XMFLOAT3 &amp;outvec, DirectX::XMFLOAT3 &amp;invec)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:83</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a17cae4b76acb47ec9c26fa3ba5c43780"><div class="ttname"><a href="dx11mathutil_8h.html#a17cae4b76acb47ec9c26fa3ba5c43780">IsInFrustum</a></div><div class="ttdeci">bool IsInFrustum(const XMFLOAT3 &amp;pos, const XMFLOAT4X4 &amp;matrix)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:356</div></div>
+<div class="ttc" id="astruct_p_l_a_n_e_html_ac167021d7057ac15ebb183ec02aee1b0"><div class="ttname"><a href="struct_p_l_a_n_e.html#ac167021d7057ac15ebb183ec02aee1b0">PLANE::d</a></div><div class="ttdeci">float d</div><div class="ttdef"><b>Definition:</b> dx11mathutil.h:7</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a549537740d0e6d7cc13d35a68faccd11"><div class="ttname"><a href="dx11mathutil_8h.html#a549537740d0e6d7cc13d35a68faccd11">DX11MtxFromQt</a></div><div class="ttdeci">void DX11MtxFromQt(XMFLOAT4X4 &amp;outmtx, const XMFLOAT4 &amp;qt)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:156</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a8414636bd9df7fb4ce840877f0427135"><div class="ttname"><a href="dx11mathutil_8h.html#a8414636bd9df7fb4ce840877f0427135">DX11MtxTranspose</a></div><div class="ttdeci">void DX11MtxTranspose(XMFLOAT4X4 &amp;outmtx, const XMFLOAT4X4 &amp;inmtx)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:171</div></div>
+<div class="ttc" id="adx11mathutil_8h_html_a998cb230090838a065b3b6fbeeba23c9"><div class="ttname"><a href="dx11mathutil_8h.html#a998cb230090838a065b3b6fbeeba23c9">DX11Vec3Cross</a></div><div class="ttdeci">void DX11Vec3Cross(DirectX::XMFLOAT3 &amp;outvec, DirectX::XMFLOAT3 &amp;invec1, DirectX::XMFLOAT3 &amp;invec2)</div><div class="ttdef"><b>Definition:</b> dx11mathutil.cpp:44</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+ÊßãÁØâ:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

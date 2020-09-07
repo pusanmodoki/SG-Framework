@@ -1,0 +1,66 @@
+\hypertarget{_sebt_file_r_w_8hpp}{}\doxysection{S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/04\+\_\+\+Asset/\+File\+R\+W/\+Sebt\+File\+RW.hpp ファイル}
+\label{_sebt_file_r_w_8hpp}\index{SGFramework-\/Master\_ToExe/04\_Asset/FileRW/SebtFileRW.hpp@{SGFramework-\/Master\_ToExe/04\_Asset/FileRW/SebtFileRW.hpp}}
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$codecvt$>$}\newline
+{\ttfamily \#include $<$locale$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}../../02\+\_\+\+Custom\+Variable/\+Custom\+Variable.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Encryption\+Key.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+File\+Stream/\+File\+Stream.\+hpp\char`\"{}}\newline
+\doxysubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework}{S\+G\+Framework}}
+\begin{DoxyCompactList}\small\item\em S\+G-\/\+Framework namespace \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_file}{S\+G\+Framework\+::\+File}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+RW}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+sgstring \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_ad9e87148b04aff2d63bbd767d25dd177}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Read}} (const sgstring \&path)
+\item 
+sgstring \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_a58dc97c38e46242b68920243e643fa7e}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Read\+Locked}} (const sgstring \&path, bool is\+Check\+Extension=true)
+\item 
+sgstring \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_a2b13e80d74f96734465a0744dae5d726}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Read\+Not\+Locked}} (const sgstring \&path, bool is\+Check\+Extension=true)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_a839984502227a879605a79c7c70efc5a}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Read}} (const sgstring \&path, sgstring \&write)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_abc8a895a6df853ee8ad3b2758dfecb64}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Read\+Locked}} (const sgstring \&path, sgstring \&write, bool is\+Check\+Extension=true)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_adb2d31f8b6782ca29050b91206ab9cda}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Read\+Not\+Locked}} (const sgstring \&path, sgstring \&write, bool is\+Check\+Extension=true)
+\item 
+std\+::vector$<$ byte $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_ae2982fa3475e899f5eb41751bee3423e}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Read\+Binary}} (const sgstring \&path)
+\item 
+std\+::vector$<$ byte $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_a3b78b47e36c2fc83179610eb06d6bf96}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Read\+Binary\+Locked}} (const sgstring \&path, bool is\+Check\+Extension=true)
+\item 
+std\+::vector$<$ byte $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_a6c6a913acfd54d47356a43b1e7130fad}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Read\+Binary\+Not\+Locked}} (const sgstring \&path, bool is\+Check\+Extension=true)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_a0a2b5fb5a0fb828967de9c58eee7eacd}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Read\+Binary}} (const sgstring \&path, std\+::vector$<$ byte $>$ \&write)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_a3ded3d9439e32d5b210baeaecc7f3601}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Read\+Binary\+Locked}} (const sgstring \&path, std\+::vector$<$ byte $>$ \&write, bool is\+Check\+Extension=true)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_aac39dbdd210db857a55e9fe9aadf6481}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Read\+Binary\+Not\+Locked}} (const sgstring \&path, std\+::vector$<$ byte $>$ \&write, bool is\+Check\+Extension=true)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_a98b88192e855f875d971cae73d37eb5e}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Write}} (const sgstring \&path, const sgstring \&write, bool is\+Add=false)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_a9792fe99a2104b292ad20a0b90cac60f}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Write\+Locked}} (const sgstring \&path, const sgstring \&write, bool is\+Add=false, bool is\+Check\+Extension=true)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_aafc3f78f3be5679cbb49636a20d6a453}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Write\+Not\+Locked}} (const sgstring \&path, const sgstring \&write, bool is\+Add=false, bool is\+Check\+Extension=true)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_ab065ec64be73ba0b23aab2a33b70fc67}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Write\+Binary}} (const sgstring \&path, const std\+::vector$<$ byte $>$ \&write, bool is\+Add=false)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_ac251518eb5d83ed0ee09ba366589db47}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Write\+Binary\+Locked}} (const sgstring \&path, const std\+::vector$<$ byte $>$ \&write, bool is\+Add=false, bool is\+Check\+Extension=true)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_a91f1f285e7499e8b0f7ca7a79a22ad53}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::\+Write\+Binary\+Not\+Locked}} (const sgstring \&path, const std\+::vector$<$ byte $>$ \&write, bool is\+Add=false, bool is\+Check\+Extension=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+constexpr wchar \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_a3c9d2cf5ad3348f6ea0d8fdceb5639c7}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::c\+Sebt\+Locked\+Extension}} \mbox{[}$\,$\mbox{]} = L\char`\"{}.sebtl\char`\"{}
+\item 
+constexpr wchar \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_a42be62d11457196e33e95d9589022209}{S\+G\+Framework\+::\+File\+::\+Sebt\+File\+R\+W\+::c\+Sebt\+Not\+Locked\+Extension}} \mbox{[}$\,$\mbox{]} = L\char`\"{}.sebt\char`\"{}
+\end{DoxyCompactItemize}

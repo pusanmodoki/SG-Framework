@@ -1,0 +1,698 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/998_DemoApplication/AcademySource/Shader.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_e0e4c557ebc218887fb43396bcf8db4f.html">998_DemoApplication</a></li><li class="navelem"><a class="el" href="dir_184bc37a952b722a29d3658ce9868392.html">AcademySource</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">Shader.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_shader_8h_source.html">Shader.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a957c5097d8616850cb70f67fe1635a71"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#a957c5097d8616850cb70f67fe1635a71">CompileShaderFromFile</a> (const char *szFileName, LPCSTR szEntryPoint, LPCSTR szShaderModel, ID3DBlob **ppBlobOut)</td></tr>
+<tr class="separator:a957c5097d8616850cb70f67fe1635a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dfbddd06ed9936bbaa62063c5cbeea7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#a4dfbddd06ed9936bbaa62063c5cbeea7">CreateVertexShader</a> (ID3D11Device *device, const char *szFileName, LPCSTR szEntryPoint, LPCSTR szShaderModel, D3D11_INPUT_ELEMENT_DESC *layout, unsigned int numElements, ID3D11VertexShader **ppVertexShader, ID3D11InputLayout **ppVertexLayout)</td></tr>
+<tr class="separator:a4dfbddd06ed9936bbaa62063c5cbeea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8ec19eab7e615ced445d3ccbbe86f05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#ae8ec19eab7e615ced445d3ccbbe86f05">CreatePixelShader</a> (ID3D11Device *device, const char *szFileName, LPCSTR szEntryPoint, LPCSTR szShaderModel, ID3D11PixelShader **ppPixelShader)</td></tr>
+<tr class="separator:ae8ec19eab7e615ced445d3ccbbe86f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab36f0bd1d17063c03f474733e0fea219"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#ab36f0bd1d17063c03f474733e0fea219">CreateConstantBuffer</a> (ID3D11Device *device, unsigned int bytesize, ID3D11Buffer **pConstantBuffer)</td></tr>
+<tr class="separator:ab36f0bd1d17063c03f474733e0fea219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34cf71f12f2b5c66f91a93b621488a8b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#a34cf71f12f2b5c66f91a93b621488a8b">CreateIndexBuffer</a> (ID3D11Device *device, unsigned int indexnum, void *indexdata, ID3D11Buffer **pIndexBuffer)</td></tr>
+<tr class="separator:a34cf71f12f2b5c66f91a93b621488a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace919015b525f2aaae86aee9f7d882d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#aace919015b525f2aaae86aee9f7d882d">CreateVertexBuffer</a> (ID3D11Device *device, unsigned int stride, unsigned int vertexnum, void *vertexdata, ID3D11Buffer **pVertexBuffer)</td></tr>
+<tr class="separator:aace919015b525f2aaae86aee9f7d882d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b082e67794f996ed8b41c83046e4d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#a95b082e67794f996ed8b41c83046e4d5">CreateVertexBufferWrite</a> (ID3D11Device *device, unsigned int stride, unsigned int vertexnum, void *vertexdata, ID3D11Buffer **pVertexBuffer)</td></tr>
+<tr class="separator:a95b082e67794f996ed8b41c83046e4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c6e06fbbf5443d2a0d43d375404c1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#a35c6e06fbbf5443d2a0d43d375404c1d">CreateVertexBufferUAV</a> (ID3D11Device *device, unsigned int stride, unsigned int vertexnum, void *vertexdata, ID3D11Buffer **pVertexBuffer)</td></tr>
+<tr class="separator:a35c6e06fbbf5443d2a0d43d375404c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ead3bd43ce7bb0cf7a86175f70c1e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#a72ead3bd43ce7bb0cf7a86175f70c1e0">CreateStructuredBuffer</a> (ID3D11Device *device, unsigned int stride, unsigned int num, void *data, ID3D11Buffer **pStructuredBuffer)</td></tr>
+<tr class="separator:a72ead3bd43ce7bb0cf7a86175f70c1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa96a49271aa4b3712f92613dfb4b5336"><td class="memItemLeft" align="right" valign="top">ID3D11Buffer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#aa96a49271aa4b3712f92613dfb4b5336">CreateAndCopyToBuffer</a> (ID3D11Device *device, ID3D11DeviceContext *devicecontext, ID3D11Buffer *pBuffer)</td></tr>
+<tr class="separator:aa96a49271aa4b3712f92613dfb4b5336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2e589eba237f625b906774e8eb199ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#af2e589eba237f625b906774e8eb199ff">CreateShaderResourceView</a> (ID3D11Device *device, ID3D11Buffer *pBuffer, ID3D11ShaderResourceView **ppSRV)</td></tr>
+<tr class="separator:af2e589eba237f625b906774e8eb199ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3da83001edc9b8ae56cc2d1d1252f2f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#a3da83001edc9b8ae56cc2d1d1252f2f6">CreateUnOrderAccessView</a> (ID3D11Device *device, ID3D11Buffer *pBuffer, ID3D11UnorderedAccessView **ppUAV)</td></tr>
+<tr class="separator:a3da83001edc9b8ae56cc2d1d1252f2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e53c3f6ebf8a568966eb3c8a1c1bae1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#a0e53c3f6ebf8a568966eb3c8a1c1bae1">CreatetSRVfromTGAFile</a> (const char *filename, ID3D11Device *device, ID3D11ShaderResourceView **srv)</td></tr>
+<tr class="separator:a0e53c3f6ebf8a568966eb3c8a1c1bae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bbaec2e8121ed49f0ccca0e4fd141ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#a6bbaec2e8121ed49f0ccca0e4fd141ab">CreatetSRVfromWICFile</a> (const char *filename, ID3D11Device *device, ID3D11DeviceContext *device11Context, ID3D11ShaderResourceView **srv)</td></tr>
+<tr class="separator:a6bbaec2e8121ed49f0ccca0e4fd141ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a957c5097d8616850cb70f67fe1635a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a957c5097d8616850cb70f67fe1635a71">&#9670;&nbsp;</a></span>CompileShaderFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HRESULT CompileShaderFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>szFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCSTR&#160;</td>
+          <td class="paramname"><em>szEntryPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCSTR&#160;</td>
+          <td class="paramname"><em>szShaderModel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3DBlob **&#160;</td>
+          <td class="paramname"><em>ppBlobOut</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa96a49271aa4b3712f92613dfb4b5336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa96a49271aa4b3712f92613dfb4b5336">&#9670;&nbsp;</a></span>CreateAndCopyToBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D11Buffer* CreateAndCopyToBuffer </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11DeviceContext *&#160;</td>
+          <td class="paramname"><em>devicecontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11Buffer *&#160;</td>
+          <td class="paramname"><em>pBuffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab36f0bd1d17063c03f474733e0fea219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab36f0bd1d17063c03f474733e0fea219">&#9670;&nbsp;</a></span>CreateConstantBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateConstantBuffer </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>bytesize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11Buffer **&#160;</td>
+          <td class="paramname"><em>pConstantBuffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34cf71f12f2b5c66f91a93b621488a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34cf71f12f2b5c66f91a93b621488a8b">&#9670;&nbsp;</a></span>CreateIndexBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateIndexBuffer </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>indexnum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>indexdata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11Buffer **&#160;</td>
+          <td class="paramname"><em>pIndexBuffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8ec19eab7e615ced445d3ccbbe86f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8ec19eab7e615ced445d3ccbbe86f05">&#9670;&nbsp;</a></span>CreatePixelShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreatePixelShader </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>szFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCSTR&#160;</td>
+          <td class="paramname"><em>szEntryPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCSTR&#160;</td>
+          <td class="paramname"><em>szShaderModel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11PixelShader **&#160;</td>
+          <td class="paramname"><em>ppPixelShader</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2e589eba237f625b906774e8eb199ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2e589eba237f625b906774e8eb199ff">&#9670;&nbsp;</a></span>CreateShaderResourceView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateShaderResourceView </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11Buffer *&#160;</td>
+          <td class="paramname"><em>pBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11ShaderResourceView **&#160;</td>
+          <td class="paramname"><em>ppSRV</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72ead3bd43ce7bb0cf7a86175f70c1e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72ead3bd43ce7bb0cf7a86175f70c1e0">&#9670;&nbsp;</a></span>CreateStructuredBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateStructuredBuffer </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>stride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11Buffer **&#160;</td>
+          <td class="paramname"><em>pStructuredBuffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e53c3f6ebf8a568966eb3c8a1c1bae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e53c3f6ebf8a568966eb3c8a1c1bae1">&#9670;&nbsp;</a></span>CreatetSRVfromTGAFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreatetSRVfromTGAFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11ShaderResourceView **&#160;</td>
+          <td class="paramname"><em>srv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bbaec2e8121ed49f0ccca0e4fd141ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bbaec2e8121ed49f0ccca0e4fd141ab">&#9670;&nbsp;</a></span>CreatetSRVfromWICFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreatetSRVfromWICFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11DeviceContext *&#160;</td>
+          <td class="paramname"><em>device11Context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11ShaderResourceView **&#160;</td>
+          <td class="paramname"><em>srv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3da83001edc9b8ae56cc2d1d1252f2f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da83001edc9b8ae56cc2d1d1252f2f6">&#9670;&nbsp;</a></span>CreateUnOrderAccessView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateUnOrderAccessView </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11Buffer *&#160;</td>
+          <td class="paramname"><em>pBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11UnorderedAccessView **&#160;</td>
+          <td class="paramname"><em>ppUAV</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aace919015b525f2aaae86aee9f7d882d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace919015b525f2aaae86aee9f7d882d">&#9670;&nbsp;</a></span>CreateVertexBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateVertexBuffer </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>stride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>vertexnum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>vertexdata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11Buffer **&#160;</td>
+          <td class="paramname"><em>pVertexBuffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35c6e06fbbf5443d2a0d43d375404c1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35c6e06fbbf5443d2a0d43d375404c1d">&#9670;&nbsp;</a></span>CreateVertexBufferUAV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateVertexBufferUAV </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>stride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>vertexnum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>vertexdata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11Buffer **&#160;</td>
+          <td class="paramname"><em>pVertexBuffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95b082e67794f996ed8b41c83046e4d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b082e67794f996ed8b41c83046e4d5">&#9670;&nbsp;</a></span>CreateVertexBufferWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateVertexBufferWrite </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>stride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>vertexnum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>vertexdata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11Buffer **&#160;</td>
+          <td class="paramname"><em>pVertexBuffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4dfbddd06ed9936bbaa62063c5cbeea7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dfbddd06ed9936bbaa62063c5cbeea7">&#9670;&nbsp;</a></span>CreateVertexShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateVertexShader </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>szFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCSTR&#160;</td>
+          <td class="paramname"><em>szEntryPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCSTR&#160;</td>
+          <td class="paramname"><em>szShaderModel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3D11_INPUT_ELEMENT_DESC *&#160;</td>
+          <td class="paramname"><em>layout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>numElements</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11VertexShader **&#160;</td>
+          <td class="paramname"><em>ppVertexShader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11InputLayout **&#160;</td>
+          <td class="paramname"><em>ppVertexLayout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

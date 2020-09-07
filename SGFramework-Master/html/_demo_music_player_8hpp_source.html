@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/998_DemoApplication/DemoMusicPlayer.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_e0e4c557ebc218887fb43396bcf8db4f.html">998_DemoApplication</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DemoMusicPlayer.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_demo_music_player_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DEMO_MUSIC_PLAYER_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DEMO_MUSIC_PLAYER_HPP_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../SGFramwork.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//Demo Music Player</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_demo_music_player.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_demo_music_player.html">DemoMusicPlayer</a> : <span class="keyword">public</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html">Component</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//[EnabledCallbacks]</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">//return: 自身がCallされるCallback Flags, Component::CallbackFunctions参照</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_demo_music_player.html#a4d22e76707c81d2bc35c956f11cc37df">   14</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">virtual</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_demo_music_player.html#a4d22e76707c81d2bc35c956f11cc37df">EnableCallbacks</a>() { <span class="keywordflow">return</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions.html#a5a8f33e4b94facbe2b1cdafcdfbd6a88aafa3ac7fe3ce3e34b366017c4dce0612">CallbackFunctions::Awake</a> | <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions.html#a5a8f33e4b94facbe2b1cdafcdfbd6a88a329b760b89275b4a429a2477452e7335">CallbackFunctions::Update</a> | <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions.html#a5a8f33e4b94facbe2b1cdafcdfbd6a88a2de73ad9326b10c4892e7c0d08266665">CallbackFunctions::OnDestroy</a>;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//[Awake]</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">//インスタンス化した瞬間に呼ばれるCallback関数</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_demo_music_player.html#a13875a9008e9f3be840b801fd001beba">   19</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_demo_music_player.html#a13875a9008e9f3be840b801fd001beba">Awake</a>() </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        m_musicAssets[0] = Asset::InstantiateAsset&lt;Asset::AudioAssetMusic&gt;(L<span class="stringliteral">&quot;Assets/Audio/BGM01.wav&quot;</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        m_musicAssets[0]-&gt;<a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_music.html#a9e7fdc73d179b2d950916ca2d322b3e2">Open</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        m_musicAssets[1] = Asset::InstantiateAsset&lt;Asset::AudioAssetMusic&gt;(L<span class="stringliteral">&quot;Assets/Audio/BGM02.wav&quot;</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        m_musicAssets[1]-&gt;<a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_music.html#a9e7fdc73d179b2d950916ca2d322b3e2">Open</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        m_effectAsset = Asset::InstantiateAsset&lt;Asset::AudioAssetEffect&gt;(L<span class="stringliteral">&quot;Assets/Audio/DemoSE2D.wav&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        m_effectAsset-&gt;<a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#a8b5ec784c8fada1ea8574430cdde4b41">Open</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        m_effect3DAsset = Asset::InstantiateAsset&lt;Asset::AudioAssetEffect3D&gt;(L<span class="stringliteral">&quot;Assets/Audio/DemoSE3D.wav&quot;</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        m_effect3DAsset-&gt;<a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d.html#a6af72ba047a0421bc0d688f161bf4f26">Open</a>(Audio::submixMonoralRootLayer(), 100, 0.5f, 10.0f);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_demo_music_player.html#a42612c6ca8d1598348e0e80782f20a86">   31</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_demo_music_player.html#a42612c6ca8d1598348e0e80782f20a86">OnDestroy</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">int</span> a = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        a = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">//[Update]</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//毎フレームUpdateブロックでCallbackされる関数</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_demo_music_player.html#a0e024b13b0f713e2f022f68273ad7963">   40</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_demo_music_player.html#a0e024b13b0f713e2f022f68273ad7963">Update</a>()</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">//MKey + NumKeyで命令実行</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">bool</span> isPushMKey = Input::Keybord::GetKey(KeyCode::M);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">//Play Music</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span> (isPushMKey &amp;&amp; Input::Keybord::GetKeyDown(KeyCode::Num1))</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="comment">//PlayするMusicを切り替え</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            m_playMusicAsset = m_musicAssets[<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(m_isPlayIndex)];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            m_isPlayIndex = !m_isPlayIndex;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="comment">//Play &amp; Change volume smoothly(0 -&gt; 1)</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            m_playMusicAsset-&gt;<a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_music.html#abc7d736ea4d5fa8d0c0fa540650003fb">Play</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            m_playMusicAsset-&gt;<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a9325e35316c687e77dfa2362462040ae">setVolume</a>(0.0f);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            m_playMusicAsset-&gt;<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a5afb71dbf96dab226fcb8c1824051311">ChangeVolumeSmoothly</a>(1.0f, 1.0f);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="comment">//Log</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            GUI::getLogStream() &lt;&lt; L<span class="stringliteral">&quot;Play Music&quot;</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">//Change Music</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((!m_isChangeMusic &amp; isPushMKey) &amp;&amp; Input::Keybord::GetKeyDown(KeyCode::Num2))</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="comment">//Set Flag &amp; Change volume smoothly(1 -&gt; 0)</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            m_playMusicAsset-&gt;<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a5afb71dbf96dab226fcb8c1824051311">ChangeVolumeSmoothly</a>(0.0f, 1.0f);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            m_isChangeMusic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">//Log</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            GUI::getLogStream() &lt;&lt; L<span class="stringliteral">&quot;Change Music&quot;</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">//Stop Music</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((!m_isStopMusic &amp; isPushMKey) &amp;&amp; Input::Keybord::GetKeyDown(KeyCode::Num3))</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="comment">//Set Flag &amp; Change volume smoothly(1 -&gt; 0)</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            m_playMusicAsset-&gt;<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a5afb71dbf96dab226fcb8c1824051311">ChangeVolumeSmoothly</a>(0.0f, 1.0f, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            m_isStopMusic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="comment">//Log</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            GUI::getLogStream() &lt;&lt; L<span class="stringliteral">&quot;Stop Music&quot;</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">//Play SE</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isPushMKey &amp;&amp; Input::Keybord::GetKeyDown(KeyCode::Num4))</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="comment">//GetState</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            m_effectAsset-&gt;<a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#af3fb4dee8a85eb0e045657656f1ce149">Play</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">//Log</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            GUI::getLogStream() &lt;&lt; L<span class="stringliteral">&quot;Play SE&quot;</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">//Play SE</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isPushMKey &amp;&amp; Input::Keybord::GetKeyDown(KeyCode::Num5))</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordtype">float</span> x = (<a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#abce32e6c8df5d93d301836b68769507d">MathAF::PingPong</a>(Time::time(), 40.0f) - 20.0f) * 10.0f;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="comment">//GetState</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            m_effect3DAsset-&gt;<a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d.html#aa82361b8ee8dec9df2cc030aaa774b60">Play</a>(<a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#af06c5b6877dc9b6ac774c2d21249e454">Const::Vector3::right</a> * x, <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#af06c5b6877dc9b6ac774c2d21249e454">Const::Vector3::right</a> * 2.0f * Time::worldDeltaTime(),</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <a class="code" href="namespace_s_g_framework_1_1_const_1_1_quaternion.html#a05084bdcdd15ab3dd19e4be6f96952ec">Const::Quaternion::identity</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="comment">//Log</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            GUI::getLogStream() &lt;&lt; L<span class="stringliteral">&quot;Play 3D SE: &quot;</span> &lt;&lt; (<a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#af06c5b6877dc9b6ac774c2d21249e454">Const::Vector3::right</a> * x).x;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="comment">//Stop</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span> (m_isStopMusic &amp;&amp; m_playMusicAsset-&gt;<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a7f2b677c0d771b239b74e93aaf080c50">getVolume</a>() == 0.0f)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="comment">//m_playMusicAsset-&gt;Stop();</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            m_isStopMusic = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">//Change</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">if</span> (m_isChangeMusic &amp;&amp; m_playMusicAsset-&gt;<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a7f2b677c0d771b239b74e93aaf080c50">getVolume</a>() == 0.0f)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            m_playMusicAsset-&gt;<a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_music.html#ab3b58990f459b7d2aab714c916cb0d38">Stop</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="comment">//PlayするMusicを切り替え</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            m_playMusicAsset = m_musicAssets[<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(m_isPlayIndex)];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            m_isPlayIndex = !m_isPlayIndex;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="comment">//Play &amp; Change volume smoothly(0 -&gt; 1)</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            m_playMusicAsset-&gt;<a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_music.html#abc7d736ea4d5fa8d0c0fa540650003fb">Play</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            m_playMusicAsset-&gt;<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a9325e35316c687e77dfa2362462040ae">setVolume</a>(0.0f);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            m_playMusicAsset-&gt;<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a5afb71dbf96dab226fcb8c1824051311">ChangeVolumeSmoothly</a>(1.0f, 1.0f);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            m_isChangeMusic = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Asset::AudioAssetMusic&gt;</a> m_playMusicAsset;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Asset::AudioAssetMusic&gt;</a> m_musicAssets[2];</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Asset::AudioAssetEffect&gt;</a> m_effectAsset;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Asset::AudioAssetEffect3D&gt;</a> m_effect3DAsset;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">bool</span> m_isStopMusic = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">bool</span> m_isChangeMusic = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">bool</span> m_isPlayIndex = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif //!DEMO_MUSIC_PLAYER_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect_html_af3fb4dee8a85eb0e045657656f1ce149"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#af3fb4dee8a85eb0e045657656f1ce149">SGFramework::Asset::AudioAssetEffect::Play</a></div><div class="ttdeci">void Play(uint loopCount=0)</div><div class="ttdef"><b>Definition:</b> AudioAssetEffect.hpp:67</div></div>
+<div class="ttc" id="aclass_demo_music_player_html_a42612c6ca8d1598348e0e80782f20a86"><div class="ttname"><a href="class_demo_music_player.html#a42612c6ca8d1598348e0e80782f20a86">DemoMusicPlayer::OnDestroy</a></div><div class="ttdeci">virtual void OnDestroy()</div><div class="ttdef"><b>Definition:</b> DemoMusicPlayer.hpp:31</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_html_a5a8f33e4b94facbe2b1cdafcdfbd6a88a2de73ad9326b10c4892e7c0d08266665"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions.html#a5a8f33e4b94facbe2b1cdafcdfbd6a88a2de73ad9326b10c4892e7c0d08266665">SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions::OnDestroy</a></div><div class="ttdeci">@ OnDestroy</div><div class="ttdef"><b>Definition:</b> TransformX11.hpp:1261</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_quaternion_html_a05084bdcdd15ab3dd19e4be6f96952ec"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_quaternion.html#a05084bdcdd15ab3dd19e4be6f96952ec">SGFramework::Const::Quaternion::identity</a></div><div class="ttdeci">constexpr SGFramework::Quaternion identity</div><div class="ttdef"><b>Definition:</b> Const.hpp:21</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect_html_a8b5ec784c8fada1ea8574430cdde4b41"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#a8b5ec784c8fada1ea8574430cdde4b41">SGFramework::Asset::AudioAssetEffect::Open</a></div><div class="ttdeci">void Open(WeakPointer&lt; Audio::SubmixLayer &gt; submixLayer=Audio::submixRootLayer(), uint amountOfSource=1, float playbackInterval=0.0f, float setPlayBeginSeconds=cDefault, float setLoopBeginSeconds=cDefault, float setPlayEndSeconds=cDefault)</div><div class="ttdef"><b>Definition:</b> AudioAssetEffect.cpp:22</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_audio_asset_html_a7f2b677c0d771b239b74e93aaf080c50"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a7f2b677c0d771b239b74e93aaf080c50">SGFramework::BaseClass::BaseAudioAsset::getVolume</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY float getVolume()</div><div class="ttdef"><b>Definition:</b> AudioAsset.hpp:119</div></div>
+<div class="ttc" id="aclass_demo_music_player_html_a0e024b13b0f713e2f022f68273ad7963"><div class="ttname"><a href="class_demo_music_player.html#a0e024b13b0f713e2f022f68273ad7963">DemoMusicPlayer::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdef"><b>Definition:</b> DemoMusicPlayer.hpp:40</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_music_html_abc7d736ea4d5fa8d0c0fa540650003fb"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_music.html#abc7d736ea4d5fa8d0c0fa540650003fb">SGFramework::Asset::AudioAssetMusic::Play</a></div><div class="ttdeci">void Play(bool isLoop=true)</div><div class="ttdef"><b>Definition:</b> AudioAssetMusic.hpp:76</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_music_html_a9e7fdc73d179b2d950916ca2d322b3e2"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_music.html#a9e7fdc73d179b2d950916ca2d322b3e2">SGFramework::Asset::AudioAssetMusic::Open</a></div><div class="ttdeci">void Open(WeakPointer&lt; Audio::SubmixLayer &gt; submixLayer=Audio::submixRootLayer(), float setStreamingPlaybackInterval=0.2f, float setPlayBeginSeconds=cDefault, float setLoopBeginSeconds=cDefault, float setPlayEndSeconds=cDefault)</div><div class="ttdef"><b>Definition:</b> AudioAssetMusic.cpp:24</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_html_a5a8f33e4b94facbe2b1cdafcdfbd6a88aafa3ac7fe3ce3e34b366017c4dce0612"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions.html#a5a8f33e4b94facbe2b1cdafcdfbd6a88aafa3ac7fe3ce3e34b366017c4dce0612">SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions::Awake</a></div><div class="ttdeci">@ Awake</div><div class="ttdef"><b>Definition:</b> TransformX11.hpp:1243</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html">SGFramework::SharedPointer&lt; Asset::AudioAssetMusic &gt;</a></div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_html_a6af72ba047a0421bc0d688f161bf4f26"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d.html#a6af72ba047a0421bc0d688f161bf4f26">SGFramework::Asset::AudioAssetEffect3D::Open</a></div><div class="ttdeci">void Open(WeakPointer&lt; Audio::SubmixLayer &gt; submixLayer=Audio::submixMonoralRootLayer(), uint amountOfSource=1, float playbackInterval=0.0f, float innerRadius=0.0f, float innerRadiusAngle=0.0f, float curveDistanceScaler=50.0f, float dopplerScaler=50.0f, float setPlayBeginSeconds=cDefault, float setLoopBeginSeconds=cDefault, float setPlayEndSeconds=cDefault)</div><div class="ttdef"><b>Definition:</b> AudioAssetEffect3D.cpp:26</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_html_af06c5b6877dc9b6ac774c2d21249e454"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2.html#af06c5b6877dc9b6ac774c2d21249e454">SGFramework::Const::Vector2::right</a></div><div class="ttdeci">constexpr SGFramework::Vector2 right(1.0f, 0.0f)</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_audio_asset_html_a5afb71dbf96dab226fcb8c1824051311"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a5afb71dbf96dab226fcb8c1824051311">SGFramework::BaseClass::BaseAudioAsset::ChangeVolumeSmoothly</a></div><div class="ttdeci">void ChangeVolumeSmoothly(float target, float seconds, bool isStop=false)</div><div class="ttdef"><b>Definition:</b> AudioAsset.hpp:88</div></div>
+<div class="ttc" id="aclass_demo_music_player_html"><div class="ttname"><a href="class_demo_music_player.html">DemoMusicPlayer</a></div><div class="ttdef"><b>Definition:</b> DemoMusicPlayer.hpp:8</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdoc">uint = unsigned int</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:157</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_html_aa82361b8ee8dec9df2cc030aaa774b60"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d.html#aa82361b8ee8dec9df2cc030aaa774b60">SGFramework::Asset::AudioAssetEffect3D::Play</a></div><div class="ttdeci">void Play(const Vector3 &amp;position, const Vector3 &amp;velocityPerSec, const Quaternion &amp;rotation, uint loopCount=0)</div><div class="ttdef"><b>Definition:</b> AudioAssetEffect3D.hpp:77</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_audio_asset_html_a9325e35316c687e77dfa2362462040ae"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a9325e35316c687e77dfa2362462040ae">SGFramework::BaseClass::BaseAudioAsset::setVolume</a></div><div class="ttdeci">virtual SGF_FUNCTION_PROPERTY void setVolume(float magnification)</div><div class="ttdef"><b>Definition:</b> AudioAsset.hpp:122</div></div>
+<div class="ttc" id="aclass_demo_music_player_html_a4d22e76707c81d2bc35c956f11cc37df"><div class="ttname"><a href="class_demo_music_player.html#a4d22e76707c81d2bc35c956f11cc37df">DemoMusicPlayer::EnableCallbacks</a></div><div class="ttdeci">virtual uint EnableCallbacks()</div><div class="ttdef"><b>Definition:</b> DemoMusicPlayer.hpp:14</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_music_html_ab3b58990f459b7d2aab714c916cb0d38"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_music.html#ab3b58990f459b7d2aab714c916cb0d38">SGFramework::Asset::AudioAssetMusic::Stop</a></div><div class="ttdeci">void Stop() override</div><div class="ttdef"><b>Definition:</b> AudioAssetMusic.hpp:90</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_abce32e6c8df5d93d301836b68769507d"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#abce32e6c8df5d93d301836b68769507d">SGFramework::MathAF::PingPong</a></div><div class="ttdeci">constexpr float PingPong(float t, float length) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFFloatEdit.hpp:67</div></div>
+<div class="ttc" id="aclass_demo_music_player_html_a13875a9008e9f3be840b801fd001beba"><div class="ttname"><a href="class_demo_music_player.html#a13875a9008e9f3be840b801fd001beba">DemoMusicPlayer::Awake</a></div><div class="ttdeci">virtual void Awake()</div><div class="ttdef"><b>Definition:</b> DemoMusicPlayer.hpp:19</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html">SGFramework::Administrator::GraphicsDetail::ComponentX11</a></div><div class="ttdef"><b>Definition:</b> TransformX11.hpp:1222</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_html_a5a8f33e4b94facbe2b1cdafcdfbd6a88a329b760b89275b4a429a2477452e7335"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions.html#a5a8f33e4b94facbe2b1cdafcdfbd6a88a329b760b89275b4a429a2477452e7335">SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions::Update</a></div><div class="ttdeci">@ Update</div><div class="ttdef"><b>Definition:</b> TransformX11.hpp:1249</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

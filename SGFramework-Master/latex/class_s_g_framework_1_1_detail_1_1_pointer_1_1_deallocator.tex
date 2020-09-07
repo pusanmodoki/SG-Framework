@@ -1,0 +1,47 @@
+\hypertarget{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator}{}\doxysection{S\+G\+Framework\+::Detail\+::Pointer\+::Deallocator$<$ Pointer\+Type, Destroy\+Type, Is\+Array $>$ クラステンプレート}
+\label{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator}\index{SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$@{SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$}}
+
+
+{\ttfamily \#include $<$Base\+Pointer.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator_aac9963f0927c615f9b92d9357510b6cd}{Deallocator}} ()=default
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator_a6091459b1659ba7203a47e90d4fb23fe}{Deallocator}} (const \mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator}{Deallocator}} \&copy)=delete
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator_ae16add351a888722bfe31b168889c357}{Destoroy\+Pointer}} (void $\ast$pointer) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator_aac9963f0927c615f9b92d9357510b6cd}\label{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator_aac9963f0927c615f9b92d9357510b6cd}} 
+\index{SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$@{SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$}!Deallocator@{Deallocator}}
+\index{Deallocator@{Deallocator}!SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$@{SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$}}
+\doxysubsubsection{\texorpdfstring{Deallocator()}{Deallocator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type , class Destroy\+Type , class Is\+Array $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Deallocator}}$<$ Pointer\+Type, Destroy\+Type, Is\+Array $>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator}{Deallocator}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator_a6091459b1659ba7203a47e90d4fb23fe}\label{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator_a6091459b1659ba7203a47e90d4fb23fe}} 
+\index{SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$@{SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$}!Deallocator@{Deallocator}}
+\index{Deallocator@{Deallocator}!SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$@{SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$}}
+\doxysubsubsection{\texorpdfstring{Deallocator()}{Deallocator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type , class Destroy\+Type , class Is\+Array $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Deallocator}}$<$ Pointer\+Type, Destroy\+Type, Is\+Array $>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator}{Deallocator}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator}{Deallocator}}$<$ Pointer\+Type, Destroy\+Type, Is\+Array $>$ \&}]{copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator_ae16add351a888722bfe31b168889c357}\label{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator_ae16add351a888722bfe31b168889c357}} 
+\index{SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$@{SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$}!DestoroyPointer@{DestoroyPointer}}
+\index{DestoroyPointer@{DestoroyPointer}!SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$@{SGFramework::Detail::Pointer::Deallocator$<$ PointerType, DestroyType, IsArray $>$}}
+\doxysubsubsection{\texorpdfstring{DestoroyPointer()}{DestoroyPointer()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type , class Destroy\+Type , class Is\+Array $>$ \\
+void \mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Deallocator}}$<$ Pointer\+Type, Destroy\+Type, Is\+Array $>$\+::Destoroy\+Pointer (\begin{DoxyParamCaption}\item[{void $\ast$}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Pointer/\mbox{\hyperlink{_base_pointer_8hpp}{Base\+Pointer.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/998_DemoApplication/AcademySource/game.cpp ãƒ•ã‚¡ã‚¤ãƒ«</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- æ§‹ç¯‰: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'æ¤œç´¢');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','æ¤œç´¢');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_e0e4c557ebc218887fb43396bcf8db4f.html">998_DemoApplication</a></li><li class="navelem"><a class="el" href="dir_184bc37a952b722a29d3658ce9868392.html">AcademySource</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">é–¢æ•°</a> &#124;
+<a href="#var-members">å¤‰æ•°</a>  </div>
+  <div class="headertitle">
+<div class="title">game.cpp ãƒ•ã‚¡ã‚¤ãƒ«</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><br  />
+  
+<a href="#details">[è©³è§£]</a></p>
+<div class="textblock"><code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;Crtdbg.h&gt;</code><br />
+<code>#include &lt;DirectXMath.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_d_x11util_8h_source.html">DX11util.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_c_model_8h_source.html">CModel.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="game_8h_source.html">game.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_c_camera_8h_source.html">CCamera.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_c_direct_input_8h_source.html">CDirectInput.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_d_x11_settransform_8h_source.html">DX11Settransform.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dx11mathutil_8h_source.html">dx11mathutil.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="explosion_8h_source.html">explosion.h</a>&quot;</code><br />
+<code>#include &lt;random&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+é–¢æ•°</h2></td></tr>
+<tr class="memitem:a8411d7f81eb9554a1751e0387a334f40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a8411d7f81eb9554a1751e0387a334f40">GameInit</a> (HINSTANCE hinst, HWND hwnd, int width, int height, bool fullscreen)</td></tr>
+<tr class="separator:a8411d7f81eb9554a1751e0387a334f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b3cc8641a89992cd04baba644a7dc0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a6b3cc8641a89992cd04baba644a7dc0a">GameInput</a> ()</td></tr>
+<tr class="memdesc:a6b3cc8641a89992cd04baba644a7dc0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ƒQ[ƒ€“ü—ÍŒŸ’mˆ—  <a href="game_8cpp.html#a6b3cc8641a89992cd04baba644a7dc0a">[è©³è§£]</a><br /></td></tr>
+<tr class="separator:a6b3cc8641a89992cd04baba644a7dc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a145c27960d48ba0507d25cd31a04a6d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a145c27960d48ba0507d25cd31a04a6d2">GameUpdate</a> ()</td></tr>
+<tr class="memdesc:a145c27960d48ba0507d25cd31a04a6d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ƒQ[ƒ€XVˆ—  <a href="game_8cpp.html#a145c27960d48ba0507d25cd31a04a6d2">[è©³è§£]</a><br /></td></tr>
+<tr class="separator:a145c27960d48ba0507d25cd31a04a6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d2aa93fb54121c25e22f9178ca30ffc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a0d2aa93fb54121c25e22f9178ca30ffc">GameRender</a> ()</td></tr>
+<tr class="memdesc:a0d2aa93fb54121c25e22f9178ca30ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">ƒQ[ƒ€XVˆ—  <a href="game_8cpp.html#a0d2aa93fb54121c25e22f9178ca30ffc">[è©³è§£]</a><br /></td></tr>
+<tr class="separator:a0d2aa93fb54121c25e22f9178ca30ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99bcf1aa8115dbf329153a93c8f8ba99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a99bcf1aa8115dbf329153a93c8f8ba99">GameMain</a> ()</td></tr>
+<tr class="memdesc:a99bcf1aa8115dbf329153a93c8f8ba99"><td class="mdescLeft">&#160;</td><td class="mdescRight">ƒQ[ƒ€ƒ‹[ƒvˆ—  <a href="game_8cpp.html#a99bcf1aa8115dbf329153a93c8f8ba99">[è©³è§£]</a><br /></td></tr>
+<tr class="separator:a99bcf1aa8115dbf329153a93c8f8ba99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5191e26efa344e5c873830e436f18524"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a5191e26efa344e5c873830e436f18524">GameExit</a> ()</td></tr>
+<tr class="memdesc:a5191e26efa344e5c873830e436f18524"><td class="mdescLeft">&#160;</td><td class="mdescRight">ƒQ[ƒ€I—¹ˆ—  <a href="game_8cpp.html#a5191e26efa344e5c873830e436f18524">[è©³è§£]</a><br /></td></tr>
+<tr class="separator:a5191e26efa344e5c873830e436f18524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+å¤‰æ•°</h2></td></tr>
+<tr class="memitem:ab74f508f809eb6abf5fbacc43c3a7cb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_model.html">CModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#ab74f508f809eb6abf5fbacc43c3a7cb4">g_airplane</a></td></tr>
+<tr class="separator:ab74f508f809eb6abf5fbacc43c3a7cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96ae5a381360c67a9b91045924656a21"><td class="memItemLeft" align="right" valign="top">XMFLOAT4X4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a96ae5a381360c67a9b91045924656a21">g_matairplane</a></td></tr>
+<tr class="separator:a96ae5a381360c67a9b91045924656a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7917200e95f966b1796ccebe22385051"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_model.html">CModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a7917200e95f966b1796ccebe22385051">g_skydome</a></td></tr>
+<tr class="separator:a7917200e95f966b1796ccebe22385051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692ca56ca5a8f11bc4b72ef5182d7e39"><td class="memItemLeft" align="right" valign="top">XMFLOAT4X4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a692ca56ca5a8f11bc4b72ef5182d7e39">g_matskydome</a></td></tr>
+<tr class="separator:a692ca56ca5a8f11bc4b72ef5182d7e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a809026cbae6338ebcf9995fa71424673"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a809026cbae6338ebcf9995fa71424673">g_speed</a> = 10.0f</td></tr>
+<tr class="separator:a809026cbae6338ebcf9995fa71424673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f42223b140c9fdeaae17453a338ec3b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a7f42223b140c9fdeaae17453a338ec3b">g_rotSpeed</a> = 40.0f</td></tr>
+<tr class="separator:a7f42223b140c9fdeaae17453a338ec3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92ade5a25c32dffa7d85b6e40c8519dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8cpp.html#a92ade5a25c32dffa7d85b6e40c8519dc">g_explosionflag</a> = false</td></tr>
+<tr class="separator:a92ade5a25c32dffa7d85b6e40c8519dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">è©³è§£</h2>
+<div class="textblock"><p><br  />
+ </p>
+<dl class="section note"><dt>è¦šãˆæ›¸ã</dt><dd>ƒQ[ƒ€ˆ— </dd></dl>
+<dl class="section author"><dt>è‘—è€…</dt><dd><br  />
+ </dd></dl>
+</div><h2 class="groupheader">é–¢æ•°è©³è§£</h2>
+<a id="a5191e26efa344e5c873830e436f18524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5191e26efa344e5c873830e436f18524">&#9670;&nbsp;</a></span>GameExit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameExit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ƒQ[ƒ€I—¹ˆ— </p>
+<dl class="params"><dt>å¼•æ•°</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8411d7f81eb9554a1751e0387a334f40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8411d7f81eb9554a1751e0387a334f40">&#9670;&nbsp;</a></span>GameInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameInit </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hinst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fullscreen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b3cc8641a89992cd04baba644a7dc0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b3cc8641a89992cd04baba644a7dc0a">&#9670;&nbsp;</a></span>GameInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ƒQ[ƒ€“ü—ÍŒŸ’mˆ— </p>
+<dl class="params"><dt>å¼•æ•°</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a99bcf1aa8115dbf329153a93c8f8ba99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99bcf1aa8115dbf329153a93c8f8ba99">&#9670;&nbsp;</a></span>GameMain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameMain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ƒQ[ƒ€ƒ‹[ƒvˆ— </p>
+<dl class="params"><dt>å¼•æ•°</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0d2aa93fb54121c25e22f9178ca30ffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d2aa93fb54121c25e22f9178ca30ffc">&#9670;&nbsp;</a></span>GameRender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameRender </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ƒQ[ƒ€XVˆ— </p>
+<dl class="params"><dt>å¼•æ•°</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a145c27960d48ba0507d25cd31a04a6d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a145c27960d48ba0507d25cd31a04a6d2">&#9670;&nbsp;</a></span>GameUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ƒQ[ƒ€XVˆ— </p>
+<dl class="params"><dt>å¼•æ•°</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">å¤‰æ•°è©³è§£</h2>
+<a id="ab74f508f809eb6abf5fbacc43c3a7cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab74f508f809eb6abf5fbacc43c3a7cb4">&#9670;&nbsp;</a></span>g_airplane</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_model.html">CModel</a> g_airplane</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92ade5a25c32dffa7d85b6e40c8519dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92ade5a25c32dffa7d85b6e40c8519dc">&#9670;&nbsp;</a></span>g_explosionflag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool g_explosionflag = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96ae5a381360c67a9b91045924656a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ae5a381360c67a9b91045924656a21">&#9670;&nbsp;</a></span>g_matairplane</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XMFLOAT4X4 g_matairplane</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a692ca56ca5a8f11bc4b72ef5182d7e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692ca56ca5a8f11bc4b72ef5182d7e39">&#9670;&nbsp;</a></span>g_matskydome</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XMFLOAT4X4 g_matskydome</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f42223b140c9fdeaae17453a338ec3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f42223b140c9fdeaae17453a338ec3b">&#9670;&nbsp;</a></span>g_rotSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float g_rotSpeed = 40.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7917200e95f966b1796ccebe22385051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7917200e95f966b1796ccebe22385051">&#9670;&nbsp;</a></span>g_skydome</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_model.html">CModel</a> g_skydome</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a809026cbae6338ebcf9995fa71424673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a809026cbae6338ebcf9995fa71424673">&#9670;&nbsp;</a></span>g_speed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float g_speed = 10.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+æ§‹ç¯‰:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

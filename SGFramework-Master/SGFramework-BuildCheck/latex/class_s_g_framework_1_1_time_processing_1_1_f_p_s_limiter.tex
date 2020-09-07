@@ -1,0 +1,79 @@
+\hypertarget{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter}{}\doxysection{S\+G\+Framework\+::Time\+Processing\+::F\+P\+S\+Limiter クラス}
+\label{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter}\index{SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}}
+
+
+{\ttfamily \#include $<$Time\+Processing.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_aa86a9b011b5d4d070dbea3283111053a}{Start}} (double \mbox{\hyperlink{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_a0919f7d072ff8f8944cd3a92402752f0}{fps}})
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_ad92427b95c1bbdcc9cccc6f67234a8b6}{Change\+F\+PS}} (double \mbox{\hyperlink{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_a0919f7d072ff8f8944cd3a92402752f0}{fps}})
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_ad3d7b74f3574220ed937be9a12d853f9}{operator()}} ()
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_a8246254a368ef93cfa6300a80f8bfb92}{operator()}} (double now\+Time)
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ double $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_ac80dce03457cb328bae08ed82a5f0268}{start\+Time}} = m\+\_\+start\+Time
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ double $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_a0919f7d072ff8f8944cd3a92402752f0}{fps}} = m\+\_\+fps
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ double $>$ \mbox{\hyperlink{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_a4ca16c738056949c7e59c72a41d22220}{interval}} = m\+\_\+interval
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_ad92427b95c1bbdcc9cccc6f67234a8b6}\label{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_ad92427b95c1bbdcc9cccc6f67234a8b6}} 
+\index{SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}!ChangeFPS@{ChangeFPS}}
+\index{ChangeFPS@{ChangeFPS}!SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}}
+\doxysubsubsection{\texorpdfstring{ChangeFPS()}{ChangeFPS()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Time\+Processing\+::\+F\+P\+S\+Limiter\+::\+Change\+F\+PS (\begin{DoxyParamCaption}\item[{double}]{fps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_ad3d7b74f3574220ed937be9a12d853f9}\label{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_ad3d7b74f3574220ed937be9a12d853f9}} 
+\index{SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}!operator()@{operator()}}
+\index{operator()@{operator()}!SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Time\+Processing\+::\+F\+P\+S\+Limiter\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_a8246254a368ef93cfa6300a80f8bfb92}\label{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_a8246254a368ef93cfa6300a80f8bfb92}} 
+\index{SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}!operator()@{operator()}}
+\index{operator()@{operator()}!SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Time\+Processing\+::\+F\+P\+S\+Limiter\+::operator() (\begin{DoxyParamCaption}\item[{double}]{now\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_aa86a9b011b5d4d070dbea3283111053a}\label{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_aa86a9b011b5d4d070dbea3283111053a}} 
+\index{SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}!Start@{Start}}
+\index{Start@{Start}!SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Time\+Processing\+::\+F\+P\+S\+Limiter\+::\+Start (\begin{DoxyParamCaption}\item[{double}]{fps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_a0919f7d072ff8f8944cd3a92402752f0}\label{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_a0919f7d072ff8f8944cd3a92402752f0}} 
+\index{SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}!fps@{fps}}
+\index{fps@{fps}!SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}}
+\doxysubsubsection{\texorpdfstring{fps}{fps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$double$>$ S\+G\+Framework\+::\+Time\+Processing\+::\+F\+P\+S\+Limiter\+::fps = m\+\_\+fps}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_a4ca16c738056949c7e59c72a41d22220}\label{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_a4ca16c738056949c7e59c72a41d22220}} 
+\index{SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}!interval@{interval}}
+\index{interval@{interval}!SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}}
+\doxysubsubsection{\texorpdfstring{interval}{interval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$double$>$ S\+G\+Framework\+::\+Time\+Processing\+::\+F\+P\+S\+Limiter\+::interval = m\+\_\+interval}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_ac80dce03457cb328bae08ed82a5f0268}\label{class_s_g_framework_1_1_time_processing_1_1_f_p_s_limiter_ac80dce03457cb328bae08ed82a5f0268}} 
+\index{SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}!startTime@{startTime}}
+\index{startTime@{startTime}!SGFramework::TimeProcessing::FPSLimiter@{SGFramework::TimeProcessing::FPSLimiter}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$double$>$ S\+G\+Framework\+::\+Time\+Processing\+::\+F\+P\+S\+Limiter\+::start\+Time = m\+\_\+start\+Time}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Time/\mbox{\hyperlink{_time_processing_8hpp}{Time\+Processing.\+hpp}}\end{DoxyCompactItemize}

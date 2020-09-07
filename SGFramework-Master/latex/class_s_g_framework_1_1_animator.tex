@@ -1,0 +1,108 @@
+\hypertarget{class_s_g_framework_1_1_animator}{}\doxysection{S\+G\+Framework\+::Animator クラス}
+\label{class_s_g_framework_1_1_animator}\index{SGFramework::Animator@{SGFramework::Animator}}
+
+
+{\ttfamily \#include $<$Animator.\+hpp$>$}
+
+S\+G\+Framework\+::Animator の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_s_g_framework_1_1_animator}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_animator_a889583f99e4dee252211f2181a0ed560}{Enable\+Callbacks}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_animator_a28dbd3287238a5612e10a69572ddcd84}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_animator_adac6706f3b06f57622408296a24829df}{Update\+Matrix}} (ai\+Node $\ast$node, ai\+Matrix4x4 \&world\+Matrix)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_animator_af836171803839a061f330201571adde6}{Make\+Draw\+Command}} () override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_animator_a3577d3ce7bad2160a6a670b2c1547113}{Play\+Animation}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_animator_ae69cc244803a81c408c993ffe58d3e03}{Play\+Animation}} (\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} index)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_animator_a5162939e656616fdeec334d26f9d40f6}{Stop\+Animation}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_animator_aafe7d00cce7a457598a9acd622eeed87}{Add\+Animation}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}}, ai\+Animation $\ast$animation)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_animator_ac857f915a6d321836a3f516d351b683a}{Remove\+Animation}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_animator_aafe7d00cce7a457598a9acd622eeed87}\label{class_s_g_framework_1_1_animator_aafe7d00cce7a457598a9acd622eeed87}} 
+\index{SGFramework::Animator@{SGFramework::Animator}!AddAnimation@{AddAnimation}}
+\index{AddAnimation@{AddAnimation}!SGFramework::Animator@{SGFramework::Animator}}
+\doxysubsubsection{\texorpdfstring{AddAnimation()}{AddAnimation()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Animator\+::\+Add\+Animation (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name,  }\item[{ai\+Animation $\ast$}]{animation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_animator_a889583f99e4dee252211f2181a0ed560}\label{class_s_g_framework_1_1_animator_a889583f99e4dee252211f2181a0ed560}} 
+\index{SGFramework::Animator@{SGFramework::Animator}!EnableCallbacks@{EnableCallbacks}}
+\index{EnableCallbacks@{EnableCallbacks}!SGFramework::Animator@{SGFramework::Animator}}
+\doxysubsubsection{\texorpdfstring{EnableCallbacks()}{EnableCallbacks()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Animator\+::\+Enable\+Callbacks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a988d769ab40083ac08a03485703864a0}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_animator_af836171803839a061f330201571adde6}\label{class_s_g_framework_1_1_animator_af836171803839a061f330201571adde6}} 
+\index{SGFramework::Animator@{SGFramework::Animator}!MakeDrawCommand@{MakeDrawCommand}}
+\index{MakeDrawCommand@{MakeDrawCommand}!SGFramework::Animator@{SGFramework::Animator}}
+\doxysubsubsection{\texorpdfstring{MakeDrawCommand()}{MakeDrawCommand()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Animator\+::\+Make\+Draw\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a7f62fed4c57317e0ba41124da9f403b0}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_animator_a3577d3ce7bad2160a6a670b2c1547113}\label{class_s_g_framework_1_1_animator_a3577d3ce7bad2160a6a670b2c1547113}} 
+\index{SGFramework::Animator@{SGFramework::Animator}!PlayAnimation@{PlayAnimation}}
+\index{PlayAnimation@{PlayAnimation}!SGFramework::Animator@{SGFramework::Animator}}
+\doxysubsubsection{\texorpdfstring{PlayAnimation()}{PlayAnimation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Animator\+::\+Play\+Animation (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_animator_ae69cc244803a81c408c993ffe58d3e03}\label{class_s_g_framework_1_1_animator_ae69cc244803a81c408c993ffe58d3e03}} 
+\index{SGFramework::Animator@{SGFramework::Animator}!PlayAnimation@{PlayAnimation}}
+\index{PlayAnimation@{PlayAnimation}!SGFramework::Animator@{SGFramework::Animator}}
+\doxysubsubsection{\texorpdfstring{PlayAnimation()}{PlayAnimation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Animator\+::\+Play\+Animation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_animator_ac857f915a6d321836a3f516d351b683a}\label{class_s_g_framework_1_1_animator_ac857f915a6d321836a3f516d351b683a}} 
+\index{SGFramework::Animator@{SGFramework::Animator}!RemoveAnimation@{RemoveAnimation}}
+\index{RemoveAnimation@{RemoveAnimation}!SGFramework::Animator@{SGFramework::Animator}}
+\doxysubsubsection{\texorpdfstring{RemoveAnimation()}{RemoveAnimation()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Animator\+::\+Remove\+Animation (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_animator_a5162939e656616fdeec334d26f9d40f6}\label{class_s_g_framework_1_1_animator_a5162939e656616fdeec334d26f9d40f6}} 
+\index{SGFramework::Animator@{SGFramework::Animator}!StopAnimation@{StopAnimation}}
+\index{StopAnimation@{StopAnimation}!SGFramework::Animator@{SGFramework::Animator}}
+\doxysubsubsection{\texorpdfstring{StopAnimation()}{StopAnimation()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Animator\+::\+Stop\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_animator_a28dbd3287238a5612e10a69572ddcd84}\label{class_s_g_framework_1_1_animator_a28dbd3287238a5612e10a69572ddcd84}} 
+\index{SGFramework::Animator@{SGFramework::Animator}!Update@{Update}}
+\index{Update@{Update}!SGFramework::Animator@{SGFramework::Animator}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Animator\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_ac081f4141ab48919def37807b09963e9}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_animator_adac6706f3b06f57622408296a24829df}\label{class_s_g_framework_1_1_animator_adac6706f3b06f57622408296a24829df}} 
+\index{SGFramework::Animator@{SGFramework::Animator}!UpdateMatrix@{UpdateMatrix}}
+\index{UpdateMatrix@{UpdateMatrix}!SGFramework::Animator@{SGFramework::Animator}}
+\doxysubsubsection{\texorpdfstring{UpdateMatrix()}{UpdateMatrix()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Animator\+::\+Update\+Matrix (\begin{DoxyParamCaption}\item[{ai\+Node $\ast$}]{node,  }\item[{ai\+Matrix4x4 \&}]{world\+Matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/05\+\_\+\+Graphics/\+Animation/\mbox{\hyperlink{_animator_8hpp}{Animator.\+hpp}}\end{DoxyCompactItemize}

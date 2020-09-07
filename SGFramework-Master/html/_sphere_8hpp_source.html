@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/998_DemoApplication/Sphere.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_e0e4c557ebc218887fb43396bcf8db4f.html">998_DemoApplication</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Sphere.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_sphere_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SPHERE_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SPHERE_HPP_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../SGFramwork.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="class_demo_scene.html">DemoScene</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_sphere.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sphere.html">Sphere</a> : <span class="keyword">public</span> <a class="code" href="class_s_g_framework_1_1_game_object.html">GameObject</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_sphere.html#a6a6846a93d86c46d653825f9e176cdd4">   10</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_demo_scene.html">DemoScene</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">//[EnabledCallbacks]</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//return: 自身がCallされるCallback Flags, GameObject::CallbackFunctions参照</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_sphere.html#a0c369fd453fc98d5d277be148931cf8f">   15</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_sphere.html#a0c369fd453fc98d5d277be148931cf8f">EnableCallbacks</a>() { <span class="keywordflow">return</span> <a class="code" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6a14efbc1dd5af25cdd4cadcdaba173378">CallbackFunctions::Awake</a> | <a class="code" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6ab4ec64f9e9d0260b1ef22d1cc27d54f7">CallbackFunctions::Update</a> </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        | <a class="code" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6ae30e1e66600b0a30067b0cb34c10b86e">CallbackFunctions::MakeDrawCommand</a> | <a class="code" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6abc6ff2a8d2fc6b3e20bb6e67c98b2de4">CallbackFunctions::OnCollisionEnter</a>; }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">//[OnCollisionEnter]</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">//Colliderが当たった瞬間にCallbackされる関数</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//引数1: 接触オブジェクトの情報</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_sphere.html#a90429d01b6a6dfda59970b30fb6e0e3f">   22</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_sphere.html#a90429d01b6a6dfda59970b30fb6e0e3f">OnCollisionEnter</a>(<span class="keyword">const</span> <a class="code" href="struct_s_g_framework_1_1_contact_info.html">ContactInfo</a>&amp; contactInfo) </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">//transform-&gt;getWorldPosition();</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        m_effect-&gt;<a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d.html#aa82361b8ee8dec9df2cc030aaa774b60">Play</a>(<a class="code" href="class_s_g_framework_1_1_game_object.html#a86451d0d7407f3ee13e6c3dc293252c0">transform</a>-&gt;getWorldPosition(), -<a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#ac4a73c6fed43fa5f7be628222dd70d56">Const::Vector3::up</a> * Time::fixedDeltaTime, <a class="code" href="namespace_s_g_framework_1_1_const_1_1_quaternion.html#a05084bdcdd15ab3dd19e4be6f96952ec">Const::Quaternion::identity</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//[Awake]</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//インスタンス化した瞬間に呼ばれるCallback関数</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_sphere.html#a8c8f69779acf9bad29b82d1491f7830f">   30</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_sphere.html#a8c8f69779acf9bad29b82d1491f7830f">Awake</a>() </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        InitModel();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        AddComponent&lt;RigidBodyDynamic&gt;();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">auto</span> collider = AddComponent&lt;SphereCollider&gt;();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        collider-&gt;BuildCollider(1.0f);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//[Update]</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//毎フレームUpdateブロックでCallbackされる関数</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_sphere.html#adfde38c54d0b3d77ff027aff538df8e7">   41</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_sphere.html#adfde38c54d0b3d77ff027aff538df8e7">Update</a>()    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//  for (int i = 0; i &lt; 1000; ++i) {}</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//[MakeDrawCommand]</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//Update, Sync, LateUpdate ブロック後にCallbackされる,</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">//      DrawCommandを作成するための関数</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_sphere.html#acefbc93275e400da0a31be8190670126">   50</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_sphere.html#acefbc93275e400da0a31be8190670126">MakeDrawCommand</a>()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        Graphics::SendDrawFunction(MAKE_COMMAND(</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="class_s_g_framework_1_1_game_object.html#a86451d0d7407f3ee13e6c3dc293252c0">transform</a>-&gt;setDrawMatrix();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">// 頂点バッファをセットする</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> stride = <span class="keyword">sizeof</span>(<a class="code" href="struct_s_g_framework_1_1_vertex_1_1_polygon.html">Vertex::Polygon</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">unsigned</span>  offset = 0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        Graphics::context-&gt;IASetVertexBuffers(0, 1, &amp;m_vertexBuffer, &amp;stride, &amp;offset);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        Graphics::context-&gt;IASetIndexBuffer(m_indexBuffer, DXGI_FORMAT_R32_UINT, 0);            <span class="comment">// インデックスバッファをセット</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        Graphics::context-&gt;IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);       <span class="comment">// トポロジーをセット（旧プリミティブタイプ</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        Graphics::context-&gt;DrawIndexed(200 * 200 * 2 * 3,       <span class="comment">// 描画するインデックス数（面数×３）</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            0,                                  <span class="comment">// 最初のインデックスバッファの位置</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            0);                                 <span class="comment">// 頂点バッファの最初から使う</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        ), 4);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">struct </span>Face</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> indexes[3];</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    };</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> InitModel();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">static</span> Face* m_faces;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">static</span> <a class="code" href="struct_s_g_framework_1_1_vertex_1_1_polygon.html">Vertex::Polygon</a>* m_vertexes;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">static</span> ID3D11Buffer* m_vertexBuffer;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">static</span> ID3D11Buffer* m_indexBuffer;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Asset::AudioAssetEffect3D&gt;</a> m_effect;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif //!SPHERE_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_s_g_framework_1_1_game_object_1_1_callback_functions_html_a4e923c048cebbb72fb95b190b80924c6ab4ec64f9e9d0260b1ef22d1cc27d54f7"><div class="ttname"><a href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6ab4ec64f9e9d0260b1ef22d1cc27d54f7">SGFramework::GameObject::CallbackFunctions::Update</a></div><div class="ttdeci">@ Update</div><div class="ttdef"><b>Definition:</b> GameObject.hpp:38</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vertex_1_1_polygon_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vertex_1_1_polygon.html">SGFramework::Vertex::Polygon</a></div><div class="ttdef"><b>Definition:</b> Vertex.hpp:16</div></div>
+<div class="ttc" id="aclass_sphere_html_a0c369fd453fc98d5d277be148931cf8f"><div class="ttname"><a href="class_sphere.html#a0c369fd453fc98d5d277be148931cf8f">Sphere::EnableCallbacks</a></div><div class="ttdeci">uint EnableCallbacks()</div><div class="ttdef"><b>Definition:</b> Sphere.hpp:15</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_game_object_html_a86451d0d7407f3ee13e6c3dc293252c0"><div class="ttname"><a href="class_s_g_framework_1_1_game_object.html#a86451d0d7407f3ee13e6c3dc293252c0">SGFramework::GameObject::transform</a></div><div class="ttdeci">WeakPointer&lt; Transform &gt; transform</div><div class="ttdef"><b>Definition:</b> GameObject.hpp:527</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_quaternion_html_a05084bdcdd15ab3dd19e4be6f96952ec"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_quaternion.html#a05084bdcdd15ab3dd19e4be6f96952ec">SGFramework::Const::Quaternion::identity</a></div><div class="ttdeci">constexpr SGFramework::Quaternion identity</div><div class="ttdef"><b>Definition:</b> Const.hpp:21</div></div>
+<div class="ttc" id="aclass_sphere_html_acefbc93275e400da0a31be8190670126"><div class="ttname"><a href="class_sphere.html#acefbc93275e400da0a31be8190670126">Sphere::MakeDrawCommand</a></div><div class="ttdeci">void MakeDrawCommand()</div><div class="ttdef"><b>Definition:</b> Sphere.hpp:50</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_contact_info_html"><div class="ttname"><a href="struct_s_g_framework_1_1_contact_info.html">SGFramework::ContactInfo</a></div><div class="ttdef"><b>Definition:</b> ContactInfo.hpp:16</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_html_ac4a73c6fed43fa5f7be628222dd70d56"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2.html#ac4a73c6fed43fa5f7be628222dd70d56">SGFramework::Const::Vector2::up</a></div><div class="ttdeci">constexpr SGFramework::Vector2 up(0.0f, 1.0f)</div></div>
+<div class="ttc" id="aclass_demo_scene_html"><div class="ttname"><a href="class_demo_scene.html">DemoScene</a></div><div class="ttdef"><b>Definition:</b> DemoScene.hpp:12</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html">SGFramework::SharedPointer&lt; Asset::AudioAssetEffect3D &gt;</a></div></div>
+<div class="ttc" id="aclass_sphere_html_adfde38c54d0b3d77ff027aff538df8e7"><div class="ttname"><a href="class_sphere.html#adfde38c54d0b3d77ff027aff538df8e7">Sphere::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdef"><b>Definition:</b> Sphere.hpp:41</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdoc">uint = unsigned int</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:157</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_html_aa82361b8ee8dec9df2cc030aaa774b60"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d.html#aa82361b8ee8dec9df2cc030aaa774b60">SGFramework::Asset::AudioAssetEffect3D::Play</a></div><div class="ttdeci">void Play(const Vector3 &amp;position, const Vector3 &amp;velocityPerSec, const Quaternion &amp;rotation, uint loopCount=0)</div><div class="ttdef"><b>Definition:</b> AudioAssetEffect3D.hpp:77</div></div>
+<div class="ttc" id="aclass_sphere_html_a8c8f69779acf9bad29b82d1491f7830f"><div class="ttname"><a href="class_sphere.html#a8c8f69779acf9bad29b82d1491f7830f">Sphere::Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdef"><b>Definition:</b> Sphere.hpp:30</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_game_object_html"><div class="ttname"><a href="class_s_g_framework_1_1_game_object.html">SGFramework::GameObject</a></div><div class="ttdef"><b>Definition:</b> GameObject.hpp:14</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_game_object_1_1_callback_functions_html_a4e923c048cebbb72fb95b190b80924c6ae30e1e66600b0a30067b0cb34c10b86e"><div class="ttname"><a href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6ae30e1e66600b0a30067b0cb34c10b86e">SGFramework::GameObject::CallbackFunctions::MakeDrawCommand</a></div><div class="ttdeci">@ MakeDrawCommand</div><div class="ttdef"><b>Definition:</b> GameObject.hpp:44</div></div>
+<div class="ttc" id="aclass_sphere_html_a90429d01b6a6dfda59970b30fb6e0e3f"><div class="ttname"><a href="class_sphere.html#a90429d01b6a6dfda59970b30fb6e0e3f">Sphere::OnCollisionEnter</a></div><div class="ttdeci">virtual void OnCollisionEnter(const ContactInfo &amp;contactInfo)</div><div class="ttdef"><b>Definition:</b> Sphere.hpp:22</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_game_object_1_1_callback_functions_html_a4e923c048cebbb72fb95b190b80924c6a14efbc1dd5af25cdd4cadcdaba173378"><div class="ttname"><a href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6a14efbc1dd5af25cdd4cadcdaba173378">SGFramework::GameObject::CallbackFunctions::Awake</a></div><div class="ttdeci">@ Awake</div><div class="ttdef"><b>Definition:</b> GameObject.hpp:32</div></div>
+<div class="ttc" id="aclass_sphere_html"><div class="ttname"><a href="class_sphere.html">Sphere</a></div><div class="ttdef"><b>Definition:</b> Sphere.hpp:8</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_game_object_1_1_callback_functions_html_a4e923c048cebbb72fb95b190b80924c6abc6ff2a8d2fc6b3e20bb6e67c98b2de4"><div class="ttname"><a href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6abc6ff2a8d2fc6b3e20bb6e67c98b2de4">SGFramework::GameObject::CallbackFunctions::OnCollisionEnter</a></div><div class="ttdeci">@ OnCollisionEnter</div><div class="ttdef"><b>Definition:</b> GameObject.hpp:53</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

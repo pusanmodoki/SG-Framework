@@ -1,0 +1,156 @@
+\hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset}{}\doxysection{S\+G\+Framework\+::Asset\+::Text\+Asset クラス}
+\label{class_s_g_framework_1_1_asset_1_1_text_asset}\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+
+
+{\ttfamily \#include $<$Text\+Asset.\+hpp$>$}
+
+S\+G\+Framework\+::Asset\+::Text\+Asset の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_s_g_framework_1_1_asset_1_1_text_asset}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset_a85fc54eb76d7df4ce4dcbb40045c6264}{$\sim$\+Text\+Asset}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset_ad2f99d8dd56fc31cfc91b895f4914612}{Open}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset_a68814c2c80152520e89a5a68d4fd78a1}{Write}} (const sgstring \&type\+Text\+Not\+Array, bool is\+Append=false)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset_a53c294384fb273f96d7bc8b100fc773a}{Write}} (const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_text}{File\+::\+File\+Text}} \&type\+Text\+Array, bool is\+Append=false)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset_a21cb2e60549eb1ab5dcc7f3d127ab5a5}{Reload}} () override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset_ad45d41a96b80717cea86d5eca37d99d7}{Close}} () override
+\item 
+const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_text}{File\+::\+File\+Text}} \& \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset_a9655ca2f870ea30ad2200bc665e6f333}{Read\+Array}} ()
+\item 
+const sgstring \& \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset_a6d8bd54e5788ada2d72e9727763cdac3}{Read\+Not\+Array}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{Asset\+::\+Asset\+Type}} \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset_adf54ab9193180445a753b2d6cffd3be8}{get\+Type}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_text}{File\+::\+File\+Text}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset_a0d67c53c3e362b85d45ebae67af3150d}{text\+Array}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ sgstring $>$ \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset_a4a2d0f33eb022cf540b41b15aaec8dee}{text\+Not\+Array}}
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset_aafe72876a584aedb5a5546d4fe7746fb}{Asset\+Manager}}
+\item 
+{\footnotesize template$<$typename T\+Asset $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ T\+Asset $>$ \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_text_asset_ac8ed677720e0a948a793d7e0163780ac}{Asset\+::\+Instantiate\+Asset}} (const sgstring \&file\+Path, bool is\+Register\+Shared\+Asset)
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset_a85fc54eb76d7df4ce4dcbb40045c6264}\label{class_s_g_framework_1_1_asset_1_1_text_asset_a85fc54eb76d7df4ce4dcbb40045c6264}} 
+\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}!````~TextAsset@{$\sim$TextAsset}}
+\index{````~TextAsset@{$\sim$TextAsset}!SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+\doxysubsubsection{\texorpdfstring{$\sim$TextAsset()}{~TextAsset()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Asset\+::\+Text\+Asset\+::$\sim$\+Text\+Asset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset_ad45d41a96b80717cea86d5eca37d99d7}\label{class_s_g_framework_1_1_asset_1_1_text_asset_ad45d41a96b80717cea86d5eca37d99d7}} 
+\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}!Close@{Close}}
+\index{Close@{Close}!SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Text\+Asset\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_asset_aafc7e6f4123fd328d2e37a5bf5dad41d}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Asset}}を実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset_adf54ab9193180445a753b2d6cffd3be8}\label{class_s_g_framework_1_1_asset_1_1_text_asset_adf54ab9193180445a753b2d6cffd3be8}} 
+\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}!getType@{getType}}
+\index{getType@{getType}!SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{Asset\+::\+Asset\+Type}} S\+G\+Framework\+::\+Asset\+::\+Text\+Asset\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_asset_ac34501a9b8fbcc63400ca9e25c906efd}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Asset}}を実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset_ad2f99d8dd56fc31cfc91b895f4914612}\label{class_s_g_framework_1_1_asset_1_1_text_asset_ad2f99d8dd56fc31cfc91b895f4914612}} 
+\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}!Open@{Open}}
+\index{Open@{Open}!SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+\doxysubsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Text\+Asset\+::\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset_a9655ca2f870ea30ad2200bc665e6f333}\label{class_s_g_framework_1_1_asset_1_1_text_asset_a9655ca2f870ea30ad2200bc665e6f333}} 
+\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}!ReadArray@{ReadArray}}
+\index{ReadArray@{ReadArray}!SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+\doxysubsubsection{\texorpdfstring{ReadArray()}{ReadArray()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_text}{File\+::\+File\+Text}} \& S\+G\+Framework\+::\+Asset\+::\+Text\+Asset\+::\+Read\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset_a6d8bd54e5788ada2d72e9727763cdac3}\label{class_s_g_framework_1_1_asset_1_1_text_asset_a6d8bd54e5788ada2d72e9727763cdac3}} 
+\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}!ReadNotArray@{ReadNotArray}}
+\index{ReadNotArray@{ReadNotArray}!SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+\doxysubsubsection{\texorpdfstring{ReadNotArray()}{ReadNotArray()}}
+{\footnotesize\ttfamily const sgstring \& S\+G\+Framework\+::\+Asset\+::\+Text\+Asset\+::\+Read\+Not\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset_a21cb2e60549eb1ab5dcc7f3d127ab5a5}\label{class_s_g_framework_1_1_asset_1_1_text_asset_a21cb2e60549eb1ab5dcc7f3d127ab5a5}} 
+\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}!Reload@{Reload}}
+\index{Reload@{Reload}!SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+\doxysubsubsection{\texorpdfstring{Reload()}{Reload()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Text\+Asset\+::\+Reload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_asset_a413eae58644e5c6a4c9b6a4924e3f422}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Asset}}を実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset_a53c294384fb273f96d7bc8b100fc773a}\label{class_s_g_framework_1_1_asset_1_1_text_asset_a53c294384fb273f96d7bc8b100fc773a}} 
+\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}!Write@{Write}}
+\index{Write@{Write}!SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Text\+Asset\+::\+Write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_text}{File\+::\+File\+Text}} \&}]{type\+Text\+Array,  }\item[{bool}]{is\+Append = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset_a68814c2c80152520e89a5a68d4fd78a1}\label{class_s_g_framework_1_1_asset_1_1_text_asset_a68814c2c80152520e89a5a68d4fd78a1}} 
+\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}!Write@{Write}}
+\index{Write@{Write}!SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Text\+Asset\+::\+Write (\begin{DoxyParamCaption}\item[{const sgstring \&}]{type\+Text\+Not\+Array,  }\item[{bool}]{is\+Append = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset_ac8ed677720e0a948a793d7e0163780ac}\label{class_s_g_framework_1_1_asset_1_1_text_asset_ac8ed677720e0a948a793d7e0163780ac}} 
+\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}!Asset::InstantiateAsset@{Asset::InstantiateAsset}}
+\index{Asset::InstantiateAsset@{Asset::InstantiateAsset}!SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+\doxysubsubsection{\texorpdfstring{Asset::InstantiateAsset}{Asset::InstantiateAsset}}
+{\footnotesize\ttfamily template$<$typename T\+Asset $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$T\+Asset$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_ad512f0eb01593582e1507de561c2f71f}{Asset\+::\+Instantiate\+Asset}} (\begin{DoxyParamCaption}\item[{const sgstring \&}]{file\+Path,  }\item[{bool}]{is\+Register\+Shared\+Asset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset_aafe72876a584aedb5a5546d4fe7746fb}\label{class_s_g_framework_1_1_asset_1_1_text_asset_aafe72876a584aedb5a5546d4fe7746fb}} 
+\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}!AssetManager@{AssetManager}}
+\index{AssetManager@{AssetManager}!SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+\doxysubsubsection{\texorpdfstring{AssetManager}{AssetManager}}
+{\footnotesize\ttfamily friend class Asset\+Manager\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset_a0d67c53c3e362b85d45ebae67af3150d}\label{class_s_g_framework_1_1_asset_1_1_text_asset_a0d67c53c3e362b85d45ebae67af3150d}} 
+\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}!textArray@{textArray}}
+\index{textArray@{textArray}!SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+\doxysubsubsection{\texorpdfstring{textArray}{textArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_text}{File\+::\+File\+Text}}$>$ S\+G\+Framework\+::\+Asset\+::\+Text\+Asset\+::text\+Array}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_text_asset_a4a2d0f33eb022cf540b41b15aaec8dee}\label{class_s_g_framework_1_1_asset_1_1_text_asset_a4a2d0f33eb022cf540b41b15aaec8dee}} 
+\index{SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}!textNotArray@{textNotArray}}
+\index{textNotArray@{textNotArray}!SGFramework::Asset::TextAsset@{SGFramework::Asset::TextAsset}}
+\doxysubsubsection{\texorpdfstring{textNotArray}{textNotArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$sgstring$>$ S\+G\+Framework\+::\+Asset\+::\+Text\+Asset\+::text\+Not\+Array}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/04\+\_\+\+Asset/\+Asset/\mbox{\hyperlink{_text_asset_8hpp}{Text\+Asset.\+hpp}}\end{DoxyCompactItemize}

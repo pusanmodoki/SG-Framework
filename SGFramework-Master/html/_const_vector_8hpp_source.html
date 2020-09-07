@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/02_Variables/未実装/Const/ConstVector.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_0cf03c12e51ae64724f6ec73d30b9672.html">02_Variables</a></li><li class="navelem"><a class="el" href="dir_06c5a77703cbb5bfafd4b0eea230505d.html">未実装</a></li><li class="navelem"><a class="el" href="dir_3eaaec5d0d77f69ef084df1592759b3c.html">Const</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ConstVector.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_const_vector_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">定数を纏めたConst namespace</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_CONST_VECTOR_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_CONST_VECTOR_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../Vector/Vector.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">//Constant Values</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">namespace </span>Const</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="comment">//Vector2 Constant Values</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2.html">   15</a></span>&#160;        <span class="keyword">namespace </span><a class="code" href="struct_s_g_framework_1_1_vector2.html">Vector2</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="comment">//Vector2(0,0)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#a3ccf25392d5516cdda71fca8c0b107c4">   18</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector2.html">SGFramework::Vector2</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#a3ccf25392d5516cdda71fca8c0b107c4">zero</a>(0.0f, 0.0f);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="comment">//Vector2(1,1,1,1)</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#aed3fee644cf7da036efb138eba5e1c67">   20</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector2.html">SGFramework::Vector2</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#aed3fee644cf7da036efb138eba5e1c67">one</a>(1.0f, 1.0f);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="comment">//Vector2(0,1)</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#ac4a73c6fed43fa5f7be628222dd70d56">   22</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector2.html">SGFramework::Vector2</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#ac4a73c6fed43fa5f7be628222dd70d56">up</a>(0.0f, 1.0f);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="comment">//Vector2(0,-1)</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#ade8feb4522d0840019e8d75de552967b">   24</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector2.html">SGFramework::Vector2</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#ade8feb4522d0840019e8d75de552967b">down</a>(0.0f, -1.0f);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="comment">//Vector2(1,0)</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#af06c5b6877dc9b6ac774c2d21249e454">   26</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector2.html">SGFramework::Vector2</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#af06c5b6877dc9b6ac774c2d21249e454">right</a>(1.0f, 0.0f);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="comment">//Vector2(-1,0)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#abf410c56fc53bd21b09f2298041d1189">   28</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector2.html">SGFramework::Vector2</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#abf410c56fc53bd21b09f2298041d1189">left</a>(-1.0f, 0.0f);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment">//Vector2Int Constant Values</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html">   32</a></span>&#160;        <span class="keyword">namespace </span><a class="code" href="struct_s_g_framework_1_1_vector2_int.html">Vector2Int</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="comment">//Vector2Int(0,0)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#a2d7551bd3d50f22b5e2a332ba2874a0e">   35</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector2_int.html">SGFramework::Vector2Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#a2d7551bd3d50f22b5e2a332ba2874a0e">zero</a>(0, 0);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="comment">//Vector2Int(1,1)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#a049664c8f6fd9926bdb470a9a0d8f3dc">   37</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector2_int.html">SGFramework::Vector2Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#a049664c8f6fd9926bdb470a9a0d8f3dc">one</a>(1, 1);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="comment">//Vector2Int(0,1)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#adf1f0eb31ccae84b65e14d243f3c3205">   39</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector2_int.html">SGFramework::Vector2Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#adf1f0eb31ccae84b65e14d243f3c3205">up</a>(0, 1);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="comment">//Vector2Int(0,-1)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#a58ebd518c0d4fb6b95cac852a70561e0">   41</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector2_int.html">SGFramework::Vector2Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#a58ebd518c0d4fb6b95cac852a70561e0">down</a>(0, -1);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="comment">//Vector2Int(1,0)</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#a5aeff9d69a32387944fcd913104f3888">   43</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector2_int.html">SGFramework::Vector2Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#a5aeff9d69a32387944fcd913104f3888">right</a>(1, 0);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="comment">//Vector2Int(-1,0)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#ab3418b75b5363d8e9fa21cb10e654df7">   45</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector2_int.html">SGFramework::Vector2Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#ab3418b75b5363d8e9fa21cb10e654df7">left</a>(-1, 0);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">//Vector3 Constant Values</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3.html">   49</a></span>&#160;        <span class="keyword">namespace </span><a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="comment">//Vector3(0,0,0)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">   52</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">zero</a>(0.0f, 0.0f, 0.0f);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="comment">//Vector3(1,1,1)</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a4ce4a8c8a2f0c53667d801d5d0d29745">   54</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a4ce4a8c8a2f0c53667d801d5d0d29745">one</a>(1.0f, 1.0f, 1.0f);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="comment">//Vector3(0,1,0)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ae96e7e3e08b8a0ef77ea721d63392e1f">   56</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ae96e7e3e08b8a0ef77ea721d63392e1f">up</a>(0.0f, 1.0f, 0.0f);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="comment">//Vector3(0,-1,0)</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a716339e9f975624582e4f97c139fce67">   58</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a716339e9f975624582e4f97c139fce67">down</a>(0.0f, -1.0f, 0.0f);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="comment">//Vector3(1,0,0)</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a66371cb9bcf7228351030ae900719dd6">   60</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a66371cb9bcf7228351030ae900719dd6">right</a>(1.0f, 0.0f, 0.0f);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="comment">//Vector3(-1,0,0)</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a9de8e43dd4820fca5ef8615069d9b2a7">   62</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a9de8e43dd4820fca5ef8615069d9b2a7">left</a>(-1.0f, 0.0f, 0.0f);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="comment">//Vector3(0,0,1)</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a947a90bb13cb35065d4f0ef828a966c8">   64</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a947a90bb13cb35065d4f0ef828a966c8">foward</a>(0.0f, 0.0f, 1.0f);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">//Vector3(0,0,-1)</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a46032aa04331318e2077d93c0c8c7c25">   66</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a46032aa04331318e2077d93c0c8c7c25">back</a>(0.0f, 0.0f, -1.0f);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="comment">//Vector3(-1,1, 0)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ae1237b05c4b1e69a5e60d13a18bd6f2c">   68</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ae1237b05c4b1e69a5e60d13a18bd6f2c">leftTop</a>(-1.0f, 1.0f, 0.0f);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="comment">//Vector3(1,1,0)</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#af3b0f6f8163101668ff9f9684ad61c97">   70</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#af3b0f6f8163101668ff9f9684ad61c97">rightTop</a>(1.0f, 1.0f, 0.0f);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="comment">//Vector3(-1,-1,0)</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ad53a622858fe57126c18835fc75e0344">   72</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ad53a622858fe57126c18835fc75e0344">leftDown</a>(-1.0f, -1.0f, 0.0f);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="comment">//Vector3(1,-1,0)</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a2c9c9dca0cdaf313df45ff56aee4818f">   74</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a2c9c9dca0cdaf313df45ff56aee4818f">rightDown</a>(1.0f, -1.0f, 0.0f);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">//Vector3Int Constant Values</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html">   78</a></span>&#160;        <span class="keyword">namespace </span><a class="code" href="struct_s_g_framework_1_1_vector3_int.html">Vector3Int</a></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="comment">//Vector3Int(0,0,0)</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a069442a584b9778eedb44eb996d1b6a9">   81</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3_int.html">SGFramework::Vector3Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a069442a584b9778eedb44eb996d1b6a9">zero</a>(0, 0, 0);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="comment">//Vector3Int(1,1,1)</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a5d5467b75c792a6c2bd23310a628489f">   83</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3_int.html">SGFramework::Vector3Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a5d5467b75c792a6c2bd23310a628489f">one</a>(1, 1, 1);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="comment">//Vector3Int(0,1,0)</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a1887949a68a9539fa761f1eb587b5d1c">   85</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3_int.html">SGFramework::Vector3Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a1887949a68a9539fa761f1eb587b5d1c">up</a>(0, 1, 0);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="comment">//Vector3Int(0,-1,0)</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a9a098f4f2873fd068a4ac03ab05a9f24">   87</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3_int.html">SGFramework::Vector3Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a9a098f4f2873fd068a4ac03ab05a9f24">down</a>(0, -1, 0);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="comment">//Vector3Int(1,0,0)</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a9ef95954a4ddc89baa49924d7af96745">   89</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3_int.html">SGFramework::Vector3Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a9ef95954a4ddc89baa49924d7af96745">right</a>(1, 0, 0);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="comment">//Vector3Int(-1,0,0)</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a0ac3e5d44a46167735bae8088d2de7ce">   91</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3_int.html">SGFramework::Vector3Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a0ac3e5d44a46167735bae8088d2de7ce">left</a>(-1, 0, 0);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="comment">//Vector3Int(0,0,1)</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#ae48e8b79b387f2f743004201333b881e">   93</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3_int.html">SGFramework::Vector3Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#ae48e8b79b387f2f743004201333b881e">foward</a>(0, 0, 1);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="comment">//Vector3Int(0,0,-1)</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a558e81e59062140cbe398b4aef65e293">   95</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector3_int.html">SGFramework::Vector3Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a558e81e59062140cbe398b4aef65e293">back</a>(0, 0, -1);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="comment">//Vector4 Constant Values</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector4.html">   99</a></span>&#160;        <span class="keyword">namespace </span><a class="code" href="struct_s_g_framework_1_1_vector4.html">Vector4</a></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">//Vector4(0,0,0,0)</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector4.html#a77298aa24fe3f50dc18b51b05d70b6f7">  102</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector4.html">SGFramework::Vector4</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector4.html#a77298aa24fe3f50dc18b51b05d70b6f7">zero</a>(0.0f, 0.0f, 0.0f, 0.0f);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="comment">//Vector4(1,1,1,1)</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector4.html#a49aa83ea8710a5f79851d69d24a408f7">  104</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector4.html">SGFramework::Vector4</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector4.html#a49aa83ea8710a5f79851d69d24a408f7">one</a>(1.0f, 1.0f, 1.0f, 1.0f);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="comment">//Vector4Int Constant Values</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector4_int.html">  108</a></span>&#160;        <span class="keyword">namespace </span><a class="code" href="struct_s_g_framework_1_1_vector4_int.html">Vector4Int</a></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="comment">//Vector4Int(0,0,0,0)</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector4_int.html#ade55ab75432685d9eeeed5d63ec7086d">  111</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector4_int.html">SGFramework::Vector4Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector4_int.html#ade55ab75432685d9eeeed5d63ec7086d">zero</a>(0, 0, 0, 0);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="comment">//Vector4Int(1,1,1,1)</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector4_int.html#ae47f0044beb88cf77a534bcc3403d1fd">  113</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector4_int.html">SGFramework::Vector4Int</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector4_int.html#ae47f0044beb88cf77a534bcc3403d1fd">one</a>(1, 1, 1, 1);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="comment">//Vector4x4 Constant Values</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector4x4.html">  117</a></span>&#160;        <span class="keyword">namespace </span><a class="code" href="struct_s_g_framework_1_1_vector4x4.html">Vector4x4</a></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="comment">//All 0</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector4x4.html#a7e6257c12f43a1c7080036f0ba2724b9">  120</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector4x4.html">SGFramework::Vector4x4</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector4x4.html#a7e6257c12f43a1c7080036f0ba2724b9">zero</a>(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="comment">//All 1</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector4x4.html#a49eb4ef45a99f7c7a8588ba419f1f3c9">  122</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector4x4.html">SGFramework::Vector4x4</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector4x4.html#a49eb4ef45a99f7c7a8588ba419f1f3c9">one</a>(1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="comment">//_11, _22, _33,_44 = 1 , other = 0</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_const_1_1_vector4x4.html#a311cd8241067671ef4368b70113b1675">  124</a></span>&#160;            constexpr <a class="code" href="struct_s_g_framework_1_1_vector4x4.html">SGFramework::Vector4x4</a> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector4x4.html#a311cd8241067671ef4368b70113b1675">identity</a>(1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_CONST_VECTOR_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector4x4_html_a311cd8241067671ef4368b70113b1675"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector4x4.html#a311cd8241067671ef4368b70113b1675">SGFramework::Const::Vector4x4::identity</a></div><div class="ttdeci">constexpr SGFramework::Vector4x4 identity(1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_ae1237b05c4b1e69a5e60d13a18bd6f2c"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ae1237b05c4b1e69a5e60d13a18bd6f2c">SGFramework::Const::Vector3::leftTop</a></div><div class="ttdeci">constexpr SGFramework::Vector3 leftTop(-1.0f, 1.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_int_html_a9a098f4f2873fd068a4ac03ab05a9f24"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a9a098f4f2873fd068a4ac03ab05a9f24">SGFramework::Const::Vector3Int::down</a></div><div class="ttdeci">constexpr SGFramework::Vector3Int down(0, -1, 0)</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector4x4_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector4x4.html">SGFramework::Vector4x4</a></div><div class="ttdef"><b>Definition:</b> Vector4x4.hpp:25</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector2_int_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector2_int.html">SGFramework::Vector2Int</a></div><div class="ttdef"><b>Definition:</b> Vector2Int.hpp:28</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_a4ce4a8c8a2f0c53667d801d5d0d29745"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a4ce4a8c8a2f0c53667d801d5d0d29745">SGFramework::Const::Vector3::one</a></div><div class="ttdeci">constexpr SGFramework::Vector3 one(1.0f, 1.0f, 1.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_ad53a622858fe57126c18835fc75e0344"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ad53a622858fe57126c18835fc75e0344">SGFramework::Const::Vector3::leftDown</a></div><div class="ttdeci">constexpr SGFramework::Vector3 leftDown(-1.0f, -1.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_html_aed3fee644cf7da036efb138eba5e1c67"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2.html#aed3fee644cf7da036efb138eba5e1c67">SGFramework::Const::Vector2::one</a></div><div class="ttdeci">constexpr SGFramework::Vector2 one(1.0f, 1.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector4_html_a77298aa24fe3f50dc18b51b05d70b6f7"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector4.html#a77298aa24fe3f50dc18b51b05d70b6f7">SGFramework::Const::Vector4::zero</a></div><div class="ttdeci">constexpr SGFramework::Vector4 zero(0.0f, 0.0f, 0.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_af3b0f6f8163101668ff9f9684ad61c97"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#af3b0f6f8163101668ff9f9684ad61c97">SGFramework::Const::Vector3::rightTop</a></div><div class="ttdeci">constexpr SGFramework::Vector3 rightTop(1.0f, 1.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_a2c9c9dca0cdaf313df45ff56aee4818f"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a2c9c9dca0cdaf313df45ff56aee4818f">SGFramework::Const::Vector3::rightDown</a></div><div class="ttdeci">constexpr SGFramework::Vector3 rightDown(1.0f, -1.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_int_html_a1887949a68a9539fa761f1eb587b5d1c"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a1887949a68a9539fa761f1eb587b5d1c">SGFramework::Const::Vector3Int::up</a></div><div class="ttdeci">constexpr SGFramework::Vector3Int up(0, 1, 0)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_a947a90bb13cb35065d4f0ef828a966c8"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a947a90bb13cb35065d4f0ef828a966c8">SGFramework::Const::Vector3::foward</a></div><div class="ttdeci">constexpr SGFramework::Vector3 foward(0.0f, 0.0f, 1.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_int_html_a5d5467b75c792a6c2bd23310a628489f"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a5d5467b75c792a6c2bd23310a628489f">SGFramework::Const::Vector3Int::one</a></div><div class="ttdeci">constexpr SGFramework::Vector3Int one(1, 1, 1)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_a9de8e43dd4820fca5ef8615069d9b2a7"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a9de8e43dd4820fca5ef8615069d9b2a7">SGFramework::Const::Vector3::left</a></div><div class="ttdeci">constexpr SGFramework::Vector3 left(-1.0f, 0.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector4_int_html_ade55ab75432685d9eeeed5d63ec7086d"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector4_int.html#ade55ab75432685d9eeeed5d63ec7086d">SGFramework::Const::Vector4Int::zero</a></div><div class="ttdeci">constexpr SGFramework::Vector4Int zero(0, 0, 0, 0)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector4_int_html_ae47f0044beb88cf77a534bcc3403d1fd"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector4_int.html#ae47f0044beb88cf77a534bcc3403d1fd">SGFramework::Const::Vector4Int::one</a></div><div class="ttdeci">constexpr SGFramework::Vector4Int one(1, 1, 1, 1)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_ac773f04184a04dfbb5820902d31f4c87"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">SGFramework::Const::Vector3::zero</a></div><div class="ttdeci">constexpr SGFramework::Vector3 zero(0.0f, 0.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_html_ac4a73c6fed43fa5f7be628222dd70d56"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2.html#ac4a73c6fed43fa5f7be628222dd70d56">SGFramework::Const::Vector2::up</a></div><div class="ttdeci">constexpr SGFramework::Vector2 up(0.0f, 1.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_int_html_adf1f0eb31ccae84b65e14d243f3c3205"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#adf1f0eb31ccae84b65e14d243f3c3205">SGFramework::Const::Vector2Int::up</a></div><div class="ttdeci">constexpr SGFramework::Vector2Int up(0, 1)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_int_html_a2d7551bd3d50f22b5e2a332ba2874a0e"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#a2d7551bd3d50f22b5e2a332ba2874a0e">SGFramework::Const::Vector2Int::zero</a></div><div class="ttdeci">constexpr SGFramework::Vector2Int zero(0, 0)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_int_html_ab3418b75b5363d8e9fa21cb10e654df7"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#ab3418b75b5363d8e9fa21cb10e654df7">SGFramework::Const::Vector2Int::left</a></div><div class="ttdeci">constexpr SGFramework::Vector2Int left(-1, 0)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector4x4_html_a49eb4ef45a99f7c7a8588ba419f1f3c9"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector4x4.html#a49eb4ef45a99f7c7a8588ba419f1f3c9">SGFramework::Const::Vector4x4::one</a></div><div class="ttdeci">constexpr SGFramework::Vector4x4 one(1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_html_af06c5b6877dc9b6ac774c2d21249e454"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2.html#af06c5b6877dc9b6ac774c2d21249e454">SGFramework::Const::Vector2::right</a></div><div class="ttdeci">constexpr SGFramework::Vector2 right(1.0f, 0.0f)</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector3_int_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector3_int.html">SGFramework::Vector3Int</a></div><div class="ttdef"><b>Definition:</b> Vector3Int.hpp:26</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_html_a3ccf25392d5516cdda71fca8c0b107c4"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2.html#a3ccf25392d5516cdda71fca8c0b107c4">SGFramework::Const::Vector2::zero</a></div><div class="ttdeci">constexpr SGFramework::Vector2 zero(0.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_html_ade8feb4522d0840019e8d75de552967b"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2.html#ade8feb4522d0840019e8d75de552967b">SGFramework::Const::Vector2::down</a></div><div class="ttdeci">constexpr SGFramework::Vector2 down(0.0f, -1.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_int_html_a069442a584b9778eedb44eb996d1b6a9"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a069442a584b9778eedb44eb996d1b6a9">SGFramework::Const::Vector3Int::zero</a></div><div class="ttdeci">constexpr SGFramework::Vector3Int zero(0, 0, 0)</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector3_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a></div><div class="ttdef"><b>Definition:</b> Vector3.hpp:28</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_a66371cb9bcf7228351030ae900719dd6"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a66371cb9bcf7228351030ae900719dd6">SGFramework::Const::Vector3::right</a></div><div class="ttdeci">constexpr SGFramework::Vector3 right(1.0f, 0.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_int_html_a5aeff9d69a32387944fcd913104f3888"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#a5aeff9d69a32387944fcd913104f3888">SGFramework::Const::Vector2Int::right</a></div><div class="ttdeci">constexpr SGFramework::Vector2Int right(1, 0)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_a46032aa04331318e2077d93c0c8c7c25"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a46032aa04331318e2077d93c0c8c7c25">SGFramework::Const::Vector3::back</a></div><div class="ttdeci">constexpr SGFramework::Vector3 back(0.0f, 0.0f, -1.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_a716339e9f975624582e4f97c139fce67"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#a716339e9f975624582e4f97c139fce67">SGFramework::Const::Vector3::down</a></div><div class="ttdeci">constexpr SGFramework::Vector3 down(0.0f, -1.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_int_html_a9ef95954a4ddc89baa49924d7af96745"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a9ef95954a4ddc89baa49924d7af96745">SGFramework::Const::Vector3Int::right</a></div><div class="ttdeci">constexpr SGFramework::Vector3Int right(1, 0, 0)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_int_html_a58ebd518c0d4fb6b95cac852a70561e0"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#a58ebd518c0d4fb6b95cac852a70561e0">SGFramework::Const::Vector2Int::down</a></div><div class="ttdeci">constexpr SGFramework::Vector2Int down(0, -1)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector4x4_html_a7e6257c12f43a1c7080036f0ba2724b9"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector4x4.html#a7e6257c12f43a1c7080036f0ba2724b9">SGFramework::Const::Vector4x4::zero</a></div><div class="ttdeci">constexpr SGFramework::Vector4x4 zero(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_int_html_a558e81e59062140cbe398b4aef65e293"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a558e81e59062140cbe398b4aef65e293">SGFramework::Const::Vector3Int::back</a></div><div class="ttdeci">constexpr SGFramework::Vector3Int back(0, 0, -1)</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector2_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector2.html">SGFramework::Vector2</a></div><div class="ttdef"><b>Definition:</b> Vector2.hpp:27</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector4_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector4.html">SGFramework::Vector4</a></div><div class="ttdef"><b>Definition:</b> Vector4.hpp:26</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_int_html_a049664c8f6fd9926bdb470a9a0d8f3dc"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2_int.html#a049664c8f6fd9926bdb470a9a0d8f3dc">SGFramework::Const::Vector2Int::one</a></div><div class="ttdeci">constexpr SGFramework::Vector2Int one(1, 1)</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector4_int_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector4_int.html">SGFramework::Vector4Int</a></div><div class="ttdef"><b>Definition:</b> Vector4Int.hpp:25</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_ae96e7e3e08b8a0ef77ea721d63392e1f"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ae96e7e3e08b8a0ef77ea721d63392e1f">SGFramework::Const::Vector3::up</a></div><div class="ttdeci">constexpr SGFramework::Vector3 up(0.0f, 1.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_html_abf410c56fc53bd21b09f2298041d1189"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2.html#abf410c56fc53bd21b09f2298041d1189">SGFramework::Const::Vector2::left</a></div><div class="ttdeci">constexpr SGFramework::Vector2 left(-1.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_int_html_ae48e8b79b387f2f743004201333b881e"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#ae48e8b79b387f2f743004201333b881e">SGFramework::Const::Vector3Int::foward</a></div><div class="ttdeci">constexpr SGFramework::Vector3Int foward(0, 0, 1)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector4_html_a49aa83ea8710a5f79851d69d24a408f7"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector4.html#a49aa83ea8710a5f79851d69d24a408f7">SGFramework::Const::Vector4::one</a></div><div class="ttdeci">constexpr SGFramework::Vector4 one(1.0f, 1.0f, 1.0f, 1.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_int_html_a0ac3e5d44a46167735bae8088d2de7ce"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3_int.html#a0ac3e5d44a46167735bae8088d2de7ce">SGFramework::Const::Vector3Int::left</a></div><div class="ttdeci">constexpr SGFramework::Vector3Int left(-1, 0, 0)</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

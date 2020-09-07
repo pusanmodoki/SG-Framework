@@ -1,0 +1,212 @@
+\hypertarget{explosion_8cpp}{}\doxysection{D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/explosion.cpp 繝輔ぃ繧､繝ｫ}
+\label{explosion_8cpp}\index{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/explosion.cpp@{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/explosion.cpp}}
+
+
+~\newline
+  
+
+
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$Direct\+X\+Math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}explosion.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Dat\+File\+Loader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+X11util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dx11mathutil.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+X11\+Settransform.\+h\char`\"{}}\newline
+\doxysubsection*{髢｢謨ｰ}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{explosion_8cpp_ac43d52c6befb4acc3edb258d5a9fc2d9}{Init\+Triangle\+Vertex\+Buffer}} (\mbox{\hyperlink{struct_my_triangle}{My\+Triangle}} $\ast$mytriangle)
+\item 
+void \mbox{\hyperlink{explosion_8cpp_abfee34b5e9d606f3042704f5bd86a256}{Triangle\+Transforms}} (const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4\+X4 \&mat)
+\item 
+void \mbox{\hyperlink{explosion_8cpp_a0698588e03541e524c56121af89dd3b2}{Xfile\+To\+Triangle}} (\mbox{\hyperlink{class_dat_file_loader}{Dat\+File\+Loader}} $\ast$datfiledata)
+\item 
+void \mbox{\hyperlink{explosion_8cpp_aed11f361d9d7d8aeb6dd7f98aa45a912}{Explosion\+Init}} (\mbox{\hyperlink{class_dat_file_loader}{Dat\+File\+Loader}} $\ast$datfiledata)
+\item 
+void \mbox{\hyperlink{explosion_8cpp_a341d49cd015ea9b69b1ca720e1fad37b}{Explosion\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 爆発の構+X申+V処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{explosion_8cpp_a60f06e38e4e7b840595d35ee8d19eeb9}{Explosion\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em 爆発を表`{}画する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{explosion_8cpp_a91642fe999619c5a3df186842efa7312}{Explosion\+Exit}} ()
+\begin{DoxyCompactList}\small\item\em 爆発処理の後始末 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{螟画焚}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_my_vertex}{My\+Vertex}} $\ast$ \mbox{\hyperlink{explosion_8cpp_a9383f6712b127b16bbc0112f983d9baa}{g\+\_\+\+Local\+Vertex}} = nullptr
+\item 
+int \mbox{\hyperlink{explosion_8cpp_ab02cb869f515d06f0092b928610712e8}{g\+\_\+\+Num\+Vertex}} =0
+\item 
+\mbox{\hyperlink{struct_my_connect}{My\+Connect}} $\ast$ \mbox{\hyperlink{explosion_8cpp_acfda27c74fd1a1ae79561d0ec71495d4}{g\+\_\+\+Connect}} = nullptr
+\item 
+int \mbox{\hyperlink{explosion_8cpp_a02152a02c6cc93631fa19bd03315a282}{g\+\_\+\+Num\+Face}} =0
+\item 
+\mbox{\hyperlink{struct_my_triangle}{My\+Triangle}} $\ast$ \mbox{\hyperlink{explosion_8cpp_a927fe02f546c77bda37862c0c0028a69}{g\+\_\+p\+Triangle}} = nullptr
+\item 
+I\+D3\+D11\+Shader\+Resource\+View $\ast$ \mbox{\hyperlink{explosion_8cpp_aa49434ded1e483e79b1d71642b129a0e}{g\+\_\+srv}}
+\item 
+I\+D3\+D11\+Vertex\+Shader $\ast$ \mbox{\hyperlink{explosion_8cpp_a4d5d1a52210766255fe448658c331281}{g\+\_\+p\+Vertex\+Shader}} =nullptr
+\item 
+I\+D3\+D11\+Pixel\+Shader $\ast$ \mbox{\hyperlink{explosion_8cpp_aa0dfb082149f1b52da84ea4761db2d3b}{g\+\_\+p\+Pixel\+Shader}} =nullptr
+\item 
+I\+D3\+D11\+Input\+Layout $\ast$ \mbox{\hyperlink{explosion_8cpp_a584b4226a98548f9f04c57aac0d71ac8}{g\+\_\+p\+Vertex\+Layout}} =nullptr
+\item 
+I\+D3\+D11\+Buffer $\ast$ \mbox{\hyperlink{explosion_8cpp_a905e70b31ff1b8ac7c542369fe1039d4}{g\+\_\+p\+Vertex\+Buffer}} = nullptr
+\item 
+\mbox{\hyperlink{struct_my_vertex}{My\+Vertex}} $\ast$ \mbox{\hyperlink{explosion_8cpp_a70bc4ad2a0e4e0d6046318cbbeaa1d49}{g\+\_\+firstpvertex}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{隧ｳ隗｣}
+~\newline
+ 
+
+\begin{DoxyNote}{隕壹∴譖ｸ縺閤
+爆発処理のための関数群(1つの頂貼+\_\+バッファにまとめる) 
+\end{DoxyNote}
+\begin{DoxyAuthor}{闡苓�}
+~\newline
+ 
+\end{DoxyAuthor}
+
+
+\doxysubsection{髢｢謨ｰ隧ｳ隗｣}
+\mbox{\Hypertarget{explosion_8cpp_a60f06e38e4e7b840595d35ee8d19eeb9}\label{explosion_8cpp_a60f06e38e4e7b840595d35ee8d19eeb9}} 
+\index{explosion.cpp@{explosion.cpp}!ExplosionDraw@{ExplosionDraw}}
+\index{ExplosionDraw@{ExplosionDraw}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{ExplosionDraw()}{ExplosionDraw()}}
+{\footnotesize\ttfamily Explosion\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+爆発を表`{}画する 
+
+
+\begin{DoxyParams}{蠑墓焚}
+{\em ± & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{explosion_8cpp_a91642fe999619c5a3df186842efa7312}\label{explosion_8cpp_a91642fe999619c5a3df186842efa7312}} 
+\index{explosion.cpp@{explosion.cpp}!ExplosionExit@{ExplosionExit}}
+\index{ExplosionExit@{ExplosionExit}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{ExplosionExit()}{ExplosionExit()}}
+{\footnotesize\ttfamily Explosion\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+爆発処理の後始末 
+
+
+\begin{DoxyParams}{蠑墓焚}
+{\em ± & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{explosion_8cpp_aed11f361d9d7d8aeb6dd7f98aa45a912}\label{explosion_8cpp_aed11f361d9d7d8aeb6dd7f98aa45a912}} 
+\index{explosion.cpp@{explosion.cpp}!ExplosionInit@{ExplosionInit}}
+\index{ExplosionInit@{ExplosionInit}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{ExplosionInit()}{ExplosionInit()}}
+{\footnotesize\ttfamily void Explosion\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dat_file_loader}{Dat\+File\+Loader}} $\ast$}]{datfiledata }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{explosion_8cpp_a341d49cd015ea9b69b1ca720e1fad37b}\label{explosion_8cpp_a341d49cd015ea9b69b1ca720e1fad37b}} 
+\index{explosion.cpp@{explosion.cpp}!ExplosionUpdate@{ExplosionUpdate}}
+\index{ExplosionUpdate@{ExplosionUpdate}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{ExplosionUpdate()}{ExplosionUpdate()}}
+{\footnotesize\ttfamily Explosion\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+爆発の構+X申+V処理 
+
+
+\begin{DoxyParams}{蠑墓焚}
+{\em ± & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{explosion_8cpp_ac43d52c6befb4acc3edb258d5a9fc2d9}\label{explosion_8cpp_ac43d52c6befb4acc3edb258d5a9fc2d9}} 
+\index{explosion.cpp@{explosion.cpp}!InitTriangleVertexBuffer@{InitTriangleVertexBuffer}}
+\index{InitTriangleVertexBuffer@{InitTriangleVertexBuffer}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{InitTriangleVertexBuffer()}{InitTriangleVertexBuffer()}}
+{\footnotesize\ttfamily void Init\+Triangle\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_my_triangle}{My\+Triangle}} $\ast$}]{mytriangle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{explosion_8cpp_abfee34b5e9d606f3042704f5bd86a256}\label{explosion_8cpp_abfee34b5e9d606f3042704f5bd86a256}} 
+\index{explosion.cpp@{explosion.cpp}!TriangleTransforms@{TriangleTransforms}}
+\index{TriangleTransforms@{TriangleTransforms}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{TriangleTransforms()}{TriangleTransforms()}}
+{\footnotesize\ttfamily void Triangle\+Transforms (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{explosion_8cpp_a0698588e03541e524c56121af89dd3b2}\label{explosion_8cpp_a0698588e03541e524c56121af89dd3b2}} 
+\index{explosion.cpp@{explosion.cpp}!XfileToTriangle@{XfileToTriangle}}
+\index{XfileToTriangle@{XfileToTriangle}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{XfileToTriangle()}{XfileToTriangle()}}
+{\footnotesize\ttfamily void Xfile\+To\+Triangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dat_file_loader}{Dat\+File\+Loader}} $\ast$}]{datfiledata }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{螟画焚隧ｳ隗｣}
+\mbox{\Hypertarget{explosion_8cpp_acfda27c74fd1a1ae79561d0ec71495d4}\label{explosion_8cpp_acfda27c74fd1a1ae79561d0ec71495d4}} 
+\index{explosion.cpp@{explosion.cpp}!g\_Connect@{g\_Connect}}
+\index{g\_Connect@{g\_Connect}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_Connect}{g\_Connect}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_my_connect}{My\+Connect}}$\ast$ g\+\_\+\+Connect = nullptr}
+
+\mbox{\Hypertarget{explosion_8cpp_a70bc4ad2a0e4e0d6046318cbbeaa1d49}\label{explosion_8cpp_a70bc4ad2a0e4e0d6046318cbbeaa1d49}} 
+\index{explosion.cpp@{explosion.cpp}!g\_firstpvertex@{g\_firstpvertex}}
+\index{g\_firstpvertex@{g\_firstpvertex}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_firstpvertex}{g\_firstpvertex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_my_vertex}{My\+Vertex}}$\ast$ g\+\_\+firstpvertex = nullptr}
+
+\mbox{\Hypertarget{explosion_8cpp_a9383f6712b127b16bbc0112f983d9baa}\label{explosion_8cpp_a9383f6712b127b16bbc0112f983d9baa}} 
+\index{explosion.cpp@{explosion.cpp}!g\_LocalVertex@{g\_LocalVertex}}
+\index{g\_LocalVertex@{g\_LocalVertex}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_LocalVertex}{g\_LocalVertex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_my_vertex}{My\+Vertex}}$\ast$ g\+\_\+\+Local\+Vertex = nullptr}
+
+\mbox{\Hypertarget{explosion_8cpp_a02152a02c6cc93631fa19bd03315a282}\label{explosion_8cpp_a02152a02c6cc93631fa19bd03315a282}} 
+\index{explosion.cpp@{explosion.cpp}!g\_NumFace@{g\_NumFace}}
+\index{g\_NumFace@{g\_NumFace}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_NumFace}{g\_NumFace}}
+{\footnotesize\ttfamily int g\+\_\+\+Num\+Face =0}
+
+\mbox{\Hypertarget{explosion_8cpp_ab02cb869f515d06f0092b928610712e8}\label{explosion_8cpp_ab02cb869f515d06f0092b928610712e8}} 
+\index{explosion.cpp@{explosion.cpp}!g\_NumVertex@{g\_NumVertex}}
+\index{g\_NumVertex@{g\_NumVertex}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_NumVertex}{g\_NumVertex}}
+{\footnotesize\ttfamily int g\+\_\+\+Num\+Vertex =0}
+
+\mbox{\Hypertarget{explosion_8cpp_aa0dfb082149f1b52da84ea4761db2d3b}\label{explosion_8cpp_aa0dfb082149f1b52da84ea4761db2d3b}} 
+\index{explosion.cpp@{explosion.cpp}!g\_pPixelShader@{g\_pPixelShader}}
+\index{g\_pPixelShader@{g\_pPixelShader}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_pPixelShader}{g\_pPixelShader}}
+{\footnotesize\ttfamily I\+D3\+D11\+Pixel\+Shader$\ast$ g\+\_\+p\+Pixel\+Shader =nullptr}
+
+\mbox{\Hypertarget{explosion_8cpp_a927fe02f546c77bda37862c0c0028a69}\label{explosion_8cpp_a927fe02f546c77bda37862c0c0028a69}} 
+\index{explosion.cpp@{explosion.cpp}!g\_pTriangle@{g\_pTriangle}}
+\index{g\_pTriangle@{g\_pTriangle}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_pTriangle}{g\_pTriangle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_my_triangle}{My\+Triangle}}$\ast$ g\+\_\+p\+Triangle = nullptr}
+
+\mbox{\Hypertarget{explosion_8cpp_a905e70b31ff1b8ac7c542369fe1039d4}\label{explosion_8cpp_a905e70b31ff1b8ac7c542369fe1039d4}} 
+\index{explosion.cpp@{explosion.cpp}!g\_pVertexBuffer@{g\_pVertexBuffer}}
+\index{g\_pVertexBuffer@{g\_pVertexBuffer}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_pVertexBuffer}{g\_pVertexBuffer}}
+{\footnotesize\ttfamily I\+D3\+D11\+Buffer$\ast$ g\+\_\+p\+Vertex\+Buffer = nullptr}
+
+\mbox{\Hypertarget{explosion_8cpp_a584b4226a98548f9f04c57aac0d71ac8}\label{explosion_8cpp_a584b4226a98548f9f04c57aac0d71ac8}} 
+\index{explosion.cpp@{explosion.cpp}!g\_pVertexLayout@{g\_pVertexLayout}}
+\index{g\_pVertexLayout@{g\_pVertexLayout}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_pVertexLayout}{g\_pVertexLayout}}
+{\footnotesize\ttfamily I\+D3\+D11\+Input\+Layout$\ast$ g\+\_\+p\+Vertex\+Layout =nullptr}
+
+\mbox{\Hypertarget{explosion_8cpp_a4d5d1a52210766255fe448658c331281}\label{explosion_8cpp_a4d5d1a52210766255fe448658c331281}} 
+\index{explosion.cpp@{explosion.cpp}!g\_pVertexShader@{g\_pVertexShader}}
+\index{g\_pVertexShader@{g\_pVertexShader}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_pVertexShader}{g\_pVertexShader}}
+{\footnotesize\ttfamily I\+D3\+D11\+Vertex\+Shader$\ast$ g\+\_\+p\+Vertex\+Shader =nullptr}
+
+\mbox{\Hypertarget{explosion_8cpp_aa49434ded1e483e79b1d71642b129a0e}\label{explosion_8cpp_aa49434ded1e483e79b1d71642b129a0e}} 
+\index{explosion.cpp@{explosion.cpp}!g\_srv@{g\_srv}}
+\index{g\_srv@{g\_srv}!explosion.cpp@{explosion.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_srv}{g\_srv}}
+{\footnotesize\ttfamily I\+D3\+D11\+Shader\+Resource\+View$\ast$ g\+\_\+srv}
+

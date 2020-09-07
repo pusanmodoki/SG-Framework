@@ -1,0 +1,152 @@
+\hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions}{}\doxysection{S\+G\+Framework\+::Administrator\+::Graphics\+Detail\+::Component\+X11\+::Callback\+Functions 構造体}
+\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}
+
+
+{\ttfamily \#include $<$Transform\+X11.\+hpp$>$}
+
+\doxysubsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88}{Enum}} \+: uint \{ \newline
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88aafa3ac7fe3ce3e34b366017c4dce0612}{Awake}} = 0x00000001, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a0d9af34bab0a4589be001c0d4de14b26}{On\+Enable}} = 0x00000002, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88afcf28806681467e9e4fb3d8ab4bacade}{Start}} = 0x00000004, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a329b760b89275b4a429a2477452e7335}{Update}} = 0x00000008, 
+\newline
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88ac8946278ba4284961b1556a4102499c9}{Sync}} = 0x00000010, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a34d0921ba6b3aa8ee6ae846627acb253}{Late\+Update}} = 0x00000020, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a32592ed1836d9517ff34742d53a15aec}{Make\+Draw\+Command}} = 0x00000040, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a6c4c30fe84e125555eac7346eabfcd08}{Fixed\+Update}} = 0x00000080, 
+\newline
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a6b1e5fb0d2fe92e093580a290d888c58}{On\+Disable}} = 0x00000100, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a2de73ad9326b10c4892e7c0d08266665}{On\+Destroy}} = 0x00000200, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a36bb0c6f75ae850417dcdf82497b88f4}{On\+Collision\+Enter}} = 0x00000400, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88ac08d9ce05f145b9c85d25c0b96653b73}{On\+Collision\+Stay}} = 0x00000800, 
+\newline
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a3c53990b5f00e6107afd4c21e8040465}{On\+Collision\+Exit}} = 0x00001000, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a3006c40dfa1c9dfa55d04a72c129787d}{On\+Trigger\+Enter}} = 0x00002000, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a299cc5c5951d33b7b5d9dc8ea4cde8f2}{On\+Trigger\+Stay}} = 0x00004000, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a60937186c8a7cbb06cf996d116db12df}{On\+Trigger\+Exit}} = 0x00008000, 
+\newline
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a13eb2c0251cc1fabf0b80cfd3b398944}{Change\+Upper\+Hierarchy}} = 0x00010000, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a9be61b1b20f4856a557723be53886eff}{Standard\+Callbacks}} = Start $\vert$ Update $\vert$ Sync
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+friend \mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_ae1900301f53fe367f31989d820a36112}{Component\+X11}}
+\item 
+friend \mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_ae284aeffd87dc15cca8e31e462326136}{Transform\+X11}}
+\item 
+friend \mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a4938d1492f62f8199491f6c944e9fe36}{Game\+Object}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88}} 
+\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!Enum@{Enum}}
+\index{Enum@{Enum}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}
+\doxysubsubsection{\texorpdfstring{Enum}{Enum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11\+::\+Callback\+Functions\+::\+Enum}} \+: \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Awake@{Awake}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!Awake@{Awake}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88aafa3ac7fe3ce3e34b366017c4dce0612}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88aafa3ac7fe3ce3e34b366017c4dce0612}} 
+Awake&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnEnable@{OnEnable}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!OnEnable@{OnEnable}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a0d9af34bab0a4589be001c0d4de14b26}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a0d9af34bab0a4589be001c0d4de14b26}} 
+On\+Enable&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Start@{Start}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!Start@{Start}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88afcf28806681467e9e4fb3d8ab4bacade}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88afcf28806681467e9e4fb3d8ab4bacade}} 
+Start&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Update@{Update}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!Update@{Update}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a329b760b89275b4a429a2477452e7335}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a329b760b89275b4a429a2477452e7335}} 
+Update&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sync@{Sync}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!Sync@{Sync}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88ac8946278ba4284961b1556a4102499c9}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88ac8946278ba4284961b1556a4102499c9}} 
+Sync&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LateUpdate@{LateUpdate}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!LateUpdate@{LateUpdate}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a34d0921ba6b3aa8ee6ae846627acb253}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a34d0921ba6b3aa8ee6ae846627acb253}} 
+Late\+Update&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MakeDrawCommand@{MakeDrawCommand}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!MakeDrawCommand@{MakeDrawCommand}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a32592ed1836d9517ff34742d53a15aec}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a32592ed1836d9517ff34742d53a15aec}} 
+Make\+Draw\+Command&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FixedUpdate@{FixedUpdate}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!FixedUpdate@{FixedUpdate}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a6c4c30fe84e125555eac7346eabfcd08}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a6c4c30fe84e125555eac7346eabfcd08}} 
+Fixed\+Update&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnDisable@{OnDisable}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!OnDisable@{OnDisable}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a6b1e5fb0d2fe92e093580a290d888c58}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a6b1e5fb0d2fe92e093580a290d888c58}} 
+On\+Disable&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnDestroy@{OnDestroy}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!OnDestroy@{OnDestroy}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a2de73ad9326b10c4892e7c0d08266665}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a2de73ad9326b10c4892e7c0d08266665}} 
+On\+Destroy&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnCollisionEnter@{OnCollisionEnter}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!OnCollisionEnter@{OnCollisionEnter}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a36bb0c6f75ae850417dcdf82497b88f4}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a36bb0c6f75ae850417dcdf82497b88f4}} 
+On\+Collision\+Enter&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnCollisionStay@{OnCollisionStay}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!OnCollisionStay@{OnCollisionStay}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88ac08d9ce05f145b9c85d25c0b96653b73}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88ac08d9ce05f145b9c85d25c0b96653b73}} 
+On\+Collision\+Stay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnCollisionExit@{OnCollisionExit}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!OnCollisionExit@{OnCollisionExit}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a3c53990b5f00e6107afd4c21e8040465}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a3c53990b5f00e6107afd4c21e8040465}} 
+On\+Collision\+Exit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnTriggerEnter@{OnTriggerEnter}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!OnTriggerEnter@{OnTriggerEnter}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a3006c40dfa1c9dfa55d04a72c129787d}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a3006c40dfa1c9dfa55d04a72c129787d}} 
+On\+Trigger\+Enter&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnTriggerStay@{OnTriggerStay}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!OnTriggerStay@{OnTriggerStay}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a299cc5c5951d33b7b5d9dc8ea4cde8f2}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a299cc5c5951d33b7b5d9dc8ea4cde8f2}} 
+On\+Trigger\+Stay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnTriggerExit@{OnTriggerExit}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!OnTriggerExit@{OnTriggerExit}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a60937186c8a7cbb06cf996d116db12df}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a60937186c8a7cbb06cf996d116db12df}} 
+On\+Trigger\+Exit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ChangeUpperHierarchy@{ChangeUpperHierarchy}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!ChangeUpperHierarchy@{ChangeUpperHierarchy}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a13eb2c0251cc1fabf0b80cfd3b398944}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a13eb2c0251cc1fabf0b80cfd3b398944}} 
+Change\+Upper\+Hierarchy&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StandardCallbacks@{StandardCallbacks}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!StandardCallbacks@{StandardCallbacks}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a9be61b1b20f4856a557723be53886eff}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a5a8f33e4b94facbe2b1cdafcdfbd6a88a9be61b1b20f4856a557723be53886eff}} 
+Standard\+Callbacks&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_ae1900301f53fe367f31989d820a36112}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_ae1900301f53fe367f31989d820a36112}} 
+\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!ComponentX11@{ComponentX11}}
+\index{ComponentX11@{ComponentX11}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}
+\doxysubsubsection{\texorpdfstring{ComponentX11}{ComponentX11}}
+{\footnotesize\ttfamily friend S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11\+::\+Callback\+Functions\+::\+Component\+X11}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a4938d1492f62f8199491f6c944e9fe36}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_a4938d1492f62f8199491f6c944e9fe36}} 
+\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}
+\doxysubsubsection{\texorpdfstring{GameObject}{GameObject}}
+{\footnotesize\ttfamily friend S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11\+::\+Callback\+Functions\+::\+Game\+Object}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_ae284aeffd87dc15cca8e31e462326136}\label{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_ae284aeffd87dc15cca8e31e462326136}} 
+\index{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}!TransformX11@{TransformX11}}
+\index{TransformX11@{TransformX11}!SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions@{SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions}}
+\doxysubsubsection{\texorpdfstring{TransformX11}{TransformX11}}
+{\footnotesize\ttfamily friend S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11\+::\+Callback\+Functions\+::\+Transform\+X11}
+
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/05\+\_\+\+Graphics/\+Direct\+X11/\+Transform/\mbox{\hyperlink{_transform_x11_8hpp}{Transform\+X11.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,158 @@
+\hypertarget{class_s_g_framework_1_1_application}{}\doxysection{S\+G\+Framework\+::Application クラス}
+\label{class_s_g_framework_1_1_application}\index{SGFramework::Application@{SGFramework::Application}}
+
+
+{\ttfamily \#include $<$Application.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_application_adfb560fcc5211bb672e25c81c9e9a82a}{D\+E\+L\+E\+T\+E\+\_\+\+A\+L\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}} (\mbox{\hyperlink{class_s_g_framework_1_1_application}{Application}})
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_s_g_framework_1_1_application_a889267c6db2b054e2f3b0e1dad1dc461}{Quit}} (const bool is\+Quit\+Message=false, const sgstring \&quit\+Header=L\char`\"{}確認\char`\"{}, const sgstring \&quit\+Massage=L\char`\"{}終了しますか？\char`\"{})
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY void \mbox{\hyperlink{class_s_g_framework_1_1_application_a69381fc675420dda4d501df6f278b7e0}{set\+Window\+Name}} (const sgstring \&name)
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY void \mbox{\hyperlink{class_s_g_framework_1_1_application_a1a2a0242cb787e43f022e391f5403c5e}{set\+Window\+Name}} (const sgstring \&name, const bool is\+Join\+Product)
+\item 
+static void \mbox{\hyperlink{class_s_g_framework_1_1_application_a561d688f68565f0cf88632d985d7449c}{Invalid\+Message}} (const Invalid\+Argument \&invalid)
+\item 
+static void \mbox{\hyperlink{class_s_g_framework_1_1_application_a213ec8821d1ca227d27d5d867c88f6ec}{Invalid\+Message}} (const sgstring \&error\+Header, const sgstring \&error\+Text, const long error\+Code=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_application_setting_1_1_application_setting_values}{Application\+Setting\+::\+Application\+Setting\+Values}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_application_adb999b6185fa8193b38cbcf02f5d04f8}{application\+Setting}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ sgstring $>$ \mbox{\hyperlink{class_s_g_framework_1_1_application_a55073c743d39ebbed3e5cde472b4ba13}{window\+Name}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ sgstring $>$ \mbox{\hyperlink{class_s_g_framework_1_1_application_ae95a536bd7df7d43c566a64bed513f0c}{version}}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ sgstring $>$ \mbox{\hyperlink{class_s_g_framework_1_1_application_ae37dee8b2241f78afeadeba63238c8d7}{product\+Name}}
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_application_a4638b7e7c4a9d32a59f736fe6e5ff8a2}{Time}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_application_a73e260359fd3153e97d6e2a99295a6df}{Administrator\+::\+Application\+Function\+Caller}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_application_adbc148eaddd341d7ae4d07c9e9e33bfd}{Thread}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_application_ac5a3536de371167fdf200e8943f8c2b0}{G\+UI}}
+\item 
+int \mbox{\hyperlink{class_s_g_framework_1_1_application_a64a31ca48bc1ed4c64a2c16bba3a583e}{W\+I\+N\+A\+P\+I \+::\+Win\+Main}} (\+\_\+\+In\+\_\+ H\+I\+N\+S\+T\+A\+N\+CE h\+Instance, \+\_\+\+In\+\_\+opt\+\_\+ H\+I\+N\+S\+T\+A\+N\+CE h\+Prev\+Instance, \+\_\+\+In\+\_\+ L\+P\+S\+TR lp\+Cmd\+Line, \+\_\+\+In\+\_\+ int n\+Cmd\+Show)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_adfb560fcc5211bb672e25c81c9e9a82a}\label{class_s_g_framework_1_1_application_adfb560fcc5211bb672e25c81c9e9a82a}} 
+\index{SGFramework::Application@{SGFramework::Application}!DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS@{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}}
+\index{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS@{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS()}{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Application\+::\+D\+E\+L\+E\+T\+E\+\_\+\+A\+L\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_application}{Application}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_a561d688f68565f0cf88632d985d7449c}\label{class_s_g_framework_1_1_application_a561d688f68565f0cf88632d985d7449c}} 
+\index{SGFramework::Application@{SGFramework::Application}!InvalidMessage@{InvalidMessage}}
+\index{InvalidMessage@{InvalidMessage}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{InvalidMessage()}{InvalidMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Application\+::\+Invalid\+Message (\begin{DoxyParamCaption}\item[{const Invalid\+Argument \&}]{invalid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_a213ec8821d1ca227d27d5d867c88f6ec}\label{class_s_g_framework_1_1_application_a213ec8821d1ca227d27d5d867c88f6ec}} 
+\index{SGFramework::Application@{SGFramework::Application}!InvalidMessage@{InvalidMessage}}
+\index{InvalidMessage@{InvalidMessage}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{InvalidMessage()}{InvalidMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Application\+::\+Invalid\+Message (\begin{DoxyParamCaption}\item[{const sgstring \&}]{error\+Header,  }\item[{const sgstring \&}]{error\+Text,  }\item[{const long}]{error\+Code = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_a889267c6db2b054e2f3b0e1dad1dc461}\label{class_s_g_framework_1_1_application_a889267c6db2b054e2f3b0e1dad1dc461}} 
+\index{SGFramework::Application@{SGFramework::Application}!Quit@{Quit}}
+\index{Quit@{Quit}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{Quit()}{Quit()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Application\+::\+Quit (\begin{DoxyParamCaption}\item[{const bool}]{is\+Quit\+Message = {\ttfamily false},  }\item[{const sgstring \&}]{quit\+Header = {\ttfamily L\char`\"{}確認\char`\"{}},  }\item[{const sgstring \&}]{quit\+Massage = {\ttfamily L\char`\"{}終了しますか？\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_a69381fc675420dda4d501df6f278b7e0}\label{class_s_g_framework_1_1_application_a69381fc675420dda4d501df6f278b7e0}} 
+\index{SGFramework::Application@{SGFramework::Application}!setWindowName@{setWindowName}}
+\index{setWindowName@{setWindowName}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{setWindowName()}{setWindowName()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY void S\+G\+Framework\+::\+Application\+::set\+Window\+Name (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_a1a2a0242cb787e43f022e391f5403c5e}\label{class_s_g_framework_1_1_application_a1a2a0242cb787e43f022e391f5403c5e}} 
+\index{SGFramework::Application@{SGFramework::Application}!setWindowName@{setWindowName}}
+\index{setWindowName@{setWindowName}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{setWindowName()}{setWindowName()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY void S\+G\+Framework\+::\+Application\+::set\+Window\+Name (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name,  }\item[{const bool}]{is\+Join\+Product }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_a73e260359fd3153e97d6e2a99295a6df}\label{class_s_g_framework_1_1_application_a73e260359fd3153e97d6e2a99295a6df}} 
+\index{SGFramework::Application@{SGFramework::Application}!Administrator::ApplicationFunctionCaller@{Administrator::ApplicationFunctionCaller}}
+\index{Administrator::ApplicationFunctionCaller@{Administrator::ApplicationFunctionCaller}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{Administrator::ApplicationFunctionCaller}{Administrator::ApplicationFunctionCaller}}
+{\footnotesize\ttfamily friend class Administrator\+::\+Application\+Function\+Caller\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_ac5a3536de371167fdf200e8943f8c2b0}\label{class_s_g_framework_1_1_application_ac5a3536de371167fdf200e8943f8c2b0}} 
+\index{SGFramework::Application@{SGFramework::Application}!GUI@{GUI}}
+\index{GUI@{GUI}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{GUI}{GUI}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_g_u_i}{G\+UI}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_adbc148eaddd341d7ae4d07c9e9e33bfd}\label{class_s_g_framework_1_1_application_adbc148eaddd341d7ae4d07c9e9e33bfd}} 
+\index{SGFramework::Application@{SGFramework::Application}!Thread@{Thread}}
+\index{Thread@{Thread}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{Thread}{Thread}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_thread}{Thread}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_a4638b7e7c4a9d32a59f736fe6e5ff8a2}\label{class_s_g_framework_1_1_application_a4638b7e7c4a9d32a59f736fe6e5ff8a2}} 
+\index{SGFramework::Application@{SGFramework::Application}!Time@{Time}}
+\index{Time@{Time}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{Time}{Time}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_time}{Time}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_a64a31ca48bc1ed4c64a2c16bba3a583e}\label{class_s_g_framework_1_1_application_a64a31ca48bc1ed4c64a2c16bba3a583e}} 
+\index{SGFramework::Application@{SGFramework::Application}!WINAPI ::WinMain@{WINAPI ::WinMain}}
+\index{WINAPI ::WinMain@{WINAPI ::WinMain}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{WINAPI ::WinMain}{WINAPI ::WinMain}}
+{\footnotesize\ttfamily int W\+I\+N\+A\+PI \+::\mbox{\hyperlink{_win_main_8cpp_a649028f00e62144f15f268d14bc6dae0}{Win\+Main}} (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Instance,  }\item[{\+\_\+\+In\+\_\+opt\+\_\+ H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Prev\+Instance,  }\item[{\+\_\+\+In\+\_\+ L\+P\+S\+TR}]{lp\+Cmd\+Line,  }\item[{\+\_\+\+In\+\_\+ int}]{n\+Cmd\+Show }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_adb999b6185fa8193b38cbcf02f5d04f8}\label{class_s_g_framework_1_1_application_adb999b6185fa8193b38cbcf02f5d04f8}} 
+\index{SGFramework::Application@{SGFramework::Application}!applicationSetting@{applicationSetting}}
+\index{applicationSetting@{applicationSetting}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{applicationSetting}{applicationSetting}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_application_setting_1_1_application_setting_values}{Application\+Setting\+::\+Application\+Setting\+Values}} $>$ S\+G\+Framework\+::\+Application\+::application\+Setting\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_ae37dee8b2241f78afeadeba63238c8d7}\label{class_s_g_framework_1_1_application_ae37dee8b2241f78afeadeba63238c8d7}} 
+\index{SGFramework::Application@{SGFramework::Application}!productName@{productName}}
+\index{productName@{productName}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{productName}{productName}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ sgstring $>$ S\+G\+Framework\+::\+Application\+::product\+Name\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_ae95a536bd7df7d43c566a64bed513f0c}\label{class_s_g_framework_1_1_application_ae95a536bd7df7d43c566a64bed513f0c}} 
+\index{SGFramework::Application@{SGFramework::Application}!version@{version}}
+\index{version@{version}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ sgstring $>$ S\+G\+Framework\+::\+Application\+::version\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_application_a55073c743d39ebbed3e5cde472b4ba13}\label{class_s_g_framework_1_1_application_a55073c743d39ebbed3e5cde472b4ba13}} 
+\index{SGFramework::Application@{SGFramework::Application}!windowName@{windowName}}
+\index{windowName@{windowName}!SGFramework::Application@{SGFramework::Application}}
+\doxysubsubsection{\texorpdfstring{windowName}{windowName}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ sgstring $>$ S\+G\+Framework\+::\+Application\+::window\+Name\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/97\+\_\+\+Application/\mbox{\hyperlink{_application_8hpp}{Application.\+hpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/97\+\_\+\+Application/\mbox{\hyperlink{_application_8cpp}{Application.\+cpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/97\+\_\+\+Application/\mbox{\hyperlink{_application_import_setting_8cpp}{Application\+Import\+Setting.\+cpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/97\+\_\+\+Application/\mbox{\hyperlink{_application_main_8cpp}{Application\+Main.\+cpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/97\+\_\+\+Application/\mbox{\hyperlink{_application_start_up_shut_down_8cpp}{Application\+Start\+Up\+Shut\+Down.\+cpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/97\+\_\+\+Application/\mbox{\hyperlink{_application_window_create_8cpp}{Application\+Window\+Create.\+cpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/97\+\_\+\+Application/\mbox{\hyperlink{_window_procedure_8cpp}{Window\+Procedure.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,195 @@
+\hypertarget{game_8cpp}{}\doxysection{D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/game.cpp 繝輔ぃ繧､繝ｫ}
+\label{game_8cpp}\index{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/game.cpp@{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/game.cpp}}
+
+
+~\newline
+  
+
+
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$Crtdbg.\+h$>$}\newline
+{\ttfamily \#include $<$Direct\+X\+Math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}D\+X11util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+Model.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+Camera.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+Direct\+Input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+X11\+Settransform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dx11mathutil.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}explosion.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$random$>$}\newline
+\doxysubsection*{髢｢謨ｰ}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{game_8cpp_a8411d7f81eb9554a1751e0387a334f40}{Game\+Init}} (H\+I\+N\+S\+T\+A\+N\+CE hinst, H\+W\+ND hwnd, int width, int height, bool fullscreen)
+\item 
+void \mbox{\hyperlink{game_8cpp_a6b3cc8641a89992cd04baba644a7dc0a}{Game\+Input}} ()
+\begin{DoxyCompactList}\small\item\em ソ+Q―mbox{[}ム入力検知処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8cpp_a145c27960d48ba0507d25cd31a04a6d2}{Game\+Update}} ()
+\begin{DoxyCompactList}\small\item\em ソ+Q―mbox{[}ム構+X申+V処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8cpp_a0d2aa93fb54121c25e22f9178ca30ffc}{Game\+Render}} ()
+\begin{DoxyCompactList}\small\item\em ソ+Q―mbox{[}ム構+X申+V処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8cpp_a99bcf1aa8115dbf329153a93c8f8ba99}{Game\+Main}} ()
+\begin{DoxyCompactList}\small\item\em ソ+Q―mbox{[}ムル―mbox{[}プ処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8cpp_a5191e26efa344e5c873830e436f18524}{Game\+Exit}} ()
+\begin{DoxyCompactList}\small\item\em ソ+Q―mbox{[}ム十+I了処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{螟画焚}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_model}{C\+Model}} \mbox{\hyperlink{game_8cpp_ab74f508f809eb6abf5fbacc43c3a7cb4}{g\+\_\+airplane}}
+\item 
+X\+M\+F\+L\+O\+A\+T4\+X4 \mbox{\hyperlink{game_8cpp_a96ae5a381360c67a9b91045924656a21}{g\+\_\+matairplane}}
+\item 
+\mbox{\hyperlink{class_c_model}{C\+Model}} \mbox{\hyperlink{game_8cpp_a7917200e95f966b1796ccebe22385051}{g\+\_\+skydome}}
+\item 
+X\+M\+F\+L\+O\+A\+T4\+X4 \mbox{\hyperlink{game_8cpp_a692ca56ca5a8f11bc4b72ef5182d7e39}{g\+\_\+matskydome}}
+\item 
+float \mbox{\hyperlink{game_8cpp_a809026cbae6338ebcf9995fa71424673}{g\+\_\+speed}} = 10.\+0f
+\item 
+float \mbox{\hyperlink{game_8cpp_a7f42223b140c9fdeaae17453a338ec3b}{g\+\_\+rot\+Speed}} = 40.\+0f
+\item 
+bool \mbox{\hyperlink{game_8cpp_a92ade5a25c32dffa7d85b6e40c8519dc}{g\+\_\+explosionflag}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{隧ｳ隗｣}
+~\newline
+ 
+
+\begin{DoxyNote}{隕壹∴譖ｸ縺閤
+ソ+Q―mbox{[}ム処理 
+\end{DoxyNote}
+\begin{DoxyAuthor}{闡苓�}
+~\newline
+ 
+\end{DoxyAuthor}
+
+
+\doxysubsection{髢｢謨ｰ隧ｳ隗｣}
+\mbox{\Hypertarget{game_8cpp_a5191e26efa344e5c873830e436f18524}\label{game_8cpp_a5191e26efa344e5c873830e436f18524}} 
+\index{game.cpp@{game.cpp}!GameExit@{GameExit}}
+\index{GameExit@{GameExit}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{GameExit()}{GameExit()}}
+{\footnotesize\ttfamily Game\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ソ+Q―mbox{[}ム十+I了処理 
+
+
+\begin{DoxyParams}{蠑墓焚}
+{\em ± & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8cpp_a8411d7f81eb9554a1751e0387a334f40}\label{game_8cpp_a8411d7f81eb9554a1751e0387a334f40}} 
+\index{game.cpp@{game.cpp}!GameInit@{GameInit}}
+\index{GameInit@{GameInit}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{GameInit()}{GameInit()}}
+{\footnotesize\ttfamily bool Game\+Init (\begin{DoxyParamCaption}\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{hinst,  }\item[{H\+W\+ND}]{hwnd,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{bool}]{fullscreen }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{game_8cpp_a6b3cc8641a89992cd04baba644a7dc0a}\label{game_8cpp_a6b3cc8641a89992cd04baba644a7dc0a}} 
+\index{game.cpp@{game.cpp}!GameInput@{GameInput}}
+\index{GameInput@{GameInput}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{GameInput()}{GameInput()}}
+{\footnotesize\ttfamily Game\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ソ+Q―mbox{[}ム入力検知処理 
+
+
+\begin{DoxyParams}{蠑墓焚}
+{\em ± & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8cpp_a99bcf1aa8115dbf329153a93c8f8ba99}\label{game_8cpp_a99bcf1aa8115dbf329153a93c8f8ba99}} 
+\index{game.cpp@{game.cpp}!GameMain@{GameMain}}
+\index{GameMain@{GameMain}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{GameMain()}{GameMain()}}
+{\footnotesize\ttfamily Game\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ソ+Q―mbox{[}ムル―mbox{[}プ処理 
+
+
+\begin{DoxyParams}{蠑墓焚}
+{\em ± & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8cpp_a0d2aa93fb54121c25e22f9178ca30ffc}\label{game_8cpp_a0d2aa93fb54121c25e22f9178ca30ffc}} 
+\index{game.cpp@{game.cpp}!GameRender@{GameRender}}
+\index{GameRender@{GameRender}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{GameRender()}{GameRender()}}
+{\footnotesize\ttfamily Game\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ソ+Q―mbox{[}ム構+X申+V処理 
+
+
+\begin{DoxyParams}{蠑墓焚}
+{\em ± & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8cpp_a145c27960d48ba0507d25cd31a04a6d2}\label{game_8cpp_a145c27960d48ba0507d25cd31a04a6d2}} 
+\index{game.cpp@{game.cpp}!GameUpdate@{GameUpdate}}
+\index{GameUpdate@{GameUpdate}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{GameUpdate()}{GameUpdate()}}
+{\footnotesize\ttfamily Game\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ソ+Q―mbox{[}ム構+X申+V処理 
+
+
+\begin{DoxyParams}{蠑墓焚}
+{\em ± & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{螟画焚隧ｳ隗｣}
+\mbox{\Hypertarget{game_8cpp_ab74f508f809eb6abf5fbacc43c3a7cb4}\label{game_8cpp_ab74f508f809eb6abf5fbacc43c3a7cb4}} 
+\index{game.cpp@{game.cpp}!g\_airplane@{g\_airplane}}
+\index{g\_airplane@{g\_airplane}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_airplane}{g\_airplane}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_model}{C\+Model}} g\+\_\+airplane}
+
+\mbox{\Hypertarget{game_8cpp_a92ade5a25c32dffa7d85b6e40c8519dc}\label{game_8cpp_a92ade5a25c32dffa7d85b6e40c8519dc}} 
+\index{game.cpp@{game.cpp}!g\_explosionflag@{g\_explosionflag}}
+\index{g\_explosionflag@{g\_explosionflag}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_explosionflag}{g\_explosionflag}}
+{\footnotesize\ttfamily bool g\+\_\+explosionflag = false}
+
+\mbox{\Hypertarget{game_8cpp_a96ae5a381360c67a9b91045924656a21}\label{game_8cpp_a96ae5a381360c67a9b91045924656a21}} 
+\index{game.cpp@{game.cpp}!g\_matairplane@{g\_matairplane}}
+\index{g\_matairplane@{g\_matairplane}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_matairplane}{g\_matairplane}}
+{\footnotesize\ttfamily X\+M\+F\+L\+O\+A\+T4\+X4 g\+\_\+matairplane}
+
+\mbox{\Hypertarget{game_8cpp_a692ca56ca5a8f11bc4b72ef5182d7e39}\label{game_8cpp_a692ca56ca5a8f11bc4b72ef5182d7e39}} 
+\index{game.cpp@{game.cpp}!g\_matskydome@{g\_matskydome}}
+\index{g\_matskydome@{g\_matskydome}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_matskydome}{g\_matskydome}}
+{\footnotesize\ttfamily X\+M\+F\+L\+O\+A\+T4\+X4 g\+\_\+matskydome}
+
+\mbox{\Hypertarget{game_8cpp_a7f42223b140c9fdeaae17453a338ec3b}\label{game_8cpp_a7f42223b140c9fdeaae17453a338ec3b}} 
+\index{game.cpp@{game.cpp}!g\_rotSpeed@{g\_rotSpeed}}
+\index{g\_rotSpeed@{g\_rotSpeed}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_rotSpeed}{g\_rotSpeed}}
+{\footnotesize\ttfamily float g\+\_\+rot\+Speed = 40.\+0f}
+
+\mbox{\Hypertarget{game_8cpp_a7917200e95f966b1796ccebe22385051}\label{game_8cpp_a7917200e95f966b1796ccebe22385051}} 
+\index{game.cpp@{game.cpp}!g\_skydome@{g\_skydome}}
+\index{g\_skydome@{g\_skydome}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_skydome}{g\_skydome}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_model}{C\+Model}} g\+\_\+skydome}
+
+\mbox{\Hypertarget{game_8cpp_a809026cbae6338ebcf9995fa71424673}\label{game_8cpp_a809026cbae6338ebcf9995fa71424673}} 
+\index{game.cpp@{game.cpp}!g\_speed@{g\_speed}}
+\index{g\_speed@{g\_speed}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_speed}{g\_speed}}
+{\footnotesize\ttfamily float g\+\_\+speed = 10.\+0f}
+

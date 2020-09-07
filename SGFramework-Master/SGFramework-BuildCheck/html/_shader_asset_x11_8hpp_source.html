@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/05_Graphics/DirectX11/ShaderAsset/ShaderAssetX11.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_3179bfb1337b5dc243543deb8f1fb9cf.html">05_Graphics</a></li><li class="navelem"><a class="el" href="dir_2a4559de03f6cae991f9fd49f0dc1978.html">DirectX11</a></li><li class="navelem"><a class="el" href="dir_15751b8c9d2e557ae72d4cc4c0bab156.html">ShaderAsset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ShaderAssetX11.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_shader_asset_x11_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">DirectX11 ShaderAssetのベースとなるBaseShaderAssetX11 class</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_SHADER_ASSET_X11_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_SHADER_ASSET_X11_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;d3dcompiler.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../../../04_Asset/FileStream/FileStream.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../../../04_Asset/Asset/BaseAsset.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// Framework namespace</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//Base Classes</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">namespace </span>BaseClass</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">//DirectX11 ShaderAssetのベースとなるBaseShaderAssetX11 class</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html">   18</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html">BaseShaderAssetX11</a> : <span class="keyword">public</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html">BaseClass::BaseAsset</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="comment">//default</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a548053ed3b080b612cf54195da12ca71">   22</a></span>&#160;            <span class="keyword">inline</span> <span class="keyword">virtual</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a548053ed3b080b612cf54195da12ca71">~BaseShaderAssetX11</a>()<span class="keyword"> override </span>{ }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="comment">//[Reload]</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="comment">//アセットのリロードを行う</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a598855e983f0d87e8b0636ad8ed7de60">   27</a></span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a598855e983f0d87e8b0636ad8ed7de60">Reload</a>() = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="comment">//[Close]</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="comment">//ファイルを閉じる</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a85cfc1ec8bc30877c4f201232e681a8b">   31</a></span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a85cfc1ec8bc30877c4f201232e681a8b">Close</a>() = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="comment">//set shader graphics (draw function only property)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a3a0bc7a0944cfc1e710ed3ad8c179fd2">   34</a></span>&#160;            SGF_FUNCTION_PROPERTY <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a3a0bc7a0944cfc1e710ed3ad8c179fd2">setShader</a>() = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="comment">//default</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#abfbd3ea5f26140b0628fe48289327c3a">   38</a></span>&#160;            <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#abfbd3ea5f26140b0628fe48289327c3a">BaseShaderAssetX11</a>() : <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html">BaseAsset</a>() {}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="comment">//[Compile]</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="comment">//シェーダーをコンパイルする</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="comment">//引数1: ファイルネーム</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="comment">//引数2: blob</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="comment">//引数3: シェーダーモデル</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="comment">//引数4: エントリーポイント</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a8fbe8f9bf3cc777929adaf1d73bd8440">Compile</a>(<span class="keyword">const</span> sgstring&amp; filePath, <span class="keyword">const</span> std::string&amp; shaderModel, <span class="keyword">const</span> std::string&amp; entryPoint = <span class="stringliteral">&quot;main&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">//[ReleaseShader]</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">//シェーダーを開放する</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#aeb6304601ee9efc23b9d3d2e8e39cfe4">   51</a></span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#aeb6304601ee9efc23b9d3d2e8e39cfe4">ReleaseShader</a>() = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a8dc9f462f8a1e454a50e45056fd4d38f">   53</a></span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a8dc9f462f8a1e454a50e45056fd4d38f">m_cReadBlob</a> = 0x1;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#ac4730b665a0d3aabd4f573efa3ad46ef">   54</a></span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#ac4730b665a0d3aabd4f573efa3ad46ef">m_cReadVector</a> = 0x2;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="comment">//blob</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#ac984b1117bc0bea477c1ba6c06ed0b99">   57</a></span>&#160;            ID3DBlob* <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#ac984b1117bc0bea477c1ba6c06ed0b99">m_blob</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="comment">//byteData</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a0d552dfc1a9834d6f842301b42e01922">   59</a></span>&#160;            std::vector&lt;byte&gt; <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a0d552dfc1a9834d6f842301b42e01922">m_byteData</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        };</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">//[Compile]</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">//シェーダーをコンパイルする</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">//引数1: ファイルネーム</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">//引数2: blob</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//引数3: シェーダーモデル</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//引数4: エントリーポイント</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a8fbe8f9bf3cc777929adaf1d73bd8440">   69</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a8fbe8f9bf3cc777929adaf1d73bd8440">BaseShaderAssetX11::Compile</a>(<span class="keyword">const</span> sgstring&amp; filePath, <span class="keyword">const</span> std::string&amp; shaderModel, <span class="keyword">const</span> std::string&amp; entryPoint)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            sgstring find = filePath.my_functions.FindExtension();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="comment">//read cso</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span> (find == L<span class="stringliteral">&quot;.cso&quot;</span>)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <a class="code" href="class_s_g_framework_1_1_file_1_1_file_read_stream.html">File::FileReadStream</a> read;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="keywordflow">try</span> { read.<a class="code" href="class_s_g_framework_1_1_file_1_1_file_read_stream.html#ac5707c894d4a112e9685bc76a7c5a6a1">Open</a>(filePath, <span class="keyword">true</span>, <span class="keyword">true</span>); }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordflow">catch</span> (...) { <span class="keywordflow">throw</span>; }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                std::string readData(read.<a class="code" href="class_s_g_framework_1_1_file_1_1_file_read_stream.html#aece16746bed5b52a75efde889279b89d">ReadStd</a>());</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span> e : readData)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a0d552dfc1a9834d6f842301b42e01922">m_byteData</a>.emplace_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">byte</span><span class="keyword">&gt;</span>(e));</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="comment">//hlsl or fx</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (find == L<span class="stringliteral">&quot;.hlsl&quot;</span> || find == L<span class="stringliteral">&quot;fx&quot;</span>)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="comment">//エラー用</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                ID3DBlob* error = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="comment">//フラグ</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> flag = D3DCOMPILE_ENABLE_STRICTNESS;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#ifdef DEBUG</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                flag |= D3DCOMPILE_DEBUG;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif // DEBUG</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="comment">//コンパイル</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keyword">auto</span> result = D3DCompileFromFile(filePath.c_str(), <span class="keyword">nullptr</span>, D3D_COMPILE_STANDARD_FILE_INCLUDE,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    entryPoint.c_str(), shaderModel.c_str(), flag, 0, &amp;<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#ac984b1117bc0bea477c1ba6c06ed0b99">m_blob</a>, &amp;error);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="comment">//失敗</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">if</span> (FAILED(result))</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    InvalidArgument errorResult = InvalidArgument(L<span class="stringliteral">&quot;Error!! ShaderAssetX11-&gt;Compile&quot;</span>, (error-&gt;GetBufferPointer()) ? <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a>*<span class="keyword">&gt;</span>(error-&gt;GetBufferPointer()) : 0);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    error-&gt;Release();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    <span class="keywordflow">throw</span> errorResult;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="comment">//開放</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <a class="code" href="_macro_and_using_8hpp.html#a82ae160dbe195f3c7c84c14db0ebdce2">COM_RELEASE</a>(error);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">throw</span> InvalidArgument(L<span class="stringliteral">&quot;Error!! ShaderAssetX11-&gt;Compile&quot;</span>, </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    L<span class="stringliteral">&quot;File format Only .cso or .hlsl or .fx are supported&quot;</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_SHADER_ASSET_X11_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_s_g_framework_1_1_file_1_1_file_read_stream_html"><div class="ttname"><a href="class_s_g_framework_1_1_file_1_1_file_read_stream.html">SGFramework::File::FileReadStream</a></div><div class="ttdef"><b>Definition:</b> FileReadStream.hpp:23</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11_html_abfbd3ea5f26140b0628fe48289327c3a"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#abfbd3ea5f26140b0628fe48289327c3a">SGFramework::BaseClass::BaseShaderAssetX11::BaseShaderAssetX11</a></div><div class="ttdeci">BaseShaderAssetX11()</div><div class="ttdef"><b>Definition:</b> ShaderAssetX11.hpp:38</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_asset_html"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_asset.html">SGFramework::BaseClass::BaseAsset</a></div><div class="ttdef"><b>Definition:</b> BaseAsset.hpp:173</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11_html_a85cfc1ec8bc30877c4f201232e681a8b"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a85cfc1ec8bc30877c4f201232e681a8b">SGFramework::BaseClass::BaseShaderAssetX11::Close</a></div><div class="ttdeci">virtual void Close()=0</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11_html_a8dc9f462f8a1e454a50e45056fd4d38f"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a8dc9f462f8a1e454a50e45056fd4d38f">SGFramework::BaseClass::BaseShaderAssetX11::m_cReadBlob</a></div><div class="ttdeci">static constexpr uint m_cReadBlob</div><div class="ttdef"><b>Definition:</b> ShaderAssetX11.hpp:53</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11_html_ac984b1117bc0bea477c1ba6c06ed0b99"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#ac984b1117bc0bea477c1ba6c06ed0b99">SGFramework::BaseClass::BaseShaderAssetX11::m_blob</a></div><div class="ttdeci">ID3DBlob * m_blob</div><div class="ttdef"><b>Definition:</b> ShaderAssetX11.hpp:57</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:151</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11_html_ac4730b665a0d3aabd4f573efa3ad46ef"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#ac4730b665a0d3aabd4f573efa3ad46ef">SGFramework::BaseClass::BaseShaderAssetX11::m_cReadVector</a></div><div class="ttdeci">static constexpr uint m_cReadVector</div><div class="ttdef"><b>Definition:</b> ShaderAssetX11.hpp:54</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11_html_a598855e983f0d87e8b0636ad8ed7de60"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a598855e983f0d87e8b0636ad8ed7de60">SGFramework::BaseClass::BaseShaderAssetX11::Reload</a></div><div class="ttdeci">virtual void Reload()=0</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11_html_a3a0bc7a0944cfc1e710ed3ad8c179fd2"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a3a0bc7a0944cfc1e710ed3ad8c179fd2">SGFramework::BaseClass::BaseShaderAssetX11::setShader</a></div><div class="ttdeci">virtual SGF_FUNCTION_PROPERTY void setShader()=0</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a7f41ac37dc0d3ba6fa22b37126f944cb"><div class="ttname"><a href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">SGFramework::wchar</a></div><div class="ttdeci">wchar_t wchar</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:148</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11_html_a548053ed3b080b612cf54195da12ca71"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a548053ed3b080b612cf54195da12ca71">SGFramework::BaseClass::BaseShaderAssetX11::~BaseShaderAssetX11</a></div><div class="ttdeci">virtual ~BaseShaderAssetX11() override</div><div class="ttdef"><b>Definition:</b> ShaderAssetX11.hpp:22</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11_html_a8fbe8f9bf3cc777929adaf1d73bd8440"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a8fbe8f9bf3cc777929adaf1d73bd8440">SGFramework::BaseClass::BaseShaderAssetX11::Compile</a></div><div class="ttdeci">void Compile(const sgstring &amp;filePath, const std::string &amp;shaderModel, const std::string &amp;entryPoint=&quot;main&quot;)</div><div class="ttdef"><b>Definition:</b> ShaderAssetX11.hpp:69</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_a82ae160dbe195f3c7c84c14db0ebdce2"><div class="ttname"><a href="_macro_and_using_8hpp.html#a82ae160dbe195f3c7c84c14db0ebdce2">COM_RELEASE</a></div><div class="ttdeci">#define COM_RELEASE(pointer)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:79</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_file_1_1_file_read_stream_html_ac5707c894d4a112e9685bc76a7c5a6a1"><div class="ttname"><a href="class_s_g_framework_1_1_file_1_1_file_read_stream.html#ac5707c894d4a112e9685bc76a7c5a6a1">SGFramework::File::FileReadStream::Open</a></div><div class="ttdeci">void Open(const sgstring &amp;path, bool isBinary=false, bool isInvalidUtf8=false)</div><div class="ttdef"><b>Definition:</b> FileReadStream.hpp:190</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html">SGFramework::BaseClass::BaseShaderAssetX11</a></div><div class="ttdef"><b>Definition:</b> ShaderAssetX11.hpp:19</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_file_1_1_file_read_stream_html_aece16746bed5b52a75efde889279b89d"><div class="ttname"><a href="class_s_g_framework_1_1_file_1_1_file_read_stream.html#aece16746bed5b52a75efde889279b89d">SGFramework::File::FileReadStream::ReadStd</a></div><div class="ttdeci">std::string ReadStd()</div><div class="ttdef"><b>Definition:</b> FileReadStream.hpp:245</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11_html_aeb6304601ee9efc23b9d3d2e8e39cfe4"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#aeb6304601ee9efc23b9d3d2e8e39cfe4">SGFramework::BaseClass::BaseShaderAssetX11::ReleaseShader</a></div><div class="ttdeci">virtual void ReleaseShader()=0</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11_html_a0d552dfc1a9834d6f842301b42e01922"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html#a0d552dfc1a9834d6f842301b42e01922">SGFramework::BaseClass::BaseShaderAssetX11::m_byteData</a></div><div class="ttdeci">std::vector&lt; byte &gt; m_byteData</div><div class="ttdef"><b>Definition:</b> ShaderAssetX11.hpp:59</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

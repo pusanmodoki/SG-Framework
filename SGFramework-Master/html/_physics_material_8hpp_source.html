@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/10_Physics/PhysicsMaterial.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_143bd857002117c0903e75b9b3cb038e.html">10_Physics</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PhysicsMaterial.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_physics_material_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">物理マテリアルを定義するPhysicsMaterial</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_PHYSICS_MATERIAL_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_PHYSICS_MATERIAL_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../02_CustomVariable/CustomVariable.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_phys_x_include_8hpp.html">PhysXInclude.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//friend</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">class </span>Physics;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">//物理マテリアルを定義するPhysicsMaterial</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_physics_material.html">PhysicsMaterial</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">//friend</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html#a2bfcbae6c8e1d7af93c5ac1200b1535c">   20</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_physics.html">Physics</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">//nullptrに設定される</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html#aa0a608736a8241a793385f928c6fa14d">   24</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_physics_material.html#aa0a608736a8241a793385f928c6fa14d">PhysicsMaterial</a>() : m_material(nullptr) {}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">//代入初期化を行う</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">//引数1: 静止摩擦係数</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">//引数2: 動的摩擦係数</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">//引数3: 反発係数</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html#ac2e8b4b763185525242079cdb530ba6b">   31</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_physics_material.html#ac2e8b4b763185525242079cdb530ba6b">PhysicsMaterial</a>(<span class="keywordtype">float</span> staticFriction, <span class="keywordtype">float</span> dynamicFriction, <span class="keywordtype">float</span> restitution) : m_material(nullptr)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            m_material = <a class="code" href="class_s_g_framework_1_1_physics_material.html#a2bfcbae6c8e1d7af93c5ac1200b1535c">Physics</a>()-&gt;createMaterial(staticFriction, dynamicFriction, restitution);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span> (m_material == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordflow">throw</span> InvalidArgument(L<span class="stringliteral">&quot;Error!! PhysicsMaterial-&gt;Constructor&quot;</span>, L<span class="stringliteral">&quot;createMaterial failed&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">//コピーを行う</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">//引数1: copy</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html#ad7cb0b692c87bf3f8201b7e8d703cece">   41</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_physics_material.html#ad7cb0b692c87bf3f8201b7e8d703cece">PhysicsMaterial</a>(<span class="keyword">const</span> <a class="code" href="class_s_g_framework_1_1_physics_material.html">PhysicsMaterial</a>&amp; copy) : m_material(nullptr)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="_macro_and_using_8hpp.html#a8d30afbf67e3534c013b949ba7897426">PHYSX_RELEASE</a>(m_material);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            m_material = copy.m_material;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">if</span> (m_material) m_material-&gt;acquireReference();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">//ムーブを行う</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">//引数1: move</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html#a7a8df7ab78301df1cacbad668b6f97e9">   51</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_physics_material.html#a7a8df7ab78301df1cacbad668b6f97e9">PhysicsMaterial</a>(<a class="code" href="class_s_g_framework_1_1_physics_material.html">PhysicsMaterial</a>&amp;&amp; move) : m_material(move.m_material)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            move.m_material = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">//[デストラクタ]</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html#aa3205342cb20254436ffb99c0325d3d3">   57</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_physics_material.html#aa3205342cb20254436ffb99c0325d3d3">~PhysicsMaterial</a>() { <a class="code" href="_macro_and_using_8hpp.html#a8d30afbf67e3534c013b949ba7897426">PHYSX_RELEASE</a>(m_material); }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">//[Release]</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">//内部ポインタの開放を行う</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html#a7fdf51b0c7c212bbaeb68d7045b5dace">   61</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_physics_material.html#a7fdf51b0c7c212bbaeb68d7045b5dace">Release</a>() { <a class="code" href="_macro_and_using_8hpp.html#a8d30afbf67e3534c013b949ba7897426">PHYSX_RELEASE</a>(m_material); }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">//PxMaterial cast operator</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html#af059c0ab4e1545c45c2ed69b4f0f3de1">   64</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">operator</span> physx::PxMaterial*() <span class="keyword">const</span> { <span class="keywordflow">return</span> m_material; }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">//() operator, return-&gt;PxMaterial*</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html#ab2a22a67b212f98b734d84aa72f73082">   66</a></span>&#160;        <span class="keyword">inline</span> physx::PxMaterial* <a class="code" href="class_s_g_framework_1_1_physics_material.html#ab2a22a67b212f98b734d84aa72f73082">operator () </a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_material; }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//-&gt; operator, return-&gt;PxMaterial*</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html#a13b74dbc5310d75992ca675d362b339d">   68</a></span>&#160;        <span class="keyword">inline</span> physx::PxMaterial* <a class="code" href="class_s_g_framework_1_1_physics_material.html#a13b74dbc5310d75992ca675d362b339d">operator -&gt; </a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_material; }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">//* operator, return-&gt;PxMaterial&amp;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html#aba2d007f4844f3c6d171dad3e8ba8764">   70</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">const</span> physx::PxMaterial&amp; <a class="code" href="class_s_g_framework_1_1_physics_material.html#aba2d007f4844f3c6d171dad3e8ba8764">operator * </a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *m_material; }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="comment">//copy operator, return-&gt;this</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html#ad2ae006c886b6ec5bfc8dd3a44907599">   72</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_s_g_framework_1_1_physics_material.html">PhysicsMaterial</a>&amp; <a class="code" href="class_s_g_framework_1_1_physics_material.html#ad2ae006c886b6ec5bfc8dd3a44907599">operator = </a>(<span class="keyword">const</span> <a class="code" href="class_s_g_framework_1_1_physics_material.html">PhysicsMaterial</a>&amp; copy)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <a class="code" href="_macro_and_using_8hpp.html#a8d30afbf67e3534c013b949ba7897426">PHYSX_RELEASE</a>(m_material);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            m_material = copy.m_material;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> (m_material) m_material-&gt;acquireReference();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">//move operator, return-&gt;this</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_physics_material.html#a8c2c0a9666a9c81a850d08c7f974339b">   80</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_physics_material.html">PhysicsMaterial</a>&amp; <a class="code" href="class_s_g_framework_1_1_physics_material.html#ad2ae006c886b6ec5bfc8dd3a44907599">operator = </a>(<a class="code" href="class_s_g_framework_1_1_physics_material.html">PhysicsMaterial</a>&amp;&amp; move)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <a class="code" href="_macro_and_using_8hpp.html#a8d30afbf67e3534c013b949ba7897426">PHYSX_RELEASE</a>(m_material);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            m_material = move.m_material;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            move.m_material = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">//[Physics]</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">//return: PxPhysics*</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">static</span> physx::PxPhysics*&amp; <a class="code" href="class_s_g_framework_1_1_physics_material.html#a2bfcbae6c8e1d7af93c5ac1200b1535c">Physics</a>() { <span class="keyword">static</span> physx::PxPhysics* pointer = <span class="keyword">nullptr</span>; <span class="keywordflow">return</span> pointer; }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">//material</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        physx::PxMaterial* m_material = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    };</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_PHYSICS_MATERIAL_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_material_html_aa0a608736a8241a793385f928c6fa14d"><div class="ttname"><a href="class_s_g_framework_1_1_physics_material.html#aa0a608736a8241a793385f928c6fa14d">SGFramework::PhysicsMaterial::PhysicsMaterial</a></div><div class="ttdeci">PhysicsMaterial()</div><div class="ttdef"><b>Definition:</b> PhysicsMaterial.hpp:24</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_a8d30afbf67e3534c013b949ba7897426"><div class="ttname"><a href="_macro_and_using_8hpp.html#a8d30afbf67e3534c013b949ba7897426">PHYSX_RELEASE</a></div><div class="ttdeci">#define PHYSX_RELEASE(pointer)</div><div class="ttdoc">physx等のポインタをnullptrチェック→release &amp; nullptr代入するマクロ</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:81</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_material_html_ad2ae006c886b6ec5bfc8dd3a44907599"><div class="ttname"><a href="class_s_g_framework_1_1_physics_material.html#ad2ae006c886b6ec5bfc8dd3a44907599">SGFramework::PhysicsMaterial::operator=</a></div><div class="ttdeci">const PhysicsMaterial &amp; operator=(const PhysicsMaterial &amp;copy)</div><div class="ttdef"><b>Definition:</b> PhysicsMaterial.hpp:72</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_material_html_aa3205342cb20254436ffb99c0325d3d3"><div class="ttname"><a href="class_s_g_framework_1_1_physics_material.html#aa3205342cb20254436ffb99c0325d3d3">SGFramework::PhysicsMaterial::~PhysicsMaterial</a></div><div class="ttdeci">~PhysicsMaterial()</div><div class="ttdef"><b>Definition:</b> PhysicsMaterial.hpp:57</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_material_html_aba2d007f4844f3c6d171dad3e8ba8764"><div class="ttname"><a href="class_s_g_framework_1_1_physics_material.html#aba2d007f4844f3c6d171dad3e8ba8764">SGFramework::PhysicsMaterial::operator*</a></div><div class="ttdeci">const physx::PxMaterial &amp; operator*() const</div><div class="ttdef"><b>Definition:</b> PhysicsMaterial.hpp:70</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_material_html_ab2a22a67b212f98b734d84aa72f73082"><div class="ttname"><a href="class_s_g_framework_1_1_physics_material.html#ab2a22a67b212f98b734d84aa72f73082">SGFramework::PhysicsMaterial::operator()</a></div><div class="ttdeci">physx::PxMaterial * operator()() const</div><div class="ttdef"><b>Definition:</b> PhysicsMaterial.hpp:66</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_material_html_a7fdf51b0c7c212bbaeb68d7045b5dace"><div class="ttname"><a href="class_s_g_framework_1_1_physics_material.html#a7fdf51b0c7c212bbaeb68d7045b5dace">SGFramework::PhysicsMaterial::Release</a></div><div class="ttdeci">void Release()</div><div class="ttdef"><b>Definition:</b> PhysicsMaterial.hpp:61</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_html"><div class="ttname"><a href="class_s_g_framework_1_1_physics.html">SGFramework::Physics</a></div><div class="ttdef"><b>Definition:</b> Physics.hpp:28</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_material_html"><div class="ttname"><a href="class_s_g_framework_1_1_physics_material.html">SGFramework::PhysicsMaterial</a></div><div class="ttdef"><b>Definition:</b> PhysicsMaterial.hpp:17</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_material_html_a7a8df7ab78301df1cacbad668b6f97e9"><div class="ttname"><a href="class_s_g_framework_1_1_physics_material.html#a7a8df7ab78301df1cacbad668b6f97e9">SGFramework::PhysicsMaterial::PhysicsMaterial</a></div><div class="ttdeci">PhysicsMaterial(PhysicsMaterial &amp;&amp;move)</div><div class="ttdef"><b>Definition:</b> PhysicsMaterial.hpp:51</div></div>
+<div class="ttc" id="a_phys_x_include_8hpp_html"><div class="ttname"><a href="_phys_x_include_8hpp.html">PhysXInclude.hpp</a></div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_material_html_ac2e8b4b763185525242079cdb530ba6b"><div class="ttname"><a href="class_s_g_framework_1_1_physics_material.html#ac2e8b4b763185525242079cdb530ba6b">SGFramework::PhysicsMaterial::PhysicsMaterial</a></div><div class="ttdeci">PhysicsMaterial(float staticFriction, float dynamicFriction, float restitution)</div><div class="ttdef"><b>Definition:</b> PhysicsMaterial.hpp:31</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_material_html_ad7cb0b692c87bf3f8201b7e8d703cece"><div class="ttname"><a href="class_s_g_framework_1_1_physics_material.html#ad7cb0b692c87bf3f8201b7e8d703cece">SGFramework::PhysicsMaterial::PhysicsMaterial</a></div><div class="ttdeci">PhysicsMaterial(const PhysicsMaterial &amp;copy)</div><div class="ttdef"><b>Definition:</b> PhysicsMaterial.hpp:41</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_material_html_a13b74dbc5310d75992ca675d362b339d"><div class="ttname"><a href="class_s_g_framework_1_1_physics_material.html#a13b74dbc5310d75992ca675d362b339d">SGFramework::PhysicsMaterial::operator-&gt;</a></div><div class="ttdeci">physx::PxMaterial * operator-&gt;() const</div><div class="ttdef"><b>Definition:</b> PhysicsMaterial.hpp:68</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_material_html_a2bfcbae6c8e1d7af93c5ac1200b1535c"><div class="ttname"><a href="class_s_g_framework_1_1_physics_material.html#a2bfcbae6c8e1d7af93c5ac1200b1535c">SGFramework::PhysicsMaterial::Physics</a></div><div class="ttdeci">friend class Physics</div><div class="ttdef"><b>Definition:</b> PhysicsMaterial.hpp:20</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

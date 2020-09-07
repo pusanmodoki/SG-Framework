@@ -1,0 +1,776 @@
+\hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{}\doxysection{S\+G\+Framework\+::Administrator\+::Graphics\+Detail\+::Transform\+X11 クラス}
+\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+
+
+{\ttfamily \#include $<$Transform\+X11.\+hpp$>$}
+
+S\+G\+Framework\+::Administrator\+::Graphics\+Detail\+::Transform\+X11 の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}
+\end{center}
+\end{figure}
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_1_1_lock_guard_transform}{Lock\+Guard\+Transform}}
+\item 
+struct \mbox{\hyperlink{struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_1_1_transform_variables}{Transform\+Variables}}
+\end{DoxyCompactItemize}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a92140532c88ed0d8913e73bc602a18ac}{D\+E\+L\+E\+T\+E\+\_\+\+A\+L\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}} (\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}})
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7649eb607fea083df55a157e8a37249c}{$\sim$\+Transform\+X11}} ()
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a10f4bfff582266deee895b25449777d5}{Translate}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&translate)
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1525502898ae6a24464bcffa7341c43e}{Translate\+Local}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&translate)
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a8f374ea603695d666e5255f531b91487}{Rotate}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&quaternion)
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3659a054d7416b7e75dac9fe0db9d89a}{Rotate\+Local}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&quaternion)
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a682e58a01bbe4f288928f24530508ecf}{Resize}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&magnification)
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aef1a2e6421ee517f0006429a0f58a57f}{Resize\+Local}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&magnification)
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7523378474d6da2da7841bce1e90eb97}{Find\+Root}} ()
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3d7d9e0057428b741c28a2446c864be1}{Is\+Target\+My\+Upper\+Hierarchy}} (const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \&target)
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a86627c03e7521a92bcd9ff7bee0c00fe}{Is\+Target\+My\+Upper\+Hierarchy}} (const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \&target)
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3a98f2f3449204eb3036a200df1102df}{Register\+Parent}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ parent)
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a9d143b3e15657d676baf848a29b813d1}{Register\+Children}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ children)
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_acf0c0ac79a76911d91b81c350e608cb2}{Find\+Children}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac8e19ecd77b64c0aeae4146044f63e1c}{Find\+Children\+Ex}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a8de1b1ab92de82d190dce5e3503753bc}{Find\+Children\+Index}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1406aec7aae8ffb1a85fde9c2c122356}{Find\+Children\+Index\+Ex}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a20887f9ffe3161064d4e9a5ed0b8b99f}{Under\+Take\+Children}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a0678dd074e4ee4ac4372b43cf4315284}{transform}}, \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} index)
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a974dfad06f7a5ab1ab9ee66ca2977410}{Under\+Take\+Children}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a0678dd074e4ee4ac4372b43cf4315284}{transform}}, const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae690dc420ff03ca1a8a57ed028b6862c}{Under\+Take\+Children\+Ex}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a0678dd074e4ee4ac4372b43cf4315284}{transform}}, const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1bd2e8ba1ff4c3e9201ecf81beac9ad2}{Independent\+Children}} (\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} index)
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_afba1953dca9a2394abf21182374b5067}{Independent\+Children}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ab70faa31a99c56600d63f629e2928db1}{Independent\+Children\+Ex}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a0feeeeefbea2042ecda51c343d1298ed}{Destroy\+Children}} (\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} index)
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1043595fb3cfbab8888a1dd9f75ee6f4}{Destroy\+Children}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_af4bf6fe4dfe32f304927539c373d1dde}{Destroy\+Children\+Ex}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae7f701dc00737c90fb143f2b70203404}{Destroy\+All\+Children}} ()
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3b22f8829e868347a2b357f99ce604ec}{Add\+Component}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Component\+Class $>$ component)
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a296242683c39b74be461f8c14c9da9c8}{Add\+Component}} (bool is\+Enabled=true)
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7780899e863396ddea7e59520c7ddc2b}{Find\+Component}} ()
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ad1382ea731082159f4f98dc8cc431087}{Find\+Component\+In\+Parent}} (bool is\+Include\+Yourself=true)
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aca209083d09e0218b8f37c5f618eccaf}{Find\+Component\+In\+Children}} (bool is\+Include\+Yourself=true)
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a94b6d3faeca7a5ac189077775166cd12}{Find\+Component\+Ex}} ()
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ad73132c236648ab46a68404867939a54}{Find\+Component\+In\+Parent\+Ex}} (bool is\+Include\+Yourself=true)
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ace475fb9a2509f271a8d99ec8a752160}{Find\+Component\+In\+Children\+Ex}} (bool is\+Include\+Yourself=true)
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\void \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aefda2cab6318fca1e19354c604cd65d8}{Remove\+Component}} ()
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\void \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a14b204883168850239d8808fc7f821ab}{Remove\+Component\+Ex}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3d08314f244a79ffb34370b4c93a1067}{Remove\+Component\+All}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY void \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a186cf2af14d9ca5cac406427ae2c94fe}{set\+Draw\+Matrix}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae5133d2309af5269e6243032acdf79bb}{get\+Parent}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a6e9907d6357d88c4907fea52b991bca1}{get\+Children}} (\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} index)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1b3751d3f03fa3fd79fc580214713cf3}{get\+Num\+Childrens}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ab61c1fa38f97133236fc86f56ab859a4}{get\+World\+Position}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3c775c6e1d53571ee5e271e81d1b4432}{set\+World\+Position}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a9904d4b865633c37619a62df995ffaf5}{get\+World\+Rotation}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a11e77eaa6981d091c866168d2da05c03}{set\+World\+Rotation}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7b6b2ea2854b35236acec21ed5f8adfe}{get\+World\+Scale}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a28123dfb465c9bf07282f01ae329e077}{set\+World\+Scale}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_af31ecb744ab9313b0d245f7c0586f033}{get\+Local\+Position}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1193659c204ff92cfbdd3cbd952d59ba}{set\+Local\+Position}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aaa31443e71b5b83bc838aed9a692c0c7}{get\+Local\+Rotation}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a31deb7964450ad8fc3321c7e5b4cdc31}{set\+Local\+Rotation}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a668351e8df367c2df671498d8ecc986a}{get\+Local\+Scale}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a92b93daf40776f27b0c30135be1b3478}{set\+Local\+Scale}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a666b6c079282621d71994fbf398c1524}{get\+Right}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a033415157e0da0015d4b50e166d74ebb}{get\+Up}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac6f6b615b85bbffaaa4d7fcb6c523a83}{get\+Forward}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aadadd85c73dca710d84b869919efe690}{set\+Forward}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac632afac76878cfa0ea5991462296fb9}{get\+Right\+Local}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aaad0bcf5243a74dcfbc37351a30988c0}{get\+Up\+Local}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a62320a6887094c5f73166b0ae2babc73}{get\+Forward\+Local}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a2701c3d1913e83583a2c3a271cd560c2}{set\+Forward\+Local}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const \mbox{\hyperlink{struct_s_g_framework_1_1_vector4x4}{Vector4x4}} \& \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac77ed6c03368ba7341784ed1a84b6699}{get\+Update\+Matrix}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const \mbox{\hyperlink{struct_s_g_framework_1_1_vector4x4}{Vector4x4}} \& \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a50e50031a1aa5bd605d079af25ecfd07}{get\+Graphics\+Matrix}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7890b6d02481121b3d005a82a66e6890}{get\+Layer}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ab66b822fa2f069ac9c7d9b1ae23048d4}{get\+Tag}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_abb40070ceecbdcdfbd8b1a3841ac1d4d}{set\+Tag}} (const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&tag)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY int \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a58b4de5c43ff5ae1b9b6fed303cb43c4}{get\+Function\+Line}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1f082a32408c3a4187aeb758edeee1d3}{get\+Is\+Active\+Self}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aab47a75c56302dcba2cf0e521d3b1174}{set\+Is\+Active}} (bool active)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a4dc12117ebaee15414444f94610b6df2}{get\+Is\+Static}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a65c3a393840e902ed6bf61e7983da266}{get\+Is\+Root}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae295d4d9e052ac8fe08492c5f6c77dc9}{get\+Is\+Destroy}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae7e2c427aee80236cb9cbb8c6874cea2}{Instantiate}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&position=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&scale=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_a4ce4a8c8a2f0c53667d801d5d0d29745}{Const\+::\+Vector3\+::one}}, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&rotation=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_quaternion_a05084bdcdd15ab3dd19e4be6f96952ec}{Const\+::\+Quaternion\+::identity}}, const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}}=L\char`\"{}Transform only object\char`\"{}, int function\+Line\+At\+Root=\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1e9bc3eac10f16319f5153f75806130d}{c\+Auto\+Select\+Function\+Line}}, bool is\+Static=false, \mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}} layer=\mbox{\hyperlink{struct_s_g_framework_1_1_layer_a27a2186ee9c684ecc0bfa0d8aa6bc275}{Layer\+::\+Default\+Layer}}(), const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&tag=\mbox{\hyperlink{class_s_g_framework_1_1_tag_a24f43d1fb281973bf259d700cad0f34c}{Tag\+::\+Default\+Tag}}(), bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true)
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a13f406959eb881c5c28c41a5073fdf53}{Instantiate}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ parent, bool is\+Instantiate\+In\+World\+Space, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&position=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&scale=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_a4ce4a8c8a2f0c53667d801d5d0d29745}{Const\+::\+Vector3\+::one}}, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&rotation=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_quaternion_a05084bdcdd15ab3dd19e4be6f96952ec}{Const\+::\+Quaternion\+::identity}}, const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}}=L\char`\"{}Transform only object\char`\"{}, int function\+Line\+At\+Root=\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1e9bc3eac10f16319f5153f75806130d}{c\+Auto\+Select\+Function\+Line}}, bool is\+Static=false, \mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}} layer=\mbox{\hyperlink{struct_s_g_framework_1_1_layer_a27a2186ee9c684ecc0bfa0d8aa6bc275}{Layer\+::\+Default\+Layer}}(), const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&tag=\mbox{\hyperlink{class_s_g_framework_1_1_tag_a24f43d1fb281973bf259d700cad0f34c}{Tag\+::\+Default\+Tag}}(), bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a0678dd074e4ee4ac4372b43cf4315284}{transform}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_af474c5ee5beae9ed29998f34cb0a1fc8}{game\+Object}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+::\+Time\+Layer}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac14d5d1641e5c61fdc5d325ab2fb3470}{time\+Layer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1e9bc3eac10f16319f5153f75806130d}{c\+Auto\+Select\+Function\+Line}} = \mbox{\hyperlink{namespace_s_g_framework_1_1_variable_limit_a747cfbf3f4fcf961f2357b49ab6213ae}{Variable\+Limit\+::c\+Int\+Min}}
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_adbc148eaddd341d7ae4d07c9e9e33bfd}{Thread}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a00df87c957d8f7ee0fc51f07a0542f4a}{Game\+Object}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a4a5bb775d7f9e686ab9504b4b97d3347}{Camera\+X11}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a043517326bb35cdce45d64c7a95e23a4}{Component\+X11}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac175faa5a1d612a439a80e191c0785cf}{Polygon\+Square\+X11}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac5a3536de371167fdf200e8943f8c2b0}{G\+UI}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a23f25bcc02a0e94c2f5a4188496b04d0}{Application}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a2bfcbae6c8e1d7af93c5ac1200b1535c}{Physics}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a333949ea84b6a659db1fb2709ecb631e}{Base\+Class\+::\+Base\+Rigid\+Body}}
+\item 
+{\footnotesize template$<$class Mesh\+Vertex\+Type , class Mesh\+Material\+Pointer\+Type $>$ }\\class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_afbab587c838d66f9e28bcc30322d0dcb}{Mesh\+Renderer\+X11}}
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7649eb607fea083df55a157e8a37249c}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7649eb607fea083df55a157e8a37249c}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!````~TransformX11@{$\sim$TransformX11}}
+\index{````~TransformX11@{$\sim$TransformX11}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{$\sim$TransformX11()}{~TransformX11()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::$\sim$\+Transform\+X11 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a296242683c39b74be461f8c14c9da9c8}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a296242683c39b74be461f8c14c9da9c8}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{bool}]{is\+Enabled = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3b22f8829e868347a2b357f99ce604ec}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3b22f8829e868347a2b357f99ce604ec}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Component\+Class $>$}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a92140532c88ed0d8913e73bc602a18ac}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a92140532c88ed0d8913e73bc602a18ac}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS@{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}}
+\index{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS@{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS()}{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+D\+E\+L\+E\+T\+E\+\_\+\+A\+L\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae7f701dc00737c90fb143f2b70203404}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae7f701dc00737c90fb143f2b70203404}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!DestroyAllChildren@{DestroyAllChildren}}
+\index{DestroyAllChildren@{DestroyAllChildren}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{DestroyAllChildren()}{DestroyAllChildren()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Destroy\+All\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1043595fb3cfbab8888a1dd9f75ee6f4}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1043595fb3cfbab8888a1dd9f75ee6f4}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!DestroyChildren@{DestroyChildren}}
+\index{DestroyChildren@{DestroyChildren}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{DestroyChildren()}{DestroyChildren()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Destroy\+Children (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a0feeeeefbea2042ecda51c343d1298ed}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a0feeeeefbea2042ecda51c343d1298ed}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!DestroyChildren@{DestroyChildren}}
+\index{DestroyChildren@{DestroyChildren}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{DestroyChildren()}{DestroyChildren()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Destroy\+Children (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_af4bf6fe4dfe32f304927539c373d1dde}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_af4bf6fe4dfe32f304927539c373d1dde}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!DestroyChildrenEx@{DestroyChildrenEx}}
+\index{DestroyChildrenEx@{DestroyChildrenEx}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{DestroyChildrenEx()}{DestroyChildrenEx()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Destroy\+Children\+Ex (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_acf0c0ac79a76911d91b81c350e608cb2}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_acf0c0ac79a76911d91b81c350e608cb2}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!FindChildren@{FindChildren}}
+\index{FindChildren@{FindChildren}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{FindChildren()}{FindChildren()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Find\+Children (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac8e19ecd77b64c0aeae4146044f63e1c}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac8e19ecd77b64c0aeae4146044f63e1c}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!FindChildrenEx@{FindChildrenEx}}
+\index{FindChildrenEx@{FindChildrenEx}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{FindChildrenEx()}{FindChildrenEx()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Find\+Children\+Ex (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a8de1b1ab92de82d190dce5e3503753bc}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a8de1b1ab92de82d190dce5e3503753bc}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!FindChildrenIndex@{FindChildrenIndex}}
+\index{FindChildrenIndex@{FindChildrenIndex}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{FindChildrenIndex()}{FindChildrenIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Find\+Children\+Index (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1406aec7aae8ffb1a85fde9c2c122356}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1406aec7aae8ffb1a85fde9c2c122356}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!FindChildrenIndexEx@{FindChildrenIndexEx}}
+\index{FindChildrenIndexEx@{FindChildrenIndexEx}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{FindChildrenIndexEx()}{FindChildrenIndexEx()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Find\+Children\+Index\+Ex (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7780899e863396ddea7e59520c7ddc2b}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7780899e863396ddea7e59520c7ddc2b}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!FindComponent@{FindComponent}}
+\index{FindComponent@{FindComponent}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{FindComponent()}{FindComponent()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Find\+Component\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a94b6d3faeca7a5ac189077775166cd12}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a94b6d3faeca7a5ac189077775166cd12}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!FindComponentEx@{FindComponentEx}}
+\index{FindComponentEx@{FindComponentEx}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{FindComponentEx()}{FindComponentEx()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Find\+Component\+Ex\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aca209083d09e0218b8f37c5f618eccaf}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aca209083d09e0218b8f37c5f618eccaf}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!FindComponentInChildren@{FindComponentInChildren}}
+\index{FindComponentInChildren@{FindComponentInChildren}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{FindComponentInChildren()}{FindComponentInChildren()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Find\+Component\+In\+Children (\begin{DoxyParamCaption}\item[{bool}]{is\+Include\+Yourself = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ace475fb9a2509f271a8d99ec8a752160}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ace475fb9a2509f271a8d99ec8a752160}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!FindComponentInChildrenEx@{FindComponentInChildrenEx}}
+\index{FindComponentInChildrenEx@{FindComponentInChildrenEx}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{FindComponentInChildrenEx()}{FindComponentInChildrenEx()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Find\+Component\+In\+Children\+Ex (\begin{DoxyParamCaption}\item[{bool}]{is\+Include\+Yourself = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ad1382ea731082159f4f98dc8cc431087}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ad1382ea731082159f4f98dc8cc431087}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!FindComponentInParent@{FindComponentInParent}}
+\index{FindComponentInParent@{FindComponentInParent}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{FindComponentInParent()}{FindComponentInParent()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Find\+Component\+In\+Parent (\begin{DoxyParamCaption}\item[{bool}]{is\+Include\+Yourself = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ad73132c236648ab46a68404867939a54}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ad73132c236648ab46a68404867939a54}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!FindComponentInParentEx@{FindComponentInParentEx}}
+\index{FindComponentInParentEx@{FindComponentInParentEx}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{FindComponentInParentEx()}{FindComponentInParentEx()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Find\+Component\+In\+Parent\+Ex (\begin{DoxyParamCaption}\item[{bool}]{is\+Include\+Yourself = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7523378474d6da2da7841bce1e90eb97}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7523378474d6da2da7841bce1e90eb97}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!FindRoot@{FindRoot}}
+\index{FindRoot@{FindRoot}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{FindRoot()}{FindRoot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Find\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a6e9907d6357d88c4907fea52b991bca1}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a6e9907d6357d88c4907fea52b991bca1}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getChildren@{getChildren}}
+\index{getChildren@{getChildren}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getChildren()}{getChildren()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}}$>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Children (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac6f6b615b85bbffaaa4d7fcb6c523a83}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac6f6b615b85bbffaaa4d7fcb6c523a83}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getForward@{getForward}}
+\index{getForward@{getForward}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getForward()}{getForward()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a62320a6887094c5f73166b0ae2babc73}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a62320a6887094c5f73166b0ae2babc73}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getForwardLocal@{getForwardLocal}}
+\index{getForwardLocal@{getForwardLocal}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getForwardLocal()}{getForwardLocal()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Forward\+Local (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a58b4de5c43ff5ae1b9b6fed303cb43c4}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a58b4de5c43ff5ae1b9b6fed303cb43c4}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getFunctionLine@{getFunctionLine}}
+\index{getFunctionLine@{getFunctionLine}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getFunctionLine()}{getFunctionLine()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY int S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Function\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a50e50031a1aa5bd605d079af25ecfd07}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a50e50031a1aa5bd605d079af25ecfd07}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getGraphicsMatrix@{getGraphicsMatrix}}
+\index{getGraphicsMatrix@{getGraphicsMatrix}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getGraphicsMatrix()}{getGraphicsMatrix()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const \mbox{\hyperlink{struct_s_g_framework_1_1_vector4x4}{Vector4x4}}\& S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Graphics\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1f082a32408c3a4187aeb758edeee1d3}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1f082a32408c3a4187aeb758edeee1d3}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getIsActiveSelf@{getIsActiveSelf}}
+\index{getIsActiveSelf@{getIsActiveSelf}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getIsActiveSelf()}{getIsActiveSelf()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Is\+Active\+Self (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae295d4d9e052ac8fe08492c5f6c77dc9}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae295d4d9e052ac8fe08492c5f6c77dc9}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getIsDestroy@{getIsDestroy}}
+\index{getIsDestroy@{getIsDestroy}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getIsDestroy()}{getIsDestroy()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Is\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a65c3a393840e902ed6bf61e7983da266}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a65c3a393840e902ed6bf61e7983da266}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getIsRoot@{getIsRoot}}
+\index{getIsRoot@{getIsRoot}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getIsRoot()}{getIsRoot()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Is\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a4dc12117ebaee15414444f94610b6df2}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a4dc12117ebaee15414444f94610b6df2}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getIsStatic@{getIsStatic}}
+\index{getIsStatic@{getIsStatic}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getIsStatic()}{getIsStatic()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Is\+Static (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7890b6d02481121b3d005a82a66e6890}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7890b6d02481121b3d005a82a66e6890}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getLayer@{getLayer}}
+\index{getLayer@{getLayer}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getLayer()}{getLayer()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_af31ecb744ab9313b0d245f7c0586f033}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_af31ecb744ab9313b0d245f7c0586f033}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getLocalPosition@{getLocalPosition}}
+\index{getLocalPosition@{getLocalPosition}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getLocalPosition()}{getLocalPosition()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Local\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aaa31443e71b5b83bc838aed9a692c0c7}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aaa31443e71b5b83bc838aed9a692c0c7}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getLocalRotation@{getLocalRotation}}
+\index{getLocalRotation@{getLocalRotation}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getLocalRotation()}{getLocalRotation()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Local\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a668351e8df367c2df671498d8ecc986a}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a668351e8df367c2df671498d8ecc986a}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getLocalScale@{getLocalScale}}
+\index{getLocalScale@{getLocalScale}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getLocalScale()}{getLocalScale()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Local\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1b3751d3f03fa3fd79fc580214713cf3}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1b3751d3f03fa3fd79fc580214713cf3}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getNumChildrens@{getNumChildrens}}
+\index{getNumChildrens@{getNumChildrens}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getNumChildrens()}{getNumChildrens()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Num\+Childrens (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae5133d2309af5269e6243032acdf79bb}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae5133d2309af5269e6243032acdf79bb}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getParent@{getParent}}
+\index{getParent@{getParent}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getParent()}{getParent()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}}$>$\& S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a666b6c079282621d71994fbf398c1524}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a666b6c079282621d71994fbf398c1524}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getRight@{getRight}}
+\index{getRight@{getRight}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getRight()}{getRight()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac632afac76878cfa0ea5991462296fb9}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac632afac76878cfa0ea5991462296fb9}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getRightLocal@{getRightLocal}}
+\index{getRightLocal@{getRightLocal}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getRightLocal()}{getRightLocal()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Right\+Local (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ab66b822fa2f069ac9c7d9b1ae23048d4}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ab66b822fa2f069ac9c7d9b1ae23048d4}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getTag@{getTag}}
+\index{getTag@{getTag}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getTag()}{getTag()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a033415157e0da0015d4b50e166d74ebb}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a033415157e0da0015d4b50e166d74ebb}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getUp@{getUp}}
+\index{getUp@{getUp}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getUp()}{getUp()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac77ed6c03368ba7341784ed1a84b6699}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac77ed6c03368ba7341784ed1a84b6699}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getUpdateMatrix@{getUpdateMatrix}}
+\index{getUpdateMatrix@{getUpdateMatrix}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getUpdateMatrix()}{getUpdateMatrix()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const \mbox{\hyperlink{struct_s_g_framework_1_1_vector4x4}{Vector4x4}}\& S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Update\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aaad0bcf5243a74dcfbc37351a30988c0}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aaad0bcf5243a74dcfbc37351a30988c0}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getUpLocal@{getUpLocal}}
+\index{getUpLocal@{getUpLocal}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getUpLocal()}{getUpLocal()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+Up\+Local (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ab61c1fa38f97133236fc86f56ab859a4}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ab61c1fa38f97133236fc86f56ab859a4}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getWorldPosition@{getWorldPosition}}
+\index{getWorldPosition@{getWorldPosition}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getWorldPosition()}{getWorldPosition()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+World\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a9904d4b865633c37619a62df995ffaf5}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a9904d4b865633c37619a62df995ffaf5}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getWorldRotation@{getWorldRotation}}
+\index{getWorldRotation@{getWorldRotation}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getWorldRotation()}{getWorldRotation()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+World\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7b6b2ea2854b35236acec21ed5f8adfe}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a7b6b2ea2854b35236acec21ed5f8adfe}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!getWorldScale@{getWorldScale}}
+\index{getWorldScale@{getWorldScale}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{getWorldScale()}{getWorldScale()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::get\+World\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_afba1953dca9a2394abf21182374b5067}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_afba1953dca9a2394abf21182374b5067}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!IndependentChildren@{IndependentChildren}}
+\index{IndependentChildren@{IndependentChildren}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{IndependentChildren()}{IndependentChildren()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Independent\+Children (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1bd2e8ba1ff4c3e9201ecf81beac9ad2}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1bd2e8ba1ff4c3e9201ecf81beac9ad2}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!IndependentChildren@{IndependentChildren}}
+\index{IndependentChildren@{IndependentChildren}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{IndependentChildren()}{IndependentChildren()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Independent\+Children (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ab70faa31a99c56600d63f629e2928db1}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ab70faa31a99c56600d63f629e2928db1}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!IndependentChildrenEx@{IndependentChildrenEx}}
+\index{IndependentChildrenEx@{IndependentChildrenEx}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{IndependentChildrenEx()}{IndependentChildrenEx()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Independent\+Children\+Ex (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae7e2c427aee80236cb9cbb8c6874cea2}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae7e2c427aee80236cb9cbb8c6874cea2}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{Instantiate()}{Instantiate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Instantiate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{scale = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_a4ce4a8c8a2f0c53667d801d5d0d29745}{Const\+::\+Vector3\+::one}}},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{rotation = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_quaternion_a05084bdcdd15ab3dd19e4be6f96952ec}{Const\+::\+Quaternion\+::identity}}},  }\item[{const sgstring \&}]{name = {\ttfamily L\char`\"{}Transform~only~object\char`\"{}},  }\item[{int}]{function\+Line\+At\+Root = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1e9bc3eac10f16319f5153f75806130d}{c\+Auto\+Select\+Function\+Line}}},  }\item[{bool}]{is\+Static = {\ttfamily false},  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}}}]{layer = {\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_layer_a27a2186ee9c684ecc0bfa0d8aa6bc275}{Layer\+::\+Default\+Layer}}()},  }\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&}]{tag = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_tag_a24f43d1fb281973bf259d700cad0f34c}{Tag\+::\+Default\+Tag}}()},  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a13f406959eb881c5c28c41a5073fdf53}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a13f406959eb881c5c28c41a5073fdf53}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{Instantiate()}{Instantiate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Instantiate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$}]{parent,  }\item[{bool}]{is\+Instantiate\+In\+World\+Space,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{scale = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_a4ce4a8c8a2f0c53667d801d5d0d29745}{Const\+::\+Vector3\+::one}}},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{rotation = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_quaternion_a05084bdcdd15ab3dd19e4be6f96952ec}{Const\+::\+Quaternion\+::identity}}},  }\item[{const sgstring \&}]{name = {\ttfamily L\char`\"{}Transform~only~object\char`\"{}},  }\item[{int}]{function\+Line\+At\+Root = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1e9bc3eac10f16319f5153f75806130d}{c\+Auto\+Select\+Function\+Line}}},  }\item[{bool}]{is\+Static = {\ttfamily false},  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}}}]{layer = {\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_layer_a27a2186ee9c684ecc0bfa0d8aa6bc275}{Layer\+::\+Default\+Layer}}()},  }\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&}]{tag = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_tag_a24f43d1fb281973bf259d700cad0f34c}{Tag\+::\+Default\+Tag}}()},  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3d7d9e0057428b741c28a2446c864be1}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3d7d9e0057428b741c28a2446c864be1}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!IsTargetMyUpperHierarchy@{IsTargetMyUpperHierarchy}}
+\index{IsTargetMyUpperHierarchy@{IsTargetMyUpperHierarchy}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{IsTargetMyUpperHierarchy()}{IsTargetMyUpperHierarchy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Is\+Target\+My\+Upper\+Hierarchy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \&}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a86627c03e7521a92bcd9ff7bee0c00fe}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a86627c03e7521a92bcd9ff7bee0c00fe}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!IsTargetMyUpperHierarchy@{IsTargetMyUpperHierarchy}}
+\index{IsTargetMyUpperHierarchy@{IsTargetMyUpperHierarchy}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{IsTargetMyUpperHierarchy()}{IsTargetMyUpperHierarchy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Is\+Target\+My\+Upper\+Hierarchy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$ \&}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a9d143b3e15657d676baf848a29b813d1}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a9d143b3e15657d676baf848a29b813d1}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!RegisterChildren@{RegisterChildren}}
+\index{RegisterChildren@{RegisterChildren}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{RegisterChildren()}{RegisterChildren()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Register\+Children (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$}]{children }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3a98f2f3449204eb3036a200df1102df}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3a98f2f3449204eb3036a200df1102df}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!RegisterParent@{RegisterParent}}
+\index{RegisterParent@{RegisterParent}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{RegisterParent()}{RegisterParent()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Register\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aefda2cab6318fca1e19354c604cd65d8}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aefda2cab6318fca1e19354c604cd65d8}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!RemoveComponent@{RemoveComponent}}
+\index{RemoveComponent@{RemoveComponent}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{RemoveComponent()}{RemoveComponent()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+void S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Remove\+Component\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3d08314f244a79ffb34370b4c93a1067}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3d08314f244a79ffb34370b4c93a1067}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!RemoveComponentAll@{RemoveComponentAll}}
+\index{RemoveComponentAll@{RemoveComponentAll}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{RemoveComponentAll()}{RemoveComponentAll()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Remove\+Component\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a14b204883168850239d8808fc7f821ab}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a14b204883168850239d8808fc7f821ab}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!RemoveComponentEx@{RemoveComponentEx}}
+\index{RemoveComponentEx@{RemoveComponentEx}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{RemoveComponentEx()}{RemoveComponentEx()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+void S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Remove\+Component\+Ex\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a682e58a01bbe4f288928f24530508ecf}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a682e58a01bbe4f288928f24530508ecf}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!Resize@{Resize}}
+\index{Resize@{Resize}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Resize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{magnification }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aef1a2e6421ee517f0006429a0f58a57f}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aef1a2e6421ee517f0006429a0f58a57f}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!ResizeLocal@{ResizeLocal}}
+\index{ResizeLocal@{ResizeLocal}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{ResizeLocal()}{ResizeLocal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Resize\+Local (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{magnification }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a8f374ea603695d666e5255f531b91487}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a8f374ea603695d666e5255f531b91487}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Rotate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3659a054d7416b7e75dac9fe0db9d89a}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3659a054d7416b7e75dac9fe0db9d89a}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!RotateLocal@{RotateLocal}}
+\index{RotateLocal@{RotateLocal}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{RotateLocal()}{RotateLocal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Rotate\+Local (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a186cf2af14d9ca5cac406427ae2c94fe}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a186cf2af14d9ca5cac406427ae2c94fe}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!setDrawMatrix@{setDrawMatrix}}
+\index{setDrawMatrix@{setDrawMatrix}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{setDrawMatrix()}{setDrawMatrix()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY void S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::set\+Draw\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aadadd85c73dca710d84b869919efe690}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aadadd85c73dca710d84b869919efe690}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!setForward@{setForward}}
+\index{setForward@{setForward}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{setForward()}{setForward()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::set\+Forward (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a2701c3d1913e83583a2c3a271cd560c2}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a2701c3d1913e83583a2c3a271cd560c2}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!setForwardLocal@{setForwardLocal}}
+\index{setForwardLocal@{setForwardLocal}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{setForwardLocal()}{setForwardLocal()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::set\+Forward\+Local (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aab47a75c56302dcba2cf0e521d3b1174}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_aab47a75c56302dcba2cf0e521d3b1174}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!setIsActive@{setIsActive}}
+\index{setIsActive@{setIsActive}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{setIsActive()}{setIsActive()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::set\+Is\+Active (\begin{DoxyParamCaption}\item[{bool}]{active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1193659c204ff92cfbdd3cbd952d59ba}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1193659c204ff92cfbdd3cbd952d59ba}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!setLocalPosition@{setLocalPosition}}
+\index{setLocalPosition@{setLocalPosition}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{setLocalPosition()}{setLocalPosition()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::set\+Local\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a31deb7964450ad8fc3321c7e5b4cdc31}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a31deb7964450ad8fc3321c7e5b4cdc31}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!setLocalRotation@{setLocalRotation}}
+\index{setLocalRotation@{setLocalRotation}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{setLocalRotation()}{setLocalRotation()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::set\+Local\+Rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a92b93daf40776f27b0c30135be1b3478}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a92b93daf40776f27b0c30135be1b3478}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!setLocalScale@{setLocalScale}}
+\index{setLocalScale@{setLocalScale}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{setLocalScale()}{setLocalScale()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::set\+Local\+Scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_abb40070ceecbdcdfbd8b1a3841ac1d4d}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_abb40070ceecbdcdfbd8b1a3841ac1d4d}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!setTag@{setTag}}
+\index{setTag@{setTag}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{setTag()}{setTag()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::set\+Tag (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3c775c6e1d53571ee5e271e81d1b4432}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a3c775c6e1d53571ee5e271e81d1b4432}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!setWorldPosition@{setWorldPosition}}
+\index{setWorldPosition@{setWorldPosition}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{setWorldPosition()}{setWorldPosition()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::set\+World\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a11e77eaa6981d091c866168d2da05c03}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a11e77eaa6981d091c866168d2da05c03}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!setWorldRotation@{setWorldRotation}}
+\index{setWorldRotation@{setWorldRotation}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{setWorldRotation()}{setWorldRotation()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::set\+World\+Rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a28123dfb465c9bf07282f01ae329e077}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a28123dfb465c9bf07282f01ae329e077}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!setWorldScale@{setWorldScale}}
+\index{setWorldScale@{setWorldScale}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{setWorldScale()}{setWorldScale()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::set\+World\+Scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a10f4bfff582266deee895b25449777d5}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a10f4bfff582266deee895b25449777d5}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!Translate@{Translate}}
+\index{Translate@{Translate}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{translate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1525502898ae6a24464bcffa7341c43e}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1525502898ae6a24464bcffa7341c43e}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!TranslateLocal@{TranslateLocal}}
+\index{TranslateLocal@{TranslateLocal}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{TranslateLocal()}{TranslateLocal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Translate\+Local (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{translate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a974dfad06f7a5ab1ab9ee66ca2977410}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a974dfad06f7a5ab1ab9ee66ca2977410}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!UnderTakeChildren@{UnderTakeChildren}}
+\index{UnderTakeChildren@{UnderTakeChildren}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{UnderTakeChildren()}{UnderTakeChildren()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Under\+Take\+Children (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$}]{transform,  }\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a20887f9ffe3161064d4e9a5ed0b8b99f}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a20887f9ffe3161064d4e9a5ed0b8b99f}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!UnderTakeChildren@{UnderTakeChildren}}
+\index{UnderTakeChildren@{UnderTakeChildren}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{UnderTakeChildren()}{UnderTakeChildren()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Under\+Take\+Children (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$}]{transform,  }\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae690dc420ff03ca1a8a57ed028b6862c}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ae690dc420ff03ca1a8a57ed028b6862c}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!UnderTakeChildrenEx@{UnderTakeChildrenEx}}
+\index{UnderTakeChildrenEx@{UnderTakeChildrenEx}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{UnderTakeChildrenEx()}{UnderTakeChildrenEx()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::\+Under\+Take\+Children\+Ex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}} $>$}]{transform,  }\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a23f25bcc02a0e94c2f5a4188496b04d0}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a23f25bcc02a0e94c2f5a4188496b04d0}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!Application@{Application}}
+\index{Application@{Application}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{Application}{Application}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_application}{Application}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a333949ea84b6a659db1fb2709ecb631e}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a333949ea84b6a659db1fb2709ecb631e}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!BaseClass::BaseRigidBody@{BaseClass::BaseRigidBody}}
+\index{BaseClass::BaseRigidBody@{BaseClass::BaseRigidBody}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{BaseClass::BaseRigidBody}{BaseClass::BaseRigidBody}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body}{Base\+Class\+::\+Base\+Rigid\+Body}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a4a5bb775d7f9e686ab9504b4b97d3347}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a4a5bb775d7f9e686ab9504b4b97d3347}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!CameraX11@{CameraX11}}
+\index{CameraX11@{CameraX11}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{CameraX11}{CameraX11}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_camera_x11}{Camera\+X11}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a043517326bb35cdce45d64c7a95e23a4}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a043517326bb35cdce45d64c7a95e23a4}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!ComponentX11@{ComponentX11}}
+\index{ComponentX11@{ComponentX11}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{ComponentX11}{ComponentX11}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11}{Component\+X11}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a00df87c957d8f7ee0fc51f07a0542f4a}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a00df87c957d8f7ee0fc51f07a0542f4a}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{GameObject}{GameObject}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac5a3536de371167fdf200e8943f8c2b0}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac5a3536de371167fdf200e8943f8c2b0}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!GUI@{GUI}}
+\index{GUI@{GUI}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{GUI}{GUI}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_g_u_i}{G\+UI}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_afbab587c838d66f9e28bcc30322d0dcb}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_afbab587c838d66f9e28bcc30322d0dcb}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!MeshRendererX11@{MeshRendererX11}}
+\index{MeshRendererX11@{MeshRendererX11}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{MeshRendererX11}{MeshRendererX11}}
+{\footnotesize\ttfamily template$<$class Mesh\+Vertex\+Type , class Mesh\+Material\+Pointer\+Type $>$ \\
+friend class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_mesh_renderer_x11}{Mesh\+Renderer\+X11}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a2bfcbae6c8e1d7af93c5ac1200b1535c}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a2bfcbae6c8e1d7af93c5ac1200b1535c}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!Physics@{Physics}}
+\index{Physics@{Physics}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{Physics}{Physics}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_physics}{Physics}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac175faa5a1d612a439a80e191c0785cf}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac175faa5a1d612a439a80e191c0785cf}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!PolygonSquareX11@{PolygonSquareX11}}
+\index{PolygonSquareX11@{PolygonSquareX11}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{PolygonSquareX11}{PolygonSquareX11}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_polygon_square_x11}{Polygon\+Square\+X11}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_adbc148eaddd341d7ae4d07c9e9e33bfd}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_adbc148eaddd341d7ae4d07c9e9e33bfd}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!Thread@{Thread}}
+\index{Thread@{Thread}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{Thread}{Thread}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_thread}{Thread}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1e9bc3eac10f16319f5153f75806130d}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1e9bc3eac10f16319f5153f75806130d}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!cAutoSelectFunctionLine@{cAutoSelectFunctionLine}}
+\index{cAutoSelectFunctionLine@{cAutoSelectFunctionLine}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{cAutoSelectFunctionLine}{cAutoSelectFunctionLine}}
+{\footnotesize\ttfamily constexpr int S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::c\+Auto\+Select\+Function\+Line = \mbox{\hyperlink{namespace_s_g_framework_1_1_variable_limit_a747cfbf3f4fcf961f2357b49ab6213ae}{Variable\+Limit\+::c\+Int\+Min}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_af474c5ee5beae9ed29998f34cb0a1fc8}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_af474c5ee5beae9ed29998f34cb0a1fc8}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!gameObject@{gameObject}}
+\index{gameObject@{gameObject}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{gameObject}{gameObject}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}}$>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::game\+Object}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac14d5d1641e5c61fdc5d325ab2fb3470}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_ac14d5d1641e5c61fdc5d325ab2fb3470}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!timeLayer@{timeLayer}}
+\index{timeLayer@{timeLayer}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{timeLayer}{timeLayer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+::\+Time\+Layer}}$>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::time\+Layer}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a0678dd074e4ee4ac4372b43cf4315284}\label{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a0678dd074e4ee4ac4372b43cf4315284}} 
+\index{SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}!transform@{transform}}
+\index{transform@{transform}!SGFramework::Administrator::GraphicsDetail::TransformX11@{SGFramework::Administrator::GraphicsDetail::TransformX11}}
+\doxysubsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Transform\+X11}}$>$ S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11\+::transform}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/05\+\_\+\+Graphics/\+Direct\+X11/\+Transform/\mbox{\hyperlink{_transform_x11_8hpp}{Transform\+X11.\+hpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/05\+\_\+\+Graphics/\+Direct\+X11/\+Transform/\mbox{\hyperlink{_transform_x11_8cpp}{Transform\+X11.\+cpp}}\end{DoxyCompactItemize}

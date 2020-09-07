@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework::Thread クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_s_g_framework.html">SGFramework</a></li><li class="navelem"><a class="el" href="class_s_g_framework_1_1_thread.html">Thread</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="class_s_g_framework_1_1_thread-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">SGFramework::Thread クラス<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_thread_8hpp_source.html">Thread.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:abac5ab656e4e676c87d51570d237b60b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#abac5ab656e4e676c87d51570d237b60b">DELETE_ALL_DEFAULT_CLASS_FUNCTIONS</a> (<a class="el" href="class_s_g_framework_1_1_thread.html">Thread</a>)</td></tr>
+<tr class="separator:abac5ab656e4e676c87d51570d237b60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa26c244fd76755ac88ce5afc2ff1da32"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespace_s_g_framework.html#ae22f6e3de0e16d4376368e48f9d7ade3">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#aa26c244fd76755ac88ce5afc2ff1da32">AutoThreadAllocation</a> (const HANDLE &amp;threadHandle)</td></tr>
+<tr class="separator:aa26c244fd76755ac88ce5afc2ff1da32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98cd53d2fbcdde3c7627e466afd12dbe"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#a98cd53d2fbcdde3c7627e466afd12dbe">ThreadAllocation</a> (const HANDLE &amp;threadHandle, <a class="el" href="namespace_s_g_framework.html#ae22f6e3de0e16d4376368e48f9d7ade3">uint64</a> useThread)</td></tr>
+<tr class="separator:a98cd53d2fbcdde3c7627e466afd12dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99867caf7355dabe9f8ef02995605bb1"><td class="memItemLeft" align="right" valign="top">static SGF_FUNCTION_PROPERTY <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#a99867caf7355dabe9f8ef02995605bb1">getNumRunningFrameworkThreads</a> ()</td></tr>
+<tr class="separator:a99867caf7355dabe9f8ef02995605bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3dbf7bd19847867370c3f07742108af"><td class="memItemLeft" align="right" valign="top">static SGF_FUNCTION_PROPERTY <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#ab3dbf7bd19847867370c3f07742108af">getNumFrameworkUsingHardwareThreads</a> ()</td></tr>
+<tr class="separator:ab3dbf7bd19847867370c3f07742108af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:a6b4bca628bbc392d339c147aec3470ac"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#a6b4bca628bbc392d339c147aec3470ac">numUpdateThreads</a></td></tr>
+<tr class="separator:a6b4bca628bbc392d339c147aec3470ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae153f3165550a17227d9d1fa9a3a2f7a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#ae153f3165550a17227d9d1fa9a3a2f7a">numFunctionLines</a></td></tr>
+<tr class="separator:ae153f3165550a17227d9d1fa9a3a2f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2788fadeb949053674168ea23c270bd2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#a2788fadeb949053674168ea23c270bd2">numHardwareThreads</a></td></tr>
+<tr class="separator:a2788fadeb949053674168ea23c270bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a23f25bcc02a0e94c2f5a4188496b04d0"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#a23f25bcc02a0e94c2f5a4188496b04d0">Application</a></td></tr>
+<tr class="separator:a23f25bcc02a0e94c2f5a4188496b04d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a211f008bd6a46efe478fe81d31e28933"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#a211f008bd6a46efe478fe81d31e28933">Audio</a></td></tr>
+<tr class="separator:a211f008bd6a46efe478fe81d31e28933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bfcbae6c8e1d7af93c5ac1200b1535c"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#a2bfcbae6c8e1d7af93c5ac1200b1535c">Physics</a></td></tr>
+<tr class="separator:a2bfcbae6c8e1d7af93c5ac1200b1535c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404869f3b79639a1e408f50cad4430cf"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#a404869f3b79639a1e408f50cad4430cf">Administrator::GraphicsX11</a></td></tr>
+<tr class="separator:a404869f3b79639a1e408f50cad4430cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8fc6b942d1b69e45daa46533dba00c7"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#af8fc6b942d1b69e45daa46533dba00c7">Administrator::GraphicsGL</a></td></tr>
+<tr class="separator:af8fc6b942d1b69e45daa46533dba00c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a186f098ef42c07abf2664cb53320b811"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#a186f098ef42c07abf2664cb53320b811">Administrator::AssetManager</a></td></tr>
+<tr class="separator:a186f098ef42c07abf2664cb53320b811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b3deae32cf8d44e322c6886e795c5dc"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#a6b3deae32cf8d44e322c6886e795c5dc">Asset::AudioAssetMusic</a></td></tr>
+<tr class="separator:a6b3deae32cf8d44e322c6886e795c5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29d4b5b2b7636134cea110589d02f2ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_thread.html#a29d4b5b2b7636134cea110589d02f2ef">WINAPI::WinMain</a> (_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nCmdShow)</td></tr>
+<tr class="separator:a29d4b5b2b7636134cea110589d02f2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aa26c244fd76755ac88ce5afc2ff1da32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa26c244fd76755ac88ce5afc2ff1da32">&#9670;&nbsp;</a></span>AutoThreadAllocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespace_s_g_framework.html#ae22f6e3de0e16d4376368e48f9d7ade3">uint64</a> SGFramework::Thread::AutoThreadAllocation </td>
+          <td>(</td>
+          <td class="paramtype">const HANDLE &amp;&#160;</td>
+          <td class="paramname"><em>threadHandle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abac5ab656e4e676c87d51570d237b60b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abac5ab656e4e676c87d51570d237b60b">&#9670;&nbsp;</a></span>DELETE_ALL_DEFAULT_CLASS_FUNCTIONS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SGFramework::Thread::DELETE_ALL_DEFAULT_CLASS_FUNCTIONS </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_g_framework_1_1_thread.html">Thread</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3dbf7bd19847867370c3f07742108af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3dbf7bd19847867370c3f07742108af">&#9670;&nbsp;</a></span>getNumFrameworkUsingHardwareThreads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static SGF_FUNCTION_PROPERTY <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> SGFramework::Thread::getNumFrameworkUsingHardwareThreads </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99867caf7355dabe9f8ef02995605bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99867caf7355dabe9f8ef02995605bb1">&#9670;&nbsp;</a></span>getNumRunningFrameworkThreads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static SGF_FUNCTION_PROPERTY <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> SGFramework::Thread::getNumRunningFrameworkThreads </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98cd53d2fbcdde3c7627e466afd12dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98cd53d2fbcdde3c7627e466afd12dbe">&#9670;&nbsp;</a></span>ThreadAllocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SGFramework::Thread::ThreadAllocation </td>
+          <td>(</td>
+          <td class="paramtype">const HANDLE &amp;&#160;</td>
+          <td class="paramname"><em>threadHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_s_g_framework.html#ae22f6e3de0e16d4376368e48f9d7ade3">uint64</a>&#160;</td>
+          <td class="paramname"><em>useThread</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="a186f098ef42c07abf2664cb53320b811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a186f098ef42c07abf2664cb53320b811">&#9670;&nbsp;</a></span>Administrator::AssetManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_administrator_1_1_asset_manager.html">Administrator::AssetManager</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8fc6b942d1b69e45daa46533dba00c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8fc6b942d1b69e45daa46533dba00c7">&#9670;&nbsp;</a></span>Administrator::GraphicsGL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class Administrator::GraphicsGL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a404869f3b79639a1e408f50cad4430cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a404869f3b79639a1e408f50cad4430cf">&#9670;&nbsp;</a></span>Administrator::GraphicsX11</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html">Administrator::GraphicsX11</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23f25bcc02a0e94c2f5a4188496b04d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f25bcc02a0e94c2f5a4188496b04d0">&#9670;&nbsp;</a></span>Application</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_application.html">Application</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b3deae32cf8d44e322c6886e795c5dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b3deae32cf8d44e322c6886e795c5dc">&#9670;&nbsp;</a></span>Asset::AudioAssetMusic</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_asset_1_1_audio_asset_music.html">Asset::AudioAssetMusic</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a211f008bd6a46efe478fe81d31e28933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a211f008bd6a46efe478fe81d31e28933">&#9670;&nbsp;</a></span>Audio</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_audio.html">Audio</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bfcbae6c8e1d7af93c5ac1200b1535c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bfcbae6c8e1d7af93c5ac1200b1535c">&#9670;&nbsp;</a></span>Physics</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_physics.html">Physics</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29d4b5b2b7636134cea110589d02f2ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d4b5b2b7636134cea110589d02f2ef">&#9670;&nbsp;</a></span>WINAPI::WinMain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="_win_main_8cpp.html#a649028f00e62144f15f268d14bc6dae0">WINAPI::WinMain</a> </td>
+          <td>(</td>
+          <td class="paramtype">_In_ HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_opt_ HINSTANCE&#160;</td>
+          <td class="paramname"><em>hPrevInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_ LPSTR&#160;</td>
+          <td class="paramname"><em>lpCmdLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_ int&#160;</td>
+          <td class="paramname"><em>nCmdShow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="ae153f3165550a17227d9d1fa9a3a2f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae153f3165550a17227d9d1fa9a3a2f7a">&#9670;&nbsp;</a></span>numFunctionLines</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> &gt; SGFramework::Thread::numFunctionLines</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2788fadeb949053674168ea23c270bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2788fadeb949053674168ea23c270bd2">&#9670;&nbsp;</a></span>numHardwareThreads</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> &gt; SGFramework::Thread::numHardwareThreads</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b4bca628bbc392d339c147aec3470ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b4bca628bbc392d339c147aec3470ac">&#9670;&nbsp;</a></span>numUpdateThreads</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> &gt; SGFramework::Thread::numUpdateThreads</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SGFramework-Master_ToExe/07_Thread/<a class="el" href="_thread_8hpp_source.html">Thread.hpp</a></li>
+<li>SGFramework-Master_ToExe/07_Thread/<a class="el" href="_thread_8cpp.html">Thread.cpp</a></li>
+<li>SGFramework-Master_ToExe/07_Thread/<a class="el" href="_thread_audio_graphics_8cpp.html">ThreadAudioGraphics.cpp</a></li>
+<li>SGFramework-Master_ToExe/07_Thread/<a class="el" href="_thread_update_8cpp.html">ThreadUpdate.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

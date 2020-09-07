@@ -5,6 +5,7 @@ string_wを操作するstringf namespace
 #ifndef SGFRAMEWORK_HEADER_STRINGF_OTHER_FUNCTIONS_HPP_
 #define SGFRAMEWORK_HEADER_STRINGF_OTHER_FUNCTIONS_HPP_
 #include <string>
+#include <sstream>
 #include <vector>
 #include <algorithm>
 #include "StringfUsingAndStructure.hpp"

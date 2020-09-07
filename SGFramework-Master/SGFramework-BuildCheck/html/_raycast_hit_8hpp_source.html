@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/10_Physics/RaycastHit/RaycastHit.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_143bd857002117c0903e75b9b3cb038e.html">10_Physics</a></li><li class="navelem"><a class="el" href="dir_f1d77e85b4338faa143e231e0b2e99b9.html">RaycastHit</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RaycastHit.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_raycast_hit_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Raycastで使用するRaycastHit structure</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_RAYCAST_HIT_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_RAYCAST_HIT_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../Physics.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../Collider/BaseCollider.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//Raycastで使用するRaycastHit structure</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html">   13</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_s_g_framework_1_1_raycast_hit.html">RaycastHit</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">//friend</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html#a2bfcbae6c8e1d7af93c5ac1200b1535c">   16</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_physics.html">Physics</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">//all setting constructor</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html#a2cbfe78953c02f7cd461edb9b2bcd8b7">   19</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a2cbfe78953c02f7cd461edb9b2bcd8b7">RaycastHit</a>() : <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a9fa8c114db65592009c045bfab811946">numHits</a>(0), <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a81a95a8a2a407c362005e799559f06f3">isValid</a>(false) { }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">//buffer setting constructor</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html#adfa0c9eab15f745846f83bab1924296f">   21</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#adfa0c9eab15f745846f83bab1924296f">RaycastHit</a>(physx::PxRaycastBuffer* buffer)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            : <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a9fa8c114db65592009c045bfab811946">numHits</a>(buffer ? buffer-&gt;getNbAnyHits() : 0), <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a81a95a8a2a407c362005e799559f06f3">isValid</a>(buffer &amp;&amp; buffer-&gt;getNbAnyHits() ? true : false)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">if</span> (buffer) memcpy_s(&amp;m_buffer, <span class="keyword">sizeof</span>(physx::PxRaycastBuffer), buffer, <span class="keyword">sizeof</span>(physx::PxRaycastBuffer));</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">//hit transform (read function property)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">//argument 1: hit index, default = 0</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html#a4102bea975afc60df1dc1cf845f98d8f">   29</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;Transform&gt;</a> <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a4102bea975afc60df1dc1cf845f98d8f">getTransform</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index = 0)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> index &lt; <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a9fa8c114db65592009c045bfab811946">numHits</a> ? (*<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseCollider&gt;</a>*<span class="keyword">&gt;</span>(m_buffer.getAnyHit(index).shape-&gt;userData))-&gt;transform</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                : <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;Transform&gt;</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">//hit rigid body (read function property)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">//argument 1: hit index, default = 0</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html#a8ba383fe70aceaa9d8f54b56d7461be0">   36</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseRigidBody&gt;</a> <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a8ba383fe70aceaa9d8f54b56d7461be0">getRigidBody</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index = 0)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">return</span> index &lt; <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a9fa8c114db65592009c045bfab811946">numHits</a> ? (*<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseCollider&gt;</a>*<span class="keyword">&gt;</span>(m_buffer.getAnyHit(index).shape-&gt;userData))-&gt;rigidBody</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                : <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseRigidBody&gt;</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">//hit object collider (read function property)</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">//argument 1: hit index, default = 0</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html#a2f2016d65ff8d6b7252028b5c9c80eaa">   43</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseCollider&gt;</a> <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a2f2016d65ff8d6b7252028b5c9c80eaa">getCollider</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index = 0)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">return</span> index &lt; numHits ? *reinterpret_cast&lt;WeakPointer&lt;BaseClass::BaseCollider&gt;*&gt;(m_buffer.getAnyHit(index).shape-&gt;userData)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                : <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseCollider&gt;</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">//hit object position (read function property)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">//argument 1: hit index, default = 0</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html#a941cc8c82c63f210dc2b5bdbedfd0be3">   50</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a941cc8c82c63f210dc2b5bdbedfd0be3">getPosition</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index = 0)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span> index &lt; <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a9fa8c114db65592009c045bfab811946">numHits</a> ? (*<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseCollider&gt;</a>*<span class="keyword">&gt;</span>(m_buffer.getAnyHit(index).shape-&gt;userData))-&gt;transform-&gt;getWorldPosition()</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                : <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">Const::Vector3::zero</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">//hit object surface uv (read function property)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">//argument 1: hit index, default = 0</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html#a08cd5207b92dda7d9161bfdb9071651a">   58</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="struct_s_g_framework_1_1_u_v.html">UV</a> <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a08cd5207b92dda7d9161bfdb9071651a">getUV</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index = 0)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">if</span> (index &lt; <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a9fa8c114db65592009c045bfab811946">numHits</a>)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keyword">auto</span> hit = m_buffer.getAnyHit(index);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="struct_s_g_framework_1_1_u_v.html">UV</a>(hit.u, hit.v);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="namespace_s_g_framework_1_1_const_1_1_u_v.html#a0e01df60abbf6a4307c7afd2ec7874f0">Const::UV::zero</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//hit object surface normal (read function property)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//argument 1: hit index, default = 0</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html#af3bf7f340df81451a22c1215641b01b7">   69</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#af3bf7f340df81451a22c1215641b01b7">getNormal</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index = 0) { <span class="keywordflow">return</span> index &lt; <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a9fa8c114db65592009c045bfab811946">numHits</a> ? m_buffer.getAnyHit(index).normal : <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">Const::Vector3::zero</a>; }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">//distance : hit object surface &lt;-&gt; origin (read function property)</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="comment">//argument 1: hit index, default = 0</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html#aa8609f246528e3d80668853129d881db">   72</a></span>&#160;        SGF_FUNCTION_PROPERTY <span class="keywordtype">float</span> <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#aa8609f246528e3d80668853129d881db">getDistance</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index = 0) { <span class="keywordflow">return</span> index &lt; <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a9fa8c114db65592009c045bfab811946">numHits</a> ? m_buffer.getAnyHit(index).distance : 0.0f; }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">//hit object surface -&gt; polygon triangle index(read function property)</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">//argument 1: hit index, default = 0</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html#ace8d40f4de887f88b787a9ae191a7bb1">   75</a></span>&#160;        SGF_FUNCTION_PROPERTY <span class="keywordtype">int</span> <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#ace8d40f4de887f88b787a9ae191a7bb1">getTriangleIndex</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index = 0) { <span class="keywordflow">return</span> index &lt; <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a9fa8c114db65592009c045bfab811946">numHits</a> ? m_buffer.getAnyHit(index).faceIndex : 0; }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">//num hit infos</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html#a9fa8c114db65592009c045bfab811946">   78</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a9fa8c114db65592009c045bfab811946">numHits</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">//isValid Infos?</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_raycast_hit.html#a81a95a8a2a407c362005e799559f06f3">   80</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a81a95a8a2a407c362005e799559f06f3">isValid</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="comment">//[Init]</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">//Bufferをコピーする</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="namespace_s_g_framework_1_1_atomic.html#aa74003ea2ff69348cf11120966582c0e">Init</a>(physx::PxRaycastBuffer&amp; buffer)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            (*<span class="keyword">const_cast&lt;</span><a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>*<span class="keyword">&gt;</span>(&amp;this-&gt;<a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a9fa8c114db65592009c045bfab811946">numHits</a>)) = buffer.getNbAnyHits();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            (*<span class="keyword">const_cast&lt;</span><span class="keywordtype">bool</span>*<span class="keyword">&gt;</span>(&amp;this-&gt;<a class="code" href="struct_s_g_framework_1_1_raycast_hit.html#a81a95a8a2a407c362005e799559f06f3">isValid</a>)) = buffer.getNbAnyHits() ? true : <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            memcpy_s(&amp;m_buffer, <span class="keyword">sizeof</span>(physx::PxRaycastBuffer), &amp;buffer, <span class="keyword">sizeof</span>(physx::PxRaycastBuffer));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">//buffer</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        physx::PxRaycastBuffer m_buffer;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    };</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif //!SGFRAMEWORK_HEADER_RAYCAST_HIT_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_s_g_framework_1_1_raycast_hit_html_aa8609f246528e3d80668853129d881db"><div class="ttname"><a href="struct_s_g_framework_1_1_raycast_hit.html#aa8609f246528e3d80668853129d881db">SGFramework::RaycastHit::getDistance</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY float getDistance(uint index=0)</div><div class="ttdef"><b>Definition:</b> RaycastHit.hpp:72</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_raycast_hit_html_adfa0c9eab15f745846f83bab1924296f"><div class="ttname"><a href="struct_s_g_framework_1_1_raycast_hit.html#adfa0c9eab15f745846f83bab1924296f">SGFramework::RaycastHit::RaycastHit</a></div><div class="ttdeci">RaycastHit(physx::PxRaycastBuffer *buffer)</div><div class="ttdef"><b>Definition:</b> RaycastHit.hpp:21</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_raycast_hit_html_a08cd5207b92dda7d9161bfdb9071651a"><div class="ttname"><a href="struct_s_g_framework_1_1_raycast_hit.html#a08cd5207b92dda7d9161bfdb9071651a">SGFramework::RaycastHit::getUV</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY UV getUV(uint index=0)</div><div class="ttdef"><b>Definition:</b> RaycastHit.hpp:58</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_raycast_hit_html_a2cbfe78953c02f7cd461edb9b2bcd8b7"><div class="ttname"><a href="struct_s_g_framework_1_1_raycast_hit.html#a2cbfe78953c02f7cd461edb9b2bcd8b7">SGFramework::RaycastHit::RaycastHit</a></div><div class="ttdeci">RaycastHit()</div><div class="ttdef"><b>Definition:</b> RaycastHit.hpp:19</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_ac773f04184a04dfbb5820902d31f4c87"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">SGFramework::Const::Vector3::zero</a></div><div class="ttdeci">constexpr SGFramework::Vector3 zero(0.0f, 0.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:151</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_raycast_hit_html_ace8d40f4de887f88b787a9ae191a7bb1"><div class="ttname"><a href="struct_s_g_framework_1_1_raycast_hit.html#ace8d40f4de887f88b787a9ae191a7bb1">SGFramework::RaycastHit::getTriangleIndex</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY int getTriangleIndex(uint index=0)</div><div class="ttdef"><b>Definition:</b> RaycastHit.hpp:75</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_u_v_html"><div class="ttname"><a href="struct_s_g_framework_1_1_u_v.html">SGFramework::UV</a></div><div class="ttdef"><b>Definition:</b> UV.hpp:19</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_html"><div class="ttname"><a href="class_s_g_framework_1_1_physics.html">SGFramework::Physics</a></div><div class="ttdef"><b>Definition:</b> Physics.hpp:28</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector3_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a></div><div class="ttdef"><b>Definition:</b> Vector3.hpp:28</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_weak_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_weak_pointer.html">SGFramework::WeakPointer</a></div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:266</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_atomic_html_aa74003ea2ff69348cf11120966582c0e"><div class="ttname"><a href="namespace_s_g_framework_1_1_atomic.html#aa74003ea2ff69348cf11120966582c0e">SGFramework::Atomic::Init</a></div><div class="ttdeci">T Init(std::atomic&lt; T &gt; &amp;atomic, T init) noexcept</div><div class="ttdoc">atomicをロックフリーアルゴリズムを用いて初期化する</div><div class="ttdef"><b>Definition:</b> Atomic.hpp:44</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_raycast_hit_html"><div class="ttname"><a href="struct_s_g_framework_1_1_raycast_hit.html">SGFramework::RaycastHit</a></div><div class="ttdef"><b>Definition:</b> RaycastHit.hpp:14</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_raycast_hit_html_a81a95a8a2a407c362005e799559f06f3"><div class="ttname"><a href="struct_s_g_framework_1_1_raycast_hit.html#a81a95a8a2a407c362005e799559f06f3">SGFramework::RaycastHit::isValid</a></div><div class="ttdeci">const bool isValid</div><div class="ttdef"><b>Definition:</b> RaycastHit.hpp:80</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_raycast_hit_html_a4102bea975afc60df1dc1cf845f98d8f"><div class="ttname"><a href="struct_s_g_framework_1_1_raycast_hit.html#a4102bea975afc60df1dc1cf845f98d8f">SGFramework::RaycastHit::getTransform</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY WeakPointer&lt; Transform &gt; getTransform(uint index=0)</div><div class="ttdef"><b>Definition:</b> RaycastHit.hpp:29</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_raycast_hit_html_a9fa8c114db65592009c045bfab811946"><div class="ttname"><a href="struct_s_g_framework_1_1_raycast_hit.html#a9fa8c114db65592009c045bfab811946">SGFramework::RaycastHit::numHits</a></div><div class="ttdeci">const uint numHits</div><div class="ttdef"><b>Definition:</b> RaycastHit.hpp:78</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_raycast_hit_html_a2f2016d65ff8d6b7252028b5c9c80eaa"><div class="ttname"><a href="struct_s_g_framework_1_1_raycast_hit.html#a2f2016d65ff8d6b7252028b5c9c80eaa">SGFramework::RaycastHit::getCollider</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY WeakPointer&lt; BaseClass::BaseCollider &gt; getCollider(uint index=0)</div><div class="ttdef"><b>Definition:</b> RaycastHit.hpp:43</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_raycast_hit_html_af3bf7f340df81451a22c1215641b01b7"><div class="ttname"><a href="struct_s_g_framework_1_1_raycast_hit.html#af3bf7f340df81451a22c1215641b01b7">SGFramework::RaycastHit::getNormal</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY Vector3 getNormal(uint index=0)</div><div class="ttdef"><b>Definition:</b> RaycastHit.hpp:69</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_u_v_html_a0e01df60abbf6a4307c7afd2ec7874f0"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_u_v.html#a0e01df60abbf6a4307c7afd2ec7874f0">SGFramework::Const::UV::zero</a></div><div class="ttdeci">constexpr SGFramework::UV zero(0.0f, 0.0f)</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_raycast_hit_html_a941cc8c82c63f210dc2b5bdbedfd0be3"><div class="ttname"><a href="struct_s_g_framework_1_1_raycast_hit.html#a941cc8c82c63f210dc2b5bdbedfd0be3">SGFramework::RaycastHit::getPosition</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY Vector3 getPosition(uint index=0)</div><div class="ttdef"><b>Definition:</b> RaycastHit.hpp:50</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_raycast_hit_html_a8ba383fe70aceaa9d8f54b56d7461be0"><div class="ttname"><a href="struct_s_g_framework_1_1_raycast_hit.html#a8ba383fe70aceaa9d8f54b56d7461be0">SGFramework::RaycastHit::getRigidBody</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY WeakPointer&lt; BaseClass::BaseRigidBody &gt; getRigidBody(uint index=0)</div><div class="ttdef"><b>Definition:</b> RaycastHit.hpp:36</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

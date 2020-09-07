@@ -1,0 +1,45 @@
+\hypertarget{_c_model_8cpp}{}\doxysection{S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/\+C\+Model.cpp ファイル}
+\label{_c_model_8cpp}\index{SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/CModel.cpp@{SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/CModel.cpp}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}C\+Model.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Shader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+G\+Framework\+To\+Exe\+Project/\+S\+G\+Framwork.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+X11util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+Camera.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+X11\+Settransform.\+h\char`\"{}}\newline
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_h_a_l_vertex}{H\+A\+L\+Vertex}}
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_h_a_l_vertex}{H\+A\+L\+Vertex}} \mbox{\hyperlink{_c_model_8cpp_a7b7e9c34938bfa23ab8304a4cdf99105}{g\+\_\+\+Vertex\+List}} \mbox{[}$\,$\mbox{]}
+\item 
+I\+D3\+D11\+Buffer $\ast$ \mbox{\hyperlink{_c_model_8cpp_a3db5a82c8893ebbc2c99a7c9f9ade968}{v\+Buffer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{_c_model_8cpp_a7b7e9c34938bfa23ab8304a4cdf99105}\label{_c_model_8cpp_a7b7e9c34938bfa23ab8304a4cdf99105}} 
+\index{CModel.cpp@{CModel.cpp}!g\_VertexList@{g\_VertexList}}
+\index{g\_VertexList@{g\_VertexList}!CModel.cpp@{CModel.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_VertexList}{g\_VertexList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_h_a_l_vertex}{H\+A\+L\+Vertex}} g\+\_\+\+Vertex\+List\mbox{[}$\,$\mbox{]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        \{ \{ -\/0.5f,  0.5f, 0.5f \}, \{ 1.0f, 0.0f, 0.0f, 1.0f \} \},}
+\DoxyCodeLine{        \{ \{  0.5f, -\/0.5f, 0.5f \}, \{ 0.0f, 1.0f, 0.0f, 1.0f \} \},}
+\DoxyCodeLine{        \{ \{ -\/0.5f, -\/0.5f, 0.5f \}, \{ 0.0f, 0.0f, 1.0f, 1.0f \} \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_c_model_8cpp_a3db5a82c8893ebbc2c99a7c9f9ade968}\label{_c_model_8cpp_a3db5a82c8893ebbc2c99a7c9f9ade968}} 
+\index{CModel.cpp@{CModel.cpp}!vBuffer@{vBuffer}}
+\index{vBuffer@{vBuffer}!CModel.cpp@{CModel.cpp}}
+\doxysubsubsection{\texorpdfstring{vBuffer}{vBuffer}}
+{\footnotesize\ttfamily I\+D3\+D11\+Buffer$\ast$ v\+Buffer}
+

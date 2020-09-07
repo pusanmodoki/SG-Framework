@@ -1,0 +1,49 @@
+\hypertarget{_sec_file_r_w_8hpp}{}\doxysection{D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/04\+\_\+\+Asset/\+File\+R\+W/\+Sec\+File\+RW.hpp ファイル}
+\label{_sec_file_r_w_8hpp}\index{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/04\_Asset/FileRW/SecFileRW.hpp@{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/04\_Asset/FileRW/SecFileRW.hpp}}
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$codecvt$>$}\newline
+{\ttfamily \#include $<$locale$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}../../02\+\_\+\+Custom\+Variable/\+Custom\+Variable.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Encryption\+Key.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+File\+Stream/\+File\+Stream.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}File\+Text.\+hpp\char`\"{}}\newline
+\doxysubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework}{S\+G\+Framework}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_file}{S\+G\+Framework\+::\+File}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sec_file_r_w}{S\+G\+Framework\+::\+File\+::\+Sec\+File\+RW}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+File\+Text \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sec_file_r_w_ac3727bfd88c0032b51ef66b190c36f43}{S\+G\+Framework\+::\+File\+::\+Sec\+File\+R\+W\+::\+Read}} (const sgstring \&path)
+\item 
+File\+Text \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sec_file_r_w_a78d81b504299efa2b2fd9d15457a1ab4}{S\+G\+Framework\+::\+File\+::\+Sec\+File\+R\+W\+::\+Read\+Locked}} (const sgstring \&path, bool is\+Check\+Extension=true)
+\item 
+File\+Text \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sec_file_r_w_a2f6c0d038b7b6ceae532017809be07b2}{S\+G\+Framework\+::\+File\+::\+Sec\+File\+R\+W\+::\+Read\+Not\+Locked}} (const sgstring \&path, bool is\+Check\+Extension=true)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sec_file_r_w_aa8e2953d1a8fe34ed57186b1624f6885}{S\+G\+Framework\+::\+File\+::\+Sec\+File\+R\+W\+::\+Read}} (const sgstring \&path, File\+Text \&write)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sec_file_r_w_a0ee1ec550a73b27a68c63845668718fa}{S\+G\+Framework\+::\+File\+::\+Sec\+File\+R\+W\+::\+Read\+Locked}} (const sgstring \&path, File\+Text \&write, bool is\+Check\+Extension=true)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sec_file_r_w_a46bfb9c503bc757414545ba3114804d6}{S\+G\+Framework\+::\+File\+::\+Sec\+File\+R\+W\+::\+Read\+Not\+Locked}} (const sgstring \&path, File\+Text \&write, bool is\+Check\+Extension=true)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sec_file_r_w_a6b961b64878af67a8d2fde2483381e7d}{S\+G\+Framework\+::\+File\+::\+Sec\+File\+R\+W\+::\+Write}} (const sgstring \&path, const File\+Text \&write, bool is\+Add=false)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sec_file_r_w_a55c70d610ce99fa7a5c2ad055067e17a}{S\+G\+Framework\+::\+File\+::\+Sec\+File\+R\+W\+::\+Write\+Locked}} (const sgstring \&path, const File\+Text \&write, bool is\+Add=false, bool is\+Check\+Extension=true)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sec_file_r_w_a0d45348651deda109d866a80a3a1fdf5}{S\+G\+Framework\+::\+File\+::\+Sec\+File\+R\+W\+::\+Write\+Not\+Locked}} (const sgstring \&path, const File\+Text \&write, bool is\+Add=false, bool is\+Check\+Extension=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+constexpr wchar \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sec_file_r_w_aebff0e88b7f576429297ae4208f4db1a}{S\+G\+Framework\+::\+File\+::\+Sec\+File\+R\+W\+::c\+Sec\+Locked\+Extension}} \mbox{[}$\,$\mbox{]} = L\char`\"{}.secl\char`\"{}
+\item 
+constexpr wchar \mbox{\hyperlink{namespace_s_g_framework_1_1_file_1_1_sec_file_r_w_a874d23dc4c924666d7b6e68bc8d832e8}{S\+G\+Framework\+::\+File\+::\+Sec\+File\+R\+W\+::c\+Sec\+Not\+Locked\+Extension}} \mbox{[}$\,$\mbox{]} = L\char`\"{}.sec\char`\"{}
+\end{DoxyCompactItemize}

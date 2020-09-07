@@ -1,0 +1,312 @@
+\hypertarget{_macro_and_using_8hpp}{}\doxysection{D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/01\+\_\+\+Macro\+And\+Librarys/\+Belonging\+Headers/\+Macro\+And\+Using.hpp ファイル}
+\label{_macro_and_using_8hpp}\index{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/01\_MacroAndLibrarys/BelongingHeaders/MacroAndUsing.hpp@{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/01\_MacroAndLibrarys/BelongingHeaders/MacroAndUsing.hpp}}
+
+
+using, 定数などを定義  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_g_framework_1_1_dimension}{S\+G\+Framework\+::\+Dimension}}
+\end{DoxyCompactItemize}
+\doxysubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework}{S\+G\+Framework}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_hash}{S\+G\+Framework\+::\+Hash}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f}{S\+G\+Framework\+::\+Math\+AF}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion}{S\+G\+Framework\+::\+Data\+Volume\+Conversion}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_administrator}{S\+G\+Framework\+::\+Administrator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_aa0155d9273841e1c4b06730bcf39ca30}{S\+G\+F\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+P\+R\+O\+P\+E\+R\+TY}}~inline
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_s_g_framework}{S\+G\+Framework}} inline property macro \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}{S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_s_g_framework}{S\+G\+Framework}} property macro \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_aa2eae4e8c99ada2e0afd8011beca63c4}{I\+S\+\_\+\+T\+R\+UE}}(\mbox{\hyperlink{_code_convention-_comment_8txt_aa0ccb5ee6d882ee3605ff47745c6467b}{val}})~((\mbox{\hyperlink{_code_convention-_comment_8txt_aa0ccb5ee6d882ee3605ff47745c6467b}{val}}) $^\wedge$ false)
+\begin{DoxyCompactList}\small\item\em true判定高速化, 見やすさ向上マクロ(高速化は環境依存？) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_aa36e55e8a36a5db4160db2dc04fde1a4}{I\+S\+\_\+\+F\+A\+L\+SE}}(\mbox{\hyperlink{_code_convention-_comment_8txt_aa0ccb5ee6d882ee3605ff47745c6467b}{val}})~((\mbox{\hyperlink{_code_convention-_comment_8txt_aa0ccb5ee6d882ee3605ff47745c6467b}{val}}) $^\wedge$ true)
+\begin{DoxyCompactList}\small\item\em false判定高速化, 見やすさ向上マクロ(高速化は環境依存？) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_a297c50fc7e7dc2d97a5598a8742ab265}{D\+E\+L\+E\+T\+E\+\_\+\+P\+O\+I\+N\+T\+ER}}(pointer)~if (pointer != nullptr) \{ delete pointer; pointer = nullptr; \}
+\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_a7f2abb4d9b33a0bd86e63b0091df6656}{D\+E\+L\+E\+T\+E\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+O\+I\+N\+T\+ER}}(pointer)~if (pointer != nullptr) \{ delete\mbox{[}$\,$\mbox{]} pointer; pointer = nullptr; \}
+\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_a363c44f43409a9b72d2100abeab6758a}{D\+E\+L\+E\+T\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+L\+I\+ST}}(pointer\+List)~\{ for (auto\& e \+: pointer\+List) if (e != nullptr) delete e; pointer\+List.\+clear(); \}
+\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_a1f89ef73946cd4d65b137440a965ff43}{D\+E\+L\+E\+T\+E\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+L\+I\+ST}}(pointer\+List)~\{ for (auto\& e \+: pointer\+List) if (e != nullptr) delete\mbox{[}$\,$\mbox{]} e; pointer\+List.\+clear(); \}
+\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_a82ae160dbe195f3c7c84c14db0ebdce2}{C\+O\+M\+\_\+\+R\+E\+L\+E\+A\+SE}}(pointer)~if (pointer != nullptr) \{ pointer-\/$>$\mbox{\hyperlink{_memory_8h_a5e10ba3d4adde88796a2a056198749f7}{Release}}(); pointer = nullptr; \}
+\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_a8d30afbf67e3534c013b949ba7897426}{P\+H\+Y\+S\+X\+\_\+\+R\+E\+L\+E\+A\+SE}}(pointer)~if (pointer != nullptr) \{ pointer-\/$>$release(); pointer = nullptr; \}
+\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_afc9753f2bdfd7a6e455e399e48402f99}{M\+A\+K\+E\+\_\+\+C\+O\+M\+M\+A\+ND}}(function)~(\mbox{[}this\mbox{]}() \{ function; \})
+\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_a45f251e5a80d41cb8fbdf4b1cf4fdb41}{M\+A\+K\+E\+\_\+\+F\+O\+R\+\_\+\+C\+O\+M\+M\+A\+ND}}(function)~(\mbox{[}\&\mbox{]}() \{ function; \})
+\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_aba12cf6528c872830ae3532f45a78a9b}{D\+E\+L\+E\+T\+E\+\_\+\+A\+L\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}}(class\+Name)
+\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_a84fa9d5714ab3da7ee302e718fb70404}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+M\+O\+V\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}}(class\+Name)
+\item 
+\#define \mbox{\hyperlink{_macro_and_using_8hpp_aceae9653cc143241e5267e7ff5b0fa53}{T\+R\+Y\+\_\+\+C\+A\+T\+C\+H\+\_\+\+O\+N\+\_\+\+D\+E\+B\+UG}}(try\+Block,  catch\+Block)~try\+Block;
+\end{DoxyCompactItemize}
+\doxysubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_abdf3286969ad21d0daec57415cbf7510}{S\+G\+Framework\+::\+Simd\+Matrix}} = std\+::nullptr\+\_\+t
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_aaf2627fa653650768a4c30feafad5919}{S\+G\+Framework\+::\+Simd\+Vector}} = std\+::nullptr\+\_\+t
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{S\+G\+Framework\+::byte}} = unsigned char
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{S\+G\+Framework\+::wchar}} = wchar\+\_\+t
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_a5687c6be1b93234a3e94b1371a720fb7}{S\+G\+Framework\+::uchar}} = unsigned char
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{S\+G\+Framework\+::ushort}} = unsigned short
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{S\+G\+Framework\+::uint}} = unsigned int
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_ab8555220ed9c68051e9ef4fb73eaf63d}{S\+G\+Framework\+::ulong}} = unsigned long
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_ae19df834a9593306f7556999c8be058a}{S\+G\+Framework\+::ulonglong}} = unsigned long long
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_abd803d3020482eb8bf1f575bc531b500}{S\+G\+Framework\+::int64}} = long long
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_ae22f6e3de0e16d4376368e48f9d7ade3}{S\+G\+Framework\+::uint64}} = unsigned long long
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+constexpr bool \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a327a3e2f41f0fe65b272c1e313dd4510}{S\+G\+Framework\+::\+Math\+A\+F\+::\+Is\+Equal}} (float val1, float val2)
+\item 
+constexpr bool \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_aeae8cf1adb02d6c09988d1b48751cca5}{S\+G\+Framework\+::\+Math\+A\+F\+::\+Is\+Equal}} (double val1, double val2)
+\item 
+constexpr bool \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a194242de430d0ded7cec4d4d76145675}{S\+G\+Framework\+::\+Math\+A\+F\+::\+Is\+Not\+Equal}} (float val1, float val2)
+\item 
+constexpr bool \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a295b6ad1b1c3e628f5a7b37ee82e1c54}{S\+G\+Framework\+::\+Math\+A\+F\+::\+Is\+Not\+Equal}} (double val1, double val2)
+\item 
+float \mbox{\hyperlink{namespace_s_g_framework_1_1_administrator_aef91eb8d64868c96540ba2c7a72c04cf}{S\+G\+Framework\+::\+Administrator\+::\+Get\+Refresh\+Rate}} (H\+W\+ND h\+Wnd)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespace_s_g_framework_1_1_hash_a57ae928d310da29be19651cda09055b8}{S\+G\+Framework\+::\+Hash\+::c\+Fowler\+Noll\+Vo\+Prime}} = 1099511628211u
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespace_s_g_framework_1_1_hash_a5d2a896742a6911e30841255f5513670}{S\+G\+Framework\+::\+Hash\+::c\+Fowler\+Noll\+Vo\+Offset\+Basis}} = 14695981039346656037u
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a291e748d04a4859c86e72d07edd9995a}{S\+G\+Framework\+::\+Math\+A\+F\+::c\+Max\+Degree}} = 180.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a1b1da85c968ece03d5685ef122a15797}{S\+G\+Framework\+::\+Math\+A\+F\+::c\+Min\+Degree}} = -\/180.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_add9f3ad835a4d28b01d0a0705420f804}{S\+G\+Framework\+::\+Math\+A\+F\+::c\+Pi}} = 3.\+141592654f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a747065d3fde6741f776e222aeb75ccfe}{S\+G\+Framework\+::\+Math\+A\+F\+::c\+Pix2}} = 6.\+283185307f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a1540bb1fb7ab7e5492ec78f7775fecb0}{S\+G\+Framework\+::\+Math\+A\+F\+::c\+Pi\+Div2}} = 1.\+570796327f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a292c119552be89df922ea01080546794}{S\+G\+Framework\+::\+Math\+A\+F\+::c\+Pi\+Div4}} = 0.\+785398163f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a8aa59d2395f84daef682a57d41a57178}{S\+G\+Framework\+::\+Math\+A\+F\+::c\+Infinity}} = std\+::numeric\+\_\+limits$<$float$>$\+::infinity()
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a33beb4e24a62193597f7cb74a1fa2786}{S\+G\+Framework\+::\+Math\+A\+F\+::c\+Negative\+Infinity}} = -\/std\+::numeric\+\_\+limits$<$float$>$\+::infinity()
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a24b21305c4149f07827403e6dfabe228}{S\+G\+Framework\+::\+Math\+A\+F\+::c\+NaN}} = std\+::numeric\+\_\+limits$<$float$>$\+::quiet\+\_\+\+NaN()
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a92a321c43b4e8b169e848138d87d8444}{S\+G\+Framework\+::\+Math\+A\+F\+::c\+Deg\+To\+Rad}} = (c\+Pi $\ast$ 2) / 360.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a0a46d9254b68d9d4dc3b26003d934e3b}{S\+G\+Framework\+::\+Math\+A\+F\+::c\+Rad\+To\+Deg}} = 360 / (c\+Pi $\ast$ 2)
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a2e518057fca380696bc3c09bf8b19b18}{S\+G\+Framework\+::\+Math\+A\+F\+::c\+Epsilon}} = std\+::numeric\+\_\+limits$<$float$>$\+::epsilon()
+\item 
+constexpr double \mbox{\hyperlink{namespace_s_g_framework_1_1_math_a_f_a8268dc49df3a448d2d8b77defb5e8518}{S\+G\+Framework\+::\+Math\+A\+F\+::c\+Double\+Epsilon}} = std\+::numeric\+\_\+limits$<$double$>$\+::epsilon()
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_a14ec8035b1f8a38cc4591f30865ac2ed}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Byte\+To\+Kilo\+Byte\+Float}} = 1024.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_ae132951c321ea76220230e9b075067d7}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Byte\+To\+Mega\+Byte\+Float}} = 1024.\+0f $\ast$ 1024.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_a101c96909b22f0f8a546d4c273456335}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Byte\+To\+Giga\+Byte\+Float}} = 1024.\+0f $\ast$ 1024.\+0f $\ast$ 1024.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_ab9eed71c3c2c2cf50c0e263a55107c53}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Kilo\+Byte\+To\+Byte\+Float}} = 1024.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_ae1f2e9618367d264f47aeaee75549778}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Kilo\+Byte\+To\+Mega\+Byte\+Float}} = 1024.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_aa7fd57dbf50504c9a7a956a3c3603955}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Kilo\+Byte\+To\+Giga\+Byte\+Float}} = 1024.\+0f $\ast$ 1024.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_a9b895f2a9288cc4db052082a278cda40}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Mega\+Byte\+To\+Byte\+Float}} = 1024.\+0f $\ast$ 1024.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_ac0ffd0f3b340cf8571af0eac45144558}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Mega\+Byte\+To\+Kilo\+Byte\+Float}} = 1024.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_aefbeeb8bd4932e021776235549ab7917}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Mega\+Byte\+To\+Giga\+Byte\+Float}} = 1024.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_ad5d84058fd16c0f63af5f9bfe3cdf642}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Giga\+Byte\+To\+Byte\+Float}} = 1024.\+0f $\ast$ 1024.\+0f $\ast$ 1024.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_acd176dd7c9c155dad5e726571c352ea2}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Giga\+Byte\+To\+Kilo\+Byte\+Float}} = 1024.\+0f $\ast$ 1024.\+0f
+\item 
+constexpr float \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_a829734b7e4e9f6d421f8700549726cd7}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Giga\+Byte\+To\+Mega\+Byte\+Float}} = 1024.\+0f
+\item 
+constexpr uint64 \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_ad3a3ed125450381e8a7923411682a068}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Byte\+To\+Kilo\+Byte}} = 1024
+\item 
+constexpr uint64 \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_aff242668a6716de02bf2a123b7856a48}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Byte\+To\+Mega\+Byte}} = 1024 $\ast$ 1024
+\item 
+constexpr uint64 \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_aa2741702e12c9dad53c04664bf601ab6}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Byte\+To\+Giga\+Byte}} = 1024 $\ast$ 1024 $\ast$ 1024
+\item 
+constexpr uint64 \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_a6ea7d85903e1805c0812604c97f004c2}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Kilo\+Byte\+To\+Byte}} = 1024
+\item 
+constexpr uint64 \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_a510adcb30d8c698ff9849150b1a6ef94}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Kilo\+Byte\+To\+Mega\+Byte}} = 1024
+\item 
+constexpr uint64 \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_ad109e1f9948d26378b463e06992cf949}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Kilo\+Byte\+To\+Giga\+Byte}} = 1024 $\ast$ 1024
+\item 
+constexpr uint64 \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_af0a16854418e8bddbc74280cb013758b}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Mega\+Byte\+To\+Byte}} = 1024 $\ast$ 1024
+\item 
+constexpr uint64 \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_a361090effad6cfadeee9e53cc449249b}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Mega\+Byte\+To\+Kilo\+Byte}} = 1024
+\item 
+constexpr uint64 \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_a9402f32d1212a213193921ff7c9a197c}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Mega\+Byte\+To\+Giga\+Byte}} = 1024
+\item 
+constexpr uint64 \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_afcc98d0609432aa50cdc9e783870adf8}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Giga\+Byte\+To\+Byte}} = 1024 $\ast$ 1024 $\ast$ 1024
+\item 
+constexpr uint64 \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_af5916d381617260244623e40ad4290ee}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Giga\+Byte\+To\+Kilo\+Byte}} = 1024 $\ast$ 1024
+\item 
+constexpr uint64 \mbox{\hyperlink{namespace_s_g_framework_1_1_data_volume_conversion_ad749c4bb45e8f0cc73d321318df352c4}{S\+G\+Framework\+::\+Data\+Volume\+Conversion\+::c\+Giga\+Byte\+To\+Mega\+Byte}} = 1024
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+using, 定数などを定義 
+
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{_macro_and_using_8hpp_a82ae160dbe195f3c7c84c14db0ebdce2}\label{_macro_and_using_8hpp_a82ae160dbe195f3c7c84c14db0ebdce2}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!COM\_RELEASE@{COM\_RELEASE}}
+\index{COM\_RELEASE@{COM\_RELEASE}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{COM\_RELEASE}{COM\_RELEASE}}
+{\footnotesize\ttfamily \#define C\+O\+M\+\_\+\+R\+E\+L\+E\+A\+SE(\begin{DoxyParamCaption}\item[{}]{pointer }\end{DoxyParamCaption})~if (pointer != nullptr) \{ pointer-\/$>$\mbox{\hyperlink{_memory_8h_a5e10ba3d4adde88796a2a056198749f7}{Release}}(); pointer = nullptr; \}}
+
+\mbox{\Hypertarget{_macro_and_using_8hpp_a84fa9d5714ab3da7ee302e718fb70404}\label{_macro_and_using_8hpp_a84fa9d5714ab3da7ee302e718fb70404}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!DEFAULT\_COPY\_MOVE\_FUNCTIONS@{DEFAULT\_COPY\_MOVE\_FUNCTIONS}}
+\index{DEFAULT\_COPY\_MOVE\_FUNCTIONS@{DEFAULT\_COPY\_MOVE\_FUNCTIONS}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_COPY\_MOVE\_FUNCTIONS}{DEFAULT\_COPY\_MOVE\_FUNCTIONS}}
+{\footnotesize\ttfamily \#define D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+M\+O\+V\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS(\begin{DoxyParamCaption}\item[{}]{class\+Name }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        className(\textcolor{keyword}{const} className\&) = \textcolor{keywordflow}{default}; \(\backslash\)}
+\DoxyCodeLine{        className(className\&\&) = \textcolor{keywordflow}{default}; \(\backslash\)}
+\DoxyCodeLine{        className\& operator = (\textcolor{keyword}{const} className\&) = \textcolor{keywordflow}{default}; \(\backslash\)}
+\DoxyCodeLine{        className\& operator = (className\&\&) = \textcolor{keywordflow}{default};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_macro_and_using_8hpp_aba12cf6528c872830ae3532f45a78a9b}\label{_macro_and_using_8hpp_aba12cf6528c872830ae3532f45a78a9b}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS@{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}}
+\index{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS@{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}{DELETE\_ALL\_DEFAULT\_CLASS\_FUNCTIONS}}
+{\footnotesize\ttfamily \#define D\+E\+L\+E\+T\+E\+\_\+\+A\+L\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS(\begin{DoxyParamCaption}\item[{}]{class\+Name }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        className() = \textcolor{keyword}{delete}; \(\backslash\)}
+\DoxyCodeLine{        className(\textcolor{keyword}{const} className\&) = \textcolor{keyword}{delete}; \(\backslash\)}
+\DoxyCodeLine{        className(className\&\&) = \textcolor{keyword}{delete}; \(\backslash\)}
+\DoxyCodeLine{        className\& operator = (\textcolor{keyword}{const} className\&) = \textcolor{keyword}{delete}; \(\backslash\)}
+\DoxyCodeLine{        className\& operator = (className\&\&) = \textcolor{keyword}{delete};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_macro_and_using_8hpp_a7f2abb4d9b33a0bd86e63b0091df6656}\label{_macro_and_using_8hpp_a7f2abb4d9b33a0bd86e63b0091df6656}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!DELETE\_ARRAY\_POINTER@{DELETE\_ARRAY\_POINTER}}
+\index{DELETE\_ARRAY\_POINTER@{DELETE\_ARRAY\_POINTER}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{DELETE\_ARRAY\_POINTER}{DELETE\_ARRAY\_POINTER}}
+{\footnotesize\ttfamily \#define D\+E\+L\+E\+T\+E\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+O\+I\+N\+T\+ER(\begin{DoxyParamCaption}\item[{}]{pointer }\end{DoxyParamCaption})~if (pointer != nullptr) \{ delete\mbox{[}$\,$\mbox{]} pointer; pointer = nullptr; \}}
+
+\mbox{\Hypertarget{_macro_and_using_8hpp_a1f89ef73946cd4d65b137440a965ff43}\label{_macro_and_using_8hpp_a1f89ef73946cd4d65b137440a965ff43}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!DELETE\_ARRAY\_POINTER\_LIST@{DELETE\_ARRAY\_POINTER\_LIST}}
+\index{DELETE\_ARRAY\_POINTER\_LIST@{DELETE\_ARRAY\_POINTER\_LIST}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{DELETE\_ARRAY\_POINTER\_LIST}{DELETE\_ARRAY\_POINTER\_LIST}}
+{\footnotesize\ttfamily \#define D\+E\+L\+E\+T\+E\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+L\+I\+ST(\begin{DoxyParamCaption}\item[{}]{pointer\+List }\end{DoxyParamCaption})~\{ for (auto\& e \+: pointer\+List) if (e != nullptr) delete\mbox{[}$\,$\mbox{]} e; pointer\+List.\+clear(); \}}
+
+\mbox{\Hypertarget{_macro_and_using_8hpp_a297c50fc7e7dc2d97a5598a8742ab265}\label{_macro_and_using_8hpp_a297c50fc7e7dc2d97a5598a8742ab265}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!DELETE\_POINTER@{DELETE\_POINTER}}
+\index{DELETE\_POINTER@{DELETE\_POINTER}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{DELETE\_POINTER}{DELETE\_POINTER}}
+{\footnotesize\ttfamily \#define D\+E\+L\+E\+T\+E\+\_\+\+P\+O\+I\+N\+T\+ER(\begin{DoxyParamCaption}\item[{}]{pointer }\end{DoxyParamCaption})~if (pointer != nullptr) \{ delete pointer; pointer = nullptr; \}}
+
+\mbox{\Hypertarget{_macro_and_using_8hpp_a363c44f43409a9b72d2100abeab6758a}\label{_macro_and_using_8hpp_a363c44f43409a9b72d2100abeab6758a}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!DELETE\_POINTER\_LIST@{DELETE\_POINTER\_LIST}}
+\index{DELETE\_POINTER\_LIST@{DELETE\_POINTER\_LIST}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{DELETE\_POINTER\_LIST}{DELETE\_POINTER\_LIST}}
+{\footnotesize\ttfamily \#define D\+E\+L\+E\+T\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+L\+I\+ST(\begin{DoxyParamCaption}\item[{}]{pointer\+List }\end{DoxyParamCaption})~\{ for (auto\& e \+: pointer\+List) if (e != nullptr) delete e; pointer\+List.\+clear(); \}}
+
+\mbox{\Hypertarget{_macro_and_using_8hpp_aa36e55e8a36a5db4160db2dc04fde1a4}\label{_macro_and_using_8hpp_aa36e55e8a36a5db4160db2dc04fde1a4}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!IS\_FALSE@{IS\_FALSE}}
+\index{IS\_FALSE@{IS\_FALSE}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{IS\_FALSE}{IS\_FALSE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+F\+A\+L\+SE(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_code_convention-_comment_8txt_aa0ccb5ee6d882ee3605ff47745c6467b}{val}} }\end{DoxyParamCaption})~((\mbox{\hyperlink{_code_convention-_comment_8txt_aa0ccb5ee6d882ee3605ff47745c6467b}{val}}) $^\wedge$ true)}
+
+
+
+false判定高速化, 見やすさ向上マクロ(高速化は環境依存？) 
+
+\mbox{\Hypertarget{_macro_and_using_8hpp_aa2eae4e8c99ada2e0afd8011beca63c4}\label{_macro_and_using_8hpp_aa2eae4e8c99ada2e0afd8011beca63c4}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!IS\_TRUE@{IS\_TRUE}}
+\index{IS\_TRUE@{IS\_TRUE}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{IS\_TRUE}{IS\_TRUE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+T\+R\+UE(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_code_convention-_comment_8txt_aa0ccb5ee6d882ee3605ff47745c6467b}{val}} }\end{DoxyParamCaption})~((\mbox{\hyperlink{_code_convention-_comment_8txt_aa0ccb5ee6d882ee3605ff47745c6467b}{val}}) $^\wedge$ false)}
+
+
+
+true判定高速化, 見やすさ向上マクロ(高速化は環境依存？) 
+
+\mbox{\Hypertarget{_macro_and_using_8hpp_afc9753f2bdfd7a6e455e399e48402f99}\label{_macro_and_using_8hpp_afc9753f2bdfd7a6e455e399e48402f99}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!MAKE\_COMMAND@{MAKE\_COMMAND}}
+\index{MAKE\_COMMAND@{MAKE\_COMMAND}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{MAKE\_COMMAND}{MAKE\_COMMAND}}
+{\footnotesize\ttfamily \#define M\+A\+K\+E\+\_\+\+C\+O\+M\+M\+A\+ND(\begin{DoxyParamCaption}\item[{}]{function }\end{DoxyParamCaption})~(\mbox{[}this\mbox{]}() \{ function; \})}
+
+\mbox{\Hypertarget{_macro_and_using_8hpp_a45f251e5a80d41cb8fbdf4b1cf4fdb41}\label{_macro_and_using_8hpp_a45f251e5a80d41cb8fbdf4b1cf4fdb41}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!MAKE\_FOR\_COMMAND@{MAKE\_FOR\_COMMAND}}
+\index{MAKE\_FOR\_COMMAND@{MAKE\_FOR\_COMMAND}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{MAKE\_FOR\_COMMAND}{MAKE\_FOR\_COMMAND}}
+{\footnotesize\ttfamily \#define M\+A\+K\+E\+\_\+\+F\+O\+R\+\_\+\+C\+O\+M\+M\+A\+ND(\begin{DoxyParamCaption}\item[{}]{function }\end{DoxyParamCaption})~(\mbox{[}\&\mbox{]}() \{ function; \})}
+
+\mbox{\Hypertarget{_macro_and_using_8hpp_a8d30afbf67e3534c013b949ba7897426}\label{_macro_and_using_8hpp_a8d30afbf67e3534c013b949ba7897426}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!PHYSX\_RELEASE@{PHYSX\_RELEASE}}
+\index{PHYSX\_RELEASE@{PHYSX\_RELEASE}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{PHYSX\_RELEASE}{PHYSX\_RELEASE}}
+{\footnotesize\ttfamily \#define P\+H\+Y\+S\+X\+\_\+\+R\+E\+L\+E\+A\+SE(\begin{DoxyParamCaption}\item[{}]{pointer }\end{DoxyParamCaption})~if (pointer != nullptr) \{ pointer-\/$>$release(); pointer = nullptr; \}}
+
+\mbox{\Hypertarget{_macro_and_using_8hpp_aa0155d9273841e1c4b06730bcf39ca30}\label{_macro_and_using_8hpp_aa0155d9273841e1c4b06730bcf39ca30}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!SGF\_INLINE\_PROPERTY@{SGF\_INLINE\_PROPERTY}}
+\index{SGF\_INLINE\_PROPERTY@{SGF\_INLINE\_PROPERTY}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{SGF\_INLINE\_PROPERTY}{SGF\_INLINE\_PROPERTY}}
+{\footnotesize\ttfamily \#define S\+G\+F\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+P\+R\+O\+P\+E\+R\+TY~inline}
+
+
+
+\mbox{\hyperlink{namespace_s_g_framework}{S\+G\+Framework}} inline property macro 
+
+\mbox{\Hypertarget{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}\label{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!SGF\_PROPERTY@{SGF\_PROPERTY}}
+\index{SGF\_PROPERTY@{SGF\_PROPERTY}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{SGF\_PROPERTY}{SGF\_PROPERTY}}
+{\footnotesize\ttfamily \#define S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}
+
+
+
+\mbox{\hyperlink{namespace_s_g_framework}{S\+G\+Framework}} property macro 
+
+\mbox{\Hypertarget{_macro_and_using_8hpp_aceae9653cc143241e5267e7ff5b0fa53}\label{_macro_and_using_8hpp_aceae9653cc143241e5267e7ff5b0fa53}} 
+\index{MacroAndUsing.hpp@{MacroAndUsing.hpp}!TRY\_CATCH\_ON\_DEBUG@{TRY\_CATCH\_ON\_DEBUG}}
+\index{TRY\_CATCH\_ON\_DEBUG@{TRY\_CATCH\_ON\_DEBUG}!MacroAndUsing.hpp@{MacroAndUsing.hpp}}
+\doxysubsubsection{\texorpdfstring{TRY\_CATCH\_ON\_DEBUG}{TRY\_CATCH\_ON\_DEBUG}}
+{\footnotesize\ttfamily \#define T\+R\+Y\+\_\+\+C\+A\+T\+C\+H\+\_\+\+O\+N\+\_\+\+D\+E\+B\+UG(\begin{DoxyParamCaption}\item[{}]{try\+Block,  }\item[{}]{catch\+Block }\end{DoxyParamCaption})~try\+Block;}
+

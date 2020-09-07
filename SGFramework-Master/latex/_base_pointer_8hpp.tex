@@ -1,0 +1,72 @@
+\hypertarget{_base_pointer_8hpp}{}\doxysection{S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Pointer/\+Base\+Pointer.hpp ファイル}
+\label{_base_pointer_8hpp}\index{SGFramework-\/Master\_ToExe/02\_Variables/未実装/Pointer/BasePointer.hpp@{SGFramework-\/Master\_ToExe/02\_Variables/未実装/Pointer/BasePointer.hpp}}
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Atomic/\+Atomic.\+hpp\char`\"{}}\newline
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_base_pointer}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Base\+Pointer}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_base_count_pointer}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Base\+Count\+Pointer}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_base_clone_pointer}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Base\+Clone\+Pointer}}
+\item 
+struct \mbox{\hyperlink{struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Base\+Counter}}
+\item 
+struct \mbox{\hyperlink{struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_counter}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Simple\+Counter}}
+\item 
+struct \mbox{\hyperlink{struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_counter}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Mutex\+Counter}}
+\item 
+struct \mbox{\hyperlink{struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_clone_counter}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Base\+Clone\+Counter}}
+\item 
+struct \mbox{\hyperlink{struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_clone_counter}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Simple\+Clone\+Counter}}
+\item 
+struct \mbox{\hyperlink{struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_clone_counter}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Mutex\+Clone\+Counter}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_base_deallocator}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Base\+Deallocator}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator_free}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Deallocator\+Free}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_deallocator}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Deallocator$<$ Pointer\+Type, Destroy\+Type, Is\+Array $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework}{S\+G\+Framework}}
+\begin{DoxyCompactList}\small\item\em S\+G-\/\+Framework namespace \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer}{S\+G\+Framework\+::\+Pointer}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_detail}{S\+G\+Framework\+::\+Detail}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_detail_1_1_pointer}{S\+G\+Framework\+::\+Detail\+::\+Pointer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_base_pointer_8hpp_ace67cffae972e326936a9e779392120a}{sgnew}}
+\item 
+\#define \mbox{\hyperlink{_base_pointer_8hpp_a03dab733eab1246b181e6742b9acd3b8}{sgdelete}}
+\end{DoxyCompactItemize}
+\doxysubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_af38b6cdeb451f8ff608e64739c989304}{S\+G\+Framework\+::\+Pointer\+::\+Clone\+Mode}} \+: uint \{ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_af38b6cdeb451f8ff608e64739c989304a05d9c190f4a28f2be9e4925ce396f055}{S\+G\+Framework\+::\+Pointer\+::\+Clone\+Mode\+::\+Clone\+Mode\+Direct}} = 0x01, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_af38b6cdeb451f8ff608e64739c989304a47f2b4b66e680d8bef9b61b861a8d5c6}{S\+G\+Framework\+::\+Pointer\+::\+Clone\+Mode\+::\+Clone\+Mode\+Unique}} = 0x02, 
+\mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_af38b6cdeb451f8ff608e64739c989304a93321339edf586a77f1b45988b6b22ab}{S\+G\+Framework\+::\+Pointer\+::\+Clone\+Mode\+::\+Clone\+Mode\+Shared}} = 0x04
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{_base_pointer_8hpp_a03dab733eab1246b181e6742b9acd3b8}\label{_base_pointer_8hpp_a03dab733eab1246b181e6742b9acd3b8}} 
+\index{BasePointer.hpp@{BasePointer.hpp}!sgdelete@{sgdelete}}
+\index{sgdelete@{sgdelete}!BasePointer.hpp@{BasePointer.hpp}}
+\doxysubsubsection{\texorpdfstring{sgdelete}{sgdelete}}
+{\footnotesize\ttfamily \#define sgdelete}
+
+\mbox{\Hypertarget{_base_pointer_8hpp_ace67cffae972e326936a9e779392120a}\label{_base_pointer_8hpp_ace67cffae972e326936a9e779392120a}} 
+\index{BasePointer.hpp@{BasePointer.hpp}!sgnew@{sgnew}}
+\index{sgnew@{sgnew}!BasePointer.hpp@{BasePointer.hpp}}
+\doxysubsubsection{\texorpdfstring{sgnew}{sgnew}}
+{\footnotesize\ttfamily \#define sgnew}
+

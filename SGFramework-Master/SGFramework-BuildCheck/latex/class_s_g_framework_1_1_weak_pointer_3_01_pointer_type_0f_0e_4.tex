@@ -1,0 +1,437 @@
+\hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4}{}\doxysection{S\+G\+Framework\+::Weak\+Pointer$<$ Pointer\+Type\mbox{[}\mbox{]}$>$ クラステンプレート}
+\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4}\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+
+
+{\ttfamily \#include $<$Shared\+Pointer.\+hpp$>$}
+
+S\+G\+Framework\+::Weak\+Pointer$<$ Pointer\+Type\mbox{[}\mbox{]}$>$ の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ac41f56f8fcd1cc7efc90f609e9f44941}{Weak\+Pointer}} () noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a28b4170771ebaa5970e262bb54a24b8b}{Weak\+Pointer}} (const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&copy) noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a631dfef03c42b2b5e0f59bca4976342f}{Weak\+Pointer}} (\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&\&move) noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a081170a3ba9486027d2c1613a4ed3c6d}{Weak\+Pointer}} (const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&copy) noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a402d3e8db299f78583c93fefd3a04bca}{$\sim$\+Weak\+Pointer}} () noexcept
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_abffea3d263581d80c16f4619347074df}{Add\+Ref}} () const noexcept
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ae3997e7107877a084f5fc44e892ec77c}{Reset}} () noexcept
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a3f198c584361c3c74cd70ba7dd8d78a7}{Lock\+Shared}} () noexcept
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a3460651afb74990b725bc82f8aad3552}{Unlock\+Shared}} () noexcept
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a270c07e5e522a1d195a005682b78e745}{Dynamic\+Cast}} () const noexcept
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ab40e5b878c3014ad4267da1a62433ada}{Down\+Cast}} () const noexcept
+\item 
+Pointer\+Type $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ac062eedcfb3c0ee9d4ae54badce91bd5}{Try\+Get\+Instance}} () const noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a670d6a706d28b232ba6d02b0e3d573a3}{Instantiate\+Shared}} () const noexcept
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a3df9b4febb5974815f8d42f8b2ae476c}{Instantiate\+Shared}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&pointer) const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ab85c9e862b8559d971e17f4c8a8db606}{get\+Shared\+Count}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a49dec3e0ccdedf8f0f7f8f36909892b8}{get\+Weak\+Count}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a8ac4cac92f7247e2bac265291717b1ef}{get\+Is\+Valid}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ab985e26855c8dd7ea52f834c86b97221}{get\+Is\+Revocatoin}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a26c464ead193f624b485c949e8979df8}{get\+Is\+Locked}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_acd36eeed6bd8cfd16dbe843db3bf230c}{get\+Array\+Size}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY Pointer\+Type $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a9e226931c45add4960d3d361b9321e0a}{begin}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY Pointer\+Type $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a7251ef3c9edb1df9d77fc2d768ade41a}{end}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a5786db4f761ed88c8188dbbc11fb57d9}{set\+Null}} () noexcept
+\item 
+Pointer\+Type \& \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_aa702f220611f5284ee759370c26380ce}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} index) const noexcept
+\item 
+const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a43754b456ac1465a12bd8a4c86943611}{operator=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&copy) noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a17437ad78e2536ef1567a0fdb27ff693}{operator=}} (\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&\&move) noexcept
+\item 
+const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a484321e13e551630ec60492b062be4a1}{operator=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&copt) noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a0058e00c73761933d7acf8e5a3f8cb06}{operator bool}} () const noexcept
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a14b08b8397444bc2fe0b1d81c28852cd}{operator!}} () const noexcept
+\begin{DoxyCompactList}\small\item\em operator is use\+Count == 0 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a5d71672d4a8db5f586ca24959bc60cb5}{operator==}} (const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&pointer)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a8edc1a82ed82c11220839082cf1bd3fa}{operator==}} (const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \&pointer)
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a5caad054dcb39122a181116a3e038015}{operator==}} (const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&pointer)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a96421e705a53412e99cf6ecc57306d04}{operator==}} (const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \&pointer)
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a1d140d017e142b6615680e654b6ff215}{operator!=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&pointer)
+\begin{DoxyCompactList}\small\item\em = operator \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a34465a679485d4bd53a64655ac3a0eb6}{operator!=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \&pointer)
+\begin{DoxyCompactList}\small\item\em = operator \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ab4df14dbda509eacb8882bc189c8077f}{operator!=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&pointer)
+\begin{DoxyCompactList}\small\item\em = operator \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a612d2a9ead86e1d3369d6ce384e9d503}{operator!=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \&pointer)
+\begin{DoxyCompactList}\small\item\em = operator \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_af602a5236d84c3e4b76cb7fd5377ebc4}{get\+Null}} () noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a6ad57af8d6dd24ada9480eee62939933}{Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$}}
+\item 
+{\footnotesize template$<$class New\+Type $>$ }\\class \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a336e8ace279bd51a734673195cef0fbf}{Shared\+Pointer}}
+\item 
+{\footnotesize template$<$class New\+Type $>$ }\\class \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a56ff3f6cf97a7232c06e0dc57bda39cc}{Weak\+Pointer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ac41f56f8fcd1cc7efc90f609e9f44941}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ac41f56f8fcd1cc7efc90f609e9f44941}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!WeakPointer@{WeakPointer}}
+\index{WeakPointer@{WeakPointer}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{WeakPointer()}{WeakPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a28b4170771ebaa5970e262bb54a24b8b}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a28b4170771ebaa5970e262bb54a24b8b}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!WeakPointer@{WeakPointer}}
+\index{WeakPointer@{WeakPointer}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{WeakPointer()}{WeakPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a631dfef03c42b2b5e0f59bca4976342f}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a631dfef03c42b2b5e0f59bca4976342f}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!WeakPointer@{WeakPointer}}
+\index{WeakPointer@{WeakPointer}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{WeakPointer()}{WeakPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&\&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a081170a3ba9486027d2c1613a4ed3c6d}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a081170a3ba9486027d2c1613a4ed3c6d}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!WeakPointer@{WeakPointer}}
+\index{WeakPointer@{WeakPointer}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{WeakPointer()}{WeakPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a402d3e8db299f78583c93fefd3a04bca}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a402d3e8db299f78583c93fefd3a04bca}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!````~WeakPointer@{$\sim$WeakPointer}}
+\index{````~WeakPointer@{$\sim$WeakPointer}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$WeakPointer()}{~WeakPointer()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::$\sim$\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_abffea3d263581d80c16f4619347074df}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_abffea3d263581d80c16f4619347074df}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!AddRef@{AddRef}}
+\index{AddRef@{AddRef}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{AddRef()}{AddRef()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+void \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Add\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_detail_1_1_pointer_1_1_base_count_pointer_a77345d20704b1d59d343c5373cce97fe}{S\+G\+Framework\+::\+Detail\+::\+Pointer\+::\+Base\+Count\+Pointer}}を実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a9e226931c45add4960d3d361b9321e0a}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a9e226931c45add4960d3d361b9321e0a}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!begin@{begin}}
+\index{begin@{begin}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY Pointer\+Type$\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ab40e5b878c3014ad4267da1a62433ada}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ab40e5b878c3014ad4267da1a62433ada}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!DownCast@{DownCast}}
+\index{DownCast@{DownCast}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{DownCast()}{DownCast()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Down\+Cast\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a270c07e5e522a1d195a005682b78e745}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a270c07e5e522a1d195a005682b78e745}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!DynamicCast@{DynamicCast}}
+\index{DynamicCast@{DynamicCast}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{DynamicCast()}{DynamicCast()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Dynamic\+Cast\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a7251ef3c9edb1df9d77fc2d768ade41a}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a7251ef3c9edb1df9d77fc2d768ade41a}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!end@{end}}
+\index{end@{end}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY Pointer\+Type$\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_acd36eeed6bd8cfd16dbe843db3bf230c}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_acd36eeed6bd8cfd16dbe843db3bf230c}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!getArraySize@{getArraySize}}
+\index{getArraySize@{getArraySize}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getArraySize()}{getArraySize()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Array\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a26c464ead193f624b485c949e8979df8}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a26c464ead193f624b485c949e8979df8}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!getIsLocked@{getIsLocked}}
+\index{getIsLocked@{getIsLocked}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getIsLocked()}{getIsLocked()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Is\+Locked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ab985e26855c8dd7ea52f834c86b97221}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ab985e26855c8dd7ea52f834c86b97221}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!getIsRevocatoin@{getIsRevocatoin}}
+\index{getIsRevocatoin@{getIsRevocatoin}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getIsRevocatoin()}{getIsRevocatoin()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Is\+Revocatoin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a8ac4cac92f7247e2bac265291717b1ef}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a8ac4cac92f7247e2bac265291717b1ef}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!getIsValid@{getIsValid}}
+\index{getIsValid@{getIsValid}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getIsValid()}{getIsValid()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_af602a5236d84c3e4b76cb7fd5377ebc4}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_af602a5236d84c3e4b76cb7fd5377ebc4}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!getNull@{getNull}}
+\index{getNull@{getNull}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getNull()}{getNull()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ab85c9e862b8559d971e17f4c8a8db606}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ab85c9e862b8559d971e17f4c8a8db606}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!getSharedCount@{getSharedCount}}
+\index{getSharedCount@{getSharedCount}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getSharedCount()}{getSharedCount()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Shared\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a49dec3e0ccdedf8f0f7f8f36909892b8}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a49dec3e0ccdedf8f0f7f8f36909892b8}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!getWeakCount@{getWeakCount}}
+\index{getWeakCount@{getWeakCount}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getWeakCount()}{getWeakCount()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Weak\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a670d6a706d28b232ba6d02b0e3d573a3}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a670d6a706d28b232ba6d02b0e3d573a3}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!InstantiateShared@{InstantiateShared}}
+\index{InstantiateShared@{InstantiateShared}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{InstantiateShared()}{InstantiateShared()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Instantiate\+Shared\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a3df9b4febb5974815f8d42f8b2ae476c}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a3df9b4febb5974815f8d42f8b2ae476c}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!InstantiateShared@{InstantiateShared}}
+\index{InstantiateShared@{InstantiateShared}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{InstantiateShared()}{InstantiateShared()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+void \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Instantiate\+Shared (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{pointer }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a3f198c584361c3c74cd70ba7dd8d78a7}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a3f198c584361c3c74cd70ba7dd8d78a7}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!LockShared@{LockShared}}
+\index{LockShared@{LockShared}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{LockShared()}{LockShared()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Lock\+Shared\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a0058e00c73761933d7acf8e5a3f8cb06}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a0058e00c73761933d7acf8e5a3f8cb06}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a14b08b8397444bc2fe0b1d81c28852cd}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a14b08b8397444bc2fe0b1d81c28852cd}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator"!()}{operator!()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator! (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+operator is use\+Count == 0 
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a1d140d017e142b6615680e654b6ff215}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a1d140d017e142b6615680e654b6ff215}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a14b08b8397444bc2fe0b1d81c28852cd}{operator!}}= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+= operator 
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a34465a679485d4bd53a64655ac3a0eb6}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a34465a679485d4bd53a64655ac3a0eb6}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a14b08b8397444bc2fe0b1d81c28852cd}{operator!}}= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \&}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+= operator 
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ab4df14dbda509eacb8882bc189c8077f}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ab4df14dbda509eacb8882bc189c8077f}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a14b08b8397444bc2fe0b1d81c28852cd}{operator!}}= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+= operator 
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a612d2a9ead86e1d3369d6ce384e9d503}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a612d2a9ead86e1d3369d6ce384e9d503}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a14b08b8397444bc2fe0b1d81c28852cd}{operator!}}= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \&}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+= operator 
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a484321e13e551630ec60492b062be4a1}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a484321e13e551630ec60492b062be4a1}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{copt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a43754b456ac1465a12bd8a4c86943611}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a43754b456ac1465a12bd8a4c86943611}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a17437ad78e2536ef1567a0fdb27ff693}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a17437ad78e2536ef1567a0fdb27ff693}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&\&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a5d71672d4a8db5f586ca24959bc60cb5}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a5d71672d4a8db5f586ca24959bc60cb5}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator==@{operator==}}
+\index{operator==@{operator==}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a8edc1a82ed82c11220839082cf1bd3fa}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a8edc1a82ed82c11220839082cf1bd3fa}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator==@{operator==}}
+\index{operator==@{operator==}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \&}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a5caad054dcb39122a181116a3e038015}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a5caad054dcb39122a181116a3e038015}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator==@{operator==}}
+\index{operator==@{operator==}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a96421e705a53412e99cf6ecc57306d04}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a96421e705a53412e99cf6ecc57306d04}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator==@{operator==}}
+\index{operator==@{operator==}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \&}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_aa702f220611f5284ee759370c26380ce}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_aa702f220611f5284ee759370c26380ce}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+Pointer\+Type\& \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ae3997e7107877a084f5fc44e892ec77c}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ae3997e7107877a084f5fc44e892ec77c}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!Reset@{Reset}}
+\index{Reset@{Reset}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+void \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a5786db4f761ed88c8188dbbc11fb57d9}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a5786db4f761ed88c8188dbbc11fb57d9}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!setNull@{setNull}}
+\index{setNull@{setNull}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{setNull()}{setNull()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\& \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::set\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ac062eedcfb3c0ee9d4ae54badce91bd5}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_ac062eedcfb3c0ee9d4ae54badce91bd5}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!TryGetInstance@{TryGetInstance}}
+\index{TryGetInstance@{TryGetInstance}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{TryGetInstance()}{TryGetInstance()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+Pointer\+Type$\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Try\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a3460651afb74990b725bc82f8aad3552}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a3460651afb74990b725bc82f8aad3552}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!UnlockShared@{UnlockShared}}
+\index{UnlockShared@{UnlockShared}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{UnlockShared()}{UnlockShared()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{S\+G\+Framework\+::\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Unlock\+Shared\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a336e8ace279bd51a734673195cef0fbf}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a336e8ace279bd51a734673195cef0fbf}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!SharedPointer@{SharedPointer}}
+\index{SharedPointer@{SharedPointer}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{SharedPointer}{SharedPointer}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class New\+Type $>$ \\
+friend class \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a6ad57af8d6dd24ada9480eee62939933}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a6ad57af8d6dd24ada9480eee62939933}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!SharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SharedPointer$<$ PointerType[]$>$}}
+\index{SharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SharedPointer$<$ PointerType[]$>$}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{SharedPointer$<$ PointerType[]$>$}{SharedPointer< PointerType[]>}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+friend class \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a56ff3f6cf97a7232c06e0dc57bda39cc}\label{class_s_g_framework_1_1_weak_pointer_3_01_pointer_type_0f_0e_4_a56ff3f6cf97a7232c06e0dc57bda39cc}} 
+\index{SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}!WeakPointer@{WeakPointer}}
+\index{WeakPointer@{WeakPointer}!SGFramework::WeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::WeakPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{WeakPointer}{WeakPointer}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class New\+Type $>$ \\
+friend class \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Pointer/\mbox{\hyperlink{_shared_pointer_8hpp}{Shared\+Pointer.\+hpp}}\end{DoxyCompactItemize}

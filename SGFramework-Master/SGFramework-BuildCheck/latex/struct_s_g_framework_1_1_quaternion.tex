@@ -1,0 +1,417 @@
+\hypertarget{struct_s_g_framework_1_1_quaternion}{}\doxysection{S\+G\+Framework\+::Quaternion 構造体}
+\label{struct_s_g_framework_1_1_quaternion}\index{SGFramework::Quaternion@{SGFramework::Quaternion}}
+
+
+{\ttfamily \#include $<$Quaternion.\+hpp$>$}
+
+S\+G\+Framework\+::Quaternion の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_s_g_framework_1_1_quaternion}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a2d3d92a6ff0801f4c45e314cd09fec3c}{Quaternion}} ()
+\item 
+constexpr \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_ae51be5b76a9bbeffc823167e075a82a5}{Quaternion}} (float x, float y, float z, float w)
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_aee94be82f9c519aedf147cd2ef6e5a1e}{Quaternion}} (const Xm\+Vector \&xm\+Vector)
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_afeecb42aae9ad8537071b7a98a903c3f}{Quaternion}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_matrix}{Matrix}} \&matrix)
+\item 
+constexpr \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a6f453c5b89dec1a298a5d6952947e800}{Quaternion}} (const physx\+::\+Px\+Quat \&quaternion)
+\item 
+constexpr \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a39906c46bb63740a93edfddd2e780667}{Quaternion}} (const ai\+Quaternion \&quaternion)
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a1b56adf82e3f37f941219de2e115e945}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+M\+O\+V\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}} (\mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}})
+\item 
+Xm\+Vector \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a787fbb3376e780ee51a4648b58cbd0e0}{To\+Xm\+Vector}} () const noexcept
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_matrix}{Matrix}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_af69f83b77407eb48f5423e31d55d73da}{To\+Matrix}} () const noexcept
+\item 
+void \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_af14bae64f5944e61daa5a9f466d045d1}{To\+Matrix}} (\mbox{\hyperlink{struct_s_g_framework_1_1_matrix}{Matrix}} \&apply) const noexcept
+\item 
+physx\+::\+Px\+Quat \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a91693b36e48f4750735054c2fd8b404d}{To\+PhysX}} () const noexcept
+\item 
+void \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_ade24fef4cf6ce883c8a2597778eff815}{To\+PhysX}} (physx\+::\+Px\+Quat \&apply) const noexcept
+\item 
+ai\+Quaternion \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a592b56b4b92035c40c51a1f14856113a}{To\+Assimp}} () const noexcept
+\item 
+void \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_addc86d5d3b5618e53c1d76e0add2b9ac}{To\+Assimp}} (ai\+Quaternion apply) const noexcept
+\item 
+void \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a0713fffa287cb5aac811c96c688497e9}{To\+Angle\+Axis}} (\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&axis, float \&angle) const noexcept
+\item 
+void \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a836e4a1ee04c1186764c75c7a61baaff}{To\+Direction\+Vectors}} (\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} $\ast$right, \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} $\ast$up, \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} $\ast$forward) const noexcept
+\item 
+sgstring \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_af95099a721b849b0aeb4fee36bdf8fa8}{To\+String}} () const noexcept
+\item 
+std\+::string \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a5a582f656d5ba729a4d276ef76d82921}{To\+Std\+String}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a04a167c933a4e5ad48ed448326493df8}{get\+Euler\+Angles}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a9f1f1c676e1dc0ec4e6f14194bf38a78}{get\+Inverse}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_afc905875661a636ceb628152d50adb6c}{get\+Right}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_abe446862eb62df975fd3e1ffed211633}{get\+Up}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_ac5217b0002f5a7b02130497683664c6d}{get\+Forward}} () const noexcept
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a58f948a4ecd129f9fb7ffd736adb96a4}{operator sgstring}} () const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_ac2ab3cb5ecf556b7ef84f5b7591666d6}{operator Xm\+Vector}} () const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_ae19164c0cd61091ee0105d403fd9d604}{operator Matrix}} () const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a52f6f7bacec1d9641f234e3152a0cc8c}{operator float $\ast$}} ()
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_ac7df1c7460dfca96490dca5aeebcb2dc}{operator const float $\ast$}} () const
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_ab9712e25f0b5e6ce4f3bdf3012c075df}{operator=}} (const Xm\+Vector \&math\+Quaternion)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a02f626b6f242e1f88b48027e7177a178}{operator=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_matrix}{Matrix}} \&matrix)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_ac2d32b54dc6b760f0ad597ad3dee6d95}{operator=}} (const Direct\+X\+::\+X\+M\+M\+A\+T\+R\+IX \&matrix)
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a12a2e52bc759abefdaea62942de9c60c}{operator$\ast$}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&quaternion) const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_af4a86a5d0b993784e5fdc3029a482588}{operator$\ast$}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&vec) const
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a5975091f425e390325e58576ef18070d}{operator$\ast$=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&quaternion)
+\item 
+bool \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a7dfccc6d49020105634466df3e97fe03}{operator==}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&quaternion) const
+\item 
+bool \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_adb5ea50730f5ee36752a348698127f57}{operator!=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&quaternion) const
+\begin{DoxyCompactList}\small\item\em = オペレーター \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a7d2d634fe25e7287539f78aa30608192}{Dot}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&quaternion1, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&quaternion2) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_aa95c3d59e86264774a2c31b2f2b73abf}{Inverse}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&quaternion) noexcept
+\item 
+static \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_ac08374dd47fcf10a2608cf3f364c60da}{Look\+Forward}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&forward, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&upwards=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ae96e7e3e08b8a0ef77ea721d63392e1f}{Const\+::\+Vector3\+::up}}) noexcept
+\item 
+static \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_ae000051f8ddc13497757d448e20a0009}{Look\+At}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&position, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&target, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&upwards=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ae96e7e3e08b8a0ef77ea721d63392e1f}{Const\+::\+Vector3\+::up}}) noexcept
+\item 
+static \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a20c802fda98c609b8c60ee7c5649b65a}{Look\+At2D}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&position, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&target, bool is\+AxisX=true) noexcept
+\item 
+static \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a0678c7658f727de3be2f738179cfd7c0}{From\+To\+Rotation}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&from\+Direction, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&to\+Direction) noexcept
+\item 
+static \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a6957bd5a12ac04e7fdf5c3574aec1e2f}{Angle\+Axis}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&axis, float angle) noexcept
+\item 
+static \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a41cec68ece9091611ba91fba3eb02b66}{Euler}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&euler\+Angles) noexcept
+\item 
+static \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a4618601972a0510c9772e8d63b33ff1b}{Lerp3D}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&from, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&to, float t) noexcept
+\item 
+static \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a836638aede2d58fe5c38a79f602d8b7f}{Lerp\+Direct}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&from, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&to, float t) noexcept
+\item 
+static \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a156e9510da76c9fcac50e167dadba53d}{Slerp}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&from, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&to, float t) noexcept
+\item 
+static \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion_a1adfab40d4a40c4df9572ebb74504350}{Vector3\+Rotate}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&vec, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&quaternion) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a2d3d92a6ff0801f4c45e314cd09fec3c}\label{struct_s_g_framework_1_1_quaternion_a2d3d92a6ff0801f4c45e314cd09fec3c}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily constexpr S\+G\+Framework\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_ae51be5b76a9bbeffc823167e075a82a5}\label{struct_s_g_framework_1_1_quaternion_ae51be5b76a9bbeffc823167e075a82a5}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily constexpr S\+G\+Framework\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{float}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_aee94be82f9c519aedf147cd2ef6e5a1e}\label{struct_s_g_framework_1_1_quaternion_aee94be82f9c519aedf147cd2ef6e5a1e}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const Xm\+Vector \&}]{xm\+Vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_afeecb42aae9ad8537071b7a98a903c3f}\label{struct_s_g_framework_1_1_quaternion_afeecb42aae9ad8537071b7a98a903c3f}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_matrix}{Matrix}} \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a6f453c5b89dec1a298a5d6952947e800}\label{struct_s_g_framework_1_1_quaternion_a6f453c5b89dec1a298a5d6952947e800}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily constexpr S\+G\+Framework\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const physx\+::\+Px\+Quat \&}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a39906c46bb63740a93edfddd2e780667}\label{struct_s_g_framework_1_1_quaternion_a39906c46bb63740a93edfddd2e780667}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily constexpr S\+G\+Framework\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const ai\+Quaternion \&}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a6957bd5a12ac04e7fdf5c3574aec1e2f}\label{struct_s_g_framework_1_1_quaternion_a6957bd5a12ac04e7fdf5c3574aec1e2f}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!AngleAxis@{AngleAxis}}
+\index{AngleAxis@{AngleAxis}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{AngleAxis()}{AngleAxis()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Quaternion\+::\+Angle\+Axis (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{axis,  }\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a1b56adf82e3f37f941219de2e115e945}\label{struct_s_g_framework_1_1_quaternion_a1b56adf82e3f37f941219de2e115e945}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!DEFAULT\_COPY\_MOVE\_FUNCTIONS@{DEFAULT\_COPY\_MOVE\_FUNCTIONS}}
+\index{DEFAULT\_COPY\_MOVE\_FUNCTIONS@{DEFAULT\_COPY\_MOVE\_FUNCTIONS}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_COPY\_MOVE\_FUNCTIONS()}{DEFAULT\_COPY\_MOVE\_FUNCTIONS()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Quaternion\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+M\+O\+V\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a7d2d634fe25e7287539f78aa30608192}\label{struct_s_g_framework_1_1_quaternion_a7d2d634fe25e7287539f78aa30608192}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!Dot@{Dot}}
+\index{Dot@{Dot}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Dot()}{Dot()}}
+{\footnotesize\ttfamily float S\+G\+Framework\+::\+Quaternion\+::\+Dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{quaternion1,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{quaternion2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a41cec68ece9091611ba91fba3eb02b66}\label{struct_s_g_framework_1_1_quaternion_a41cec68ece9091611ba91fba3eb02b66}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!Euler@{Euler}}
+\index{Euler@{Euler}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Euler()}{Euler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Quaternion\+::\+Euler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{euler\+Angles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a0678c7658f727de3be2f738179cfd7c0}\label{struct_s_g_framework_1_1_quaternion_a0678c7658f727de3be2f738179cfd7c0}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!FromToRotation@{FromToRotation}}
+\index{FromToRotation@{FromToRotation}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{FromToRotation()}{FromToRotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Quaternion\+::\+From\+To\+Rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{from\+Direction,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{to\+Direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a04a167c933a4e5ad48ed448326493df8}\label{struct_s_g_framework_1_1_quaternion_a04a167c933a4e5ad48ed448326493df8}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!getEulerAngles@{getEulerAngles}}
+\index{getEulerAngles@{getEulerAngles}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{getEulerAngles()}{getEulerAngles()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Quaternion\+::get\+Euler\+Angles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_ac5217b0002f5a7b02130497683664c6d}\label{struct_s_g_framework_1_1_quaternion_ac5217b0002f5a7b02130497683664c6d}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!getForward@{getForward}}
+\index{getForward@{getForward}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{getForward()}{getForward()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Quaternion\+::get\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a9f1f1c676e1dc0ec4e6f14194bf38a78}\label{struct_s_g_framework_1_1_quaternion_a9f1f1c676e1dc0ec4e6f14194bf38a78}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!getInverse@{getInverse}}
+\index{getInverse@{getInverse}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{getInverse()}{getInverse()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Quaternion\+::get\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_afc905875661a636ceb628152d50adb6c}\label{struct_s_g_framework_1_1_quaternion_afc905875661a636ceb628152d50adb6c}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!getRight@{getRight}}
+\index{getRight@{getRight}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{getRight()}{getRight()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Quaternion\+::get\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_abe446862eb62df975fd3e1ffed211633}\label{struct_s_g_framework_1_1_quaternion_abe446862eb62df975fd3e1ffed211633}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!getUp@{getUp}}
+\index{getUp@{getUp}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{getUp()}{getUp()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Quaternion\+::get\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_aa95c3d59e86264774a2c31b2f2b73abf}\label{struct_s_g_framework_1_1_quaternion_aa95c3d59e86264774a2c31b2f2b73abf}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Inverse()}{Inverse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Quaternion\+::\+Inverse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a4618601972a0510c9772e8d63b33ff1b}\label{struct_s_g_framework_1_1_quaternion_a4618601972a0510c9772e8d63b33ff1b}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!Lerp3D@{Lerp3D}}
+\index{Lerp3D@{Lerp3D}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Lerp3D()}{Lerp3D()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Quaternion\+::\+Lerp3D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{from,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{to,  }\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a836638aede2d58fe5c38a79f602d8b7f}\label{struct_s_g_framework_1_1_quaternion_a836638aede2d58fe5c38a79f602d8b7f}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!LerpDirect@{LerpDirect}}
+\index{LerpDirect@{LerpDirect}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{LerpDirect()}{LerpDirect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Quaternion\+::\+Lerp\+Direct (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{from,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{to,  }\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_ae000051f8ddc13497757d448e20a0009}\label{struct_s_g_framework_1_1_quaternion_ae000051f8ddc13497757d448e20a0009}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!LookAt@{LookAt}}
+\index{LookAt@{LookAt}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{LookAt()}{LookAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Quaternion\+::\+Look\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{target,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{upwards = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ae96e7e3e08b8a0ef77ea721d63392e1f}{Const\+::\+Vector3\+::up}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a20c802fda98c609b8c60ee7c5649b65a}\label{struct_s_g_framework_1_1_quaternion_a20c802fda98c609b8c60ee7c5649b65a}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!LookAt2D@{LookAt2D}}
+\index{LookAt2D@{LookAt2D}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{LookAt2D()}{LookAt2D()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Quaternion\+::\+Look\+At2D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{target,  }\item[{bool}]{is\+AxisX = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_ac08374dd47fcf10a2608cf3f364c60da}\label{struct_s_g_framework_1_1_quaternion_ac08374dd47fcf10a2608cf3f364c60da}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!LookForward@{LookForward}}
+\index{LookForward@{LookForward}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{LookForward()}{LookForward()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Quaternion\+::\+Look\+Forward (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{forward,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{upwards = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ae96e7e3e08b8a0ef77ea721d63392e1f}{Const\+::\+Vector3\+::up}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_ac7df1c7460dfca96490dca5aeebcb2dc}\label{struct_s_g_framework_1_1_quaternion_ac7df1c7460dfca96490dca5aeebcb2dc}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!operator const float $\ast$@{operator const float $\ast$}}
+\index{operator const float $\ast$@{operator const float $\ast$}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator const float $\ast$()}{operator const float *()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Quaternion\+::operator const float $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a52f6f7bacec1d9641f234e3152a0cc8c}\label{struct_s_g_framework_1_1_quaternion_a52f6f7bacec1d9641f234e3152a0cc8c}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!operator float $\ast$@{operator float $\ast$}}
+\index{operator float $\ast$@{operator float $\ast$}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator float $\ast$()}{operator float *()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Quaternion\+::operator float $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_ae19164c0cd61091ee0105d403fd9d604}\label{struct_s_g_framework_1_1_quaternion_ae19164c0cd61091ee0105d403fd9d604}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!operator Matrix@{operator Matrix}}
+\index{operator Matrix@{operator Matrix}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator Matrix()}{operator Matrix()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Quaternion\+::operator \mbox{\hyperlink{struct_s_g_framework_1_1_matrix}{Matrix}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a58f948a4ecd129f9fb7ffd736adb96a4}\label{struct_s_g_framework_1_1_quaternion_a58f948a4ecd129f9fb7ffd736adb96a4}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!operator sgstring@{operator sgstring}}
+\index{operator sgstring@{operator sgstring}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator sgstring()}{operator sgstring()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Quaternion\+::operator sgstring (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_ac2ab3cb5ecf556b7ef84f5b7591666d6}\label{struct_s_g_framework_1_1_quaternion_ac2ab3cb5ecf556b7ef84f5b7591666d6}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!operator XmVector@{operator XmVector}}
+\index{operator XmVector@{operator XmVector}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator XmVector()}{operator XmVector()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Quaternion\+::operator Xm\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_adb5ea50730f5ee36752a348698127f57}\label{struct_s_g_framework_1_1_quaternion_adb5ea50730f5ee36752a348698127f57}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Quaternion\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+= オペレーター 
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a12a2e52bc759abefdaea62942de9c60c}\label{struct_s_g_framework_1_1_quaternion_a12a2e52bc759abefdaea62942de9c60c}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_af4a86a5d0b993784e5fdc3029a482588}\label{struct_s_g_framework_1_1_quaternion_af4a86a5d0b993784e5fdc3029a482588}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a5975091f425e390325e58576ef18070d}\label{struct_s_g_framework_1_1_quaternion_a5975091f425e390325e58576ef18070d}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}}\& S\+G\+Framework\+::\+Quaternion\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_ac2d32b54dc6b760f0ad597ad3dee6d95}\label{struct_s_g_framework_1_1_quaternion_ac2d32b54dc6b760f0ad597ad3dee6d95}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}}\& S\+G\+Framework\+::\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+M\+A\+T\+R\+IX \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a02f626b6f242e1f88b48027e7177a178}\label{struct_s_g_framework_1_1_quaternion_a02f626b6f242e1f88b48027e7177a178}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}}\& S\+G\+Framework\+::\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_matrix}{Matrix}} \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_ab9712e25f0b5e6ce4f3bdf3012c075df}\label{struct_s_g_framework_1_1_quaternion_ab9712e25f0b5e6ce4f3bdf3012c075df}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}}\& S\+G\+Framework\+::\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{const Xm\+Vector \&}]{math\+Quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a7dfccc6d49020105634466df3e97fe03}\label{struct_s_g_framework_1_1_quaternion_a7dfccc6d49020105634466df3e97fe03}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!operator==@{operator==}}
+\index{operator==@{operator==}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Quaternion\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a156e9510da76c9fcac50e167dadba53d}\label{struct_s_g_framework_1_1_quaternion_a156e9510da76c9fcac50e167dadba53d}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!Slerp@{Slerp}}
+\index{Slerp@{Slerp}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Slerp()}{Slerp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} S\+G\+Framework\+::\+Quaternion\+::\+Slerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{from,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{to,  }\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a0713fffa287cb5aac811c96c688497e9}\label{struct_s_g_framework_1_1_quaternion_a0713fffa287cb5aac811c96c688497e9}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!ToAngleAxis@{ToAngleAxis}}
+\index{ToAngleAxis@{ToAngleAxis}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToAngleAxis()}{ToAngleAxis()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Quaternion\+::\+To\+Angle\+Axis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{axis,  }\item[{float \&}]{angle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a592b56b4b92035c40c51a1f14856113a}\label{struct_s_g_framework_1_1_quaternion_a592b56b4b92035c40c51a1f14856113a}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!ToAssimp@{ToAssimp}}
+\index{ToAssimp@{ToAssimp}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToAssimp()}{ToAssimp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ai\+Quaternion S\+G\+Framework\+::\+Quaternion\+::\+To\+Assimp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_addc86d5d3b5618e53c1d76e0add2b9ac}\label{struct_s_g_framework_1_1_quaternion_addc86d5d3b5618e53c1d76e0add2b9ac}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!ToAssimp@{ToAssimp}}
+\index{ToAssimp@{ToAssimp}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToAssimp()}{ToAssimp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Quaternion\+::\+To\+Assimp (\begin{DoxyParamCaption}\item[{ai\+Quaternion}]{apply }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a836e4a1ee04c1186764c75c7a61baaff}\label{struct_s_g_framework_1_1_quaternion_a836e4a1ee04c1186764c75c7a61baaff}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!ToDirectionVectors@{ToDirectionVectors}}
+\index{ToDirectionVectors@{ToDirectionVectors}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToDirectionVectors()}{ToDirectionVectors()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Quaternion\+::\+To\+Direction\+Vectors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} $\ast$}]{right,  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} $\ast$}]{up,  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} $\ast$}]{forward }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_af69f83b77407eb48f5423e31d55d73da}\label{struct_s_g_framework_1_1_quaternion_af69f83b77407eb48f5423e31d55d73da}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!ToMatrix@{ToMatrix}}
+\index{ToMatrix@{ToMatrix}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToMatrix()}{ToMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_matrix}{Matrix}} S\+G\+Framework\+::\+Quaternion\+::\+To\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_af14bae64f5944e61daa5a9f466d045d1}\label{struct_s_g_framework_1_1_quaternion_af14bae64f5944e61daa5a9f466d045d1}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!ToMatrix@{ToMatrix}}
+\index{ToMatrix@{ToMatrix}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToMatrix()}{ToMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Quaternion\+::\+To\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_matrix}{Matrix}} \&}]{apply }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a91693b36e48f4750735054c2fd8b404d}\label{struct_s_g_framework_1_1_quaternion_a91693b36e48f4750735054c2fd8b404d}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!ToPhysX@{ToPhysX}}
+\index{ToPhysX@{ToPhysX}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToPhysX()}{ToPhysX()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily physx\+::\+Px\+Quat S\+G\+Framework\+::\+Quaternion\+::\+To\+PhysX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_ade24fef4cf6ce883c8a2597778eff815}\label{struct_s_g_framework_1_1_quaternion_ade24fef4cf6ce883c8a2597778eff815}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!ToPhysX@{ToPhysX}}
+\index{ToPhysX@{ToPhysX}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToPhysX()}{ToPhysX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Quaternion\+::\+To\+PhysX (\begin{DoxyParamCaption}\item[{physx\+::\+Px\+Quat \&}]{apply }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a5a582f656d5ba729a4d276ef76d82921}\label{struct_s_g_framework_1_1_quaternion_a5a582f656d5ba729a4d276ef76d82921}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!ToStdString@{ToStdString}}
+\index{ToStdString@{ToStdString}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToStdString()}{ToStdString()}}
+{\footnotesize\ttfamily std\+::string S\+G\+Framework\+::\+Quaternion\+::\+To\+Std\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_af95099a721b849b0aeb4fee36bdf8fa8}\label{struct_s_g_framework_1_1_quaternion_af95099a721b849b0aeb4fee36bdf8fa8}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!ToString@{ToString}}
+\index{ToString@{ToString}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily sgstring S\+G\+Framework\+::\+Quaternion\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a787fbb3376e780ee51a4648b58cbd0e0}\label{struct_s_g_framework_1_1_quaternion_a787fbb3376e780ee51a4648b58cbd0e0}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!ToXmVector@{ToXmVector}}
+\index{ToXmVector@{ToXmVector}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToXmVector()}{ToXmVector()}}
+{\footnotesize\ttfamily Xm\+Vector S\+G\+Framework\+::\+Quaternion\+::\+To\+Xm\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_quaternion_a1adfab40d4a40c4df9572ebb74504350}\label{struct_s_g_framework_1_1_quaternion_a1adfab40d4a40c4df9572ebb74504350}} 
+\index{SGFramework::Quaternion@{SGFramework::Quaternion}!Vector3Rotate@{Vector3Rotate}}
+\index{Vector3Rotate@{Vector3Rotate}!SGFramework::Quaternion@{SGFramework::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Vector3Rotate()}{Vector3Rotate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Quaternion\+::\+Vector3\+Rotate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{vec,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Quarernion/\mbox{\hyperlink{_quaternion_8hpp}{Quaternion.\+hpp}}\end{DoxyCompactItemize}

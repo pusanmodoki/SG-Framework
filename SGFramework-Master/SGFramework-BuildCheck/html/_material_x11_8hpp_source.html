@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/05_Graphics/DirectX11/Material/MaterialX11.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_3179bfb1337b5dc243543deb8f1fb9cf.html">05_Graphics</a></li><li class="navelem"><a class="el" href="dir_2a4559de03f6cae991f9fd49f0dc1978.html">DirectX11</a></li><li class="navelem"><a class="el" href="dir_986f0a7a71c02fd0c1d410b2eb796df5.html">Material</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MaterialX11.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_material_x11_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">DirectX11 Materialを扱うMaterialX11 class</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_MATERIAL_X11_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_MATERIAL_X11_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../../../02_CustomVariable/CustomVariable.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../GraphicsX11/GraphicsX11.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../GraphicsObject/GraphicsObjectX11.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../ShaderAsset/VertexShaderX11.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../ShaderAsset/PixelShaderAssetX11.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../TextureAsset/TextureAssetX11.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// Framework namespace</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//フレームワークの管理をするAdministrator namespace</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">namespace </span>Administrator</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">//friend</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">class </span>GraphicsX11;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">//GraphicsDetail namespace</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">namespace </span>GraphicsDetail</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">class </span>ModelAssetX11;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html">   27</a></span>&#160;            <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html">MaterialX11</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#ad0962abff9fbf7ee7e187d3fdd379fbe">   30</a></span>&#160;                <span class="keyword">friend</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#ad0962abff9fbf7ee7e187d3fdd379fbe">ModelAssetX11</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#af8623e933b2e501a02f67e89232375d6">   32</a></span>&#160;                <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#af8623e933b2e501a02f67e89232375d6">MaterialX11</a>() {}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="comment">//マルチテクスチャ対応数</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a503a7fb61eff866e6bf5b13b79671277">   35</a></span>&#160;                <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a503a7fb61eff866e6bf5b13b79671277">cNumSupportedTextures</a> = 2;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="comment">//ノーマルマップ対応数</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#ae03366a55a3a7a128a411e277ea9d1c5">   37</a></span>&#160;                <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#ae03366a55a3a7a128a411e277ea9d1c5">cNumSupportedNormalMaps</a> = 1;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="comment">//ハイトマップ対応数</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a852222e4e196fe3eb2fb65f293dc4c16">   39</a></span>&#160;                <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a852222e4e196fe3eb2fb65f293dc4c16">cNumSupportedHeightMaps</a> = 1;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                SGF_FUNCTION_PROPERTY <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a7643b9cc0aac5f4ed870e35b9f374882">setMaterial</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a13e203d0912bcfd3ded19dead8950413">   43</a></span>&#160;                <a class="code" href="struct_s_g_framework_1_1_color.html">Color</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a13e203d0912bcfd3ded19dead8950413">ambient</a> = Const::Color::white;        <span class="comment">//Ambient</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a496417d55782c3fd4908029e5356f5d0">   44</a></span>&#160;                <a class="code" href="struct_s_g_framework_1_1_color.html">Color</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a496417d55782c3fd4908029e5356f5d0">diffuse</a> = Const::Color::white;        <span class="comment">//Diffuse</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a70e34047e04e1b01a9f2086b548d91c6">   45</a></span>&#160;                <a class="code" href="struct_s_g_framework_1_1_color.html">Color</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a70e34047e04e1b01a9f2086b548d91c6">emission</a> = Const::Color::white;       <span class="comment">//Emission</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#ac936d3bca5419cae666f433d6841f619">   46</a></span>&#160;                <a class="code" href="struct_s_g_framework_1_1_color.html">Color</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#ac936d3bca5419cae666f433d6841f619">specular</a> = Const::Color::white;       <span class="comment">//Specular</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a104c1a9d04310493ca1f1b70e493741b">   47</a></span>&#160;                <a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a104c1a9d04310493ca1f1b70e493741b">bump</a> = <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">Const::Vector3::zero</a>;    <span class="comment">//Bump</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a9764665270cbd419894e4caa82e07f4a">   48</a></span>&#160;                <span class="keywordtype">float</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a9764665270cbd419894e4caa82e07f4a">manualAlpha</a> = 1.0f;                       <span class="comment">//  manual alpha</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a082238144bfdd540f32a59943adf968e">   49</a></span>&#160;                <span class="keywordtype">float</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a082238144bfdd540f32a59943adf968e">power</a> = 1.0f;                                 <span class="comment">//Power</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="comment">//name</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#af88e7005bc0dd0bead450e5e5a65777c">   52</a></span>&#160;                sgstring <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#af88e7005bc0dd0bead450e5e5a65777c">name</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="comment">//Vertex Shader Asset</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a1ce32ac7207f67980b71d812dd8e7e5f">   54</a></span>&#160;                <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Administrator::GraphicsDetail::VertexShaderAssetX11&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a1ce32ac7207f67980b71d812dd8e7e5f">vertexShader</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="comment">//Pixel Shader Asset</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a95b14c7d0b56cc08feedd57e4a63db7e">   56</a></span>&#160;                <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Administrator::GraphicsDetail::PixelShaderAssetX11&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a95b14c7d0b56cc08feedd57e4a63db7e">pixelShader</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="comment">//Texture Assets</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a92fbc2823444376c9ccd21cdc45696b2">   58</a></span>&#160;                <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;TextureAssetX11&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a92fbc2823444376c9ccd21cdc45696b2">textures</a>[<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a503a7fb61eff866e6bf5b13b79671277">cNumSupportedTextures</a>];</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="comment">//Texture Asset (Noraml Map)</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#aa2ce1e5d127e8abf33cfe12aca5ae42e">   60</a></span>&#160;                <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;TextureAssetX11&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#aa2ce1e5d127e8abf33cfe12aca5ae42e">normalMap</a>[<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#ae03366a55a3a7a128a411e277ea9d1c5">cNumSupportedNormalMaps</a>];</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="comment">//Texture Asset (Height Map)</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#ae16b6ae7c5781f3f2e1f17697e67f1c5">   62</a></span>&#160;                <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;TextureAssetX11&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#ae16b6ae7c5781f3f2e1f17697e67f1c5">heightMap</a>[<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a852222e4e196fe3eb2fb65f293dc4c16">cNumSupportedHeightMaps</a>];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            };</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a7643b9cc0aac5f4ed870e35b9f374882">   65</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a7643b9cc0aac5f4ed870e35b9f374882">MaterialX11::setMaterial</a>()</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                memcpy_s(&amp;Administrator::GraphicsX11::m_setConstantBufferMaterial3D,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <span class="keyword">sizeof</span>(Administrator::GraphicsX11::m_setConstantBufferMaterial3D),</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    <span class="keyword">this</span>, <span class="keyword">sizeof</span>(<a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_material3_d.html">Administrator::GraphicsDetail::X11::ConstantBufferMaterial3D</a>));</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">Administrator::GraphicsX11::context</a>-&gt;UpdateSubresource(Administrator::GraphicsX11::m_constantBufferMaterial3D,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    0, <span class="keyword">nullptr</span>, &amp;Administrator::GraphicsX11::m_setConstantBufferMaterial3D, 0, 0);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">Administrator::GraphicsX11::context</a>-&gt;VSSetConstantBuffers(Administrator::GraphicsX11::m_cConstantBufferMaterial3DSlot,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    1, &amp;Administrator::GraphicsX11::m_constantBufferMaterial3D);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">Administrator::GraphicsX11::context</a>-&gt;PSSetConstantBuffers(Administrator::GraphicsX11::m_cConstantBufferMaterial3DSlot,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    1, &amp;Administrator::GraphicsX11::m_constantBufferMaterial3D);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> i = 0, size = <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a503a7fb61eff866e6bf5b13b79671277">MaterialX11::cNumSupportedTextures</a>; i &lt; size; ++i)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a92fbc2823444376c9ccd21cdc45696b2">textures</a>[i].getIsValid())) <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a92fbc2823444376c9ccd21cdc45696b2">textures</a>[i]-&gt;setTexture(i);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a1ce32ac7207f67980b71d812dd8e7e5f">vertexShader</a>.getIsValid())) <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a1ce32ac7207f67980b71d812dd8e7e5f">vertexShader</a>-&gt;setShader();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a95b14c7d0b56cc08feedd57e4a63db7e">pixelShader</a>.getIsValid())) <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a95b14c7d0b56cc08feedd57e4a63db7e">pixelShader</a>-&gt;setShader();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif //!SGFRAMEWORK_HEADER_MATERIAL_X11_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_s_g_framework_1_1_color_html"><div class="ttname"><a href="struct_s_g_framework_1_1_color.html">SGFramework::Color</a></div><div class="ttdef"><b>Definition:</b> Color.hpp:15</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_ad0962abff9fbf7ee7e187d3fdd379fbe"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#ad0962abff9fbf7ee7e187d3fdd379fbe">SGFramework::Administrator::GraphicsDetail::MaterialX11::ModelAssetX11</a></div><div class="ttdeci">friend ModelAssetX11</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:30</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_a9764665270cbd419894e4caa82e07f4a"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a9764665270cbd419894e4caa82e07f4a">SGFramework::Administrator::GraphicsDetail::MaterialX11::manualAlpha</a></div><div class="ttdeci">float manualAlpha</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:48</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_ae16b6ae7c5781f3f2e1f17697e67f1c5"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#ae16b6ae7c5781f3f2e1f17697e67f1c5">SGFramework::Administrator::GraphicsDetail::MaterialX11::heightMap</a></div><div class="ttdeci">SharedPointer&lt; TextureAssetX11 &gt; heightMap[cNumSupportedHeightMaps]</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:62</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html">SGFramework::Administrator::GraphicsDetail::MaterialX11</a></div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:28</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_a70e34047e04e1b01a9f2086b548d91c6"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a70e34047e04e1b01a9f2086b548d91c6">SGFramework::Administrator::GraphicsDetail::MaterialX11::emission</a></div><div class="ttdeci">Color emission</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:45</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_ae03366a55a3a7a128a411e277ea9d1c5"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#ae03366a55a3a7a128a411e277ea9d1c5">SGFramework::Administrator::GraphicsDetail::MaterialX11::cNumSupportedNormalMaps</a></div><div class="ttdeci">static constexpr uint cNumSupportedNormalMaps</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:37</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_ac773f04184a04dfbb5820902d31f4c87"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">SGFramework::Const::Vector3::zero</a></div><div class="ttdeci">constexpr SGFramework::Vector3 zero(0.0f, 0.0f, 0.0f)</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_af8623e933b2e501a02f67e89232375d6"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#af8623e933b2e501a02f67e89232375d6">SGFramework::Administrator::GraphicsDetail::MaterialX11::MaterialX11</a></div><div class="ttdeci">MaterialX11()</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:32</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html">SGFramework::SharedPointer</a></div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:22</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_a13e203d0912bcfd3ded19dead8950413"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a13e203d0912bcfd3ded19dead8950413">SGFramework::Administrator::GraphicsDetail::MaterialX11::ambient</a></div><div class="ttdeci">Color ambient</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:43</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:151</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_a1ce32ac7207f67980b71d812dd8e7e5f"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a1ce32ac7207f67980b71d812dd8e7e5f">SGFramework::Administrator::GraphicsDetail::MaterialX11::vertexShader</a></div><div class="ttdeci">SharedPointer&lt; Administrator::GraphicsDetail::VertexShaderAssetX11 &gt; vertexShader</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:54</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_a92fbc2823444376c9ccd21cdc45696b2"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a92fbc2823444376c9ccd21cdc45696b2">SGFramework::Administrator::GraphicsDetail::MaterialX11::textures</a></div><div class="ttdeci">SharedPointer&lt; TextureAssetX11 &gt; textures[cNumSupportedTextures]</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:58</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector3_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a></div><div class="ttdef"><b>Definition:</b> Vector3.hpp:28</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_aa2eae4e8c99ada2e0afd8011beca63c4"><div class="ttname"><a href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a></div><div class="ttdeci">#define IS_TRUE(val)</div><div class="ttdoc">true判定高速化, 見やすさ向上マクロ(高速化は環境依存？)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:64</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_a95b14c7d0b56cc08feedd57e4a63db7e"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a95b14c7d0b56cc08feedd57e4a63db7e">SGFramework::Administrator::GraphicsDetail::MaterialX11::pixelShader</a></div><div class="ttdeci">SharedPointer&lt; Administrator::GraphicsDetail::PixelShaderAssetX11 &gt; pixelShader</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:56</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_ac936d3bca5419cae666f433d6841f619"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#ac936d3bca5419cae666f433d6841f619">SGFramework::Administrator::GraphicsDetail::MaterialX11::specular</a></div><div class="ttdeci">Color specular</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:46</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_af88e7005bc0dd0bead450e5e5a65777c"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#af88e7005bc0dd0bead450e5e5a65777c">SGFramework::Administrator::GraphicsDetail::MaterialX11::name</a></div><div class="ttdeci">sgstring name</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:52</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_abec131015d4fea236a329f1fb5f18c45"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">SGFramework::Administrator::GraphicsX11::context</a></div><div class="ttdeci">static PointerProperty&lt; ID3D11DeviceContext * &gt; context</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:80</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_a7643b9cc0aac5f4ed870e35b9f374882"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a7643b9cc0aac5f4ed870e35b9f374882">SGFramework::Administrator::GraphicsDetail::MaterialX11::setMaterial</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY void setMaterial()</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:65</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_a104c1a9d04310493ca1f1b70e493741b"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a104c1a9d04310493ca1f1b70e493741b">SGFramework::Administrator::GraphicsDetail::MaterialX11::bump</a></div><div class="ttdeci">Vector3 bump</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:47</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_a503a7fb61eff866e6bf5b13b79671277"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a503a7fb61eff866e6bf5b13b79671277">SGFramework::Administrator::GraphicsDetail::MaterialX11::cNumSupportedTextures</a></div><div class="ttdeci">static constexpr uint cNumSupportedTextures</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:35</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_a852222e4e196fe3eb2fb65f293dc4c16"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a852222e4e196fe3eb2fb65f293dc4c16">SGFramework::Administrator::GraphicsDetail::MaterialX11::cNumSupportedHeightMaps</a></div><div class="ttdeci">static constexpr uint cNumSupportedHeightMaps</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:39</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_aa2ce1e5d127e8abf33cfe12aca5ae42e"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#aa2ce1e5d127e8abf33cfe12aca5ae42e">SGFramework::Administrator::GraphicsDetail::MaterialX11::normalMap</a></div><div class="ttdeci">SharedPointer&lt; TextureAssetX11 &gt; normalMap[cNumSupportedNormalMaps]</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:60</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_a496417d55782c3fd4908029e5356f5d0"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a496417d55782c3fd4908029e5356f5d0">SGFramework::Administrator::GraphicsDetail::MaterialX11::diffuse</a></div><div class="ttdeci">Color diffuse</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:44</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html_a082238144bfdd540f32a59943adf968e"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html#a082238144bfdd540f32a59943adf968e">SGFramework::Administrator::GraphicsDetail::MaterialX11::power</a></div><div class="ttdeci">float power</div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:49</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_material3_d_html"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_material3_d.html">SGFramework::Administrator::GraphicsDetail::X11::ConstantBufferMaterial3D</a></div><div class="ttdef"><b>Definition:</b> GraphicsX11ConstantBuffer.hpp:70</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

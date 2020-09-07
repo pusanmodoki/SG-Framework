@@ -1,0 +1,113 @@
+\hypertarget{class_s_g_framework_1_1_scene_1_1_scene_manager}{}\doxysection{S\+G\+Framework\+::Scene\+::Scene\+Manager クラス}
+\label{class_s_g_framework_1_1_scene_1_1_scene_manager}\index{SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}}
+
+
+{\ttfamily \#include $<$Scene\+Manager.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_scene_manager_a57d89f8d8824691fe68c4bd322517c68}{Scene\+Manager}} (\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene}{Base\+Scene}} $>$ \&\&First\+Scene, bool is\+Debug\+Mode)
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_scene_manager_ab3674438eb51426657fa66d133efb645}{$\sim$\+Scene\+Manager}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Scene\+Class $>$ }\\static \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene}{Base\+Scene}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_scene_manager_a256615430580f54337e25e13760b33d4}{Instantiate\+First\+Scene}} ()
+\item 
+{\footnotesize template$<$class Pointer\+Type $>$ }\\static bool \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_scene_manager_a6b53047e0ec0a1454cfd53bed2ab7a21}{Register\+Unload\+Shared\+Pointer}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type $>$ pointer, const sgstring \&key)
+\item 
+{\footnotesize template$<$class Pointer\+Type $>$ }\\static \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type $>$ \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_scene_manager_ad12e35a7707e951f92f28b9b824d09ad}{Find\+Unload\+Shared\+Pointer}} (const sgstring \&key)
+\item 
+static bool \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_scene_manager_ae1071885947a07cef2649371b66d1241}{Unregister\+Unload\+Shared\+Pointer}} (const sgstring \&key)
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene}{Base\+Scene}} $>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_scene_manager_ab02dd8fd8eadbca4bb7e61bba02ecd27}{get\+Now\+Scene}} ()
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_scene_manager_a2a18dd88cc62a8401ce085bc53996de0}{get\+Num\+Unload\+Pointers}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_scene_manager_a23f25bcc02a0e94c2f5a4188496b04d0}{Application}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_scene_manager_ac5a3536de371167fdf200e8943f8c2b0}{G\+UI}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_scene_manager_a57d89f8d8824691fe68c4bd322517c68}\label{class_s_g_framework_1_1_scene_1_1_scene_manager_a57d89f8d8824691fe68c4bd322517c68}} 
+\index{SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}!SceneManager@{SceneManager}}
+\index{SceneManager@{SceneManager}!SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}}
+\doxysubsubsection{\texorpdfstring{SceneManager()}{SceneManager()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Scene\+::\+Scene\+Manager\+::\+Scene\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene}{Base\+Scene}} $>$ \&\&}]{First\+Scene,  }\item[{bool}]{is\+Debug\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_scene_manager_ab3674438eb51426657fa66d133efb645}\label{class_s_g_framework_1_1_scene_1_1_scene_manager_ab3674438eb51426657fa66d133efb645}} 
+\index{SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}!````~SceneManager@{$\sim$SceneManager}}
+\index{````~SceneManager@{$\sim$SceneManager}!SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$SceneManager()}{~SceneManager()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Scene\+::\+Scene\+Manager\+::$\sim$\+Scene\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_scene_manager_ad12e35a7707e951f92f28b9b824d09ad}\label{class_s_g_framework_1_1_scene_1_1_scene_manager_ad12e35a7707e951f92f28b9b824d09ad}} 
+\index{SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}!FindUnloadSharedPointer@{FindUnloadSharedPointer}}
+\index{FindUnloadSharedPointer@{FindUnloadSharedPointer}!SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}}
+\doxysubsubsection{\texorpdfstring{FindUnloadSharedPointer()}{FindUnloadSharedPointer()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type $>$ S\+G\+Framework\+::\+Scene\+::\+Scene\+Manager\+::\+Find\+Unload\+Shared\+Pointer (\begin{DoxyParamCaption}\item[{const sgstring \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_scene_manager_ab02dd8fd8eadbca4bb7e61bba02ecd27}\label{class_s_g_framework_1_1_scene_1_1_scene_manager_ab02dd8fd8eadbca4bb7e61bba02ecd27}} 
+\index{SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}!getNowScene@{getNowScene}}
+\index{getNowScene@{getNowScene}!SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}}
+\doxysubsubsection{\texorpdfstring{getNowScene()}{getNowScene()}}
+{\footnotesize\ttfamily static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene}{Base\+Scene}}$>$\& S\+G\+Framework\+::\+Scene\+::\+Scene\+Manager\+::get\+Now\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_scene_manager_a2a18dd88cc62a8401ce085bc53996de0}\label{class_s_g_framework_1_1_scene_1_1_scene_manager_a2a18dd88cc62a8401ce085bc53996de0}} 
+\index{SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}!getNumUnloadPointers@{getNumUnloadPointers}}
+\index{getNumUnloadPointers@{getNumUnloadPointers}!SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}}
+\doxysubsubsection{\texorpdfstring{getNumUnloadPointers()}{getNumUnloadPointers()}}
+{\footnotesize\ttfamily static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Scene\+::\+Scene\+Manager\+::get\+Num\+Unload\+Pointers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_scene_manager_a256615430580f54337e25e13760b33d4}\label{class_s_g_framework_1_1_scene_1_1_scene_manager_a256615430580f54337e25e13760b33d4}} 
+\index{SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}!InstantiateFirstScene@{InstantiateFirstScene}}
+\index{InstantiateFirstScene@{InstantiateFirstScene}!SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}}
+\doxysubsubsection{\texorpdfstring{InstantiateFirstScene()}{InstantiateFirstScene()}}
+{\footnotesize\ttfamily template$<$class Scene\+Class $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene}{Base\+Scene}} $>$ S\+G\+Framework\+::\+Scene\+::\+Scene\+Manager\+::\+Instantiate\+First\+Scene\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_scene_manager_a6b53047e0ec0a1454cfd53bed2ab7a21}\label{class_s_g_framework_1_1_scene_1_1_scene_manager_a6b53047e0ec0a1454cfd53bed2ab7a21}} 
+\index{SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}!RegisterUnloadSharedPointer@{RegisterUnloadSharedPointer}}
+\index{RegisterUnloadSharedPointer@{RegisterUnloadSharedPointer}!SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}}
+\doxysubsubsection{\texorpdfstring{RegisterUnloadSharedPointer()}{RegisterUnloadSharedPointer()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool S\+G\+Framework\+::\+Scene\+::\+Scene\+Manager\+::\+Register\+Unload\+Shared\+Pointer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type $>$}]{pointer,  }\item[{const sgstring \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_scene_manager_ae1071885947a07cef2649371b66d1241}\label{class_s_g_framework_1_1_scene_1_1_scene_manager_ae1071885947a07cef2649371b66d1241}} 
+\index{SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}!UnregisterUnloadSharedPointer@{UnregisterUnloadSharedPointer}}
+\index{UnregisterUnloadSharedPointer@{UnregisterUnloadSharedPointer}!SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}}
+\doxysubsubsection{\texorpdfstring{UnregisterUnloadSharedPointer()}{UnregisterUnloadSharedPointer()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Scene\+::\+Scene\+Manager\+::\+Unregister\+Unload\+Shared\+Pointer (\begin{DoxyParamCaption}\item[{const sgstring \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_scene_manager_a23f25bcc02a0e94c2f5a4188496b04d0}\label{class_s_g_framework_1_1_scene_1_1_scene_manager_a23f25bcc02a0e94c2f5a4188496b04d0}} 
+\index{SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}!Application@{Application}}
+\index{Application@{Application}!SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}}
+\doxysubsubsection{\texorpdfstring{Application}{Application}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_application}{Application}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_scene_manager_ac5a3536de371167fdf200e8943f8c2b0}\label{class_s_g_framework_1_1_scene_1_1_scene_manager_ac5a3536de371167fdf200e8943f8c2b0}} 
+\index{SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}!GUI@{GUI}}
+\index{GUI@{GUI}!SGFramework::Scene::SceneManager@{SGFramework::Scene::SceneManager}}
+\doxysubsubsection{\texorpdfstring{GUI}{GUI}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_g_u_i}{G\+UI}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/09\+\_\+\+Scene/\mbox{\hyperlink{_scene_manager_8hpp}{Scene\+Manager.\+hpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/09\+\_\+\+Scene/\mbox{\hyperlink{_scene_manager_8cpp}{Scene\+Manager.\+cpp}}\end{DoxyCompactItemize}

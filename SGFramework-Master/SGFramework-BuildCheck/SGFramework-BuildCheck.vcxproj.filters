@@ -11,9 +11,6 @@
     <Filter Include="Framework source\02_Variables">
       <UniqueIdentifier>{32f3ecaa-4b86-492f-b260-40b5cee29da3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framework source\02_Variables\MacroAndUsing">
-      <UniqueIdentifier>{f7e0e10e-d2d0-4ce2-96de-a33cfb3d2f5c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Framework source\02_Variables\Atomic">
       <UniqueIdentifier>{e8e92fac-4038-4f97-9caf-77b35ffe6213}</UniqueIdentifier>
     </Filter>
@@ -40,6 +37,15 @@
     </Filter>
     <Filter Include="Framework source\02_Variables\ReadElement">
       <UniqueIdentifier>{e3a1089d-dcd5-48c4-b3d4-bce4418ac000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\00_Texts">
+      <UniqueIdentifier>{7aa34bf4-5364-4da5-8017-d0e1167ce550}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\01_MacroAndLibrarys">
+      <UniqueIdentifier>{7c481662-c224-4a28-af34-501a97d9f6b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework source\01_MacroAndLibrarys\BelongingHeaders">
+      <UniqueIdentifier>{eaf51e6a-7b9e-4cb9-be2d-d68ef1ddd266}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -81,22 +87,13 @@
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\InputCode\MouseCode.hpp">
       <Filter>Framework source\02_Variables\InputCode</Filter>
     </ClInclude>
-    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\MacroAndUsing\MacroAndUsing.hpp">
-      <Filter>Framework source\02_Variables\MacroAndUsing</Filter>
-    </ClInclude>
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Variables.hpp">
       <Filter>Framework source\02_Variables</Filter>
     </ClInclude>
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\Stringf.hpp">
       <Filter>Framework source\02_Variables\Stringf</Filter>
     </ClInclude>
-    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfConvert.hpp">
-      <Filter>Framework source\02_Variables\Stringf</Filter>
-    </ClInclude>
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfOtherFunctions.hpp">
-      <Filter>Framework source\02_Variables\Stringf</Filter>
-    </ClInclude>
-    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfTo.hpp">
       <Filter>Framework source\02_Variables\Stringf</Filter>
     </ClInclude>
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfUsingAndStructure.hpp">
@@ -120,5 +117,25 @@
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Exception\ExceptionWindow.hpp">
       <Filter>Framework source\02_Variables\Exception</Filter>
     </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfConvert.hpp">
+      <Filter>Framework source\02_Variables\Stringf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfTo.hpp">
+      <Filter>Framework source\02_Variables\Stringf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\01_MacroAndLibrarys\MacroAndLibrarys.hpp">
+      <Filter>Framework source\01_MacroAndLibrarys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\01_MacroAndLibrarys\BelongingHeaders\MacroAndUsing.hpp">
+      <Filter>Framework source\01_MacroAndLibrarys\BelongingHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SGFramework-Master_ToExe\01_MacroAndLibrarys\BelongingHeaders\LibraryImports.hpp">
+      <Filter>Framework source\01_MacroAndLibrarys\BelongingHeaders</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\SGFramework-Master_ToExe\00_Texts\CodeConvention-Comment.txt">
+      <Filter>Framework source\00_Texts</Filter>
+    </Text>
   </ItemGroup>
 </Project>

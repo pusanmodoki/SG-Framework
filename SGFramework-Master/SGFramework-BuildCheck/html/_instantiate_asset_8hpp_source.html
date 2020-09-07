@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/04_Asset/InstantiateAsset.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_d0dec2340abc21962e67484932b81919.html">04_Asset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">InstantiateAsset.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_instantiate_asset_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_INSTANTIATE_ASSET_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_INSTANTIATE_ASSET_HPP_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../02_CustomVariable/CustomVariable.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../04_Asset/AssetManager.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../05_Graphics/Graphics.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../06_Audio/AudioAsset/AudioAssetEffect.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../06_Audio/AudioAsset/AudioAssetEffect3D.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../06_Audio/AudioAsset/AudioAssetMusic.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Framework namespace</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">//Asset関連を格納したAsset namespace</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">namespace </span>Asset</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">//[InstantiateAsset]</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">//アセットクラスを生成する, (Openは別途関数を実行)</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">//template: asset class</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">//return: make_shared pointer</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">//引数1: file path</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">//引数2: asset is register shared? </span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">//          (既にShared設定の同名同型ポインタがあった場合それを返却する), default = true</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TAsset&gt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_asset.html#ad512f0eb01593582e1507de561c2f71f">   25</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;TAsset&gt;</a> <a class="code" href="namespace_s_g_framework_1_1_asset.html#ad512f0eb01593582e1507de561c2f71f">InstantiateAsset</a>(<span class="keyword">const</span> sgstring&amp; filePath, <span class="keywordtype">bool</span> isRegisterSharedAsset = <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            static_assert(std::is_base_of_v&lt;SGFramework::BaseClass::BaseAsset, TAsset&gt;,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="stringliteral">&quot;FindAssetType template -&gt; derived class only!!&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="comment">//type</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="namespace_s_g_framework_1_1_asset.html#adda3675d35f5e7dcea0dd7e6955d97da">AssetType</a> type = FindAssetType&lt;TAsset&gt;();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="comment">//既に登録があるか確認</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(isRegisterSharedAsset))</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;BaseClass::BaseAsset&gt;</a> result = Administrator::AssetManager::FindAsset(filePath, type);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(result.<a class="code" href="class_s_g_framework_1_1_shared_pointer.html#a1295590f5d857f59b52fd3aa68591e8b">getIsValid</a>()))</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="keywordflow">return</span> result.<a class="code" href="class_s_g_framework_1_1_shared_pointer.html#ab24750246074be94275f8a7fef624e66">DynamicCast</a>&lt;TAsset&gt;();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="comment">//make_shared</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keyword">auto</span> result = <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;TAsset&gt;</a>(<span class="keyword">new</span> TAsset());</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="comment">//name登録</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                result-&gt;setName(filePath);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="comment">//ポインタ登録</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                result-&gt;m_thisPointer = result.DownCast&lt;<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html">BaseClass::BaseAsset</a>&gt;();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="comment">//監視リストに登録</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                Administrator::AssetManager::RegisterAsset(result-&gt;m_thisPointer, type, isRegisterSharedAsset);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="comment">//return</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">return</span> std::move(result);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">catch</span> (...)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordflow">throw</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif //!SGFRAMEWORK_HEADER_INSTANTIATE_ASSET_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_asset_html"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_asset.html">SGFramework::BaseClass::BaseAsset</a></div><div class="ttdef"><b>Definition:</b> BaseAsset.hpp:173</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_asset_html_adda3675d35f5e7dcea0dd7e6955d97da"><div class="ttname"><a href="namespace_s_g_framework_1_1_asset.html#adda3675d35f5e7dcea0dd7e6955d97da">SGFramework::Asset::AssetType</a></div><div class="ttdeci">AssetType</div><div class="ttdef"><b>Definition:</b> BaseAsset.hpp:87</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_asset_html_ad512f0eb01593582e1507de561c2f71f"><div class="ttname"><a href="namespace_s_g_framework_1_1_asset.html#ad512f0eb01593582e1507de561c2f71f">SGFramework::Asset::InstantiateAsset</a></div><div class="ttdeci">SharedPointer&lt; TAsset &gt; InstantiateAsset(const sgstring &amp;filePath, bool isRegisterSharedAsset)</div><div class="ttdef"><b>Definition:</b> InstantiateAsset.hpp:25</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html">SGFramework::SharedPointer</a></div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:22</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_aa2eae4e8c99ada2e0afd8011beca63c4"><div class="ttname"><a href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a></div><div class="ttdeci">#define IS_TRUE(val)</div><div class="ttdoc">true判定高速化, 見やすさ向上マクロ(高速化は環境依存？)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:64</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html_ab24750246074be94275f8a7fef624e66"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html#ab24750246074be94275f8a7fef624e66">SGFramework::SharedPointer::DynamicCast</a></div><div class="ttdeci">SharedPointer&lt; DifferentType &gt; DynamicCast() const noexcept</div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:634</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html_a1295590f5d857f59b52fd3aa68591e8b"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html#a1295590f5d857f59b52fd3aa68591e8b">SGFramework::SharedPointer::getIsValid</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY bool getIsValid() const noexcept</div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:83</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

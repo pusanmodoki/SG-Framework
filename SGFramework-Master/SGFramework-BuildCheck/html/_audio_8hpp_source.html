@@ -1,0 +1,615 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/06_Audio/Audio.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_7364b1c18594ceef956b3411048bfa26.html">06_Audio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Audio.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_audio_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">オーディオを管理するAudio class</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_AUDIO_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_AUDIO_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;mmsystem.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;xaudio2.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;x3daudio.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../02_CustomVariable/CustomVariable.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../03_MathAF/MathAF.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_audio_message_8hpp.html">AudioDetail/AudioMessage.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_audio_listener_8hpp.html">AudioListener.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma comment(lib, &quot;winmm.lib&quot;)</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#pragma comment(lib, &quot;xaudio2.lib&quot;)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// Framework namespace</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//friend</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">class </span>Application;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">class </span>Thread;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">namespace </span>BaseClass</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">class </span>BaseAudioAsset;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">class </span>BaseAudioSEAsset;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">namespace </span>Asset</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">class </span>AudioAssetMusic;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">class </span>AudioAssetEffect;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">class </span>AudioAssetEffect3D;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">//オーディオを管理するAudio class</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html">   37</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_audio.html">Audio</a> final</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">//friend</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a23f25bcc02a0e94c2f5a4188496b04d0">   41</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_application.html">Application</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#adbc148eaddd341d7ae4d07c9e9e33bfd">   42</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_thread.html">Thread</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#ac964b98f0e504897e7c32b73cc00b737">   43</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html">BaseClass::BaseAudioAsset</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a4dc07e019f39b170b9d564ca3652f1a1">   44</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html">BaseClass::BaseAudioSEAsset</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a6b3deae32cf8d44e322c6886e795c5dc">   45</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_music.html">Asset::AudioAssetMusic</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a3a8df7fa147227deb834fa66e3adc809">   46</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html">Asset::AudioAssetEffect</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a7446b12275baf2ca54aba44caa299e4d">   47</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d.html">Asset::AudioAssetEffect3D</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">//prototype</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html">SubmixLayer</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#aa39a1cd75e9307b1cbafaf6ad702253e">   51</a></span>&#160;        <a class="code" href="class_s_g_framework_1_1_audio.html#aa39a1cd75e9307b1cbafaf6ad702253e">DELETE_ALL_DEFAULT_CLASS_FUNCTIONS</a>(<a class="code" href="class_s_g_framework_1_1_audio.html">Audio</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">//[FindLayer]</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">//nameのサブミックスレイヤーを検索する</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">//return: 存在していた場合layerのポインタ, ない場合は空ポインタ</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">//引数1: レイヤー名</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;SubmixLayer&gt;</a> <a class="code" href="class_s_g_framework_1_1_audio.html#a632022a6c592d2b174319f1419739535">FindLayer</a>(<span class="keyword">const</span> sgstring&amp; name);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">//submix layer[id]&lt;static&gt;(get function property)</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//return:  layer[id], not found-&gt;null</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">//argument 1: id</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a01d74d442f5131ee4237f08228972767">   63</a></span>&#160;        SGF_FUNCTION_PROPERTY <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;SubmixLayer&gt;</a> <a class="code" href="class_s_g_framework_1_1_audio.html#a01d74d442f5131ee4237f08228972767">getLayer</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">//root分岐-&gt;あればreturn-&gt;なければ空ポインタ</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> <span class="keywordtype">id</span> == 0 ? m_submixRootLayer :</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordtype">id</span> == 1 ? m_submixMonoralRootLayer :</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordtype">id</span> &lt;= m_layerCounter ? </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                m_submixLayers[<span class="keywordtype">id</span> - 2] : <a class="code" href="class_s_g_framework_1_1_shared_pointer.html#ae9a48ef8af8aaa71022b06ef72d21db7">SharedPointer&lt;Audio::SubmixLayer&gt;::getNull</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">//master channels mask(used XAudio2)&lt;static&gt; (read only property)</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a6da3c1d6d28d880b481e11a0cc3c32b8">   73</a></span>&#160;        SGF_FUNCTION_PROPERTY sgstring <a class="code" href="class_s_g_framework_1_1_audio.html#a6da3c1d6d28d880b481e11a0cc3c32b8">getMasterChannelsMask</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="comment">//チャンネルマスク</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> channelMask = SPEAKER_MONO;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="comment">//チャンネル分岐</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">switch</span> (m_masterChannels)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                channelMask = SPEAKER_STEREO;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                channelMask = SPEAKER_2POINT1;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                channelMask = SPEAKER_SURROUND;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">case</span> 5:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                channelMask = SPEAKER_4POINT1;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">case</span> 6:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                channelMask = SPEAKER_5POINT1_SURROUND;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">case</span> 8:</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                channelMask = SPEAKER_7POINT1_SURROUND;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">//accurate master channels&lt;static&gt; (read only property)</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a7e5ae3f9889446d66bda5f9428d946b0">   97</a></span>&#160;        SGF_FUNCTION_PROPERTY <span class="keyword">static</span> sgstring <a class="code" href="class_s_g_framework_1_1_audio.html#a7e5ae3f9889446d66bda5f9428d946b0">getChannelsString</a>()</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="comment">//チャンネル分岐</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">switch</span> (m_masterChannels)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">return</span> L<span class="stringliteral">&quot;1.0&quot;</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="keywordflow">return</span> L<span class="stringliteral">&quot;2.0&quot;</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordflow">return</span> L<span class="stringliteral">&quot;2.1&quot;</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="keywordflow">return</span> L<span class="stringliteral">&quot;3.1&quot;</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">case</span> 5:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordflow">return</span> L<span class="stringliteral">&quot;4.1&quot;</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">case</span> 6:</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">return</span> L<span class="stringliteral">&quot;5.1&quot;</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">case</span> 8:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <span class="keywordflow">return</span> L<span class="stringliteral">&quot;7.1&quot;</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <span class="keywordflow">return</span> L<span class="stringliteral">&quot;unknown&quot;</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="comment">//monoral</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#aaebd3053b065766c714abfc51175f96c">  122</a></span>&#160;        <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_audio.html#aaebd3053b065766c714abfc51175f96c">cMonoral</a> = 1;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="comment">//IXAudio2</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a82bb76fc9193b1ab11c972e1f7749ac2">  125</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty&lt;IXAudio2*&gt;</a> <a class="code" href="class_s_g_framework_1_1_audio.html#a82bb76fc9193b1ab11c972e1f7749ac2">xaudio2</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">//IXAudio2MasteringVoice</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a96ae5e556795945aae51c2697e12b2ee">  127</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty&lt;IXAudio2MasteringVoice*&gt;</a> <a class="code" href="class_s_g_framework_1_1_audio.html#a96ae5e556795945aae51c2697e12b2ee">masteringVoice</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="comment">//RootLayer</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a46e4687ffaa8cfaf89c77cb16e16a5b4">  129</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;SharedPointer&lt;SubmixLayer&gt;</a>&gt; <a class="code" href="class_s_g_framework_1_1_audio.html#a46e4687ffaa8cfaf89c77cb16e16a5b4">submixRootLayer</a>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="comment">//MonoralRootLayer このレイヤーの子レイヤーは全てチャンネル数が1になる</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a2a6c4f64a1817146ef584f19d44adca4">  131</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;SharedPointer&lt;SubmixLayer&gt;</a>&gt; <a class="code" href="class_s_g_framework_1_1_audio.html#a2a6c4f64a1817146ef584f19d44adca4">submixMonoralRootLayer</a>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="comment">//規定のチャンネル数</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a7a7b74af4df0daa9d06bc225f810d18c">  133</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;uint&gt;</a> <a class="code" href="class_s_g_framework_1_1_audio.html#a7a7b74af4df0daa9d06bc225f810d18c">masterChannels</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="comment">//マスターサンプルレート</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a71afb723dee9593de4bf591b7a77e9bc">  135</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;uint&gt;</a> <a class="code" href="class_s_g_framework_1_1_audio.html#a71afb723dee9593de4bf591b7a77e9bc">sampleRate</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="comment">//SubmixAudioをレイヤー構造で提供するSubmixLayer class</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html">  138</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html">SubmixLayer</a> final</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="comment">//friend</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a211f008bd6a46efe478fe81d31e28933">  142</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_audio.html">Audio</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ac964b98f0e504897e7c32b73cc00b737">  143</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html">BaseClass::BaseAudioAsset</a>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a4dc07e019f39b170b9d564ca3652f1a1">  144</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html">BaseClass::BaseAudioSEAsset</a>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a6b3deae32cf8d44e322c6886e795c5dc">  145</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_music.html">Asset::AudioAssetMusic</a>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a3a8df7fa147227deb834fa66e3adc809">  146</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html">Asset::AudioAssetEffect</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a7446b12275baf2ca54aba44caa299e4d">  147</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d.html">Asset::AudioAssetEffect3D</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="comment">//[デストラクタ]</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="comment">//DestroyVoiceを行う</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ab6057c6cc66a12298d1d3b72c3e75f86">~SubmixLayer</a>();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="comment">//[ChangeVolumeSmoothly]</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="comment">//再生音量をtargetまで滑らかに変更する</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="comment">//引数1: 変更target</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="comment">//引数2: 変更にかける秒数</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a916315704e29f3a436fb962a8e416ff0">ChangeVolumeSmoothly</a>(<span class="keywordtype">float</span> target, <span class="keywordtype">float</span> seconds);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="comment">//parent layer (get function property)if null = not parent</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ace3200a60776d88a6b16af63ecc6ab44">  162</a></span>&#160;            SGF_FUNCTION_PROPERTY <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;SubmixLayer&gt;</a> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ace3200a60776d88a6b16af63ecc6ab44">getParent</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_parent; }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="comment">//childrens iterator cbegin (get function property)</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#aaa55ec4c88c199ebcd3e03b9269a55e0">  164</a></span>&#160;            SGF_FUNCTION_PROPERTY <span class="keyword">auto</span> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#aaa55ec4c88c199ebcd3e03b9269a55e0">getChildrensIteratorBegin</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_childrens.cbegin(); }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="comment">//childrens iterator cend (get function property)</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ac99707c07afc0fc1844a5b391f5ec001">  166</a></span>&#160;            SGF_FUNCTION_PROPERTY <span class="keyword">auto</span> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ac99707c07afc0fc1844a5b391f5ec001">getChildrensIteratorEnd</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_childrens.cend(); }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="comment">//num childrens (get function property)</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a33523909b4192f8487a0c07411a4edf2">  168</a></span>&#160;            SGF_FUNCTION_PROPERTY <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a33523909b4192f8487a0c07411a4edf2">getNumChildrens</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a><span class="keyword">&gt;</span>(m_childrens.size()); }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="comment">//volume (get function property)</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a07738a2c4f1dc0919531b26ab8b864eb">  170</a></span>&#160;            SGF_FUNCTION_PROPERTY <span class="keywordtype">float</span> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a07738a2c4f1dc0919531b26ab8b864eb">getVolume</a>()</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <span class="keywordtype">float</span> result = 0.0f;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <span class="comment">//Get</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                m_voice-&gt;GetVolume(&amp;result);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="comment">//volume (get function property)</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="comment">//return : volume</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="comment">//argument 1: volume magnification (倍率, 通常1)</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a93f728644be4ef3abc209ab788d67bdc">  180</a></span>&#160;            SGF_FUNCTION_PROPERTY <span class="keywordtype">float</span> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a93f728644be4ef3abc209ab788d67bdc">setVolume</a>(<span class="keywordtype">float</span> magnification) { m_voice-&gt;SetVolume(magnification); <span class="keywordflow">return</span> magnification; }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="comment">//master channels mask(used XAudio2)&lt;static&gt; (read only property)</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a034ab2a3b95cdd80c240a361d66b12aa">  183</a></span>&#160;            SGF_FUNCTION_PROPERTY sgstring <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a034ab2a3b95cdd80c240a361d66b12aa">getChannelsMask</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                <span class="comment">//チャンネルマスク</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> channelMask = SPEAKER_MONO;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="comment">//チャンネル分岐</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                <span class="keywordflow">switch</span> (m_channels)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                    channelMask = SPEAKER_STEREO;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                    channelMask = SPEAKER_2POINT1;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    channelMask = SPEAKER_SURROUND;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="keywordflow">case</span> 5:</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    channelMask = SPEAKER_4POINT1;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                <span class="keywordflow">case</span> 6:</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    channelMask = SPEAKER_5POINT1_SURROUND;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                <span class="keywordflow">case</span> 8:</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    channelMask = SPEAKER_7POINT1_SURROUND;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="comment">//accurate master channels&lt;static&gt; (read only property)</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a7a21a40ea43fb4ef7e11f400f6bb595e">  207</a></span>&#160;            SGF_FUNCTION_PROPERTY sgstring <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a7a21a40ea43fb4ef7e11f400f6bb595e">getChannelsString</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                <span class="comment">//チャンネル分岐</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                <span class="keywordflow">switch</span> (m_channels)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    <span class="keywordflow">return</span> L<span class="stringliteral">&quot;1.0&quot;</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    <span class="keywordflow">return</span> L<span class="stringliteral">&quot;2.0&quot;</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                    <span class="keywordflow">return</span> L<span class="stringliteral">&quot;2.1&quot;</span>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    <span class="keywordflow">return</span> L<span class="stringliteral">&quot;3.1&quot;</span>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                <span class="keywordflow">case</span> 5:</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                    <span class="keywordflow">return</span> L<span class="stringliteral">&quot;4.1&quot;</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                <span class="keywordflow">case</span> 6:</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                    <span class="keywordflow">return</span> L<span class="stringliteral">&quot;5.1&quot;</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                <span class="keywordflow">case</span> 8:</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    <span class="keywordflow">return</span> L<span class="stringliteral">&quot;7.1&quot;</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                    <span class="keywordflow">return</span> L<span class="stringliteral">&quot;unknown&quot;</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="comment">//() operator return voice</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a49e5cf630d6ea39d5338d1b50414ea7f">  232</a></span>&#160;            <span class="keyword">inline</span> <span class="keyword">const</span> IXAudio2SubmixVoice* <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a49e5cf630d6ea39d5338d1b50414ea7f">operator () </a>() { <span class="keywordflow">return</span> m_voice; }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="comment">//[] operator return childrebs[index]</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a90f2a28ead2b70adc46362c1d259a876">  234</a></span>&#160;            <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;SubmixLayer&gt;</a>&amp; <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a90f2a28ead2b70adc46362c1d259a876">operator [] </a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index) { <span class="keywordflow">return</span> m_childrens[index]; }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <span class="comment">//SubmixRootLayerのID</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a7f0cbc43a121bd4e061808c20c5533b8">  237</a></span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a7f0cbc43a121bd4e061808c20c5533b8">cRootID</a> = 0;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="comment">//SubmixRootLayerのName</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a4219bea36d49993d32e8a2d84e3eaee0">  239</a></span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a4219bea36d49993d32e8a2d84e3eaee0">cRootName</a>[] = L<span class="stringliteral">&quot;root&quot;</span>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="comment">//SubmixMonoralRootLayerのID</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a29a8ebb0a6bd398d8cc272899456e5d6">  241</a></span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a29a8ebb0a6bd398d8cc272899456e5d6">cMonoralRootID</a> = 1;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="comment">//SubmixMonoralRootLayerのName</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ac9929e41ea059ef13998a782e5fa5dfc">  243</a></span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ac9929e41ea059ef13998a782e5fa5dfc">cMonoralRootName</a>[] = L<span class="stringliteral">&quot;monoralRoot&quot;</span>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#af7bd15875bda950a18d008cb5156efad">  245</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;IXAudio2SubmixVoice*&gt;</a> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#af7bd15875bda950a18d008cb5156efad">voice</a>;    <span class="comment">//Voice</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#aa0f9229f3f29e33751162bb963e3c468">  246</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;sgstring&gt;</a> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#aa0f9229f3f29e33751162bb963e3c468">layerName</a>;                <span class="comment">//レイヤー名</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ab1fb5e8818bdcf0e63d80c54f800c464">  247</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;uint&gt;</a> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ab1fb5e8818bdcf0e63d80c54f800c464">layerID</a>;                          <span class="comment">//レイヤーID</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a980da8de81131812257d1f94ac5779a2">  248</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;uint&gt;</a> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a980da8de81131812257d1f94ac5779a2">processingStage</a>;              <span class="comment">//レイヤーの階層の深さ</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a7189b5f4ef66da04803bca662bd8cf7f">  249</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;uint&gt;</a> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a7189b5f4ef66da04803bca662bd8cf7f">channels</a>;                     <span class="comment">//レイヤーのチャンネル数</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="comment">//Root用初期化を行う</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html">SubmixLayer</a>();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="comment">//非Root用初期化を行う</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="comment">//引数1: レイヤー名</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="comment">//引数2: レイヤーID</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html">SubmixLayer</a>(<span class="keyword">const</span> sgstring&amp; name, <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="comment">//[SettingRoot]</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="comment">//Root用設定を行う</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="comment">//引数1: 音量</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordtype">void</span> SettingRoot(<span class="keywordtype">float</span> volume);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="comment">//[SettingMonoralRoot]</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="comment">//MonoralRoot用設定を行う</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="comment">//引数1: 音量</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            <span class="keywordtype">void</span> SettingMonoralRoot(<span class="keywordtype">float</span> volume);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="comment">//[SettingSubmix]</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="comment">//非Root用設定を行う</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="comment">//引数1: 音量</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <span class="keywordtype">void</span> SettingSubmix(<span class="keywordtype">float</span> volume);   </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            std::vector&lt;WeakPointer&lt;SubmixLayer&gt;&gt; m_childrens;      <span class="comment">//子レイヤー</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            std::vector&lt;XAUDIO2_SEND_DESCRIPTOR&gt; m_sendVoices;  <span class="comment">//VoiceSends用</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            sgstring m_layerName;                                                       <span class="comment">//レイヤー名</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            XAUDIO2_VOICE_SENDS m_sends;                                        <span class="comment">//Sneds</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;SubmixLayer&gt;</a> m_parent;                              <span class="comment">//親レイヤー</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            IXAudio2SubmixVoice* m_voice;                                           <span class="comment">//Voice</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_layerID;                                                                 <span class="comment">//レイヤーID</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_processingStage;                                                     <span class="comment">//レイヤーの階層の深さ</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_channels;                                                                <span class="comment">//レイヤーのチャンネル数</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        };</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="comment">//リスナー設定用バッファ</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keyword">struct </span>X3DAudioListenerBuffer</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            std::atomic_bool lock;                  <span class="comment">//lock</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            X3DAUDIO_LISTENER listner = {}; <span class="comment">//listner</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        };</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keyword">struct </span>SmoothSubmix</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keyword">inline</span> SmoothSubmix(<span class="keywordtype">float</span> now, <span class="keywordtype">float</span> target, <span class="keywordtype">float</span> speed)</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                : now(now), target(target), speed(speed) {}</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="keywordtype">float</span> now = 0.0f;           <span class="comment">//現在値</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            <span class="keywordtype">float</span> target = 0.0f;            <span class="comment">//ターゲット</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordtype">float</span> speed = 0.0f;         <span class="comment">//変更スピード (秒速)</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        };</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keyword">struct </span>SmoothAudio</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        {</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="comment">//タイプごとの値</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html">  307</a></span>&#160;            <span class="keyword">struct </span><a class="code" href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html">Values</a></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            {</div>
+<div class="line"><a name="l00309"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#ad4ebccb2eabaa7f2cbcb35cf1b44ae96">  309</a></span>&#160;                <span class="keywordtype">float</span> <a class="code" href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#ad4ebccb2eabaa7f2cbcb35cf1b44ae96">now</a> = 0.0f;           <span class="comment">//現在値</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#a3f600e542dd7bd01fe1849cebc64d074">  310</a></span>&#160;                <span class="keywordtype">float</span> <a class="code" href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#a3f600e542dd7bd01fe1849cebc64d074">target</a> = 0.0f;            <span class="comment">//ターゲット</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#a40b81a70c7aafc1a8ba87da7594b3d46">  311</a></span>&#160;                <span class="keywordtype">float</span> <a class="code" href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#a40b81a70c7aafc1a8ba87da7594b3d46">speed</a> = 0.0f;         <span class="comment">//変更スピード (秒速)</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#a29332c0aab67c32f250fc302d51c4147">  312</a></span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#a29332c0aab67c32f250fc302d51c4147">isEnabled</a> = <span class="keyword">false</span>; <span class="comment">//有効？</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#af228d9f4328475d71bb84ed758c35d8b">  313</a></span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#af228d9f4328475d71bb84ed758c35d8b">isStop</a> = <span class="keyword">false</span>;        <span class="comment">//終了後停止？</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            };</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keyword">inline</span> SmoothAudio(<span class="keyword">const</span> <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseAudioAsset&gt;</a>&amp; asset)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            { </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                ZeroMemory(<span class="keyword">this</span>, <span class="keyword">sizeof</span>(SmoothAudio)); </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                this-&gt;asset = asset;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <span class="keyword">inline</span> ~SmoothAudio() {}</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> cIndexVolume = 0;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> cIndexSpeed = 1;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="keyword">union</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                <span class="keyword">struct</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                    Values volume;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                    Values speed;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                };</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                Values values[2];</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            };</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            WeakPointer&lt;BaseClass::BaseAudioAsset&gt; asset;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        };</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="comment">//[StartUp]</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="comment">//起動時初期化を行う</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="comment">//引数1: マスター音量</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="comment">//引数2: チャンネル数</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="comment">//引数3: サンプルレート</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="comment">//引数4: サブミックスレイヤー</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> StartUp(<span class="keyword">const</span> ReadElement::Pack&amp; masterVolume, <span class="keyword">const</span> ReadElement::Pack&amp; <a class="code" href="class_s_g_framework_1_1_audio.html#a7a7b74af4df0daa9d06bc225f810d18c">masterChannels</a>, </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            <span class="keyword">const</span> ReadElement::Pack&amp; <a class="code" href="class_s_g_framework_1_1_audio.html#a71afb723dee9593de4bf591b7a77e9bc">sampleRate</a>, <span class="keyword">const</span> ReadElement::Pack&amp; audioUpdateInterval, </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="keyword">const</span> ReadElement::Pack&amp; audioSmoothReserve, <span class="keyword">const</span> ReadElement::Groop&amp; submixLayers);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="comment">//[ShutDown]</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="comment">//終了処理を行う</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> ShutDown();</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="comment">//[UpdateThread]</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="comment">//オーディオの更新を行う, 別スレッド用関数</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> UpdateThread();</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="comment">//[ProcessingMessage]</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="comment">//メッセージを処理する</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="comment">//引数1: message</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> ProcessingMessage(<span class="keyword">const</span> Detail::Audio::AudioMessage&amp; message);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="comment">//[UpdateSmooth]</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="comment">//スムースの更新を行う</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="comment">//引数1: delta time</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> UpdateSmooth(<span class="keywordtype">float</span> deltaTime);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="comment">//[SendAudioMessage]</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="comment">//メッセージを送信する</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="comment">//引数1: message</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> SendAudioMessage(<span class="keyword">const</span> Detail::Audio::AudioMessage&amp; message);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="comment">//IXAudio2</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keyword">static</span> IXAudio2* m_xaudio2;                                                                             </div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="comment">//IXAudio2MasteringVoice</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keyword">static</span> IXAudio2MasteringVoice* m_masteringVoice;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="comment">//X3DAUDIO_HANDLE</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keyword">static</span> X3DAUDIO_HANDLE m_x3dHandle;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="comment">//X3DAUDIO_LISTENER</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keyword">static</span> X3DAUDIO_LISTENER m_x3dListener;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="comment">//effects (2D)</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <span class="keyword">static</span> std::unordered_map&lt;uint, WeakPointer&lt;Asset::AudioAssetEffect&gt;&gt; m_2dEffects;  </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="comment">//effects (3D)</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keyword">static</span> std::unordered_map&lt;uint, WeakPointer&lt;Asset::AudioAssetEffect3D&gt;&gt; m_3dEffects;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="comment">//smooth (submix)</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keyword">static</span> std::unordered_map&lt;IXAudio2SubmixVoice*, SmoothSubmix&gt; m_smoothSubmixes;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="comment">//smooth (audio)</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keyword">static</span> std::unordered_map&lt;uint, SmoothAudio&gt; m_smoothAudios;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="comment">//AudioMessages</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keyword">static</span> std::vector&lt;Detail::Audio::AudioMessage&gt; m_messages;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="comment">//AudioMessages (use audio thread)</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keyword">static</span> std::vector&lt;Detail::Audio::AudioMessage&gt; m_useThreadMessages;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="comment">//サブミックスレイヤー</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <span class="keyword">static</span> std::vector&lt;SharedPointer&lt;SubmixLayer&gt;&gt; m_submixLayers;  </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        <span class="comment">//Submix root</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keyword">static</span> SharedPointer&lt;SubmixLayer&gt; m_submixRootLayer;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="comment">//Submix monoral root</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <span class="keyword">static</span> SharedPointer&lt;SubmixLayer&gt; m_submixMonoralRootLayer;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="comment">//Audio thread</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keyword">static</span> std::thread m_audioThread;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="comment">//Audio thread更新間隔(chrono)</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <span class="keyword">static</span> std::chrono::milliseconds m_nowAudioUpdateInterval;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="comment">//Audio thread更新間隔(chrono)</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keyword">static</span> std::chrono::milliseconds m_audioUpdateIntervalForChrono;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="comment">//Audio thread更新間隔(float)</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">float</span> m_audioUpdateIntervalForFloat;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <span class="comment">//規定のチャンネル数</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_masterChannels;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="comment">//マスターサンプルレート</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_sampleRate;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        <span class="comment">//サブミックスレイヤーカウンタ</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_layerCounter;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="comment">//message lock</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        <span class="keyword">static</span> std::atomic_bool m_lockMessages;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="comment">//audio thread 終了フラグ</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <span class="keyword">static</span> std::atomic_bool m_isEndUpdate;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    };</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="comment">//[FindLayer]</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="comment">//nameのサブミックスレイヤーを検索する</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="comment">//return: 存在していた場合layerのポインタ, ない場合は空ポインタ</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <span class="comment">//引数1: レイヤー名</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio.html#a632022a6c592d2b174319f1419739535">  427</a></span>&#160;    <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Audio::SubmixLayer&gt;</a> <a class="code" href="class_s_g_framework_1_1_audio.html#a632022a6c592d2b174319f1419739535">Audio::FindLayer</a>(<span class="keyword">const</span> sgstring&amp; name)</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    {</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        <span class="comment">//Root分岐</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        <span class="keywordflow">if</span> (name == m_submixRootLayer-&gt;m_layerName) <span class="keywordflow">return</span> m_submixRootLayer;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <span class="keywordflow">if</span> (name == m_submixMonoralRootLayer-&gt;m_layerName) <span class="keywordflow">return</span> m_submixRootLayer;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        <span class="comment">//検索, あったらreturn</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : m_submixLayers)</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;            <span class="keywordflow">if</span> (name == e-&gt;m_layerName) <span class="keywordflow">return</span> e;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="comment">//ないので空ポインタ</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Audio::SubmixLayer&gt;</a>();</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    }</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160; </div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="comment">//[SendAudioMessage]</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="comment">//メッセージを送信する</span></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="comment">//引数1: message</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> Audio::SendAudioMessage(<span class="keyword">const</span> <a class="code" href="struct_s_g_framework_1_1_detail_1_1_audio_1_1_audio_message.html">Detail::Audio::AudioMessage</a>&amp; message)</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    {</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        <a class="code" href="namespace_s_g_framework_1_1_atomic.html#a063122ef30b1ea668e40c5a4aa0f43d2">AtomicOperation::LockAtomic</a>(m_lockMessages);</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        m_messages.emplace_back(message);</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        <a class="code" href="namespace_s_g_framework_1_1_atomic.html#ad4668b40d56cdbf6bdfe819c1b68b7dc">AtomicOperation::UnlockAtomic</a>(m_lockMessages);</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    }</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160; </div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="comment">//[ChangeVolumeSmoothly]</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <span class="comment">//再生音量をtargetまで滑らかに変更する</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="comment">//引数1: 変更target</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="comment">//引数2: 変更にかける秒数</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a916315704e29f3a436fb962a8e416ff0">  455</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a916315704e29f3a436fb962a8e416ff0">Audio::SubmixLayer::ChangeVolumeSmoothly</a>(<span class="keywordtype">float</span> target, <span class="keywordtype">float</span> seconds)</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    {</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        <span class="keyword">using namespace </span><a class="code" href="_todo_8txt.html#a44b740236187bd7f5a7e7f21c6aa97a4">Detail::Audio</a>;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160; </div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        <span class="comment">//Message用</span></div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        AudioMessage message((MessageType::SmoothFlag | MessageType::AddSmoothSubmix));</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        <span class="comment">//現在値</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="keywordtype">float</span> volume = <a class="code" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a07738a2c4f1dc0919531b26ab8b864eb">getVolume</a>();</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        <span class="comment">//Messageの添付情報を代入</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        message.attachment.smoothSubmix.submixVoice = m_voice;</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        message.attachment.smoothSubmix.now = volume;</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        message.attachment.smoothSubmix.target = target;</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        message.attachment.smoothSubmix.speed = (target - volume) / seconds;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        </div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        <span class="comment">//Message送信</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        Audio::SendAudioMessage(message);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    }</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;}</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_AUDIO_H_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html_aaebd3053b065766c714abfc51175f96c"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html#aaebd3053b065766c714abfc51175f96c">SGFramework::Audio::cMonoral</a></div><div class="ttdeci">static constexpr uint cMonoral</div><div class="ttdef"><b>Definition:</b> Audio.hpp:122</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_a90f2a28ead2b70adc46362c1d259a876"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a90f2a28ead2b70adc46362c1d259a876">SGFramework::Audio::SubmixLayer::operator[]</a></div><div class="ttdeci">const WeakPointer&lt; SubmixLayer &gt; &amp; operator[](uint index)</div><div class="ttdef"><b>Definition:</b> Audio.hpp:234</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_music_html"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_music.html">SGFramework::Asset::AudioAssetMusic</a></div><div class="ttdef"><b>Definition:</b> AudioAssetMusic.hpp:25</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html_a82bb76fc9193b1ab11c972e1f7749ac2"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html#a82bb76fc9193b1ab11c972e1f7749ac2">SGFramework::Audio::xaudio2</a></div><div class="ttdeci">static PointerProperty&lt; IXAudio2 * &gt; xaudio2</div><div class="ttdef"><b>Definition:</b> Audio.hpp:125</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_atomic_html_a063122ef30b1ea668e40c5a4aa0f43d2"><div class="ttname"><a href="namespace_s_g_framework_1_1_atomic.html#a063122ef30b1ea668e40c5a4aa0f43d2">SGFramework::Atomic::LockAtomic</a></div><div class="ttdeci">void LockAtomic(std::atomic&lt; bool &gt; &amp;atomicBoolean) noexcept</div><div class="ttdef"><b>Definition:</b> Atomic.hpp:139</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_thread_html"><div class="ttname"><a href="class_s_g_framework_1_1_thread.html">SGFramework::Thread</a></div><div class="ttdef"><b>Definition:</b> Thread.hpp:37</div></div>
+<div class="ttc" id="a_audio_message_8hpp_html"><div class="ttname"><a href="_audio_message_8hpp.html">AudioMessage.hpp</a></div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_a93f728644be4ef3abc209ab788d67bdc"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a93f728644be4ef3abc209ab788d67bdc">SGFramework::Audio::SubmixLayer::setVolume</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY float setVolume(float magnification)</div><div class="ttdef"><b>Definition:</b> Audio.hpp:180</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values_html_af228d9f4328475d71bb84ed758c35d8b"><div class="ttname"><a href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#af228d9f4328475d71bb84ed758c35d8b">SGFramework::Audio::SmoothAudio::Values::isStop</a></div><div class="ttdeci">bool isStop</div><div class="ttdef"><b>Definition:</b> Audio.hpp:313</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_application_html"><div class="ttname"><a href="class_s_g_framework_1_1_application.html">SGFramework::Application</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:15</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_detail_1_1_audio_1_1_audio_message_html"><div class="ttname"><a href="struct_s_g_framework_1_1_detail_1_1_audio_1_1_audio_message.html">SGFramework::Detail::Audio::AudioMessage</a></div><div class="ttdef"><b>Definition:</b> AudioMessage.hpp:34</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html">SGFramework::Audio</a></div><div class="ttdef"><b>Definition:</b> Audio.hpp:38</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_a7189b5f4ef66da04803bca662bd8cf7f"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a7189b5f4ef66da04803bca662bd8cf7f">SGFramework::Audio::SubmixLayer::channels</a></div><div class="ttdeci">GetOnlyProperty&lt; uint &gt; channels</div><div class="ttdef"><b>Definition:</b> Audio.hpp:249</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_aa0f9229f3f29e33751162bb963e3c468"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#aa0f9229f3f29e33751162bb963e3c468">SGFramework::Audio::SubmixLayer::layerName</a></div><div class="ttdeci">GetOnlyProperty&lt; sgstring &gt; layerName</div><div class="ttdef"><b>Definition:</b> Audio.hpp:246</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html_a632022a6c592d2b174319f1419739535"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html#a632022a6c592d2b174319f1419739535">SGFramework::Audio::FindLayer</a></div><div class="ttdeci">static SharedPointer&lt; SubmixLayer &gt; FindLayer(const sgstring &amp;name)</div><div class="ttdef"><b>Definition:</b> Audio.hpp:427</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_af7bd15875bda950a18d008cb5156efad"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#af7bd15875bda950a18d008cb5156efad">SGFramework::Audio::SubmixLayer::voice</a></div><div class="ttdeci">GetOnlyProperty&lt; IXAudio2SubmixVoice * &gt; voice</div><div class="ttdef"><b>Definition:</b> Audio.hpp:245</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html">SGFramework::Audio::SubmixLayer</a></div><div class="ttdef"><b>Definition:</b> Audio.hpp:139</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values_html_a29332c0aab67c32f250fc302d51c4147"><div class="ttname"><a href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#a29332c0aab67c32f250fc302d51c4147">SGFramework::Audio::SmoothAudio::Values::isEnabled</a></div><div class="ttdeci">bool isEnabled</div><div class="ttdef"><b>Definition:</b> Audio.hpp:312</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_a07738a2c4f1dc0919531b26ab8b864eb"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a07738a2c4f1dc0919531b26ab8b864eb">SGFramework::Audio::SubmixLayer::getVolume</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY float getVolume()</div><div class="ttdef"><b>Definition:</b> Audio.hpp:170</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_a7a21a40ea43fb4ef7e11f400f6bb595e"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a7a21a40ea43fb4ef7e11f400f6bb595e">SGFramework::Audio::SubmixLayer::getChannelsString</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY sgstring getChannelsString() const</div><div class="ttdef"><b>Definition:</b> Audio.hpp:207</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html_a71afb723dee9593de4bf591b7a77e9bc"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html#a71afb723dee9593de4bf591b7a77e9bc">SGFramework::Audio::sampleRate</a></div><div class="ttdeci">static GetOnlyProperty&lt; uint &gt; sampleRate</div><div class="ttdef"><b>Definition:</b> Audio.hpp:135</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_ab6057c6cc66a12298d1d3b72c3e75f86"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ab6057c6cc66a12298d1d3b72c3e75f86">SGFramework::Audio::SubmixLayer::~SubmixLayer</a></div><div class="ttdeci">~SubmixLayer()</div><div class="ttdef"><b>Definition:</b> AudioSubmixLayer.cpp:49</div></div>
+<div class="ttc" id="a_audio_listener_8hpp_html"><div class="ttname"><a href="_audio_listener_8hpp.html">AudioListener.hpp</a></div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset_html"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html">SGFramework::BaseClass::BaseAudioSEAsset</a></div><div class="ttdef"><b>Definition:</b> AudioAsset.hpp:160</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect_html"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html">SGFramework::Asset::AudioAssetEffect</a></div><div class="ttdef"><b>Definition:</b> AudioAssetEffect.hpp:26</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_atomic_html_ad4668b40d56cdbf6bdfe819c1b68b7dc"><div class="ttname"><a href="namespace_s_g_framework_1_1_atomic.html#ad4668b40d56cdbf6bdfe819c1b68b7dc">SGFramework::Atomic::UnlockAtomic</a></div><div class="ttdeci">void UnlockAtomic(std::atomic&lt; bool &gt; &amp;atomicBoolean) noexcept</div><div class="ttdef"><b>Definition:</b> Atomic.hpp:179</div></div>
+<div class="ttc" id="a_todo_8txt_html_a44b740236187bd7f5a7e7f21c6aa97a4"><div class="ttname"><a href="_todo_8txt.html#a44b740236187bd7f5a7e7f21c6aa97a4">Audio</a></div><div class="ttdeci">RigidBodyなどPhysics Disable SyncSystem Sync Callback Sync Value sync時同期 collider rigid body検索 &amp;addchildren対策 addchirdren callback comment Time tm AssetPackageClass Quaternionなど一部関数直書き Polygon ClonePointer Transform ClonePointer Transform動作確認まだ WinMainにModelちょっと書いてる Nodeに直接MeshRendrer的なのくっつけるか否か Shader AssetPackege スレッド割当 WinMainスレッド &amp; Audio</div><div class="ttdef"><b>Definition:</b> Todo.txt:54</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_get_only_property_html"><div class="ttname"><a href="class_s_g_framework_1_1_get_only_property.html">SGFramework::GetOnlyProperty</a></div><div class="ttdef"><b>Definition:</b> Property.hpp:151</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html">SGFramework::SharedPointer</a></div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:22</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html_a2a6c4f64a1817146ef584f19d44adca4"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html#a2a6c4f64a1817146ef584f19d44adca4">SGFramework::Audio::submixMonoralRootLayer</a></div><div class="ttdeci">static GetOnlyProperty&lt; SharedPointer&lt; SubmixLayer &gt; &gt; submixMonoralRootLayer</div><div class="ttdef"><b>Definition:</b> Audio.hpp:131</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:151</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_aaa55ec4c88c199ebcd3e03b9269a55e0"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#aaa55ec4c88c199ebcd3e03b9269a55e0">SGFramework::Audio::SubmixLayer::getChildrensIteratorBegin</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY auto getChildrensIteratorBegin() const</div><div class="ttdef"><b>Definition:</b> Audio.hpp:164</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_ace3200a60776d88a6b16af63ecc6ab44"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ace3200a60776d88a6b16af63ecc6ab44">SGFramework::Audio::SubmixLayer::getParent</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY WeakPointer&lt; SubmixLayer &gt; getParent() const</div><div class="ttdef"><b>Definition:</b> Audio.hpp:162</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_a49e5cf630d6ea39d5338d1b50414ea7f"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a49e5cf630d6ea39d5338d1b50414ea7f">SGFramework::Audio::SubmixLayer::operator()</a></div><div class="ttdeci">const IXAudio2SubmixVoice * operator()()</div><div class="ttdef"><b>Definition:</b> Audio.hpp:232</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html_a7a7b74af4df0daa9d06bc225f810d18c"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html#a7a7b74af4df0daa9d06bc225f810d18c">SGFramework::Audio::masterChannels</a></div><div class="ttdeci">static GetOnlyProperty&lt; uint &gt; masterChannels</div><div class="ttdef"><b>Definition:</b> Audio.hpp:133</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_a034ab2a3b95cdd80c240a361d66b12aa"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a034ab2a3b95cdd80c240a361d66b12aa">SGFramework::Audio::SubmixLayer::getChannelsMask</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY sgstring getChannelsMask() const</div><div class="ttdef"><b>Definition:</b> Audio.hpp:183</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_a4219bea36d49993d32e8a2d84e3eaee0"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a4219bea36d49993d32e8a2d84e3eaee0">SGFramework::Audio::SubmixLayer::cRootName</a></div><div class="ttdeci">static constexpr wchar cRootName[]</div><div class="ttdef"><b>Definition:</b> Audio.hpp:239</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_a33523909b4192f8487a0c07411a4edf2"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a33523909b4192f8487a0c07411a4edf2">SGFramework::Audio::SubmixLayer::getNumChildrens</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY uint getNumChildrens() const</div><div class="ttdef"><b>Definition:</b> Audio.hpp:168</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values_html_a40b81a70c7aafc1a8ba87da7594b3d46"><div class="ttname"><a href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#a40b81a70c7aafc1a8ba87da7594b3d46">SGFramework::Audio::SmoothAudio::Values::speed</a></div><div class="ttdeci">float speed</div><div class="ttdef"><b>Definition:</b> Audio.hpp:311</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_weak_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_weak_pointer.html">SGFramework::WeakPointer</a></div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:266</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_a980da8de81131812257d1f94ac5779a2"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a980da8de81131812257d1f94ac5779a2">SGFramework::Audio::SubmixLayer::processingStage</a></div><div class="ttdeci">GetOnlyProperty&lt; uint &gt; processingStage</div><div class="ttdef"><b>Definition:</b> Audio.hpp:248</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_ac9929e41ea059ef13998a782e5fa5dfc"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ac9929e41ea059ef13998a782e5fa5dfc">SGFramework::Audio::SubmixLayer::cMonoralRootName</a></div><div class="ttdeci">static constexpr wchar cMonoralRootName[]</div><div class="ttdef"><b>Definition:</b> Audio.hpp:243</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_html"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d.html">SGFramework::Asset::AudioAssetEffect3D</a></div><div class="ttdef"><b>Definition:</b> AudioAssetEffect3D.hpp:28</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_a29a8ebb0a6bd398d8cc272899456e5d6"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a29a8ebb0a6bd398d8cc272899456e5d6">SGFramework::Audio::SubmixLayer::cMonoralRootID</a></div><div class="ttdeci">static constexpr uint cMonoralRootID</div><div class="ttdef"><b>Definition:</b> Audio.hpp:241</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_audio_asset_html"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html">SGFramework::BaseClass::BaseAudioAsset</a></div><div class="ttdef"><b>Definition:</b> AudioAsset.hpp:41</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_pointer_property_html"><div class="ttname"><a href="class_s_g_framework_1_1_pointer_property.html">SGFramework::PointerProperty&lt; IXAudio2 * &gt;</a></div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_ab1fb5e8818bdcf0e63d80c54f800c464"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ab1fb5e8818bdcf0e63d80c54f800c464">SGFramework::Audio::SubmixLayer::layerID</a></div><div class="ttdeci">GetOnlyProperty&lt; uint &gt; layerID</div><div class="ttdef"><b>Definition:</b> Audio.hpp:247</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html_a6da3c1d6d28d880b481e11a0cc3c32b8"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html#a6da3c1d6d28d880b481e11a0cc3c32b8">SGFramework::Audio::getMasterChannelsMask</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY sgstring getMasterChannelsMask() const</div><div class="ttdef"><b>Definition:</b> Audio.hpp:73</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values_html_ad4ebccb2eabaa7f2cbcb35cf1b44ae96"><div class="ttname"><a href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#ad4ebccb2eabaa7f2cbcb35cf1b44ae96">SGFramework::Audio::SmoothAudio::Values::now</a></div><div class="ttdeci">float now</div><div class="ttdef"><b>Definition:</b> Audio.hpp:309</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_ac99707c07afc0fc1844a5b391f5ec001"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#ac99707c07afc0fc1844a5b391f5ec001">SGFramework::Audio::SubmixLayer::getChildrensIteratorEnd</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY auto getChildrensIteratorEnd() const</div><div class="ttdef"><b>Definition:</b> Audio.hpp:166</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html_a96ae5e556795945aae51c2697e12b2ee"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html#a96ae5e556795945aae51c2697e12b2ee">SGFramework::Audio::masteringVoice</a></div><div class="ttdeci">static PointerProperty&lt; IXAudio2MasteringVoice * &gt; masteringVoice</div><div class="ttdef"><b>Definition:</b> Audio.hpp:127</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_a7f0cbc43a121bd4e061808c20c5533b8"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a7f0cbc43a121bd4e061808c20c5533b8">SGFramework::Audio::SubmixLayer::cRootID</a></div><div class="ttdeci">static constexpr uint cRootID</div><div class="ttdef"><b>Definition:</b> Audio.hpp:237</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html_a46e4687ffaa8cfaf89c77cb16e16a5b4"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html#a46e4687ffaa8cfaf89c77cb16e16a5b4">SGFramework::Audio::submixRootLayer</a></div><div class="ttdeci">static GetOnlyProperty&lt; SharedPointer&lt; SubmixLayer &gt; &gt; submixRootLayer</div><div class="ttdef"><b>Definition:</b> Audio.hpp:129</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a7f41ac37dc0d3ba6fa22b37126f944cb"><div class="ttname"><a href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">SGFramework::wchar</a></div><div class="ttdeci">wchar_t wchar</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:148</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html_a7e5ae3f9889446d66bda5f9428d946b0"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html#a7e5ae3f9889446d66bda5f9428d946b0">SGFramework::Audio::getChannelsString</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY sgstring getChannelsString()</div><div class="ttdef"><b>Definition:</b> Audio.hpp:97</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values_html"><div class="ttname"><a href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html">SGFramework::Audio::SmoothAudio::Values</a></div><div class="ttdef"><b>Definition:</b> Audio.hpp:308</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values_html_a3f600e542dd7bd01fe1849cebc64d074"><div class="ttname"><a href="struct_s_g_framework_1_1_audio_1_1_smooth_audio_1_1_values.html#a3f600e542dd7bd01fe1849cebc64d074">SGFramework::Audio::SmoothAudio::Values::target</a></div><div class="ttdeci">float target</div><div class="ttdef"><b>Definition:</b> Audio.hpp:310</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html_a01d74d442f5131ee4237f08228972767"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html#a01d74d442f5131ee4237f08228972767">SGFramework::Audio::getLayer</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY SharedPointer&lt; SubmixLayer &gt; getLayer(uint id)</div><div class="ttdef"><b>Definition:</b> Audio.hpp:63</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_1_1_submix_layer_html_a916315704e29f3a436fb962a8e416ff0"><div class="ttname"><a href="class_s_g_framework_1_1_audio_1_1_submix_layer.html#a916315704e29f3a436fb962a8e416ff0">SGFramework::Audio::SubmixLayer::ChangeVolumeSmoothly</a></div><div class="ttdeci">void ChangeVolumeSmoothly(float target, float seconds)</div><div class="ttdef"><b>Definition:</b> Audio.hpp:455</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html_ae9a48ef8af8aaa71022b06ef72d21db7"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html#ae9a48ef8af8aaa71022b06ef72d21db7">SGFramework::SharedPointer::getNull</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY SharedPointer&lt; PointerType &gt; getNull() noexcept</div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:86</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html_aa39a1cd75e9307b1cbafaf6ad702253e"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html#aa39a1cd75e9307b1cbafaf6ad702253e">SGFramework::Audio::DELETE_ALL_DEFAULT_CLASS_FUNCTIONS</a></div><div class="ttdeci">DELETE_ALL_DEFAULT_CLASS_FUNCTIONS(Audio)</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

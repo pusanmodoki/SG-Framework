@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/05_Graphics/Animation/ModelNodeObject.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_3179bfb1337b5dc243543deb8f1fb9cf.html">05_Graphics</a></li><li class="navelem"><a class="el" href="dir_46a0e75c3ddf016b5e62e8e2fd97f181.html">Animation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ModelNodeObject.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_model_node_object_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_MODEL_NODE_OBJECT_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_MODEL_NODE_OBJECT_HPP_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../TransformUsing.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../../11_GameObject/GameObject.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../Vertex/Vertex.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../MeshUsing.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../MaterialUsing.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;assimp/matrix4x4.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Framework namespace</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">//あ</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_model_node_object.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_model_node_object.html">ModelNodeObject</a> : <span class="keyword">public</span> <a class="code" href="class_s_g_framework_1_1_game_object.html">GameObject</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">friend</span> <a class="code" href="namespace_s_g_framework_1_1_asset.html#a546c99c6bfe199b32469e327d3b54fb8">Asset::ModelAsset</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_model_node_object.html#abbbfe7b916ef7239a2e95fdb21d0211f">   18</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_animator.html">Animator</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_model_node_object.html#af47625f50036c466946f960db7320bcf">   19</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_animation.html">Animation</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_model_node_object.html#a507464873b74b3bdeae3666a92280c2f">   21</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_model_node_object.html#a507464873b74b3bdeae3666a92280c2f">ModelNodeObject</a>() : m_sync(*this) {}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_model_node_object.html#a82d252dfd9b56d4be44a5fb8696b5106">   23</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="struct_s_g_framework_1_1_vector4x4.html">Vector4x4</a> <a class="code" href="class_s_g_framework_1_1_model_node_object.html#a82d252dfd9b56d4be44a5fb8696b5106">getGraphicsBoneMatrix</a>() { <span class="keywordflow">return</span> m_graphicsMatrix; }</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_model_node_object.html#a294982ae00b65804a199267772044c9f">   24</a></span>&#160;        SGF_FUNCTION_PROPERTY <span class="keywordtype">int</span> <a class="code" href="class_s_g_framework_1_1_model_node_object.html#a294982ae00b65804a199267772044c9f">getNodeID</a>() { <span class="keywordflow">return</span> m_nodeID; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_model_node_object.html#a451772fba5c784ff8a855686b939a59c">   25</a></span>&#160;        SGF_FUNCTION_PROPERTY <span class="keywordtype">bool</span> <a class="code" href="class_s_g_framework_1_1_model_node_object.html#a451772fba5c784ff8a855686b939a59c">getIsRegisterAnimationBone</a>() { <span class="keywordflow">return</span> m_isSetAnimationMatrix; }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">struct </span>SyncGraphicsObject : <span class="keyword">public</span>  <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html">Administrator::GraphicsDetail::GraphicsObjectX11</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keyword">inline</span> SyncGraphicsObject(<a class="code" href="class_s_g_framework_1_1_model_node_object.html">ModelNodeObject</a>&amp; reference) : reference(reference) {}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordtype">void</span> Sync()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                memcpy_s(&amp;reference.m_graphicsMatrix, <span class="keyword">sizeof</span>(Vector4x4), &amp;reference.m_boneWorldMatrix, <span class="keyword">sizeof</span>(Vector4x4));</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <a class="code" href="class_s_g_framework_1_1_model_node_object.html#a507464873b74b3bdeae3666a92280c2f">ModelNodeObject</a>&amp; reference;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> RegisterAnimationMatrix(<span class="keyword">const</span> aiMatrix4x4&amp; offsetMatrix)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> (m_isSetAnimationMatrix)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                Vector4x4 test;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                memcpy_s(&amp;test, <span class="keyword">sizeof</span>(Vector4x4), &amp;offsetMatrix, <span class="keyword">sizeof</span>(aiMatrix4x4));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                test.setTranspose();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            memcpy_s(&amp;m_animationOffsetMatrix, <span class="keyword">sizeof</span>(aiMatrix4x4), &amp;offsetMatrix, <span class="keyword">sizeof</span>(aiMatrix4x4));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            m_isSetAnimationMatrix = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        WeakPointer&lt;MeshRenderer&lt;Vertex::Model, Material*&gt;&gt; AddMeshRenderer(SharedPointer&lt;Mesh&lt;Vertex::Model, Material*&gt;&gt; meshPointer, <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> priority)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">auto</span> component = AddComponent&lt;MeshRenderer&lt;Vertex::Model, Material*&gt;&gt;();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            component-&gt;InitDrawInfos(meshPointer, priority, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">return</span> std::move(component);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">//hidden</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">inline</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> EnableCallbacks()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> 0; }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> Awake()<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> OnEnable()<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> Start()<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> Update()<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> Sync()<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> LateUpdate()<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> FixedUpdate()<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> MakeDrawCommand()<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> OnDisable()<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> OnDestroy()<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> OnCollisionEnter(<span class="keyword">const</span> ContactInfo&amp; contactInfo)<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> OnCollisionStay(<span class="keyword">const</span> ContactInfo&amp; contactInfo)<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> OnCollisionExit(<span class="keyword">const</span> ContactInfo&amp; contactInfo)<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> OnTriggerEnter(<span class="keyword">const</span> ContactInfo&amp; contactInfo)<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> OnTriggerStay(<span class="keyword">const</span> ContactInfo&amp; contactInfo)<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> OnTriggerExit(<span class="keyword">const</span> ContactInfo&amp; contactInfo)<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> ChangeUpperHierarchy(WeakPointer&lt;Transform&gt; newParent, WeakPointer&lt;Transform&gt; oldParent)<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        SyncGraphicsObject m_sync;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        aiMatrix4x4 m_animationOffsetMatrix = aiMatrix4x4();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        aiMatrix4x4 m_animationBoneMatrix = aiMatrix4x4();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        aiMatrix4x4 m_boneWorldMatrix = aiMatrix4x4();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        Vector4x4 m_graphicsMatrix = <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector4x4.html#a311cd8241067671ef4368b70113b1675">Const::Vector4x4::identity</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">int</span> m_nodeID = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">bool</span> m_isSetAnimationMatrix = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    };</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif //!SGFRAMEWORK_HEADER_MODEL_NODE_OBJECT_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector4x4_html_a311cd8241067671ef4368b70113b1675"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector4x4.html#a311cd8241067671ef4368b70113b1675">SGFramework::Const::Vector4x4::identity</a></div><div class="ttdeci">constexpr SGFramework::Vector4x4 identity(1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f)</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector4x4_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector4x4.html">SGFramework::Vector4x4</a></div><div class="ttdef"><b>Definition:</b> Vector4x4.hpp:25</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html">SGFramework::Administrator::GraphicsDetail::GraphicsObjectX11</a></div><div class="ttdef"><b>Definition:</b> GraphicsObjectX11.hpp:18</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_model_node_object_html_a82d252dfd9b56d4be44a5fb8696b5106"><div class="ttname"><a href="class_s_g_framework_1_1_model_node_object.html#a82d252dfd9b56d4be44a5fb8696b5106">SGFramework::ModelNodeObject::getGraphicsBoneMatrix</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY Vector4x4 getGraphicsBoneMatrix()</div><div class="ttdef"><b>Definition:</b> ModelNodeObject.hpp:23</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_model_node_object_html"><div class="ttname"><a href="class_s_g_framework_1_1_model_node_object.html">SGFramework::ModelNodeObject</a></div><div class="ttdef"><b>Definition:</b> ModelNodeObject.hpp:15</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_model_node_object_html_a507464873b74b3bdeae3666a92280c2f"><div class="ttname"><a href="class_s_g_framework_1_1_model_node_object.html#a507464873b74b3bdeae3666a92280c2f">SGFramework::ModelNodeObject::ModelNodeObject</a></div><div class="ttdeci">ModelNodeObject()</div><div class="ttdef"><b>Definition:</b> ModelNodeObject.hpp:21</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animator_html"><div class="ttname"><a href="class_s_g_framework_1_1_animator.html">SGFramework::Animator</a></div><div class="ttdef"><b>Definition:</b> Animator.hpp:13</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_asset_html_a546c99c6bfe199b32469e327d3b54fb8"><div class="ttname"><a href="namespace_s_g_framework_1_1_asset.html#a546c99c6bfe199b32469e327d3b54fb8">SGFramework::Asset::ModelAsset</a></div><div class="ttdeci">Administrator::GraphicsDetail::ModelAssetX11 ModelAsset</div><div class="ttdef"><b>Definition:</b> Graphics.hpp:36</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:151</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_game_object_html"><div class="ttname"><a href="class_s_g_framework_1_1_game_object.html">SGFramework::GameObject</a></div><div class="ttdef"><b>Definition:</b> GameObject.hpp:14</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_model_node_object_html_a451772fba5c784ff8a855686b939a59c"><div class="ttname"><a href="class_s_g_framework_1_1_model_node_object.html#a451772fba5c784ff8a855686b939a59c">SGFramework::ModelNodeObject::getIsRegisterAnimationBone</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY bool getIsRegisterAnimationBone()</div><div class="ttdef"><b>Definition:</b> ModelNodeObject.hpp:25</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_model_node_object_html_a294982ae00b65804a199267772044c9f"><div class="ttname"><a href="class_s_g_framework_1_1_model_node_object.html#a294982ae00b65804a199267772044c9f">SGFramework::ModelNodeObject::getNodeID</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY int getNodeID()</div><div class="ttdef"><b>Definition:</b> ModelNodeObject.hpp:24</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animation_html"><div class="ttname"><a href="class_s_g_framework_1_1_animation.html">SGFramework::Animation</a></div><div class="ttdef"><b>Definition:</b> Animation.hpp:11</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

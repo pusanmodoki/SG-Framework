@@ -1,0 +1,196 @@
+\hypertarget{class_s_g_framework_1_1_tag}{}\doxysection{S\+G\+Framework\+::Tag クラス}
+\label{class_s_g_framework_1_1_tag}\index{SGFramework::Tag@{SGFramework::Tag}}
+
+
+{\ttfamily \#include $<$Tag.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_tag_a8a2c40440de210037b56a91f4c881945}{Tag}} ()
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_tag_adc6e00dc0eb8da870f2cc83b80a6f1ef}{Tag}} (const sgstring \&tag\+Name)
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_tag_a9dbbfe7f466dbfbd70dcb4e188a09bb7}{Tag}} (\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} tag\+ID)
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_tag_a58c7ffc6a404ddb647eb8aaca6d17151}{Tag}} (const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&tag)=default
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_tag_a0a10f24e000763e871f861f4dc5bbb31}{Tag}} (\mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&\&tag)=default
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \& \mbox{\hyperlink{class_s_g_framework_1_1_tag_a30affe231aeed6d3ff6d3f0dfee3bbe8}{operator=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&tag)=default
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \& \mbox{\hyperlink{class_s_g_framework_1_1_tag_aea1f21287b696cc22248db5116aa069c}{operator=}} (\mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&\&tag)=default
+\item 
+const sgstring \& \mbox{\hyperlink{class_s_g_framework_1_1_tag_a5dda005d51a95f79fa06a87397d07ae7}{get\+Name}} () const
+\item 
+\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_tag_abf25ad8de616b49aa04e70b8b77eb2d6}{get\+ID}} () const
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_tag_a00b4914e9e4d857acc2f3ef44677d828}{operator==}} (const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&left) const
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_tag_a27f17fe68c8fd889396b150888b18ca9}{operator!=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&left) const
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_tag_a34a55c38e91e6a05357cb36907c47967}{operator==}} (const sgstring \&left) const
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_tag_a81ceadc36ae69fc380788d4b084c8e8b}{operator!=}} (const sgstring \&left) const
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static sgstring \mbox{\hyperlink{class_s_g_framework_1_1_tag_adcf56ccebc16801318bac446ab9ea495}{Search\+Name}} (\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} tag\+ID)
+\item 
+static \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_tag_a4c26b6fccf2ec82485c5f38d88aa4f32}{Search\+ID}} (const sgstring \&tag\+Name)
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \mbox{\hyperlink{class_s_g_framework_1_1_tag_a24f43d1fb281973bf259d700cad0f34c}{Default\+Tag}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{wchar}} \mbox{\hyperlink{class_s_g_framework_1_1_tag_a8ed66be29ddc61bf6887416d5a8ad644}{c\+Default\+Tag\+Name}} \mbox{[}$\,$\mbox{]} = L\char`\"{}Default\char`\"{}
+\item 
+static constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_tag_a27859e921d0b4b2e1e0a8e4b9f23921c}{c\+Default\+Tag\+ID}} = 0
+\item 
+static constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_tag_a81c134a30e6903cef9d36939f0618ca4}{c\+Missing\+Tag}} = \mbox{\hyperlink{namespace_s_g_framework_1_1_variable_limit_a4e28295c9e1b4be9503f9b15a981f543}{Variable\+Limit\+::c\+Uint\+Max}}
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_tag_a23f25bcc02a0e94c2f5a4188496b04d0}{Application}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a8a2c40440de210037b56a91f4c881945}\label{class_s_g_framework_1_1_tag_a8a2c40440de210037b56a91f4c881945}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!Tag@{Tag}}
+\index{Tag@{Tag}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{Tag()}{Tag()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Tag\+::\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_adc6e00dc0eb8da870f2cc83b80a6f1ef}\label{class_s_g_framework_1_1_tag_adc6e00dc0eb8da870f2cc83b80a6f1ef}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!Tag@{Tag}}
+\index{Tag@{Tag}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{Tag()}{Tag()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Tag\+::\+Tag (\begin{DoxyParamCaption}\item[{const sgstring \&}]{tag\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a9dbbfe7f466dbfbd70dcb4e188a09bb7}\label{class_s_g_framework_1_1_tag_a9dbbfe7f466dbfbd70dcb4e188a09bb7}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!Tag@{Tag}}
+\index{Tag@{Tag}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{Tag()}{Tag()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Tag\+::\+Tag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{tag\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a58c7ffc6a404ddb647eb8aaca6d17151}\label{class_s_g_framework_1_1_tag_a58c7ffc6a404ddb647eb8aaca6d17151}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!Tag@{Tag}}
+\index{Tag@{Tag}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{Tag()}{Tag()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Tag\+::\+Tag (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a0a10f24e000763e871f861f4dc5bbb31}\label{class_s_g_framework_1_1_tag_a0a10f24e000763e871f861f4dc5bbb31}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!Tag@{Tag}}
+\index{Tag@{Tag}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{Tag()}{Tag()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Tag\+::\+Tag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&\&}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a24f43d1fb281973bf259d700cad0f34c}\label{class_s_g_framework_1_1_tag_a24f43d1fb281973bf259d700cad0f34c}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!DefaultTag@{DefaultTag}}
+\index{DefaultTag@{DefaultTag}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{DefaultTag()}{DefaultTag()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} S\+G\+Framework\+::\+Tag\+::\+Default\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_abf25ad8de616b49aa04e70b8b77eb2d6}\label{class_s_g_framework_1_1_tag_abf25ad8de616b49aa04e70b8b77eb2d6}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!getID@{getID}}
+\index{getID@{getID}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Tag\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a5dda005d51a95f79fa06a87397d07ae7}\label{class_s_g_framework_1_1_tag_a5dda005d51a95f79fa06a87397d07ae7}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!getName@{getName}}
+\index{getName@{getName}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const sgstring\& S\+G\+Framework\+::\+Tag\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a81ceadc36ae69fc380788d4b084c8e8b}\label{class_s_g_framework_1_1_tag_a81ceadc36ae69fc380788d4b084c8e8b}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Tag\+::operator!= (\begin{DoxyParamCaption}\item[{const sgstring \&}]{left }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a27f17fe68c8fd889396b150888b18ca9}\label{class_s_g_framework_1_1_tag_a27f17fe68c8fd889396b150888b18ca9}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Tag\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&}]{left }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a30affe231aeed6d3ff6d3f0dfee3bbe8}\label{class_s_g_framework_1_1_tag_a30affe231aeed6d3ff6d3f0dfee3bbe8}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}}\& S\+G\+Framework\+::\+Tag\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_aea1f21287b696cc22248db5116aa069c}\label{class_s_g_framework_1_1_tag_aea1f21287b696cc22248db5116aa069c}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}}\& S\+G\+Framework\+::\+Tag\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&\&}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a34a55c38e91e6a05357cb36907c47967}\label{class_s_g_framework_1_1_tag_a34a55c38e91e6a05357cb36907c47967}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!operator==@{operator==}}
+\index{operator==@{operator==}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Tag\+::operator== (\begin{DoxyParamCaption}\item[{const sgstring \&}]{left }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a00b4914e9e4d857acc2f3ef44677d828}\label{class_s_g_framework_1_1_tag_a00b4914e9e4d857acc2f3ef44677d828}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!operator==@{operator==}}
+\index{operator==@{operator==}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Tag\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&}]{left }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a4c26b6fccf2ec82485c5f38d88aa4f32}\label{class_s_g_framework_1_1_tag_a4c26b6fccf2ec82485c5f38d88aa4f32}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!SearchID@{SearchID}}
+\index{SearchID@{SearchID}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{SearchID()}{SearchID()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Tag\+::\+Search\+ID (\begin{DoxyParamCaption}\item[{const sgstring \&}]{tag\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_adcf56ccebc16801318bac446ab9ea495}\label{class_s_g_framework_1_1_tag_adcf56ccebc16801318bac446ab9ea495}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!SearchName@{SearchName}}
+\index{SearchName@{SearchName}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{SearchName()}{SearchName()}}
+{\footnotesize\ttfamily static sgstring S\+G\+Framework\+::\+Tag\+::\+Search\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{tag\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a23f25bcc02a0e94c2f5a4188496b04d0}\label{class_s_g_framework_1_1_tag_a23f25bcc02a0e94c2f5a4188496b04d0}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!Application@{Application}}
+\index{Application@{Application}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{Application}{Application}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_application}{Application}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a27859e921d0b4b2e1e0a8e4b9f23921c}\label{class_s_g_framework_1_1_tag_a27859e921d0b4b2e1e0a8e4b9f23921c}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!cDefaultTagID@{cDefaultTagID}}
+\index{cDefaultTagID@{cDefaultTagID}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{cDefaultTagID}{cDefaultTagID}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Tag\+::c\+Default\+Tag\+ID = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a8ed66be29ddc61bf6887416d5a8ad644}\label{class_s_g_framework_1_1_tag_a8ed66be29ddc61bf6887416d5a8ad644}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!cDefaultTagName@{cDefaultTagName}}
+\index{cDefaultTagName@{cDefaultTagName}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{cDefaultTagName}{cDefaultTagName}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{wchar}} S\+G\+Framework\+::\+Tag\+::c\+Default\+Tag\+Name\mbox{[}$\,$\mbox{]} = L\char`\"{}Default\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_tag_a81c134a30e6903cef9d36939f0618ca4}\label{class_s_g_framework_1_1_tag_a81c134a30e6903cef9d36939f0618ca4}} 
+\index{SGFramework::Tag@{SGFramework::Tag}!cMissingTag@{cMissingTag}}
+\index{cMissingTag@{cMissingTag}!SGFramework::Tag@{SGFramework::Tag}}
+\doxysubsubsection{\texorpdfstring{cMissingTag}{cMissingTag}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Tag\+::c\+Missing\+Tag = \mbox{\hyperlink{namespace_s_g_framework_1_1_variable_limit_a4e28295c9e1b4be9503f9b15a981f543}{Variable\+Limit\+::c\+Uint\+Max}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/\+Layer\+And\+Tag/\mbox{\hyperlink{_tag_8hpp}{Tag.\+hpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/\+Layer\+And\+Tag/\mbox{\hyperlink{_layer_and_tag_8cpp}{Layer\+And\+Tag.\+cpp}}\end{DoxyCompactItemize}

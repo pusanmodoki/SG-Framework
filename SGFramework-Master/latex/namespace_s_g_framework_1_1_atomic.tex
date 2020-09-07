@@ -1,0 +1,684 @@
+\hypertarget{namespace_s_g_framework_1_1_atomic}{}\doxysection{S\+G\+Framework\+::Atomic 名前空間}
+\label{namespace_s_g_framework_1_1_atomic}\index{SGFramework::Atomic@{SGFramework::Atomic}}
+
+
+std\+::atomicを操作する\+Atomic namespace  
+
+
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_atomic_1_1_lock_guard}{Lock\+Guard}}
+\begin{DoxyCompactList}\small\item\em std\+::atomic\+\_\+bool版のロックガードを提供する\+Atomic版\+Lock\+Guard class \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_atomic_1_1_try_lock_guard}{Try\+Lock\+Guard}}
+\begin{DoxyCompactList}\small\item\em std\+::atomic\+\_\+bool版のトライロックガードを提供する\+Try\+Lock\+Guard class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_aa74003ea2ff69348cf11120966582c0e}{Init}} (std\+::atomic$<$ T $>$ \&atomic, T init) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて初期化する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_ab60547931733dc7db056dd1a6dcd691f}{Init}} (std\+::atomic$<$ T $>$ \&atomic, Cast\+Type init) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて初期化する \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_ac710f71b81d51c9cd1acaa2d18591f16}{And}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean, bool and\+Flag) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomic\+\_\+boolをロックフリーアルゴリズムを用いて\+A\+N\+D演算し代入する \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a13655012797f0c1d0377a5a66b137095}{Or}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean, bool or\+Flag) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomic\+\_\+boolをロックフリーアルゴリズムを用いて\+O\+R演算し代入する \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a61b05e0c62c2e95a1cc53bd8695f2470}{Xor}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean, bool xor\+Flag) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomic\+\_\+boolをロックフリーアルゴリズムを用いて\+X\+O\+R演算し代入する \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_aa66fdcad406b46f91f50ec3891ee184e}{Bit\+Inversion}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomic\+\_\+boolをロックフリーアルゴリズムを用いてビット反転させる \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a063122ef30b1ea668e40c5a4aa0f43d2}{Lock\+Atomic}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomic\+\_\+boolをロックさせ排他制御を可能にする \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a40a422b977f64282b5e5212782685a94}{Try\+Lock\+Atomic}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomic\+\_\+boolをロックを試し, 成功した場合排他制御を可能にする \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a8de0ee8467c69adfba76c2387d06f383}{Try\+Cycle\+Lock\+Atomic}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean, unsigned int cycle) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomic\+\_\+boolをロックcycle回数を試し, 成功した場合排他制御を可能にする \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_ad4668b40d56cdbf6bdfe819c1b68b7dc}{Unlock\+Atomic}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomic\+\_\+boolをアンロックし排他制御を終了する, 必ず\+Lock後に同じスレッドで実行すること \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a69134ddcfb8423cd5cd553260112e46f}{Add}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T add) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて加算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a45c9e128fa8cecd0f706a5616f9f49d9}{Add}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type add) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて加算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a464bc8109c7d98cd8078cf3079707c24}{Subtract}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T sub) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて減算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a23767cf6c54df533f36eec0a38eebfa3}{Subtract}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type sub) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて減算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a2963bb66e76a854c06a02b2283e056e6}{Multiply}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T multi) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて乗算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a6af10cdac7322b7c5545ce0131fc2d17}{Multiply}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type multi) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて乗算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_aa25546dda965c51dd123b49ca8d9d511}{Divide}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T div) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて除算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_ab83d8997235051ed4d04f194d5420778}{Divide}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type div) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて除算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a90c9d6a5ba1b577515bab5b121f84297}{And}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T and\+Flag) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて\+A\+N\+D演算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a47ac1f068543b3281e7d1e8f0935d8e2}{And}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type and\+Flag) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて\+A\+N\+D演算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a166ba0cdf32ba979b129ed0b130bde9b}{Or}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T or\+Flag) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて\+O\+R演算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a5238446ac3bde908d93deee7be2af14e}{Or}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type or\+Flag) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて\+O\+R演算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a6a8c6aeb7d8f93ac897e13709555c12b}{Xor}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T xor\+Flag) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて\+X\+O\+R演算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a4bd07f7222b7e4463c6f178685e8c745}{Xor}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type xor\+Flag) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomicをロックフリーアルゴリズムを用いて\+X\+O\+R演算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a49fd5c6fd7695ebd4c7bfb72e2a7bf84}{Bit\+Inversion}} (std\+::atomic$<$ T $>$ \&atomic\+Integral) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomic\+\_\+boolをロックフリーアルゴリズムを用いてビット反転させる \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_ab35951d73bdf296e7d20a06995a91d9d}{Add}} (std\+::atomic$<$ T $\ast$ $>$ \&atomic\+Pointer, int add) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomic\+\_\+pointerをロックフリーアルゴリズムを用いて加算する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_ae395f898d32dbfcde29603d6bebc2974}{Subtract}} (std\+::atomic$<$ T $\ast$ $>$ \&atomic\+Pointer, int sub) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::atomic\+\_\+pointerをロックフリーアルゴリズムを用いて減算する \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+std\+::atomicを操作する\+Atomic namespace 
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_ab35951d73bdf296e7d20a06995a91d9d}\label{namespace_s_g_framework_1_1_atomic_ab35951d73bdf296e7d20a06995a91d9d}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Add@{Add}}
+\index{Add@{Add}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ S\+G\+Framework\+::\+Atomic\+::\+Add (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $\ast$ $>$ \&}]{atomic\+Pointer,  }\item[{int}]{add }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomic\+\_\+pointerをロックフリーアルゴリズムを用いて加算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Pointer} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em add} & 加算する値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+pointer typeのみ対応 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a45c9e128fa8cecd0f706a5616f9f49d9}\label{namespace_s_g_framework_1_1_atomic_a45c9e128fa8cecd0f706a5616f9f49d9}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Add@{Add}}
+\index{Add@{Add}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T , class Cast\+Type $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Add (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{Cast\+Type}]{add }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて加算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em add} & 加算する値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応, Cast\+Typeが\+T型にキャストできない場合static\+\_\+assert 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a69134ddcfb8423cd5cd553260112e46f}\label{namespace_s_g_framework_1_1_atomic_a69134ddcfb8423cd5cd553260112e46f}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Add@{Add}}
+\index{Add@{Add}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Add (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{T}]{add }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて加算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em add} & 加算する値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_ac710f71b81d51c9cd1acaa2d18591f16}\label{namespace_s_g_framework_1_1_atomic_ac710f71b81d51c9cd1acaa2d18591f16}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!And@{And}}
+\index{And@{And}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{And()}{And()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Atomic\+::\+And (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ bool $>$ \&}]{atomic\+Boolean,  }\item[{bool}]{and\+Flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomic\+\_\+boolをロックフリーアルゴリズムを用いて\+A\+N\+D演算し代入する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Boolean} & A\+ND, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em and\+Flag} & A\+ND Flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+bool 代入結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a47ac1f068543b3281e7d1e8f0935d8e2}\label{namespace_s_g_framework_1_1_atomic_a47ac1f068543b3281e7d1e8f0935d8e2}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!And@{And}}
+\index{And@{And}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{And()}{And()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T , class Cast\+Type $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+And (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{Cast\+Type}]{and\+Flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて\+A\+N\+D演算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em and\+Flag} & A\+ND Flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応, Cast\+Typeが\+T型にキャストできない場合static\+\_\+assert 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a90c9d6a5ba1b577515bab5b121f84297}\label{namespace_s_g_framework_1_1_atomic_a90c9d6a5ba1b577515bab5b121f84297}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!And@{And}}
+\index{And@{And}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{And()}{And()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+And (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{T}]{and\+Flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて\+A\+N\+D演算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em and\+Flag} & A\+ND Flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_aa66fdcad406b46f91f50ec3891ee184e}\label{namespace_s_g_framework_1_1_atomic_aa66fdcad406b46f91f50ec3891ee184e}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!BitInversion@{BitInversion}}
+\index{BitInversion@{BitInversion}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{BitInversion()}{BitInversion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Atomic\+::\+Bit\+Inversion (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ bool $>$ \&}]{atomic\+Boolean }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomic\+\_\+boolをロックフリーアルゴリズムを用いてビット反転させる 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Boolean} & X\+OR, 代入するstd\+::atomic \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+bool 代入結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a49fd5c6fd7695ebd4c7bfb72e2a7bf84}\label{namespace_s_g_framework_1_1_atomic_a49fd5c6fd7695ebd4c7bfb72e2a7bf84}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!BitInversion@{BitInversion}}
+\index{BitInversion@{BitInversion}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{BitInversion()}{BitInversion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Bit\+Inversion (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomic\+\_\+boolをロックフリーアルゴリズムを用いてビット反転させる 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_ab83d8997235051ed4d04f194d5420778}\label{namespace_s_g_framework_1_1_atomic_ab83d8997235051ed4d04f194d5420778}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Divide@{Divide}}
+\index{Divide@{Divide}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Divide()}{Divide()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Cast\+Type $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Divide (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{Cast\+Type}]{div }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて除算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em div} & 除算する値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{例外}
+{\em div} & == 0な場合 \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応, Cast\+Typeが\+T型にキャストできない場合static\+\_\+assert 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_aa25546dda965c51dd123b49ca8d9d511}\label{namespace_s_g_framework_1_1_atomic_aa25546dda965c51dd123b49ca8d9d511}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Divide@{Divide}}
+\index{Divide@{Divide}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Divide()}{Divide()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Divide (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{T}]{div }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて除算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em div} & 除算する値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{例外}
+{\em div} & == 0な場合 \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_ab60547931733dc7db056dd1a6dcd691f}\label{namespace_s_g_framework_1_1_atomic_ab60547931733dc7db056dd1a6dcd691f}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Init@{Init}}
+\index{Init@{Init}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Cast\+Type $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Init (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic,  }\item[{Cast\+Type}]{init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて初期化する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ out}}  & {\em atomic} & 初期化するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em init} & 初期化する値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 代入結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+Cast\+Typeが\+T型にキャストできない場合static\+\_\+assert 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_aa74003ea2ff69348cf11120966582c0e}\label{namespace_s_g_framework_1_1_atomic_aa74003ea2ff69348cf11120966582c0e}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Init@{Init}}
+\index{Init@{Init}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Init (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic,  }\item[{T}]{init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて初期化する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ out}}  & {\em atomic} & 初期化するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em init} & 初期化する値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 代入結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a063122ef30b1ea668e40c5a4aa0f43d2}\label{namespace_s_g_framework_1_1_atomic_a063122ef30b1ea668e40c5a4aa0f43d2}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!LockAtomic@{LockAtomic}}
+\index{LockAtomic@{LockAtomic}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{LockAtomic()}{LockAtomic()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Atomic\+::\+Lock\+Atomic (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ bool $>$ \&}]{atomic\+Boolean }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomic\+\_\+boolをロックさせ排他制御を可能にする 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Boolean} & Lockするstd\+::atomic \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a6af10cdac7322b7c5545ce0131fc2d17}\label{namespace_s_g_framework_1_1_atomic_a6af10cdac7322b7c5545ce0131fc2d17}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Cast\+Type $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Multiply (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{Cast\+Type}]{multi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて乗算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em multi} & 乗算する値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応, Cast\+Typeが\+T型にキャストできない場合static\+\_\+assert 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a2963bb66e76a854c06a02b2283e056e6}\label{namespace_s_g_framework_1_1_atomic_a2963bb66e76a854c06a02b2283e056e6}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Multiply (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{T}]{multi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて乗算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em multi} & 乗算する値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a13655012797f0c1d0377a5a66b137095}\label{namespace_s_g_framework_1_1_atomic_a13655012797f0c1d0377a5a66b137095}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Or@{Or}}
+\index{Or@{Or}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Or()}{Or()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Atomic\+::\+Or (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ bool $>$ \&}]{atomic\+Boolean,  }\item[{bool}]{or\+Flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomic\+\_\+boolをロックフリーアルゴリズムを用いて\+O\+R演算し代入する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Boolean} & OR, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em or\+Flag} & OR Flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+bool 代入結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a5238446ac3bde908d93deee7be2af14e}\label{namespace_s_g_framework_1_1_atomic_a5238446ac3bde908d93deee7be2af14e}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Or@{Or}}
+\index{Or@{Or}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Or()}{Or()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T , class Cast\+Type $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Or (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{Cast\+Type}]{or\+Flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて\+O\+R演算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em or\+Flag} & OR Flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応, Cast\+Typeが\+T型にキャストできない場合static\+\_\+assert 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a166ba0cdf32ba979b129ed0b130bde9b}\label{namespace_s_g_framework_1_1_atomic_a166ba0cdf32ba979b129ed0b130bde9b}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Or@{Or}}
+\index{Or@{Or}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Or()}{Or()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Or (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{T}]{or\+Flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて\+O\+R演算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em or\+Flag} & OR Flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_ae395f898d32dbfcde29603d6bebc2974}\label{namespace_s_g_framework_1_1_atomic_ae395f898d32dbfcde29603d6bebc2974}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ S\+G\+Framework\+::\+Atomic\+::\+Subtract (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $\ast$ $>$ \&}]{atomic\+Pointer,  }\item[{int}]{sub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomic\+\_\+pointerをロックフリーアルゴリズムを用いて減算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Pointer} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em sub} & 減算する値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+pointer typeのみ対応 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a23767cf6c54df533f36eec0a38eebfa3}\label{namespace_s_g_framework_1_1_atomic_a23767cf6c54df533f36eec0a38eebfa3}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T , class Cast\+Type $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Subtract (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{Cast\+Type}]{sub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて減算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em sub} & 減算する値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応, Cast\+Typeが\+T型にキャストできない場合static\+\_\+assert 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a464bc8109c7d98cd8078cf3079707c24}\label{namespace_s_g_framework_1_1_atomic_a464bc8109c7d98cd8078cf3079707c24}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Subtract (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{T}]{sub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて減算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em sub} & 減算する値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a8de0ee8467c69adfba76c2387d06f383}\label{namespace_s_g_framework_1_1_atomic_a8de0ee8467c69adfba76c2387d06f383}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!TryCycleLockAtomic@{TryCycleLockAtomic}}
+\index{TryCycleLockAtomic@{TryCycleLockAtomic}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{TryCycleLockAtomic()}{TryCycleLockAtomic()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Atomic\+::\+Try\+Cycle\+Lock\+Atomic (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ bool $>$ \&}]{atomic\+Boolean,  }\item[{unsigned int}]{cycle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomic\+\_\+boolをロックcycle回数を試し, 成功した場合排他制御を可能にする 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Boolean} & Lockを試すstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em cycle,forループ回数} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+bool Lockに成功した場合true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a40a422b977f64282b5e5212782685a94}\label{namespace_s_g_framework_1_1_atomic_a40a422b977f64282b5e5212782685a94}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!TryLockAtomic@{TryLockAtomic}}
+\index{TryLockAtomic@{TryLockAtomic}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{TryLockAtomic()}{TryLockAtomic()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Atomic\+::\+Try\+Lock\+Atomic (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ bool $>$ \&}]{atomic\+Boolean }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomic\+\_\+boolをロックを試し, 成功した場合排他制御を可能にする 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Boolean} & Lockを試すstd\+::atomic \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+bool Lockに成功した場合true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_ad4668b40d56cdbf6bdfe819c1b68b7dc}\label{namespace_s_g_framework_1_1_atomic_ad4668b40d56cdbf6bdfe819c1b68b7dc}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!UnlockAtomic@{UnlockAtomic}}
+\index{UnlockAtomic@{UnlockAtomic}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{UnlockAtomic()}{UnlockAtomic()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Atomic\+::\+Unlock\+Atomic (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ bool $>$ \&}]{atomic\+Boolean }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomic\+\_\+boolをアンロックし排他制御を終了する, 必ず\+Lock後に同じスレッドで実行すること 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Boolean} & Unlockするstd\+::atomic \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a61b05e0c62c2e95a1cc53bd8695f2470}\label{namespace_s_g_framework_1_1_atomic_a61b05e0c62c2e95a1cc53bd8695f2470}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Xor@{Xor}}
+\index{Xor@{Xor}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Xor()}{Xor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Atomic\+::\+Xor (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ bool $>$ \&}]{atomic\+Boolean,  }\item[{bool}]{xor\+Flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomic\+\_\+boolをロックフリーアルゴリズムを用いて\+X\+O\+R演算し代入する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Boolean} & X\+OR, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em xor\+Flag} & X\+OR Flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+bool 代入結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a4bd07f7222b7e4463c6f178685e8c745}\label{namespace_s_g_framework_1_1_atomic_a4bd07f7222b7e4463c6f178685e8c745}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Xor@{Xor}}
+\index{Xor@{Xor}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Xor()}{Xor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T , class Cast\+Type $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Xor (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{Cast\+Type}]{xor\+Flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて\+X\+O\+R演算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em xor\+Flag} & X\+OR Flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応, Cast\+Typeが\+T型にキャストできない場合static\+\_\+assert 
+\end{DoxyAttention}
+\mbox{\Hypertarget{namespace_s_g_framework_1_1_atomic_a6a8c6aeb7d8f93ac897e13709555c12b}\label{namespace_s_g_framework_1_1_atomic_a6a8c6aeb7d8f93ac897e13709555c12b}} 
+\index{SGFramework::Atomic@{SGFramework::Atomic}!Xor@{Xor}}
+\index{Xor@{Xor}!SGFramework::Atomic@{SGFramework::Atomic}}
+\doxysubsubsection{\texorpdfstring{Xor()}{Xor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T S\+G\+Framework\+::\+Atomic\+::\+Xor (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ T $>$ \&}]{atomic\+Integral,  }\item[{T}]{xor\+Flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::atomicをロックフリーアルゴリズムを用いて\+X\+O\+R演算する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic\+Integral} & 計算, 代入するstd\+::atomic \\
+\hline
+\mbox{\texttt{ in}}  & {\em xor\+Flag} & X\+OR Flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+T 計算結果 (atomicに代入済み) 
+\end{DoxyReturn}
+\begin{DoxyAttention}{注意}
+integal typeのみ対応 
+\end{DoxyAttention}

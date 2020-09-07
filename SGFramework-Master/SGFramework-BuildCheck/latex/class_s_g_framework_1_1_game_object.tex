@@ -1,0 +1,642 @@
+\hypertarget{class_s_g_framework_1_1_game_object}{}\doxysection{S\+G\+Framework\+::Game\+Object クラス}
+\label{class_s_g_framework_1_1_game_object}\index{SGFramework::GameObject@{SGFramework::GameObject}}
+
+
+{\ttfamily \#include $<$Game\+Object.\+hpp$>$}
+
+S\+G\+Framework\+::Game\+Object の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.692308cm]{class_s_g_framework_1_1_game_object}
+\end{center}
+\end{figure}
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions}{Callback\+Functions}}
+\item 
+struct \mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_instantiate_parent_info}{Instantiate\+Parent\+Info}}
+\item 
+struct \mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_instantiate_required_info}{Instantiate\+Required\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_game_object_ad02a46a47ea011829349ae95e8d29677}{$\sim$\+Game\+Object}} ()
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_ac7ca01c50a772c5ee40885355cdc99ce}{Add\+Component}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Component\+Class $>$ component)
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a3dcaeaacecf40d608fb5b12a4db455c4}{Add\+Component}} (bool is\+Enabled=true)
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_abab5d5b3d1fca21ce1c66b1d3815ebc3}{Find\+Component}} ()
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a0379f86fe14e97db622f4d7cfed9e90d}{Find\+Component\+In\+Parent}} (bool is\+Include\+Yourself=true)
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_ae34cb9bddb1590878425094c0f8ac083}{Find\+Component\+In\+Children}} (bool is\+Include\+Yourself=true)
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a5968296662650015b052321a4d663f3b}{Find\+Component\+Ex}} ()
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_ad875838a3d6797fbcca36e5afa09e0e9}{Find\+Component\+In\+Parent\+Ex}} (bool is\+Include\+Yourself=true)
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Component\+Class $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a57e4f28befc8576bdf94388055431f8f}{Find\+Component\+In\+Children\+Ex}} (bool is\+Include\+Yourself=true)
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_ae88aeeb2149efdcbf8508ed8c8544c2a}{Remove\+Component}} ()
+\item 
+{\footnotesize template$<$class Component\+Class $>$ }\\void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a387c2201d3aebb304864caab9544a9d7}{Remove\+Component\+Ex}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a37ebb8fb239c259a6faae98621c0d775}{Remove\+Component\+All}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a522def48825ebd8fc85ab8c600a7ccaf}{Instantiate\+Setting}} (\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_instantiate_required_info}{Instantiate\+Required\+Info}} \&required\+Info, \mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_instantiate_parent_info}{Instantiate\+Parent\+Info}} \&parent\+Info, \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} user\+Flags, bool is\+Used\+Mutex\+Counter, bool is\+Auto\+Gabage\+Collection)
+\item 
+virtual \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a1b6524a493a75a5e86d0165444991e50}{Enable\+Callbacks}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a6a9cf1bc08f6ce34cba512d3d68e4756}{Awake}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a0bd0ef20129e0676916a8b36cf872b64}{On\+Enable}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a5037af1a9c5eff76a5cb4b2757f9413c}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_ab2ba669bc683ef1b1516d9f82cd17d2b}{Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a92bab8547710b33122649f80a42283b2}{Sync}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a24d59efabf7d52cc693030184fbc8a90}{Late\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a6fa2d0aa4a8a7cba50dc4900d1a9667a}{Fixed\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_af0b5f9f41823c4155b4433e1373d399c}{Make\+Draw\+Command}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a59972c6badeeafa7225435f477ff6814}{On\+Disable}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a03778e4d0a3ddf75c251984eb96a3d5a}{On\+Destroy}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_afca6582ad3ae89758b3e78d1ee533e33}{On\+Collision\+Enter}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&contact\+Info)
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a2f481a054ec09e83cea2accabde30e3f}{On\+Collision\+Stay}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&contact\+Info)
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a434fd18765f2cedbc09a54fff5c434c4}{On\+Collision\+Exit}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&contact\+Info)
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_ae8b4a93e4fb39b0afeed51c8be183ac0}{On\+Trigger\+Enter}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&contact\+Info)
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_aa98adcf6cc81053d25acfa586a99fc78}{On\+Trigger\+Stay}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&contact\+Info)
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a65ed3d248e47a95ef245b23980d48bfd}{On\+Trigger\+Exit}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&contact\+Info)
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a24bc939402b858a4a287ac1b9e417477}{Change\+Upper\+Hierarchy}} (\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$ new\+Parent, \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$ old\+Parent)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}} \mbox{\hyperlink{class_s_g_framework_1_1_game_object_af898e4fcc12d455355b3dfe7a9ac08d3}{get\+Layer}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \mbox{\hyperlink{class_s_g_framework_1_1_game_object_aea84351da724ea72cd7405400bdab44a}{get\+Tag}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \mbox{\hyperlink{class_s_g_framework_1_1_game_object_ab7bc80d6257fc2179540916c99de6f79}{set\+Tag}} (const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY int \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a7ce44eb43f70a980f028dfc743750f44}{get\+Function\+Line}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a6ac5a92890b2ae1c203daaf66f325abe}{get\+Is\+Active\+Self}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a053590412e953f35e5ba89442d96bd36}{set\+Is\+Active}} (bool active)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a9db46f63bca562efe6e3a02ed1881132}{get\+Is\+Static}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_game_object_aefb17ddee18a6e118a6b2e2c0f0b4dc3}{get\+Is\+Root}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_game_object_afa9d064c293b0541b07545adfaf07faf}{get\+Is\+Destroy}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a0d65ad72b23c84b02b251220b8f1784b}{get\+Is\+Active\+And\+Enabled\+Callback}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_game_object_ab70f5d45eac9601b8459ed03b7c98c8b}{get\+Is\+Enabled\+Callback}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a4c894e7cb3e946d03cd1daef5ca44f3f}{set\+Is\+Enabled\+Callback}} (bool set)
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Game\+Object\+Derived $>$ }\\static \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a945b32ec0dd5c8bbb131fee34696e1c2}{Instantiate}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&position, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&rotation, \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} user\+Flags=0, bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true)
+\item 
+{\footnotesize template$<$class Game\+Object\+Derived $>$ }\\static \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a0b3c06c718a47be5e9dec15c254abdec}{Instantiate}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}}, \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} user\+Flags=0, bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true)
+\item 
+{\footnotesize template$<$class Game\+Object\+Derived $>$ }\\static \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a1c6034a5750937a303534d1964402d86}{Instantiate}} (\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} user\+Flags=0, bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true)
+\item 
+{\footnotesize template$<$class Game\+Object\+Derived $>$ }\\static \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_ab08cb50fd313e3915e5319dd4d3722c5}{Instantiate}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$ parent, bool is\+Instantiate\+In\+World\+Space, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&position, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&rotation, \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} user\+Flags=0, bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true)
+\item 
+{\footnotesize template$<$class Game\+Object\+Derived $>$ }\\static \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a7246183af63903f7de86d9045f453934}{Instantiate}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$ parent, bool is\+Instantiate\+In\+World\+Space, const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}}, \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} user\+Flags=0, bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true)
+\item 
+{\footnotesize template$<$class Game\+Object\+Derived $>$ }\\static \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a363075592513be4669a35c48d42dc324}{Instantiate}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$ parent, bool is\+Instantiate\+In\+World\+Space, \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} user\+Flags=0, bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true)
+\item 
+{\footnotesize template$<$class Game\+Object\+Derived $>$ }\\static \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a9de022dac1df6183e1905baa9c144d3e}{Instantiate\+Manual}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&position=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&scale=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_a4ce4a8c8a2f0c53667d801d5d0d29745}{Const\+::\+Vector3\+::one}}, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&rotation=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_quaternion_a05084bdcdd15ab3dd19e4be6f96952ec}{Const\+::\+Quaternion\+::identity}}, \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+::\+Time\+Layer}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_aee0210c59f1ddb8013d72383e9639334}{time\+Layer}}=\mbox{\hyperlink{class_s_g_framework_1_1_time_a1b3cc27879556d9cc05cd68b54795605}{Time\+::root\+Time\+Layer}}(), const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}}=L\char`\"{}Game \mbox{\hyperlink{class_s_g_framework_1_1_object}{Object}}\char`\"{}, int function\+Line\+At\+Root=\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1e9bc3eac10f16319f5153f75806130d}{Transform\+::c\+Auto\+Select\+Function\+Line}}, bool is\+Static=false, \mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}} layer=\mbox{\hyperlink{struct_s_g_framework_1_1_layer_a27a2186ee9c684ecc0bfa0d8aa6bc275}{Layer\+::\+Default\+Layer}}(), const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&tag=\mbox{\hyperlink{class_s_g_framework_1_1_tag_a24f43d1fb281973bf259d700cad0f34c}{Tag\+::\+Default\+Tag}}(), bool is\+Find\+Enabled=true, bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true)
+\item 
+{\footnotesize template$<$class Game\+Object\+Derived $>$ }\\static \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_aa5f34ca8fcd807b2779659c7d5985c65}{Instantiate\+Manual}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$ parent, bool is\+Instantiate\+In\+World\+Space, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&position=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&scale=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_a4ce4a8c8a2f0c53667d801d5d0d29745}{Const\+::\+Vector3\+::one}}, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&rotation=\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_quaternion_a05084bdcdd15ab3dd19e4be6f96952ec}{Const\+::\+Quaternion\+::identity}}, \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+::\+Time\+Layer}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_aee0210c59f1ddb8013d72383e9639334}{time\+Layer}}=\mbox{\hyperlink{class_s_g_framework_1_1_time_a1b3cc27879556d9cc05cd68b54795605}{Time\+::root\+Time\+Layer}}(), const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}}=L\char`\"{}Game \mbox{\hyperlink{class_s_g_framework_1_1_object}{Object}}\char`\"{}, int function\+Line\+At\+Root=\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1e9bc3eac10f16319f5153f75806130d}{Transform\+::c\+Auto\+Select\+Function\+Line}}, bool is\+Static=false, \mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}} layer=\mbox{\hyperlink{struct_s_g_framework_1_1_layer_a27a2186ee9c684ecc0bfa0d8aa6bc275}{Layer\+::\+Default\+Layer}}(), const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&tag=\mbox{\hyperlink{class_s_g_framework_1_1_tag_a24f43d1fb281973bf259d700cad0f34c}{Tag\+::\+Default\+Tag}}(), bool is\+Find\+Enabled=true, bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true)
+\item 
+{\footnotesize template$<$class Game\+Object\+Derived $>$ }\\static void \mbox{\hyperlink{class_s_g_framework_1_1_game_object_ac22b62517c4063d57d7d388034057004}{Destroy\+Object}} (\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ object)
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a57c552244e3bc67b7b9474fc6aa535f3}{Find\+With\+Name}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a7513c87f6a943fcec86d1623d2b61f52}{Find\+With\+Tag}} (const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&tag)
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a8c302beb54d1a812a427d26c10074b42}{Find\+With\+Layer}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}} \&layer)
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a3ecae70d8577474d45a6de866ecea07d}{Find\+With\+Name\+Ex}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_aafc63d7c9e915a2180fd19662c898157}{Find\+With\+Tag\+Ex}} (const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&tag)
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a06e3c6e231151d515337914a30e96e63}{Find\+With\+Layer\+Ex}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}} \&layer)
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_ac433c9a6751be8e2c36a80cb19ec156e}{game\+Object}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a86451d0d7407f3ee13e6c3dc293252c0}{transform}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+::\+Time\+Layer}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_aee0210c59f1ddb8013d72383e9639334}{time\+Layer}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Game\+Object\+Callback $>$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a04a549cacc16bc340711e036e535e01c}{game\+Object\+Callback\+Component}}
+\item 
+const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene}{Scene\+::\+Base\+Scene}} $>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a26d27bc5644f3891308e963a0ea8ba98}{c\+This\+Scene}}
+\item 
+const bool \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a7116f2caf50f8675a36065eaaeb9c763}{c\+Is\+Find\+Enabled}}
+\item 
+const bool \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a3e3b82082a35299275c44cd63b21fc2e}{c\+Is\+Using\+Mutex\+Pointer}}
+\item 
+const bool \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a0b3112f8dc5996a27e3ce1c5e51c3c9a}{c\+Is\+Using\+Auto\+Gabage\+Collection}}
+\end{DoxyCompactItemize}
+\doxysubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_game_object_ac3fd7f4d26541222de45ce58089cdb82}{Game\+Object}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_game_object_a23f25bcc02a0e94c2f5a4188496b04d0}{Application}}
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_ad02a46a47ea011829349ae95e8d29677}\label{class_s_g_framework_1_1_game_object_ad02a46a47ea011829349ae95e8d29677}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!````~GameObject@{$\sim$GameObject}}
+\index{````~GameObject@{$\sim$GameObject}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameObject()}{~GameObject()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Game\+Object\+::$\sim$\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_ac3fd7f4d26541222de45ce58089cdb82}\label{class_s_g_framework_1_1_game_object_ac3fd7f4d26541222de45ce58089cdb82}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a3dcaeaacecf40d608fb5b12a4db455c4}\label{class_s_g_framework_1_1_game_object_a3dcaeaacecf40d608fb5b12a4db455c4}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$Component\+Class$>$ S\+G\+Framework\+::\+Game\+Object\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{bool}]{is\+Enabled = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_ac7ca01c50a772c5ee40885355cdc99ce}\label{class_s_g_framework_1_1_game_object_ac7ca01c50a772c5ee40885355cdc99ce}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$Component\+Class$>$ S\+G\+Framework\+::\+Game\+Object\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Component\+Class $>$}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a6a9cf1bc08f6ce34cba512d3d68e4756}\label{class_s_g_framework_1_1_game_object_a6a9cf1bc08f6ce34cba512d3d68e4756}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!Awake@{Awake}}
+\index{Awake@{Awake}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_player_adc70285b4e4db37c92f9be808a06eb07}{Player}}, \mbox{\hyperlink{class_sphere_a8c8f69779acf9bad29b82d1491f7830f}{Sphere}}で再実装されています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a24bc939402b858a4a287ac1b9e417477}\label{class_s_g_framework_1_1_game_object_a24bc939402b858a4a287ac1b9e417477}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!ChangeUpperHierarchy@{ChangeUpperHierarchy}}
+\index{ChangeUpperHierarchy@{ChangeUpperHierarchy}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{ChangeUpperHierarchy()}{ChangeUpperHierarchy()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+Change\+Upper\+Hierarchy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$}]{new\+Parent,  }\item[{\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$}]{old\+Parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_ac22b62517c4063d57d7d388034057004}\label{class_s_g_framework_1_1_game_object_ac22b62517c4063d57d7d388034057004}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!DestroyObject@{DestroyObject}}
+\index{DestroyObject@{DestroyObject}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{DestroyObject()}{DestroyObject()}}
+{\footnotesize\ttfamily template$<$class Game\+Object\+Derived $>$ \\
+static void S\+G\+Framework\+::\+Game\+Object\+::\+Destroy\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a1b6524a493a75a5e86d0165444991e50}\label{class_s_g_framework_1_1_game_object_a1b6524a493a75a5e86d0165444991e50}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!EnableCallbacks@{EnableCallbacks}}
+\index{EnableCallbacks@{EnableCallbacks}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{EnableCallbacks()}{EnableCallbacks()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Game\+Object\+::\+Enable\+Callbacks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_player_a7009bba6ec1777507f951d9cfc9fa33b}{Player}}, \mbox{\hyperlink{class_sphere_a0c369fd453fc98d5d277be148931cf8f}{Sphere}}で再実装されています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_abab5d5b3d1fca21ce1c66b1d3815ebc3}\label{class_s_g_framework_1_1_game_object_abab5d5b3d1fca21ce1c66b1d3815ebc3}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!FindComponent@{FindComponent}}
+\index{FindComponent@{FindComponent}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{FindComponent()}{FindComponent()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$Component\+Class$>$ S\+G\+Framework\+::\+Game\+Object\+::\+Find\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a5968296662650015b052321a4d663f3b}\label{class_s_g_framework_1_1_game_object_a5968296662650015b052321a4d663f3b}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!FindComponentEx@{FindComponentEx}}
+\index{FindComponentEx@{FindComponentEx}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{FindComponentEx()}{FindComponentEx()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+std\+::vector$<$\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$Component\+Class$>$ $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Find\+Component\+Ex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_ae34cb9bddb1590878425094c0f8ac083}\label{class_s_g_framework_1_1_game_object_ae34cb9bddb1590878425094c0f8ac083}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!FindComponentInChildren@{FindComponentInChildren}}
+\index{FindComponentInChildren@{FindComponentInChildren}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{FindComponentInChildren()}{FindComponentInChildren()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$Component\+Class$>$ S\+G\+Framework\+::\+Game\+Object\+::\+Find\+Component\+In\+Children (\begin{DoxyParamCaption}\item[{bool}]{is\+Include\+Yourself = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a57e4f28befc8576bdf94388055431f8f}\label{class_s_g_framework_1_1_game_object_a57e4f28befc8576bdf94388055431f8f}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!FindComponentInChildrenEx@{FindComponentInChildrenEx}}
+\index{FindComponentInChildrenEx@{FindComponentInChildrenEx}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{FindComponentInChildrenEx()}{FindComponentInChildrenEx()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+std\+::vector$<$\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$Component\+Class$>$ $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Find\+Component\+In\+Children\+Ex (\begin{DoxyParamCaption}\item[{bool}]{is\+Include\+Yourself = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a0379f86fe14e97db622f4d7cfed9e90d}\label{class_s_g_framework_1_1_game_object_a0379f86fe14e97db622f4d7cfed9e90d}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!FindComponentInParent@{FindComponentInParent}}
+\index{FindComponentInParent@{FindComponentInParent}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{FindComponentInParent()}{FindComponentInParent()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$Component\+Class$>$ S\+G\+Framework\+::\+Game\+Object\+::\+Find\+Component\+In\+Parent (\begin{DoxyParamCaption}\item[{bool}]{is\+Include\+Yourself = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_ad875838a3d6797fbcca36e5afa09e0e9}\label{class_s_g_framework_1_1_game_object_ad875838a3d6797fbcca36e5afa09e0e9}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!FindComponentInParentEx@{FindComponentInParentEx}}
+\index{FindComponentInParentEx@{FindComponentInParentEx}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{FindComponentInParentEx()}{FindComponentInParentEx()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+std\+::vector$<$\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$Component\+Class$>$ $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Find\+Component\+In\+Parent\+Ex (\begin{DoxyParamCaption}\item[{bool}]{is\+Include\+Yourself = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a8c302beb54d1a812a427d26c10074b42}\label{class_s_g_framework_1_1_game_object_a8c302beb54d1a812a427d26c10074b42}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!FindWithLayer@{FindWithLayer}}
+\index{FindWithLayer@{FindWithLayer}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{FindWithLayer()}{FindWithLayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Find\+With\+Layer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}} \&}]{layer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a06e3c6e231151d515337914a30e96e63}\label{class_s_g_framework_1_1_game_object_a06e3c6e231151d515337914a30e96e63}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!FindWithLayerEx@{FindWithLayerEx}}
+\index{FindWithLayerEx@{FindWithLayerEx}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{FindWithLayerEx()}{FindWithLayerEx()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Find\+With\+Layer\+Ex (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}} \&}]{layer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a57c552244e3bc67b7b9474fc6aa535f3}\label{class_s_g_framework_1_1_game_object_a57c552244e3bc67b7b9474fc6aa535f3}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!FindWithName@{FindWithName}}
+\index{FindWithName@{FindWithName}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{FindWithName()}{FindWithName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Find\+With\+Name (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a3ecae70d8577474d45a6de866ecea07d}\label{class_s_g_framework_1_1_game_object_a3ecae70d8577474d45a6de866ecea07d}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!FindWithNameEx@{FindWithNameEx}}
+\index{FindWithNameEx@{FindWithNameEx}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{FindWithNameEx()}{FindWithNameEx()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Find\+With\+Name\+Ex (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a7513c87f6a943fcec86d1623d2b61f52}\label{class_s_g_framework_1_1_game_object_a7513c87f6a943fcec86d1623d2b61f52}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!FindWithTag@{FindWithTag}}
+\index{FindWithTag@{FindWithTag}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{FindWithTag()}{FindWithTag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Find\+With\+Tag (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_aafc63d7c9e915a2180fd19662c898157}\label{class_s_g_framework_1_1_game_object_aafc63d7c9e915a2180fd19662c898157}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!FindWithTagEx@{FindWithTagEx}}
+\index{FindWithTagEx@{FindWithTagEx}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{FindWithTagEx()}{FindWithTagEx()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}} $>$ $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Find\+With\+Tag\+Ex (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a6fa2d0aa4a8a7cba50dc4900d1a9667a}\label{class_s_g_framework_1_1_game_object_a6fa2d0aa4a8a7cba50dc4900d1a9667a}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_player_a931c62098b3939f965ca5a64bcd1569e}{Player}}で再実装されています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a7ce44eb43f70a980f028dfc743750f44}\label{class_s_g_framework_1_1_game_object_a7ce44eb43f70a980f028dfc743750f44}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!getFunctionLine@{getFunctionLine}}
+\index{getFunctionLine@{getFunctionLine}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{getFunctionLine()}{getFunctionLine()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY int S\+G\+Framework\+::\+Game\+Object\+::get\+Function\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a0d65ad72b23c84b02b251220b8f1784b}\label{class_s_g_framework_1_1_game_object_a0d65ad72b23c84b02b251220b8f1784b}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!getIsActiveAndEnabledCallback@{getIsActiveAndEnabledCallback}}
+\index{getIsActiveAndEnabledCallback@{getIsActiveAndEnabledCallback}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{getIsActiveAndEnabledCallback()}{getIsActiveAndEnabledCallback()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Game\+Object\+::get\+Is\+Active\+And\+Enabled\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a6ac5a92890b2ae1c203daaf66f325abe}\label{class_s_g_framework_1_1_game_object_a6ac5a92890b2ae1c203daaf66f325abe}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!getIsActiveSelf@{getIsActiveSelf}}
+\index{getIsActiveSelf@{getIsActiveSelf}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{getIsActiveSelf()}{getIsActiveSelf()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Game\+Object\+::get\+Is\+Active\+Self (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_afa9d064c293b0541b07545adfaf07faf}\label{class_s_g_framework_1_1_game_object_afa9d064c293b0541b07545adfaf07faf}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!getIsDestroy@{getIsDestroy}}
+\index{getIsDestroy@{getIsDestroy}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{getIsDestroy()}{getIsDestroy()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Game\+Object\+::get\+Is\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_ab70f5d45eac9601b8459ed03b7c98c8b}\label{class_s_g_framework_1_1_game_object_ab70f5d45eac9601b8459ed03b7c98c8b}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!getIsEnabledCallback@{getIsEnabledCallback}}
+\index{getIsEnabledCallback@{getIsEnabledCallback}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{getIsEnabledCallback()}{getIsEnabledCallback()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Game\+Object\+::get\+Is\+Enabled\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_aefb17ddee18a6e118a6b2e2c0f0b4dc3}\label{class_s_g_framework_1_1_game_object_aefb17ddee18a6e118a6b2e2c0f0b4dc3}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!getIsRoot@{getIsRoot}}
+\index{getIsRoot@{getIsRoot}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{getIsRoot()}{getIsRoot()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Game\+Object\+::get\+Is\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a9db46f63bca562efe6e3a02ed1881132}\label{class_s_g_framework_1_1_game_object_a9db46f63bca562efe6e3a02ed1881132}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!getIsStatic@{getIsStatic}}
+\index{getIsStatic@{getIsStatic}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{getIsStatic()}{getIsStatic()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Game\+Object\+::get\+Is\+Static (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_af898e4fcc12d455355b3dfe7a9ac08d3}\label{class_s_g_framework_1_1_game_object_af898e4fcc12d455355b3dfe7a9ac08d3}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!getLayer@{getLayer}}
+\index{getLayer@{getLayer}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{getLayer()}{getLayer()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}} S\+G\+Framework\+::\+Game\+Object\+::get\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_aea84351da724ea72cd7405400bdab44a}\label{class_s_g_framework_1_1_game_object_aea84351da724ea72cd7405400bdab44a}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!getTag@{getTag}}
+\index{getTag@{getTag}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{getTag()}{getTag()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} S\+G\+Framework\+::\+Game\+Object\+::get\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a0b3c06c718a47be5e9dec15c254abdec}\label{class_s_g_framework_1_1_game_object_a0b3c06c718a47be5e9dec15c254abdec}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{Instantiate()}{Instantiate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily template$<$class Game\+Object\+Derived $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Instantiate (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name,  }\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{user\+Flags = {\ttfamily 0},  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a945b32ec0dd5c8bbb131fee34696e1c2}\label{class_s_g_framework_1_1_game_object_a945b32ec0dd5c8bbb131fee34696e1c2}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{Instantiate()}{Instantiate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$class Game\+Object\+Derived $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Instantiate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{rotation,  }\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{user\+Flags = {\ttfamily 0},  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a7246183af63903f7de86d9045f453934}\label{class_s_g_framework_1_1_game_object_a7246183af63903f7de86d9045f453934}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{Instantiate()}{Instantiate()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$class Game\+Object\+Derived $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Instantiate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$}]{parent,  }\item[{bool}]{is\+Instantiate\+In\+World\+Space,  }\item[{const sgstring \&}]{name,  }\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{user\+Flags = {\ttfamily 0},  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_ab08cb50fd313e3915e5319dd4d3722c5}\label{class_s_g_framework_1_1_game_object_ab08cb50fd313e3915e5319dd4d3722c5}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{Instantiate()}{Instantiate()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$class Game\+Object\+Derived $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Instantiate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$}]{parent,  }\item[{bool}]{is\+Instantiate\+In\+World\+Space,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{rotation,  }\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{user\+Flags = {\ttfamily 0},  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a363075592513be4669a35c48d42dc324}\label{class_s_g_framework_1_1_game_object_a363075592513be4669a35c48d42dc324}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{Instantiate()}{Instantiate()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$class Game\+Object\+Derived $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Instantiate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$}]{parent,  }\item[{bool}]{is\+Instantiate\+In\+World\+Space,  }\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{user\+Flags = {\ttfamily 0},  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a1c6034a5750937a303534d1964402d86}\label{class_s_g_framework_1_1_game_object_a1c6034a5750937a303534d1964402d86}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{Instantiate()}{Instantiate()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$class Game\+Object\+Derived $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Instantiate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{user\+Flags = {\ttfamily 0},  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a9de022dac1df6183e1905baa9c144d3e}\label{class_s_g_framework_1_1_game_object_a9de022dac1df6183e1905baa9c144d3e}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!InstantiateManual@{InstantiateManual}}
+\index{InstantiateManual@{InstantiateManual}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{InstantiateManual()}{InstantiateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Game\+Object\+Derived $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Instantiate\+Manual (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{scale = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_a4ce4a8c8a2f0c53667d801d5d0d29745}{Const\+::\+Vector3\+::one}}},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{rotation = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_quaternion_a05084bdcdd15ab3dd19e4be6f96952ec}{Const\+::\+Quaternion\+::identity}}},  }\item[{\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+::\+Time\+Layer}} $>$}]{time\+Layer = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_time_a1b3cc27879556d9cc05cd68b54795605}{Time\+::root\+Time\+Layer}}()},  }\item[{const sgstring \&}]{name = {\ttfamily L\char`\"{}Game~\mbox{\hyperlink{class_s_g_framework_1_1_object}{Object}}\char`\"{}},  }\item[{int}]{function\+Line\+At\+Root = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1e9bc3eac10f16319f5153f75806130d}{Transform\+::c\+Auto\+Select\+Function\+Line}}},  }\item[{bool}]{is\+Static = {\ttfamily false},  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}}}]{layer = {\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_layer_a27a2186ee9c684ecc0bfa0d8aa6bc275}{Layer\+::\+Default\+Layer}}()},  }\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&}]{tag = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_tag_a24f43d1fb281973bf259d700cad0f34c}{Tag\+::\+Default\+Tag}}()},  }\item[{bool}]{is\+Find\+Enabled = {\ttfamily true},  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_aa5f34ca8fcd807b2779659c7d5985c65}\label{class_s_g_framework_1_1_game_object_aa5f34ca8fcd807b2779659c7d5985c65}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!InstantiateManual@{InstantiateManual}}
+\index{InstantiateManual@{InstantiateManual}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{InstantiateManual()}{InstantiateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Game\+Object\+Derived $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Game\+Object\+Derived $>$ S\+G\+Framework\+::\+Game\+Object\+::\+Instantiate\+Manual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$}]{parent,  }\item[{bool}]{is\+Instantiate\+In\+World\+Space,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{scale = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_a4ce4a8c8a2f0c53667d801d5d0d29745}{Const\+::\+Vector3\+::one}}},  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{rotation = {\ttfamily \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_quaternion_a05084bdcdd15ab3dd19e4be6f96952ec}{Const\+::\+Quaternion\+::identity}}},  }\item[{\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+::\+Time\+Layer}} $>$}]{time\+Layer = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_time_a1b3cc27879556d9cc05cd68b54795605}{Time\+::root\+Time\+Layer}}()},  }\item[{const sgstring \&}]{name = {\ttfamily L\char`\"{}Game~\mbox{\hyperlink{class_s_g_framework_1_1_object}{Object}}\char`\"{}},  }\item[{int}]{function\+Line\+At\+Root = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_a1e9bc3eac10f16319f5153f75806130d}{Transform\+::c\+Auto\+Select\+Function\+Line}}},  }\item[{bool}]{is\+Static = {\ttfamily false},  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_layer}{Layer}}}]{layer = {\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_layer_a27a2186ee9c684ecc0bfa0d8aa6bc275}{Layer\+::\+Default\+Layer}}()},  }\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&}]{tag = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_tag_a24f43d1fb281973bf259d700cad0f34c}{Tag\+::\+Default\+Tag}}()},  }\item[{bool}]{is\+Find\+Enabled = {\ttfamily true},  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a522def48825ebd8fc85ab8c600a7ccaf}\label{class_s_g_framework_1_1_game_object_a522def48825ebd8fc85ab8c600a7ccaf}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!InstantiateSetting@{InstantiateSetting}}
+\index{InstantiateSetting@{InstantiateSetting}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{InstantiateSetting()}{InstantiateSetting()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+Instantiate\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_instantiate_required_info}{Instantiate\+Required\+Info}} \&}]{required\+Info,  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_instantiate_parent_info}{Instantiate\+Parent\+Info}} \&}]{parent\+Info,  }\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{user\+Flags,  }\item[{bool}]{is\+Used\+Mutex\+Counter,  }\item[{bool}]{is\+Auto\+Gabage\+Collection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a24d59efabf7d52cc693030184fbc8a90}\label{class_s_g_framework_1_1_game_object_a24d59efabf7d52cc693030184fbc8a90}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!LateUpdate@{LateUpdate}}
+\index{LateUpdate@{LateUpdate}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{LateUpdate()}{LateUpdate()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+Late\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_af0b5f9f41823c4155b4433e1373d399c}\label{class_s_g_framework_1_1_game_object_af0b5f9f41823c4155b4433e1373d399c}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!MakeDrawCommand@{MakeDrawCommand}}
+\index{MakeDrawCommand@{MakeDrawCommand}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{MakeDrawCommand()}{MakeDrawCommand()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+Make\+Draw\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_sphere_acefbc93275e400da0a31be8190670126}{Sphere}}, \mbox{\hyperlink{class_player_a89c6151e468fd3166816c32bd2b91768}{Player}}で再実装されています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_afca6582ad3ae89758b3e78d1ee533e33}\label{class_s_g_framework_1_1_game_object_afca6582ad3ae89758b3e78d1ee533e33}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!OnCollisionEnter@{OnCollisionEnter}}
+\index{OnCollisionEnter@{OnCollisionEnter}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{OnCollisionEnter()}{OnCollisionEnter()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+On\+Collision\+Enter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&}]{contact\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_sphere_a90429d01b6a6dfda59970b30fb6e0e3f}{Sphere}}で再実装されています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a434fd18765f2cedbc09a54fff5c434c4}\label{class_s_g_framework_1_1_game_object_a434fd18765f2cedbc09a54fff5c434c4}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!OnCollisionExit@{OnCollisionExit}}
+\index{OnCollisionExit@{OnCollisionExit}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{OnCollisionExit()}{OnCollisionExit()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+On\+Collision\+Exit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&}]{contact\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a2f481a054ec09e83cea2accabde30e3f}\label{class_s_g_framework_1_1_game_object_a2f481a054ec09e83cea2accabde30e3f}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!OnCollisionStay@{OnCollisionStay}}
+\index{OnCollisionStay@{OnCollisionStay}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{OnCollisionStay()}{OnCollisionStay()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+On\+Collision\+Stay (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&}]{contact\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a03778e4d0a3ddf75c251984eb96a3d5a}\label{class_s_g_framework_1_1_game_object_a03778e4d0a3ddf75c251984eb96a3d5a}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a59972c6badeeafa7225435f477ff6814}\label{class_s_g_framework_1_1_game_object_a59972c6badeeafa7225435f477ff6814}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a0bd0ef20129e0676916a8b36cf872b64}\label{class_s_g_framework_1_1_game_object_a0bd0ef20129e0676916a8b36cf872b64}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_ae8b4a93e4fb39b0afeed51c8be183ac0}\label{class_s_g_framework_1_1_game_object_ae8b4a93e4fb39b0afeed51c8be183ac0}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!OnTriggerEnter@{OnTriggerEnter}}
+\index{OnTriggerEnter@{OnTriggerEnter}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter()}{OnTriggerEnter()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+On\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&}]{contact\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a65ed3d248e47a95ef245b23980d48bfd}\label{class_s_g_framework_1_1_game_object_a65ed3d248e47a95ef245b23980d48bfd}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!OnTriggerExit@{OnTriggerExit}}
+\index{OnTriggerExit@{OnTriggerExit}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit()}{OnTriggerExit()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+On\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&}]{contact\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_aa98adcf6cc81053d25acfa586a99fc78}\label{class_s_g_framework_1_1_game_object_aa98adcf6cc81053d25acfa586a99fc78}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!OnTriggerStay@{OnTriggerStay}}
+\index{OnTriggerStay@{OnTriggerStay}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{OnTriggerStay()}{OnTriggerStay()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+On\+Trigger\+Stay (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&}]{contact\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_ae88aeeb2149efdcbf8508ed8c8544c2a}\label{class_s_g_framework_1_1_game_object_ae88aeeb2149efdcbf8508ed8c8544c2a}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!RemoveComponent@{RemoveComponent}}
+\index{RemoveComponent@{RemoveComponent}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{RemoveComponent()}{RemoveComponent()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+void S\+G\+Framework\+::\+Game\+Object\+::\+Remove\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a37ebb8fb239c259a6faae98621c0d775}\label{class_s_g_framework_1_1_game_object_a37ebb8fb239c259a6faae98621c0d775}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!RemoveComponentAll@{RemoveComponentAll}}
+\index{RemoveComponentAll@{RemoveComponentAll}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{RemoveComponentAll()}{RemoveComponentAll()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Game\+Object\+::\+Remove\+Component\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a387c2201d3aebb304864caab9544a9d7}\label{class_s_g_framework_1_1_game_object_a387c2201d3aebb304864caab9544a9d7}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!RemoveComponentEx@{RemoveComponentEx}}
+\index{RemoveComponentEx@{RemoveComponentEx}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{RemoveComponentEx()}{RemoveComponentEx()}}
+{\footnotesize\ttfamily template$<$class Component\+Class $>$ \\
+void S\+G\+Framework\+::\+Game\+Object\+::\+Remove\+Component\+Ex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a053590412e953f35e5ba89442d96bd36}\label{class_s_g_framework_1_1_game_object_a053590412e953f35e5ba89442d96bd36}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!setIsActive@{setIsActive}}
+\index{setIsActive@{setIsActive}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{setIsActive()}{setIsActive()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Game\+Object\+::set\+Is\+Active (\begin{DoxyParamCaption}\item[{bool}]{active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a4c894e7cb3e946d03cd1daef5ca44f3f}\label{class_s_g_framework_1_1_game_object_a4c894e7cb3e946d03cd1daef5ca44f3f}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!setIsEnabledCallback@{setIsEnabledCallback}}
+\index{setIsEnabledCallback@{setIsEnabledCallback}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{setIsEnabledCallback()}{setIsEnabledCallback()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Game\+Object\+::set\+Is\+Enabled\+Callback (\begin{DoxyParamCaption}\item[{bool}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_ab7bc80d6257fc2179540916c99de6f79}\label{class_s_g_framework_1_1_game_object_ab7bc80d6257fc2179540916c99de6f79}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!setTag@{setTag}}
+\index{setTag@{setTag}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{setTag()}{setTag()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} S\+G\+Framework\+::\+Game\+Object\+::set\+Tag (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_tag}{Tag}} \&}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a5037af1a9c5eff76a5cb4b2757f9413c}\label{class_s_g_framework_1_1_game_object_a5037af1a9c5eff76a5cb4b2757f9413c}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!Start@{Start}}
+\index{Start@{Start}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a92bab8547710b33122649f80a42283b2}\label{class_s_g_framework_1_1_game_object_a92bab8547710b33122649f80a42283b2}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!Sync@{Sync}}
+\index{Sync@{Sync}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{Sync()}{Sync()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+Sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_ab2ba669bc683ef1b1516d9f82cd17d2b}\label{class_s_g_framework_1_1_game_object_ab2ba669bc683ef1b1516d9f82cd17d2b}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!Update@{Update}}
+\index{Update@{Update}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Game\+Object\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_sphere_adfde38c54d0b3d77ff027aff538df8e7}{Sphere}}, \mbox{\hyperlink{class_player_a05b60cac1922c5be5c1be16baffa4497}{Player}}で再実装されています。
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a23f25bcc02a0e94c2f5a4188496b04d0}\label{class_s_g_framework_1_1_game_object_a23f25bcc02a0e94c2f5a4188496b04d0}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!Application@{Application}}
+\index{Application@{Application}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{Application}{Application}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_application}{Application}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a7116f2caf50f8675a36065eaaeb9c763}\label{class_s_g_framework_1_1_game_object_a7116f2caf50f8675a36065eaaeb9c763}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!cIsFindEnabled@{cIsFindEnabled}}
+\index{cIsFindEnabled@{cIsFindEnabled}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{cIsFindEnabled}{cIsFindEnabled}}
+{\footnotesize\ttfamily const bool S\+G\+Framework\+::\+Game\+Object\+::c\+Is\+Find\+Enabled}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a0b3112f8dc5996a27e3ce1c5e51c3c9a}\label{class_s_g_framework_1_1_game_object_a0b3112f8dc5996a27e3ce1c5e51c3c9a}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!cIsUsingAutoGabageCollection@{cIsUsingAutoGabageCollection}}
+\index{cIsUsingAutoGabageCollection@{cIsUsingAutoGabageCollection}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{cIsUsingAutoGabageCollection}{cIsUsingAutoGabageCollection}}
+{\footnotesize\ttfamily const bool S\+G\+Framework\+::\+Game\+Object\+::c\+Is\+Using\+Auto\+Gabage\+Collection}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a3e3b82082a35299275c44cd63b21fc2e}\label{class_s_g_framework_1_1_game_object_a3e3b82082a35299275c44cd63b21fc2e}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!cIsUsingMutexPointer@{cIsUsingMutexPointer}}
+\index{cIsUsingMutexPointer@{cIsUsingMutexPointer}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{cIsUsingMutexPointer}{cIsUsingMutexPointer}}
+{\footnotesize\ttfamily const bool S\+G\+Framework\+::\+Game\+Object\+::c\+Is\+Using\+Mutex\+Pointer}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a26d27bc5644f3891308e963a0ea8ba98}\label{class_s_g_framework_1_1_game_object_a26d27bc5644f3891308e963a0ea8ba98}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!cThisScene@{cThisScene}}
+\index{cThisScene@{cThisScene}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{cThisScene}{cThisScene}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene}{Scene\+::\+Base\+Scene}}$>$\& S\+G\+Framework\+::\+Game\+Object\+::c\+This\+Scene}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_ac433c9a6751be8e2c36a80cb19ec156e}\label{class_s_g_framework_1_1_game_object_ac433c9a6751be8e2c36a80cb19ec156e}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!gameObject@{gameObject}}
+\index{gameObject@{gameObject}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{gameObject}{gameObject}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}}$>$ S\+G\+Framework\+::\+Game\+Object\+::game\+Object}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a04a549cacc16bc340711e036e535e01c}\label{class_s_g_framework_1_1_game_object_a04a549cacc16bc340711e036e535e01c}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!gameObjectCallbackComponent@{gameObjectCallbackComponent}}
+\index{gameObjectCallbackComponent@{gameObjectCallbackComponent}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{gameObjectCallbackComponent}{gameObjectCallbackComponent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$Game\+Object\+Callback$>$ S\+G\+Framework\+::\+Game\+Object\+::game\+Object\+Callback\+Component}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_aee0210c59f1ddb8013d72383e9639334}\label{class_s_g_framework_1_1_game_object_aee0210c59f1ddb8013d72383e9639334}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!timeLayer@{timeLayer}}
+\index{timeLayer@{timeLayer}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{timeLayer}{timeLayer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_time_1_1_time_layer}{Time\+::\+Time\+Layer}}$>$ S\+G\+Framework\+::\+Game\+Object\+::time\+Layer}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_game_object_a86451d0d7407f3ee13e6c3dc293252c0}\label{class_s_g_framework_1_1_game_object_a86451d0d7407f3ee13e6c3dc293252c0}} 
+\index{SGFramework::GameObject@{SGFramework::GameObject}!transform@{transform}}
+\index{transform@{transform}!SGFramework::GameObject@{SGFramework::GameObject}}
+\doxysubsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}}$>$ S\+G\+Framework\+::\+Game\+Object\+::transform}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/11\+\_\+\+Game\+Object/\mbox{\hyperlink{_game_object_8hpp}{Game\+Object.\+hpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/11\+\_\+\+Game\+Object/\mbox{\hyperlink{_game_object_8cpp}{Game\+Object.\+cpp}}\end{DoxyCompactItemize}

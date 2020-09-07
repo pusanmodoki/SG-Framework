@@ -206,6 +206,9 @@
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\SGFramework-Master_ToExe\01_MacroAndLibrarys\BelongingHeaders\LibraryImports.hpp" />
+    <ClInclude Include="..\SGFramework-Master_ToExe\01_MacroAndLibrarys\BelongingHeaders\MacroAndUsing.hpp" />
+    <ClInclude Include="..\SGFramework-Master_ToExe\01_MacroAndLibrarys\MacroAndLibrarys.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Atomic\Atomic.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\CharacterCode\CharacterCode.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Color\Color.hpp" />
@@ -218,14 +221,16 @@
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\InputCode\JoystickCode.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\InputCode\KeyBordCode.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\InputCode\MouseCode.hpp" />
-    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\MacroAndUsing\MacroAndUsing.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\ReadElement\ReadElement.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\Stringf.hpp" />
-    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfConvert.hpp" />
-    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfOtherFunctions.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfTo.hpp" />
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfOtherFunctions.hpp" />
+    <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfConvert.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Stringf\StringfUsingAndStructure.hpp" />
     <ClInclude Include="..\SGFramework-Master_ToExe\02_Variables\Variables.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\SGFramework-Master_ToExe\00_Texts\CodeConvention-Comment.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,0 +1,187 @@
+\hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d}{}\doxysection{S\+G\+Framework\+::Asset\+::Audio\+Asset\+Effect3D クラス}
+\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d}\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+
+
+{\ttfamily \#include $<$Audio\+Asset\+Effect3\+D.\+hpp$>$}
+
+S\+G\+Framework\+::Asset\+::Audio\+Asset\+Effect3D の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_ab88f20799f576251765bfa2001d8d90c}{$\sim$\+Audio\+Asset\+Effect3D}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a6af72ba047a0421bc0d688f161bf4f26}{Open}} (\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer}{Audio\+::\+Submix\+Layer}} $>$ submix\+Layer=\mbox{\hyperlink{class_s_g_framework_1_1_audio_a2a6c4f64a1817146ef584f19d44adca4}{Audio\+::submix\+Monoral\+Root\+Layer}}(), \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset_aa5f926feaf92b494b185217e273e18dd}{amount\+Of\+Source}}=1, float \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset_a88073e022f8a341b09b3fdbe87921750}{playback\+Interval}}=0.\+0f, float inner\+Radius=0.\+0f, float inner\+Radius\+Angle=0.\+0f, float curve\+Distance\+Scaler=50.\+0f, float doppler\+Scaler=50.\+0f, float set\+Play\+Begin\+Seconds=\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a4b5883de7cb1c5357cd3ca4bcb189f91}{c\+Default}}, float set\+Loop\+Begin\+Seconds=\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a4b5883de7cb1c5357cd3ca4bcb189f91}{c\+Default}}, float set\+Play\+End\+Seconds=\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a4b5883de7cb1c5357cd3ca4bcb189f91}{c\+Default}})
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a292e941eaac19dcb8fac7a0aad6917c6}{Reload}} () override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a0e91a2002324730a9dcff40796cdc135}{Close}} () override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_aa82361b8ee8dec9df2cc030aaa774b60}{Play}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&position, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&velocity\+Per\+Sec, const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&rotation, \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} loop\+Count=0)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a0f8ec64e193d1fe297d94fceb7e94f72}{Play}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&position, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&velocity\+Per\+Sec, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&forward, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&up, \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} loop\+Count=0)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a38751d0fd1e94c76569a00d16ed6724e}{Stop}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a857b545acd553252fbcd0f410da2da7d}{Reset3\+D\+Information}} (float inner\+Radius=0.\+0f, float inner\+Radius\+Angle=0.\+0f, float curve\+Distance\+Scaler=50.\+0f, float doppler\+Scaler=50.\+0f)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a7f8dfe6bef02bf7a201a6eb5b8b594f3}{Manual\+Set\+Curve}} (X3\+D\+A\+U\+D\+I\+O\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+C\+U\+R\+VE $\ast$volume\+Curve=nullptr, X3\+D\+A\+U\+D\+I\+O\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+C\+U\+R\+VE $\ast$lfe\+Curve=nullptr, X3\+D\+A\+U\+D\+I\+O\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+C\+U\+R\+VE $\ast$lpf\+Direct\+Curve=nullptr, X3\+D\+A\+U\+D\+I\+O\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+C\+U\+R\+VE $\ast$lpf\+Revert\+Curve=nullptr, X3\+D\+A\+U\+D\+I\+O\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+C\+U\+R\+VE $\ast$reverb\+Curve=nullptr)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a6b090c170d8ebd84248dc034885d9bf6}{Reset\+Channel\+Infomation}} (float channel\+Radius=0.\+0f, float $\ast$channel\+Azimuths=nullptr)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a36062aaa19148fec122f6ba2c57b39b2}{Reset\+Cone}} (X3\+D\+A\+U\+D\+I\+O\+\_\+\+C\+O\+NE $\ast$cone=nullptr)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a0d64ac83e0ae207e810905c109a0e7fd}{Reset\+Calculate\+Flag}} (\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} flags)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{Asset\+::\+Asset\+Type}} \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a79c2d070028da78f3053d33b3f0e3e07}{get\+Type}} () override
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const X3\+D\+A\+U\+D\+I\+O\+\_\+\+E\+M\+I\+T\+T\+ER \& \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a804da698f5647189dfade41573b66c5b}{get\+Emitter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a211f008bd6a46efe478fe81d31e28933}{Audio}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_aafe72876a584aedb5a5546d4fe7746fb}{Asset\+Manager}}
+\item 
+{\footnotesize template$<$typename T\+Asset $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ T\+Asset $>$ \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_ac8ed677720e0a948a793d7e0163780ac}{Asset\+::\+Instantiate\+Asset}} (const sgstring \&file\+Path, bool is\+Register\+Shared\+Asset)
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_ab88f20799f576251765bfa2001d8d90c}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_ab88f20799f576251765bfa2001d8d90c}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!````~AudioAssetEffect3D@{$\sim$AudioAssetEffect3D}}
+\index{````~AudioAssetEffect3D@{$\sim$AudioAssetEffect3D}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{$\sim$AudioAssetEffect3D()}{~AudioAssetEffect3D()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::$\sim$\+Audio\+Asset\+Effect3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a0e91a2002324730a9dcff40796cdc135}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a0e91a2002324730a9dcff40796cdc135}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!Close@{Close}}
+\index{Close@{Close}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_asset_aafc7e6f4123fd328d2e37a5bf5dad41d}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Asset}}を実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a804da698f5647189dfade41573b66c5b}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a804da698f5647189dfade41573b66c5b}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!getEmitter@{getEmitter}}
+\index{getEmitter@{getEmitter}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{getEmitter()}{getEmitter()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const X3\+D\+A\+U\+D\+I\+O\+\_\+\+E\+M\+I\+T\+T\+ER\& S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::get\+Emitter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a79c2d070028da78f3053d33b3f0e3e07}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a79c2d070028da78f3053d33b3f0e3e07}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!getType@{getType}}
+\index{getType@{getType}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{Asset\+::\+Asset\+Type}} S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_asset_ac34501a9b8fbcc63400ca9e25c906efd}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Asset}}を実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a7f8dfe6bef02bf7a201a6eb5b8b594f3}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a7f8dfe6bef02bf7a201a6eb5b8b594f3}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!ManualSetCurve@{ManualSetCurve}}
+\index{ManualSetCurve@{ManualSetCurve}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{ManualSetCurve()}{ManualSetCurve()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::\+Manual\+Set\+Curve (\begin{DoxyParamCaption}\item[{X3\+D\+A\+U\+D\+I\+O\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+C\+U\+R\+VE $\ast$}]{volume\+Curve = {\ttfamily nullptr},  }\item[{X3\+D\+A\+U\+D\+I\+O\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+C\+U\+R\+VE $\ast$}]{lfe\+Curve = {\ttfamily nullptr},  }\item[{X3\+D\+A\+U\+D\+I\+O\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+C\+U\+R\+VE $\ast$}]{lpf\+Direct\+Curve = {\ttfamily nullptr},  }\item[{X3\+D\+A\+U\+D\+I\+O\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+C\+U\+R\+VE $\ast$}]{lpf\+Revert\+Curve = {\ttfamily nullptr},  }\item[{X3\+D\+A\+U\+D\+I\+O\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+C\+U\+R\+VE $\ast$}]{reverb\+Curve = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a6af72ba047a0421bc0d688f161bf4f26}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a6af72ba047a0421bc0d688f161bf4f26}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!Open@{Open}}
+\index{Open@{Open}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::\+Open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer}{Audio\+::\+Submix\+Layer}} $>$}]{submix\+Layer = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_audio_a2a6c4f64a1817146ef584f19d44adca4}{Audio\+::submix\+Monoral\+Root\+Layer}}()},  }\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{amount\+Of\+Source = {\ttfamily 1},  }\item[{float}]{playback\+Interval = {\ttfamily 0.0f},  }\item[{float}]{inner\+Radius = {\ttfamily 0.0f},  }\item[{float}]{inner\+Radius\+Angle = {\ttfamily 0.0f},  }\item[{float}]{curve\+Distance\+Scaler = {\ttfamily 50.0f},  }\item[{float}]{doppler\+Scaler = {\ttfamily 50.0f},  }\item[{float}]{set\+Play\+Begin\+Seconds = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a4b5883de7cb1c5357cd3ca4bcb189f91}{c\+Default}}},  }\item[{float}]{set\+Loop\+Begin\+Seconds = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a4b5883de7cb1c5357cd3ca4bcb189f91}{c\+Default}}},  }\item[{float}]{set\+Play\+End\+Seconds = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a4b5883de7cb1c5357cd3ca4bcb189f91}{c\+Default}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_aa82361b8ee8dec9df2cc030aaa774b60}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_aa82361b8ee8dec9df2cc030aaa774b60}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!Play@{Play}}
+\index{Play@{Play}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{Play()}{Play()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::\+Play (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{velocity\+Per\+Sec,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_quaternion}{Quaternion}} \&}]{rotation,  }\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{loop\+Count = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a0f8ec64e193d1fe297d94fceb7e94f72}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a0f8ec64e193d1fe297d94fceb7e94f72}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!Play@{Play}}
+\index{Play@{Play}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{Play()}{Play()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::\+Play (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{velocity\+Per\+Sec,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{forward,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{up,  }\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{loop\+Count = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a292e941eaac19dcb8fac7a0aad6917c6}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a292e941eaac19dcb8fac7a0aad6917c6}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!Reload@{Reload}}
+\index{Reload@{Reload}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{Reload()}{Reload()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::\+Reload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_asset_a413eae58644e5c6a4c9b6a4924e3f422}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Asset}}を実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a857b545acd553252fbcd0f410da2da7d}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a857b545acd553252fbcd0f410da2da7d}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!Reset3DInformation@{Reset3DInformation}}
+\index{Reset3DInformation@{Reset3DInformation}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{Reset3DInformation()}{Reset3DInformation()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::\+Reset3\+D\+Information (\begin{DoxyParamCaption}\item[{float}]{inner\+Radius = {\ttfamily 0.0f},  }\item[{float}]{inner\+Radius\+Angle = {\ttfamily 0.0f},  }\item[{float}]{curve\+Distance\+Scaler = {\ttfamily 50.0f},  }\item[{float}]{doppler\+Scaler = {\ttfamily 50.0f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a0d64ac83e0ae207e810905c109a0e7fd}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a0d64ac83e0ae207e810905c109a0e7fd}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!ResetCalculateFlag@{ResetCalculateFlag}}
+\index{ResetCalculateFlag@{ResetCalculateFlag}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{ResetCalculateFlag()}{ResetCalculateFlag()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::\+Reset\+Calculate\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a6b090c170d8ebd84248dc034885d9bf6}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a6b090c170d8ebd84248dc034885d9bf6}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!ResetChannelInfomation@{ResetChannelInfomation}}
+\index{ResetChannelInfomation@{ResetChannelInfomation}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{ResetChannelInfomation()}{ResetChannelInfomation()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::\+Reset\+Channel\+Infomation (\begin{DoxyParamCaption}\item[{float}]{channel\+Radius = {\ttfamily 0.0f},  }\item[{float $\ast$}]{channel\+Azimuths = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a36062aaa19148fec122f6ba2c57b39b2}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a36062aaa19148fec122f6ba2c57b39b2}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!ResetCone@{ResetCone}}
+\index{ResetCone@{ResetCone}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{ResetCone()}{ResetCone()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::\+Reset\+Cone (\begin{DoxyParamCaption}\item[{X3\+D\+A\+U\+D\+I\+O\+\_\+\+C\+O\+NE $\ast$}]{cone = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a38751d0fd1e94c76569a00d16ed6724e}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a38751d0fd1e94c76569a00d16ed6724e}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!Stop@{Stop}}
+\index{Stop@{Stop}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3\+D\+::\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_adfaf7b9de5c1f11ac9d9ea2069f62f9a}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset}}を実装しています。
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_ac8ed677720e0a948a793d7e0163780ac}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_ac8ed677720e0a948a793d7e0163780ac}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!Asset::InstantiateAsset@{Asset::InstantiateAsset}}
+\index{Asset::InstantiateAsset@{Asset::InstantiateAsset}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{Asset::InstantiateAsset}{Asset::InstantiateAsset}}
+{\footnotesize\ttfamily template$<$typename T\+Asset $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$T\+Asset$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_ad512f0eb01593582e1507de561c2f71f}{Asset\+::\+Instantiate\+Asset}} (\begin{DoxyParamCaption}\item[{const sgstring \&}]{file\+Path,  }\item[{bool}]{is\+Register\+Shared\+Asset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_aafe72876a584aedb5a5546d4fe7746fb}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_aafe72876a584aedb5a5546d4fe7746fb}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!AssetManager@{AssetManager}}
+\index{AssetManager@{AssetManager}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{AssetManager}{AssetManager}}
+{\footnotesize\ttfamily friend class Asset\+Manager\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a211f008bd6a46efe478fe81d31e28933}\label{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a211f008bd6a46efe478fe81d31e28933}} 
+\index{SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}!Audio@{Audio}}
+\index{Audio@{Audio}!SGFramework::Asset::AudioAssetEffect3D@{SGFramework::Asset::AudioAssetEffect3D}}
+\doxysubsubsection{\texorpdfstring{Audio}{Audio}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_audio}{Audio}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/06\+\_\+\+Audio/\+Audio\+Asset/\mbox{\hyperlink{_audio_asset_effect3_d_8hpp}{Audio\+Asset\+Effect3\+D.\+hpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/06\+\_\+\+Audio/\+Audio\+Asset/\mbox{\hyperlink{_audio_asset_effect3_d_8cpp}{Audio\+Asset\+Effect3\+D.\+cpp}}\end{DoxyCompactItemize}

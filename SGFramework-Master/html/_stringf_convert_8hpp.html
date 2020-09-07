@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/02_Variables/Stringf/StringfConvert.hpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_0cf03c12e51ae64724f6ec73d30b9672.html">02_Variables</a></li><li class="navelem"><a class="el" href="dir_0fb975916cc8324b1532f8bca5e3e213.html">Stringf</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">名前空間</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">StringfConvert.hpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;bitset&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &quot;<a class="el" href="_stringf_using_and_structure_8hpp_source.html">StringfUsingAndStructure.hpp</a>&quot;</code><br />
+<code>#include &quot;../MacroAndUsing/MacroAndUsing.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="_exception_8hpp_source.html">../Exception/Exception.hpp</a>&quot;</code><br />
+</div>
+<p><a href="_stringf_convert_8hpp_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+名前空間</h2></td></tr>
+<tr class="memitem:namespace_s_g_framework"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework.html">SGFramework</a></td></tr>
+<tr class="memdesc:namespace_s_g_framework"><td class="mdescLeft">&#160;</td><td class="mdescRight">SG-Framework namespace <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_s_g_framework_1_1stringf"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html">SGFramework::stringf</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:aa8d84f6874f644b0c4553d9b1c937e94"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa8d84f6874f644b0c4553d9b1c937e94"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#aa8d84f6874f644b0c4553d9b1c937e94">SGFramework::stringf::convert</a> (T source)</td></tr>
+<tr class="separator:aa8d84f6874f644b0c4553d9b1c937e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f3fe646fcd7db554b1ea7e460ff24d"><td class="memItemLeft" align="right" valign="top">string_w&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#ac6f3fe646fcd7db554b1ea7e460ff24d">SGFramework::stringf::convert</a> (const string_a &amp;source) noexcept</td></tr>
+<tr class="separator:ac6f3fe646fcd7db554b1ea7e460ff24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaef9240aa95bff7aa3ef184d3c4900e5"><td class="memItemLeft" align="right" valign="top">string_w&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#aaef9240aa95bff7aa3ef184d3c4900e5">SGFramework::stringf::convert</a> (const char *source) noexcept</td></tr>
+<tr class="separator:aaef9240aa95bff7aa3ef184d3c4900e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0463736b3a7d165865d7750ba2e2cdb6"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a0463736b3a7d165865d7750ba2e2cdb6"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a0463736b3a7d165865d7750ba2e2cdb6">SGFramework::stringf::convert&lt; char * &gt;</a> (char *source) noexcept</td></tr>
+<tr class="separator:a0463736b3a7d165865d7750ba2e2cdb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab694d54f264a90202541575c515bcdc0"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ab694d54f264a90202541575c515bcdc0"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#ab694d54f264a90202541575c515bcdc0">SGFramework::stringf::convert&lt; float &gt;</a> (float source)</td></tr>
+<tr class="separator:ab694d54f264a90202541575c515bcdc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce959207ad29a78e328a67818d56a06"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:abce959207ad29a78e328a67818d56a06"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#abce959207ad29a78e328a67818d56a06">SGFramework::stringf::convert&lt; double &gt;</a> (double source)</td></tr>
+<tr class="separator:abce959207ad29a78e328a67818d56a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e44d3c8fb132c8ea7ee1c23fb599fc0"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a9e44d3c8fb132c8ea7ee1c23fb599fc0"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a9e44d3c8fb132c8ea7ee1c23fb599fc0">SGFramework::stringf::convert&lt; bool &gt;</a> (bool source)</td></tr>
+<tr class="separator:a9e44d3c8fb132c8ea7ee1c23fb599fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d73d15ebb09e39f4c1a3820f68efe58"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a6d73d15ebb09e39f4c1a3820f68efe58"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a6d73d15ebb09e39f4c1a3820f68efe58">SGFramework::stringf::convert&lt; char &gt;</a> (char source)</td></tr>
+<tr class="separator:a6d73d15ebb09e39f4c1a3820f68efe58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a9c5d3d71c009223a60f43f956f6c4"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a37a9c5d3d71c009223a60f43f956f6c4"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a37a9c5d3d71c009223a60f43f956f6c4">SGFramework::stringf::convert&lt; uchar &gt;</a> (uchar source)</td></tr>
+<tr class="separator:a37a9c5d3d71c009223a60f43f956f6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a7c0b6c2388ca946851aa5e81756211"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a8a7c0b6c2388ca946851aa5e81756211"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a8a7c0b6c2388ca946851aa5e81756211">SGFramework::stringf::convert&lt; short &gt;</a> (short source)</td></tr>
+<tr class="separator:a8a7c0b6c2388ca946851aa5e81756211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726bc48ccf97164f865a0f2d197a6e08"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a726bc48ccf97164f865a0f2d197a6e08"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a726bc48ccf97164f865a0f2d197a6e08">SGFramework::stringf::convert&lt; ushort &gt;</a> (ushort source)</td></tr>
+<tr class="separator:a726bc48ccf97164f865a0f2d197a6e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9849ff3c266b35777a48dc5decac952"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ac9849ff3c266b35777a48dc5decac952"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#ac9849ff3c266b35777a48dc5decac952">SGFramework::stringf::convert&lt; wchar &gt;</a> (wchar source)</td></tr>
+<tr class="separator:ac9849ff3c266b35777a48dc5decac952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a499e76a8624b6df611212ca0ff3eb098"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a499e76a8624b6df611212ca0ff3eb098"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a499e76a8624b6df611212ca0ff3eb098">SGFramework::stringf::convert&lt; int &gt;</a> (int source)</td></tr>
+<tr class="separator:a499e76a8624b6df611212ca0ff3eb098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4888ce3b0f27d293e2bcc75fb2108abe"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a4888ce3b0f27d293e2bcc75fb2108abe"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a4888ce3b0f27d293e2bcc75fb2108abe">SGFramework::stringf::convert&lt; uint &gt;</a> (uint source)</td></tr>
+<tr class="separator:a4888ce3b0f27d293e2bcc75fb2108abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8316c507ae34ac15effcb5f001d106e"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ae8316c507ae34ac15effcb5f001d106e"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#ae8316c507ae34ac15effcb5f001d106e">SGFramework::stringf::convert&lt; long &gt;</a> (long source)</td></tr>
+<tr class="separator:ae8316c507ae34ac15effcb5f001d106e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e21da92ec38814c0bfe189ccf6ce502"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a2e21da92ec38814c0bfe189ccf6ce502"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a2e21da92ec38814c0bfe189ccf6ce502">SGFramework::stringf::convert&lt; ulong &gt;</a> (ulong source)</td></tr>
+<tr class="separator:a2e21da92ec38814c0bfe189ccf6ce502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa506211f41777b4c555ef81fb729e5e4"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:aa506211f41777b4c555ef81fb729e5e4"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#aa506211f41777b4c555ef81fb729e5e4">SGFramework::stringf::convert&lt; int64 &gt;</a> (int64 source)</td></tr>
+<tr class="separator:aa506211f41777b4c555ef81fb729e5e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36fc343b131028a669e672c02fd9d897"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a36fc343b131028a669e672c02fd9d897"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a36fc343b131028a669e672c02fd9d897">SGFramework::stringf::convert&lt; uint64 &gt;</a> (uint64 source)</td></tr>
+<tr class="separator:a36fc343b131028a669e672c02fd9d897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56770bc2b04e4a459ec04eca9995e0b8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a56770bc2b04e4a459ec04eca9995e0b8"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a56770bc2b04e4a459ec04eca9995e0b8">SGFramework::stringf::to_pointer</a> (T source)</td></tr>
+<tr class="separator:a56770bc2b04e4a459ec04eca9995e0b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f1267bc255943751e27dfd45710dd60"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5f1267bc255943751e27dfd45710dd60"><td class="memTemplItemLeft" align="right" valign="top">string_w&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a5f1267bc255943751e27dfd45710dd60">SGFramework::stringf::to_radix</a> (T source, radix::enum_radix radix)</td></tr>
+<tr class="separator:a5f1267bc255943751e27dfd45710dd60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a372d8897aec3d8553aa0ffcb607bc2b6"><td class="memItemLeft" align="right" valign="top">string_w&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a372d8897aec3d8553aa0ffcb607bc2b6">SGFramework::stringf::to_radix</a> (const string_w &amp;source, radix::enum_radix radix)</td></tr>
+<tr class="separator:a372d8897aec3d8553aa0ffcb607bc2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4afe044a8b7d1ff44841a8771a5882cd"><td class="memItemLeft" align="right" valign="top">string_w&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a4afe044a8b7d1ff44841a8771a5882cd">SGFramework::stringf::to_radix</a> (wchar *source, radix::enum_radix radix)</td></tr>
+<tr class="separator:a4afe044a8b7d1ff44841a8771a5882cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78b56dd3222080d7cf6d2126a5b6e029"><td class="memItemLeft" align="right" valign="top">string_w&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1stringf.html#a78b56dd3222080d7cf6d2126a5b6e029">SGFramework::stringf::to_radix</a> (const wchar *source, radix::enum_radix radix)</td></tr>
+<tr class="separator:a78b56dd3222080d7cf6d2126a5b6e029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

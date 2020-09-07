@@ -1,0 +1,43 @@
+\hypertarget{_asset_manager_8hpp}{}\doxysection{S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/04\+\_\+\+Asset/\+Asset\+Manager.hpp ファイル}
+\label{_asset_manager_8hpp}\index{SGFramework-\/Master\_ToExe/04\_Asset/AssetManager.hpp@{SGFramework-\/Master\_ToExe/04\_Asset/AssetManager.hpp}}
+{\ttfamily \#include $<$Windows.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include \char`\"{}../02\+\_\+\+Custom\+Variable/\+Custom\+Variable.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Asset/\+Text\+Asset.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Asset/\+Binary\+Asset.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}File\+R\+W/\+File\+R\+W.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}File\+Stream/\+File\+Stream.\+hpp\char`\"{}}\newline
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_asset_manager}{S\+G\+Framework\+::\+Administrator\+::\+Asset\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework}{S\+G\+Framework}}
+\begin{DoxyCompactList}\small\item\em S\+G-\/\+Framework namespace \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_administrator}{S\+G\+Framework\+::\+Administrator}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_administrator_1_1_graphics_detail}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_asset}{S\+G\+Framework\+::\+Asset}}
+\end{DoxyCompactItemize}
+\doxysubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_aabc86fb55a25e8d41ad754c3b8dc33b6}{S\+G\+Framework\+::\+Asset\+::\+Vertex\+Shader\+Asset}} = Administrator\+::\+Graphics\+Detail\+::\+Vertex\+Shader\+Asset\+X11
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_a5f7bfbc4a9121619c35a5eeea791b8fb}{S\+G\+Framework\+::\+Asset\+::\+Pixel\+Shader\+Asset}} = Administrator\+::\+Graphics\+Detail\+::\+Pixel\+Shader\+Asset\+X11
+\item 
+using \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_a9101b8d4ba2ee3b1308046d03311ed2c}{S\+G\+Framework\+::\+Asset\+::\+Texture\+Asset}} = Administrator\+::\+Graphics\+Detail\+::\+Texture\+Asset\+X11
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\+Asset $>$ }\\Asset\+Type \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_acfcbac06941930658c15c3c6e8246df8}{S\+G\+Framework\+::\+Asset\+::\+Find\+Asset\+Type}} ()
+\item 
+{\footnotesize template$<$typename T\+Asset $>$ }\\Shared\+Pointer$<$ T\+Asset $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_ad512f0eb01593582e1507de561c2f71f}{S\+G\+Framework\+::\+Asset\+::\+Instantiate\+Asset}} (const sgstring \&file\+Path, bool is\+Register\+Shared\+Asset)
+\end{DoxyCompactItemize}

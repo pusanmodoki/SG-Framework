@@ -1,0 +1,903 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework::BaseClass::BaseAudioSEAsset クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_s_g_framework.html">SGFramework</a></li><li class="navelem"><a class="el" href="namespace_s_g_framework_1_1_base_class.html">BaseClass</a></li><li class="navelem"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html">BaseAudioSEAsset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">SGFramework::BaseClass::BaseAudioSEAsset クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_audio_asset_8hpp_source.html">AudioAsset.hpp</a>&gt;</code></p>
+<div class="dynheader">
+SGFramework::BaseClass::BaseAudioSEAsset の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.png" usemap="#SGFramework::BaseClass::BaseAudioSEAsset_map" alt=""/>
+  <map id="SGFramework::BaseClass::BaseAudioSEAsset_map" name="SGFramework::BaseClass::BaseAudioSEAsset_map">
+<area href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html" alt="SGFramework::BaseClass::BaseAudioAsset" shape="rect" coords="140,112,411,136"/>
+<area href="class_s_g_framework_1_1_base_class_1_1_base_asset.html" alt="SGFramework::BaseClass::BaseAsset" shape="rect" coords="140,56,411,80"/>
+<area href="class_s_g_framework_1_1_object.html" alt="SGFramework::Object" shape="rect" coords="140,0,411,24"/>
+<area href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html" alt="SGFramework::Asset::AudioAssetEffect" shape="rect" coords="0,224,271,248"/>
+<area href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d.html" alt="SGFramework::Asset::AudioAssetEffect3D" shape="rect" coords="281,224,552,248"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:af07b48b87e4b30c61438ca04e4860edf"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#af07b48b87e4b30c61438ca04e4860edf">setPlayBackSpeed</a> (float magnification) override</td></tr>
+<tr class="separator:af07b48b87e4b30c61438ca04e4860edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a767cbb3bb9c0c2a47410a775ac862830"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a767cbb3bb9c0c2a47410a775ac862830">setVolume</a> (float magnification) override</td></tr>
+<tr class="separator:a767cbb3bb9c0c2a47410a775ac862830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cca45920749598c351fc4183f6e738f"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY IXAudio2SourceVoice *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a6cca45920749598c351fc4183f6e738f">getSubVoice</a> (<a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index) const</td></tr>
+<tr class="separator:a6cca45920749598c351fc4183f6e738f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a231e2ea00bea1240332ec5e6135bde87"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a231e2ea00bea1240332ec5e6135bde87">getNumSubVoices</a> () const</td></tr>
+<tr class="separator:a231e2ea00bea1240332ec5e6135bde87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5472248644f9e39c975a6315240277b"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#ac5472248644f9e39c975a6315240277b">getSubVoiceBegin</a> () const</td></tr>
+<tr class="separator:ac5472248644f9e39c975a6315240277b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa140794132055315dfa3c901f132ae38"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#aa140794132055315dfa3c901f132ae38">getSubVoiceEnd</a> () const</td></tr>
+<tr class="separator:aa140794132055315dfa3c901f132ae38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html">SGFramework::BaseClass::BaseAudioAsset</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:adfaf7b9de5c1f11ac9d9ea2069f62f9a inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#adfaf7b9de5c1f11ac9d9ea2069f62f9a">Stop</a> ()=0</td></tr>
+<tr class="separator:adfaf7b9de5c1f11ac9d9ea2069f62f9a inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a7bc3924d9a9257a53e944801a8a3f inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#af3a7bc3924d9a9257a53e944801a8a3f">ChangeSpeedSmoothly</a> (float target, float seconds, bool isStop=false)</td></tr>
+<tr class="separator:af3a7bc3924d9a9257a53e944801a8a3f inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5afb71dbf96dab226fcb8c1824051311 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a5afb71dbf96dab226fcb8c1824051311">ChangeVolumeSmoothly</a> (float target, float seconds, bool isStop=false)</td></tr>
+<tr class="separator:a5afb71dbf96dab226fcb8c1824051311 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f82a5fd5288a821a8e791798986a0d3 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a1f82a5fd5288a821a8e791798986a0d3">getPlayBackSpeed</a> ()</td></tr>
+<tr class="separator:a1f82a5fd5288a821a8e791798986a0d3 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f2b677c0d771b239b74e93aaf080c50 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a7f2b677c0d771b239b74e93aaf080c50">getVolume</a> ()</td></tr>
+<tr class="separator:a7f2b677c0d771b239b74e93aaf080c50 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f5e55d0e8a79624f9c672c8bb379c35 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY IXAudio2SourceVoice *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a6f5e55d0e8a79624f9c672c8bb379c35">getVoice</a> () const</td></tr>
+<tr class="separator:a6f5e55d0e8a79624f9c672c8bb379c35 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html">SGFramework::BaseClass::BaseAsset</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a715198c8cdf484b64784d3065dc5cdcd inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a715198c8cdf484b64784d3065dc5cdcd">~BaseAsset</a> ()</td></tr>
+<tr class="separator:a715198c8cdf484b64784d3065dc5cdcd inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a413eae58644e5c6a4c9b6a4924e3f422 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a413eae58644e5c6a4c9b6a4924e3f422">Reload</a> ()=0</td></tr>
+<tr class="separator:a413eae58644e5c6a4c9b6a4924e3f422 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc7e6f4123fd328d2e37a5bf5dad41d inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#aafc7e6f4123fd328d2e37a5bf5dad41d">Close</a> ()=0</td></tr>
+<tr class="separator:aafc7e6f4123fd328d2e37a5bf5dad41d inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a891c787e766a46d356f7f89be803609d inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a891c787e766a46d356f7f89be803609d">WaitLoading</a> (float timeOutSeconds=15.0f)</td></tr>
+<tr class="separator:a891c787e766a46d356f7f89be803609d inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac34501a9b8fbcc63400ca9e25c906efd inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">virtual SGF_FUNCTION_PROPERTY <a class="el" href="namespace_s_g_framework_1_1_asset.html#adda3675d35f5e7dcea0dd7e6955d97da">Asset::AssetType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#ac34501a9b8fbcc63400ca9e25c906efd">getType</a> ()=0</td></tr>
+<tr class="separator:ac34501a9b8fbcc63400ca9e25c906efd inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14fb449040ba6d20357f0288ada5072a inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a14fb449040ba6d20357f0288ada5072a">getIsFileOpened</a> () const</td></tr>
+<tr class="separator:a14fb449040ba6d20357f0288ada5072a inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a946cf96de7ccc5e63a314f289d21eed5 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a946cf96de7ccc5e63a314f289d21eed5">getIsOpenFailed</a> () const</td></tr>
+<tr class="separator:a946cf96de7ccc5e63a314f289d21eed5 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c156515995201d9cccf2284164d7df2 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a3c156515995201d9cccf2284164d7df2">getIsSharedAsset</a> () const</td></tr>
+<tr class="separator:a3c156515995201d9cccf2284164d7df2 inherit pub_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_s_g_framework_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_s_g_framework_1_1_object')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_object.html">SGFramework::Object</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ab10d7c569fa77c42ba803a2b51ccbe67 inherit pub_methods_class_s_g_framework_1_1_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#ab10d7c569fa77c42ba803a2b51ccbe67">Object</a> (const sgstring &amp;<a class="el" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>)</td></tr>
+<tr class="separator:ab10d7c569fa77c42ba803a2b51ccbe67 inherit pub_methods_class_s_g_framework_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f1289a7cb67b6f686725d788bc340b inherit pub_methods_class_s_g_framework_1_1_object"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#ae5f1289a7cb67b6f686725d788bc340b">~Object</a> ()</td></tr>
+<tr class="separator:ae5f1289a7cb67b6f686725d788bc340b inherit pub_methods_class_s_g_framework_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b31786505026403364e9ec5e7ba46df inherit pub_methods_class_s_g_framework_1_1_object"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a0b31786505026403364e9ec5e7ba46df">setName</a> (const sgstring &amp;<a class="el" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>)</td></tr>
+<tr class="separator:a0b31786505026403364e9ec5e7ba46df inherit pub_methods_class_s_g_framework_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529acf8232e115276a51d2fc562e95bb inherit pub_methods_class_s_g_framework_1_1_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a529acf8232e115276a51d2fc562e95bb">operator==</a> (const <a class="el" href="class_s_g_framework_1_1_object.html">Object</a> &amp;obj)</td></tr>
+<tr class="separator:a529acf8232e115276a51d2fc562e95bb inherit pub_methods_class_s_g_framework_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6642b24b7403676e5980452be06629f7 inherit pub_methods_class_s_g_framework_1_1_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a6642b24b7403676e5980452be06629f7">operator!=</a> (const <a class="el" href="class_s_g_framework_1_1_object.html">Object</a> &amp;obj)</td></tr>
+<tr class="separator:a6642b24b7403676e5980452be06629f7 inherit pub_methods_class_s_g_framework_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:aa5f926feaf92b494b185217e273e18dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#aa5f926feaf92b494b185217e273e18dd">amountOfSource</a></td></tr>
+<tr class="separator:aa5f926feaf92b494b185217e273e18dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88073e022f8a341b09b3fdbe87921750"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a88073e022f8a341b09b3fdbe87921750">playbackInterval</a></td></tr>
+<tr class="separator:a88073e022f8a341b09b3fdbe87921750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html">SGFramework::BaseClass::BaseAudioAsset</a> に属する継承公開変数類</td></tr>
+<tr class="memitem:abd5d2dde891032ad3e8bee12033396df inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#abd5d2dde891032ad3e8bee12033396df">audioSeconds</a></td></tr>
+<tr class="separator:abd5d2dde891032ad3e8bee12033396df inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a665e23bf28efb9bae34569269554e inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a77a665e23bf28efb9bae34569269554e">playBeginSeconds</a></td></tr>
+<tr class="separator:a77a665e23bf28efb9bae34569269554e inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a484b5f0040e0d309e94c2db4f8b94 inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a42a484b5f0040e0d309e94c2db4f8b94">loopBeginSeconds</a></td></tr>
+<tr class="separator:a42a484b5f0040e0d309e94c2db4f8b94 inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d3806511ccd42f99a51bb77917637d inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#ab9d3806511ccd42f99a51bb77917637d">playEndSeconds</a></td></tr>
+<tr class="separator:ab9d3806511ccd42f99a51bb77917637d inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed2c1f1f895d5979c3ea6182fc156d96 inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#aed2c1f1f895d5979c3ea6182fc156d96">sourceSampleRate</a></td></tr>
+<tr class="separator:aed2c1f1f895d5979c3ea6182fc156d96 inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a473831ebf048fd486915d7ef1caa5d56 inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a473831ebf048fd486915d7ef1caa5d56">channels</a></td></tr>
+<tr class="separator:a473831ebf048fd486915d7ef1caa5d56 inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c2b033abdb93ecd2a6225edad75008 inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a19c2b033abdb93ecd2a6225edad75008">submixLayerID</a></td></tr>
+<tr class="separator:a19c2b033abdb93ecd2a6225edad75008 inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_asset"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_asset')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html">SGFramework::BaseClass::BaseAsset</a> に属する継承公開変数類</td></tr>
+<tr class="memitem:aa49acaa318c7e13fff3fbe7f9a571191 inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="class_s_g_framework_1_1_file_time.html">FileTime</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#aa49acaa318c7e13fff3fbe7f9a571191">lastWriteTime</a> = m_lastWriteTime</td></tr>
+<tr class="separator:aa49acaa318c7e13fff3fbe7f9a571191 inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89387ee505c8593ecabf28758769b0e8 inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="struct_s_g_framework_1_1_base_class_1_1_base_asset_1_1_file_size_with.html">FileSizeWith</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a89387ee505c8593ecabf28758769b0e8">fileSizes</a> = m_fileSize</td></tr>
+<tr class="separator:a89387ee505c8593ecabf28758769b0e8 inherit pub_attribs_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_s_g_framework_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_s_g_framework_1_1_object')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_object.html">SGFramework::Object</a> に属する継承公開変数類</td></tr>
+<tr class="memitem:a81c886cd57a3c42b7e2ed81c0ad978f5 inherit pub_attribs_class_s_g_framework_1_1_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; sgstring &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a></td></tr>
+<tr class="separator:a81c886cd57a3c42b7e2ed81c0ad978f5 inherit pub_attribs_class_s_g_framework_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ea7385b13efc6b88990c394bb0b8b2 inherit pub_attribs_class_s_g_framework_1_1_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#aa4ea7385b13efc6b88990c394bb0b8b2">instanceID</a></td></tr>
+<tr class="separator:aa4ea7385b13efc6b88990c394bb0b8b2 inherit pub_attribs_class_s_g_framework_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae3f684102926267b8db33dce8ebdbde0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#ae3f684102926267b8db33dce8ebdbde0">BaseAudioSEAsset</a> ()</td></tr>
+<tr class="separator:ae3f684102926267b8db33dce8ebdbde0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8edcd869381cbf2b2abd09f065e33de7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a8edcd869381cbf2b2abd09f065e33de7">LoadFile</a> (const <a class="el" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer</a>&lt; <a class="el" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html">Audio::SubmixLayer</a> &gt; &amp;submixLayer=<a class="el" href="class_s_g_framework_1_1_audio.html#a46e4687ffaa8cfaf89c77cb16e16a5b4">Audio::submixRootLayer</a>(), <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#aa5f926feaf92b494b185217e273e18dd">amountOfSource</a>=1, float <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a88073e022f8a341b09b3fdbe87921750">playbackInterval</a>=0.0f, float setPlayBeginSeconds=<a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a4b5883de7cb1c5357cd3ca4bcb189f91">cDefault</a>, float setLoopBeginSeconds=<a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a4b5883de7cb1c5357cd3ca4bcb189f91">cDefault</a>, float setPlayEndSeconds=<a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a4b5883de7cb1c5357cd3ca4bcb189f91">cDefault</a>)</td></tr>
+<tr class="separator:a8edcd869381cbf2b2abd09f065e33de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2995a7e5cd71449abeb32b32facc06e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a2995a7e5cd71449abeb32b32facc06e5">ReleaseBaseVoice</a> ()</td></tr>
+<tr class="separator:a2995a7e5cd71449abeb32b32facc06e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a4d16014714a5f23590132c105be7e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a81a4d16014714a5f23590132c105be7e">FindChunk</a> (const HANDLE hFile, const DWORD fourcc, DWORD &amp;dwChunkSize, DWORD &amp;dwChunkDataPosition)</td></tr>
+<tr class="separator:a81a4d16014714a5f23590132c105be7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74cc216bee7f709dbf48c27b3650cfa6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a74cc216bee7f709dbf48c27b3650cfa6">ReadChunkData</a> (const HANDLE hFile, void *buffer, const DWORD buffersize, const DWORD bufferoffset)</td></tr>
+<tr class="separator:a74cc216bee7f709dbf48c27b3650cfa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html">SGFramework::BaseClass::BaseAudioAsset</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:af30a67d11d5470eff54fba9a4faf0536 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#af30a67d11d5470eff54fba9a4faf0536">BaseAudioAsset</a> ()</td></tr>
+<tr class="separator:af30a67d11d5470eff54fba9a4faf0536 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html">SGFramework::BaseClass::BaseAsset</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:ac18d51c37ce9a4b44bf89ddcf740fd59 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#ac18d51c37ce9a4b44bf89ddcf740fd59">BaseAsset</a> ()</td></tr>
+<tr class="separator:ac18d51c37ce9a4b44bf89ddcf740fd59 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8160865d93e19492af47f0e45fc8af81 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a8160865d93e19492af47f0e45fc8af81">OpenBaseAsset</a> ()</td></tr>
+<tr class="separator:a8160865d93e19492af47f0e45fc8af81 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96a65614b06ae963b10f23fcebab052 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#ae96a65614b06ae963b10f23fcebab052">ReloadBaseAsset</a> ()</td></tr>
+<tr class="separator:ae96a65614b06ae963b10f23fcebab052 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac23b03144611d5fa2985ec28124af337 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#ac23b03144611d5fa2985ec28124af337">CloseBaseAsset</a> (<a class="el" href="namespace_s_g_framework_1_1_asset.html#adda3675d35f5e7dcea0dd7e6955d97da">Asset::AssetType</a> type, bool isDestructor)</td></tr>
+<tr class="separator:ac23b03144611d5fa2985ec28124af337 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5650811ccaad120836db755b5c3e5c9 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">sgstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#aa5650811ccaad120836db755b5c3e5c9">ExtractionForObjectName</a> ()</td></tr>
+<tr class="separator:aa5650811ccaad120836db755b5c3e5c9 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8f89a6870c68449e49774470b29579 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a3a8f89a6870c68449e49774470b29579">setIsOpenFailed</a> (bool set)</td></tr>
+<tr class="separator:a3a8f89a6870c68449e49774470b29579 inherit pro_methods_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a4443718f6f388c2b8cf047a93cc22446"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_s_g_framework_1_1_com_wear_function.html">ComWearFunction</a>&lt; IXAudio2SourceVoice &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a4443718f6f388c2b8cf047a93cc22446">m_subVoices</a></td></tr>
+<tr class="separator:a4443718f6f388c2b8cf047a93cc22446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb57db0c44529b37b85f16a0f9862a9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_com_wear_delete.html">ComWearDelete</a>&lt; <a class="el" href="namespace_s_g_framework.html#a351e615f70cf2b6741809c2ed21c4530">byte</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#acb57db0c44529b37b85f16a0f9862a9a">m_buffer</a> = nullptr</td></tr>
+<tr class="separator:acb57db0c44529b37b85f16a0f9862a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7685955111c79ee09aae7c5db23de827"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_com_wear_delete.html">ComWearDelete</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a7685955111c79ee09aae7c5db23de827">m_x3dBuffer</a> = nullptr</td></tr>
+<tr class="separator:a7685955111c79ee09aae7c5db23de827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af76930237ffefb295558add4c3d1f45b"><td class="memItemLeft" align="right" valign="top">XAUDIO2_BUFFER&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#af76930237ffefb295558add4c3d1f45b">m_bufferInfo</a> = {}</td></tr>
+<tr class="separator:af76930237ffefb295558add4c3d1f45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af200932e047617f0f4acd0e15e4d7b6b"><td class="memItemLeft" align="right" valign="top">XAUDIO2_VOICE_STATE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#af200932e047617f0f4acd0e15e4d7b6b">m_state</a> = {}</td></tr>
+<tr class="separator:af200932e047617f0f4acd0e15e4d7b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9de51367f71c5e8e8138facd20510e27"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a9de51367f71c5e8e8138facd20510e27">m_playbackInterval</a> = 0.0f</td></tr>
+<tr class="separator:a9de51367f71c5e8e8138facd20510e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af392f22e17ac778bbbe6f39bae96b2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a7af392f22e17ac778bbbe6f39bae96b2">m_playElapased</a> = 0.0f</td></tr>
+<tr class="separator:a7af392f22e17ac778bbbe6f39bae96b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a772caf5c8292a1212130d56772aa4954"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a772caf5c8292a1212130d56772aa4954">m_amountOfSource</a> = 0</td></tr>
+<tr class="separator:a772caf5c8292a1212130d56772aa4954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a199994a8a228ac8d6c047519f44e74"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a2a199994a8a228ac8d6c047519f44e74">m_useVoice</a> = -1</td></tr>
+<tr class="separator:a2a199994a8a228ac8d6c047519f44e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae805a4fa23d4071a1de9256fc1df6ac8"><td class="memItemLeft" align="right" valign="top">std::atomic_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#ae805a4fa23d4071a1de9256fc1df6ac8">m_lock</a> = false</td></tr>
+<tr class="separator:ae805a4fa23d4071a1de9256fc1df6ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html">SGFramework::BaseClass::BaseAudioAsset</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:ab4eb8653604ef9484680379e1b8f5335 inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_com_wear_function.html">ComWearFunction</a>&lt; IXAudio2SourceVoice &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#ab4eb8653604ef9484680379e1b8f5335">m_voice</a></td></tr>
+<tr class="separator:ab4eb8653604ef9484680379e1b8f5335 inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636dfd0fd716296780c90de752bf0163 inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a636dfd0fd716296780c90de752bf0163">m_audioSeconds</a> = 0.0f</td></tr>
+<tr class="separator:a636dfd0fd716296780c90de752bf0163 inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6bb8e9a21b5efe72df94c9ac751fc48 inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#af6bb8e9a21b5efe72df94c9ac751fc48">m_playBeginSeconds</a> = 0.0f</td></tr>
+<tr class="separator:af6bb8e9a21b5efe72df94c9ac751fc48 inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7721a19483b57c780199dabc7a10aed inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#ac7721a19483b57c780199dabc7a10aed">m_loopBeginSeconds</a> = 0.0f</td></tr>
+<tr class="separator:ac7721a19483b57c780199dabc7a10aed inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb75919767e3979eb20668f3f53dc17c inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#acb75919767e3979eb20668f3f53dc17c">m_playEndSeconds</a> = 0.0f</td></tr>
+<tr class="separator:acb75919767e3979eb20668f3f53dc17c inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac427b51f23604b6b0742c1de55ddac3a inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#ac427b51f23604b6b0742c1de55ddac3a">m_sourceSampleRate</a> = 0</td></tr>
+<tr class="separator:ac427b51f23604b6b0742c1de55ddac3a inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a756e66ac02750dc58ee9e5aaae549bdf inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a756e66ac02750dc58ee9e5aaae549bdf">m_channels</a> = 0</td></tr>
+<tr class="separator:a756e66ac02750dc58ee9e5aaae549bdf inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c6e8aaca3f10217e5c2f537e50a4f7 inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a09c6e8aaca3f10217e5c2f537e50a4f7">m_submixLayerID</a> = 0</td></tr>
+<tr class="separator:a09c6e8aaca3f10217e5c2f537e50a4f7 inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_asset"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_asset')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html">SGFramework::BaseClass::BaseAsset</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a59ffb20abb34c45d5eaa801392cbe31c inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer</a>&lt; <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html">BaseAsset</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a59ffb20abb34c45d5eaa801392cbe31c">m_thisPointer</a></td></tr>
+<tr class="separator:a59ffb20abb34c45d5eaa801392cbe31c inherit pro_attribs_class_s_g_framework_1_1_base_class_1_1_base_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_s_g_framework_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_s_g_framework_1_1_object')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_object.html">SGFramework::Object</a> に属する継承静的公開メンバ関数</td></tr>
+<tr class="memitem:a243756d4135d84499f1031a79ceb68a1 inherit pub_static_methods_class_s_g_framework_1_1_object"><td class="memItemLeft" align="right" valign="top">static SGF_FUNCTION_PROPERTY <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a243756d4135d84499f1031a79ceb68a1">getNumTotaleInstantiateObjects</a> ()</td></tr>
+<tr class="separator:a243756d4135d84499f1031a79ceb68a1 inherit pub_static_methods_class_s_g_framework_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a0ff5173fe2e73571e27214ff744bd inherit pub_static_methods_class_s_g_framework_1_1_object"><td class="memItemLeft" align="right" valign="top">static SGF_FUNCTION_PROPERTY <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a40a0ff5173fe2e73571e27214ff744bd">getNumNowTotaleInstantiateObjects</a> ()</td></tr>
+<tr class="separator:a40a0ff5173fe2e73571e27214ff744bd inherit pub_static_methods_class_s_g_framework_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb3a845f9d607c22d41739965f3c6418 inherit pub_static_methods_class_s_g_framework_1_1_object"><td class="memTemplParams" colspan="2">template&lt;class Left , class Right &gt; </td></tr>
+<tr class="memitem:adb3a845f9d607c22d41739965f3c6418 inherit pub_static_methods_class_s_g_framework_1_1_object"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#adb3a845f9d607c22d41739965f3c6418">IsEqualPointer</a> (const Left &amp;left, const Right &amp;right)</td></tr>
+<tr class="separator:adb3a845f9d607c22d41739965f3c6418 inherit pub_static_methods_class_s_g_framework_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb82cd6ef915c5fd1d3343c71b7cec1e inherit pub_static_methods_class_s_g_framework_1_1_object"><td class="memTemplParams" colspan="2">template&lt;class Left , class Right &gt; </td></tr>
+<tr class="memitem:acb82cd6ef915c5fd1d3343c71b7cec1e inherit pub_static_methods_class_s_g_framework_1_1_object"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#acb82cd6ef915c5fd1d3343c71b7cec1e">IsNotEqualPointer</a> (const Left &amp;left, const Right &amp;right)</td></tr>
+<tr class="separator:acb82cd6ef915c5fd1d3343c71b7cec1e inherit pub_static_methods_class_s_g_framework_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html">SGFramework::BaseClass::BaseAudioAsset</a> に属する継承静的公開変数類</td></tr>
+<tr class="memitem:a4b5883de7cb1c5357cd3ca4bcb189f91 inherit pub_static_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a4b5883de7cb1c5357cd3ca4bcb189f91">cDefault</a> = -1</td></tr>
+<tr class="separator:a4b5883de7cb1c5357cd3ca4bcb189f91 inherit pub_static_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_methods_class_s_g_framework_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_class_s_g_framework_1_1_object')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_object.html">SGFramework::Object</a> に属する継承静的限定公開メンバ関数</td></tr>
+<tr class="memitem:a9adfd87f8eb2fc4e24efef4ba5a90d02 inherit pro_static_methods_class_s_g_framework_1_1_object"><td class="memItemLeft" align="right" valign="top">static sgstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a9adfd87f8eb2fc4e24efef4ba5a90d02">CreateCopyName</a> (const sgstring &amp;<a class="el" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>)</td></tr>
+<tr class="separator:a9adfd87f8eb2fc4e24efef4ba5a90d02 inherit pro_static_methods_class_s_g_framework_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html">SGFramework::BaseClass::BaseAudioAsset</a> に属する継承静的限定公開変数類</td></tr>
+<tr class="memitem:a418ebcc09198e9f61aea3d86bb20dded inherit pro_static_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a418ebcc09198e9f61aea3d86bb20dded">m_cBaseFlagPublicState</a> = 0</td></tr>
+<tr class="separator:a418ebcc09198e9f61aea3d86bb20dded inherit pro_static_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb6c341053c2ba9ee76f0168ab4eecb2 inherit pro_static_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#abb6c341053c2ba9ee76f0168ab4eecb2">m_cBaseFlagPrivateState</a> = 1</td></tr>
+<tr class="separator:abb6c341053c2ba9ee76f0168ab4eecb2 inherit pro_static_attribs_class_s_g_framework_1_1_base_class_1_1_base_audio_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="ae3f684102926267b8db33dce8ebdbde0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3f684102926267b8db33dce8ebdbde0">&#9670;&nbsp;</a></span>BaseAudioSEAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SGFramework::BaseClass::BaseAudioSEAsset::BaseAudioSEAsset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a81a4d16014714a5f23590132c105be7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a4d16014714a5f23590132c105be7e">&#9670;&nbsp;</a></span>FindChunk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::BaseClass::BaseAudioSEAsset::FindChunk </td>
+          <td>(</td>
+          <td class="paramtype">const HANDLE&#160;</td>
+          <td class="paramname"><em>hFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DWORD&#160;</td>
+          <td class="paramname"><em>fourcc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD &amp;&#160;</td>
+          <td class="paramname"><em>dwChunkSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD &amp;&#160;</td>
+          <td class="paramname"><em>dwChunkDataPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a231e2ea00bea1240332ec5e6135bde87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a231e2ea00bea1240332ec5e6135bde87">&#9670;&nbsp;</a></span>getNumSubVoices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SGF_FUNCTION_PROPERTY <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> SGFramework::BaseClass::BaseAudioSEAsset::getNumSubVoices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6cca45920749598c351fc4183f6e738f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cca45920749598c351fc4183f6e738f">&#9670;&nbsp;</a></span>getSubVoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SGF_FUNCTION_PROPERTY IXAudio2SourceVoice* SGFramework::BaseClass::BaseAudioSEAsset::getSubVoice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5472248644f9e39c975a6315240277b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5472248644f9e39c975a6315240277b">&#9670;&nbsp;</a></span>getSubVoiceBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SGF_FUNCTION_PROPERTY auto SGFramework::BaseClass::BaseAudioSEAsset::getSubVoiceBegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa140794132055315dfa3c901f132ae38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa140794132055315dfa3c901f132ae38">&#9670;&nbsp;</a></span>getSubVoiceEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SGF_FUNCTION_PROPERTY auto SGFramework::BaseClass::BaseAudioSEAsset::getSubVoiceEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8edcd869381cbf2b2abd09f065e33de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8edcd869381cbf2b2abd09f065e33de7">&#9670;&nbsp;</a></span>LoadFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SGFramework::BaseClass::BaseAudioSEAsset::LoadFile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer</a>&lt; <a class="el" href="class_s_g_framework_1_1_audio_1_1_submix_layer.html">Audio::SubmixLayer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>submixLayer</em> = <code><a class="el" href="class_s_g_framework_1_1_audio.html#a46e4687ffaa8cfaf89c77cb16e16a5b4">Audio::submixRootLayer</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td>
+          <td class="paramname"><em>amountOfSource</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>playbackInterval</em> = <code>0.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>setPlayBeginSeconds</em> = <code><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a4b5883de7cb1c5357cd3ca4bcb189f91">cDefault</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>setLoopBeginSeconds</em> = <code><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a4b5883de7cb1c5357cd3ca4bcb189f91">cDefault</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>setPlayEndSeconds</em> = <code><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a4b5883de7cb1c5357cd3ca4bcb189f91">cDefault</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74cc216bee7f709dbf48c27b3650cfa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74cc216bee7f709dbf48c27b3650cfa6">&#9670;&nbsp;</a></span>ReadChunkData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::BaseClass::BaseAudioSEAsset::ReadChunkData </td>
+          <td>(</td>
+          <td class="paramtype">const HANDLE&#160;</td>
+          <td class="paramname"><em>hFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DWORD&#160;</td>
+          <td class="paramname"><em>buffersize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DWORD&#160;</td>
+          <td class="paramname"><em>bufferoffset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2995a7e5cd71449abeb32b32facc06e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2995a7e5cd71449abeb32b32facc06e5">&#9670;&nbsp;</a></span>ReleaseBaseVoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SGFramework::BaseClass::BaseAudioSEAsset::ReleaseBaseVoice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af07b48b87e4b30c61438ca04e4860edf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af07b48b87e4b30c61438ca04e4860edf">&#9670;&nbsp;</a></span>setPlayBackSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SGF_FUNCTION_PROPERTY void SGFramework::BaseClass::BaseAudioSEAsset::setPlayBackSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>magnification</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a870250516de6e482478732bc2d263b57">SGFramework::BaseClass::BaseAudioAsset</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a767cbb3bb9c0c2a47410a775ac862830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a767cbb3bb9c0c2a47410a775ac862830">&#9670;&nbsp;</a></span>setVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SGF_FUNCTION_PROPERTY void SGFramework::BaseClass::BaseAudioSEAsset::setVolume </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>magnification</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a9325e35316c687e77dfa2362462040ae">SGFramework::BaseClass::BaseAudioAsset</a>を再実装しています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="aa5f926feaf92b494b185217e273e18dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5f926feaf92b494b185217e273e18dd">&#9670;&nbsp;</a></span>amountOfSource</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt;<a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&gt; SGFramework::BaseClass::BaseAudioSEAsset::amountOfSource</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a772caf5c8292a1212130d56772aa4954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a772caf5c8292a1212130d56772aa4954">&#9670;&nbsp;</a></span>m_amountOfSource</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> SGFramework::BaseClass::BaseAudioSEAsset::m_amountOfSource = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb57db0c44529b37b85f16a0f9862a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb57db0c44529b37b85f16a0f9862a9a">&#9670;&nbsp;</a></span>m_buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_g_framework_1_1_com_wear_delete.html">ComWearDelete</a>&lt;<a class="el" href="namespace_s_g_framework.html#a351e615f70cf2b6741809c2ed21c4530">byte</a>&gt; SGFramework::BaseClass::BaseAudioSEAsset::m_buffer = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af76930237ffefb295558add4c3d1f45b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af76930237ffefb295558add4c3d1f45b">&#9670;&nbsp;</a></span>m_bufferInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XAUDIO2_BUFFER SGFramework::BaseClass::BaseAudioSEAsset::m_bufferInfo = {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae805a4fa23d4071a1de9256fc1df6ac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae805a4fa23d4071a1de9256fc1df6ac8">&#9670;&nbsp;</a></span>m_lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic_bool SGFramework::BaseClass::BaseAudioSEAsset::m_lock = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9de51367f71c5e8e8138facd20510e27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9de51367f71c5e8e8138facd20510e27">&#9670;&nbsp;</a></span>m_playbackInterval</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SGFramework::BaseClass::BaseAudioSEAsset::m_playbackInterval = 0.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7af392f22e17ac778bbbe6f39bae96b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af392f22e17ac778bbbe6f39bae96b2">&#9670;&nbsp;</a></span>m_playElapased</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SGFramework::BaseClass::BaseAudioSEAsset::m_playElapased = 0.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af200932e047617f0f4acd0e15e4d7b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af200932e047617f0f4acd0e15e4d7b6b">&#9670;&nbsp;</a></span>m_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XAUDIO2_VOICE_STATE SGFramework::BaseClass::BaseAudioSEAsset::m_state = {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4443718f6f388c2b8cf047a93cc22446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4443718f6f388c2b8cf047a93cc22446">&#9670;&nbsp;</a></span>m_subVoices</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_s_g_framework_1_1_com_wear_function.html">ComWearFunction</a>&lt;IXAudio2SourceVoice&gt; &gt; SGFramework::BaseClass::BaseAudioSEAsset::m_subVoices</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a199994a8a228ac8d6c047519f44e74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a199994a8a228ac8d6c047519f44e74">&#9670;&nbsp;</a></span>m_useVoice</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SGFramework::BaseClass::BaseAudioSEAsset::m_useVoice = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7685955111c79ee09aae7c5db23de827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7685955111c79ee09aae7c5db23de827">&#9670;&nbsp;</a></span>m_x3dBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_g_framework_1_1_com_wear_delete.html">ComWearDelete</a>&lt;float&gt; SGFramework::BaseClass::BaseAudioSEAsset::m_x3dBuffer = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88073e022f8a341b09b3fdbe87921750"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88073e022f8a341b09b3fdbe87921750">&#9670;&nbsp;</a></span>playbackInterval</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt;float&gt; SGFramework::BaseClass::BaseAudioSEAsset::playbackInterval</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/06_Audio/AudioAsset/<a class="el" href="_audio_asset_8hpp_source.html">AudioAsset.hpp</a></li>
+<li>D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/06_Audio/AudioAsset/<a class="el" href="_base_audio_s_e_asset_8cpp.html">BaseAudioSEAsset.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

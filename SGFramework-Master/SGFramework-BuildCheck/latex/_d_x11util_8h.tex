@@ -1,0 +1,90 @@
+\hypertarget{_d_x11util_8h}{}\doxysection{D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/\+D\+X11util.h ファイル}
+\label{_d_x11util_8h}\index{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/DX11util.h@{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/DX11util.h}}
+{\ttfamily \#include $<$d3d11.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}C\+Directx\+Graphics.\+h\char`\"{}}\newline
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+I\+D3\+D11\+Device $\ast$ \mbox{\hyperlink{_d_x11util_8h_affaf418a02a2a4ca28e588a67675d0d1}{Get\+D\+X11\+Device}} ()
+\item 
+I\+D3\+D11\+Device\+Context $\ast$ \mbox{\hyperlink{_d_x11util_8h_acdf15f11d9ced27c6411ab7411fa68c1}{Get\+D\+X11\+Device\+Context}} ()
+\item 
+void \mbox{\hyperlink{_d_x11util_8h_aec72ddb5da7ab75547d41535e2ad117d}{D\+X11\+Light\+Init}} (Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4 lightpos)
+\item 
+void \mbox{\hyperlink{_d_x11util_8h_a52af52e43a10bf8e023d8b555ed65ded}{D\+X11\+Light\+Uninit}} ()
+\item 
+void \mbox{\hyperlink{_d_x11util_8h_aca5e4d63c668e2da342a288c0838636e}{D\+X11\+Light\+Update}} (Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4 lpos)
+\item 
+bool \mbox{\hyperlink{_d_x11util_8h_ab1e533cb6267b4efe7a529785c3f738c}{D\+X11\+Init}} (H\+W\+ND hwnd, int width, int height, bool fullscreen)
+\item 
+void \mbox{\hyperlink{_d_x11util_8h_ae67c0c4389aa8446634dc7d531542284}{D\+X11\+Uninit}} ()
+\item 
+void \mbox{\hyperlink{_d_x11util_8h_a6f5f50d2b2c21f42c8c7d29287bb0135}{D\+X11\+Before\+Render}} (float Clear\+Color\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{_d_x11util_8h_a3662d3620e6cd6cf1aba8e8224e68f59}{D\+X11\+After\+Render}} ()
+\item 
+void \mbox{\hyperlink{_d_x11util_8h_a7bbf1233b7ff5836289d77f736735a1e}{D\+X11\+Update\+Cameraand\+Projection}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{_d_x11util_8h_a3662d3620e6cd6cf1aba8e8224e68f59}\label{_d_x11util_8h_a3662d3620e6cd6cf1aba8e8224e68f59}} 
+\index{DX11util.h@{DX11util.h}!DX11AfterRender@{DX11AfterRender}}
+\index{DX11AfterRender@{DX11AfterRender}!DX11util.h@{DX11util.h}}
+\doxysubsubsection{\texorpdfstring{DX11AfterRender()}{DX11AfterRender()}}
+{\footnotesize\ttfamily void D\+X11\+After\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_d_x11util_8h_a6f5f50d2b2c21f42c8c7d29287bb0135}\label{_d_x11util_8h_a6f5f50d2b2c21f42c8c7d29287bb0135}} 
+\index{DX11util.h@{DX11util.h}!DX11BeforeRender@{DX11BeforeRender}}
+\index{DX11BeforeRender@{DX11BeforeRender}!DX11util.h@{DX11util.h}}
+\doxysubsubsection{\texorpdfstring{DX11BeforeRender()}{DX11BeforeRender()}}
+{\footnotesize\ttfamily void D\+X11\+Before\+Render (\begin{DoxyParamCaption}\item[{float}]{Clear\+Color\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_d_x11util_8h_ab1e533cb6267b4efe7a529785c3f738c}\label{_d_x11util_8h_ab1e533cb6267b4efe7a529785c3f738c}} 
+\index{DX11util.h@{DX11util.h}!DX11Init@{DX11Init}}
+\index{DX11Init@{DX11Init}!DX11util.h@{DX11util.h}}
+\doxysubsubsection{\texorpdfstring{DX11Init()}{DX11Init()}}
+{\footnotesize\ttfamily bool D\+X11\+Init (\begin{DoxyParamCaption}\item[{H\+W\+ND}]{hwnd,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{bool}]{fullscreen }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_d_x11util_8h_aec72ddb5da7ab75547d41535e2ad117d}\label{_d_x11util_8h_aec72ddb5da7ab75547d41535e2ad117d}} 
+\index{DX11util.h@{DX11util.h}!DX11LightInit@{DX11LightInit}}
+\index{DX11LightInit@{DX11LightInit}!DX11util.h@{DX11util.h}}
+\doxysubsubsection{\texorpdfstring{DX11LightInit()}{DX11LightInit()}}
+{\footnotesize\ttfamily void D\+X11\+Light\+Init (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4}]{lightpos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_d_x11util_8h_a52af52e43a10bf8e023d8b555ed65ded}\label{_d_x11util_8h_a52af52e43a10bf8e023d8b555ed65ded}} 
+\index{DX11util.h@{DX11util.h}!DX11LightUninit@{DX11LightUninit}}
+\index{DX11LightUninit@{DX11LightUninit}!DX11util.h@{DX11util.h}}
+\doxysubsubsection{\texorpdfstring{DX11LightUninit()}{DX11LightUninit()}}
+{\footnotesize\ttfamily void D\+X11\+Light\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_d_x11util_8h_aca5e4d63c668e2da342a288c0838636e}\label{_d_x11util_8h_aca5e4d63c668e2da342a288c0838636e}} 
+\index{DX11util.h@{DX11util.h}!DX11LightUpdate@{DX11LightUpdate}}
+\index{DX11LightUpdate@{DX11LightUpdate}!DX11util.h@{DX11util.h}}
+\doxysubsubsection{\texorpdfstring{DX11LightUpdate()}{DX11LightUpdate()}}
+{\footnotesize\ttfamily void D\+X11\+Light\+Update (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4}]{lpos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_d_x11util_8h_ae67c0c4389aa8446634dc7d531542284}\label{_d_x11util_8h_ae67c0c4389aa8446634dc7d531542284}} 
+\index{DX11util.h@{DX11util.h}!DX11Uninit@{DX11Uninit}}
+\index{DX11Uninit@{DX11Uninit}!DX11util.h@{DX11util.h}}
+\doxysubsubsection{\texorpdfstring{DX11Uninit()}{DX11Uninit()}}
+{\footnotesize\ttfamily void D\+X11\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_d_x11util_8h_a7bbf1233b7ff5836289d77f736735a1e}\label{_d_x11util_8h_a7bbf1233b7ff5836289d77f736735a1e}} 
+\index{DX11util.h@{DX11util.h}!DX11UpdateCameraandProjection@{DX11UpdateCameraandProjection}}
+\index{DX11UpdateCameraandProjection@{DX11UpdateCameraandProjection}!DX11util.h@{DX11util.h}}
+\doxysubsubsection{\texorpdfstring{DX11UpdateCameraandProjection()}{DX11UpdateCameraandProjection()}}
+{\footnotesize\ttfamily void D\+X11\+Update\+Cameraand\+Projection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_d_x11util_8h_affaf418a02a2a4ca28e588a67675d0d1}\label{_d_x11util_8h_affaf418a02a2a4ca28e588a67675d0d1}} 
+\index{DX11util.h@{DX11util.h}!GetDX11Device@{GetDX11Device}}
+\index{GetDX11Device@{GetDX11Device}!DX11util.h@{DX11util.h}}
+\doxysubsubsection{\texorpdfstring{GetDX11Device()}{GetDX11Device()}}
+{\footnotesize\ttfamily I\+D3\+D11\+Device$\ast$ Get\+D\+X11\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_d_x11util_8h_acdf15f11d9ced27c6411ab7411fa68c1}\label{_d_x11util_8h_acdf15f11d9ced27c6411ab7411fa68c1}} 
+\index{DX11util.h@{DX11util.h}!GetDX11DeviceContext@{GetDX11DeviceContext}}
+\index{GetDX11DeviceContext@{GetDX11DeviceContext}!DX11util.h@{DX11util.h}}
+\doxysubsubsection{\texorpdfstring{GetDX11DeviceContext()}{GetDX11DeviceContext()}}
+{\footnotesize\ttfamily I\+D3\+D11\+Device\+Context$\ast$ Get\+D\+X11\+Device\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,432 @@
+\hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4}{}\doxysection{S\+G\+Framework\+::Clone\+Shared\+Pointer$<$ Pointer\+Type\mbox{[}\mbox{]}$>$ クラステンプレート}
+\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4}\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+
+
+{\ttfamily \#include $<$Clone\+Pointer.\+hpp$>$}
+
+S\+G\+Framework\+::Clone\+Shared\+Pointer$<$ Pointer\+Type\mbox{[}\mbox{]}$>$ の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a6c0dbe81e38b20595be3ea5d64fba415}{Clone\+Shared\+Pointer}} () noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a0c5a64c448749567ec534e703796d098}{Clone\+Shared\+Pointer}} (const \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&copy) noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a8eee88a5c9adcb9ac9b91b029dcc9f92}{Clone\+Shared\+Pointer}} (\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&\&move) noexcept
+\item 
+{\footnotesize template$<$class New\+Type $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a912add088b0f43dce9732dcb393ef26c}{Clone\+Shared\+Pointer}} (New\+Type $\ast$clone\+Source\+Pointer, \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} array\+Size, bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true) noexcept
+\item 
+{\footnotesize template$<$class New\+Type $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a812c835480c9077ab8b5918652f7ba83}{Clone\+Shared\+Pointer}} (const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ New\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer, bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true) noexcept
+\item 
+{\footnotesize template$<$class New\+Type $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a591356ec108a425be1f6c13cdcf9c60d}{Clone\+Shared\+Pointer}} (const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ New\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer, bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true) noexcept
+\item 
+{\footnotesize template$<$class New\+Type $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_af0b9413c891ba4c62e3f34a5365b5757}{Clone\+Shared\+Pointer}} (const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ New\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer, bool is\+Used\+Mutex\+Counter=true, bool is\+Auto\+Gabage\+Collection=true) noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a53a4f3eade682a79fc2d0558c6c498de}{$\sim$\+Clone\+Shared\+Pointer}} () noexcept
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a7bd720efb8ac1bfafd8a4b5061ca8aad}{Update\+Manual}} (Pointer\+Type $\ast$copy) const noexcept
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a1657dc229afd1835e268337735d73442}{Update\+Manual}} (const Different\+Type $\ast$copy) const noexcept
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a3265b9fe6192e6c616daf9bdd59cb21e}{Update\+Manual}} (const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&copy) const noexcept
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_ab30f794eb8b395f910e8f71fa6810028}{Update\+Manual}} (const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \&copy) const noexcept
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_aac04564098263d77f09e76654b7dda3b}{Update\+Manual}} (const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&copy) const noexcept
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a534761311e8dcaaa26a441c653e868d6}{Update\+Manual}} (const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \&copy) const noexcept
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a4aa27a7579db7a4e31092b8b918f0c9e}{Update\+Manual}} (\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ copy) const noexcept
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a632ac5f9eb350595adfebee97195cc4b}{Update\+Manual}} (\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ copy) const noexcept
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a75f19d5f3294f95f151a215a97d0a682}{Update\+Manual}} (const \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&copy) const noexcept
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a15014c55504840f4498a6d72905dc7ac}{Update\+Manual}} (const \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \&copy) const noexcept
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a5193092f175296ec74fc99661cb15969}{Update\+Manual}} (\mbox{\hyperlink{class_s_g_framework_1_1_clone_weak_pointer}{Clone\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ copy) const noexcept
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a62fc39e3501b672e29bd6eacad58cd68}{Update\+Manual}} (\mbox{\hyperlink{class_s_g_framework_1_1_clone_weak_pointer}{Clone\+Weak\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ copy) const noexcept
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a82b693a70e81e5e38b66cb25fa85952c}{Add\+Ref}} () const noexcept
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a6fa94eddb2a44905a9bca3e2114e2637}{Waiver\+And\+Reset}} () noexcept
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a95c5e4a74ba2600933855951723d757f}{Dynamic\+Cast}} () const noexcept
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a6bd569851dceb3998774d9ca3d20641b}{Down\+Cast}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY Pointer\+Type $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a96946e9a17e2d7ef28590e36dfd9da24}{get\+Pointer}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a7eb89881f285351abbe88cd202aef6c4}{get\+Shared\+Count}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_ab62e1745ed1d2b36bd927d0a5c87f72b}{get\+Weak\+Count}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a3bd99164b4311e9ed9791a671f7cd413}{get\+Is\+Valid}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_accca9541a84d419be2e2faa482f18bd5}{get\+Is\+Linked}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a8ccdbc8877ba661361097daab6713b72}{get\+Array\+Size}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY Pointer\+Type $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a20616b42f962a1687fda535a792e9256}{begin}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY Pointer\+Type $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a05f8ad9bee8c462059bce3ae2f35604f}{end}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a818b69b3cb80e85a903c322f74c556af}{set\+Null}} () noexcept
+\item 
+const \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a282f81074c6753a7eab8cf7272794741}{operator=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&copy) noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_affe5d8b50bb7bbddef33eb539bf7c2a0}{operator=}} (\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&\&move) noexcept
+\item 
+Pointer\+Type \& \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a78f0e6a695e7e480a86931ed159a927f}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} index) const noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_aec0d34cc677e79b4c42ac6ad9552a3bc}{operator bool}} () const noexcept
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a56e99e5fd08fc55b589e395c2152ca0b}{operator!}} () const noexcept
+\begin{DoxyCompactList}\small\item\em operator is pointer == nullptr \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_ae27da84355ace450ff2d996c660953ac}{get\+Null}} () noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a02aca503727b1529e5e36c703a18f330}{Clone\+Weak\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$}}
+\item 
+{\footnotesize template$<$class New\+Type $>$ }\\class \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a6dba28e0b5550103f2b97d9fa76fcdae}{Clone\+Weak\+Pointer}}
+\item 
+{\footnotesize template$<$class New\+Type $>$ }\\class \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a63d0b5de5968eb3ca58194a99952c2f1}{Clone\+Shared\+Pointer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a6c0dbe81e38b20595be3ea5d64fba415}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a6c0dbe81e38b20595be3ea5d64fba415}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!CloneSharedPointer@{CloneSharedPointer}}
+\index{CloneSharedPointer@{CloneSharedPointer}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{CloneSharedPointer()}{CloneSharedPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a0c5a64c448749567ec534e703796d098}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a0c5a64c448749567ec534e703796d098}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!CloneSharedPointer@{CloneSharedPointer}}
+\index{CloneSharedPointer@{CloneSharedPointer}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{CloneSharedPointer()}{CloneSharedPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a8eee88a5c9adcb9ac9b91b029dcc9f92}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a8eee88a5c9adcb9ac9b91b029dcc9f92}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!CloneSharedPointer@{CloneSharedPointer}}
+\index{CloneSharedPointer@{CloneSharedPointer}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{CloneSharedPointer()}{CloneSharedPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&\&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a912add088b0f43dce9732dcb393ef26c}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a912add088b0f43dce9732dcb393ef26c}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!CloneSharedPointer@{CloneSharedPointer}}
+\index{CloneSharedPointer@{CloneSharedPointer}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{CloneSharedPointer()}{CloneSharedPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class New\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}} (\begin{DoxyParamCaption}\item[{New\+Type $\ast$}]{clone\+Source\+Pointer,  }\item[{\mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}}}]{array\+Size,  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a812c835480c9077ab8b5918652f7ba83}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a812c835480c9077ab8b5918652f7ba83}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!CloneSharedPointer@{CloneSharedPointer}}
+\index{CloneSharedPointer@{CloneSharedPointer}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{CloneSharedPointer()}{CloneSharedPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class New\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ New\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{clone\+Source\+Pointer,  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a591356ec108a425be1f6c13cdcf9c60d}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a591356ec108a425be1f6c13cdcf9c60d}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!CloneSharedPointer@{CloneSharedPointer}}
+\index{CloneSharedPointer@{CloneSharedPointer}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{CloneSharedPointer()}{CloneSharedPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class New\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ New\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{clone\+Source\+Pointer,  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_af0b9413c891ba4c62e3f34a5365b5757}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_af0b9413c891ba4c62e3f34a5365b5757}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!CloneSharedPointer@{CloneSharedPointer}}
+\index{CloneSharedPointer@{CloneSharedPointer}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{CloneSharedPointer()}{CloneSharedPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class New\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ New\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{clone\+Source\+Pointer,  }\item[{bool}]{is\+Used\+Mutex\+Counter = {\ttfamily true},  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a53a4f3eade682a79fc2d0558c6c498de}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a53a4f3eade682a79fc2d0558c6c498de}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!````~CloneSharedPointer@{$\sim$CloneSharedPointer}}
+\index{````~CloneSharedPointer@{$\sim$CloneSharedPointer}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$CloneSharedPointer()}{~CloneSharedPointer()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::$\sim$\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a82b693a70e81e5e38b66cb25fa85952c}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a82b693a70e81e5e38b66cb25fa85952c}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!AddRef@{AddRef}}
+\index{AddRef@{AddRef}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{AddRef()}{AddRef()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+void \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Add\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a20616b42f962a1687fda535a792e9256}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a20616b42f962a1687fda535a792e9256}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!begin@{begin}}
+\index{begin@{begin}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY Pointer\+Type$\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a6bd569851dceb3998774d9ca3d20641b}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a6bd569851dceb3998774d9ca3d20641b}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!DownCast@{DownCast}}
+\index{DownCast@{DownCast}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{DownCast()}{DownCast()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Down\+Cast\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a95c5e4a74ba2600933855951723d757f}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a95c5e4a74ba2600933855951723d757f}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!DynamicCast@{DynamicCast}}
+\index{DynamicCast@{DynamicCast}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{DynamicCast()}{DynamicCast()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Dynamic\+Cast\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a05f8ad9bee8c462059bce3ae2f35604f}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a05f8ad9bee8c462059bce3ae2f35604f}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!end@{end}}
+\index{end@{end}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY Pointer\+Type$\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a8ccdbc8877ba661361097daab6713b72}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a8ccdbc8877ba661361097daab6713b72}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!getArraySize@{getArraySize}}
+\index{getArraySize@{getArraySize}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getArraySize()}{getArraySize()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Array\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_accca9541a84d419be2e2faa482f18bd5}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_accca9541a84d419be2e2faa482f18bd5}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!getIsLinked@{getIsLinked}}
+\index{getIsLinked@{getIsLinked}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getIsLinked()}{getIsLinked()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Is\+Linked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a3bd99164b4311e9ed9791a671f7cd413}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a3bd99164b4311e9ed9791a671f7cd413}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!getIsValid@{getIsValid}}
+\index{getIsValid@{getIsValid}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getIsValid()}{getIsValid()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_ae27da84355ace450ff2d996c660953ac}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_ae27da84355ace450ff2d996c660953ac}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!getNull@{getNull}}
+\index{getNull@{getNull}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getNull()}{getNull()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a96946e9a17e2d7ef28590e36dfd9da24}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a96946e9a17e2d7ef28590e36dfd9da24}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!getPointer@{getPointer}}
+\index{getPointer@{getPointer}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getPointer()}{getPointer()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY Pointer\+Type$\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a7eb89881f285351abbe88cd202aef6c4}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a7eb89881f285351abbe88cd202aef6c4}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!getSharedCount@{getSharedCount}}
+\index{getSharedCount@{getSharedCount}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getSharedCount()}{getSharedCount()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Shared\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_ab62e1745ed1d2b36bd927d0a5c87f72b}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_ab62e1745ed1d2b36bd927d0a5c87f72b}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!getWeakCount@{getWeakCount}}
+\index{getWeakCount@{getWeakCount}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{getWeakCount()}{getWeakCount()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::get\+Weak\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_aec0d34cc677e79b4c42ac6ad9552a3bc}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_aec0d34cc677e79b4c42ac6ad9552a3bc}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a56e99e5fd08fc55b589e395c2152ca0b}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a56e99e5fd08fc55b589e395c2152ca0b}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator"!()}{operator!()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator! (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+operator is pointer == nullptr 
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_affe5d8b50bb7bbddef33eb539bf7c2a0}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_affe5d8b50bb7bbddef33eb539bf7c2a0}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&\&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a282f81074c6753a7eab8cf7272794741}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a282f81074c6753a7eab8cf7272794741}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+const \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a78f0e6a695e7e480a86931ed159a927f}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a78f0e6a695e7e480a86931ed159a927f}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+Pointer\+Type\& \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a818b69b3cb80e85a903c322f74c556af}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a818b69b3cb80e85a903c322f74c556af}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!setNull@{setNull}}
+\index{setNull@{setNull}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{setNull()}{setNull()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\& \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::set\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a62fc39e3501b672e29bd6eacad58cd68}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a62fc39e3501b672e29bd6eacad58cd68}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!UpdateManual@{UpdateManual}}
+\index{UpdateManual@{UpdateManual}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{UpdateManual()}{UpdateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Update\+Manual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_clone_weak_pointer}{Clone\+Weak\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$}]{copy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a5193092f175296ec74fc99661cb15969}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a5193092f175296ec74fc99661cb15969}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!UpdateManual@{UpdateManual}}
+\index{UpdateManual@{UpdateManual}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{UpdateManual()}{UpdateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Update\+Manual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_clone_weak_pointer}{Clone\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$}]{copy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a15014c55504840f4498a6d72905dc7ac}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a15014c55504840f4498a6d72905dc7ac}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!UpdateManual@{UpdateManual}}
+\index{UpdateManual@{UpdateManual}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{UpdateManual()}{UpdateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Update\+Manual (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{copy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a75f19d5f3294f95f151a215a97d0a682}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a75f19d5f3294f95f151a215a97d0a682}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!UpdateManual@{UpdateManual}}
+\index{UpdateManual@{UpdateManual}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{UpdateManual()}{UpdateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Update\+Manual (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{copy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a1657dc229afd1835e268337735d73442}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a1657dc229afd1835e268337735d73442}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!UpdateManual@{UpdateManual}}
+\index{UpdateManual@{UpdateManual}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{UpdateManual()}{UpdateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Update\+Manual (\begin{DoxyParamCaption}\item[{const Different\+Type $\ast$}]{copy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a534761311e8dcaaa26a441c653e868d6}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a534761311e8dcaaa26a441c653e868d6}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!UpdateManual@{UpdateManual}}
+\index{UpdateManual@{UpdateManual}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{UpdateManual()}{UpdateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Update\+Manual (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{copy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_aac04564098263d77f09e76654b7dda3b}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_aac04564098263d77f09e76654b7dda3b}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!UpdateManual@{UpdateManual}}
+\index{UpdateManual@{UpdateManual}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{UpdateManual()}{UpdateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Update\+Manual (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{copy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_ab30f794eb8b395f910e8f71fa6810028}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_ab30f794eb8b395f910e8f71fa6810028}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!UpdateManual@{UpdateManual}}
+\index{UpdateManual@{UpdateManual}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{UpdateManual()}{UpdateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Update\+Manual (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{copy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a3265b9fe6192e6c616daf9bdd59cb21e}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a3265b9fe6192e6c616daf9bdd59cb21e}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!UpdateManual@{UpdateManual}}
+\index{UpdateManual@{UpdateManual}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{UpdateManual()}{UpdateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Update\+Manual (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \&}]{copy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a7bd720efb8ac1bfafd8a4b5061ca8aad}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a7bd720efb8ac1bfafd8a4b5061ca8aad}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!UpdateManual@{UpdateManual}}
+\index{UpdateManual@{UpdateManual}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{UpdateManual()}{UpdateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Update\+Manual (\begin{DoxyParamCaption}\item[{Pointer\+Type $\ast$}]{copy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a632ac5f9eb350595adfebee97195cc4b}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a632ac5f9eb350595adfebee97195cc4b}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!UpdateManual@{UpdateManual}}
+\index{UpdateManual@{UpdateManual}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{UpdateManual()}{UpdateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Update\+Manual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Different\+Type\mbox{[}$\,$\mbox{]}$>$}]{copy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a4aa27a7579db7a4e31092b8b918f0c9e}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a4aa27a7579db7a4e31092b8b918f0c9e}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!UpdateManual@{UpdateManual}}
+\index{UpdateManual@{UpdateManual}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{UpdateManual()}{UpdateManual()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Update\+Manual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$}]{copy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a6fa94eddb2a44905a9bca3e2114e2637}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a6fa94eddb2a44905a9bca3e2114e2637}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!WaiverAndReset@{WaiverAndReset}}
+\index{WaiverAndReset@{WaiverAndReset}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{WaiverAndReset()}{WaiverAndReset()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+void \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{S\+G\+Framework\+::\+Clone\+Shared\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\+::Waiver\+And\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a63d0b5de5968eb3ca58194a99952c2f1}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a63d0b5de5968eb3ca58194a99952c2f1}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!CloneSharedPointer@{CloneSharedPointer}}
+\index{CloneSharedPointer@{CloneSharedPointer}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{CloneSharedPointer}{CloneSharedPointer}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class New\+Type $>$ \\
+friend class \mbox{\hyperlink{class_s_g_framework_1_1_clone_shared_pointer}{Clone\+Shared\+Pointer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a6dba28e0b5550103f2b97d9fa76fcdae}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a6dba28e0b5550103f2b97d9fa76fcdae}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!CloneWeakPointer@{CloneWeakPointer}}
+\index{CloneWeakPointer@{CloneWeakPointer}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{CloneWeakPointer}{CloneWeakPointer}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class New\+Type $>$ \\
+friend class \mbox{\hyperlink{class_s_g_framework_1_1_clone_weak_pointer}{Clone\+Weak\+Pointer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a02aca503727b1529e5e36c703a18f330}\label{class_s_g_framework_1_1_clone_shared_pointer_3_01_pointer_type_0f_0e_4_a02aca503727b1529e5e36c703a18f330}} 
+\index{SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}!CloneWeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{CloneWeakPointer$<$ PointerType[]$>$}}
+\index{CloneWeakPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{CloneWeakPointer$<$ PointerType[]$>$}!SGFramework::CloneSharedPointer$<$ PointerType\mbox{[}\mbox{]}$>$@{SGFramework::CloneSharedPointer$<$ PointerType[]$>$}}
+\doxysubsubsection{\texorpdfstring{CloneWeakPointer$<$ PointerType[]$>$}{CloneWeakPointer< PointerType[]>}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+friend class \mbox{\hyperlink{class_s_g_framework_1_1_clone_weak_pointer}{Clone\+Weak\+Pointer}}$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Pointer/\mbox{\hyperlink{_clone_pointer_8hpp}{Clone\+Pointer.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,158 @@
+\hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}{}\doxysection{S\+G\+Framework\+::Exception\+::Detail\+::Base\+Exception クラス}
+\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+
+
+{\ttfamily \#include $<$Base\+Exception.\+hpp$>$}
+
+S\+G\+Framework\+::Exception\+::Detail\+::Base\+Exception の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.157025cm]{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a4e91041ba19f87eb903826881657c6e3}{Base\+Exception}} ()=delete
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a936af6428a64353697ade413105415e3}{Base\+Exception}} (const \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}{Base\+Exception}} \&)=default
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a5c2a8dbb40dbf877fb5856c50ad5d7ee}{Base\+Exception}} (\mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}{Base\+Exception}} \&\&)=default
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}{Base\+Exception}} \& \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a357be7df912d533ce3fc91cd1b68bac4}{operator=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}{Base\+Exception}} \&)=default
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}{Base\+Exception}} \& \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_ac2a43af1dab4989191829902dc52042d}{operator=}} (\mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}{Base\+Exception}} \&\&)=default
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a3712da3bf0cfbb426f1628b2c4e6d34e}{Base\+Exception}} (const std\+::string \&address\+Name, const std\+::string \&function\+Name, const std\+::string \&error\+Text, long error\+Code=0, bool is\+Get\+Backtrace=true) noexcept
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a54cf689abfeb35c36e673464ae09b5ed}{Show\+Message\+Box}} ()
+\item 
+virtual \mbox{\hyperlink{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}{S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}} const std\+::string \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a0b106653de18c685018d9b7c79c2a9b2}{\+\_\+what}} () const noexcept
+\item 
+virtual \mbox{\hyperlink{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}{S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}} const std\+::string \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a5227db28c487f095a99beda47c1bf8f7}{\+\_\+what\+All}} () const noexcept
+\item 
+virtual \mbox{\hyperlink{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}{S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}} const std\+::string \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_af65faeaa5f00510d0c21cf02d90a2681}{\+\_\+exception\+Name}} () const noexcept=0
+\item 
+virtual \mbox{\hyperlink{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}{S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}} const std\+::string \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a99af49997c390423277ee9b1fe9ff3e8}{\+\_\+exception\+Text}} () const noexcept=0
+\item 
+\mbox{\hyperlink{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}{S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}} const std\+::string \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_ab9529da919f304c76c0d61087ebb1a7a}{\+\_\+window\+Text}} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr char \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_acbf8eaea819a1cfb70699cb8f24efa09}{c\+Window\+Header}} \mbox{[}$\,$\mbox{]} = \char`\"{}S\+G\+Framework error!!\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a29d4b5b2b7636134cea110589d02f2ef}{W\+I\+N\+A\+P\+I\+::\+Win\+Main}} (\+\_\+\+In\+\_\+ H\+I\+N\+S\+T\+A\+N\+CE h\+Instance, \+\_\+\+In\+\_\+opt\+\_\+ H\+I\+N\+S\+T\+A\+N\+CE h\+Prev\+Instance, \+\_\+\+In\+\_\+ L\+P\+S\+TR lp\+Cmd\+Line, \+\_\+\+In\+\_\+ int n\+Cmd\+Show)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a4e91041ba19f87eb903826881657c6e3}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a4e91041ba19f87eb903826881657c6e3}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!BaseException@{BaseException}}
+\index{BaseException@{BaseException}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{BaseException()}{BaseException()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Exception\+::\+Detail\+::\+Base\+Exception\+::\+Base\+Exception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a936af6428a64353697ade413105415e3}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a936af6428a64353697ade413105415e3}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!BaseException@{BaseException}}
+\index{BaseException@{BaseException}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{BaseException()}{BaseException()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Exception\+::\+Detail\+::\+Base\+Exception\+::\+Base\+Exception (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}{Base\+Exception}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a5c2a8dbb40dbf877fb5856c50ad5d7ee}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a5c2a8dbb40dbf877fb5856c50ad5d7ee}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!BaseException@{BaseException}}
+\index{BaseException@{BaseException}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{BaseException()}{BaseException()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Exception\+::\+Detail\+::\+Base\+Exception\+::\+Base\+Exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}{Base\+Exception}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a3712da3bf0cfbb426f1628b2c4e6d34e}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a3712da3bf0cfbb426f1628b2c4e6d34e}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!BaseException@{BaseException}}
+\index{BaseException@{BaseException}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{BaseException()}{BaseException()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Exception\+::\+Detail\+::\+Base\+Exception\+::\+Base\+Exception (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address\+Name,  }\item[{const std\+::string \&}]{function\+Name,  }\item[{const std\+::string \&}]{error\+Text,  }\item[{long}]{error\+Code = {\ttfamily 0},  }\item[{bool}]{is\+Get\+Backtrace = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_af65faeaa5f00510d0c21cf02d90a2681}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_af65faeaa5f00510d0c21cf02d90a2681}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!\_exceptionName@{\_exceptionName}}
+\index{\_exceptionName@{\_exceptionName}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{\_exceptionName()}{\_exceptionName()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}{S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}} const std\+::string S\+G\+Framework\+::\+Exception\+::\+Detail\+::\+Base\+Exception\+::\+\_\+exception\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_invalid_template_argument_exception_ae11e248482d7ac1628b680fbc0e6de39}{S\+G\+Framework\+::\+Exception\+::\+Invalid\+Template\+Argument\+Exception}}, \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_invalid_function_call_exception_a1359eb54343d840e1d409203d7bf5046}{S\+G\+Framework\+::\+Exception\+::\+Invalid\+Function\+Call\+Exception}}, \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_invalid_argument_exception_aac84d4fd27e79c44e1d0d8ed55931cb9}{S\+G\+Framework\+::\+Exception\+::\+Invalid\+Argument\+Exception}}, \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_default_exception_aa799a58d42f043ce49b96c5530579ce2}{S\+G\+Framework\+::\+Exception\+::\+Default\+Exception}}で実装されています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a99af49997c390423277ee9b1fe9ff3e8}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a99af49997c390423277ee9b1fe9ff3e8}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!\_exceptionText@{\_exceptionText}}
+\index{\_exceptionText@{\_exceptionText}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{\_exceptionText()}{\_exceptionText()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}{S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}} const std\+::string S\+G\+Framework\+::\+Exception\+::\+Detail\+::\+Base\+Exception\+::\+\_\+exception\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_invalid_template_argument_exception_a2246245e35ac72eaa9cf59935d0d5ebd}{S\+G\+Framework\+::\+Exception\+::\+Invalid\+Template\+Argument\+Exception}}, \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_invalid_function_call_exception_aa8f90fe729c3f5a912d47908cb88b441}{S\+G\+Framework\+::\+Exception\+::\+Invalid\+Function\+Call\+Exception}}, \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_invalid_argument_exception_abc286cb393ae8262b6f3c111a8f82910}{S\+G\+Framework\+::\+Exception\+::\+Invalid\+Argument\+Exception}}, \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_default_exception_aa46efa3138da0c55d5b93dc709e974f5}{S\+G\+Framework\+::\+Exception\+::\+Default\+Exception}}で実装されています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a0b106653de18c685018d9b7c79c2a9b2}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a0b106653de18c685018d9b7c79c2a9b2}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!\_what@{\_what}}
+\index{\_what@{\_what}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{\_what()}{\_what()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}{S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}} const std\+::string S\+G\+Framework\+::\+Exception\+::\+Detail\+::\+Base\+Exception\+::\+\_\+what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a5227db28c487f095a99beda47c1bf8f7}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a5227db28c487f095a99beda47c1bf8f7}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!\_whatAll@{\_whatAll}}
+\index{\_whatAll@{\_whatAll}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{\_whatAll()}{\_whatAll()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}{S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}} const std\+::string S\+G\+Framework\+::\+Exception\+::\+Detail\+::\+Base\+Exception\+::\+\_\+what\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_ab9529da919f304c76c0d61087ebb1a7a}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_ab9529da919f304c76c0d61087ebb1a7a}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!\_windowText@{\_windowText}}
+\index{\_windowText@{\_windowText}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{\_windowText()}{\_windowText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_macro_and_using_8hpp_ad113e203f2b936a37729ebae40d72b39}{S\+G\+F\+\_\+\+P\+R\+O\+P\+E\+R\+TY}} const std\+::string S\+G\+Framework\+::\+Exception\+::\+Detail\+::\+Base\+Exception\+::\+\_\+window\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_ac2a43af1dab4989191829902dc52042d}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_ac2a43af1dab4989191829902dc52042d}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}{Base\+Exception}}\& S\+G\+Framework\+::\+Exception\+::\+Detail\+::\+Base\+Exception\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}{Base\+Exception}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a357be7df912d533ce3fc91cd1b68bac4}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a357be7df912d533ce3fc91cd1b68bac4}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}{Base\+Exception}}\& S\+G\+Framework\+::\+Exception\+::\+Detail\+::\+Base\+Exception\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception}{Base\+Exception}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a54cf689abfeb35c36e673464ae09b5ed}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a54cf689abfeb35c36e673464ae09b5ed}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!ShowMessageBox@{ShowMessageBox}}
+\index{ShowMessageBox@{ShowMessageBox}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{ShowMessageBox()}{ShowMessageBox()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Exception\+::\+Detail\+::\+Base\+Exception\+::\+Show\+Message\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a29d4b5b2b7636134cea110589d02f2ef}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_a29d4b5b2b7636134cea110589d02f2ef}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!WINAPI::WinMain@{WINAPI::WinMain}}
+\index{WINAPI::WinMain@{WINAPI::WinMain}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{WINAPI::WinMain}{WINAPI::WinMain}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{_win_main_8cpp_a649028f00e62144f15f268d14bc6dae0}{W\+I\+N\+A\+P\+I\+::\+Win\+Main}} (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Instance,  }\item[{\+\_\+\+In\+\_\+opt\+\_\+ H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Prev\+Instance,  }\item[{\+\_\+\+In\+\_\+ L\+P\+S\+TR}]{lp\+Cmd\+Line,  }\item[{\+\_\+\+In\+\_\+ int}]{n\+Cmd\+Show }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_acbf8eaea819a1cfb70699cb8f24efa09}\label{class_s_g_framework_1_1_exception_1_1_detail_1_1_base_exception_acbf8eaea819a1cfb70699cb8f24efa09}} 
+\index{SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}!cWindowHeader@{cWindowHeader}}
+\index{cWindowHeader@{cWindowHeader}!SGFramework::Exception::Detail::BaseException@{SGFramework::Exception::Detail::BaseException}}
+\doxysubsubsection{\texorpdfstring{cWindowHeader}{cWindowHeader}}
+{\footnotesize\ttfamily constexpr char S\+G\+Framework\+::\+Exception\+::\+Detail\+::\+Base\+Exception\+::c\+Window\+Header\mbox{[}$\,$\mbox{]} = \char`\"{}S\+G\+Framework error!!\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/\+Exception/\mbox{\hyperlink{_base_exception_8hpp}{Base\+Exception.\+hpp}}\end{DoxyCompactItemize}

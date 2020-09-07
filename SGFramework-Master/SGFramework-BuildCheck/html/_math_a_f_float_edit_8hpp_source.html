@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/03_MathAF/MathAFFloatEdit.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_c0ddba950b9d7af6627f7597680b4ec1.html">03_MathAF</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MathAFFloatEdit.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_math_a_f_float_edit_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">計算ライブラリなMathAF namespace (math + almost float)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_CMATHF_FLOAT_EDIT_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_CMATHF_FLOAT_EDIT_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../02_CustomVariable/CustomVariable.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_math_a_f_basis_8hpp.html">MathAFBasis.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//計算ライブラリ</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">namespace </span>MathAF</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">//[Floor]</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">//return: fの切り捨て</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">//引数1: f</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#ad19ae2418da715476fab6a7d1892cf56">   21</a></span>&#160;        <span class="keyword">inline</span> constexpr <span class="keywordtype">float</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#ad19ae2418da715476fab6a7d1892cf56">Floor</a>(<span class="keywordtype">float</span> f) noexcept { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(f &lt; 0.0f ? <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(f) - 1 : <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(f)); }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">//[Floor]</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">//return: fの切り捨て(int)</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">//引数1: f</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#ad412067231f4d31ab9c125c09d8d4822">   26</a></span>&#160;        <span class="keyword">inline</span> constexpr <span class="keywordtype">int</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#ad412067231f4d31ab9c125c09d8d4822">FloorToInt</a>(<span class="keywordtype">float</span> f) noexcept { <span class="keywordflow">return</span> f &lt; 0.0f ? <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(f) - 1 : <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(f); }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">//[Ceil]</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">//return: fの切り上げ</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">//引数1: f</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#aa314da7ab29ecd50c77d7cb4355e51b2">   31</a></span>&#160;        <span class="keyword">inline</span> constexpr <span class="keywordtype">float</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#aa314da7ab29ecd50c77d7cb4355e51b2">Ceil</a>(<span class="keywordtype">float</span> f) noexcept { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(f &lt; 0.0f ? <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(f) : <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(f) + 1); }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">//[CeilToInt]</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">//return: fの切り上げ(int)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">//引数1: f</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#aeb4c324dbd371ed0ff0c7bbbfd765cae">   36</a></span>&#160;        <span class="keyword">inline</span> constexpr <span class="keywordtype">int</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#aeb4c324dbd371ed0ff0c7bbbfd765cae">CeilToInt</a>(<span class="keywordtype">float</span> f) noexcept { <span class="keywordflow">return</span> f &lt; 0.0f ? <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(f) : <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(f) + 1; }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">//[Round]</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">//return: fの偶数丸め</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">//引数1: f</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#a876658dd239ab9bfdc69263a7f76c51b">   41</a></span>&#160;        <span class="keyword">inline</span> constexpr <span class="keywordtype">float</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a876658dd239ab9bfdc69263a7f76c51b">Round</a>(<span class="keywordtype">float</span> f) noexcept { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(f + 0.5f)); }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">//[RoundInt]</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">//return: fの偶数丸め(int)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">//引数1: f</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#a4180c708150a840363dacf6be345247f">   46</a></span>&#160;        <span class="keyword">inline</span> constexpr <span class="keywordtype">int</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a4180c708150a840363dacf6be345247f">RoundToInt</a>(<span class="keywordtype">float</span> f) noexcept { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(f + 0.5f); }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">//[Mod]</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">//return: fとpのあまり算, f%p</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">//引数1: f</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">//引数1: p</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#a1c6b42196357da9c158fc3f5d778dc32">   53</a></span>&#160;        <span class="keyword">inline</span> constexpr <span class="keywordtype">float</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a1c6b42196357da9c158fc3f5d778dc32">Mod</a>(<span class="keywordtype">float</span> f, <span class="keywordtype">float</span> p) noexcept</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            p = <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a422e7bab71c6115deab865f5083db3fa">Absolute</a>(p);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordtype">float</span> result = <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a422e7bab71c6115deab865f5083db3fa">Absolute</a>(f) - <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a422e7bab71c6115deab865f5083db3fa">Absolute</a>(f) / p)) * p;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a927aa78da5947e37b48a86c02ef3aeb2">IsMinusSign</a>(result)) result += p;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a75c199aebc0c1dfbf5db102dec02ca51">CopySign</a>(result, f);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">//[PingPong]</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">//tを0 ~ lengthの間で行き来させる</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">//return: tを0 ~ lengthの間に制限, 行き来させた値</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">//引数1: t</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">//引数2: 制限値</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#abce32e6c8df5d93d301836b68769507d">   67</a></span>&#160;        <span class="keyword">inline</span> constexpr <span class="keywordtype">float</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#abce32e6c8df5d93d301836b68769507d">PingPong</a>(<span class="keywordtype">float</span> t, <span class="keywordtype">float</span> length) noexcept</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a1c6b42196357da9c158fc3f5d778dc32">Mod</a>(t / length, 2) &lt; 1.0f ? <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a1c6b42196357da9c158fc3f5d778dc32">Mod</a>(t, length) : length - <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a1c6b42196357da9c158fc3f5d778dc32">Mod</a>(t, length);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_CMATHF_FLOAT_EDIT_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_math_a_f_basis_8hpp_html"><div class="ttname"><a href="_math_a_f_basis_8hpp.html">MathAFBasis.hpp</a></div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a4180c708150a840363dacf6be345247f"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a4180c708150a840363dacf6be345247f">SGFramework::MathAF::RoundToInt</a></div><div class="ttdeci">constexpr int RoundToInt(float f) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFFloatEdit.hpp:46</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_ad412067231f4d31ab9c125c09d8d4822"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#ad412067231f4d31ab9c125c09d8d4822">SGFramework::MathAF::FloorToInt</a></div><div class="ttdeci">constexpr int FloorToInt(float f) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFFloatEdit.hpp:26</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_ad19ae2418da715476fab6a7d1892cf56"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#ad19ae2418da715476fab6a7d1892cf56">SGFramework::MathAF::Floor</a></div><div class="ttdeci">constexpr float Floor(float f) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFFloatEdit.hpp:21</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a876658dd239ab9bfdc69263a7f76c51b"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a876658dd239ab9bfdc69263a7f76c51b">SGFramework::MathAF::Round</a></div><div class="ttdeci">constexpr float Round(float f) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFFloatEdit.hpp:41</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a422e7bab71c6115deab865f5083db3fa"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a422e7bab71c6115deab865f5083db3fa">SGFramework::MathAF::Absolute</a></div><div class="ttdeci">constexpr T Absolute(T f) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:19</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_aeb4c324dbd371ed0ff0c7bbbfd765cae"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#aeb4c324dbd371ed0ff0c7bbbfd765cae">SGFramework::MathAF::CeilToInt</a></div><div class="ttdeci">constexpr int CeilToInt(float f) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFFloatEdit.hpp:36</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a927aa78da5947e37b48a86c02ef3aeb2"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a927aa78da5947e37b48a86c02ef3aeb2">SGFramework::MathAF::IsMinusSign</a></div><div class="ttdeci">constexpr bool IsMinusSign(FloationgType f) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:37</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a75c199aebc0c1dfbf5db102dec02ca51"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a75c199aebc0c1dfbf5db102dec02ca51">SGFramework::MathAF::CopySign</a></div><div class="ttdeci">constexpr float CopySign(FloationgType value, FloationgType sign) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:44</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_abce32e6c8df5d93d301836b68769507d"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#abce32e6c8df5d93d301836b68769507d">SGFramework::MathAF::PingPong</a></div><div class="ttdeci">constexpr float PingPong(float t, float length) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFFloatEdit.hpp:67</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_aa314da7ab29ecd50c77d7cb4355e51b2"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#aa314da7ab29ecd50c77d7cb4355e51b2">SGFramework::MathAF::Ceil</a></div><div class="ttdeci">constexpr float Ceil(float f) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFFloatEdit.hpp:31</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a1c6b42196357da9c158fc3f5d778dc32"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a1c6b42196357da9c158fc3f5d778dc32">SGFramework::MathAF::Mod</a></div><div class="ttdeci">constexpr float Mod(float f, float p) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFFloatEdit.hpp:53</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

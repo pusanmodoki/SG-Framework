@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/10_Physics/RaycastHit/SweepHit.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_143bd857002117c0903e75b9b3cb038e.html">10_Physics</a></li><li class="navelem"><a class="el" href="dir_f1d77e85b4338faa143e231e0b2e99b9.html">RaycastHit</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SweepHit.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_sweep_hit_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">SweepCast(BoxCast, SphereCast, CapsuleCast)で使用するSweepHit structure</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_SWEEP_HIT_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_SWEEP_HIT_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../Physics.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../Collider/BaseCollider.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//SweepCast(BoxCast, SphereCast, CapsuleCast)で使用するSweepHit structure</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_sweep_hit.html">   13</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_s_g_framework_1_1_sweep_hit.html">SweepHit</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">//friend</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_sweep_hit.html#a2bfcbae6c8e1d7af93c5ac1200b1535c">   16</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_physics.html">Physics</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">//all setting constructor</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_sweep_hit.html#a45e1100ce4b18e30ed4809a71055fd00">   19</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a45e1100ce4b18e30ed4809a71055fd00">SweepHit</a>() : <a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a98463dedb9db8ea21179479632c3a48a">isValid</a>(false) { }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">//buffer setting constructor</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_sweep_hit.html#a4eeeb87674f1b2ebe096dd8a4ff56099">   21</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a4eeeb87674f1b2ebe096dd8a4ff56099">SweepHit</a>(physx::PxRaycastBuffer* buffer) : <a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a98463dedb9db8ea21179479632c3a48a">isValid</a>(buffer &amp;&amp; buffer-&gt;getNbAnyHits() ? true : false)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">if</span> (buffer) memcpy_s(&amp;m_buffer, <span class="keyword">sizeof</span>(physx::PxRaycastBuffer), buffer, <span class="keyword">sizeof</span>(physx::PxRaycastBuffer));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">//hit transform (read function property)</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_sweep_hit.html#aa7c59b4c9e63e1de84408636d34be2c6">   27</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;Transform&gt;</a> <a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#aa7c59b4c9e63e1de84408636d34be2c6">getTransform</a>()</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(<a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a98463dedb9db8ea21179479632c3a48a">isValid</a>) ? (*<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseCollider&gt;</a>*<span class="keyword">&gt;</span>(m_buffer.getAnyHit(0).shape-&gt;userData))-&gt;transform</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                : <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;Transform&gt;</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">//hit rigid body (read function property)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_sweep_hit.html#a3b452fa6f9d5466a7bb8038646c1fdc9">   33</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseRigidBody&gt;</a> <a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a3b452fa6f9d5466a7bb8038646c1fdc9">getRigidBody</a>()</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(<a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a98463dedb9db8ea21179479632c3a48a">isValid</a>) ? (*<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseCollider&gt;</a>*<span class="keyword">&gt;</span>(m_buffer.getAnyHit(0).shape-&gt;userData))-&gt;rigidBody</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                : <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseRigidBody&gt;</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">//hit object collider (read function property)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_sweep_hit.html#a65044f609d7273166a587d16d256c0f8">   39</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseCollider&gt;</a> <a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a65044f609d7273166a587d16d256c0f8">getCollider</a>()</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(<a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a98463dedb9db8ea21179479632c3a48a">isValid</a>) ? *<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseCollider&gt;</a>*<span class="keyword">&gt;</span>(m_buffer.getAnyHit(0).shape-&gt;userData)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                : <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseCollider&gt;</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">//hit object position (read function property)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_sweep_hit.html#a5240b7adc05a9f1705460a90aa779e3d">   45</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> <a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a5240b7adc05a9f1705460a90aa779e3d">getPosition</a>()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(<a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a98463dedb9db8ea21179479632c3a48a">isValid</a>) ? (*<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;BaseClass::BaseCollider&gt;</a>*<span class="keyword">&gt;</span>(m_buffer.getAnyHit(0).shape-&gt;userData))-&gt;transform-&gt;getWorldPosition()</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                : <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">Const::Vector3::zero</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">//hit object surface normal (read function property)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_sweep_hit.html#adf33a18186f4698c0e320635480dfe29">   52</a></span>&#160;        SGF_FUNCTION_PROPERTY <a class="code" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> <a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#adf33a18186f4698c0e320635480dfe29">getNormal</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index = 0) { <span class="keywordflow">return</span> <a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(<a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a98463dedb9db8ea21179479632c3a48a">isValid</a>) ? m_buffer.getAnyHit(index).normal : <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">Const::Vector3::zero</a>; }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">//distance : hit object surface &lt;-&gt; origin (read function property)</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_sweep_hit.html#a27bba0dca51fcdf57d3cb964b0454ab8">   54</a></span>&#160;        SGF_FUNCTION_PROPERTY <span class="keywordtype">float</span> <a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a27bba0dca51fcdf57d3cb964b0454ab8">getDistance</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index = 0) { <span class="keywordflow">return</span> <a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(<a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a98463dedb9db8ea21179479632c3a48a">isValid</a>) ? m_buffer.getAnyHit(index).distance : 0.0f; }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">//hit object surface -&gt; polygon triangle index(read function property)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_sweep_hit.html#a17c5a48fe291db9281a686254a3edfa8">   56</a></span>&#160;        SGF_FUNCTION_PROPERTY <span class="keywordtype">int</span> <a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a17c5a48fe291db9281a686254a3edfa8">getTriangleIndex</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index = 0) { <span class="keywordflow">return</span> <a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(<a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a98463dedb9db8ea21179479632c3a48a">isValid</a>) ? m_buffer.getAnyHit(index).faceIndex : 0; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">//isValid Infos?</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_sweep_hit.html#a98463dedb9db8ea21179479632c3a48a">   59</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a98463dedb9db8ea21179479632c3a48a">isValid</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">//[Init]</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">//Bufferをコピーする</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="namespace_s_g_framework_1_1_atomic.html#aa74003ea2ff69348cf11120966582c0e">Init</a>(physx::PxSweepBuffer&amp; buffer)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            (*<span class="keyword">const_cast&lt;</span><span class="keywordtype">bool</span>*<span class="keyword">&gt;</span>(&amp;this-&gt;<a class="code" href="struct_s_g_framework_1_1_sweep_hit.html#a98463dedb9db8ea21179479632c3a48a">isValid</a>)) = buffer.getNbAnyHits() ? true : <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            memcpy_s(&amp;m_buffer, <span class="keyword">sizeof</span>(physx::PxRaycastBuffer), &amp;buffer, <span class="keyword">sizeof</span>(physx::PxRaycastBuffer));</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">//buffer</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        physx::PxSweepBuffer m_buffer;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    };</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif //!SGFRAMEWORK_HEADER_SWEEP_HIT_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_s_g_framework_1_1_sweep_hit_html_a4eeeb87674f1b2ebe096dd8a4ff56099"><div class="ttname"><a href="struct_s_g_framework_1_1_sweep_hit.html#a4eeeb87674f1b2ebe096dd8a4ff56099">SGFramework::SweepHit::SweepHit</a></div><div class="ttdeci">SweepHit(physx::PxRaycastBuffer *buffer)</div><div class="ttdef"><b>Definition:</b> SweepHit.hpp:21</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_sweep_hit_html_a3b452fa6f9d5466a7bb8038646c1fdc9"><div class="ttname"><a href="struct_s_g_framework_1_1_sweep_hit.html#a3b452fa6f9d5466a7bb8038646c1fdc9">SGFramework::SweepHit::getRigidBody</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY WeakPointer&lt; BaseClass::BaseRigidBody &gt; getRigidBody()</div><div class="ttdef"><b>Definition:</b> SweepHit.hpp:33</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_sweep_hit_html_a98463dedb9db8ea21179479632c3a48a"><div class="ttname"><a href="struct_s_g_framework_1_1_sweep_hit.html#a98463dedb9db8ea21179479632c3a48a">SGFramework::SweepHit::isValid</a></div><div class="ttdeci">const bool isValid</div><div class="ttdef"><b>Definition:</b> SweepHit.hpp:59</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector3_html_ac773f04184a04dfbb5820902d31f4c87"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector3.html#ac773f04184a04dfbb5820902d31f4c87">SGFramework::Const::Vector3::zero</a></div><div class="ttdeci">constexpr SGFramework::Vector3 zero(0.0f, 0.0f, 0.0f)</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_sweep_hit_html_a27bba0dca51fcdf57d3cb964b0454ab8"><div class="ttname"><a href="struct_s_g_framework_1_1_sweep_hit.html#a27bba0dca51fcdf57d3cb964b0454ab8">SGFramework::SweepHit::getDistance</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY float getDistance(uint index=0)</div><div class="ttdef"><b>Definition:</b> SweepHit.hpp:54</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_sweep_hit_html_aa7c59b4c9e63e1de84408636d34be2c6"><div class="ttname"><a href="struct_s_g_framework_1_1_sweep_hit.html#aa7c59b4c9e63e1de84408636d34be2c6">SGFramework::SweepHit::getTransform</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY WeakPointer&lt; Transform &gt; getTransform()</div><div class="ttdef"><b>Definition:</b> SweepHit.hpp:27</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_sweep_hit_html_adf33a18186f4698c0e320635480dfe29"><div class="ttname"><a href="struct_s_g_framework_1_1_sweep_hit.html#adf33a18186f4698c0e320635480dfe29">SGFramework::SweepHit::getNormal</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY Vector3 getNormal(uint index=0)</div><div class="ttdef"><b>Definition:</b> SweepHit.hpp:52</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdoc">uint = unsigned int</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:157</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_sweep_hit_html_a45e1100ce4b18e30ed4809a71055fd00"><div class="ttname"><a href="struct_s_g_framework_1_1_sweep_hit.html#a45e1100ce4b18e30ed4809a71055fd00">SGFramework::SweepHit::SweepHit</a></div><div class="ttdeci">SweepHit()</div><div class="ttdef"><b>Definition:</b> SweepHit.hpp:19</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_physics_html"><div class="ttname"><a href="class_s_g_framework_1_1_physics.html">SGFramework::Physics</a></div><div class="ttdef"><b>Definition:</b> Physics.hpp:28</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector3_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector3.html">SGFramework::Vector3</a></div><div class="ttdef"><b>Definition:</b> Vector3.hpp:28</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_aa2eae4e8c99ada2e0afd8011beca63c4"><div class="ttname"><a href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a></div><div class="ttdeci">#define IS_TRUE(val)</div><div class="ttdoc">true判定高速化, 見やすさ向上マクロ(高速化は環境依存？)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:64</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_weak_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_weak_pointer.html">SGFramework::WeakPointer</a></div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:266</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_atomic_html_aa74003ea2ff69348cf11120966582c0e"><div class="ttname"><a href="namespace_s_g_framework_1_1_atomic.html#aa74003ea2ff69348cf11120966582c0e">SGFramework::Atomic::Init</a></div><div class="ttdeci">T Init(std::atomic&lt; T &gt; &amp;atomic, T init) noexcept</div><div class="ttdoc">std::atomicをロックフリーアルゴリズムを用いて初期化する</div><div class="ttdef"><b>Definition:</b> Atomic.hpp:57</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_sweep_hit_html_a17c5a48fe291db9281a686254a3edfa8"><div class="ttname"><a href="struct_s_g_framework_1_1_sweep_hit.html#a17c5a48fe291db9281a686254a3edfa8">SGFramework::SweepHit::getTriangleIndex</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY int getTriangleIndex(uint index=0)</div><div class="ttdef"><b>Definition:</b> SweepHit.hpp:56</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_sweep_hit_html_a5240b7adc05a9f1705460a90aa779e3d"><div class="ttname"><a href="struct_s_g_framework_1_1_sweep_hit.html#a5240b7adc05a9f1705460a90aa779e3d">SGFramework::SweepHit::getPosition</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY Vector3 getPosition()</div><div class="ttdef"><b>Definition:</b> SweepHit.hpp:45</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_sweep_hit_html_a65044f609d7273166a587d16d256c0f8"><div class="ttname"><a href="struct_s_g_framework_1_1_sweep_hit.html#a65044f609d7273166a587d16d256c0f8">SGFramework::SweepHit::getCollider</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY WeakPointer&lt; BaseClass::BaseCollider &gt; getCollider()</div><div class="ttdef"><b>Definition:</b> SweepHit.hpp:39</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_sweep_hit_html"><div class="ttname"><a href="struct_s_g_framework_1_1_sweep_hit.html">SGFramework::SweepHit</a></div><div class="ttdef"><b>Definition:</b> SweepHit.hpp:14</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

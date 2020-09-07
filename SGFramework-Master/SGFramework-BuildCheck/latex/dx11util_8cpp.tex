@@ -1,0 +1,111 @@
+\hypertarget{dx11util_8cpp}{}\doxysection{D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/dx11util.cpp ファイル}
+\label{dx11util_8cpp}\index{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/dx11util.cpp@{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/dx11util.cpp}}
+{\ttfamily \#include $<$d3d11.\+h$>$}\newline
+{\ttfamily \#include $<$Direct\+X\+Math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}C\+Directx\+Graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Shader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+Camera.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}memory.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+Light.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+X11\+Settransform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+G\+Framework\+To\+Exe\+Project/\+S\+G\+Framwork.\+hpp\char`\"{}}\newline
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dx11util_8cpp_aec72ddb5da7ab75547d41535e2ad117d}{D\+X11\+Light\+Init}} (Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4 lightpos)
+\item 
+void \mbox{\hyperlink{dx11util_8cpp_a52af52e43a10bf8e023d8b555ed65ded}{D\+X11\+Light\+Uninit}} ()
+\item 
+void \mbox{\hyperlink{dx11util_8cpp_aca5e4d63c668e2da342a288c0838636e}{D\+X11\+Light\+Update}} (Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4 lpos)
+\item 
+I\+D3\+D11\+Device $\ast$ \mbox{\hyperlink{dx11util_8cpp_affaf418a02a2a4ca28e588a67675d0d1}{Get\+D\+X11\+Device}} ()
+\item 
+I\+D3\+D11\+Device\+Context $\ast$ \mbox{\hyperlink{dx11util_8cpp_acdf15f11d9ced27c6411ab7411fa68c1}{Get\+D\+X11\+Device\+Context}} ()
+\item 
+bool \mbox{\hyperlink{dx11util_8cpp_ab1e533cb6267b4efe7a529785c3f738c}{D\+X11\+Init}} (H\+W\+ND hwnd, int width, int height, bool fullscreen)
+\item 
+void \mbox{\hyperlink{dx11util_8cpp_ae67c0c4389aa8446634dc7d531542284}{D\+X11\+Uninit}} ()
+\item 
+void \mbox{\hyperlink{dx11util_8cpp_a6f5f50d2b2c21f42c8c7d29287bb0135}{D\+X11\+Before\+Render}} (float Clear\+Color\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{dx11util_8cpp_a3662d3620e6cd6cf1aba8e8224e68f59}{D\+X11\+After\+Render}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+I\+D3\+D11\+Buffer $\ast$ \mbox{\hyperlink{dx11util_8cpp_a9cdb984d60280b9d6d6cd8c407a7dbd5}{g\+\_\+p\+Constant\+Buffer1}} = nullptr
+\item 
+\mbox{\hyperlink{class_c_light}{C\+Light}} \mbox{\hyperlink{dx11util_8cpp_ade13480276cc9c5be5e80054ab6cbfbd}{g\+\_\+directionallight}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{dx11util_8cpp_a3662d3620e6cd6cf1aba8e8224e68f59}\label{dx11util_8cpp_a3662d3620e6cd6cf1aba8e8224e68f59}} 
+\index{dx11util.cpp@{dx11util.cpp}!DX11AfterRender@{DX11AfterRender}}
+\index{DX11AfterRender@{DX11AfterRender}!dx11util.cpp@{dx11util.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11AfterRender()}{DX11AfterRender()}}
+{\footnotesize\ttfamily void D\+X11\+After\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11util_8cpp_a6f5f50d2b2c21f42c8c7d29287bb0135}\label{dx11util_8cpp_a6f5f50d2b2c21f42c8c7d29287bb0135}} 
+\index{dx11util.cpp@{dx11util.cpp}!DX11BeforeRender@{DX11BeforeRender}}
+\index{DX11BeforeRender@{DX11BeforeRender}!dx11util.cpp@{dx11util.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11BeforeRender()}{DX11BeforeRender()}}
+{\footnotesize\ttfamily void D\+X11\+Before\+Render (\begin{DoxyParamCaption}\item[{float}]{Clear\+Color\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11util_8cpp_ab1e533cb6267b4efe7a529785c3f738c}\label{dx11util_8cpp_ab1e533cb6267b4efe7a529785c3f738c}} 
+\index{dx11util.cpp@{dx11util.cpp}!DX11Init@{DX11Init}}
+\index{DX11Init@{DX11Init}!dx11util.cpp@{dx11util.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11Init()}{DX11Init()}}
+{\footnotesize\ttfamily bool D\+X11\+Init (\begin{DoxyParamCaption}\item[{H\+W\+ND}]{hwnd,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{bool}]{fullscreen }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11util_8cpp_aec72ddb5da7ab75547d41535e2ad117d}\label{dx11util_8cpp_aec72ddb5da7ab75547d41535e2ad117d}} 
+\index{dx11util.cpp@{dx11util.cpp}!DX11LightInit@{DX11LightInit}}
+\index{DX11LightInit@{DX11LightInit}!dx11util.cpp@{dx11util.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11LightInit()}{DX11LightInit()}}
+{\footnotesize\ttfamily void D\+X11\+Light\+Init (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4}]{lightpos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11util_8cpp_a52af52e43a10bf8e023d8b555ed65ded}\label{dx11util_8cpp_a52af52e43a10bf8e023d8b555ed65ded}} 
+\index{dx11util.cpp@{dx11util.cpp}!DX11LightUninit@{DX11LightUninit}}
+\index{DX11LightUninit@{DX11LightUninit}!dx11util.cpp@{dx11util.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11LightUninit()}{DX11LightUninit()}}
+{\footnotesize\ttfamily void D\+X11\+Light\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11util_8cpp_aca5e4d63c668e2da342a288c0838636e}\label{dx11util_8cpp_aca5e4d63c668e2da342a288c0838636e}} 
+\index{dx11util.cpp@{dx11util.cpp}!DX11LightUpdate@{DX11LightUpdate}}
+\index{DX11LightUpdate@{DX11LightUpdate}!dx11util.cpp@{dx11util.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11LightUpdate()}{DX11LightUpdate()}}
+{\footnotesize\ttfamily void D\+X11\+Light\+Update (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4}]{lpos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11util_8cpp_ae67c0c4389aa8446634dc7d531542284}\label{dx11util_8cpp_ae67c0c4389aa8446634dc7d531542284}} 
+\index{dx11util.cpp@{dx11util.cpp}!DX11Uninit@{DX11Uninit}}
+\index{DX11Uninit@{DX11Uninit}!dx11util.cpp@{dx11util.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11Uninit()}{DX11Uninit()}}
+{\footnotesize\ttfamily void D\+X11\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11util_8cpp_affaf418a02a2a4ca28e588a67675d0d1}\label{dx11util_8cpp_affaf418a02a2a4ca28e588a67675d0d1}} 
+\index{dx11util.cpp@{dx11util.cpp}!GetDX11Device@{GetDX11Device}}
+\index{GetDX11Device@{GetDX11Device}!dx11util.cpp@{dx11util.cpp}}
+\doxysubsubsection{\texorpdfstring{GetDX11Device()}{GetDX11Device()}}
+{\footnotesize\ttfamily I\+D3\+D11\+Device$\ast$ Get\+D\+X11\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11util_8cpp_acdf15f11d9ced27c6411ab7411fa68c1}\label{dx11util_8cpp_acdf15f11d9ced27c6411ab7411fa68c1}} 
+\index{dx11util.cpp@{dx11util.cpp}!GetDX11DeviceContext@{GetDX11DeviceContext}}
+\index{GetDX11DeviceContext@{GetDX11DeviceContext}!dx11util.cpp@{dx11util.cpp}}
+\doxysubsubsection{\texorpdfstring{GetDX11DeviceContext()}{GetDX11DeviceContext()}}
+{\footnotesize\ttfamily I\+D3\+D11\+Device\+Context$\ast$ Get\+D\+X11\+Device\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{dx11util_8cpp_ade13480276cc9c5be5e80054ab6cbfbd}\label{dx11util_8cpp_ade13480276cc9c5be5e80054ab6cbfbd}} 
+\index{dx11util.cpp@{dx11util.cpp}!g\_directionallight@{g\_directionallight}}
+\index{g\_directionallight@{g\_directionallight}!dx11util.cpp@{dx11util.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_directionallight}{g\_directionallight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_light}{C\+Light}} g\+\_\+directionallight}
+
+\mbox{\Hypertarget{dx11util_8cpp_a9cdb984d60280b9d6d6cd8c407a7dbd5}\label{dx11util_8cpp_a9cdb984d60280b9d6d6cd8c407a7dbd5}} 
+\index{dx11util.cpp@{dx11util.cpp}!g\_pConstantBuffer1@{g\_pConstantBuffer1}}
+\index{g\_pConstantBuffer1@{g\_pConstantBuffer1}!dx11util.cpp@{dx11util.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_pConstantBuffer1}{g\_pConstantBuffer1}}
+{\footnotesize\ttfamily I\+D3\+D11\+Buffer$\ast$ g\+\_\+p\+Constant\+Buffer1 = nullptr}
+

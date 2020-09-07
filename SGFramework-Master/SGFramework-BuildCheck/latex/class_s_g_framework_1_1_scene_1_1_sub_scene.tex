@@ -1,0 +1,141 @@
+\hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene}{}\doxysection{S\+G\+Framework\+::Scene\+::Sub\+Scene クラス}
+\label{class_s_g_framework_1_1_scene_1_1_sub_scene}\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+
+
+{\ttfamily \#include $<$Scene.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_a4180782ba13f811bcd4c87cbfdfd5b43}{$\sim$\+Sub\+Scene}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_a87ab34a4b92bb0f076ba68f8e1dc477c}{Start\+Scene}} (\mbox{\hyperlink{struct_s_g_framework_1_1_scene_1_1_scene_baton}{Scene\+Baton}} $\ast$parent\+Baton)=0
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_ac2d4e025419a4b00e2fafe0f9363453a}{End\+Scene}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_a23e56a52fd38d060ec3bfe8ff70ac4e8}{Update}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_a6e013b63f1011ffee5f51cac3afed816}{Sync}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_aa97d3cfc3f333bca7b3d5773b5015c5a}{Late\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_a4ed8ff9e6da09e97119102abd54ad58f}{Fixed\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_ab4adfdc9a5f0c9b15217815f422f47f7}{Make\+Draw\+Command}} ()
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_ad5b2dc2111bea003e3ae0e5ccea68fd3}{set\+Active}} (bool set)
+\item 
+virtual S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY sgstring \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_a402683df0f8707326ed9ccf883c354f2}{get\+Scene\+Name}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_a727fa35573640a1f9f828c0be777e9a7}{sub\+ID}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_a7ae680c608b65ab39b76e6f6c9758716}{scene\+ID}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ bool $>$ \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_aeef3ce345b70dddd5dacdb6d1251cab4}{is\+Active}}
+\end{DoxyCompactItemize}
+\doxysubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_sub_scene_aa938a34fe018f7a08ccc609eb5704703}{Sub\+Scene}} (\mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}} id, \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} parent\+ID)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_a4180782ba13f811bcd4c87cbfdfd5b43}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_a4180782ba13f811bcd4c87cbfdfd5b43}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!````~SubScene@{$\sim$SubScene}}
+\index{````~SubScene@{$\sim$SubScene}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{$\sim$SubScene()}{~SubScene()}}
+{\footnotesize\ttfamily virtual S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::$\sim$\+Sub\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_aa938a34fe018f7a08ccc609eb5704703}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_aa938a34fe018f7a08ccc609eb5704703}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!SubScene@{SubScene}}
+\index{SubScene@{SubScene}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{SubScene()}{SubScene()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::\+Sub\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}}}]{id,  }\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{parent\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_ac2d4e025419a4b00e2fafe0f9363453a}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_ac2d4e025419a4b00e2fafe0f9363453a}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!EndScene@{EndScene}}
+\index{EndScene@{EndScene}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{EndScene()}{EndScene()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::\+End\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_a4ed8ff9e6da09e97119102abd54ad58f}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_a4ed8ff9e6da09e97119102abd54ad58f}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_a402683df0f8707326ed9ccf883c354f2}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_a402683df0f8707326ed9ccf883c354f2}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!getSceneName@{getSceneName}}
+\index{getSceneName@{getSceneName}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{getSceneName()}{getSceneName()}}
+{\footnotesize\ttfamily virtual S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY sgstring S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::get\+Scene\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_aa97d3cfc3f333bca7b3d5773b5015c5a}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_aa97d3cfc3f333bca7b3d5773b5015c5a}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!LateUpdate@{LateUpdate}}
+\index{LateUpdate@{LateUpdate}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{LateUpdate()}{LateUpdate()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::\+Late\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_ab4adfdc9a5f0c9b15217815f422f47f7}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_ab4adfdc9a5f0c9b15217815f422f47f7}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!MakeDrawCommand@{MakeDrawCommand}}
+\index{MakeDrawCommand@{MakeDrawCommand}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{MakeDrawCommand()}{MakeDrawCommand()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::\+Make\+Draw\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_ad5b2dc2111bea003e3ae0e5ccea68fd3}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_ad5b2dc2111bea003e3ae0e5ccea68fd3}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!setActive@{setActive}}
+\index{setActive@{setActive}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{setActive()}{setActive()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::set\+Active (\begin{DoxyParamCaption}\item[{bool}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_a87ab34a4b92bb0f076ba68f8e1dc477c}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_a87ab34a4b92bb0f076ba68f8e1dc477c}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!StartScene@{StartScene}}
+\index{StartScene@{StartScene}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{StartScene()}{StartScene()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::\+Start\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_scene_1_1_scene_baton}{Scene\+Baton}} $\ast$}]{parent\+Baton }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_a6e013b63f1011ffee5f51cac3afed816}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_a6e013b63f1011ffee5f51cac3afed816}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!Sync@{Sync}}
+\index{Sync@{Sync}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{Sync()}{Sync()}}
+{\footnotesize\ttfamily virtual bool S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::\+Sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_a23e56a52fd38d060ec3bfe8ff70ac4e8}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_a23e56a52fd38d060ec3bfe8ff70ac4e8}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!Update@{Update}}
+\index{Update@{Update}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_aeef3ce345b70dddd5dacdb6d1251cab4}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_aeef3ce345b70dddd5dacdb6d1251cab4}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!isActive@{isActive}}
+\index{isActive@{isActive}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{isActive}{isActive}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$bool$>$ S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::is\+Active}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_a7ae680c608b65ab39b76e6f6c9758716}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_a7ae680c608b65ab39b76e6f6c9758716}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!sceneID@{sceneID}}
+\index{sceneID@{sceneID}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{sceneID}{sceneID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}$>$ S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::scene\+ID}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_scene_1_1_sub_scene_a727fa35573640a1f9f828c0be777e9a7}\label{class_s_g_framework_1_1_scene_1_1_sub_scene_a727fa35573640a1f9f828c0be777e9a7}} 
+\index{SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}!subID@{subID}}
+\index{subID@{subID}!SGFramework::Scene::SubScene@{SGFramework::Scene::SubScene}}
+\doxysubsubsection{\texorpdfstring{subID}{subID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$\mbox{\hyperlink{namespace_s_g_framework_aebe4deeaa824dde2483c93498710ed5a}{ushort}}$>$ S\+G\+Framework\+::\+Scene\+::\+Sub\+Scene\+::sub\+ID}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/09\+\_\+\+Scene/\mbox{\hyperlink{_scene_8hpp}{Scene.\+hpp}}\end{DoxyCompactItemize}

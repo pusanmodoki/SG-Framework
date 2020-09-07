@@ -1,0 +1,152 @@
+\hypertarget{class_demo_scene}{}\doxysection{Demo\+Scene クラス}
+\label{class_demo_scene}\index{DemoScene@{DemoScene}}
+
+
+{\ttfamily \#include $<$Demo\+Scene.\+hpp$>$}
+
+Demo\+Scene の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_demo_scene}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_demo_scene_ad18c036c40b7c14ec5fab6eb42773de4}{Demo\+Scene}} ()
+\item 
+void \mbox{\hyperlink{class_demo_scene_a7b9eedabdc4dede628ad9996c5add846}{Start\+Scene}} (\mbox{\hyperlink{struct_s_g_framework_1_1_scene_1_1_scene_baton}{Scene\+::\+Scene\+Baton}} \&next\+Baton) override
+\item 
+virtual \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene_af7ee70ea882fa8bed9519efdca25a9fd}{Base\+Scene}} $>$ \mbox{\hyperlink{class_demo_scene_a54993b72d2368acbbe265d050c15b5a9}{End\+Scene}} (\mbox{\hyperlink{struct_s_g_framework_1_1_scene_1_1_scene_baton}{Scene\+::\+Scene\+Baton}} \&next\+Baton, bool \&is\+Stack\+Clear, bool \&is\+Stack\+Pop)
+\item 
+virtual void \mbox{\hyperlink{class_demo_scene_a0350627ac51ae0e925525073833dc9d5}{Rewind\+Scene}} (\mbox{\hyperlink{struct_s_g_framework_1_1_scene_1_1_scene_baton}{Scene\+::\+Scene\+Baton}} \&next\+Baton)
+\item 
+void \mbox{\hyperlink{class_demo_scene_a681af2de999ed195556a02031617964e}{Update}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_demo_scene_a481d5ec2c6aed43f13b653badec1141b}{Sync}} ()
+\item 
+virtual void \mbox{\hyperlink{class_demo_scene_abefc6127ff642b5b5c44f7e149e65dfb}{Late\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_demo_scene_aaf1aae9829689a3377f64ba3eec4b135}{Fixed\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_demo_scene_a9c1e71641d7f86dde6526931229f4365}{Fixed\+Sync}} ()
+\item 
+virtual void \mbox{\hyperlink{class_demo_scene_aa9c7c89b77ec50e682839ca1c00e7d34}{Make\+Draw\+Command}} ()
+\item 
+virtual S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY sgstring \mbox{\hyperlink{class_demo_scene_af5151898e9f3857bfdf8aa14cde6dd79}{get\+Scene\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_demo_scene_ad18c036c40b7c14ec5fab6eb42773de4}\label{class_demo_scene_ad18c036c40b7c14ec5fab6eb42773de4}} 
+\index{DemoScene@{DemoScene}!DemoScene@{DemoScene}}
+\index{DemoScene@{DemoScene}!DemoScene@{DemoScene}}
+\doxysubsubsection{\texorpdfstring{DemoScene()}{DemoScene()}}
+{\footnotesize\ttfamily Demo\+Scene\+::\+Demo\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_demo_scene_a54993b72d2368acbbe265d050c15b5a9}\label{class_demo_scene_a54993b72d2368acbbe265d050c15b5a9}} 
+\index{DemoScene@{DemoScene}!EndScene@{EndScene}}
+\index{EndScene@{EndScene}!DemoScene@{DemoScene}}
+\doxysubsubsection{\texorpdfstring{EndScene()}{EndScene()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene_af7ee70ea882fa8bed9519efdca25a9fd}{Base\+Scene}}$>$ Demo\+Scene\+::\+End\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_scene_1_1_scene_baton}{Scene\+::\+Scene\+Baton}} \&}]{next\+Baton,  }\item[{bool \&}]{is\+Stack\+Clear,  }\item[{bool \&}]{is\+Stack\+Pop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene_a0aa79a9f345bbc4a329898ee2b932872}{S\+G\+Framework\+::\+Scene\+::\+Base\+Scene}}を実装しています。
+
+\mbox{\Hypertarget{class_demo_scene_a9c1e71641d7f86dde6526931229f4365}\label{class_demo_scene_a9c1e71641d7f86dde6526931229f4365}} 
+\index{DemoScene@{DemoScene}!FixedSync@{FixedSync}}
+\index{FixedSync@{FixedSync}!DemoScene@{DemoScene}}
+\doxysubsubsection{\texorpdfstring{FixedSync()}{FixedSync()}}
+{\footnotesize\ttfamily virtual void Demo\+Scene\+::\+Fixed\+Sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_demo_scene_aaf1aae9829689a3377f64ba3eec4b135}\label{class_demo_scene_aaf1aae9829689a3377f64ba3eec4b135}} 
+\index{DemoScene@{DemoScene}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!DemoScene@{DemoScene}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily virtual void Demo\+Scene\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene_a1cd074308cf506b2b5d6feadf68e7597}{S\+G\+Framework\+::\+Scene\+::\+Base\+Scene}}を再実装しています。
+
+\mbox{\Hypertarget{class_demo_scene_af5151898e9f3857bfdf8aa14cde6dd79}\label{class_demo_scene_af5151898e9f3857bfdf8aa14cde6dd79}} 
+\index{DemoScene@{DemoScene}!getSceneName@{getSceneName}}
+\index{getSceneName@{getSceneName}!DemoScene@{DemoScene}}
+\doxysubsubsection{\texorpdfstring{getSceneName()}{getSceneName()}}
+{\footnotesize\ttfamily virtual S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY sgstring Demo\+Scene\+::get\+Scene\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene_a30307399880fdbd907b542fa1debd4e8}{S\+G\+Framework\+::\+Scene\+::\+Base\+Scene}}を実装しています。
+
+\mbox{\Hypertarget{class_demo_scene_abefc6127ff642b5b5c44f7e149e65dfb}\label{class_demo_scene_abefc6127ff642b5b5c44f7e149e65dfb}} 
+\index{DemoScene@{DemoScene}!LateUpdate@{LateUpdate}}
+\index{LateUpdate@{LateUpdate}!DemoScene@{DemoScene}}
+\doxysubsubsection{\texorpdfstring{LateUpdate()}{LateUpdate()}}
+{\footnotesize\ttfamily virtual void Demo\+Scene\+::\+Late\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene_ab9c51626d64840ffff286a2b66127d86}{S\+G\+Framework\+::\+Scene\+::\+Base\+Scene}}を再実装しています。
+
+\mbox{\Hypertarget{class_demo_scene_aa9c7c89b77ec50e682839ca1c00e7d34}\label{class_demo_scene_aa9c7c89b77ec50e682839ca1c00e7d34}} 
+\index{DemoScene@{DemoScene}!MakeDrawCommand@{MakeDrawCommand}}
+\index{MakeDrawCommand@{MakeDrawCommand}!DemoScene@{DemoScene}}
+\doxysubsubsection{\texorpdfstring{MakeDrawCommand()}{MakeDrawCommand()}}
+{\footnotesize\ttfamily void Demo\+Scene\+::\+Make\+Draw\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene_a759cb438b2d36cfe0ce4e101df4e4677}{S\+G\+Framework\+::\+Scene\+::\+Base\+Scene}}を再実装しています。
+
+\mbox{\Hypertarget{class_demo_scene_a0350627ac51ae0e925525073833dc9d5}\label{class_demo_scene_a0350627ac51ae0e925525073833dc9d5}} 
+\index{DemoScene@{DemoScene}!RewindScene@{RewindScene}}
+\index{RewindScene@{RewindScene}!DemoScene@{DemoScene}}
+\doxysubsubsection{\texorpdfstring{RewindScene()}{RewindScene()}}
+{\footnotesize\ttfamily virtual void Demo\+Scene\+::\+Rewind\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_scene_1_1_scene_baton}{Scene\+::\+Scene\+Baton}} \&}]{next\+Baton }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene_ad5516780205b45cf08db920ed6c8253e}{S\+G\+Framework\+::\+Scene\+::\+Base\+Scene}}を再実装しています。
+
+\mbox{\Hypertarget{class_demo_scene_a7b9eedabdc4dede628ad9996c5add846}\label{class_demo_scene_a7b9eedabdc4dede628ad9996c5add846}} 
+\index{DemoScene@{DemoScene}!StartScene@{StartScene}}
+\index{StartScene@{StartScene}!DemoScene@{DemoScene}}
+\doxysubsubsection{\texorpdfstring{StartScene()}{StartScene()}}
+{\footnotesize\ttfamily void Demo\+Scene\+::\+Start\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_scene_1_1_scene_baton}{Scene\+::\+Scene\+Baton}} \&}]{next\+Baton }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene_acff8fba2f6d1de2ec11cf1e5ebb88f7a}{S\+G\+Framework\+::\+Scene\+::\+Base\+Scene}}を実装しています。
+
+\mbox{\Hypertarget{class_demo_scene_a481d5ec2c6aed43f13b653badec1141b}\label{class_demo_scene_a481d5ec2c6aed43f13b653badec1141b}} 
+\index{DemoScene@{DemoScene}!Sync@{Sync}}
+\index{Sync@{Sync}!DemoScene@{DemoScene}}
+\doxysubsubsection{\texorpdfstring{Sync()}{Sync()}}
+{\footnotesize\ttfamily virtual bool Demo\+Scene\+::\+Sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene_a5678923294a2ca0a83123ca48f1fe622}{S\+G\+Framework\+::\+Scene\+::\+Base\+Scene}}を実装しています。
+
+\mbox{\Hypertarget{class_demo_scene_a681af2de999ed195556a02031617964e}\label{class_demo_scene_a681af2de999ed195556a02031617964e}} 
+\index{DemoScene@{DemoScene}!Update@{Update}}
+\index{Update@{Update}!DemoScene@{DemoScene}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Demo\+Scene\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_scene_1_1_base_scene_ae08057b4d6a83c15284085e3a724a3da}{S\+G\+Framework\+::\+Scene\+::\+Base\+Scene}}を再実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\mbox{\hyperlink{_demo_scene_8hpp}{Demo\+Scene.\+hpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\mbox{\hyperlink{_demo_scene_8cpp}{Demo\+Scene.\+cpp}}\end{DoxyCompactItemize}

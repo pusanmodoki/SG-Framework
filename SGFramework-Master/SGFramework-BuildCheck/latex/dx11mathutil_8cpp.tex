@@ -1,0 +1,274 @@
+\hypertarget{dx11mathutil_8cpp}{}\doxysection{D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/dx11mathutil.cpp ファイル}
+\label{dx11mathutil_8cpp}\index{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/dx11mathutil.cpp@{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/dx11mathutil.cpp}}
+{\ttfamily \#include \char`\"{}D\+X11mathutil.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}memory.\+h\char`\"{}}\newline
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_ac10c54fe12ff60d0ca85bafc9e79bc91}{D\+X11\+Make\+World\+Matrix}} (X\+M\+F\+L\+O\+A\+T4\+X4 \&inoutmat, X\+M\+F\+L\+O\+A\+T3 \&angle, X\+M\+F\+L\+O\+A\+T3 \&trans)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_ac0b4d11f10f8042ae045c28518b7fb2d}{D\+X11\+Vec3\+Mul\+Matrix}} (Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&outvec, const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&invec, const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4\+X4 \&mat)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a998cb230090838a065b3b6fbeeba23c9}{D\+X11\+Vec3\+Cross}} (Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&outvec, Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&invec1, Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&invec2)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a6df46e34867e8e32495bbd812de8afd3}{D\+X11\+Vec3\+Dot}} (float \&dot, const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&invec1, const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&invec2)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_adbf5e7e14db8c1e366d6cbb0e9c573e8}{D\+X11\+Vec3\+Normalize}} (Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&outvec, Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&invec)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_aaa49387ed05f17665b316a4f1f747d89}{D\+X11\+Mtx\+Identity}} (Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4\+X4 \&mat)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a2befe8578c8c039227788fdb2aace1b1}{D\+X11\+Get\+Qtfrom\+Matrix}} (const X\+M\+F\+L\+O\+A\+T4\+X4 \&mat, X\+M\+F\+L\+O\+A\+T4 \&qt)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_abd79437746a1f316f0e8108f550f4486}{D\+X11\+Qt\+Rotation\+Axis}} (X\+M\+F\+L\+O\+A\+T4 \&qt, X\+M\+F\+L\+O\+A\+T4 \&axis, float angle)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a51ae073b2b35c01cd5fc5ed051637cd0}{D\+X11\+Qt\+Mul}} (X\+M\+F\+L\+O\+A\+T4 \&outqt, const X\+M\+F\+L\+O\+A\+T4 \&qt1, const X\+M\+F\+L\+O\+A\+T4 \&qt2)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a549537740d0e6d7cc13d35a68faccd11}{D\+X11\+Mtx\+From\+Qt}} (X\+M\+F\+L\+O\+A\+T4\+X4 \&outmtx, const X\+M\+F\+L\+O\+A\+T4 \&qt)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a8414636bd9df7fb4ce840877f0427135}{D\+X11\+Mtx\+Transpose}} (X\+M\+F\+L\+O\+A\+T4\+X4 \&outmtx, const X\+M\+F\+L\+O\+A\+T4\+X4 \&inmtx)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a0f73783443395c899697cb8e61c55fbf}{D\+X11\+Qt\+Normalize}} (X\+M\+F\+L\+O\+A\+T4 \&inqt, X\+M\+F\+L\+O\+A\+T4 \&outqt)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a3b849c948ba15bd1f9466b74cafc22bc}{D\+X11\+Vec4\+Length}} (X\+M\+F\+L\+O\+A\+T4 \&vec, float \&length)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a7b779f3659ce77513f634ad5f66a4e35}{D\+X11\+Vec3\+Length}} (X\+M\+F\+L\+O\+A\+T3 \&vec, float \&length)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_ace03a934fe3f356b7724b29344b1084c}{D\+X11p2p\+Length}} (const X\+M\+F\+L\+O\+A\+T3 \&p1, const X\+M\+F\+L\+O\+A\+T3 \&p2, float \&length)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a5d5ad772d733ee559697bdbfdcd99ddb}{D\+X11\+Mtx\+Translation}} (const X\+M\+F\+L\+O\+A\+T3 \&trans, X\+M\+F\+L\+O\+A\+T4\+X4 \&matrix)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a2e6e711ef8e11fd06edac100ed500775}{D\+X11\+Qt\+Slerp}} (const X\+M\+F\+L\+O\+A\+T4 \&fromqt, const X\+M\+F\+L\+O\+A\+T4 \&toqt, float t, X\+M\+F\+L\+O\+A\+T4 \&ansqt)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a66da36ac1f955c55ea96f212062bac0d}{D\+X11\+Qt\+Identity}} (X\+M\+F\+L\+O\+A\+T4 \&qt)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a93457004707f7e9231917fe90f34fb8e}{D\+X11\+Mtx\+Rotation\+Axis}} (const X\+M\+F\+L\+O\+A\+T3 \&axis, float angle, X\+M\+F\+L\+O\+A\+T4\+X4 \&outmtx)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_ae1393bd30f121145e42450947ef44b73}{D\+X11\+Mtx\+Multiply}} (X\+M\+F\+L\+O\+A\+T4\+X4 \&ansmtx, const X\+M\+F\+L\+O\+A\+T4\+X4 \&p1mtx, const X\+M\+F\+L\+O\+A\+T4\+X4 \&p2mtx)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_ac35f78fadf1113657a0a36f02e91c28b}{D\+X11\+Mtx\+Inverse}} (X\+M\+F\+L\+O\+A\+T4\+X4 \&ansmtx, const X\+M\+F\+L\+O\+A\+T4\+X4 \&mtx)
+\item 
+bool \mbox{\hyperlink{dx11mathutil_8cpp_a17cae4b76acb47ec9c26fa3ba5c43780}{Is\+In\+Frustum}} (const X\+M\+F\+L\+O\+A\+T3 \&pos, const X\+M\+F\+L\+O\+A\+T4\+X4 \&matrix)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a44c0c964619f0a987f382411ed143b67}{Is\+In\+Frustum}} (const X\+M\+F\+L\+O\+A\+T3 \&pos, const X\+M\+F\+L\+O\+A\+T4\+X4 \&matrix, float ans\mbox{[}$\,$\mbox{]})
+\item 
+bool \mbox{\hyperlink{dx11mathutil_8cpp_a20b0651d02e110e66a29a77f7c026250}{Is\+In\+Frustum}} (const X\+M\+F\+L\+O\+A\+T3 \&pos, const X\+M\+F\+L\+O\+A\+T4\+X4 \&matrix, float ans\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{struct_p_l_a_n_e}{P\+L\+A\+NE}} $\ast$plane)
+\item 
+bool \mbox{\hyperlink{dx11mathutil_8cpp_a951dc3adf58e0effdaa0c16a9c5ce1dd}{Is\+In\+Frustum}} (const X\+M\+F\+L\+O\+A\+T3 \&pos, float radius, const X\+M\+F\+L\+O\+A\+T4\+X4 \&matrix, float ans\mbox{[}$\,$\mbox{]}, bool canseeflag\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{struct_p_l_a_n_e}{P\+L\+A\+NE}} $\ast$plane)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a124657a6944806be85a8fcbe0bc6232f}{Get\+Planefrom\+Projectionmatrix}} (\mbox{\hyperlink{struct_p_l_a_n_e}{P\+L\+A\+NE}} $\ast$p, const X\+M\+F\+L\+O\+A\+T4\+X4 \&matrix)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a819aa49fbd3f9436864c4115d03d4675}{Get\+Planefrom\+Projectionmatrix\+With\+Normalize}} (\mbox{\hyperlink{struct_p_l_a_n_e}{P\+L\+A\+NE}} $\ast$p, const X\+M\+F\+L\+O\+A\+T4\+X4 \&matrix)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a1e55259933280cbb99e2238f3faadc52}{D\+X11\+Mtx\+RotationX}} (float angle, X\+M\+F\+L\+O\+A\+T4\+X4 \&outmtx)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_acb93b86c90eeabffe2684432a4a3332e}{D\+X11\+Mtx\+RotationY}} (float angle, X\+M\+F\+L\+O\+A\+T4\+X4 \&outmtx)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_a53ac29f45e93e976aba2dc61e3958190}{D\+X11\+Mtx\+RotationZ}} (float angle, X\+M\+F\+L\+O\+A\+T4\+X4 \&outmtx)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_aafffcbae2d09df5f5dcdfea418c363d5}{D\+X11\+Mtx\+Scale}} (float sx, float sy, float sz, X\+M\+F\+L\+O\+A\+T4\+X4 \&outmtx)
+\item 
+float \mbox{\hyperlink{dx11mathutil_8cpp_a0b3084a41fea36cb87e2c4f91407b017}{haltonseq}} (unsigned int no, unsigned int base)
+\item 
+void \mbox{\hyperlink{dx11mathutil_8cpp_af874991286087dd77ca321df3e64e892}{D\+X11\+Matrix\+Identity}} (Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4\+X4 \&mat)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{dx11mathutil_8cpp_a2befe8578c8c039227788fdb2aace1b1}\label{dx11mathutil_8cpp_a2befe8578c8c039227788fdb2aace1b1}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11GetQtfromMatrix@{DX11GetQtfromMatrix}}
+\index{DX11GetQtfromMatrix@{DX11GetQtfromMatrix}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11GetQtfromMatrix()}{DX11GetQtfromMatrix()}}
+{\footnotesize\ttfamily void D\+X11\+Get\+Qtfrom\+Matrix (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{mat,  }\item[{X\+M\+F\+L\+O\+A\+T4 \&}]{qt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_ac10c54fe12ff60d0ca85bafc9e79bc91}\label{dx11mathutil_8cpp_ac10c54fe12ff60d0ca85bafc9e79bc91}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11MakeWorldMatrix@{DX11MakeWorldMatrix}}
+\index{DX11MakeWorldMatrix@{DX11MakeWorldMatrix}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11MakeWorldMatrix()}{DX11MakeWorldMatrix()}}
+{\footnotesize\ttfamily void D\+X11\+Make\+World\+Matrix (\begin{DoxyParamCaption}\item[{X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{inoutmat,  }\item[{X\+M\+F\+L\+O\+A\+T3 \&}]{angle,  }\item[{X\+M\+F\+L\+O\+A\+T3 \&}]{trans }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_af874991286087dd77ca321df3e64e892}\label{dx11mathutil_8cpp_af874991286087dd77ca321df3e64e892}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11MatrixIdentity@{DX11MatrixIdentity}}
+\index{DX11MatrixIdentity@{DX11MatrixIdentity}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11MatrixIdentity()}{DX11MatrixIdentity()}}
+{\footnotesize\ttfamily void D\+X11\+Matrix\+Identity (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a549537740d0e6d7cc13d35a68faccd11}\label{dx11mathutil_8cpp_a549537740d0e6d7cc13d35a68faccd11}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11MtxFromQt@{DX11MtxFromQt}}
+\index{DX11MtxFromQt@{DX11MtxFromQt}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11MtxFromQt()}{DX11MtxFromQt()}}
+{\footnotesize\ttfamily void D\+X11\+Mtx\+From\+Qt (\begin{DoxyParamCaption}\item[{X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{outmtx,  }\item[{const X\+M\+F\+L\+O\+A\+T4 \&}]{qt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_aaa49387ed05f17665b316a4f1f747d89}\label{dx11mathutil_8cpp_aaa49387ed05f17665b316a4f1f747d89}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11MtxIdentity@{DX11MtxIdentity}}
+\index{DX11MtxIdentity@{DX11MtxIdentity}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11MtxIdentity()}{DX11MtxIdentity()}}
+{\footnotesize\ttfamily void D\+X11\+Mtx\+Identity (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_ac35f78fadf1113657a0a36f02e91c28b}\label{dx11mathutil_8cpp_ac35f78fadf1113657a0a36f02e91c28b}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11MtxInverse@{DX11MtxInverse}}
+\index{DX11MtxInverse@{DX11MtxInverse}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11MtxInverse()}{DX11MtxInverse()}}
+{\footnotesize\ttfamily void D\+X11\+Mtx\+Inverse (\begin{DoxyParamCaption}\item[{X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{ansmtx,  }\item[{const X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{mtx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_ae1393bd30f121145e42450947ef44b73}\label{dx11mathutil_8cpp_ae1393bd30f121145e42450947ef44b73}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11MtxMultiply@{DX11MtxMultiply}}
+\index{DX11MtxMultiply@{DX11MtxMultiply}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11MtxMultiply()}{DX11MtxMultiply()}}
+{\footnotesize\ttfamily void D\+X11\+Mtx\+Multiply (\begin{DoxyParamCaption}\item[{X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{ansmtx,  }\item[{const X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{p1mtx,  }\item[{const X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{p2mtx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a93457004707f7e9231917fe90f34fb8e}\label{dx11mathutil_8cpp_a93457004707f7e9231917fe90f34fb8e}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11MtxRotationAxis@{DX11MtxRotationAxis}}
+\index{DX11MtxRotationAxis@{DX11MtxRotationAxis}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11MtxRotationAxis()}{DX11MtxRotationAxis()}}
+{\footnotesize\ttfamily void D\+X11\+Mtx\+Rotation\+Axis (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{axis,  }\item[{float}]{angle,  }\item[{X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{outmtx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a1e55259933280cbb99e2238f3faadc52}\label{dx11mathutil_8cpp_a1e55259933280cbb99e2238f3faadc52}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11MtxRotationX@{DX11MtxRotationX}}
+\index{DX11MtxRotationX@{DX11MtxRotationX}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11MtxRotationX()}{DX11MtxRotationX()}}
+{\footnotesize\ttfamily void D\+X11\+Mtx\+RotationX (\begin{DoxyParamCaption}\item[{float}]{angle,  }\item[{X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{outmtx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_acb93b86c90eeabffe2684432a4a3332e}\label{dx11mathutil_8cpp_acb93b86c90eeabffe2684432a4a3332e}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11MtxRotationY@{DX11MtxRotationY}}
+\index{DX11MtxRotationY@{DX11MtxRotationY}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11MtxRotationY()}{DX11MtxRotationY()}}
+{\footnotesize\ttfamily void D\+X11\+Mtx\+RotationY (\begin{DoxyParamCaption}\item[{float}]{angle,  }\item[{X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{outmtx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a53ac29f45e93e976aba2dc61e3958190}\label{dx11mathutil_8cpp_a53ac29f45e93e976aba2dc61e3958190}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11MtxRotationZ@{DX11MtxRotationZ}}
+\index{DX11MtxRotationZ@{DX11MtxRotationZ}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11MtxRotationZ()}{DX11MtxRotationZ()}}
+{\footnotesize\ttfamily void D\+X11\+Mtx\+RotationZ (\begin{DoxyParamCaption}\item[{float}]{angle,  }\item[{X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{outmtx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_aafffcbae2d09df5f5dcdfea418c363d5}\label{dx11mathutil_8cpp_aafffcbae2d09df5f5dcdfea418c363d5}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11MtxScale@{DX11MtxScale}}
+\index{DX11MtxScale@{DX11MtxScale}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11MtxScale()}{DX11MtxScale()}}
+{\footnotesize\ttfamily void D\+X11\+Mtx\+Scale (\begin{DoxyParamCaption}\item[{float}]{sx,  }\item[{float}]{sy,  }\item[{float}]{sz,  }\item[{X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{outmtx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a5d5ad772d733ee559697bdbfdcd99ddb}\label{dx11mathutil_8cpp_a5d5ad772d733ee559697bdbfdcd99ddb}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11MtxTranslation@{DX11MtxTranslation}}
+\index{DX11MtxTranslation@{DX11MtxTranslation}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11MtxTranslation()}{DX11MtxTranslation()}}
+{\footnotesize\ttfamily void D\+X11\+Mtx\+Translation (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{trans,  }\item[{X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{matrix }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a8414636bd9df7fb4ce840877f0427135}\label{dx11mathutil_8cpp_a8414636bd9df7fb4ce840877f0427135}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11MtxTranspose@{DX11MtxTranspose}}
+\index{DX11MtxTranspose@{DX11MtxTranspose}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11MtxTranspose()}{DX11MtxTranspose()}}
+{\footnotesize\ttfamily void D\+X11\+Mtx\+Transpose (\begin{DoxyParamCaption}\item[{X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{outmtx,  }\item[{const X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{inmtx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_ace03a934fe3f356b7724b29344b1084c}\label{dx11mathutil_8cpp_ace03a934fe3f356b7724b29344b1084c}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11p2pLength@{DX11p2pLength}}
+\index{DX11p2pLength@{DX11p2pLength}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11p2pLength()}{DX11p2pLength()}}
+{\footnotesize\ttfamily void D\+X11p2p\+Length (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{p1,  }\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{p2,  }\item[{float \&}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a66da36ac1f955c55ea96f212062bac0d}\label{dx11mathutil_8cpp_a66da36ac1f955c55ea96f212062bac0d}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11QtIdentity@{DX11QtIdentity}}
+\index{DX11QtIdentity@{DX11QtIdentity}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11QtIdentity()}{DX11QtIdentity()}}
+{\footnotesize\ttfamily void D\+X11\+Qt\+Identity (\begin{DoxyParamCaption}\item[{X\+M\+F\+L\+O\+A\+T4 \&}]{qt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a51ae073b2b35c01cd5fc5ed051637cd0}\label{dx11mathutil_8cpp_a51ae073b2b35c01cd5fc5ed051637cd0}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11QtMul@{DX11QtMul}}
+\index{DX11QtMul@{DX11QtMul}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11QtMul()}{DX11QtMul()}}
+{\footnotesize\ttfamily void D\+X11\+Qt\+Mul (\begin{DoxyParamCaption}\item[{X\+M\+F\+L\+O\+A\+T4 \&}]{outqt,  }\item[{const X\+M\+F\+L\+O\+A\+T4 \&}]{qt1,  }\item[{const X\+M\+F\+L\+O\+A\+T4 \&}]{qt2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a0f73783443395c899697cb8e61c55fbf}\label{dx11mathutil_8cpp_a0f73783443395c899697cb8e61c55fbf}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11QtNormalize@{DX11QtNormalize}}
+\index{DX11QtNormalize@{DX11QtNormalize}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11QtNormalize()}{DX11QtNormalize()}}
+{\footnotesize\ttfamily void D\+X11\+Qt\+Normalize (\begin{DoxyParamCaption}\item[{X\+M\+F\+L\+O\+A\+T4 \&}]{inqt,  }\item[{X\+M\+F\+L\+O\+A\+T4 \&}]{outqt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_abd79437746a1f316f0e8108f550f4486}\label{dx11mathutil_8cpp_abd79437746a1f316f0e8108f550f4486}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11QtRotationAxis@{DX11QtRotationAxis}}
+\index{DX11QtRotationAxis@{DX11QtRotationAxis}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11QtRotationAxis()}{DX11QtRotationAxis()}}
+{\footnotesize\ttfamily void D\+X11\+Qt\+Rotation\+Axis (\begin{DoxyParamCaption}\item[{X\+M\+F\+L\+O\+A\+T4 \&}]{qt,  }\item[{X\+M\+F\+L\+O\+A\+T4 \&}]{axis,  }\item[{float}]{angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a2e6e711ef8e11fd06edac100ed500775}\label{dx11mathutil_8cpp_a2e6e711ef8e11fd06edac100ed500775}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11QtSlerp@{DX11QtSlerp}}
+\index{DX11QtSlerp@{DX11QtSlerp}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11QtSlerp()}{DX11QtSlerp()}}
+{\footnotesize\ttfamily void D\+X11\+Qt\+Slerp (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T4 \&}]{fromqt,  }\item[{const X\+M\+F\+L\+O\+A\+T4 \&}]{toqt,  }\item[{float}]{t,  }\item[{X\+M\+F\+L\+O\+A\+T4 \&}]{ansqt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a998cb230090838a065b3b6fbeeba23c9}\label{dx11mathutil_8cpp_a998cb230090838a065b3b6fbeeba23c9}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11Vec3Cross@{DX11Vec3Cross}}
+\index{DX11Vec3Cross@{DX11Vec3Cross}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11Vec3Cross()}{DX11Vec3Cross()}}
+{\footnotesize\ttfamily void D\+X11\+Vec3\+Cross (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&}]{outvec,  }\item[{Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&}]{invec1,  }\item[{Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&}]{invec2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a6df46e34867e8e32495bbd812de8afd3}\label{dx11mathutil_8cpp_a6df46e34867e8e32495bbd812de8afd3}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11Vec3Dot@{DX11Vec3Dot}}
+\index{DX11Vec3Dot@{DX11Vec3Dot}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11Vec3Dot()}{DX11Vec3Dot()}}
+{\footnotesize\ttfamily void D\+X11\+Vec3\+Dot (\begin{DoxyParamCaption}\item[{float \&}]{dot,  }\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&}]{invec1,  }\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&}]{invec2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a7b779f3659ce77513f634ad5f66a4e35}\label{dx11mathutil_8cpp_a7b779f3659ce77513f634ad5f66a4e35}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11Vec3Length@{DX11Vec3Length}}
+\index{DX11Vec3Length@{DX11Vec3Length}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11Vec3Length()}{DX11Vec3Length()}}
+{\footnotesize\ttfamily void D\+X11\+Vec3\+Length (\begin{DoxyParamCaption}\item[{X\+M\+F\+L\+O\+A\+T3 \&}]{vec,  }\item[{float \&}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_ac0b4d11f10f8042ae045c28518b7fb2d}\label{dx11mathutil_8cpp_ac0b4d11f10f8042ae045c28518b7fb2d}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11Vec3MulMatrix@{DX11Vec3MulMatrix}}
+\index{DX11Vec3MulMatrix@{DX11Vec3MulMatrix}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11Vec3MulMatrix()}{DX11Vec3MulMatrix()}}
+{\footnotesize\ttfamily void D\+X11\+Vec3\+Mul\+Matrix (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&}]{outvec,  }\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&}]{invec,  }\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_adbf5e7e14db8c1e366d6cbb0e9c573e8}\label{dx11mathutil_8cpp_adbf5e7e14db8c1e366d6cbb0e9c573e8}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11Vec3Normalize@{DX11Vec3Normalize}}
+\index{DX11Vec3Normalize@{DX11Vec3Normalize}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11Vec3Normalize()}{DX11Vec3Normalize()}}
+{\footnotesize\ttfamily void D\+X11\+Vec3\+Normalize (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&}]{outvec,  }\item[{Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T3 \&}]{invec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a3b849c948ba15bd1f9466b74cafc22bc}\label{dx11mathutil_8cpp_a3b849c948ba15bd1f9466b74cafc22bc}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!DX11Vec4Length@{DX11Vec4Length}}
+\index{DX11Vec4Length@{DX11Vec4Length}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{DX11Vec4Length()}{DX11Vec4Length()}}
+{\footnotesize\ttfamily void D\+X11\+Vec4\+Length (\begin{DoxyParamCaption}\item[{X\+M\+F\+L\+O\+A\+T4 \&}]{vec,  }\item[{float \&}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a124657a6944806be85a8fcbe0bc6232f}\label{dx11mathutil_8cpp_a124657a6944806be85a8fcbe0bc6232f}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!GetPlanefromProjectionmatrix@{GetPlanefromProjectionmatrix}}
+\index{GetPlanefromProjectionmatrix@{GetPlanefromProjectionmatrix}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{GetPlanefromProjectionmatrix()}{GetPlanefromProjectionmatrix()}}
+{\footnotesize\ttfamily void Get\+Planefrom\+Projectionmatrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_p_l_a_n_e}{P\+L\+A\+NE}} $\ast$}]{p,  }\item[{const X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{matrix }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a819aa49fbd3f9436864c4115d03d4675}\label{dx11mathutil_8cpp_a819aa49fbd3f9436864c4115d03d4675}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!GetPlanefromProjectionmatrixWithNormalize@{GetPlanefromProjectionmatrixWithNormalize}}
+\index{GetPlanefromProjectionmatrixWithNormalize@{GetPlanefromProjectionmatrixWithNormalize}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{GetPlanefromProjectionmatrixWithNormalize()}{GetPlanefromProjectionmatrixWithNormalize()}}
+{\footnotesize\ttfamily void Get\+Planefrom\+Projectionmatrix\+With\+Normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_p_l_a_n_e}{P\+L\+A\+NE}} $\ast$}]{p,  }\item[{const X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{matrix }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a0b3084a41fea36cb87e2c4f91407b017}\label{dx11mathutil_8cpp_a0b3084a41fea36cb87e2c4f91407b017}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!haltonseq@{haltonseq}}
+\index{haltonseq@{haltonseq}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{haltonseq()}{haltonseq()}}
+{\footnotesize\ttfamily float haltonseq (\begin{DoxyParamCaption}\item[{unsigned int}]{no,  }\item[{unsigned int}]{base }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a17cae4b76acb47ec9c26fa3ba5c43780}\label{dx11mathutil_8cpp_a17cae4b76acb47ec9c26fa3ba5c43780}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!IsInFrustum@{IsInFrustum}}
+\index{IsInFrustum@{IsInFrustum}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{IsInFrustum()}{IsInFrustum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool Is\+In\+Frustum (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{pos,  }\item[{const X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{matrix }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a44c0c964619f0a987f382411ed143b67}\label{dx11mathutil_8cpp_a44c0c964619f0a987f382411ed143b67}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!IsInFrustum@{IsInFrustum}}
+\index{IsInFrustum@{IsInFrustum}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{IsInFrustum()}{IsInFrustum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Is\+In\+Frustum (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{pos,  }\item[{const X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{matrix,  }\item[{float}]{ans\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a20b0651d02e110e66a29a77f7c026250}\label{dx11mathutil_8cpp_a20b0651d02e110e66a29a77f7c026250}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!IsInFrustum@{IsInFrustum}}
+\index{IsInFrustum@{IsInFrustum}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{IsInFrustum()}{IsInFrustum()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool Is\+In\+Frustum (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{pos,  }\item[{const X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{matrix,  }\item[{float}]{ans\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{struct_p_l_a_n_e}{P\+L\+A\+NE}} $\ast$}]{plane }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dx11mathutil_8cpp_a951dc3adf58e0effdaa0c16a9c5ce1dd}\label{dx11mathutil_8cpp_a951dc3adf58e0effdaa0c16a9c5ce1dd}} 
+\index{dx11mathutil.cpp@{dx11mathutil.cpp}!IsInFrustum@{IsInFrustum}}
+\index{IsInFrustum@{IsInFrustum}!dx11mathutil.cpp@{dx11mathutil.cpp}}
+\doxysubsubsection{\texorpdfstring{IsInFrustum()}{IsInFrustum()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool Is\+In\+Frustum (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{pos,  }\item[{float}]{radius,  }\item[{const X\+M\+F\+L\+O\+A\+T4\+X4 \&}]{matrix,  }\item[{float}]{ans\mbox{[}$\,$\mbox{]},  }\item[{bool}]{canseeflag\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{struct_p_l_a_n_e}{P\+L\+A\+NE}} $\ast$}]{plane }\end{DoxyParamCaption})}
+

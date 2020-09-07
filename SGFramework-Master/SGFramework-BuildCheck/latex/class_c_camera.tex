@@ -1,0 +1,215 @@
+\hypertarget{class_c_camera}{}\doxysection{C\+Camera クラス}
+\label{class_c_camera}\index{CCamera@{CCamera}}
+
+
+{\ttfamily \#include $<$C\+Camera.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_camera_af8d7efed8ed1f8f550a0a033f07e7ca1}{C\+Camera}} (const \mbox{\hyperlink{class_c_camera}{C\+Camera}} \&)=delete
+\item 
+\mbox{\hyperlink{class_c_camera}{C\+Camera}} \& \mbox{\hyperlink{class_c_camera_a03c13cda2a71136041c163fa93e6df50}{operator=}} (const \mbox{\hyperlink{class_c_camera}{C\+Camera}} \&)=delete
+\item 
+\mbox{\hyperlink{class_c_camera_adfdaaf5bd3dc23cf90541435bad89367}{C\+Camera}} (\mbox{\hyperlink{class_c_camera}{C\+Camera}} \&\&)=delete
+\item 
+\mbox{\hyperlink{class_c_camera}{C\+Camera}} \& \mbox{\hyperlink{class_c_camera_aa57e0a4023862374c3f8a2105aaf7ed1}{operator=}} (\mbox{\hyperlink{class_c_camera}{C\+Camera}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{class_c_camera_a21a92d2dab1ab46d84b877c7c21dc9bc}{Init}} (float nearclip, float farclip, float fov, float width, float height, X\+M\+F\+L\+O\+A\+T3 eye, X\+M\+F\+L\+O\+A\+T3 lookat, X\+M\+F\+L\+O\+A\+T3 up, H\+W\+ND h\+Wnd)
+\item 
+void \mbox{\hyperlink{class_c_camera_a74a2b7d5b083681d8dc399a69d87cab5}{Update}} (const X\+M\+F\+L\+O\+A\+T3 \&position, const X\+M\+F\+L\+O\+A\+T4 \&quaternion)
+\item 
+void \mbox{\hyperlink{class_c_camera_a5f4b9d456f30d9a584ec8f402b8e23f0}{Set\+Near}} (float nearclip)
+\item 
+void \mbox{\hyperlink{class_c_camera_a9df4423af55a5d383cfb61f1a47578fb}{Set\+Far}} (float farclip)
+\item 
+void \mbox{\hyperlink{class_c_camera_abdda1565e51233006063195ea0fc95a1}{Set\+Fov}} (float fov)
+\item 
+void \mbox{\hyperlink{class_c_camera_afeaa6be6b064b3df1ec4c64e187cd8af}{Set\+Aspect}} (float width, float height)
+\item 
+void \mbox{\hyperlink{class_c_camera_a98818814fd5c8018cba09e24d41fd296}{Set\+Projection}} (float nearclip, float farclip, float fov, float width, float height)
+\item 
+void \mbox{\hyperlink{class_c_camera_a7f33853e835a0b5f11c6413213969835}{Set\+Camera}} (const X\+M\+F\+L\+O\+A\+T3 \&eye, const X\+M\+F\+L\+O\+A\+T3 \&lookat, const X\+M\+F\+L\+O\+A\+T3 \&up)
+\item 
+void \mbox{\hyperlink{class_c_camera_a90a6a0a7104cd0696c2df731f2ef35d8}{Set\+Eye}} (const X\+M\+F\+L\+O\+A\+T3 \&eye)
+\item 
+void \mbox{\hyperlink{class_c_camera_ad702f1524f042d2c00a9918f820c2911}{Set\+Lookat}} (const X\+M\+F\+L\+O\+A\+T3 \&lookat)
+\item 
+void \mbox{\hyperlink{class_c_camera_a06a93970257f8b788e4f023a4c0cf249}{Set\+Up}} (const X\+M\+F\+L\+O\+A\+T3 \&up)
+\item 
+void \mbox{\hyperlink{class_c_camera_a8c05ef118a1b3ec3e137473683c4d900}{Create\+Camera\+Matrix}} ()
+\item 
+void \mbox{\hyperlink{class_c_camera_a7211932f1de531aa65d21b0c2b4383cd}{Create\+Projection\+Matrix}} ()
+\item 
+const X\+M\+F\+L\+O\+A\+T4\+X4 \& \mbox{\hyperlink{class_c_camera_a1f2f51d04284d7d4db301e6e7d604ae0}{Get\+Camera\+Matrix}} ()
+\item 
+const X\+M\+F\+L\+O\+A\+T4\+X4 \& \mbox{\hyperlink{class_c_camera_a79b65b905d513f76dfc6af74873fb2c1}{Get\+Projection\+Matrix}} ()
+\item 
+float \mbox{\hyperlink{class_c_camera_a8bce49573e115eb90f84e461f6cf7ef1}{Get\+Fov}} () const
+\item 
+const X\+M\+F\+L\+O\+A\+T3 \& \mbox{\hyperlink{class_c_camera_a5dfea5daf2a7c6b29e75b221393e6eb3}{Get\+Eye}} () const
+\item 
+const X\+M\+F\+L\+O\+A\+T3 \& \mbox{\hyperlink{class_c_camera_aba9872cb266bbc4ff50ebc28d0eabf3d}{Get\+Lookat}} () const
+\item 
+const X\+M\+F\+L\+O\+A\+T3 \& \mbox{\hyperlink{class_c_camera_a725bcab23681648df95b2147ed5fda3d}{Get\+Up}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_c_camera}{C\+Camera}} $\ast$ \mbox{\hyperlink{class_c_camera_a79d4c4311930206d81ab46abcbd55d45}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_c_camera_af8d7efed8ed1f8f550a0a033f07e7ca1}\label{class_c_camera_af8d7efed8ed1f8f550a0a033f07e7ca1}} 
+\index{CCamera@{CCamera}!CCamera@{CCamera}}
+\index{CCamera@{CCamera}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{CCamera()}{CCamera()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily C\+Camera\+::\+C\+Camera (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_camera}{C\+Camera}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_c_camera_adfdaaf5bd3dc23cf90541435bad89367}\label{class_c_camera_adfdaaf5bd3dc23cf90541435bad89367}} 
+\index{CCamera@{CCamera}!CCamera@{CCamera}}
+\index{CCamera@{CCamera}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{CCamera()}{CCamera()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily C\+Camera\+::\+C\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_camera}{C\+Camera}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_c_camera_a8c05ef118a1b3ec3e137473683c4d900}\label{class_c_camera_a8c05ef118a1b3ec3e137473683c4d900}} 
+\index{CCamera@{CCamera}!CreateCameraMatrix@{CreateCameraMatrix}}
+\index{CreateCameraMatrix@{CreateCameraMatrix}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{CreateCameraMatrix()}{CreateCameraMatrix()}}
+{\footnotesize\ttfamily void C\+Camera\+::\+Create\+Camera\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a7211932f1de531aa65d21b0c2b4383cd}\label{class_c_camera_a7211932f1de531aa65d21b0c2b4383cd}} 
+\index{CCamera@{CCamera}!CreateProjectionMatrix@{CreateProjectionMatrix}}
+\index{CreateProjectionMatrix@{CreateProjectionMatrix}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{CreateProjectionMatrix()}{CreateProjectionMatrix()}}
+{\footnotesize\ttfamily void C\+Camera\+::\+Create\+Projection\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a1f2f51d04284d7d4db301e6e7d604ae0}\label{class_c_camera_a1f2f51d04284d7d4db301e6e7d604ae0}} 
+\index{CCamera@{CCamera}!GetCameraMatrix@{GetCameraMatrix}}
+\index{GetCameraMatrix@{GetCameraMatrix}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{GetCameraMatrix()}{GetCameraMatrix()}}
+{\footnotesize\ttfamily const X\+M\+F\+L\+O\+A\+T4\+X4\& C\+Camera\+::\+Get\+Camera\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a5dfea5daf2a7c6b29e75b221393e6eb3}\label{class_c_camera_a5dfea5daf2a7c6b29e75b221393e6eb3}} 
+\index{CCamera@{CCamera}!GetEye@{GetEye}}
+\index{GetEye@{GetEye}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{GetEye()}{GetEye()}}
+{\footnotesize\ttfamily const X\+M\+F\+L\+O\+A\+T3\& C\+Camera\+::\+Get\+Eye (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a8bce49573e115eb90f84e461f6cf7ef1}\label{class_c_camera_a8bce49573e115eb90f84e461f6cf7ef1}} 
+\index{CCamera@{CCamera}!GetFov@{GetFov}}
+\index{GetFov@{GetFov}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{GetFov()}{GetFov()}}
+{\footnotesize\ttfamily float C\+Camera\+::\+Get\+Fov (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a79d4c4311930206d81ab46abcbd55d45}\label{class_c_camera_a79d4c4311930206d81ab46abcbd55d45}} 
+\index{CCamera@{CCamera}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_c_camera}{C\+Camera}}$\ast$ C\+Camera\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_c_camera_aba9872cb266bbc4ff50ebc28d0eabf3d}\label{class_c_camera_aba9872cb266bbc4ff50ebc28d0eabf3d}} 
+\index{CCamera@{CCamera}!GetLookat@{GetLookat}}
+\index{GetLookat@{GetLookat}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{GetLookat()}{GetLookat()}}
+{\footnotesize\ttfamily const X\+M\+F\+L\+O\+A\+T3\& C\+Camera\+::\+Get\+Lookat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a79b65b905d513f76dfc6af74873fb2c1}\label{class_c_camera_a79b65b905d513f76dfc6af74873fb2c1}} 
+\index{CCamera@{CCamera}!GetProjectionMatrix@{GetProjectionMatrix}}
+\index{GetProjectionMatrix@{GetProjectionMatrix}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{GetProjectionMatrix()}{GetProjectionMatrix()}}
+{\footnotesize\ttfamily const X\+M\+F\+L\+O\+A\+T4\+X4\& C\+Camera\+::\+Get\+Projection\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a725bcab23681648df95b2147ed5fda3d}\label{class_c_camera_a725bcab23681648df95b2147ed5fda3d}} 
+\index{CCamera@{CCamera}!GetUp@{GetUp}}
+\index{GetUp@{GetUp}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{GetUp()}{GetUp()}}
+{\footnotesize\ttfamily const X\+M\+F\+L\+O\+A\+T3\& C\+Camera\+::\+Get\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a21a92d2dab1ab46d84b877c7c21dc9bc}\label{class_c_camera_a21a92d2dab1ab46d84b877c7c21dc9bc}} 
+\index{CCamera@{CCamera}!Init@{Init}}
+\index{Init@{Init}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void C\+Camera\+::\+Init (\begin{DoxyParamCaption}\item[{float}]{nearclip,  }\item[{float}]{farclip,  }\item[{float}]{fov,  }\item[{float}]{width,  }\item[{float}]{height,  }\item[{X\+M\+F\+L\+O\+A\+T3}]{eye,  }\item[{X\+M\+F\+L\+O\+A\+T3}]{lookat,  }\item[{X\+M\+F\+L\+O\+A\+T3}]{up,  }\item[{H\+W\+ND}]{h\+Wnd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_aa57e0a4023862374c3f8a2105aaf7ed1}\label{class_c_camera_aa57e0a4023862374c3f8a2105aaf7ed1}} 
+\index{CCamera@{CCamera}!operator=@{operator=}}
+\index{operator=@{operator=}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_camera}{C\+Camera}}\& C\+Camera\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_camera}{C\+Camera}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_c_camera_a03c13cda2a71136041c163fa93e6df50}\label{class_c_camera_a03c13cda2a71136041c163fa93e6df50}} 
+\index{CCamera@{CCamera}!operator=@{operator=}}
+\index{operator=@{operator=}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_camera}{C\+Camera}}\& C\+Camera\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_camera}{C\+Camera}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_c_camera_afeaa6be6b064b3df1ec4c64e187cd8af}\label{class_c_camera_afeaa6be6b064b3df1ec4c64e187cd8af}} 
+\index{CCamera@{CCamera}!SetAspect@{SetAspect}}
+\index{SetAspect@{SetAspect}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{SetAspect()}{SetAspect()}}
+{\footnotesize\ttfamily void C\+Camera\+::\+Set\+Aspect (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{float}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a7f33853e835a0b5f11c6413213969835}\label{class_c_camera_a7f33853e835a0b5f11c6413213969835}} 
+\index{CCamera@{CCamera}!SetCamera@{SetCamera}}
+\index{SetCamera@{SetCamera}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{SetCamera()}{SetCamera()}}
+{\footnotesize\ttfamily void C\+Camera\+::\+Set\+Camera (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{eye,  }\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{lookat,  }\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{up }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a90a6a0a7104cd0696c2df731f2ef35d8}\label{class_c_camera_a90a6a0a7104cd0696c2df731f2ef35d8}} 
+\index{CCamera@{CCamera}!SetEye@{SetEye}}
+\index{SetEye@{SetEye}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{SetEye()}{SetEye()}}
+{\footnotesize\ttfamily void C\+Camera\+::\+Set\+Eye (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{eye }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a9df4423af55a5d383cfb61f1a47578fb}\label{class_c_camera_a9df4423af55a5d383cfb61f1a47578fb}} 
+\index{CCamera@{CCamera}!SetFar@{SetFar}}
+\index{SetFar@{SetFar}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{SetFar()}{SetFar()}}
+{\footnotesize\ttfamily void C\+Camera\+::\+Set\+Far (\begin{DoxyParamCaption}\item[{float}]{farclip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_abdda1565e51233006063195ea0fc95a1}\label{class_c_camera_abdda1565e51233006063195ea0fc95a1}} 
+\index{CCamera@{CCamera}!SetFov@{SetFov}}
+\index{SetFov@{SetFov}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{SetFov()}{SetFov()}}
+{\footnotesize\ttfamily void C\+Camera\+::\+Set\+Fov (\begin{DoxyParamCaption}\item[{float}]{fov }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_ad702f1524f042d2c00a9918f820c2911}\label{class_c_camera_ad702f1524f042d2c00a9918f820c2911}} 
+\index{CCamera@{CCamera}!SetLookat@{SetLookat}}
+\index{SetLookat@{SetLookat}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{SetLookat()}{SetLookat()}}
+{\footnotesize\ttfamily void C\+Camera\+::\+Set\+Lookat (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{lookat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a5f4b9d456f30d9a584ec8f402b8e23f0}\label{class_c_camera_a5f4b9d456f30d9a584ec8f402b8e23f0}} 
+\index{CCamera@{CCamera}!SetNear@{SetNear}}
+\index{SetNear@{SetNear}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{SetNear()}{SetNear()}}
+{\footnotesize\ttfamily void C\+Camera\+::\+Set\+Near (\begin{DoxyParamCaption}\item[{float}]{nearclip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a98818814fd5c8018cba09e24d41fd296}\label{class_c_camera_a98818814fd5c8018cba09e24d41fd296}} 
+\index{CCamera@{CCamera}!SetProjection@{SetProjection}}
+\index{SetProjection@{SetProjection}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{SetProjection()}{SetProjection()}}
+{\footnotesize\ttfamily void C\+Camera\+::\+Set\+Projection (\begin{DoxyParamCaption}\item[{float}]{nearclip,  }\item[{float}]{farclip,  }\item[{float}]{fov,  }\item[{float}]{width,  }\item[{float}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a06a93970257f8b788e4f023a4c0cf249}\label{class_c_camera_a06a93970257f8b788e4f023a4c0cf249}} 
+\index{CCamera@{CCamera}!SetUp@{SetUp}}
+\index{SetUp@{SetUp}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{SetUp()}{SetUp()}}
+{\footnotesize\ttfamily void C\+Camera\+::\+Set\+Up (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{up }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_camera_a74a2b7d5b083681d8dc399a69d87cab5}\label{class_c_camera_a74a2b7d5b083681d8dc399a69d87cab5}} 
+\index{CCamera@{CCamera}!Update@{Update}}
+\index{Update@{Update}!CCamera@{CCamera}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void C\+Camera\+::\+Update (\begin{DoxyParamCaption}\item[{const X\+M\+F\+L\+O\+A\+T3 \&}]{position,  }\item[{const X\+M\+F\+L\+O\+A\+T4 \&}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/\mbox{\hyperlink{_c_camera_8h}{C\+Camera.\+h}}\end{DoxyCompactItemize}

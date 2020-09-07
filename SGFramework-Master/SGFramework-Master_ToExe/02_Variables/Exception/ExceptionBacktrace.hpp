@@ -47,6 +47,9 @@ namespace SGFramework
 			//return: backtrace infomations
 			inline static std::string Capture()
 			{
+	#if !defined(SGF_DEBUG)
+				return "Confidential.";
+	#else
 				//Lock
 				bool expected = false;
 				while (1 ^ m_isLock.compare_exchange_weak(expected, true)) { expected = false; }
@@ -55,19 +58,19 @@ namespace SGFramework
 				if (m_isStartup ^ true) return m_cInvalidSymbol;
 
 				//Windows Version
-#if defined(SGF_PLATFORM_WINDOWS)
-				std::unique_ptr<void*[]> capture = std::make_unique<void*[]>(m_cStackSize);
+		#if defined(SGF_PLATFORM_WINDOWS)
+				std::unique_ptr<void*[]> capture = std::make_unique<void*[]>(m_cCaptureSize);
 				std::string result = "";
 				
 				//キャプチャ
-				int numCapture = static_cast<int>(RtlCaptureStackBackTrace(0, 62, capture.get(), nullptr));
+				int numCapture = static_cast<int>(RtlCaptureStackBackTrace(0, m_cCaptureSize, capture.get(), nullptr));
 				
 				//シンボルをまとめて解決する
-				for (int i = 0; i < numCapture; ++i)
+				for (int i = m_cResultStartIndex; i < numCapture && i < m_cCaptureSize; ++i)
 				{
 					void* address = capture[i];
 					if (address == nullptr || (AddressToSymbol(address, result,
-						(i + 1 < 10 ? "line 0" : "line ") + std::to_string(i + 1)) ^ true)) break;
+						((i - m_cResultStartIndex) + 1 < 10 ? "line 0" : "line ") + std::to_string((i - m_cResultStartIndex) + 1)) ^ true)) break;
 				}
 
 				//Unlock
@@ -75,9 +78,10 @@ namespace SGFramework
 				while (1 ^ m_isLock.compare_exchange_weak(expected, false)) { expected = true; }
 
 				return result;
-#else
-#error "Unsupported platform."
-#endif//Windows Version
+		#else
+		#error "Unsupported platform."
+		#endif//Windows Version
+	#endif
 			}
 
 		private:
@@ -109,6 +113,9 @@ namespace SGFramework
 			//argument 2: result (add)
 			inline static bool AddressToSymbol(void* address, std::string& writeResult, const std::string& header)
 			{
+	#if !defined(SGF_DEBUG)
+				return false;
+	#else
 				DWORD64 disp = 0;
 
 				////モジュール名を取得
@@ -146,10 +153,13 @@ namespace SGFramework
 				writeResult += (header + "::\tfunction: " + imageSymbol->Name + 
 					"\n\tsource: " + line.FileName + "-" + std::to_string(line.LineNumber) + "\n");
 				return true;
+	#endif
 			}
 
-			//Stack size
-			static constexpr std::size_t m_cStackSize = 10;
+			//Capture size
+			static constexpr std::size_t m_cCaptureSize = 12;
+			//result start index
+			static constexpr std::size_t m_cResultStartIndex = 2;
 			//Invalid symbol infomation
 			static constexpr char m_cInvalidSymbol[] = "module: ???, function: ???, source: ???";
 

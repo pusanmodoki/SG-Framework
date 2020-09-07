@@ -1,0 +1,54 @@
+\hypertarget{class_s_g_framework_1_1_atomic_1_1_lock_guard}{}\doxysection{S\+G\+Framework\+::Atomic\+::Lock\+Guard クラス}
+\label{class_s_g_framework_1_1_atomic_1_1_lock_guard}\index{SGFramework::Atomic::LockGuard@{SGFramework::Atomic::LockGuard}}
+
+
+std\+::atomic\+\_\+bool版のロックガードを提供する\+Atomic版\+Lock\+Guard class  
+
+
+
+
+{\ttfamily \#include $<$Atomic.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_atomic_1_1_lock_guard_a072135dbc33f21ed56047db6d2ee281b}{Lock\+Guard}} (std\+::atomic$<$ bool $>$ \&atomic)
+\begin{DoxyCompactList}\small\item\em ロックを行う \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_atomic_1_1_lock_guard_a82e130599c9ebb653bc508be9b024989}{$\sim$\+Lock\+Guard}} ()
+\begin{DoxyCompactList}\small\item\em アンロックを行う \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+std\+::atomic\+\_\+bool版のロックガードを提供する\+Atomic版\+Lock\+Guard class 
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_atomic_1_1_lock_guard_a072135dbc33f21ed56047db6d2ee281b}\label{class_s_g_framework_1_1_atomic_1_1_lock_guard_a072135dbc33f21ed56047db6d2ee281b}} 
+\index{SGFramework::Atomic::LockGuard@{SGFramework::Atomic::LockGuard}!LockGuard@{LockGuard}}
+\index{LockGuard@{LockGuard}!SGFramework::Atomic::LockGuard@{SGFramework::Atomic::LockGuard}}
+\doxysubsubsection{\texorpdfstring{LockGuard()}{LockGuard()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Atomic\+::\+Lock\+Guard\+::\+Lock\+Guard (\begin{DoxyParamCaption}\item[{std\+::atomic$<$ bool $>$ \&}]{atomic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ロックを行う 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in,out}}  & {\em atomic} & 参照するstd\+::atomic \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_g_framework_1_1_atomic_1_1_lock_guard_a82e130599c9ebb653bc508be9b024989}\label{class_s_g_framework_1_1_atomic_1_1_lock_guard_a82e130599c9ebb653bc508be9b024989}} 
+\index{SGFramework::Atomic::LockGuard@{SGFramework::Atomic::LockGuard}!````~LockGuard@{$\sim$LockGuard}}
+\index{````~LockGuard@{$\sim$LockGuard}!SGFramework::Atomic::LockGuard@{SGFramework::Atomic::LockGuard}}
+\doxysubsubsection{\texorpdfstring{$\sim$LockGuard()}{~LockGuard()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Atomic\+::\+Lock\+Guard\+::$\sim$\+Lock\+Guard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+アンロックを行う 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/\+Atomic/\mbox{\hyperlink{_atomic_8hpp}{Atomic.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/998_DemoApplication/DemoScene.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_e0e4c557ebc218887fb43396bcf8db4f.html">998_DemoApplication</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DemoScene.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_demo_scene_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DEBUG_SCENE_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DEBUG_SCENE_HPP_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../SGFramwork.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_character_8hpp.html">Character.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_sphere_8hpp.html">Sphere.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//#include &quot;AcademySource/CModel.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_demo_scene.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_demo_scene.html">DemoScene</a> : <span class="keyword">public</span> <a class="code" href="class_s_g_framework_1_1_scene_1_1_base_scene.html">Scene::BaseScene</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_demo_scene.html#ad18c036c40b7c14ec5fab6eb42773de4">   14</a></span>&#160;    <a class="code" href="class_demo_scene.html#ad18c036c40b7c14ec5fab6eb42773de4">DemoScene</a>() : Scene::BaseScene(){}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//[StartScene]</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">//シーン作成時自動で呼び出されるコールバック関数</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">//引数1: 前シーンからの引き継ぎ情報</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> StartScene(<a class="code" href="struct_s_g_framework_1_1_scene_1_1_scene_baton.html">Scene::SceneBaton</a>&amp; nextBaton) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//[EndScene]</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">//シーン終了時自動で呼び出されるコールバック関数, 終了処理を行う</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">//返り値がnullポインタだった場合、アプリケーションが終了する</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">//引数1: 次シーンへ引き継ぐ情報, Startで呼び出される</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">//引数2: trueを代入すると次シーン以外のスタックを本シーン含めてスタックからクリアする</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//引数2: trueを代入すると本シーンをスタックからする</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_demo_scene.html#a54993b72d2368acbbe265d050c15b5a9">   29</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_s_g_framework_1_1_unique_pointer.html">UniquePointer&lt;BaseScene&gt;</a> <a class="code" href="class_demo_scene.html#a54993b72d2368acbbe265d050c15b5a9">EndScene</a>(<a class="code" href="struct_s_g_framework_1_1_scene_1_1_scene_baton.html">Scene::SceneBaton</a>&amp; nextBaton, <span class="keywordtype">bool</span>&amp; isStackClear, <span class="keywordtype">bool</span>&amp; isStackPop)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="_macro_and_using_8hpp.html#a82ae160dbe195f3c7c84c14db0ebdce2">COM_RELEASE</a>(Sphere::m_vertexBuffer);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="_macro_and_using_8hpp.html#a82ae160dbe195f3c7c84c14db0ebdce2">COM_RELEASE</a>(Sphere::m_indexBuffer);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="_macro_and_using_8hpp.html#a297c50fc7e7dc2d97a5598a8742ab265">DELETE_POINTER</a>(Sphere::m_faces);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="_macro_and_using_8hpp.html#a297c50fc7e7dc2d97a5598a8742ab265">DELETE_POINTER</a>(Sphere::m_vertexes);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        Sphere::m_effect.<a class="code" href="class_s_g_framework_1_1_shared_pointer.html#adda90b630a24695f327d5347c6c70496">WaiverAndReset</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">bool</span> isNotEqual = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">bool</span> isNull = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; m_spheres.size(); ++i)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span> (m_spheres[i].getPointer() == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                isNull = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = i + 1; k &lt; m_spheres.size(); ++k)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">if</span> (m_spheres[i].getPointer() == m_spheres[k].getPointer())</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    isNotEqual = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        m_spheres.clear();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_s_g_framework_1_1_unique_pointer.html#ab018e97d1cb3c962af5bacddeb473ea2">UniquePointer&lt;BaseScene&gt;::getNull</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">//[RewindScene]</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">//シーンが終了し次シーンなし &amp; isPopで本シーンに戻ってきた場合に</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">//自動で呼び出されるコールバック関数</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">//引数1: 次シーンからの引き継ぐ情報</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_demo_scene.html#a0350627ac51ae0e925525073833dc9d5">   62</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_demo_scene.html#a0350627ac51ae0e925525073833dc9d5">RewindScene</a>(<a class="code" href="struct_s_g_framework_1_1_scene_1_1_scene_baton.html">Scene::SceneBaton</a>&amp; nextBaton) {}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">//[Update]</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//並列更新時自動で呼び出されるコールバック関数</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//他のコールバックと同時に並列呼び出しされ、オブジェクトの更新等を行う</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> Update();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//[Sync]</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">//同期更新時自動で呼び出されるコールバック関数</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//Update後にシングルスレッドで呼び出され、変数の共有や同期を行う</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">//return: シーン続行 -&gt; true</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_demo_scene.html#a481d5ec2c6aed43f13b653badec1141b">   74</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_demo_scene.html#a481d5ec2c6aed43f13b653badec1141b">Sync</a>() { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">//[LateUpdate]</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">//Update &amp; Sync終了後の並列更新時自動で呼び出されるコールバック関数</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">//他のコールバックと同時に並列呼び出しされ、オブジェクトの更新等を行う</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_demo_scene.html#abefc6127ff642b5b5c44f7e149e65dfb">   80</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_demo_scene.html#abefc6127ff642b5b5c44f7e149e65dfb">LateUpdate</a>() {}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">//[FixedUpdate]</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">//Fixedフレームでの並列更新時自動で呼び出されるコールバック関数</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//他のコールバックと同時に並列呼び出しされ、オブジェクトの更新等を行う</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_demo_scene.html#aaf1aae9829689a3377f64ba3eec4b135">   86</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_demo_scene.html#aaf1aae9829689a3377f64ba3eec4b135">FixedUpdate</a>() {}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">//[FixedSync]</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">//Fixedフレームでの同期更新時自動で呼び出されるコールバック関数</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">//Update後に呼び出され、変数の共有や同期を行う</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_demo_scene.html#a9c1e71641d7f86dde6526931229f4365">   91</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_demo_scene.html#a9c1e71641d7f86dde6526931229f4365">FixedSync</a>(){}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">//[MakeDrawCommand]</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">//描画更新時自動で呼び出されるコールバック関数</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">//描画登録等を行う</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> MakeDrawCommand();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">//scene name (read function property)</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_demo_scene.html#af5151898e9f3857bfdf8aa14cde6dd79">  100</a></span>&#160;    SGF_FUNCTION_PROPERTY <span class="keyword">virtual</span> sgstring <a class="code" href="class_demo_scene.html#af5151898e9f3857bfdf8aa14cde6dd79">getSceneName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> L<span class="stringliteral">&quot;GameScene&quot;</span>; }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    std::vector&lt;SharedPointer&lt;Sphere&gt;&gt; m_spheres;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Player&gt;</a> m_character;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Asset::ModelAsset&gt;</a> m_modelAsset;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Asset::VertexShaderAsset&gt;</a> m_vertexShaderModel;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Asset::PixelShaderAsset&gt;</a> m_pixelShaderModel;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Asset::VertexShaderAsset&gt;</a> m_vertexShaderPolygon;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Asset::PixelShaderAsset&gt;</a> m_pixelShaderPolygon;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    std::vector&lt;SharedPointer&lt;GameObject&gt;&gt; m_largeAmountObjects;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    std::vector&lt;SharedPointer&lt;Asset::ModelAsset&gt;&gt; m_largeAmountModelAssets;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">//Polygon classは以前の設計思想で制作されたレガシーなクラスだが、時間がないためそのまま使用</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;PolygonSquare&gt;</a> m_ground;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="class_s_g_framework_1_1_time_processing_1_1_time_limiter.html">TimeProcessing::TimeLimiter</a> m_limiter;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">bool</span> m_isCreateSphereMode = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;};</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif // !DEBUG_SCENE_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_demo_scene_html_a0350627ac51ae0e925525073833dc9d5"><div class="ttname"><a href="class_demo_scene.html#a0350627ac51ae0e925525073833dc9d5">DemoScene::RewindScene</a></div><div class="ttdeci">virtual void RewindScene(Scene::SceneBaton &amp;nextBaton)</div><div class="ttdef"><b>Definition:</b> DemoScene.hpp:62</div></div>
+<div class="ttc" id="a_sphere_8hpp_html"><div class="ttname"><a href="_sphere_8hpp.html">Sphere.hpp</a></div></div>
+<div class="ttc" id="aclass_demo_scene_html_abefc6127ff642b5b5c44f7e149e65dfb"><div class="ttname"><a href="class_demo_scene.html#abefc6127ff642b5b5c44f7e149e65dfb">DemoScene::LateUpdate</a></div><div class="ttdeci">virtual void LateUpdate()</div><div class="ttdef"><b>Definition:</b> DemoScene.hpp:80</div></div>
+<div class="ttc" id="aclass_demo_scene_html_a9c1e71641d7f86dde6526931229f4365"><div class="ttname"><a href="class_demo_scene.html#a9c1e71641d7f86dde6526931229f4365">DemoScene::FixedSync</a></div><div class="ttdeci">virtual void FixedSync()</div><div class="ttdef"><b>Definition:</b> DemoScene.hpp:91</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html_adda90b630a24695f327d5347c6c70496"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html#adda90b630a24695f327d5347c6c70496">SGFramework::SharedPointer::WaiverAndReset</a></div><div class="ttdeci">void WaiverAndReset() noexcept</div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:64</div></div>
+<div class="ttc" id="aclass_demo_scene_html_af5151898e9f3857bfdf8aa14cde6dd79"><div class="ttname"><a href="class_demo_scene.html#af5151898e9f3857bfdf8aa14cde6dd79">DemoScene::getSceneName</a></div><div class="ttdeci">virtual SGF_FUNCTION_PROPERTY sgstring getSceneName() const</div><div class="ttdef"><b>Definition:</b> DemoScene.hpp:100</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_time_processing_1_1_time_limiter_html"><div class="ttname"><a href="class_s_g_framework_1_1_time_processing_1_1_time_limiter.html">SGFramework::TimeProcessing::TimeLimiter</a></div><div class="ttdef"><b>Definition:</b> TimeProcessing.hpp:161</div></div>
+<div class="ttc" id="aclass_demo_scene_html_aaf1aae9829689a3377f64ba3eec4b135"><div class="ttname"><a href="class_demo_scene.html#aaf1aae9829689a3377f64ba3eec4b135">DemoScene::FixedUpdate</a></div><div class="ttdeci">virtual void FixedUpdate()</div><div class="ttdef"><b>Definition:</b> DemoScene.hpp:86</div></div>
+<div class="ttc" id="aclass_demo_scene_html_ad18c036c40b7c14ec5fab6eb42773de4"><div class="ttname"><a href="class_demo_scene.html#ad18c036c40b7c14ec5fab6eb42773de4">DemoScene::DemoScene</a></div><div class="ttdeci">DemoScene()</div><div class="ttdef"><b>Definition:</b> DemoScene.hpp:14</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_a297c50fc7e7dc2d97a5598a8742ab265"><div class="ttname"><a href="_macro_and_using_8hpp.html#a297c50fc7e7dc2d97a5598a8742ab265">DELETE_POINTER</a></div><div class="ttdeci">#define DELETE_POINTER(pointer)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:69</div></div>
+<div class="ttc" id="aclass_demo_scene_html"><div class="ttname"><a href="class_demo_scene.html">DemoScene</a></div><div class="ttdef"><b>Definition:</b> DemoScene.hpp:12</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html">SGFramework::SharedPointer&lt; Player &gt;</a></div></div>
+<div class="ttc" id="aclass_demo_scene_html_a54993b72d2368acbbe265d050c15b5a9"><div class="ttname"><a href="class_demo_scene.html#a54993b72d2368acbbe265d050c15b5a9">DemoScene::EndScene</a></div><div class="ttdeci">virtual UniquePointer&lt; BaseScene &gt; EndScene(Scene::SceneBaton &amp;nextBaton, bool &amp;isStackClear, bool &amp;isStackPop)</div><div class="ttdef"><b>Definition:</b> DemoScene.hpp:29</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_scene_1_1_scene_baton_html"><div class="ttname"><a href="struct_s_g_framework_1_1_scene_1_1_scene_baton.html">SGFramework::Scene::SceneBaton</a></div><div class="ttdef"><b>Definition:</b> Scene.hpp:15</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_unique_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_unique_pointer.html">SGFramework::UniquePointer</a></div><div class="ttdef"><b>Definition:</b> UniquePointer.hpp:14</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_scene_1_1_base_scene_html"><div class="ttname"><a href="class_s_g_framework_1_1_scene_1_1_base_scene.html">SGFramework::Scene::BaseScene</a></div><div class="ttdef"><b>Definition:</b> Scene.hpp:28</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_unique_pointer_html_ab018e97d1cb3c962af5bacddeb473ea2"><div class="ttname"><a href="class_s_g_framework_1_1_unique_pointer.html#ab018e97d1cb3c962af5bacddeb473ea2">SGFramework::UniquePointer::getNull</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY UniquePointer&lt; PointerType &gt; getNull() noexcept</div><div class="ttdef"><b>Definition:</b> UniquePointer.hpp:70</div></div>
+<div class="ttc" id="a_character_8hpp_html"><div class="ttname"><a href="_character_8hpp.html">Character.hpp</a></div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_a82ae160dbe195f3c7c84c14db0ebdce2"><div class="ttname"><a href="_macro_and_using_8hpp.html#a82ae160dbe195f3c7c84c14db0ebdce2">COM_RELEASE</a></div><div class="ttdeci">#define COM_RELEASE(pointer)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:79</div></div>
+<div class="ttc" id="aclass_demo_scene_html_a481d5ec2c6aed43f13b653badec1141b"><div class="ttname"><a href="class_demo_scene.html#a481d5ec2c6aed43f13b653badec1141b">DemoScene::Sync</a></div><div class="ttdeci">virtual bool Sync()</div><div class="ttdef"><b>Definition:</b> DemoScene.hpp:74</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

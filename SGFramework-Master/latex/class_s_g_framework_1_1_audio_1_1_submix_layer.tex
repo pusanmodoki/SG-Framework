@@ -1,0 +1,252 @@
+\hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer}{}\doxysection{S\+G\+Framework\+::Audio\+::Submix\+Layer クラス}
+\label{class_s_g_framework_1_1_audio_1_1_submix_layer}\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+
+
+{\ttfamily \#include $<$Audio.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_ab6057c6cc66a12298d1d3b72c3e75f86}{$\sim$\+Submix\+Layer}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a916315704e29f3a436fb962a8e416ff0}{Change\+Volume\+Smoothly}} (float target, float seconds)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer}{Submix\+Layer}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_ace3200a60776d88a6b16af63ecc6ab44}{get\+Parent}} () const
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY auto \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_aaa55ec4c88c199ebcd3e03b9269a55e0}{get\+Childrens\+Iterator\+Begin}} () const
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY auto \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_ac99707c07afc0fc1844a5b391f5ec001}{get\+Childrens\+Iterator\+End}} () const
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a33523909b4192f8487a0c07411a4edf2}{get\+Num\+Childrens}} () const
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a07738a2c4f1dc0919531b26ab8b864eb}{get\+Volume}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a93f728644be4ef3abc209ab788d67bdc}{set\+Volume}} (float magnification)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY sgstring \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a034ab2a3b95cdd80c240a361d66b12aa}{get\+Channels\+Mask}} () const
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY sgstring \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a7a21a40ea43fb4ef7e11f400f6bb595e}{get\+Channels\+String}} () const
+\item 
+const I\+X\+Audio2\+Submix\+Voice $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a49e5cf630d6ea39d5338d1b50414ea7f}{operator()}} ()
+\item 
+const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer}{Submix\+Layer}} $>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a90f2a28ead2b70adc46362c1d259a876}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} index)
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ I\+X\+Audio2\+Submix\+Voice $\ast$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_af7bd15875bda950a18d008cb5156efad}{voice}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ sgstring $>$ \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_aa0f9229f3f29e33751162bb963e3c468}{layer\+Name}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_ab1fb5e8818bdcf0e63d80c54f800c464}{layer\+ID}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a980da8de81131812257d1f94ac5779a2}{processing\+Stage}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a7189b5f4ef66da04803bca662bd8cf7f}{channels}}
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a7f0cbc43a121bd4e061808c20c5533b8}{c\+Root\+ID}} = 0
+\item 
+static constexpr \mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{wchar}} \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a4219bea36d49993d32e8a2d84e3eaee0}{c\+Root\+Name}} \mbox{[}$\,$\mbox{]} = L\char`\"{}root\char`\"{}
+\item 
+static constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a29a8ebb0a6bd398d8cc272899456e5d6}{c\+Monoral\+Root\+ID}} = 1
+\item 
+static constexpr \mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{wchar}} \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_ac9929e41ea059ef13998a782e5fa5dfc}{c\+Monoral\+Root\+Name}} \mbox{[}$\,$\mbox{]} = L\char`\"{}monoral\+Root\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a211f008bd6a46efe478fe81d31e28933}{Audio}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_ac964b98f0e504897e7c32b73cc00b737}{Base\+Class\+::\+Base\+Audio\+Asset}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a4dc07e019f39b170b9d564ca3652f1a1}{Base\+Class\+::\+Base\+Audio\+S\+E\+Asset}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a6b3deae32cf8d44e322c6886e795c5dc}{Asset\+::\+Audio\+Asset\+Music}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a3a8df7fa147227deb834fa66e3adc809}{Asset\+::\+Audio\+Asset\+Effect}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer_a7446b12275baf2ca54aba44caa299e4d}{Asset\+::\+Audio\+Asset\+Effect3D}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_ab6057c6cc66a12298d1d3b72c3e75f86}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_ab6057c6cc66a12298d1d3b72c3e75f86}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!````~SubmixLayer@{$\sim$SubmixLayer}}
+\index{````~SubmixLayer@{$\sim$SubmixLayer}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{$\sim$SubmixLayer()}{~SubmixLayer()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::$\sim$\+Submix\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a916315704e29f3a436fb962a8e416ff0}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a916315704e29f3a436fb962a8e416ff0}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!ChangeVolumeSmoothly@{ChangeVolumeSmoothly}}
+\index{ChangeVolumeSmoothly@{ChangeVolumeSmoothly}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{ChangeVolumeSmoothly()}{ChangeVolumeSmoothly()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::\+Change\+Volume\+Smoothly (\begin{DoxyParamCaption}\item[{float}]{target,  }\item[{float}]{seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a034ab2a3b95cdd80c240a361d66b12aa}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a034ab2a3b95cdd80c240a361d66b12aa}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!getChannelsMask@{getChannelsMask}}
+\index{getChannelsMask@{getChannelsMask}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{getChannelsMask()}{getChannelsMask()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY sgstring S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::get\+Channels\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a7a21a40ea43fb4ef7e11f400f6bb595e}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a7a21a40ea43fb4ef7e11f400f6bb595e}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!getChannelsString@{getChannelsString}}
+\index{getChannelsString@{getChannelsString}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{getChannelsString()}{getChannelsString()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY sgstring S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::get\+Channels\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_aaa55ec4c88c199ebcd3e03b9269a55e0}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_aaa55ec4c88c199ebcd3e03b9269a55e0}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!getChildrensIteratorBegin@{getChildrensIteratorBegin}}
+\index{getChildrensIteratorBegin@{getChildrensIteratorBegin}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{getChildrensIteratorBegin()}{getChildrensIteratorBegin()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY auto S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::get\+Childrens\+Iterator\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_ac99707c07afc0fc1844a5b391f5ec001}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_ac99707c07afc0fc1844a5b391f5ec001}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!getChildrensIteratorEnd@{getChildrensIteratorEnd}}
+\index{getChildrensIteratorEnd@{getChildrensIteratorEnd}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{getChildrensIteratorEnd()}{getChildrensIteratorEnd()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY auto S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::get\+Childrens\+Iterator\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a33523909b4192f8487a0c07411a4edf2}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a33523909b4192f8487a0c07411a4edf2}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!getNumChildrens@{getNumChildrens}}
+\index{getNumChildrens@{getNumChildrens}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{getNumChildrens()}{getNumChildrens()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::get\+Num\+Childrens (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_ace3200a60776d88a6b16af63ecc6ab44}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_ace3200a60776d88a6b16af63ecc6ab44}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!getParent@{getParent}}
+\index{getParent@{getParent}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{getParent()}{getParent()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer}{Submix\+Layer}}$>$ S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a07738a2c4f1dc0919531b26ab8b864eb}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a07738a2c4f1dc0919531b26ab8b864eb}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a49e5cf630d6ea39d5338d1b50414ea7f}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a49e5cf630d6ea39d5338d1b50414ea7f}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!operator()@{operator()}}
+\index{operator()@{operator()}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily const I\+X\+Audio2\+Submix\+Voice$\ast$ S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a90f2a28ead2b70adc46362c1d259a876}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a90f2a28ead2b70adc46362c1d259a876}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_audio_1_1_submix_layer}{Submix\+Layer}}$>$\& S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a93f728644be4ef3abc209ab788d67bdc}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a93f728644be4ef3abc209ab788d67bdc}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!setVolume@{setVolume}}
+\index{setVolume@{setVolume}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{setVolume()}{setVolume()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::set\+Volume (\begin{DoxyParamCaption}\item[{float}]{magnification }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a3a8df7fa147227deb834fa66e3adc809}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a3a8df7fa147227deb834fa66e3adc809}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!Asset::AudioAssetEffect@{Asset::AudioAssetEffect}}
+\index{Asset::AudioAssetEffect@{Asset::AudioAssetEffect}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{Asset::AudioAssetEffect}{Asset::AudioAssetEffect}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect}{Asset\+::\+Audio\+Asset\+Effect}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a7446b12275baf2ca54aba44caa299e4d}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a7446b12275baf2ca54aba44caa299e4d}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!Asset::AudioAssetEffect3D@{Asset::AudioAssetEffect3D}}
+\index{Asset::AudioAssetEffect3D@{Asset::AudioAssetEffect3D}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{Asset::AudioAssetEffect3D}{Asset::AudioAssetEffect3D}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d}{Asset\+::\+Audio\+Asset\+Effect3D}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a6b3deae32cf8d44e322c6886e795c5dc}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a6b3deae32cf8d44e322c6886e795c5dc}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!Asset::AudioAssetMusic@{Asset::AudioAssetMusic}}
+\index{Asset::AudioAssetMusic@{Asset::AudioAssetMusic}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{Asset::AudioAssetMusic}{Asset::AudioAssetMusic}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_music}{Asset\+::\+Audio\+Asset\+Music}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a211f008bd6a46efe478fe81d31e28933}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a211f008bd6a46efe478fe81d31e28933}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!Audio@{Audio}}
+\index{Audio@{Audio}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{Audio}{Audio}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_audio}{Audio}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_ac964b98f0e504897e7c32b73cc00b737}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_ac964b98f0e504897e7c32b73cc00b737}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!BaseClass::BaseAudioAsset@{BaseClass::BaseAudioAsset}}
+\index{BaseClass::BaseAudioAsset@{BaseClass::BaseAudioAsset}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{BaseClass::BaseAudioAsset}{BaseClass::BaseAudioAsset}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset}{Base\+Class\+::\+Base\+Audio\+Asset}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a4dc07e019f39b170b9d564ca3652f1a1}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a4dc07e019f39b170b9d564ca3652f1a1}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!BaseClass::BaseAudioSEAsset@{BaseClass::BaseAudioSEAsset}}
+\index{BaseClass::BaseAudioSEAsset@{BaseClass::BaseAudioSEAsset}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{BaseClass::BaseAudioSEAsset}{BaseClass::BaseAudioSEAsset}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset}{Base\+Class\+::\+Base\+Audio\+S\+E\+Asset}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a7189b5f4ef66da04803bca662bd8cf7f}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a7189b5f4ef66da04803bca662bd8cf7f}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!channels@{channels}}
+\index{channels@{channels}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{channels}{channels}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}$>$ S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::channels}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a29a8ebb0a6bd398d8cc272899456e5d6}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a29a8ebb0a6bd398d8cc272899456e5d6}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!cMonoralRootID@{cMonoralRootID}}
+\index{cMonoralRootID@{cMonoralRootID}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{cMonoralRootID}{cMonoralRootID}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::c\+Monoral\+Root\+ID = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_ac9929e41ea059ef13998a782e5fa5dfc}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_ac9929e41ea059ef13998a782e5fa5dfc}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!cMonoralRootName@{cMonoralRootName}}
+\index{cMonoralRootName@{cMonoralRootName}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{cMonoralRootName}{cMonoralRootName}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{wchar}} S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::c\+Monoral\+Root\+Name\mbox{[}$\,$\mbox{]} = L\char`\"{}monoral\+Root\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a7f0cbc43a121bd4e061808c20c5533b8}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a7f0cbc43a121bd4e061808c20c5533b8}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!cRootID@{cRootID}}
+\index{cRootID@{cRootID}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{cRootID}{cRootID}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::c\+Root\+ID = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a4219bea36d49993d32e8a2d84e3eaee0}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a4219bea36d49993d32e8a2d84e3eaee0}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!cRootName@{cRootName}}
+\index{cRootName@{cRootName}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{cRootName}{cRootName}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{wchar}} S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::c\+Root\+Name\mbox{[}$\,$\mbox{]} = L\char`\"{}root\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_ab1fb5e8818bdcf0e63d80c54f800c464}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_ab1fb5e8818bdcf0e63d80c54f800c464}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!layerID@{layerID}}
+\index{layerID@{layerID}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{layerID}{layerID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}$>$ S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::layer\+ID}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_aa0f9229f3f29e33751162bb963e3c468}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_aa0f9229f3f29e33751162bb963e3c468}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!layerName@{layerName}}
+\index{layerName@{layerName}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{layerName}{layerName}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$sgstring$>$ S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::layer\+Name}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_a980da8de81131812257d1f94ac5779a2}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_a980da8de81131812257d1f94ac5779a2}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!processingStage@{processingStage}}
+\index{processingStage@{processingStage}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{processingStage}{processingStage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}$>$ S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::processing\+Stage}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_audio_1_1_submix_layer_af7bd15875bda950a18d008cb5156efad}\label{class_s_g_framework_1_1_audio_1_1_submix_layer_af7bd15875bda950a18d008cb5156efad}} 
+\index{SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}!voice@{voice}}
+\index{voice@{voice}!SGFramework::Audio::SubmixLayer@{SGFramework::Audio::SubmixLayer}}
+\doxysubsubsection{\texorpdfstring{voice}{voice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$I\+X\+Audio2\+Submix\+Voice$\ast$$>$ S\+G\+Framework\+::\+Audio\+::\+Submix\+Layer\+::voice}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/06\+\_\+\+Audio/\mbox{\hyperlink{_audio_8hpp}{Audio.\+hpp}}\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/06\+\_\+\+Audio/\mbox{\hyperlink{_audio_submix_layer_8cpp}{Audio\+Submix\+Layer.\+cpp}}\end{DoxyCompactItemize}

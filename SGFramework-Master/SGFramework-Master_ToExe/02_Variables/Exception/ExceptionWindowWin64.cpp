@@ -1,18 +1,40 @@
-#include "ExceptionWindow.hpp"
+/*----------------------------------------------------------------------------------
+<ExceptionWindow.cpp> 例外ウィンドウを表示させるExceptionWindow class
+制作者: Shota Uemura
+------------------------------------------------------------------------------------*/
+//Windows version
 #ifdef SGF_PLATFORM_WINDOWS
 #include <Windows.h>
-#include "../MacroAndUsing/MacroAndUsing.hpp"
+#include <dwmapi.h>
+#include "../../01_MacroAndLibrarys/MacroAndLibrarys.hpp"
+#include "ExceptionWindow.hpp"
+#include "../Stringf/Stringf.hpp"
 
+//ウィンドウテキスト保存用
+std::unordered_map<HWND, std::wstring> SGFramework::Exception::ExceptionWindow::m_windowTexts;
+//ロック用
+std::mutex SGFramework::Exception::ExceptionWindow::m_mutex;
+//HINSTANCE保存
 HINSTANCE SGFramework::Exception::ExceptionWindow::m_hinstance = nullptr;
+//HWND保存
 HWND SGFramework::Exception::ExceptionWindow::m_parentWindowHandle = nullptr;
+//ウィンドウ生成カウンタ
 int SGFramework::Exception::ExceptionWindow::m_childrenWindowCounter = 0;
 
+//----------------------------------------------------------------------------------
+//[ShowWindow]
+//Windowを表示させる
+//argument 1: Window header
+//argument 2: Window text
 void SGFramework::Exception::ExceptionWindow::ShowWindow(const std::string & header, const std::string & text)
 {
-	HWND childWindowHandle = CreateWindowEx(
+	std::wstring useText = stringf::convert(text);
+
+	//ウインドウ作成
+	HWND childWindowHandle = CreateWindowExW(
 		WS_EX_LEFT,
 		m_cWindowClassName,
-		L"SGFramework error!!",
+		stringf::convert(header).c_str(),
 		(m_parentWindowHandle != nullptr ? WS_CHILD | WS_CAPTION | WS_BORDER | WS_SYSMENU : WS_POPUPWINDOW | WS_CAPTION),
 		CW_USEDEFAULT,
 		CW_USEDEFAULT,
@@ -21,9 +43,16 @@ void SGFramework::Exception::ExceptionWindow::ShowWindow(const std::string & hea
 		m_parentWindowHandle,
 		m_parentWindowHandle == nullptr ? nullptr : CREATE_WINDOW_HMENU_VALUE_CHILDLEN_EXCEPTION(++m_childrenWindowCounter),
 		m_hinstance,
-		nullptr
+		reinterpret_cast<void*> (&useText)
 	);
 
+	//ウインドウテキストを保存
+	{
+		std::lock_guard<std::mutex> guard(m_mutex);
+		m_windowTexts.try_emplace(childWindowHandle, useText);
+	}
+
+	//ウインドウ表示
 	::ShowWindow(childWindowHandle, SW_SHOW);
 	::UpdateWindow(childWindowHandle);
 
@@ -45,13 +74,23 @@ void SGFramework::Exception::ExceptionWindow::ShowWindow(const std::string & hea
 }
 
 
+//----------------------------------------------------------------------------------
+//[Shutdown]
+//終了処理を行う
 void SGFramework::Exception::ExceptionWindow::Shutdown()
 {
+	//クラス登録解除
 	UnregisterClass(m_cWindowClassName, m_hinstance);
 }
 
+//----------------------------------------------------------------------------------
+//[StartupWin64]
+//初期化処理を行う->Windows x64
+//argument 1: Window handle
+//argument 2: Instance handle
 void SGFramework::Exception::ExceptionWindow::StartupWin64(HWND hWnd, HINSTANCE hInstance)
 {
+	//ウインドウクラス作成
 	WNDCLASSEX wndClassEx = {};
 	wndClassEx.cbSize = sizeof(wndClassEx);
 	wndClassEx.style = 0;
@@ -66,19 +105,24 @@ void SGFramework::Exception::ExceptionWindow::StartupWin64(HWND hWnd, HINSTANCE 
 	wndClassEx.lpszClassName = m_cWindowClassName;
 	wndClassEx.hIconSm = reinterpret_cast<HICON>(LoadImage(NULL, IDI_ERROR, IMAGE_ICON, 0, 0, LR_SHARED));
 
-	RegisterClassEx(&wndClassEx);
+	RegisterClassExW(&wndClassEx);
 	m_hinstance = hInstance;
 	m_parentWindowHandle = hWnd;
 }
 
+//----------------------------------------------------------------------------------
+//[WindowProcedure]
+//Exception windowのWindowProcedure
 LRESULT SGFramework::Exception::ExceptionWindow::WindowProcedure(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-	HFONT font = nullptr;
 	//クライアントサイズ保存用
 	static RECT clientSize = {};
 	//ボタンサイズ保存用
 	static POINT buttonSize = {};
+	//フォントサイズ保存用
+	static POINT fontSize = {};
 
+	//メッセージスイッチ
 	switch (message)
 	{
 	case WM_CREATE:
@@ -106,19 +150,43 @@ LRESULT SGFramework::Exception::ExceptionWindow::WindowProcedure(HWND hWnd, UINT
 		ReleaseDC(hWnd, hdc);
 
 		//fontサイズを決定する
-		POINT fontSize = { static_cast<long>(static_cast<float>(textMatrics.tmAveCharWidth) * 0.9f), textMatrics.tmHeight };
+		fontSize = { static_cast<long>(static_cast<float>(textMatrics.tmAveCharWidth) * 0.9f), textMatrics.tmHeight };
 		//ボタンサイズを決定する
 		buttonSize = { fontSize.x * 14,  static_cast<long>(static_cast<float>(fontSize.y) * 1.5f) };
 
+		//backtrace行数を調べる
+		int backtraceNumLines = 0;
+		{
+			bool isBackTrace = false;
+
+			//文字列の取得
+			std::wstringstream stream = std::wstringstream (*reinterpret_cast<std::wstring*>((reinterpret_cast<CREATESTRUCT*>(lParam)->lpCreateParams)));
+			std::wstring getLine;
+
+			//backtraceの行数を計算
+			while (std::getline(stream, getLine))
+			{
+				if ((isBackTrace ^ true) && stringf::is_contains(getLine, L"backtrace:"))
+					isBackTrace = true;
+				if (isBackTrace)
+					backtraceNumLines++;
+			}
+		}
+
 		//Windowサイズを求める
-		int width = fontSize.x * m_cMaxOneLineWordCount;
-		int height = fontSize.y * m_cMaxLines + buttonSize.y * 2;
+		int width = fontSize.x * m_cMaxOneLineWordCount, height;
+		{
+			RECT windowRect, clientRect;
+			POINT setSize = {};
+			DwmGetWindowAttribute(hWnd, DWMWA_EXTENDED_FRAME_BOUNDS, &windowRect, sizeof(windowRect));
+			GetClientRect(hWnd, &clientRect);
+			height = fontSize.y * m_cBaseWindowHeightFontMulti + ((windowRect.bottom - windowRect.top) - (clientRect.bottom - clientRect.top))
+				+ backtraceNumLines * m_cBacktraceLineHeight;
+		}
 		MoveWindow(hWnd, desktopRect.right / 2 - width / 2, desktopRect.bottom / 2 - height / 2, width, height, true);
 		
 		//クライアントサイズを求める(height用)
 		GetClientRect(hWnd, &clientSize);
-
-		MessageBox(hWnd, L"FF", L"FF", MB_OK);
 
 		//ボタン作成
 		HWND button = CreateWindow(L"BUTTON", L"OK",
@@ -128,11 +196,12 @@ LRESULT SGFramework::Exception::ExceptionWindow::WindowProcedure(HWND hWnd, UINT
 			buttonSize.x, buttonSize.y, hWnd, nullptr, m_hinstance, nullptr);
 		
 		//フォントを取得
-		font = (HFONT)CreateFont(fontSize.y, fontSize.x,
+		HFONT font = reinterpret_cast<HFONT>(CreateFont(fontSize.y, fontSize.x,
 			0, 0, FW_THIN, false , false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS,
-			CLIP_DEFAULT_PRECIS, PROOF_QUALITY, VARIABLE_PITCH | FF_DONTCARE, L"Yu Gothic UI");
+			CLIP_DEFAULT_PRECIS, PROOF_QUALITY, VARIABLE_PITCH | FF_DONTCARE, L"Yu Gothic UI"));
 		//フォント変更のメッセージを送信
-		SendMessage(button, WM_SETFONT, (WPARAM)font, MAKELPARAM(TRUE, 0));
+		SendMessage(button, WM_SETFONT, reinterpret_cast<WPARAM>(font), MAKELPARAM(TRUE, 0));
+		SendMessage(hWnd, WM_SETFONT, reinterpret_cast<WPARAM>(font), MAKELPARAM(TRUE, 0));
 		//フォント削除
 		DeleteObject(font);
 
@@ -142,7 +211,11 @@ LRESULT SGFramework::Exception::ExceptionWindow::WindowProcedure(HWND hWnd, UINT
 		//デストロイメッセージ
 	case WM_DESTROY:
 	{
-		DeleteObject(font);				//フォント削除
+		//ウインドウテキスト削除
+		{
+			std::lock_guard<std::mutex> guard(m_mutex);
+			m_windowTexts.erase(hWnd);
+		}
 		PostQuitMessage(0);			//ウィンドウ削除
 		return 0;
 	}
@@ -150,6 +223,7 @@ LRESULT SGFramework::Exception::ExceptionWindow::WindowProcedure(HWND hWnd, UINT
 	case WM_CLOSE:
 	case WM_COMMAND:
 	{
+		//メッセージポスト
 		PostMessage(hWnd, WM_SGFRAMEWORK_CLOSE_EXCEPTION_WINDOW, 0, 0);
 		return 0;
 	}
@@ -159,9 +233,11 @@ LRESULT SGFramework::Exception::ExceptionWindow::WindowProcedure(HWND hWnd, UINT
 		DestroyWindow(hWnd);
 		return 0;
 	}
-
+	
+	//描画
 	case WM_PAINT:
 	{
+		TEXTMETRIC textMetric;
 		PAINTSTRUCT paintStruct;
 		HDC hdc = BeginPaint(hWnd, &paintStruct);
 
@@ -172,9 +248,50 @@ LRESULT SGFramework::Exception::ExceptionWindow::WindowProcedure(HWND hWnd, UINT
 		Rectangle(hdc, 0, clientSize.bottom - buttonSize.y * 2, clientSize.right, clientSize.bottom);
 		DeleteObject(blush);
 		
-		//文字列の描画
+		//文字列の取得
+		std::wstringstream stream;
+		std::wstring getLine;
+		{
+			std::lock_guard<std::mutex> guard(m_mutex);
+			stream = std::wstringstream(m_windowTexts.at(hWnd));
+		}
 
+		GetTextMetrics(hdc, &textMetric);
+		int textHeight = fontSize.y, textHeightAdd = fontSize.y;
+		bool isChangeFont = false;
 
+		{
+			//フォントを取得
+			HFONT font = reinterpret_cast<HFONT>(CreateFont(fontSize.y, fontSize.x,
+				0, 0, FW_THIN, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS,
+				CLIP_DEFAULT_PRECIS, PROOF_QUALITY, VARIABLE_PITCH | FF_DONTCARE, L"Yu Gothic UI"));
+			//フォント変更
+			SelectObject(hdc, font);
+			//フォント削除
+			DeleteObject(font);
+		}
+
+		while (std::getline(stream, getLine))
+		{
+			if ((isChangeFont ^ true) && stringf::is_contains(getLine, L"backtrace:"))
+			{
+				isChangeFont = true;
+				textHeight -= textHeightAdd / 2;
+				textHeightAdd = static_cast<long>(static_cast<float>(fontSize.y) * 0.8f);
+				//フォントを取得
+				HFONT font = reinterpret_cast<HFONT>(CreateFont(textHeightAdd,
+					static_cast<long>(static_cast<float>(fontSize.x) * 0.8f),
+					0, 0, FW_THIN, false, false, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS,
+					CLIP_DEFAULT_PRECIS, PROOF_QUALITY, VARIABLE_PITCH | FF_DONTCARE, L"Yu Gothic UI"));
+				//フォント変更
+				SelectObject(hdc, font);
+				//フォント削除
+				DeleteObject(font);
+			}
+
+			TabbedTextOut(hdc, 0, textHeight, getLine.c_str(), static_cast<int>(getLine.length()), 0, nullptr, 0);
+			textHeight += textHeightAdd;
+		}
 
 		EndPaint(hWnd, &paintStruct);
 		return 0;

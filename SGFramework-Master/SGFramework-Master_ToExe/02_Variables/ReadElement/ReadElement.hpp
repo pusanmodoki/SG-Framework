@@ -3,9 +3,9 @@
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_READ_ELEMENT_HPP_
 #define SGFRAMEWORK_HEADER_READ_ELEMENT_HPP_
+#include "../../01_MacroAndLibrarys/MacroAndLibrarys.hpp"
 #include "../Stringf/Stringf.hpp"
 #include "../Exception/Exception.hpp"
-#include "../MacroAndUsing/MacroAndUsing.hpp"
 
 //Framework namespace
 namespace SGFramework
@@ -65,13 +65,13 @@ namespace SGFramework
 		void Init(int value) { TRY_CATCH_ON_DEBUG(m_type = Type::Int; m_valueString = stringf::to(value); m_valueFloat = static_cast<float>(value); m_valueInt = value;, throw); }
 		
 		//<property> saved type
-		SGF_PROPERTY Type _type() const { return m_type; }
+		SGF_INLINE_PROPERTY Type _type() const { return m_type; }
 		//<property> value (string_w)
-		SGF_PROPERTY const string_w& _valueString() const { return m_valueString; }
+		SGF_INLINE_PROPERTY const string_w& _valueString() const { return m_valueString; }
 		//<property> value (float)
-		SGF_PROPERTY float _valueFloat() const { return m_valueFloat; }
+		SGF_INLINE_PROPERTY float _valueFloat() const { return m_valueFloat; }
 		//<property> value (int)
-		SGF_PROPERTY int _valueInt() const { return m_valueInt; }
+		SGF_INLINE_PROPERTY int _valueInt() const { return m_valueInt; }
 
 
 	private:
@@ -120,13 +120,13 @@ namespace SGFramework
 		inline void RemoveAt(int index) { TRY_CATCH_ON_DEBUG(m_containers.erase(m_containers.begin() + index), throw Exception::InvalidArgumentException("IndefiniteContainersLine", "RemoveAt", "invalid index")); }
 
 		//<property> header
-		SGF_PROPERTY const string_w& _header() const { return m_header; }
+		SGF_INLINE_PROPERTY const string_w& _header() const { return m_header; }
 		//<property> header(set) argument 1: set value
-		SGF_PROPERTY const string_w& _header(const string_w& set) { m_header = set; return m_header; }
+		SGF_INLINE_PROPERTY const string_w& _header(const string_w& set) { m_header = set; return m_header; }
 		//<property> containers list
-		SGF_PROPERTY const ListType& _containers() const { return m_containers; }
+		SGF_INLINE_PROPERTY const ListType& _containers() const { return m_containers; }
 		//<property> containers.size()
-		SGF_PROPERTY std::size_t _containersSize() const { return m_containers.size(); }
+		SGF_INLINE_PROPERTY std::size_t _containersSize() const { return m_containers.size(); }
 
 		//[] operator<possibly throw(debug only)> argument 1: index
 		inline IndefiniteContainer& operator [](uint index)
@@ -180,17 +180,17 @@ namespace SGFramework
 		inline void RemoveAt(int index) { TRY_CATCH_ON_DEBUG(m_containers.erase(m_containers.begin() + index), throw Exception::InvalidArgumentException("IndefiniteContainersLine", "RemoveAt", "invalid index")); }
 
 		//<property> header
-		SGF_PROPERTY const string_w& _header() const { return m_header; }
+		SGF_INLINE_PROPERTY const string_w& _header() const { return m_header; }
 		//<property> header(set) argument 1: set value
-		SGF_PROPERTY const string_w& _header(const string_w& set) { m_header = set; return m_header; }
+		SGF_INLINE_PROPERTY const string_w& _header(const string_w& set) { m_header = set; return m_header; }
 		
 		//<property> containers list (ref)
-		SGF_PROPERTY ListType& _containers() { return m_containers; }
+		SGF_INLINE_PROPERTY ListType& _containers() { return m_containers; }
 		//<property> containers list (const ref)
-		SGF_PROPERTY const ListType& _containers() const { return m_containers; }
+		SGF_INLINE_PROPERTY const ListType& _containers() const { return m_containers; }
 
 		//<property> containers.size()
-		SGF_PROPERTY std::size_t _containersSize() const { return m_containers.size(); }
+		SGF_INLINE_PROPERTY std::size_t _containersSize() const { return m_containers.size(); }
 
 		//[] operator<possibly throw(debug only)> argument 1: index
 		inline IndefiniteContainersLine& operator [](uint index)

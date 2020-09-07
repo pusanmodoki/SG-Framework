@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework::GameObject::CallbackFunctions 構造体</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_s_g_framework.html">SGFramework</a></li><li class="navelem"><a class="el" href="class_s_g_framework_1_1_game_object.html">GameObject</a></li><li class="navelem"><a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html">CallbackFunctions</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="struct_s_g_framework_1_1_game_object_1_1_callback_functions-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">SGFramework::GameObject::CallbackFunctions 構造体</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_game_object_8hpp_source.html">GameObject.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a4e923c048cebbb72fb95b190b80924c6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6">Enum</a> : uint { <br />
+&#160;&#160;<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6a14efbc1dd5af25cdd4cadcdaba173378">Awake</a> = 0x00000001, 
+<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6aac041cab7fc5c1aa92b0ee688b93e93e">OnEnable</a> = 0x00000002, 
+<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6a2debd5f16cb0ee93bd0f0168c11d4515">Start</a> = 0x00000004, 
+<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6ab4ec64f9e9d0260b1ef22d1cc27d54f7">Update</a> = 0x00000008, 
+<br />
+&#160;&#160;<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6aea9e1a1f09dc7879fecbe43e6fc16439">Sync</a> = 0x00000010, 
+<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6adcebbaddcd4f8b280921f390579dde45">LateUpdate</a> = 0x00000020, 
+<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6ae30e1e66600b0a30067b0cb34c10b86e">MakeDrawCommand</a> = 0x00000040, 
+<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6ad6f3c68f5e7069bf125ec9661a5d23b6">FixedUpdate</a> = 0x00000080, 
+<br />
+&#160;&#160;<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6ab54cb27ff6bb7619027cec618bbc9629">OnDisable</a> = 0x00000100, 
+<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6a6430d34edb2802f69ff8065c069da61b">OnDestroy</a> = 0x00000200, 
+<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6abc6ff2a8d2fc6b3e20bb6e67c98b2de4">OnCollisionEnter</a> = 0x00000400, 
+<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6acabe630443637adc3d8752f0cf616474">OnCollisionStay</a> = 0x00000800, 
+<br />
+&#160;&#160;<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6ace63b67cbefd61cd768e0c913ec2e877">OnCollisionExit</a> = 0x00001000, 
+<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6a286df1f43d7da758265c52e7132cb652">OnTriggerEnter</a> = 0x00002000, 
+<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6a1ad1529fc17b2a16bf54c1893714641b">OnTriggerStay</a> = 0x00004000, 
+<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6a7af7512aacd47e105ed43ea624b973e3">OnTriggerExit</a> = 0x00008000, 
+<br />
+&#160;&#160;<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6afc7137a6d0c46e18de86ca073dc705ae">ChangeUpperHierarchy</a> = 0x00010000, 
+<a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6a6ab8415c149f2b5d5f31c4643b9bacc2">StandardCallbacks</a> = Start | Update | Sync
+<br />
+ }</td></tr>
+<tr class="separator:a4e923c048cebbb72fb95b190b80924c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a00df87c957d8f7ee0fc51f07a0542f4a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a></td></tr>
+<tr class="separator:a00df87c957d8f7ee0fc51f07a0542f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a4e923c048cebbb72fb95b190b80924c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e923c048cebbb72fb95b190b80924c6">&#9670;&nbsp;</a></span>Enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="struct_s_g_framework_1_1_game_object_1_1_callback_functions.html#a4e923c048cebbb72fb95b190b80924c6">SGFramework::GameObject::CallbackFunctions::Enum</a> : <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6a14efbc1dd5af25cdd4cadcdaba173378"></a>Awake&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6aac041cab7fc5c1aa92b0ee688b93e93e"></a>OnEnable&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6a2debd5f16cb0ee93bd0f0168c11d4515"></a>Start&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6ab4ec64f9e9d0260b1ef22d1cc27d54f7"></a>Update&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6aea9e1a1f09dc7879fecbe43e6fc16439"></a>Sync&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6adcebbaddcd4f8b280921f390579dde45"></a>LateUpdate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6ae30e1e66600b0a30067b0cb34c10b86e"></a>MakeDrawCommand&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6ad6f3c68f5e7069bf125ec9661a5d23b6"></a>FixedUpdate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6ab54cb27ff6bb7619027cec618bbc9629"></a>OnDisable&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6a6430d34edb2802f69ff8065c069da61b"></a>OnDestroy&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6abc6ff2a8d2fc6b3e20bb6e67c98b2de4"></a>OnCollisionEnter&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6acabe630443637adc3d8752f0cf616474"></a>OnCollisionStay&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6ace63b67cbefd61cd768e0c913ec2e877"></a>OnCollisionExit&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6a286df1f43d7da758265c52e7132cb652"></a>OnTriggerEnter&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6a1ad1529fc17b2a16bf54c1893714641b"></a>OnTriggerStay&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6a7af7512aacd47e105ed43ea624b973e3"></a>OnTriggerExit&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6afc7137a6d0c46e18de86ca073dc705ae"></a>ChangeUpperHierarchy&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4e923c048cebbb72fb95b190b80924c6a6ab8415c149f2b5d5f31c4643b9bacc2"></a>StandardCallbacks&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="a00df87c957d8f7ee0fc51f07a0542f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00df87c957d8f7ee0fc51f07a0542f4a">&#9670;&nbsp;</a></span>GameObject</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_game_object.html">GameObject</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>SGFramework-Master_ToExe/11_GameObject/<a class="el" href="_game_object_8hpp_source.html">GameObject.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

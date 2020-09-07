@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework::Detail::Pointer::BaseCounter 構造体</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_s_g_framework.html">SGFramework</a></li><li class="navelem"><a class="el" href="namespace_s_g_framework_1_1_detail.html">Detail</a></li><li class="navelem"><a class="el" href="namespace_s_g_framework_1_1_detail_1_1_pointer.html">Pointer</a></li><li class="navelem"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html">BaseCounter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">SGFramework::Detail::Pointer::BaseCounter 構造体<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_base_pointer_8hpp_source.html">BasePointer.hpp</a>&gt;</code></p>
+<div class="dynheader">
+SGFramework::Detail::Pointer::BaseCounter の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.png" usemap="#SGFramework::Detail::Pointer::BaseCounter_map" alt=""/>
+  <map id="SGFramework::Detail::Pointer::BaseCounter_map" name="SGFramework::Detail::Pointer::BaseCounter_map">
+<area href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_clone_counter.html" alt="SGFramework::Detail::Pointer::BaseCloneCounter" shape="rect" coords="153,56,450,80"/>
+<area href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_counter.html" alt="SGFramework::Detail::Pointer::MutexCounter" shape="rect" coords="460,56,757,80"/>
+<area href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_counter.html" alt="SGFramework::Detail::Pointer::SimpleCounter" shape="rect" coords="767,56,1064,80"/>
+<area href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_clone_counter.html" alt="SGFramework::Detail::Pointer::MutexCloneCounter" shape="rect" coords="0,112,297,136"/>
+<area href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_clone_counter.html" alt="SGFramework::Detail::Pointer::SimpleCloneCounter" shape="rect" coords="307,112,604,136"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac95a4c03c1f97a7bd11f6c85c7ee337e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html#ac95a4c03c1f97a7bd11f6c85c7ee337e">BaseCounter</a> ()</td></tr>
+<tr class="separator:ac95a4c03c1f97a7bd11f6c85c7ee337e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac91589ef91e3762e3136b3462174fbcc"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html#ac91589ef91e3762e3136b3462174fbcc">~BaseCounter</a> ()</td></tr>
+<tr class="separator:ac91589ef91e3762e3136b3462174fbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e4bebe6ca4a249760fe13483ddee19d"><td class="memItemLeft" align="right" valign="top">virtual short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html#a2e4bebe6ca4a249760fe13483ddee19d">getShared</a> ()=0</td></tr>
+<tr class="separator:a2e4bebe6ca4a249760fe13483ddee19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5aadf3cbc0900e67d0b789dc8ddfcec"><td class="memItemLeft" align="right" valign="top">virtual short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html#ac5aadf3cbc0900e67d0b789dc8ddfcec">getWeak</a> ()=0</td></tr>
+<tr class="separator:ac5aadf3cbc0900e67d0b789dc8ddfcec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37aeea77ff6ed5ccebabb632716b14bb"><td class="memItemLeft" align="right" valign="top">virtual short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html#a37aeea77ff6ed5ccebabb632716b14bb">setShared</a> (short value)=0</td></tr>
+<tr class="separator:a37aeea77ff6ed5ccebabb632716b14bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab725df2e4f22db2fd86c6eec01a6c5b6"><td class="memItemLeft" align="right" valign="top">virtual short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html#ab725df2e4f22db2fd86c6eec01a6c5b6">setWeak</a> (short value)=0</td></tr>
+<tr class="separator:ab725df2e4f22db2fd86c6eec01a6c5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d6a1da976a994fae241f816acde3cf"><td class="memItemLeft" align="right" valign="top">virtual short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html#a22d6a1da976a994fae241f816acde3cf">addShared</a> ()=0</td></tr>
+<tr class="separator:a22d6a1da976a994fae241f816acde3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bf11aa5a2d7aa59ce6bc399a98d8bae"><td class="memItemLeft" align="right" valign="top">virtual short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html#a7bf11aa5a2d7aa59ce6bc399a98d8bae">subShared</a> ()=0</td></tr>
+<tr class="separator:a7bf11aa5a2d7aa59ce6bc399a98d8bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd57897b5d487f664cafdc6f76af84f9"><td class="memItemLeft" align="right" valign="top">virtual short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html#afd57897b5d487f664cafdc6f76af84f9">addWeak</a> ()=0</td></tr>
+<tr class="separator:afd57897b5d487f664cafdc6f76af84f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fdeff1bd327d2a7c624375fd1d19db7"><td class="memItemLeft" align="right" valign="top">virtual short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html#a4fdeff1bd327d2a7c624375fd1d19db7">subWeak</a> ()=0</td></tr>
+<tr class="separator:a4fdeff1bd327d2a7c624375fd1d19db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d483d056172eae9ef56306966b6a098"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html#a1d483d056172eae9ef56306966b6a098">LockShared</a> ()=0</td></tr>
+<tr class="separator:a1d483d056172eae9ef56306966b6a098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf2ac29c2e943368ca7836f1b491885"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html#a1cf2ac29c2e943368ca7836f1b491885">IsDestroyShared</a> ()=0</td></tr>
+<tr class="separator:a1cf2ac29c2e943368ca7836f1b491885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86557b0f144e8d1fa40ef61b7fe0a941"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_base_counter.html#a86557b0f144e8d1fa40ef61b7fe0a941">IsDestroyCounter</a> ()=0</td></tr>
+<tr class="separator:a86557b0f144e8d1fa40ef61b7fe0a941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="ac95a4c03c1f97a7bd11f6c85c7ee337e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac95a4c03c1f97a7bd11f6c85c7ee337e">&#9670;&nbsp;</a></span>BaseCounter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SGFramework::Detail::Pointer::BaseCounter::BaseCounter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac91589ef91e3762e3136b3462174fbcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac91589ef91e3762e3136b3462174fbcc">&#9670;&nbsp;</a></span>~BaseCounter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual SGFramework::Detail::Pointer::BaseCounter::~BaseCounter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a22d6a1da976a994fae241f816acde3cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d6a1da976a994fae241f816acde3cf">&#9670;&nbsp;</a></span>addShared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual short SGFramework::Detail::Pointer::BaseCounter::addShared </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_clone_counter.html#a4f171e1931cc470807c2ebc7d87e4db0">SGFramework::Detail::Pointer::MutexCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_clone_counter.html#af9af740442f3a9cf2f1d45c723d0f260">SGFramework::Detail::Pointer::SimpleCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_counter.html#a8015d4d64ec7ca5d3f03deb2169d845c">SGFramework::Detail::Pointer::MutexCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_counter.html#a7e87b3b49862a9e86786597401d7f980">SGFramework::Detail::Pointer::SimpleCounter</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="afd57897b5d487f664cafdc6f76af84f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd57897b5d487f664cafdc6f76af84f9">&#9670;&nbsp;</a></span>addWeak()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual short SGFramework::Detail::Pointer::BaseCounter::addWeak </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_clone_counter.html#a559471ceab3aa15ad53e42d5d54e846d">SGFramework::Detail::Pointer::MutexCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_clone_counter.html#afe4795f7f13bd96bc8e1e670bcf059f7">SGFramework::Detail::Pointer::SimpleCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_counter.html#afc7f735470c78a7ecc5f7c8f1d6c07c1">SGFramework::Detail::Pointer::MutexCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_counter.html#af5361a60460f5a78fc44edf727d09a21">SGFramework::Detail::Pointer::SimpleCounter</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a2e4bebe6ca4a249760fe13483ddee19d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e4bebe6ca4a249760fe13483ddee19d">&#9670;&nbsp;</a></span>getShared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual short SGFramework::Detail::Pointer::BaseCounter::getShared </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_clone_counter.html#aae06c4c4599ca9af33b201f085a26f87">SGFramework::Detail::Pointer::MutexCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_clone_counter.html#a2d8d7523765d4cf2a66e413271259333">SGFramework::Detail::Pointer::SimpleCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_counter.html#a76e813b56044bfda90e8fb719c8f4c2a">SGFramework::Detail::Pointer::MutexCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_counter.html#a364ee132206828abe48aa9bf3f6c4635">SGFramework::Detail::Pointer::SimpleCounter</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="ac5aadf3cbc0900e67d0b789dc8ddfcec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5aadf3cbc0900e67d0b789dc8ddfcec">&#9670;&nbsp;</a></span>getWeak()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual short SGFramework::Detail::Pointer::BaseCounter::getWeak </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_clone_counter.html#a1bbd9ac46281f4a3a4fdd342eaebc5cd">SGFramework::Detail::Pointer::MutexCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_clone_counter.html#ae1b729aa3b8ce04cfed445ed3eebff66">SGFramework::Detail::Pointer::SimpleCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_counter.html#a23dfeae67e24921a568c7fe5b99b4456">SGFramework::Detail::Pointer::MutexCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_counter.html#ab4b94f9552dcf4d349d6989cffad24eb">SGFramework::Detail::Pointer::SimpleCounter</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a86557b0f144e8d1fa40ef61b7fe0a941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86557b0f144e8d1fa40ef61b7fe0a941">&#9670;&nbsp;</a></span>IsDestroyCounter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SGFramework::Detail::Pointer::BaseCounter::IsDestroyCounter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_clone_counter.html#ae3b6bbebd221f1d1a84c29b4414fec1d">SGFramework::Detail::Pointer::MutexCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_clone_counter.html#abc54172e91f3d7122f638907fc0f4a34">SGFramework::Detail::Pointer::SimpleCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_counter.html#a775de07aaa1e6d135d618f63d73adb94">SGFramework::Detail::Pointer::MutexCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_counter.html#a6f88e47bd0ab3bba45f53166a90c7357">SGFramework::Detail::Pointer::SimpleCounter</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a1cf2ac29c2e943368ca7836f1b491885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cf2ac29c2e943368ca7836f1b491885">&#9670;&nbsp;</a></span>IsDestroyShared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SGFramework::Detail::Pointer::BaseCounter::IsDestroyShared </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_clone_counter.html#a4925bfa5f771e1e847c2fd6c09749b4b">SGFramework::Detail::Pointer::MutexCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_clone_counter.html#a42b8da50663ef195e614184c5fb66f51">SGFramework::Detail::Pointer::SimpleCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_counter.html#a94d5505a680b1f3e790f91e60f6de864">SGFramework::Detail::Pointer::MutexCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_counter.html#ab0e1257aa73529459b75aa9e170e0d27">SGFramework::Detail::Pointer::SimpleCounter</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a1d483d056172eae9ef56306966b6a098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d483d056172eae9ef56306966b6a098">&#9670;&nbsp;</a></span>LockShared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SGFramework::Detail::Pointer::BaseCounter::LockShared </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_clone_counter.html#af982b37307c40900901e46f6750f995d">SGFramework::Detail::Pointer::MutexCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_clone_counter.html#a295194752b6ac91de02318c570ba5c4a">SGFramework::Detail::Pointer::SimpleCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_counter.html#af64aeb55d4ae5e4142ff265ac8cebac4">SGFramework::Detail::Pointer::MutexCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_counter.html#a350f18dda40db4e2b12bbcfc61f7cea7">SGFramework::Detail::Pointer::SimpleCounter</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a37aeea77ff6ed5ccebabb632716b14bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37aeea77ff6ed5ccebabb632716b14bb">&#9670;&nbsp;</a></span>setShared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual short SGFramework::Detail::Pointer::BaseCounter::setShared </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_clone_counter.html#a4147c3b1ffa21b4c20a99ef78dca61e9">SGFramework::Detail::Pointer::MutexCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_clone_counter.html#aa643858179ef52409834d3d3558a13b0">SGFramework::Detail::Pointer::SimpleCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_counter.html#a51d0d2a7475b2ce691a5fe50ec39b076">SGFramework::Detail::Pointer::MutexCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_counter.html#a3ff42053f4600bd9748749f89e570a68">SGFramework::Detail::Pointer::SimpleCounter</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="ab725df2e4f22db2fd86c6eec01a6c5b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab725df2e4f22db2fd86c6eec01a6c5b6">&#9670;&nbsp;</a></span>setWeak()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual short SGFramework::Detail::Pointer::BaseCounter::setWeak </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_clone_counter.html#a7c0e88fded4dd928bc9e58b9ddffd17a">SGFramework::Detail::Pointer::MutexCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_clone_counter.html#ae95848a22a2aeaeabb67aea45a936fc0">SGFramework::Detail::Pointer::SimpleCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_counter.html#a3a668ad0c627e7533c72e57d038922b4">SGFramework::Detail::Pointer::MutexCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_counter.html#a857e008b586118119d9556843944024f">SGFramework::Detail::Pointer::SimpleCounter</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a7bf11aa5a2d7aa59ce6bc399a98d8bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bf11aa5a2d7aa59ce6bc399a98d8bae">&#9670;&nbsp;</a></span>subShared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual short SGFramework::Detail::Pointer::BaseCounter::subShared </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_clone_counter.html#afaae9290720b44dc9c23554d7453b5ec">SGFramework::Detail::Pointer::MutexCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_clone_counter.html#a40fdbf4dd99784bb918c3b460be83439">SGFramework::Detail::Pointer::SimpleCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_counter.html#a6a05f80009dc2ebc25ca3f9ee318485a">SGFramework::Detail::Pointer::MutexCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_counter.html#a7bdc978950571bc8b9f8f16ad06ffa46">SGFramework::Detail::Pointer::SimpleCounter</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a4fdeff1bd327d2a7c624375fd1d19db7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fdeff1bd327d2a7c624375fd1d19db7">&#9670;&nbsp;</a></span>subWeak()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual short SGFramework::Detail::Pointer::BaseCounter::subWeak </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_clone_counter.html#a35e4856f63b33ef54758a29ab8818a59">SGFramework::Detail::Pointer::MutexCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_clone_counter.html#a21d04dfa14b6b1661a281cd578d14231">SGFramework::Detail::Pointer::SimpleCloneCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_mutex_counter.html#afd6b294d59560fdcab0e095e9c4865e7">SGFramework::Detail::Pointer::MutexCounter</a>, <a class="el" href="struct_s_g_framework_1_1_detail_1_1_pointer_1_1_simple_counter.html#a3d7aa033bf18027a0c5760ab1dccd780">SGFramework::Detail::Pointer::SimpleCounter</a>で実装されています。</p>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>SGFramework-Master_ToExe/02_Variables/未実装/Pointer/<a class="el" href="_base_pointer_8hpp_source.html">BasePointer.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

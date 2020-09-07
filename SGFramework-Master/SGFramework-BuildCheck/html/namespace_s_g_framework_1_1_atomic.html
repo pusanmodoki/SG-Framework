@@ -1,0 +1,1129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework::Atomic 名前空間</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_s_g_framework.html">SGFramework</a></li><li class="navelem"><a class="el" href="namespace_s_g_framework_1_1_atomic.html">Atomic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">SGFramework::Atomic 名前空間</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_atomic_1_1_lock_guard.html">LockGuard</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_atomic_1_1_try_lock_guard.html">TryLockGuard</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:aa74003ea2ff69348cf11120966582c0e"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa74003ea2ff69348cf11120966582c0e"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#aa74003ea2ff69348cf11120966582c0e">Init</a> (std::atomic&lt; T &gt; &amp;atomic, T init) noexcept</td></tr>
+<tr class="memdesc:aa74003ea2ff69348cf11120966582c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">atomicをロックフリーアルゴリズムを用いて初期化する  <a href="namespace_s_g_framework_1_1_atomic.html#aa74003ea2ff69348cf11120966582c0e">[詳解]</a><br /></td></tr>
+<tr class="separator:aa74003ea2ff69348cf11120966582c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60547931733dc7db056dd1a6dcd691f"><td class="memTemplParams" colspan="2">template&lt;class T , class CastType &gt; </td></tr>
+<tr class="memitem:ab60547931733dc7db056dd1a6dcd691f"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#ab60547931733dc7db056dd1a6dcd691f">Init</a> (std::atomic&lt; T &gt; &amp;atomic, CastType init) noexcept</td></tr>
+<tr class="separator:ab60547931733dc7db056dd1a6dcd691f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac710f71b81d51c9cd1acaa2d18591f16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#ac710f71b81d51c9cd1acaa2d18591f16">And</a> (std::atomic&lt; bool &gt; &amp;atomicBoolean, bool andFlag) noexcept</td></tr>
+<tr class="separator:ac710f71b81d51c9cd1acaa2d18591f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13655012797f0c1d0377a5a66b137095"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a13655012797f0c1d0377a5a66b137095">Or</a> (std::atomic&lt; bool &gt; &amp;atomicBoolean, bool orFlag) noexcept</td></tr>
+<tr class="separator:a13655012797f0c1d0377a5a66b137095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b05e0c62c2e95a1cc53bd8695f2470"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a61b05e0c62c2e95a1cc53bd8695f2470">Xor</a> (std::atomic&lt; bool &gt; &amp;atomicBoolean, bool xorFlag) noexcept</td></tr>
+<tr class="separator:a61b05e0c62c2e95a1cc53bd8695f2470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa66fdcad406b46f91f50ec3891ee184e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#aa66fdcad406b46f91f50ec3891ee184e">BitInversion</a> (std::atomic&lt; bool &gt; &amp;atomicBoolean) noexcept</td></tr>
+<tr class="separator:aa66fdcad406b46f91f50ec3891ee184e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a063122ef30b1ea668e40c5a4aa0f43d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a063122ef30b1ea668e40c5a4aa0f43d2">LockAtomic</a> (std::atomic&lt; bool &gt; &amp;atomicBoolean) noexcept</td></tr>
+<tr class="separator:a063122ef30b1ea668e40c5a4aa0f43d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a422b977f64282b5e5212782685a94"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a40a422b977f64282b5e5212782685a94">TryLockAtomic</a> (std::atomic&lt; bool &gt; &amp;atomicBoolean) noexcept</td></tr>
+<tr class="separator:a40a422b977f64282b5e5212782685a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de0ee8467c69adfba76c2387d06f383"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a8de0ee8467c69adfba76c2387d06f383">TryCycleLockAtomic</a> (std::atomic&lt; bool &gt; &amp;atomicBoolean, unsigned int cycle) noexcept</td></tr>
+<tr class="separator:a8de0ee8467c69adfba76c2387d06f383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4668b40d56cdbf6bdfe819c1b68b7dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#ad4668b40d56cdbf6bdfe819c1b68b7dc">UnlockAtomic</a> (std::atomic&lt; bool &gt; &amp;atomicBoolean) noexcept</td></tr>
+<tr class="separator:ad4668b40d56cdbf6bdfe819c1b68b7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69134ddcfb8423cd5cd553260112e46f"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a69134ddcfb8423cd5cd553260112e46f"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a69134ddcfb8423cd5cd553260112e46f">Add</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, T add) noexcept</td></tr>
+<tr class="separator:a69134ddcfb8423cd5cd553260112e46f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a464bc8109c7d98cd8078cf3079707c24"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a464bc8109c7d98cd8078cf3079707c24"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a464bc8109c7d98cd8078cf3079707c24">Subtract</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, T sub) noexcept</td></tr>
+<tr class="separator:a464bc8109c7d98cd8078cf3079707c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2963bb66e76a854c06a02b2283e056e6"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a2963bb66e76a854c06a02b2283e056e6"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a2963bb66e76a854c06a02b2283e056e6">Multiply</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, T multi) noexcept</td></tr>
+<tr class="separator:a2963bb66e76a854c06a02b2283e056e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa25546dda965c51dd123b49ca8d9d511"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa25546dda965c51dd123b49ca8d9d511"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#aa25546dda965c51dd123b49ca8d9d511">Divide</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, T div) noexcept</td></tr>
+<tr class="separator:aa25546dda965c51dd123b49ca8d9d511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c9d6a5ba1b577515bab5b121f84297"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a90c9d6a5ba1b577515bab5b121f84297"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a90c9d6a5ba1b577515bab5b121f84297">And</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, T andFlag) noexcept</td></tr>
+<tr class="separator:a90c9d6a5ba1b577515bab5b121f84297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a166ba0cdf32ba979b129ed0b130bde9b"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a166ba0cdf32ba979b129ed0b130bde9b"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a166ba0cdf32ba979b129ed0b130bde9b">Or</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, T orFlag) noexcept</td></tr>
+<tr class="separator:a166ba0cdf32ba979b129ed0b130bde9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a8c6aeb7d8f93ac897e13709555c12b"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a6a8c6aeb7d8f93ac897e13709555c12b"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a6a8c6aeb7d8f93ac897e13709555c12b">Xor</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, T xorFlag) noexcept</td></tr>
+<tr class="separator:a6a8c6aeb7d8f93ac897e13709555c12b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49fd5c6fd7695ebd4c7bfb72e2a7bf84"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a49fd5c6fd7695ebd4c7bfb72e2a7bf84"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a49fd5c6fd7695ebd4c7bfb72e2a7bf84">BitInversion</a> (std::atomic&lt; T &gt; &amp;atomicIntegral) noexcept</td></tr>
+<tr class="separator:a49fd5c6fd7695ebd4c7bfb72e2a7bf84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c9e128fa8cecd0f706a5616f9f49d9"><td class="memTemplParams" colspan="2">template&lt;class T , class CastType &gt; </td></tr>
+<tr class="memitem:a45c9e128fa8cecd0f706a5616f9f49d9"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a45c9e128fa8cecd0f706a5616f9f49d9">Add</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, CastType add) noexcept</td></tr>
+<tr class="separator:a45c9e128fa8cecd0f706a5616f9f49d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23767cf6c54df533f36eec0a38eebfa3"><td class="memTemplParams" colspan="2">template&lt;class T , class CastType &gt; </td></tr>
+<tr class="memitem:a23767cf6c54df533f36eec0a38eebfa3"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a23767cf6c54df533f36eec0a38eebfa3">Subtract</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, CastType sub) noexcept</td></tr>
+<tr class="separator:a23767cf6c54df533f36eec0a38eebfa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af10cdac7322b7c5545ce0131fc2d17"><td class="memTemplParams" colspan="2">template&lt;class T , class CastType &gt; </td></tr>
+<tr class="memitem:a6af10cdac7322b7c5545ce0131fc2d17"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a6af10cdac7322b7c5545ce0131fc2d17">Multiply</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, CastType multi) noexcept</td></tr>
+<tr class="separator:a6af10cdac7322b7c5545ce0131fc2d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab83d8997235051ed4d04f194d5420778"><td class="memTemplParams" colspan="2">template&lt;class T , class CastType &gt; </td></tr>
+<tr class="memitem:ab83d8997235051ed4d04f194d5420778"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#ab83d8997235051ed4d04f194d5420778">Divide</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, CastType div) noexcept</td></tr>
+<tr class="separator:ab83d8997235051ed4d04f194d5420778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47ac1f068543b3281e7d1e8f0935d8e2"><td class="memTemplParams" colspan="2">template&lt;class T , class CastType &gt; </td></tr>
+<tr class="memitem:a47ac1f068543b3281e7d1e8f0935d8e2"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a47ac1f068543b3281e7d1e8f0935d8e2">And</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, CastType andFlag) noexcept</td></tr>
+<tr class="separator:a47ac1f068543b3281e7d1e8f0935d8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5238446ac3bde908d93deee7be2af14e"><td class="memTemplParams" colspan="2">template&lt;class T , class CastType &gt; </td></tr>
+<tr class="memitem:a5238446ac3bde908d93deee7be2af14e"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a5238446ac3bde908d93deee7be2af14e">Or</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, CastType orFlag) noexcept</td></tr>
+<tr class="separator:a5238446ac3bde908d93deee7be2af14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bd07f7222b7e4463c6f178685e8c745"><td class="memTemplParams" colspan="2">template&lt;class T , class CastType &gt; </td></tr>
+<tr class="memitem:a4bd07f7222b7e4463c6f178685e8c745"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#a4bd07f7222b7e4463c6f178685e8c745">Xor</a> (std::atomic&lt; T &gt; &amp;atomicIntegral, CastType xorFlag) noexcept</td></tr>
+<tr class="separator:a4bd07f7222b7e4463c6f178685e8c745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35951d73bdf296e7d20a06995a91d9d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ab35951d73bdf296e7d20a06995a91d9d"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#ab35951d73bdf296e7d20a06995a91d9d">Add</a> (std::atomic&lt; T * &gt; &amp;atomicPointer, int add) noexcept</td></tr>
+<tr class="separator:ab35951d73bdf296e7d20a06995a91d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae395f898d32dbfcde29603d6bebc2974"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ae395f898d32dbfcde29603d6bebc2974"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_s_g_framework_1_1_atomic.html#ae395f898d32dbfcde29603d6bebc2974">Subtract</a> (std::atomic&lt; T * &gt; &amp;atomicPointer, int sub) noexcept</td></tr>
+<tr class="separator:ae395f898d32dbfcde29603d6bebc2974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ab35951d73bdf296e7d20a06995a91d9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35951d73bdf296e7d20a06995a91d9d">&#9670;&nbsp;</a></span>Add() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* SGFramework::Atomic::Add </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>add</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45c9e128fa8cecd0f706a5616f9f49d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45c9e128fa8cecd0f706a5616f9f49d9">&#9670;&nbsp;</a></span>Add() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class CastType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Add </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CastType&#160;</td>
+          <td class="paramname"><em>add</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69134ddcfb8423cd5cd553260112e46f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69134ddcfb8423cd5cd553260112e46f">&#9670;&nbsp;</a></span>Add() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Add </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>add</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac710f71b81d51c9cd1acaa2d18591f16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac710f71b81d51c9cd1acaa2d18591f16">&#9670;&nbsp;</a></span>And() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Atomic::And </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicBoolean</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>andFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47ac1f068543b3281e7d1e8f0935d8e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ac1f068543b3281e7d1e8f0935d8e2">&#9670;&nbsp;</a></span>And() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class CastType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::And </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CastType&#160;</td>
+          <td class="paramname"><em>andFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90c9d6a5ba1b577515bab5b121f84297"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c9d6a5ba1b577515bab5b121f84297">&#9670;&nbsp;</a></span>And() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::And </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>andFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa66fdcad406b46f91f50ec3891ee184e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa66fdcad406b46f91f50ec3891ee184e">&#9670;&nbsp;</a></span>BitInversion() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Atomic::BitInversion </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicBoolean</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49fd5c6fd7695ebd4c7bfb72e2a7bf84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49fd5c6fd7695ebd4c7bfb72e2a7bf84">&#9670;&nbsp;</a></span>BitInversion() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::BitInversion </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab83d8997235051ed4d04f194d5420778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab83d8997235051ed4d04f194d5420778">&#9670;&nbsp;</a></span>Divide() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class CastType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Divide </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CastType&#160;</td>
+          <td class="paramname"><em>div</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa25546dda965c51dd123b49ca8d9d511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa25546dda965c51dd123b49ca8d9d511">&#9670;&nbsp;</a></span>Divide() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Divide </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>div</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab60547931733dc7db056dd1a6dcd691f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab60547931733dc7db056dd1a6dcd691f">&#9670;&nbsp;</a></span>Init() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class CastType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Init </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CastType&#160;</td>
+          <td class="paramname"><em>init</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa74003ea2ff69348cf11120966582c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa74003ea2ff69348cf11120966582c0e">&#9670;&nbsp;</a></span>Init() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Init </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>init</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>atomicをロックフリーアルゴリズムを用いて初期化する </p>
+
+</div>
+</div>
+<a id="a063122ef30b1ea668e40c5a4aa0f43d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a063122ef30b1ea668e40c5a4aa0f43d2">&#9670;&nbsp;</a></span>LockAtomic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SGFramework::Atomic::LockAtomic </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicBoolean</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6af10cdac7322b7c5545ce0131fc2d17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af10cdac7322b7c5545ce0131fc2d17">&#9670;&nbsp;</a></span>Multiply() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class CastType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Multiply </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CastType&#160;</td>
+          <td class="paramname"><em>multi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2963bb66e76a854c06a02b2283e056e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2963bb66e76a854c06a02b2283e056e6">&#9670;&nbsp;</a></span>Multiply() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Multiply </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>multi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13655012797f0c1d0377a5a66b137095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13655012797f0c1d0377a5a66b137095">&#9670;&nbsp;</a></span>Or() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Atomic::Or </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicBoolean</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>orFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5238446ac3bde908d93deee7be2af14e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5238446ac3bde908d93deee7be2af14e">&#9670;&nbsp;</a></span>Or() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class CastType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Or </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CastType&#160;</td>
+          <td class="paramname"><em>orFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a166ba0cdf32ba979b129ed0b130bde9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a166ba0cdf32ba979b129ed0b130bde9b">&#9670;&nbsp;</a></span>Or() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Or </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>orFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae395f898d32dbfcde29603d6bebc2974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae395f898d32dbfcde29603d6bebc2974">&#9670;&nbsp;</a></span>Subtract() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* SGFramework::Atomic::Subtract </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sub</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23767cf6c54df533f36eec0a38eebfa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23767cf6c54df533f36eec0a38eebfa3">&#9670;&nbsp;</a></span>Subtract() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class CastType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Subtract </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CastType&#160;</td>
+          <td class="paramname"><em>sub</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a464bc8109c7d98cd8078cf3079707c24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a464bc8109c7d98cd8078cf3079707c24">&#9670;&nbsp;</a></span>Subtract() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Subtract </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>sub</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8de0ee8467c69adfba76c2387d06f383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de0ee8467c69adfba76c2387d06f383">&#9670;&nbsp;</a></span>TryCycleLockAtomic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Atomic::TryCycleLockAtomic </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicBoolean</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>cycle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40a422b977f64282b5e5212782685a94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40a422b977f64282b5e5212782685a94">&#9670;&nbsp;</a></span>TryLockAtomic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Atomic::TryLockAtomic </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicBoolean</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4668b40d56cdbf6bdfe819c1b68b7dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4668b40d56cdbf6bdfe819c1b68b7dc">&#9670;&nbsp;</a></span>UnlockAtomic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SGFramework::Atomic::UnlockAtomic </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicBoolean</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61b05e0c62c2e95a1cc53bd8695f2470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61b05e0c62c2e95a1cc53bd8695f2470">&#9670;&nbsp;</a></span>Xor() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Atomic::Xor </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicBoolean</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>xorFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bd07f7222b7e4463c6f178685e8c745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bd07f7222b7e4463c6f178685e8c745">&#9670;&nbsp;</a></span>Xor() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class CastType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Xor </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CastType&#160;</td>
+          <td class="paramname"><em>xorFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a8c6aeb7d8f93ac897e13709555c12b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a8c6aeb7d8f93ac897e13709555c12b">&#9670;&nbsp;</a></span>Xor() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T SGFramework::Atomic::Xor </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atomicIntegral</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>xorFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

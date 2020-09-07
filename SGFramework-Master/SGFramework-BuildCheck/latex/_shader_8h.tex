@@ -1,0 +1,128 @@
+\hypertarget{_shader_8h}{}\doxysection{D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/\+Shader.h ファイル}
+\label{_shader_8h}\index{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/Shader.h@{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/Shader.h}}
+{\ttfamily \#include $<$d3dcompiler.\+h$>$}\newline
+{\ttfamily \#include $<$directxmath.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include $<$d3d11.\+h$>$}\newline
+{\ttfamily \#include $<$Direct\+X\+Math.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Direct\+X\+Tex/\+Direct\+X\+Tex/\+Direct\+X\+Tex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Direct\+X\+Tex/\+W\+I\+C\+Texture\+Loader/\+W\+I\+C\+Texture\+Loader.\+h\char`\"{}}\newline
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+H\+R\+E\+S\+U\+LT \mbox{\hyperlink{_shader_8h_a957c5097d8616850cb70f67fe1635a71}{Compile\+Shader\+From\+File}} (const char $\ast$sz\+File\+Name, L\+P\+C\+S\+TR sz\+Entry\+Point, L\+P\+C\+S\+TR sz\+Shader\+Model, I\+D3\+D\+Blob $\ast$$\ast$pp\+Blob\+Out)
+\item 
+bool \mbox{\hyperlink{_shader_8h_ab36f0bd1d17063c03f474733e0fea219}{Create\+Constant\+Buffer}} (I\+D3\+D11\+Device $\ast$device, unsigned int bytesize, I\+D3\+D11\+Buffer $\ast$$\ast$p\+Constant\+Buffer)
+\item 
+bool \mbox{\hyperlink{_shader_8h_a34cf71f12f2b5c66f91a93b621488a8b}{Create\+Index\+Buffer}} (I\+D3\+D11\+Device $\ast$device, unsigned int indexnum, void $\ast$indexdata, I\+D3\+D11\+Buffer $\ast$$\ast$p\+Index\+Buffer)
+\item 
+bool \mbox{\hyperlink{_shader_8h_aace919015b525f2aaae86aee9f7d882d}{Create\+Vertex\+Buffer}} (I\+D3\+D11\+Device $\ast$device, unsigned int stride, unsigned int vertexnum, void $\ast$vertexdata, I\+D3\+D11\+Buffer $\ast$$\ast$p\+Vertex\+Buffer)
+\item 
+bool \mbox{\hyperlink{_shader_8h_a95b082e67794f996ed8b41c83046e4d5}{Create\+Vertex\+Buffer\+Write}} (I\+D3\+D11\+Device $\ast$device, unsigned int stride, unsigned int vertexnum, void $\ast$vertexdata, I\+D3\+D11\+Buffer $\ast$$\ast$p\+Vertex\+Buffer)
+\item 
+bool \mbox{\hyperlink{_shader_8h_a35c6e06fbbf5443d2a0d43d375404c1d}{Create\+Vertex\+Buffer\+U\+AV}} (I\+D3\+D11\+Device $\ast$device, unsigned int stride, unsigned int vertexnum, void $\ast$vertexdata, I\+D3\+D11\+Buffer $\ast$$\ast$p\+Vertex\+Buffer)
+\item 
+bool \mbox{\hyperlink{_shader_8h_a72ead3bd43ce7bb0cf7a86175f70c1e0}{Create\+Structured\+Buffer}} (I\+D3\+D11\+Device $\ast$device, unsigned int stride, unsigned int num, void $\ast$data, I\+D3\+D11\+Buffer $\ast$$\ast$p\+Structured\+Buffer)
+\item 
+I\+D3\+D11\+Buffer $\ast$ \mbox{\hyperlink{_shader_8h_aa96a49271aa4b3712f92613dfb4b5336}{Create\+And\+Copy\+To\+Buffer}} (I\+D3\+D11\+Device $\ast$device, I\+D3\+D11\+Device\+Context $\ast$devicecontext, I\+D3\+D11\+Buffer $\ast$p\+Buffer)
+\item 
+bool \mbox{\hyperlink{_shader_8h_af2e589eba237f625b906774e8eb199ff}{Create\+Shader\+Resource\+View}} (I\+D3\+D11\+Device $\ast$device, I\+D3\+D11\+Buffer $\ast$p\+Buffer, I\+D3\+D11\+Shader\+Resource\+View $\ast$$\ast$pp\+S\+RV)
+\item 
+bool \mbox{\hyperlink{_shader_8h_a3da83001edc9b8ae56cc2d1d1252f2f6}{Create\+Un\+Order\+Access\+View}} (I\+D3\+D11\+Device $\ast$device, I\+D3\+D11\+Buffer $\ast$p\+Buffer, I\+D3\+D11\+Unordered\+Access\+View $\ast$$\ast$pp\+U\+AV)
+\item 
+bool \mbox{\hyperlink{_shader_8h_a0e53c3f6ebf8a568966eb3c8a1c1bae1}{Createt\+S\+R\+Vfrom\+T\+G\+A\+File}} (const char $\ast$filename, I\+D3\+D11\+Device $\ast$device, I\+D3\+D11\+Shader\+Resource\+View $\ast$$\ast$srv)
+\item 
+bool \mbox{\hyperlink{_shader_8h_a6bbaec2e8121ed49f0ccca0e4fd141ab}{Createt\+S\+R\+Vfrom\+W\+I\+C\+File}} (const char $\ast$filename, I\+D3\+D11\+Device $\ast$device, I\+D3\+D11\+Device\+Context $\ast$device11\+Context, I\+D3\+D11\+Shader\+Resource\+View $\ast$$\ast$srv)
+\item 
+bool \mbox{\hyperlink{_shader_8h_a4dfbddd06ed9936bbaa62063c5cbeea7}{Create\+Vertex\+Shader}} (I\+D3\+D11\+Device $\ast$device, const char $\ast$sz\+File\+Name, L\+P\+C\+S\+TR sz\+Entry\+Point, L\+P\+C\+S\+TR sz\+Shader\+Model, D3\+D11\+\_\+\+I\+N\+P\+U\+T\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+D\+E\+SC $\ast$layout, unsigned int num\+Elements, I\+D3\+D11\+Vertex\+Shader $\ast$$\ast$pp\+Vertex\+Shader, I\+D3\+D11\+Input\+Layout $\ast$$\ast$pp\+Vertex\+Layout)
+\item 
+bool \mbox{\hyperlink{_shader_8h_ae8ec19eab7e615ced445d3ccbbe86f05}{Create\+Pixel\+Shader}} (I\+D3\+D11\+Device $\ast$device, const char $\ast$sz\+File\+Name, L\+P\+C\+S\+TR sz\+Entry\+Point, L\+P\+C\+S\+TR sz\+Shader\+Model, I\+D3\+D11\+Pixel\+Shader $\ast$$\ast$pp\+Pixel\+Shader)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{_shader_8h_a957c5097d8616850cb70f67fe1635a71}\label{_shader_8h_a957c5097d8616850cb70f67fe1635a71}} 
+\index{Shader.h@{Shader.h}!CompileShaderFromFile@{CompileShaderFromFile}}
+\index{CompileShaderFromFile@{CompileShaderFromFile}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CompileShaderFromFile()}{CompileShaderFromFile()}}
+{\footnotesize\ttfamily H\+R\+E\+S\+U\+LT Compile\+Shader\+From\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sz\+File\+Name,  }\item[{L\+P\+C\+S\+TR}]{sz\+Entry\+Point,  }\item[{L\+P\+C\+S\+TR}]{sz\+Shader\+Model,  }\item[{I\+D3\+D\+Blob $\ast$$\ast$}]{pp\+Blob\+Out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_shader_8h_aa96a49271aa4b3712f92613dfb4b5336}\label{_shader_8h_aa96a49271aa4b3712f92613dfb4b5336}} 
+\index{Shader.h@{Shader.h}!CreateAndCopyToBuffer@{CreateAndCopyToBuffer}}
+\index{CreateAndCopyToBuffer@{CreateAndCopyToBuffer}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CreateAndCopyToBuffer()}{CreateAndCopyToBuffer()}}
+{\footnotesize\ttfamily I\+D3\+D11\+Buffer$\ast$ Create\+And\+Copy\+To\+Buffer (\begin{DoxyParamCaption}\item[{I\+D3\+D11\+Device $\ast$}]{device,  }\item[{I\+D3\+D11\+Device\+Context $\ast$}]{devicecontext,  }\item[{I\+D3\+D11\+Buffer $\ast$}]{p\+Buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_shader_8h_ab36f0bd1d17063c03f474733e0fea219}\label{_shader_8h_ab36f0bd1d17063c03f474733e0fea219}} 
+\index{Shader.h@{Shader.h}!CreateConstantBuffer@{CreateConstantBuffer}}
+\index{CreateConstantBuffer@{CreateConstantBuffer}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CreateConstantBuffer()}{CreateConstantBuffer()}}
+{\footnotesize\ttfamily bool Create\+Constant\+Buffer (\begin{DoxyParamCaption}\item[{I\+D3\+D11\+Device $\ast$}]{device,  }\item[{unsigned int}]{bytesize,  }\item[{I\+D3\+D11\+Buffer $\ast$$\ast$}]{p\+Constant\+Buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_shader_8h_a34cf71f12f2b5c66f91a93b621488a8b}\label{_shader_8h_a34cf71f12f2b5c66f91a93b621488a8b}} 
+\index{Shader.h@{Shader.h}!CreateIndexBuffer@{CreateIndexBuffer}}
+\index{CreateIndexBuffer@{CreateIndexBuffer}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CreateIndexBuffer()}{CreateIndexBuffer()}}
+{\footnotesize\ttfamily bool Create\+Index\+Buffer (\begin{DoxyParamCaption}\item[{I\+D3\+D11\+Device $\ast$}]{device,  }\item[{unsigned int}]{indexnum,  }\item[{void $\ast$}]{indexdata,  }\item[{I\+D3\+D11\+Buffer $\ast$$\ast$}]{p\+Index\+Buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_shader_8h_ae8ec19eab7e615ced445d3ccbbe86f05}\label{_shader_8h_ae8ec19eab7e615ced445d3ccbbe86f05}} 
+\index{Shader.h@{Shader.h}!CreatePixelShader@{CreatePixelShader}}
+\index{CreatePixelShader@{CreatePixelShader}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CreatePixelShader()}{CreatePixelShader()}}
+{\footnotesize\ttfamily bool Create\+Pixel\+Shader (\begin{DoxyParamCaption}\item[{I\+D3\+D11\+Device $\ast$}]{device,  }\item[{const char $\ast$}]{sz\+File\+Name,  }\item[{L\+P\+C\+S\+TR}]{sz\+Entry\+Point,  }\item[{L\+P\+C\+S\+TR}]{sz\+Shader\+Model,  }\item[{I\+D3\+D11\+Pixel\+Shader $\ast$$\ast$}]{pp\+Pixel\+Shader }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_shader_8h_af2e589eba237f625b906774e8eb199ff}\label{_shader_8h_af2e589eba237f625b906774e8eb199ff}} 
+\index{Shader.h@{Shader.h}!CreateShaderResourceView@{CreateShaderResourceView}}
+\index{CreateShaderResourceView@{CreateShaderResourceView}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CreateShaderResourceView()}{CreateShaderResourceView()}}
+{\footnotesize\ttfamily bool Create\+Shader\+Resource\+View (\begin{DoxyParamCaption}\item[{I\+D3\+D11\+Device $\ast$}]{device,  }\item[{I\+D3\+D11\+Buffer $\ast$}]{p\+Buffer,  }\item[{I\+D3\+D11\+Shader\+Resource\+View $\ast$$\ast$}]{pp\+S\+RV }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_shader_8h_a72ead3bd43ce7bb0cf7a86175f70c1e0}\label{_shader_8h_a72ead3bd43ce7bb0cf7a86175f70c1e0}} 
+\index{Shader.h@{Shader.h}!CreateStructuredBuffer@{CreateStructuredBuffer}}
+\index{CreateStructuredBuffer@{CreateStructuredBuffer}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CreateStructuredBuffer()}{CreateStructuredBuffer()}}
+{\footnotesize\ttfamily bool Create\+Structured\+Buffer (\begin{DoxyParamCaption}\item[{I\+D3\+D11\+Device $\ast$}]{device,  }\item[{unsigned int}]{stride,  }\item[{unsigned int}]{num,  }\item[{void $\ast$}]{data,  }\item[{I\+D3\+D11\+Buffer $\ast$$\ast$}]{p\+Structured\+Buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_shader_8h_a0e53c3f6ebf8a568966eb3c8a1c1bae1}\label{_shader_8h_a0e53c3f6ebf8a568966eb3c8a1c1bae1}} 
+\index{Shader.h@{Shader.h}!CreatetSRVfromTGAFile@{CreatetSRVfromTGAFile}}
+\index{CreatetSRVfromTGAFile@{CreatetSRVfromTGAFile}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CreatetSRVfromTGAFile()}{CreatetSRVfromTGAFile()}}
+{\footnotesize\ttfamily bool Createt\+S\+R\+Vfrom\+T\+G\+A\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{I\+D3\+D11\+Device $\ast$}]{device,  }\item[{I\+D3\+D11\+Shader\+Resource\+View $\ast$$\ast$}]{srv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_shader_8h_a6bbaec2e8121ed49f0ccca0e4fd141ab}\label{_shader_8h_a6bbaec2e8121ed49f0ccca0e4fd141ab}} 
+\index{Shader.h@{Shader.h}!CreatetSRVfromWICFile@{CreatetSRVfromWICFile}}
+\index{CreatetSRVfromWICFile@{CreatetSRVfromWICFile}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CreatetSRVfromWICFile()}{CreatetSRVfromWICFile()}}
+{\footnotesize\ttfamily bool Createt\+S\+R\+Vfrom\+W\+I\+C\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{I\+D3\+D11\+Device $\ast$}]{device,  }\item[{I\+D3\+D11\+Device\+Context $\ast$}]{device11\+Context,  }\item[{I\+D3\+D11\+Shader\+Resource\+View $\ast$$\ast$}]{srv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_shader_8h_a3da83001edc9b8ae56cc2d1d1252f2f6}\label{_shader_8h_a3da83001edc9b8ae56cc2d1d1252f2f6}} 
+\index{Shader.h@{Shader.h}!CreateUnOrderAccessView@{CreateUnOrderAccessView}}
+\index{CreateUnOrderAccessView@{CreateUnOrderAccessView}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CreateUnOrderAccessView()}{CreateUnOrderAccessView()}}
+{\footnotesize\ttfamily bool Create\+Un\+Order\+Access\+View (\begin{DoxyParamCaption}\item[{I\+D3\+D11\+Device $\ast$}]{device,  }\item[{I\+D3\+D11\+Buffer $\ast$}]{p\+Buffer,  }\item[{I\+D3\+D11\+Unordered\+Access\+View $\ast$$\ast$}]{pp\+U\+AV }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_shader_8h_aace919015b525f2aaae86aee9f7d882d}\label{_shader_8h_aace919015b525f2aaae86aee9f7d882d}} 
+\index{Shader.h@{Shader.h}!CreateVertexBuffer@{CreateVertexBuffer}}
+\index{CreateVertexBuffer@{CreateVertexBuffer}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CreateVertexBuffer()}{CreateVertexBuffer()}}
+{\footnotesize\ttfamily bool Create\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{I\+D3\+D11\+Device $\ast$}]{device,  }\item[{unsigned int}]{stride,  }\item[{unsigned int}]{vertexnum,  }\item[{void $\ast$}]{vertexdata,  }\item[{I\+D3\+D11\+Buffer $\ast$$\ast$}]{p\+Vertex\+Buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_shader_8h_a35c6e06fbbf5443d2a0d43d375404c1d}\label{_shader_8h_a35c6e06fbbf5443d2a0d43d375404c1d}} 
+\index{Shader.h@{Shader.h}!CreateVertexBufferUAV@{CreateVertexBufferUAV}}
+\index{CreateVertexBufferUAV@{CreateVertexBufferUAV}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CreateVertexBufferUAV()}{CreateVertexBufferUAV()}}
+{\footnotesize\ttfamily bool Create\+Vertex\+Buffer\+U\+AV (\begin{DoxyParamCaption}\item[{I\+D3\+D11\+Device $\ast$}]{device,  }\item[{unsigned int}]{stride,  }\item[{unsigned int}]{vertexnum,  }\item[{void $\ast$}]{vertexdata,  }\item[{I\+D3\+D11\+Buffer $\ast$$\ast$}]{p\+Vertex\+Buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_shader_8h_a95b082e67794f996ed8b41c83046e4d5}\label{_shader_8h_a95b082e67794f996ed8b41c83046e4d5}} 
+\index{Shader.h@{Shader.h}!CreateVertexBufferWrite@{CreateVertexBufferWrite}}
+\index{CreateVertexBufferWrite@{CreateVertexBufferWrite}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CreateVertexBufferWrite()}{CreateVertexBufferWrite()}}
+{\footnotesize\ttfamily bool Create\+Vertex\+Buffer\+Write (\begin{DoxyParamCaption}\item[{I\+D3\+D11\+Device $\ast$}]{device,  }\item[{unsigned int}]{stride,  }\item[{unsigned int}]{vertexnum,  }\item[{void $\ast$}]{vertexdata,  }\item[{I\+D3\+D11\+Buffer $\ast$$\ast$}]{p\+Vertex\+Buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_shader_8h_a4dfbddd06ed9936bbaa62063c5cbeea7}\label{_shader_8h_a4dfbddd06ed9936bbaa62063c5cbeea7}} 
+\index{Shader.h@{Shader.h}!CreateVertexShader@{CreateVertexShader}}
+\index{CreateVertexShader@{CreateVertexShader}!Shader.h@{Shader.h}}
+\doxysubsubsection{\texorpdfstring{CreateVertexShader()}{CreateVertexShader()}}
+{\footnotesize\ttfamily bool Create\+Vertex\+Shader (\begin{DoxyParamCaption}\item[{I\+D3\+D11\+Device $\ast$}]{device,  }\item[{const char $\ast$}]{sz\+File\+Name,  }\item[{L\+P\+C\+S\+TR}]{sz\+Entry\+Point,  }\item[{L\+P\+C\+S\+TR}]{sz\+Shader\+Model,  }\item[{D3\+D11\+\_\+\+I\+N\+P\+U\+T\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+D\+E\+SC $\ast$}]{layout,  }\item[{unsigned int}]{num\+Elements,  }\item[{I\+D3\+D11\+Vertex\+Shader $\ast$$\ast$}]{pp\+Vertex\+Shader,  }\item[{I\+D3\+D11\+Input\+Layout $\ast$$\ast$}]{pp\+Vertex\+Layout }\end{DoxyParamCaption})}
+

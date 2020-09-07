@@ -1,0 +1,147 @@
+\hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream}{}\doxysection{S\+G\+Framework\+::File\+::File\+Read\+Stream クラス}
+\label{class_s_g_framework_1_1_file_1_1_file_read_stream}\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+
+
+{\ttfamily \#include $<$File\+Read\+Stream.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_ac5707c894d4a112e9685bc76a7c5a6a1}{Open}} (const sgstring \&path, bool is\+Binary=false, bool is\+Invalid\+Utf8=false)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_ab7c12650d68463ab9d200adaff6782b7}{Close}} ()
+\item 
+sgstring \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_a0f71cda056b86e677aba084716ef9ebd}{Read}} ()
+\item 
+sgstring \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_ac310a0cbc10248e414b9fdaf92f75003}{Read\+Unite}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_aece16746bed5b52a75efde889279b89d}{Read\+Std}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_ae632956c783363ca29f3e9a55b0b3110}{Read\+Vector}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_a53ec9fd05d19000f5ec86759417d6bcd}{Read\+Vector}} (std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&vector)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_a56060e1f25e8a7d2bbf51092dac3af8e}{Read}} (sgstring \&string)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_a8a3437fb48b96166fc96e29606c589ec}{Read\+Unite}} (sgstring \&string)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_a273a2104fa17bd25d1059c20c9d43a16}{Read\+Std}} (std\+::string \&string)
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_a53f62e7162d482cd0f21722e1a4e0f40}{Is\+Open}} ()
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_aa1f1fa22bb05877a74a370bd2acdb6f0}{Is\+Binary}} ()
+\item 
+{\footnotesize template$<$class \+\_\+\+Elem , unsigned long \+\_\+\+Mymax, std\+::codecvt\+\_\+mode \+\_\+\+Mymode$>$ }\\void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_a3f404af8cee3e2a8e327d35d86e12aaa}{Change\+Locale}} (std\+::codecvt\+\_\+utf8$<$ \+\_\+\+Elem, \+\_\+\+Mymax, \+\_\+\+Mymode $>$ \&convert)
+\item 
+{\footnotesize template$<$class \+\_\+\+Elem , unsigned long \+\_\+\+Mymax, std\+::codecvt\+\_\+mode \+\_\+\+Mymode$>$ }\\void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_abdf82a075b6f51e2f54896061f37c976}{Change\+Locale}} (std\+::codecvt\+\_\+utf16$<$ \+\_\+\+Elem, \+\_\+\+Mymax, \+\_\+\+Mymode $>$ \&convert)
+\item 
+std\+::ifstream \& \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_aa7a9fd886ec9b55776abbaa4aa7c491a}{operator()}} ()
+\item 
+std\+::ifstream \& \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_file_read_stream_ac48a5ab91c61379e46708a96d46a30ba}{operator-\/$>$}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_abdf82a075b6f51e2f54896061f37c976}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_abdf82a075b6f51e2f54896061f37c976}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!ChangeLocale@{ChangeLocale}}
+\index{ChangeLocale@{ChangeLocale}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{ChangeLocale()}{ChangeLocale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class \+\_\+\+Elem , unsigned long \+\_\+\+Mymax, std\+::codecvt\+\_\+mode \+\_\+\+Mymode$>$ \\
+void S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Change\+Locale (\begin{DoxyParamCaption}\item[{std\+::codecvt\+\_\+utf16$<$ \+\_\+\+Elem, \+\_\+\+Mymax, \+\_\+\+Mymode $>$ \&}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_a3f404af8cee3e2a8e327d35d86e12aaa}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_a3f404af8cee3e2a8e327d35d86e12aaa}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!ChangeLocale@{ChangeLocale}}
+\index{ChangeLocale@{ChangeLocale}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{ChangeLocale()}{ChangeLocale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class \+\_\+\+Elem , unsigned long \+\_\+\+Mymax, std\+::codecvt\+\_\+mode \+\_\+\+Mymode$>$ \\
+void S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Change\+Locale (\begin{DoxyParamCaption}\item[{std\+::codecvt\+\_\+utf8$<$ \+\_\+\+Elem, \+\_\+\+Mymax, \+\_\+\+Mymode $>$ \&}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_ab7c12650d68463ab9d200adaff6782b7}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_ab7c12650d68463ab9d200adaff6782b7}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!Close@{Close}}
+\index{Close@{Close}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_aa1f1fa22bb05877a74a370bd2acdb6f0}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_aa1f1fa22bb05877a74a370bd2acdb6f0}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!IsBinary@{IsBinary}}
+\index{IsBinary@{IsBinary}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{IsBinary()}{IsBinary()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Is\+Binary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_a53f62e7162d482cd0f21722e1a4e0f40}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_a53f62e7162d482cd0f21722e1a4e0f40}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!IsOpen@{IsOpen}}
+\index{IsOpen@{IsOpen}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{IsOpen()}{IsOpen()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_ac5707c894d4a112e9685bc76a7c5a6a1}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_ac5707c894d4a112e9685bc76a7c5a6a1}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!Open@{Open}}
+\index{Open@{Open}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Open (\begin{DoxyParamCaption}\item[{const sgstring \&}]{path,  }\item[{bool}]{is\+Binary = {\ttfamily false},  }\item[{bool}]{is\+Invalid\+Utf8 = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_aa7a9fd886ec9b55776abbaa4aa7c491a}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_aa7a9fd886ec9b55776abbaa4aa7c491a}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!operator()@{operator()}}
+\index{operator()@{operator()}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily std\+::ifstream \& S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_ac48a5ab91c61379e46708a96d46a30ba}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_ac48a5ab91c61379e46708a96d46a30ba}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily std\+::ifstream \& S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_a0f71cda056b86e677aba084716ef9ebd}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_a0f71cda056b86e677aba084716ef9ebd}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!Read@{Read}}
+\index{Read@{Read}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{Read()}{Read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sgstring S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_a56060e1f25e8a7d2bbf51092dac3af8e}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_a56060e1f25e8a7d2bbf51092dac3af8e}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!Read@{Read}}
+\index{Read@{Read}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{Read()}{Read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Read (\begin{DoxyParamCaption}\item[{sgstring \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_aece16746bed5b52a75efde889279b89d}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_aece16746bed5b52a75efde889279b89d}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!ReadStd@{ReadStd}}
+\index{ReadStd@{ReadStd}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{ReadStd()}{ReadStd()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Read\+Std (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_a273a2104fa17bd25d1059c20c9d43a16}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_a273a2104fa17bd25d1059c20c9d43a16}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!ReadStd@{ReadStd}}
+\index{ReadStd@{ReadStd}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{ReadStd()}{ReadStd()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Read\+Std (\begin{DoxyParamCaption}\item[{std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_ac310a0cbc10248e414b9fdaf92f75003}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_ac310a0cbc10248e414b9fdaf92f75003}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!ReadUnite@{ReadUnite}}
+\index{ReadUnite@{ReadUnite}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{ReadUnite()}{ReadUnite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sgstring S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Read\+Unite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_a8a3437fb48b96166fc96e29606c589ec}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_a8a3437fb48b96166fc96e29606c589ec}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!ReadUnite@{ReadUnite}}
+\index{ReadUnite@{ReadUnite}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{ReadUnite()}{ReadUnite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Read\+Unite (\begin{DoxyParamCaption}\item[{sgstring \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_ae632956c783363ca29f3e9a55b0b3110}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_ae632956c783363ca29f3e9a55b0b3110}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!ReadVector@{ReadVector}}
+\index{ReadVector@{ReadVector}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{ReadVector()}{ReadVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Read\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_file_read_stream_a53ec9fd05d19000f5ec86759417d6bcd}\label{class_s_g_framework_1_1_file_1_1_file_read_stream_a53ec9fd05d19000f5ec86759417d6bcd}} 
+\index{SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}!ReadVector@{ReadVector}}
+\index{ReadVector@{ReadVector}!SGFramework::File::FileReadStream@{SGFramework::File::FileReadStream}}
+\doxysubsubsection{\texorpdfstring{ReadVector()}{ReadVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+File\+Read\+Stream\+::\+Read\+Vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/04\+\_\+\+Asset/\+File\+Stream/\mbox{\hyperlink{_file_read_stream_8hpp}{File\+Read\+Stream.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+\hypertarget{_stringf_other_functions_8hpp}{}\doxysection{D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/\+Stringf/\+Stringf\+Other\+Functions.hpp ファイル}
+\label{_stringf_other_functions_8hpp}\index{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/02\_Variables/Stringf/StringfOtherFunctions.hpp@{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/02\_Variables/Stringf/StringfOtherFunctions.hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}Stringf\+Using\+And\+Structure.\+hpp\char`\"{}}\newline
+\doxysubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework}{S\+G\+Framework}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1stringf}{S\+G\+Framework\+::stringf}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1stringf_a92ea1f012fa9f29b1d72e6e723ac1577}{S\+G\+Framework\+::stringf\+::split}} (std\+::vector$<$ string\+\_\+w $>$ \&write, const string\+\_\+w \&source, wchar delimiter=L\textquotesingle{},\textquotesingle{}, bool is\+New\+Line\+Delete=false)
+\item 
+std\+::vector$<$ string\+\_\+w $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1stringf_ac9f7ae3f4a7e979075573dbbac8ac7ba}{S\+G\+Framework\+::stringf\+::split}} (const string\+\_\+w \&source, wchar delimiter=L\textquotesingle{},\textquotesingle{}, bool is\+New\+Line\+Delete=false)
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1stringf_a9f36107210d5d8535829bd1aeeb3e829}{S\+G\+Framework\+::stringf\+::join}} (string\+\_\+w \&write, const std\+::vector$<$ string\+\_\+w $>$ \&source, bool is\+New\+Line=false, wchar delimiter=\textquotesingle{},\textquotesingle{})
+\item 
+string\+\_\+w \mbox{\hyperlink{namespace_s_g_framework_1_1stringf_a628ee53430c4d48e00870799a25cd1e0}{S\+G\+Framework\+::stringf\+::join}} (const std\+::vector$<$ string\+\_\+w $>$ \&source, bool is\+New\+Line=false, wchar delimiter=\textquotesingle{},\textquotesingle{})
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespace_s_g_framework_1_1stringf_a06a52a81a539d369a33c157863b94726}{S\+G\+Framework\+::stringf\+::index\+\_\+of}} (const string\+\_\+w \&source, const string\+\_\+w \&find) noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespace_s_g_framework_1_1stringf_a937a24282487a201a4768c723b321652}{S\+G\+Framework\+::stringf\+::index\+\_\+last\+\_\+of}} (const string\+\_\+w \&source, const string\+\_\+w \&find) noexcept
+\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1stringf_a255bd4b2eb5c42409c0745bae6043ef2}{S\+G\+Framework\+::stringf\+::is\+\_\+start\+\_\+with}} (const string\+\_\+w \&source, const string\+\_\+w \&find)
+\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1stringf_aae51c04931fb1ac3df771ee6797593b0}{S\+G\+Framework\+::stringf\+::is\+\_\+end\+\_\+with}} (const string\+\_\+w \&source, const string\+\_\+w \&find)
+\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1stringf_a3a37d064bb268aa4e079fca3f25b65df}{S\+G\+Framework\+::stringf\+::is\+\_\+contains}} (const string\+\_\+w \&source, const string\+\_\+w \&find) noexcept
+\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1stringf_af759f3e8b6da21ee29fefaf0186fafbb}{S\+G\+Framework\+::stringf\+::is\+\_\+start\+\_\+with\+\_\+number}} (const string\+\_\+w \&source, bool is\+Ignore\+Blanks=true) noexcept
+\end{DoxyCompactItemize}

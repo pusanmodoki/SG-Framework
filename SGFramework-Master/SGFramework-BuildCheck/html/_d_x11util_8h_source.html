@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/998_DemoApplication/AcademySource/DX11util.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_e0e4c557ebc218887fb43396bcf8db4f.html">998_DemoApplication</a></li><li class="navelem"><a class="el" href="dir_184bc37a952b722a29d3658ce9868392.html">AcademySource</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DX11util.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_d_x11util_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include    &lt;d3d11.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include    &quot;<a class="code" href="_c_directx_graphics_8h.html">CDirectxGraphics.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//CDirectXGraphics* GetDX11Obj();</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;ID3D11Device* <a class="code" href="_d_x11util_8h.html#affaf418a02a2a4ca28e588a67675d0d1">GetDX11Device</a>();</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;ID3D11DeviceContext*    <a class="code" href="_d_x11util_8h.html#acdf15f11d9ced27c6411ab7411fa68c1">GetDX11DeviceContext</a>();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_d_x11util_8h.html#aec72ddb5da7ab75547d41535e2ad117d">DX11LightInit</a>(DirectX::XMFLOAT4 lightpos);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_d_x11util_8h.html#a52af52e43a10bf8e023d8b555ed65ded">DX11LightUninit</a>();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_d_x11util_8h.html#aca5e4d63c668e2da342a288c0838636e">DX11LightUpdate</a>(DirectX::XMFLOAT4 lpos);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_d_x11util_8h.html#ab1e533cb6267b4efe7a529785c3f738c">DX11Init</a>(HWND hwnd, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">bool</span> fullscreen);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_d_x11util_8h.html#ae67c0c4389aa8446634dc7d531542284">DX11Uninit</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_d_x11util_8h.html#a6f5f50d2b2c21f42c8c7d29287bb0135">DX11BeforeRender</a>(<span class="keywordtype">float</span> ClearColor[]);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_d_x11util_8h.html#a3662d3620e6cd6cf1aba8e8224e68f59">DX11AfterRender</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="_d_x11util_8h.html#a7bbf1233b7ff5836289d77f736735a1e">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_d_x11util_8h.html#a7bbf1233b7ff5836289d77f736735a1e">DX11UpdateCameraandProjection</a>();</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_d_x11util_8h_html_a52af52e43a10bf8e023d8b555ed65ded"><div class="ttname"><a href="_d_x11util_8h.html#a52af52e43a10bf8e023d8b555ed65ded">DX11LightUninit</a></div><div class="ttdeci">void DX11LightUninit()</div><div class="ttdef"><b>Definition:</b> dx11util.cpp:21</div></div>
+<div class="ttc" id="a_d_x11util_8h_html_ae67c0c4389aa8446634dc7d531542284"><div class="ttname"><a href="_d_x11util_8h.html#ae67c0c4389aa8446634dc7d531542284">DX11Uninit</a></div><div class="ttdeci">void DX11Uninit()</div><div class="ttdef"><b>Definition:</b> dx11util.cpp:54</div></div>
+<div class="ttc" id="a_d_x11util_8h_html_a7bbf1233b7ff5836289d77f736735a1e"><div class="ttname"><a href="_d_x11util_8h.html#a7bbf1233b7ff5836289d77f736735a1e">DX11UpdateCameraandProjection</a></div><div class="ttdeci">void DX11UpdateCameraandProjection()</div></div>
+<div class="ttc" id="a_d_x11util_8h_html_a3662d3620e6cd6cf1aba8e8224e68f59"><div class="ttname"><a href="_d_x11util_8h.html#a3662d3620e6cd6cf1aba8e8224e68f59">DX11AfterRender</a></div><div class="ttdeci">void DX11AfterRender()</div><div class="ttdef"><b>Definition:</b> dx11util.cpp:70</div></div>
+<div class="ttc" id="a_d_x11util_8h_html_ab1e533cb6267b4efe7a529785c3f738c"><div class="ttname"><a href="_d_x11util_8h.html#ab1e533cb6267b4efe7a529785c3f738c">DX11Init</a></div><div class="ttdeci">bool DX11Init(HWND hwnd, int width, int height, bool fullscreen)</div><div class="ttdef"><b>Definition:</b> dx11util.cpp:39</div></div>
+<div class="ttc" id="a_d_x11util_8h_html_a6f5f50d2b2c21f42c8c7d29287bb0135"><div class="ttname"><a href="_d_x11util_8h.html#a6f5f50d2b2c21f42c8c7d29287bb0135">DX11BeforeRender</a></div><div class="ttdeci">void DX11BeforeRender(float ClearColor[])</div><div class="ttdef"><b>Definition:</b> dx11util.cpp:63</div></div>
+<div class="ttc" id="a_d_x11util_8h_html_acdf15f11d9ced27c6411ab7411fa68c1"><div class="ttname"><a href="_d_x11util_8h.html#acdf15f11d9ced27c6411ab7411fa68c1">GetDX11DeviceContext</a></div><div class="ttdeci">ID3D11DeviceContext * GetDX11DeviceContext()</div><div class="ttdef"><b>Definition:</b> dx11util.cpp:35</div></div>
+<div class="ttc" id="a_d_x11util_8h_html_aca5e4d63c668e2da342a288c0838636e"><div class="ttname"><a href="_d_x11util_8h.html#aca5e4d63c668e2da342a288c0838636e">DX11LightUpdate</a></div><div class="ttdeci">void DX11LightUpdate(DirectX::XMFLOAT4 lpos)</div><div class="ttdef"><b>Definition:</b> dx11util.cpp:25</div></div>
+<div class="ttc" id="a_d_x11util_8h_html_affaf418a02a2a4ca28e588a67675d0d1"><div class="ttname"><a href="_d_x11util_8h.html#affaf418a02a2a4ca28e588a67675d0d1">GetDX11Device</a></div><div class="ttdeci">ID3D11Device * GetDX11Device()</div><div class="ttdef"><b>Definition:</b> dx11util.cpp:31</div></div>
+<div class="ttc" id="a_d_x11util_8h_html_aec72ddb5da7ab75547d41535e2ad117d"><div class="ttname"><a href="_d_x11util_8h.html#aec72ddb5da7ab75547d41535e2ad117d">DX11LightInit</a></div><div class="ttdeci">void DX11LightInit(DirectX::XMFLOAT4 lightpos)</div><div class="ttdef"><b>Definition:</b> dx11util.cpp:17</div></div>
+<div class="ttc" id="a_c_directx_graphics_8h_html"><div class="ttname"><a href="_c_directx_graphics_8h.html">CDirectxGraphics.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

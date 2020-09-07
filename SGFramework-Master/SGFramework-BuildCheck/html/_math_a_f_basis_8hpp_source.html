@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/03_MathAF/MathAFBasis.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_c0ddba950b9d7af6627f7597680b4ec1.html">03_MathAF</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MathAFBasis.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_math_a_f_basis_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">計算ライブラリなMathAF namespace (math + almost float)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_CMATHF_BASIS_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_CMATHF_BASIS_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../02_CustomVariable/ConstAndUsing/ConstAndUsing.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">//計算ライブラリ</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">namespace </span>MathAF</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">//[Absolute]</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="comment">//return: fの絶対値</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">//引数1: f</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#a422e7bab71c6115deab865f5083db3fa">   19</a></span>&#160;        <span class="keyword">inline</span> constexpr T <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a422e7bab71c6115deab865f5083db3fa">Absolute</a>(T f) noexcept { <span class="keywordflow">return</span> f &lt; 0 ? -f : f; }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">//[IsNaN]</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">//return: fがnanならtrue</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">//引数1: f</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> FloationgType&gt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#a31064d047cf96f1ba4605e0b68e49c41">   25</a></span>&#160;        <span class="keyword">inline</span> constexpr <span class="keywordtype">bool</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a31064d047cf96f1ba4605e0b68e49c41">IsNaN</a>(FloationgType f) noexcept { static_assert(std::is_floating_point_v&lt;FloationgType&gt;, L<span class="stringliteral">&quot;Error value is Floationg&quot;</span>); <span class="keywordflow">return</span> !(f == f); }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">//[IsZero]</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">//return: fが0(誤差含む)ならtrue</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">//引数1: f</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> FloationgType&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#ab3b1dd625c880653fe6c2c74e6031802">   31</a></span>&#160;        <span class="keyword">inline</span> constexpr <span class="keywordtype">bool</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#ab3b1dd625c880653fe6c2c74e6031802">IsZero</a>(FloationgType f) noexcept { static_assert(std::is_floating_point_v&lt;FloationgType&gt;, L<span class="stringliteral">&quot;Error value is Floationg&quot;</span>);  <span class="keywordflow">return</span> (-<a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a2e518057fca380696bc3c09bf8b19b18">cEpsilon</a> &gt; f &amp;&amp; f &gt; <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a2e518057fca380696bc3c09bf8b19b18">cEpsilon</a>); }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">//[IsMinusSign]</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">//return: fが-の値ならtrue</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">//引数1: f</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> FloationgType&gt;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#a927aa78da5947e37b48a86c02ef3aeb2">   37</a></span>&#160;        <span class="keyword">inline</span> constexpr <span class="keywordtype">bool</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a927aa78da5947e37b48a86c02ef3aeb2">IsMinusSign</a>(FloationgType f) noexcept { static_assert(std::is_floating_point_v&lt;FloationgType&gt;, L<span class="stringliteral">&quot;Error value is Floationg&quot;</span>);  <span class="keywordflow">return</span> (!<a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a31064d047cf96f1ba4605e0b68e49c41">IsNaN</a>(f) &amp;&amp; f &lt; 0); }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">//[CopySign]</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">//return: valueにsignの符号をコピーしたもの</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">//引数1: value</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">//引数2: sign</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> FloationgType&gt;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#a75c199aebc0c1dfbf5db102dec02ca51">   44</a></span>&#160;        <span class="keyword">inline</span> constexpr <span class="keywordtype">float</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a75c199aebc0c1dfbf5db102dec02ca51">CopySign</a>(FloationgType value, FloationgType sign) noexcept</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            static_assert(std::is_floating_point_v&lt;FloationgType&gt;, L<span class="stringliteral">&quot;Error value is Floationg&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordtype">float</span> absoluteOrNaN= <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a31064d047cf96f1ba4605e0b68e49c41">IsNaN</a>(value) ? <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a24b21305c4149f07827403e6dfabe228">cNaN</a> : <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a422e7bab71c6115deab865f5083db3fa">Absolute</a>(value);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span> sign &gt;= 0 ? absoluteOrNaN : -absoluteOrNaN;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">//[Clamp]</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">//fをmin ~ maxの間で制限する</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">//return: min ~ max で制限させた値</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">//引数1: f</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">//引数2: 最小制限値</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">//引数3: 最大制限値</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#a9458eff395e7072acd9363fe838c6bdb">   59</a></span>&#160;        <span class="keyword">inline</span> constexpr T <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a9458eff395e7072acd9363fe838c6bdb">Clamp</a>(T f, T min, T max) noexcept</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span> (f &lt; min) <span class="keywordflow">return</span> min;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (f &gt; max) <span class="keywordflow">return</span> max;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> f;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">//[Clamp01]</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//fを0 ~ 1の間で制限する</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//return: 0 ~ 1 で制限させた値</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">//引数1: f</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">//引数2: 最小制限値</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="comment">//引数3: 最大制限値</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> FloationgType&gt;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#ab7bba33cd14734c798d0dc37a69edb63">   73</a></span>&#160;        <span class="keyword">inline</span> constexpr <span class="keywordtype">float</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#ab7bba33cd14734c798d0dc37a69edb63">Clamp01</a>(FloationgType f) noexcept</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            static_assert(std::is_floating_point_v&lt;FloationgType&gt;, L<span class="stringliteral">&quot;Error value is Floationg&quot;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> (f &lt; 0.0f) <span class="keywordflow">return</span> 0.0f;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (f &gt; 1.0f) <span class="keywordflow">return</span>  1.0f;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">return</span> f;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">//[Max]</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">//f1とf2を比較する</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">//return: 大きい方の値</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="comment">//引数1: f1</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">//引数2: f2</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#ae372eb1e54710141302ae9490d7627bf">   87</a></span>&#160;        <span class="keyword">inline</span> constexpr T <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#ae372eb1e54710141302ae9490d7627bf">Max</a>(T f1, T f2) noexcept { <span class="keywordflow">return</span> f1 &gt; f2 ? f1 : f2; }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">//[MaxWithAbsolute]</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">//f1とf2の絶対値を比較する</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">//return: 絶対値の大きい方の値</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="comment">//引数1: f1</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="comment">//引数2: f2</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#ab731352a9dd04ab15c7524c7697041a5">   95</a></span>&#160;        <span class="keyword">inline</span> constexpr T <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#ab731352a9dd04ab15c7524c7697041a5">MaxWithAbsolute</a>(T f1, T f2) noexcept { <span class="keywordflow">return</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a422e7bab71c6115deab865f5083db3fa">Absolute</a>(f1) &gt; <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a422e7bab71c6115deab865f5083db3fa">Absolute</a>(f2) ? f1 : f2; }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="comment">//[Min]</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="comment">//f1とf2を比較する</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="comment">//return: 小さい方の値</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">//引数1: f1</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">//引数2: f2</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#a092ba9d2436cdb94030bcdbe7110c149">  103</a></span>&#160;        <span class="keyword">inline</span> constexpr T <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a092ba9d2436cdb94030bcdbe7110c149">Min</a>(T f1, T f2) noexcept { <span class="keywordflow">return</span> f1 &lt; f2 ? f1 : f2; }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">//[MinWithAbsolute]</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="comment">//f1とf2の絶対値を比較する</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="comment">//return: 絶対値の小さい方の値</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="comment">//引数1: f1</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="comment">//引数2: f2</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_math_a_f.html#a2f37d6e83dc5ba68890be742d109cee8">  111</a></span>&#160;        <span class="keyword">inline</span> constexpr T <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a2f37d6e83dc5ba68890be742d109cee8">MinWithAbsolute</a>(T f1, T f2) noexcept { <span class="keywordflow">return</span> <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a422e7bab71c6115deab865f5083db3fa">Absolute</a>(f1) &lt; <a class="code" href="namespace_s_g_framework_1_1_math_a_f.html#a422e7bab71c6115deab865f5083db3fa">Absolute</a>(f2) ? f1 : f2; }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_CMATHF_BASIS_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_ab3b1dd625c880653fe6c2c74e6031802"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#ab3b1dd625c880653fe6c2c74e6031802">SGFramework::MathAF::IsZero</a></div><div class="ttdeci">constexpr bool IsZero(FloationgType f) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:31</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_ab731352a9dd04ab15c7524c7697041a5"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#ab731352a9dd04ab15c7524c7697041a5">SGFramework::MathAF::MaxWithAbsolute</a></div><div class="ttdeci">constexpr T MaxWithAbsolute(T f1, T f2) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:95</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a9458eff395e7072acd9363fe838c6bdb"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a9458eff395e7072acd9363fe838c6bdb">SGFramework::MathAF::Clamp</a></div><div class="ttdeci">constexpr T Clamp(T f, T min, T max) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:59</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a092ba9d2436cdb94030bcdbe7110c149"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a092ba9d2436cdb94030bcdbe7110c149">SGFramework::MathAF::Min</a></div><div class="ttdeci">constexpr T Min(T f1, T f2) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:103</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a422e7bab71c6115deab865f5083db3fa"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a422e7bab71c6115deab865f5083db3fa">SGFramework::MathAF::Absolute</a></div><div class="ttdeci">constexpr T Absolute(T f) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:19</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a927aa78da5947e37b48a86c02ef3aeb2"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a927aa78da5947e37b48a86c02ef3aeb2">SGFramework::MathAF::IsMinusSign</a></div><div class="ttdeci">constexpr bool IsMinusSign(FloationgType f) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:37</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a75c199aebc0c1dfbf5db102dec02ca51"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a75c199aebc0c1dfbf5db102dec02ca51">SGFramework::MathAF::CopySign</a></div><div class="ttdeci">constexpr float CopySign(FloationgType value, FloationgType sign) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:44</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a2f37d6e83dc5ba68890be742d109cee8"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a2f37d6e83dc5ba68890be742d109cee8">SGFramework::MathAF::MinWithAbsolute</a></div><div class="ttdeci">constexpr T MinWithAbsolute(T f1, T f2) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:111</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_ab7bba33cd14734c798d0dc37a69edb63"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#ab7bba33cd14734c798d0dc37a69edb63">SGFramework::MathAF::Clamp01</a></div><div class="ttdeci">constexpr float Clamp01(FloationgType f) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:73</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a2e518057fca380696bc3c09bf8b19b18"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a2e518057fca380696bc3c09bf8b19b18">SGFramework::MathAF::cEpsilon</a></div><div class="ttdeci">constexpr float cEpsilon</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:201</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a24b21305c4149f07827403e6dfabe228"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a24b21305c4149f07827403e6dfabe228">SGFramework::MathAF::cNaN</a></div><div class="ttdeci">constexpr float cNaN</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:194</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_a31064d047cf96f1ba4605e0b68e49c41"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#a31064d047cf96f1ba4605e0b68e49c41">SGFramework::MathAF::IsNaN</a></div><div class="ttdeci">constexpr bool IsNaN(FloationgType f) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:25</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_math_a_f_html_ae372eb1e54710141302ae9490d7627bf"><div class="ttname"><a href="namespace_s_g_framework_1_1_math_a_f.html#ae372eb1e54710141302ae9490d7627bf">SGFramework::MathAF::Max</a></div><div class="ttdeci">constexpr T Max(T f1, T f2) noexcept</div><div class="ttdef"><b>Definition:</b> MathAFBasis.hpp:87</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

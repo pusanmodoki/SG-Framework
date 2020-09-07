@@ -1,0 +1,115 @@
+\hypertarget{class_s_g_framework_1_1_file_1_1_w_file_write_stream}{}\doxysection{S\+G\+Framework\+::File\+::W\+File\+Write\+Stream クラス}
+\label{class_s_g_framework_1_1_file_1_1_w_file_write_stream}\index{SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}}
+
+
+{\ttfamily \#include $<$File\+Write\+Stream.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_w_file_write_stream_aa0762b57bbe33dff5e4aaa6def211f0b}{Open}} (const sgstring \&path, bool is\+Binary=false, bool is\+Append=false, bool is\+Invalid\+Utf8=false)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a3690a40f92f57cc361305ca51e597f3e}{Close}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_w_file_write_stream_afbf841706a1e6bad7540f274a49cf3ea}{Write}} (const sgstring \&write)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a0cedb18f427343d453357d7d1c374334}{Write}} (const std\+::wstring \&write)
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a8234f24aa6f476d0d2411e73f2698bc1}{Is\+Open}} ()
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a89fa42d7a79bf5be8a8e5cbe8404772b}{Is\+Binary}} ()
+\item 
+{\footnotesize template$<$class \+\_\+\+Elem , unsigned long \+\_\+\+Mymax, std\+::codecvt\+\_\+mode \+\_\+\+Mymode$>$ }\\void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a5959dbcb8955c0550b1ae00f3689bcc5}{Change\+Locale}} (std\+::codecvt\+\_\+utf8$<$ \+\_\+\+Elem, \+\_\+\+Mymax, \+\_\+\+Mymode $>$ \&convert)
+\item 
+{\footnotesize template$<$class \+\_\+\+Elem , unsigned long \+\_\+\+Mymax, std\+::codecvt\+\_\+mode \+\_\+\+Mymode$>$ }\\void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a7566741672f0cd2cbf9ff8f8470280b6}{Change\+Locale}} (std\+::codecvt\+\_\+utf16$<$ \+\_\+\+Elem, \+\_\+\+Mymax, \+\_\+\+Mymode $>$ \&convert)
+\item 
+std\+::wofstream \& \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a06e3202108b7988c398a59a2829a60d5}{operator()}} ()
+\item 
+std\+::wofstream \& \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a6b9870dcc038b5e7328fe15b1fcceab4}{operator-\/$>$}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a74897086882c057cb0d10afa028a58a5}{operator$<$$<$}} (const sgstring \&string)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_w_file_write_stream_ad05a7a4b9712aec3732f63f3c3f4c1d2}{operator$<$$<$}} (const std\+::wstring \&string)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a7566741672f0cd2cbf9ff8f8470280b6}\label{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a7566741672f0cd2cbf9ff8f8470280b6}} 
+\index{SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}!ChangeLocale@{ChangeLocale}}
+\index{ChangeLocale@{ChangeLocale}!SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}}
+\doxysubsubsection{\texorpdfstring{ChangeLocale()}{ChangeLocale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class \+\_\+\+Elem , unsigned long \+\_\+\+Mymax, std\+::codecvt\+\_\+mode \+\_\+\+Mymode$>$ \\
+void S\+G\+Framework\+::\+File\+::\+W\+File\+Write\+Stream\+::\+Change\+Locale (\begin{DoxyParamCaption}\item[{std\+::codecvt\+\_\+utf16$<$ \+\_\+\+Elem, \+\_\+\+Mymax, \+\_\+\+Mymode $>$ \&}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a5959dbcb8955c0550b1ae00f3689bcc5}\label{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a5959dbcb8955c0550b1ae00f3689bcc5}} 
+\index{SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}!ChangeLocale@{ChangeLocale}}
+\index{ChangeLocale@{ChangeLocale}!SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}}
+\doxysubsubsection{\texorpdfstring{ChangeLocale()}{ChangeLocale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class \+\_\+\+Elem , unsigned long \+\_\+\+Mymax, std\+::codecvt\+\_\+mode \+\_\+\+Mymode$>$ \\
+void S\+G\+Framework\+::\+File\+::\+W\+File\+Write\+Stream\+::\+Change\+Locale (\begin{DoxyParamCaption}\item[{std\+::codecvt\+\_\+utf8$<$ \+\_\+\+Elem, \+\_\+\+Mymax, \+\_\+\+Mymode $>$ \&}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a3690a40f92f57cc361305ca51e597f3e}\label{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a3690a40f92f57cc361305ca51e597f3e}} 
+\index{SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}!Close@{Close}}
+\index{Close@{Close}!SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+W\+File\+Write\+Stream\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a89fa42d7a79bf5be8a8e5cbe8404772b}\label{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a89fa42d7a79bf5be8a8e5cbe8404772b}} 
+\index{SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}!IsBinary@{IsBinary}}
+\index{IsBinary@{IsBinary}!SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}}
+\doxysubsubsection{\texorpdfstring{IsBinary()}{IsBinary()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+File\+::\+W\+File\+Write\+Stream\+::\+Is\+Binary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a8234f24aa6f476d0d2411e73f2698bc1}\label{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a8234f24aa6f476d0d2411e73f2698bc1}} 
+\index{SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}!IsOpen@{IsOpen}}
+\index{IsOpen@{IsOpen}!SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}}
+\doxysubsubsection{\texorpdfstring{IsOpen()}{IsOpen()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+File\+::\+W\+File\+Write\+Stream\+::\+Is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_w_file_write_stream_aa0762b57bbe33dff5e4aaa6def211f0b}\label{class_s_g_framework_1_1_file_1_1_w_file_write_stream_aa0762b57bbe33dff5e4aaa6def211f0b}} 
+\index{SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}!Open@{Open}}
+\index{Open@{Open}!SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}}
+\doxysubsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+W\+File\+Write\+Stream\+::\+Open (\begin{DoxyParamCaption}\item[{const sgstring \&}]{path,  }\item[{bool}]{is\+Binary = {\ttfamily false},  }\item[{bool}]{is\+Append = {\ttfamily false},  }\item[{bool}]{is\+Invalid\+Utf8 = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a06e3202108b7988c398a59a2829a60d5}\label{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a06e3202108b7988c398a59a2829a60d5}} 
+\index{SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}!operator()@{operator()}}
+\index{operator()@{operator()}!SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily std\+::wofstream \& S\+G\+Framework\+::\+File\+::\+W\+File\+Write\+Stream\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a6b9870dcc038b5e7328fe15b1fcceab4}\label{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a6b9870dcc038b5e7328fe15b1fcceab4}} 
+\index{SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily std\+::wofstream \& S\+G\+Framework\+::\+File\+::\+W\+File\+Write\+Stream\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a74897086882c057cb0d10afa028a58a5}\label{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a74897086882c057cb0d10afa028a58a5}} 
+\index{SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+W\+File\+Write\+Stream\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const sgstring \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_w_file_write_stream_ad05a7a4b9712aec3732f63f3c3f4c1d2}\label{class_s_g_framework_1_1_file_1_1_w_file_write_stream_ad05a7a4b9712aec3732f63f3c3f4c1d2}} 
+\index{SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+W\+File\+Write\+Stream\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_w_file_write_stream_afbf841706a1e6bad7540f274a49cf3ea}\label{class_s_g_framework_1_1_file_1_1_w_file_write_stream_afbf841706a1e6bad7540f274a49cf3ea}} 
+\index{SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}!Write@{Write}}
+\index{Write@{Write}!SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+W\+File\+Write\+Stream\+::\+Write (\begin{DoxyParamCaption}\item[{const sgstring \&}]{write }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a0cedb18f427343d453357d7d1c374334}\label{class_s_g_framework_1_1_file_1_1_w_file_write_stream_a0cedb18f427343d453357d7d1c374334}} 
+\index{SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}!Write@{Write}}
+\index{Write@{Write}!SGFramework::File::WFileWriteStream@{SGFramework::File::WFileWriteStream}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+W\+File\+Write\+Stream\+::\+Write (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{write }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/04\+\_\+\+Asset/\+File\+Stream/\mbox{\hyperlink{_file_write_stream_8hpp}{File\+Write\+Stream.\+hpp}}\end{DoxyCompactItemize}

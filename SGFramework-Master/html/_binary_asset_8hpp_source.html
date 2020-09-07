@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/04_Asset/Asset/BinaryAsset.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_d0dec2340abc21962e67484932b81919.html">04_Asset</a></li><li class="navelem"><a class="el" href="dir_e26431b0eb6cc0f6582fc686fa6d3774.html">Asset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">BinaryAsset.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_binary_asset_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Binary Text形式のファイルを扱えるBinaryAsset class</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">対応拡張子 : sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_BINARY_ASSET_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_BINARY_ASSET_HPP_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../../02_CustomVariable/CustomVariable.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../FileRW/FileRW.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_base_asset_8hpp.html">BaseAsset.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// Framework namespace</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//Asset関連を格納したAsset namespace</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">namespace </span>Asset</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">//Binary Text形式のファイルを扱えるBinaryAsset class</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">//対応拡張子 : sebt, sebtl, txt, cpp, hpp, html, htm, json, xml, yaml, fnt</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html">   19</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html">BinaryAsset</a> final : <span class="keyword">public</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html">BaseClass::BaseAsset</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#aafe72876a584aedb5a5546d4fe7746fb">   22</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#aafe72876a584aedb5a5546d4fe7746fb">AssetManager</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TAsset&gt;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#ac8ed677720e0a948a793d7e0163780ac">   24</a></span>&#160;            <span class="keyword">friend</span> <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;TAsset&gt;</a> <a class="code" href="namespace_s_g_framework_1_1_asset.html#ad512f0eb01593582e1507de561c2f71f">Asset::InstantiateAsset</a>(<span class="keyword">const</span> sgstring&amp; filePath, <span class="keywordtype">bool</span> isRegisterSharedAsset);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#af2d4506d52d95d97a1f29f1c89d2f9ee">   26</a></span>&#160;            <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#af2d4506d52d95d97a1f29f1c89d2f9ee">~BinaryAsset</a>() { <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#ac23b03144611d5fa2985ec28124af337">CloseBaseAsset</a>(<a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a47a8177bc17bb1aac5ba06d09da10980">getType</a>(), <span class="keyword">true</span>); }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="comment">//[Open]</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="comment">//ファイルを開く</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="comment">//throw: 対応していない拡張子だった場合</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a49aa8ef1111b393c18d6551939776fac">Open</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="comment">//[Write]</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="comment">//ファイルに書き込む, Open実行後に可能</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="comment">//引数1: 書き込む内容</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="comment">//引数2: 追加書き込みモードで開くか, default = false</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a4864fe4f1b6cd9c751a49fbfe1453136">Write</a>(<span class="keyword">const</span> std::vector&lt;byte&gt;&amp; writeBytes, <span class="keywordtype">bool</span> isAppend = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="comment">//[Reload]</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="comment">//アセットのリロードを行う, Open実行後に可能</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#ac4ca793c93f8b8c6a4bb1cead32b95c6">Reload</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="comment">//[Close]</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="comment">//ファイルを閉じる, Open実行後に可能</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#ac5781babc5bb7e136fe1e5b8eaa1545a">Close</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">//[Read]</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="comment">//return: アセットの中身</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt;byte&gt;&amp; <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a08ac87046e2021f6cb024d982d629c40">Read</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="comment">//get asset type (read function property)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a47a8177bc17bb1aac5ba06d09da10980">   55</a></span>&#160;            SGF_FUNCTION_PROPERTY <a class="code" href="namespace_s_g_framework_1_1_asset.html#adda3675d35f5e7dcea0dd7e6955d97da">Asset::AssetType</a> <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a47a8177bc17bb1aac5ba06d09da10980">getType</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> Asset::AssetType::Binary; }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#ae8221a76ab81910b93d53a95582f5261">   57</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;std::vector&lt;byte&gt;</a>&gt; <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#ae8221a76ab81910b93d53a95582f5261">bytes</a>;           <span class="comment">//アセットの中身</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="comment">//0初期化を行う</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html">BinaryAsset</a>() : <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#ae8221a76ab81910b93d53a95582f5261">bytes</a>(m_bytes), m_fileType(0) {}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> m_cFlagSebt = 0x1;     <span class="comment">//識別フラグ sebtl</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> m_cFlagSebtl = 0x2;        <span class="comment">//識別フラグ sebt</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> m_cFlagOthers = 0x4;   <span class="comment">//識別フラグ その他</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="comment">//拡張子文字列 sebt, sebtl</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> m_cIdentificationSebtOrSebtl[2][7] = { L<span class="stringliteral">&quot;.sebt&quot;</span>, L<span class="stringliteral">&quot;.sebtl&quot;</span> };</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="comment">//拡張子文字列 その他</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> m_cIdentificationOthers[9][6] = { L<span class="stringliteral">&quot;.txt&quot;</span>, L<span class="stringliteral">&quot;.cpp&quot;</span>, L<span class="stringliteral">&quot;.hpp&quot;</span>, L<span class="stringliteral">&quot;.html&quot;</span>, L<span class="stringliteral">&quot;.htm&quot;</span>, L<span class="stringliteral">&quot;.json&quot;</span>, L<span class="stringliteral">&quot;.xml&quot;</span>, L<span class="stringliteral">&quot;.yaml&quot;</span>, L<span class="stringliteral">&quot;.fnt&quot;</span> };</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            std::vector&lt;byte&gt; m_bytes;      <span class="comment">//テキスト内容</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            std::mutex m_mutex;             <span class="comment">//mutex</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordtype">byte</span> m_fileType;                            <span class="comment">//ファイル識別フラグ</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        };</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">//[Open]</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">//ファイルを開く</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">//throw: 対応していない拡張子だった場合</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="comment">//引数1: ファイルパス (拡張子含む)</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a49aa8ef1111b393c18d6551939776fac">   85</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a49aa8ef1111b393c18d6551939776fac">BinaryAsset::Open</a>()</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="comment">//open?</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a14fb449040ba6d20357f0288ada5072a">getIsFileOpened</a>())) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a3a8f89a6870c68449e49774470b29579">setIsOpenFailed</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="comment">//mutex guard</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            std::lock_guard&lt;std::mutex&gt; guard(m_mutex);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="comment">//ないかもしらんからとりあえず開いとく</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <a class="code" href="class_s_g_framework_1_1_file_1_1_file_write_stream.html">File::FileWriteStream</a> fws;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            fws.<a class="code" href="class_s_g_framework_1_1_file_1_1_file_write_stream.html#adbd8dcb51af1504ec292a9947dc386ec">Open</a>(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>(), <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            fws.<a class="code" href="class_s_g_framework_1_1_file_1_1_file_write_stream.html#af3580ccfcfe47b179d55f77c8c8ce556">Close</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordtype">bool</span> isOpened = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">//sebt</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>().my_functions.IsEndWith(m_cIdentificationSebtOrSebtl[0]))</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                isOpened = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <a class="code" href="namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w.html#a6c6a913acfd54d47356a43b1e7130fad">File::SebtFileRW::ReadBinaryNotLocked</a>(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>(), m_bytes, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                m_fileType = m_cFlagSebt;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="comment">//sebtl</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>().my_functions.IsEndWith(m_cIdentificationSebtOrSebtl[1]))</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                isOpened = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <a class="code" href="namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w.html#a3b78b47e36c2fc83179610eb06d6bf96">File::SebtFileRW::ReadBinaryLocked</a>(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>(), m_bytes, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                m_fileType = m_cFlagSebtl;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="comment">//others</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 9; i++)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>().my_functions.IsEndWith(m_cIdentificationOthers[i]))</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                        isOpened = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                        <a class="code" href="namespace_s_g_framework_1_1_file_1_1_text_file_r_w.html#a50524d8cf42d7ca905fe3bf2f86d4734">File::TextFileRW::ReadBinary</a>(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>(), m_bytes);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                        m_fileType = m_cFlagOthers;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="comment">//BaseAsset</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordflow">if</span> (isOpened) <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a8160865d93e19492af47f0e45fc8af81">OpenBaseAsset</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="comment">//拡張子エラー</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <span class="comment">//filed</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a3a8f89a6870c68449e49774470b29579">setIsOpenFailed</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <span class="keywordflow">throw</span> InvalidArgument(L<span class="stringliteral">&quot;Error!! TextAsset-&gt;Open&quot;</span>,</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                    L<span class="stringliteral">&quot;Extension NotFound: &quot;</span> + <a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>());</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="comment">//[Write]</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="comment">//ファイルに書き込む, Open実行後に可能</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="comment">//引数1: 書き込む内容</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="comment">//引数2: 追加書き込みモードで開くか, default = false</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a4864fe4f1b6cd9c751a49fbfe1453136">  145</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a4864fe4f1b6cd9c751a49fbfe1453136">BinaryAsset::Write</a>(<span class="keyword">const</span> std::vector&lt;byte&gt;&amp; writeBytes, <span class="keywordtype">bool</span> isAppend)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="comment">//開いてない</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa36e55e8a36a5db4160db2dc04fde1a4">IS_FALSE</a>(<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a14fb449040ba6d20357f0288ada5072a">getIsFileOpened</a>())) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="comment">//mutex guard</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            std::lock_guard&lt;std::mutex&gt; guard(m_mutex);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="comment">//sebt</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordflow">if</span> ((m_fileType &amp; m_cFlagSebt) != 0)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                <a class="code" href="namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w.html#a91f1f285e7499e8b0f7ca7a79a22ad53">File::SebtFileRW::WriteBinaryNotLocked</a>(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>, writeBytes, isAppend, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="comment">//sebtl</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((m_fileType &amp; m_cFlagSebtl) != 0)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <a class="code" href="namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w.html#ac251518eb5d83ed0ee09ba366589db47">File::SebtFileRW::WriteBinaryLocked</a>(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>, writeBytes, isAppend, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="comment">//others</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((m_fileType &amp; m_cFlagOthers) != 0)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <a class="code" href="namespace_s_g_framework_1_1_file_1_1_text_file_r_w.html#ac95c672cb22e7bdb29bae4d94c7582b8">File::TextFileRW::WriteBinary</a>(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>, writeBytes);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="comment">//拡張子エラー</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="keywordflow">throw</span> InvalidArgument(L<span class="stringliteral">&quot;Error!! BinaryAsset-&gt;Write&quot;</span>,</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                    L<span class="stringliteral">&quot;Extension NotSupported: &quot;</span> + <a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>.<a class="code" href="class_s_g_framework_1_1_get_only_property.html#aef5a65c298457a3730add1648237d6a3">getValue</a>());</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="comment">//text</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            m_bytes.assign(writeBytes.cbegin(), writeBytes.cend());</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="comment">//BaseAsset</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#ae96a65614b06ae963b10f23fcebab052">ReloadBaseAsset</a>();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="comment">//[Reload]</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="comment">//アセットのリロードを行う, Open実行後に可能</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#ac4ca793c93f8b8c6a4bb1cead32b95c6">  176</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#ac4ca793c93f8b8c6a4bb1cead32b95c6">BinaryAsset::Reload</a>()</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="comment">//開いてない</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa36e55e8a36a5db4160db2dc04fde1a4">IS_FALSE</a>(<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a14fb449040ba6d20357f0288ada5072a">getIsFileOpened</a>())) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="comment">//mutex guard</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            std::lock_guard&lt;std::mutex&gt; guard(m_mutex);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <span class="comment">//sebt</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keywordflow">if</span> ((m_fileType &amp; m_cFlagSebt) != 0)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    <a class="code" href="namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w.html#a6c6a913acfd54d47356a43b1e7130fad">File::SebtFileRW::ReadBinaryNotLocked</a>(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>, m_bytes, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <span class="comment">//sebtl</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((m_fileType &amp; m_cFlagSebtl) != 0)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                    <a class="code" href="namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w.html#a3b78b47e36c2fc83179610eb06d6bf96">File::SebtFileRW::ReadBinaryLocked</a>(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>, m_bytes, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                <span class="comment">//others</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                    <a class="code" href="namespace_s_g_framework_1_1_file_1_1_text_file_r_w.html#a50524d8cf42d7ca905fe3bf2f86d4734">File::TextFileRW::ReadBinary</a>(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>, m_bytes);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keywordflow">catch</span> (...)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a3a8f89a6870c68449e49774470b29579">setIsOpenFailed</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                <span class="keywordflow">throw</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="comment">//BaseAsset</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#ae96a65614b06ae963b10f23fcebab052">ReloadBaseAsset</a>();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="comment">//[Close]</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="comment">//ファイルを閉じる, Open実行後に可能</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#ac5781babc5bb7e136fe1e5b8eaa1545a">  208</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#ac5781babc5bb7e136fe1e5b8eaa1545a">BinaryAsset::Close</a>()</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa36e55e8a36a5db4160db2dc04fde1a4">IS_FALSE</a>(<a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a14fb449040ba6d20357f0288ada5072a">getIsFileOpened</a>())) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="comment">//BaseAsset</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#ac23b03144611d5fa2985ec28124af337">CloseBaseAsset</a>(<a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a47a8177bc17bb1aac5ba06d09da10980">getType</a>(), <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="comment">//[ReadNotArray]</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="comment">//return: アセットの中身</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a08ac87046e2021f6cb024d982d629c40">  219</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt;byte&gt;&amp; <a class="code" href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a08ac87046e2021f6cb024d982d629c40">BinaryAsset::Read</a>() { <span class="keywordflow">return</span> m_bytes; }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_BINARY_ASSET_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_binary_asset_html_aafe72876a584aedb5a5546d4fe7746fb"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#aafe72876a584aedb5a5546d4fe7746fb">SGFramework::Asset::BinaryAsset::AssetManager</a></div><div class="ttdeci">friend class AssetManager</div><div class="ttdef"><b>Definition:</b> BinaryAsset.hpp:22</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_file_1_1_file_write_stream_html_adbd8dcb51af1504ec292a9947dc386ec"><div class="ttname"><a href="class_s_g_framework_1_1_file_1_1_file_write_stream.html#adbd8dcb51af1504ec292a9947dc386ec">SGFramework::File::FileWriteStream::Open</a></div><div class="ttdeci">void Open(const sgstring &amp;path, bool isBinary=false, bool isAppend=false, bool isInvalidUtf8=false)</div><div class="ttdef"><b>Definition:</b> FileWriteStream.hpp:175</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_asset_html_a8160865d93e19492af47f0e45fc8af81"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a8160865d93e19492af47f0e45fc8af81">SGFramework::BaseClass::BaseAsset::OpenBaseAsset</a></div><div class="ttdeci">void OpenBaseAsset()</div><div class="ttdef"><b>Definition:</b> BaseAsset.hpp:438</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_file_1_1_file_write_stream_html_af3580ccfcfe47b179d55f77c8c8ce556"><div class="ttname"><a href="class_s_g_framework_1_1_file_1_1_file_write_stream.html#af3580ccfcfe47b179d55f77c8c8ce556">SGFramework::File::FileWriteStream::Close</a></div><div class="ttdeci">void Close()</div><div class="ttdef"><b>Definition:</b> FileWriteStream.hpp:203</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_binary_asset_html_a4864fe4f1b6cd9c751a49fbfe1453136"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a4864fe4f1b6cd9c751a49fbfe1453136">SGFramework::Asset::BinaryAsset::Write</a></div><div class="ttdeci">void Write(const std::vector&lt; byte &gt; &amp;writeBytes, bool isAppend=false)</div><div class="ttdef"><b>Definition:</b> BinaryAsset.hpp:145</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_file_1_1_file_write_stream_html"><div class="ttname"><a href="class_s_g_framework_1_1_file_1_1_file_write_stream.html">SGFramework::File::FileWriteStream</a></div><div class="ttdef"><b>Definition:</b> FileWriteStream.hpp:23</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_aa36e55e8a36a5db4160db2dc04fde1a4"><div class="ttname"><a href="_macro_and_using_8hpp.html#aa36e55e8a36a5db4160db2dc04fde1a4">IS_FALSE</a></div><div class="ttdeci">#define IS_FALSE(val)</div><div class="ttdoc">false判定高速化, 見やすさ向上マクロ(高速化は環境依存？)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:66</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_asset_html"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_asset.html">SGFramework::BaseClass::BaseAsset</a></div><div class="ttdef"><b>Definition:</b> BaseAsset.hpp:173</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_asset_html_adda3675d35f5e7dcea0dd7e6955d97da"><div class="ttname"><a href="namespace_s_g_framework_1_1_asset.html#adda3675d35f5e7dcea0dd7e6955d97da">SGFramework::Asset::AssetType</a></div><div class="ttdeci">AssetType</div><div class="ttdef"><b>Definition:</b> BaseAsset.hpp:87</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_asset_html_ad512f0eb01593582e1507de561c2f71f"><div class="ttname"><a href="namespace_s_g_framework_1_1_asset.html#ad512f0eb01593582e1507de561c2f71f">SGFramework::Asset::InstantiateAsset</a></div><div class="ttdeci">SharedPointer&lt; TAsset &gt; InstantiateAsset(const sgstring &amp;filePath, bool isRegisterSharedAsset)</div><div class="ttdef"><b>Definition:</b> InstantiateAsset.hpp:25</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_get_only_property_html_aef5a65c298457a3730add1648237d6a3"><div class="ttname"><a href="class_s_g_framework_1_1_get_only_property.html#aef5a65c298457a3730add1648237d6a3">SGFramework::GetOnlyProperty::getValue</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY const T &amp; getValue() const</div><div class="ttdef"><b>Definition:</b> Property.hpp:171</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_file_1_1_text_file_r_w_html_a50524d8cf42d7ca905fe3bf2f86d4734"><div class="ttname"><a href="namespace_s_g_framework_1_1_file_1_1_text_file_r_w.html#a50524d8cf42d7ca905fe3bf2f86d4734">SGFramework::File::TextFileRW::ReadBinary</a></div><div class="ttdeci">std::vector&lt; byte &gt; ReadBinary(const sgstring &amp;path)</div><div class="ttdef"><b>Definition:</b> TextFileRW.hpp:117</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_get_only_property_html"><div class="ttname"><a href="class_s_g_framework_1_1_get_only_property.html">SGFramework::GetOnlyProperty</a></div><div class="ttdef"><b>Definition:</b> Property.hpp:151</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html">SGFramework::SharedPointer</a></div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:22</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_binary_asset_html"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_binary_asset.html">SGFramework::Asset::BinaryAsset</a></div><div class="ttdef"><b>Definition:</b> BinaryAsset.hpp:20</div></div>
+<div class="ttc" id="a_base_asset_8hpp_html"><div class="ttname"><a href="_base_asset_8hpp.html">BaseAsset.hpp</a></div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_html_ac251518eb5d83ed0ee09ba366589db47"><div class="ttname"><a href="namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w.html#ac251518eb5d83ed0ee09ba366589db47">SGFramework::File::SebtFileRW::WriteBinaryLocked</a></div><div class="ttdeci">void WriteBinaryLocked(const sgstring &amp;path, const std::vector&lt; byte &gt; &amp;write, bool isAdd=false, bool isCheckExtension=true)</div><div class="ttdef"><b>Definition:</b> SebtFileRW.hpp:529</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_aa2eae4e8c99ada2e0afd8011beca63c4"><div class="ttname"><a href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a></div><div class="ttdeci">#define IS_TRUE(val)</div><div class="ttdoc">true判定高速化, 見やすさ向上マクロ(高速化は環境依存？)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:64</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_binary_asset_html_a49aa8ef1111b393c18d6551939776fac"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a49aa8ef1111b393c18d6551939776fac">SGFramework::Asset::BinaryAsset::Open</a></div><div class="ttdeci">void Open()</div><div class="ttdef"><b>Definition:</b> BinaryAsset.hpp:85</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_html_a3b78b47e36c2fc83179610eb06d6bf96"><div class="ttname"><a href="namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w.html#a3b78b47e36c2fc83179610eb06d6bf96">SGFramework::File::SebtFileRW::ReadBinaryLocked</a></div><div class="ttdeci">std::vector&lt; byte &gt; ReadBinaryLocked(const sgstring &amp;path, bool isCheckExtension=true)</div><div class="ttdef"><b>Definition:</b> SebtFileRW.hpp:334</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_binary_asset_html_a47a8177bc17bb1aac5ba06d09da10980"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a47a8177bc17bb1aac5ba06d09da10980">SGFramework::Asset::BinaryAsset::getType</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY Asset::AssetType getType() override</div><div class="ttdef"><b>Definition:</b> BinaryAsset.hpp:55</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_asset_html_a14fb449040ba6d20357f0288ada5072a"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a14fb449040ba6d20357f0288ada5072a">SGFramework::BaseClass::BaseAsset::getIsFileOpened</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY bool getIsFileOpened() const</div><div class="ttdef"><b>Definition:</b> BaseAsset.hpp:229</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_asset_html_a3a8f89a6870c68449e49774470b29579"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#a3a8f89a6870c68449e49774470b29579">SGFramework::BaseClass::BaseAsset::setIsOpenFailed</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY void setIsOpenFailed(bool set)</div><div class="ttdef"><b>Definition:</b> BaseAsset.hpp:264</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a7f41ac37dc0d3ba6fa22b37126f944cb"><div class="ttname"><a href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">SGFramework::wchar</a></div><div class="ttdeci">wchar_t wchar</div><div class="ttdoc">wchar = wchar_t</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:153</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_binary_asset_html_ae8221a76ab81910b93d53a95582f5261"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#ae8221a76ab81910b93d53a95582f5261">SGFramework::Asset::BinaryAsset::bytes</a></div><div class="ttdeci">GetOnlyProperty&lt; std::vector&lt; byte &gt; &gt; bytes</div><div class="ttdef"><b>Definition:</b> BinaryAsset.hpp:57</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_object_html_a81c886cd57a3c42b7e2ed81c0ad978f5"><div class="ttname"><a href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">SGFramework::Object::name</a></div><div class="ttdeci">GetOnlyProperty&lt; sgstring &gt; name</div><div class="ttdef"><b>Definition:</b> Object.hpp:68</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_binary_asset_html_a08ac87046e2021f6cb024d982d629c40"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#a08ac87046e2021f6cb024d982d629c40">SGFramework::Asset::BinaryAsset::Read</a></div><div class="ttdeci">const std::vector&lt; byte &gt; &amp; Read()</div><div class="ttdef"><b>Definition:</b> BinaryAsset.hpp:219</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_binary_asset_html_ac5781babc5bb7e136fe1e5b8eaa1545a"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#ac5781babc5bb7e136fe1e5b8eaa1545a">SGFramework::Asset::BinaryAsset::Close</a></div><div class="ttdeci">virtual void Close()</div><div class="ttdef"><b>Definition:</b> BinaryAsset.hpp:208</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_file_1_1_text_file_r_w_html_ac95c672cb22e7bdb29bae4d94c7582b8"><div class="ttname"><a href="namespace_s_g_framework_1_1_file_1_1_text_file_r_w.html#ac95c672cb22e7bdb29bae4d94c7582b8">SGFramework::File::TextFileRW::WriteBinary</a></div><div class="ttdeci">void WriteBinary(const sgstring &amp;path, const std::vector&lt; byte &gt; &amp;write, bool isAdd=false)</div><div class="ttdef"><b>Definition:</b> TextFileRW.hpp:145</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_html_a91f1f285e7499e8b0f7ca7a79a22ad53"><div class="ttname"><a href="namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w.html#a91f1f285e7499e8b0f7ca7a79a22ad53">SGFramework::File::SebtFileRW::WriteBinaryNotLocked</a></div><div class="ttdeci">void WriteBinaryNotLocked(const sgstring &amp;path, const std::vector&lt; byte &gt; &amp;write, bool isAdd=false, bool isCheckExtension=true)</div><div class="ttdef"><b>Definition:</b> SebtFileRW.hpp:553</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_binary_asset_html_ac4ca793c93f8b8c6a4bb1cead32b95c6"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#ac4ca793c93f8b8c6a4bb1cead32b95c6">SGFramework::Asset::BinaryAsset::Reload</a></div><div class="ttdeci">virtual void Reload()</div><div class="ttdef"><b>Definition:</b> BinaryAsset.hpp:176</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_asset_html_ae96a65614b06ae963b10f23fcebab052"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#ae96a65614b06ae963b10f23fcebab052">SGFramework::BaseClass::BaseAsset::ReloadBaseAsset</a></div><div class="ttdeci">void ReloadBaseAsset()</div><div class="ttdef"><b>Definition:</b> BaseAsset.hpp:461</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_asset_html_ac23b03144611d5fa2985ec28124af337"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#ac23b03144611d5fa2985ec28124af337">SGFramework::BaseClass::BaseAsset::CloseBaseAsset</a></div><div class="ttdeci">void CloseBaseAsset(Asset::AssetType type, bool isDestructor)</div><div class="ttdef"><b>Definition:</b> BaseAsset.cpp:16</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_binary_asset_html_af2d4506d52d95d97a1f29f1c89d2f9ee"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_binary_asset.html#af2d4506d52d95d97a1f29f1c89d2f9ee">SGFramework::Asset::BinaryAsset::~BinaryAsset</a></div><div class="ttdeci">~BinaryAsset()</div><div class="ttdef"><b>Definition:</b> BinaryAsset.hpp:26</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_file_1_1_sebt_file_r_w_html_a6c6a913acfd54d47356a43b1e7130fad"><div class="ttname"><a href="namespace_s_g_framework_1_1_file_1_1_sebt_file_r_w.html#a6c6a913acfd54d47356a43b1e7130fad">SGFramework::File::SebtFileRW::ReadBinaryNotLocked</a></div><div class="ttdeci">std::vector&lt; byte &gt; ReadBinaryNotLocked(const sgstring &amp;path, bool isCheckExtension=true)</div><div class="ttdef"><b>Definition:</b> SebtFileRW.hpp:360</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

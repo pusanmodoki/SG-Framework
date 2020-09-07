@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/05_Graphics/DrawCommand/DrawCommand.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_3179bfb1337b5dc243543deb8f1fb9cf.html">05_Graphics</a></li><li class="navelem"><a class="el" href="dir_bf80833be2f89c834a5ac4ccf8bc3dcf.html">DrawCommand</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DrawCommand.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_draw_command_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">描画コマンドを保存するDrawCommand</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_DRAW_COMMAND_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_DRAW_COMMAND_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../../02_CustomVariable/CustomVariable.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Framework namespace</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//描画コマンドを保存するDrawCommand</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_draw_command.html">   13</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_s_g_framework_1_1_draw_command.html">DrawCommand</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">//引数1: Draw関数オブジェクト, 別スレッドで描画を実行するのでスレッドセーフな動作が必要</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">//引数1: 描画優先度</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_draw_command.html#aa5d6f96e2df3539ebee5e4695e2104bc">   19</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="struct_s_g_framework_1_1_draw_command.html#aa5d6f96e2df3539ebee5e4695e2104bc">DrawCommand</a>(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; <a class="code" href="struct_s_g_framework_1_1_draw_command.html#a873d13efae2a0ee0f861a3bfb7ef1589">drawFunctionCommand</a>, <span class="keywordtype">int</span> <a class="code" href="struct_s_g_framework_1_1_draw_command.html#af73ea2e033a070ba10e360a9c9e1d9d2">priority</a>)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            : <a class="code" href="struct_s_g_framework_1_1_draw_command.html#a873d13efae2a0ee0f861a3bfb7ef1589">drawFunctionCommand</a>(<a class="code" href="struct_s_g_framework_1_1_draw_command.html#a873d13efae2a0ee0f861a3bfb7ef1589">drawFunctionCommand</a>), <a class="code" href="struct_s_g_framework_1_1_draw_command.html#af73ea2e033a070ba10e360a9c9e1d9d2">priority</a>(<a class="code" href="struct_s_g_framework_1_1_draw_command.html#af73ea2e033a070ba10e360a9c9e1d9d2">priority</a>) {}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">//&lt; operator</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_draw_command.html#a83f02f397b0cee8d04f957d3a3f442e7">   23</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="struct_s_g_framework_1_1_draw_command.html#a83f02f397b0cee8d04f957d3a3f442e7">operator &lt; </a>(<span class="keyword">const</span> <a class="code" href="struct_s_g_framework_1_1_draw_command.html">DrawCommand</a>&amp; <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#af06c5b6877dc9b6ac774c2d21249e454">right</a>) { <span class="keywordflow">return</span> (<a class="code" href="struct_s_g_framework_1_1_draw_command.html#af73ea2e033a070ba10e360a9c9e1d9d2">priority</a> &lt; <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#af06c5b6877dc9b6ac774c2d21249e454">right</a>.priority); }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">//&gt; operator</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_draw_command.html#ae4184815a07dce841430a4b1df02e5ab">   25</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="struct_s_g_framework_1_1_draw_command.html#ae4184815a07dce841430a4b1df02e5ab">operator &gt; </a>(<span class="keyword">const</span> <a class="code" href="struct_s_g_framework_1_1_draw_command.html">DrawCommand</a>&amp; <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#af06c5b6877dc9b6ac774c2d21249e454">right</a>) { <span class="keywordflow">return</span> (<a class="code" href="struct_s_g_framework_1_1_draw_command.html#af73ea2e033a070ba10e360a9c9e1d9d2">priority</a> &gt; <a class="code" href="namespace_s_g_framework_1_1_const_1_1_vector2.html#af06c5b6877dc9b6ac774c2d21249e454">right</a>.priority); }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_draw_command.html#a873d13efae2a0ee0f861a3bfb7ef1589">   27</a></span>&#160;        std::function&lt;void()&gt; <a class="code" href="struct_s_g_framework_1_1_draw_command.html#a873d13efae2a0ee0f861a3bfb7ef1589">drawFunctionCommand</a>;  <span class="comment">//Draw関数</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_draw_command.html#af73ea2e033a070ba10e360a9c9e1d9d2">   28</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_s_g_framework_1_1_draw_command.html#af73ea2e033a070ba10e360a9c9e1d9d2">priority</a>;                                                       <span class="comment">//優先度</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_DRAW_COMMAND_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_s_g_framework_1_1_draw_command_html_aa5d6f96e2df3539ebee5e4695e2104bc"><div class="ttname"><a href="struct_s_g_framework_1_1_draw_command.html#aa5d6f96e2df3539ebee5e4695e2104bc">SGFramework::DrawCommand::DrawCommand</a></div><div class="ttdeci">DrawCommand(const std::function&lt; void()&gt; &amp;drawFunctionCommand, int priority)</div><div class="ttdef"><b>Definition:</b> DrawCommand.hpp:19</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_draw_command_html_a83f02f397b0cee8d04f957d3a3f442e7"><div class="ttname"><a href="struct_s_g_framework_1_1_draw_command.html#a83f02f397b0cee8d04f957d3a3f442e7">SGFramework::DrawCommand::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const DrawCommand &amp;right)</div><div class="ttdef"><b>Definition:</b> DrawCommand.hpp:23</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_draw_command_html"><div class="ttname"><a href="struct_s_g_framework_1_1_draw_command.html">SGFramework::DrawCommand</a></div><div class="ttdef"><b>Definition:</b> DrawCommand.hpp:14</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_draw_command_html_a873d13efae2a0ee0f861a3bfb7ef1589"><div class="ttname"><a href="struct_s_g_framework_1_1_draw_command.html#a873d13efae2a0ee0f861a3bfb7ef1589">SGFramework::DrawCommand::drawFunctionCommand</a></div><div class="ttdeci">std::function&lt; void()&gt; drawFunctionCommand</div><div class="ttdef"><b>Definition:</b> DrawCommand.hpp:27</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_draw_command_html_af73ea2e033a070ba10e360a9c9e1d9d2"><div class="ttname"><a href="struct_s_g_framework_1_1_draw_command.html#af73ea2e033a070ba10e360a9c9e1d9d2">SGFramework::DrawCommand::priority</a></div><div class="ttdeci">int priority</div><div class="ttdef"><b>Definition:</b> DrawCommand.hpp:28</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_draw_command_html_ae4184815a07dce841430a4b1df02e5ab"><div class="ttname"><a href="struct_s_g_framework_1_1_draw_command.html#ae4184815a07dce841430a4b1df02e5ab">SGFramework::DrawCommand::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(const DrawCommand &amp;right)</div><div class="ttdef"><b>Definition:</b> DrawCommand.hpp:25</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_const_1_1_vector2_html_af06c5b6877dc9b6ac774c2d21249e454"><div class="ttname"><a href="namespace_s_g_framework_1_1_const_1_1_vector2.html#af06c5b6877dc9b6ac774c2d21249e454">SGFramework::Const::Vector2::right</a></div><div class="ttdeci">constexpr SGFramework::Vector2 right(1.0f, 0.0f)</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

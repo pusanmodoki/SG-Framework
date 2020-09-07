@@ -1,0 +1,54 @@
+\hypertarget{_memory_8h}{}\doxysection{S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/\+Memory.h ファイル}
+\label{_memory_8h}\index{SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/Memory.h@{SGFramework-\/Master\_ToExe/998\_DemoApplication/AcademySource/Memory.h}}
+{\ttfamily \#include $<$list$>$}\newline
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{_memory_8h_a40d6c82a33f3bf9cc0ae09b72fb0e926}{Delete}} (T $\ast$\&p)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{_memory_8h_ae191f5cd43972b3130b514b7c443b37d}{Delete\+Array}} (T $\ast$\&p)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{_memory_8h_a5e10ba3d4adde88796a2a056198749f7}{Release}} (T $\ast$\&p)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{_memory_8h_a3ff9511d3e7d24b6dc33fb805a20db71}{Delete\+List\+Elem}} (std\+::list$<$ T $\ast$ $>$ \&arr, T $\ast$elem)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{_memory_8h_af548abacfaacff34cba6fb95e7849659}{Delete\+List}} (std\+::list$<$ T $\ast$ $>$ \&arr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{_memory_8h_a40d6c82a33f3bf9cc0ae09b72fb0e926}\label{_memory_8h_a40d6c82a33f3bf9cc0ae09b72fb0e926}} 
+\index{Memory.h@{Memory.h}!Delete@{Delete}}
+\index{Delete@{Delete}!Memory.h@{Memory.h}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Delete (\begin{DoxyParamCaption}\item[{T $\ast$\&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{_memory_8h_ae191f5cd43972b3130b514b7c443b37d}\label{_memory_8h_ae191f5cd43972b3130b514b7c443b37d}} 
+\index{Memory.h@{Memory.h}!DeleteArray@{DeleteArray}}
+\index{DeleteArray@{DeleteArray}!Memory.h@{Memory.h}}
+\doxysubsubsection{\texorpdfstring{DeleteArray()}{DeleteArray()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Delete\+Array (\begin{DoxyParamCaption}\item[{T $\ast$\&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{_memory_8h_af548abacfaacff34cba6fb95e7849659}\label{_memory_8h_af548abacfaacff34cba6fb95e7849659}} 
+\index{Memory.h@{Memory.h}!DeleteList@{DeleteList}}
+\index{DeleteList@{DeleteList}!Memory.h@{Memory.h}}
+\doxysubsubsection{\texorpdfstring{DeleteList()}{DeleteList()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Delete\+List (\begin{DoxyParamCaption}\item[{std\+::list$<$ T $\ast$ $>$ \&}]{arr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_memory_8h_a3ff9511d3e7d24b6dc33fb805a20db71}\label{_memory_8h_a3ff9511d3e7d24b6dc33fb805a20db71}} 
+\index{Memory.h@{Memory.h}!DeleteListElem@{DeleteListElem}}
+\index{DeleteListElem@{DeleteListElem}!Memory.h@{Memory.h}}
+\doxysubsubsection{\texorpdfstring{DeleteListElem()}{DeleteListElem()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Delete\+List\+Elem (\begin{DoxyParamCaption}\item[{std\+::list$<$ T $\ast$ $>$ \&}]{arr,  }\item[{T $\ast$}]{elem }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_memory_8h_a5e10ba3d4adde88796a2a056198749f7}\label{_memory_8h_a5e10ba3d4adde88796a2a056198749f7}} 
+\index{Memory.h@{Memory.h}!Release@{Release}}
+\index{Release@{Release}!Memory.h@{Memory.h}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Release (\begin{DoxyParamCaption}\item[{T $\ast$\&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+

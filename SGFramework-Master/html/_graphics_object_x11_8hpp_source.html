@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/05_Graphics/DirectX11/GraphicsObject/GraphicsObjectX11.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_3179bfb1337b5dc243543deb8f1fb9cf.html">05_Graphics</a></li><li class="navelem"><a class="el" href="dir_2a4559de03f6cae991f9fd49f0dc1978.html">DirectX11</a></li><li class="navelem"><a class="el" href="dir_49e3102d466516b347bdbae5c0a5f73a.html">GraphicsObject</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GraphicsObjectX11.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_graphics_object_x11_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_GRAPHICS_OBJECT_X11_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_GRAPHICS_OBJECT_X11_HPP_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../GraphicsX11/GraphicsX11.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Framework namespace</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="comment">//フレームワークの管理をするAdministrator namespace</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">namespace </span>Administrator</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">class </span>GraphicsX11;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="comment">//GraphicsDetail namespace</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">namespace </span>GraphicsDetail</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="comment">//Graphics系クラスの基底となるGraphicsObjectX11 class</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html">   17</a></span>&#160;            <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html">GraphicsObjectX11</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <span class="comment">//friend</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html#a685be118a7983cdf84f14f00ef7c310e">   21</a></span>&#160;                <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html">SGFramework::Administrator::GraphicsX11</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="comment">//リスト登録</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html#a18a8ac443f3b8ae83e28fff61ed01a90">   27</a></span>&#160;                <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html#a18a8ac443f3b8ae83e28fff61ed01a90">GraphicsObjectX11</a>()</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    <a class="code" href="namespace_s_g_framework_1_1_atomic.html#a063122ef30b1ea668e40c5a4aa0f43d2">AtomicOperation::LockAtomic</a>(SGFramework::Administrator::GraphicsX11::m_graphicsObjectsLock);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    SGFramework::Administrator::GraphicsX11::m_addOrEraseGraphicsObjects.emplace_back(<span class="keyword">this</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    <a class="code" href="namespace_s_g_framework_1_1_atomic.html#ad4668b40d56cdbf6bdfe819c1b68b7dc">AtomicOperation::UnlockAtomic</a>(SGFramework::Administrator::GraphicsX11::m_graphicsObjectsLock);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="comment">//[デストラクタ]</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="comment">//リスト取り消し</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html#a48c8cd1ee805f5d2e1aef82caa1f46f6">   36</a></span>&#160;                <span class="keyword">inline</span> <span class="keyword">virtual</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html#a48c8cd1ee805f5d2e1aef82caa1f46f6">~GraphicsObjectX11</a>()</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <a class="code" href="namespace_s_g_framework_1_1_atomic.html#a063122ef30b1ea668e40c5a4aa0f43d2">AtomicOperation::LockAtomic</a>(SGFramework::Administrator::GraphicsX11::m_graphicsObjectsLock);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    SGFramework::Administrator::GraphicsX11::m_addOrEraseGraphicsObjects.emplace_back(<span class="keyword">this</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    <a class="code" href="namespace_s_g_framework_1_1_atomic.html#ad4668b40d56cdbf6bdfe819c1b68b7dc">AtomicOperation::UnlockAtomic</a>(SGFramework::Administrator::GraphicsX11::m_graphicsObjectsLock);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="comment">//[Sync]</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="comment">//情報を同期する, コールバック関数</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html#a791bdf0d68197e334c5060afdf9663e4">   46</a></span>&#160;                <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html#a791bdf0d68197e334c5060afdf9663e4">Sync</a>() = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            };</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif //!SGFRAMEWORK_HEADER_GRAPHICS_OBJECT_X11_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespace_s_g_framework_1_1_atomic_html_a063122ef30b1ea668e40c5a4aa0f43d2"><div class="ttname"><a href="namespace_s_g_framework_1_1_atomic.html#a063122ef30b1ea668e40c5a4aa0f43d2">SGFramework::Atomic::LockAtomic</a></div><div class="ttdeci">void LockAtomic(std::atomic&lt; bool &gt; &amp;atomicBoolean) noexcept</div><div class="ttdoc">std::atomic_boolをロックさせ排他制御を可能にする</div><div class="ttdef"><b>Definition:</b> Atomic.hpp:149</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11_html_a18a8ac443f3b8ae83e28fff61ed01a90"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html#a18a8ac443f3b8ae83e28fff61ed01a90">SGFramework::Administrator::GraphicsDetail::GraphicsObjectX11::GraphicsObjectX11</a></div><div class="ttdeci">GraphicsObjectX11()</div><div class="ttdef"><b>Definition:</b> GraphicsObjectX11.hpp:27</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html">SGFramework::Administrator::GraphicsDetail::GraphicsObjectX11</a></div><div class="ttdef"><b>Definition:</b> GraphicsObjectX11.hpp:18</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html">SGFramework::Administrator::GraphicsX11</a></div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:46</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_atomic_html_ad4668b40d56cdbf6bdfe819c1b68b7dc"><div class="ttname"><a href="namespace_s_g_framework_1_1_atomic.html#ad4668b40d56cdbf6bdfe819c1b68b7dc">SGFramework::Atomic::UnlockAtomic</a></div><div class="ttdeci">void UnlockAtomic(std::atomic&lt; bool &gt; &amp;atomicBoolean) noexcept</div><div class="ttdoc">std::atomic_boolをアンロックし排他制御を終了する, 必ずLock後に同じスレッドで実行すること</div><div class="ttdef"><b>Definition:</b> Atomic.hpp:186</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11_html_a48c8cd1ee805f5d2e1aef82caa1f46f6"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html#a48c8cd1ee805f5d2e1aef82caa1f46f6">SGFramework::Administrator::GraphicsDetail::GraphicsObjectX11::~GraphicsObjectX11</a></div><div class="ttdeci">virtual ~GraphicsObjectX11()</div><div class="ttdef"><b>Definition:</b> GraphicsObjectX11.hpp:36</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11_html_a791bdf0d68197e334c5060afdf9663e4"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html#a791bdf0d68197e334c5060afdf9663e4">SGFramework::Administrator::GraphicsDetail::GraphicsObjectX11::Sync</a></div><div class="ttdeci">virtual void Sync()=0</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

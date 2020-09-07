@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/02_Variables/未実装/TriggerCollider/TriggerCollider.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_0cf03c12e51ae64724f6ec73d30b9672.html">02_Variables</a></li><li class="navelem"><a class="el" href="dir_06c5a77703cbb5bfafd4b0eea230505d.html">未実装</a></li><li class="navelem"><a class="el" href="dir_36dcd4f14edb391dcfb564df95e9d6b6.html">TriggerCollider</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TriggerCollider.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_trigger_collider_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">ColliderのTriggerを指定するTriggerCollider.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_COLLIDER_TRIGGER_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_COLLIDER_TRIGGER_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment">//コライダーのトリガー</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="namespace_s_g_framework.html#a9df012ec4248de56eff2218bb5b5337f">   11</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespace_s_g_framework.html#a9df012ec4248de56eff2218bb5b5337f">Triggers</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        TriggerNull = 0x0,  <span class="comment">//初期値</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        TriggerFalse = 0x1, <span class="comment">//制限なし</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="namespace_s_g_framework.html#a9df012ec4248de56eff2218bb5b5337fa1fe4c23309c21a03e9a821e6e6fd8b8e">TriggerTrue</a> = 0x2,  <span class="comment">//制限あり</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    };</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">//コライダーの種類</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespace_s_g_framework.html#a6d1ab318a5780b5b47018fb95fbb9b64">   19</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespace_s_g_framework.html#a6d1ab318a5780b5b47018fb95fbb9b64">Colliders</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="namespace_s_g_framework.html#aa77dbfc04fe3f456e19873a65daf69e3">Mesh</a>,                   <span class="comment">//メッシュコライダー</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        Ray,                        <span class="comment">//レイキャスト</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        Box3D,                  <span class="comment">//ボックスコライダー (3D)</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        Box2D,                  <span class="comment">//ボックスコライダー (2D)</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_sphere.html">Sphere</a>,                 <span class="comment">//スフィアコライダー (3D)</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="namespace_s_g_framework.html#a6d1ab318a5780b5b47018fb95fbb9b64a710fdb6adb881b408116ef95335e1961">Circle</a>,                 <span class="comment">//サークルコライダー (2D)</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_COLLIDER_TRIGGER_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespace_s_g_framework_html_a6d1ab318a5780b5b47018fb95fbb9b64a710fdb6adb881b408116ef95335e1961"><div class="ttname"><a href="namespace_s_g_framework.html#a6d1ab318a5780b5b47018fb95fbb9b64a710fdb6adb881b408116ef95335e1961">SGFramework::Colliders::Mesh</a></div><div class="ttdeci">@ Mesh</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a6d1ab318a5780b5b47018fb95fbb9b64"><div class="ttname"><a href="namespace_s_g_framework.html#a6d1ab318a5780b5b47018fb95fbb9b64">SGFramework::Colliders</a></div><div class="ttdeci">Colliders</div><div class="ttdef"><b>Definition:</b> TriggerCollider.hpp:20</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a9df012ec4248de56eff2218bb5b5337f"><div class="ttname"><a href="namespace_s_g_framework.html#a9df012ec4248de56eff2218bb5b5337f">SGFramework::Triggers</a></div><div class="ttdeci">Triggers</div><div class="ttdef"><b>Definition:</b> TriggerCollider.hpp:12</div></div>
+<div class="ttc" id="aclass_sphere_html"><div class="ttname"><a href="class_sphere.html">Sphere</a></div><div class="ttdef"><b>Definition:</b> Sphere.hpp:8</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a9df012ec4248de56eff2218bb5b5337fa1fe4c23309c21a03e9a821e6e6fd8b8e"><div class="ttname"><a href="namespace_s_g_framework.html#a9df012ec4248de56eff2218bb5b5337fa1fe4c23309c21a03e9a821e6e6fd8b8e">SGFramework::Triggers::TriggerNull</a></div><div class="ttdeci">@ TriggerNull</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_aa77dbfc04fe3f456e19873a65daf69e3"><div class="ttname"><a href="namespace_s_g_framework.html#aa77dbfc04fe3f456e19873a65daf69e3">SGFramework::Mesh</a></div><div class="ttdeci">Administrator::GraphicsDetail::MeshX11&lt; VertexType, MaterialPointerType &gt; Mesh</div><div class="ttdef"><b>Definition:</b> MeshUsing.hpp:11</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

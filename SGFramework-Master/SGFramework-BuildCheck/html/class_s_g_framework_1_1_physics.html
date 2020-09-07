@@ -1,0 +1,1009 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework::Physics クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_s_g_framework.html">SGFramework</a></li><li class="navelem"><a class="el" href="class_s_g_framework_1_1_physics.html">Physics</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="class_s_g_framework_1_1_physics-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">SGFramework::Physics クラス<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_physics_8hpp_source.html">Physics.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics_1_1_lock_guard_physics.html">LockGuardPhysics</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a031b87c30beee798e2f8d4108c64bdad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a031b87c30beee798e2f8d4108c64bdad">DELETE_ALL_DEFAULT_CLASS_FUNCTIONS</a> (<a class="el" href="class_s_g_framework_1_1_physics.html">Physics</a>)</td></tr>
+<tr class="separator:a031b87c30beee798e2f8d4108c64bdad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4ab26058dbdc452c4a262b55953e55df"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a4ab26058dbdc452c4a262b55953e55df">Raycast</a> (const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;origin, const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;direction, float distance=<a class="el" href="namespace_s_g_framework_1_1_math_a_f.html#a8aa59d2395f84daef682a57d41a57178">MathAF::cInfinity</a>, <a class="el" href="struct_s_g_framework_1_1_raycast_hit.html">RaycastHit</a> *raycastHit=nullptr, const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;layerMask=<a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>(), bool isMultiHit=false)</td></tr>
+<tr class="separator:a4ab26058dbdc452c4a262b55953e55df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd0d16074cab154a6fb07c6ea90951ba"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#abd0d16074cab154a6fb07c6ea90951ba">BoxCast</a> (const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;origin, const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;direction, const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;size, const <a class="el" href="struct_s_g_framework_1_1_quaternion.html">Quaternion</a> &amp;rotation, float distance=<a class="el" href="namespace_s_g_framework_1_1_math_a_f.html#a8aa59d2395f84daef682a57d41a57178">MathAF::cInfinity</a>, <a class="el" href="struct_s_g_framework_1_1_sweep_hit.html">SweepHit</a> *hit=nullptr, const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;layerMask=<a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>())</td></tr>
+<tr class="separator:abd0d16074cab154a6fb07c6ea90951ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb9db7098e195711a89795d690b93af"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#abcb9db7098e195711a89795d690b93af">SphereCast</a> (const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;origin, const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;direction, float radius, float distance=<a class="el" href="namespace_s_g_framework_1_1_math_a_f.html#a8aa59d2395f84daef682a57d41a57178">MathAF::cInfinity</a>, <a class="el" href="struct_s_g_framework_1_1_sweep_hit.html">SweepHit</a> *hit=nullptr, const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;layerMask=<a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>())</td></tr>
+<tr class="separator:abcb9db7098e195711a89795d690b93af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d3e76e0653769bbfd827d0f1cee0f03"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a3d3e76e0653769bbfd827d0f1cee0f03">CapsuleCast</a> (const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;origin, const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;direction, float radius, float height, const <a class="el" href="struct_s_g_framework_1_1_quaternion.html">Quaternion</a> &amp;rotation, float distance=<a class="el" href="namespace_s_g_framework_1_1_math_a_f.html#a8aa59d2395f84daef682a57d41a57178">MathAF::cInfinity</a>, <a class="el" href="struct_s_g_framework_1_1_sweep_hit.html">SweepHit</a> *hit=nullptr, const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;layerMask=<a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>())</td></tr>
+<tr class="separator:a3d3e76e0653769bbfd827d0f1cee0f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add37b7e58f0ac76e8c42031815783e97"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#add37b7e58f0ac76e8c42031815783e97">OverlapBox</a> (const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;position, const <a class="el" href="struct_s_g_framework_1_1_quaternion.html">Quaternion</a> &amp;rotation, const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;size, <a class="el" href="struct_s_g_framework_1_1_overlap_hit.html">OverlapHit</a> *hit=nullptr, const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;layerMask=<a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>())</td></tr>
+<tr class="separator:add37b7e58f0ac76e8c42031815783e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108ec4f782585b3e3a930d10f09f1024"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a108ec4f782585b3e3a930d10f09f1024">OverlapSphere</a> (const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;position, float radius, <a class="el" href="struct_s_g_framework_1_1_overlap_hit.html">OverlapHit</a> *hit=nullptr, const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;layerMask=<a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>())</td></tr>
+<tr class="separator:a108ec4f782585b3e3a930d10f09f1024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f19f8544389769d14602be7c6c6ee33"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a6f19f8544389769d14602be7c6c6ee33">OverlapCapsule</a> (const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;position, const <a class="el" href="struct_s_g_framework_1_1_quaternion.html">Quaternion</a> &amp;rotation, float radius, float height, <a class="el" href="struct_s_g_framework_1_1_overlap_hit.html">OverlapHit</a> *hit=nullptr, const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;layerMask=<a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>())</td></tr>
+<tr class="separator:a6f19f8544389769d14602be7c6c6ee33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43d461277f3a76e3d5a353f889b16c4d"><td class="memItemLeft" align="right" valign="top">static SGF_FUNCTION_PROPERTY <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a43d461277f3a76e3d5a353f889b16c4d">getGravity</a> ()</td></tr>
+<tr class="separator:a43d461277f3a76e3d5a353f889b16c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b5b8071ab3eae26a400218069544f9"><td class="memItemLeft" align="right" valign="top">static SGF_FUNCTION_PROPERTY <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a83b5b8071ab3eae26a400218069544f9">setGravity</a> (const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;set)</td></tr>
+<tr class="separator:a83b5b8071ab3eae26a400218069544f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:a427d95316967404e8146c9d2f43cf30f"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a427d95316967404e8146c9d2f43cf30f">cAllLayers</a> = <a class="el" href="namespace_s_g_framework_1_1_variable_limit.html#a4e28295c9e1b4be9503f9b15a981f543">VariableLimit::cUintMax</a></td></tr>
+<tr class="separator:a427d95316967404e8146c9d2f43cf30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78d57273b2822fd10db209481187c7c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty</a>&lt; physx::PxPhysics * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#ad78d57273b2822fd10db209481187c7c">physicsFactory</a></td></tr>
+<tr class="separator:ad78d57273b2822fd10db209481187c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02361f7db3ce86184bb99c6c1f88781a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty</a>&lt; physx::PxScene * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a02361f7db3ce86184bb99c6c1f88781a">physicsScene</a></td></tr>
+<tr class="separator:a02361f7db3ce86184bb99c6c1f88781a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a811376faa21811e798f7da4904207bb4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty</a>&lt; physx::PxControllerManager * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a811376faa21811e798f7da4904207bb4">controllerManager</a></td></tr>
+<tr class="separator:a811376faa21811e798f7da4904207bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89182a290c38ff465f1e2d4f0a438876"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="class_s_g_framework_1_1_physics_material.html">PhysicsMaterial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a89182a290c38ff465f1e2d4f0a438876">defaultPhysicsMaterial</a></td></tr>
+<tr class="separator:a89182a290c38ff465f1e2d4f0a438876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a23f25bcc02a0e94c2f5a4188496b04d0"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a23f25bcc02a0e94c2f5a4188496b04d0">Application</a></td></tr>
+<tr class="separator:a23f25bcc02a0e94c2f5a4188496b04d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d24590e3f2ad748ad54745fdf07d6c"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#ae0d24590e3f2ad748ad54745fdf07d6c">ContactInfo</a></td></tr>
+<tr class="separator:ae0d24590e3f2ad748ad54745fdf07d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a333949ea84b6a659db1fb2709ecb631e"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a333949ea84b6a659db1fb2709ecb631e">BaseClass::BaseRigidBody</a></td></tr>
+<tr class="separator:a333949ea84b6a659db1fb2709ecb631e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ee23f4a4b202eb57b5c4428cf1ad2fc"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a9ee23f4a4b202eb57b5c4428cf1ad2fc">BaseClass::BaseCollider</a></td></tr>
+<tr class="separator:a9ee23f4a4b202eb57b5c4428cf1ad2fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ee863840cafd77693cc9f22b56529ec"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a1ee863840cafd77693cc9f22b56529ec">RigidBodyStatic</a></td></tr>
+<tr class="separator:a1ee863840cafd77693cc9f22b56529ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b430cd2420e9b310155f368cc92f4af"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a8b430cd2420e9b310155f368cc92f4af">RigidBodyDynamic</a></td></tr>
+<tr class="separator:a8b430cd2420e9b310155f368cc92f4af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c44bcc0dacdde1fd8d3d0a73b40a187"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a5c44bcc0dacdde1fd8d3d0a73b40a187">BoxCollider</a></td></tr>
+<tr class="separator:a5c44bcc0dacdde1fd8d3d0a73b40a187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5aba08524880cc6e05bb71500c7b708"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#ab5aba08524880cc6e05bb71500c7b708">CapsuleCollider</a></td></tr>
+<tr class="separator:ab5aba08524880cc6e05bb71500c7b708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47698a50448820b4c35c041f181dc2f"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#ac47698a50448820b4c35c041f181dc2f">MeshCollider</a></td></tr>
+<tr class="separator:ac47698a50448820b4c35c041f181dc2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208f1c311dfeb4fad17c5a556721e986"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a208f1c311dfeb4fad17c5a556721e986">PlaneCollider</a></td></tr>
+<tr class="separator:a208f1c311dfeb4fad17c5a556721e986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15793375868d0302266e8d1ca58e3cf2"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_physics.html#a15793375868d0302266e8d1ca58e3cf2">SphereCollider</a></td></tr>
+<tr class="separator:a15793375868d0302266e8d1ca58e3cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="abd0d16074cab154a6fb07c6ea90951ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd0d16074cab154a6fb07c6ea90951ba">&#9670;&nbsp;</a></span>BoxCast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Physics::BoxCast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>origin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>direction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>distance</em> = <code><a class="el" href="namespace_s_g_framework_1_1_math_a_f.html#a8aa59d2395f84daef682a57d41a57178">MathAF::cInfinity</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s_g_framework_1_1_sweep_hit.html">SweepHit</a> *&#160;</td>
+          <td class="paramname"><em>hit</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>layerMask</em> = <code><a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d3e76e0653769bbfd827d0f1cee0f03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d3e76e0653769bbfd827d0f1cee0f03">&#9670;&nbsp;</a></span>CapsuleCast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Physics::CapsuleCast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>origin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>direction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>distance</em> = <code><a class="el" href="namespace_s_g_framework_1_1_math_a_f.html#a8aa59d2395f84daef682a57d41a57178">MathAF::cInfinity</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s_g_framework_1_1_sweep_hit.html">SweepHit</a> *&#160;</td>
+          <td class="paramname"><em>hit</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>layerMask</em> = <code><a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a031b87c30beee798e2f8d4108c64bdad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031b87c30beee798e2f8d4108c64bdad">&#9670;&nbsp;</a></span>DELETE_ALL_DEFAULT_CLASS_FUNCTIONS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SGFramework::Physics::DELETE_ALL_DEFAULT_CLASS_FUNCTIONS </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_g_framework_1_1_physics.html">Physics</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43d461277f3a76e3d5a353f889b16c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43d461277f3a76e3d5a353f889b16c4d">&#9670;&nbsp;</a></span>getGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static SGF_FUNCTION_PROPERTY <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> SGFramework::Physics::getGravity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add37b7e58f0ac76e8c42031815783e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add37b7e58f0ac76e8c42031815783e97">&#9670;&nbsp;</a></span>OverlapBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Physics::OverlapBox </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s_g_framework_1_1_overlap_hit.html">OverlapHit</a> *&#160;</td>
+          <td class="paramname"><em>hit</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>layerMask</em> = <code><a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f19f8544389769d14602be7c6c6ee33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f19f8544389769d14602be7c6c6ee33">&#9670;&nbsp;</a></span>OverlapCapsule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Physics::OverlapCapsule </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s_g_framework_1_1_overlap_hit.html">OverlapHit</a> *&#160;</td>
+          <td class="paramname"><em>hit</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>layerMask</em> = <code><a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a108ec4f782585b3e3a930d10f09f1024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a108ec4f782585b3e3a930d10f09f1024">&#9670;&nbsp;</a></span>OverlapSphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Physics::OverlapSphere </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s_g_framework_1_1_overlap_hit.html">OverlapHit</a> *&#160;</td>
+          <td class="paramname"><em>hit</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>layerMask</em> = <code><a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ab26058dbdc452c4a262b55953e55df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab26058dbdc452c4a262b55953e55df">&#9670;&nbsp;</a></span>Raycast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Physics::Raycast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>origin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>direction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>distance</em> = <code><a class="el" href="namespace_s_g_framework_1_1_math_a_f.html#a8aa59d2395f84daef682a57d41a57178">MathAF::cInfinity</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s_g_framework_1_1_raycast_hit.html">RaycastHit</a> *&#160;</td>
+          <td class="paramname"><em>raycastHit</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>layerMask</em> = <code><a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isMultiHit</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83b5b8071ab3eae26a400218069544f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83b5b8071ab3eae26a400218069544f9">&#9670;&nbsp;</a></span>setGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static SGF_FUNCTION_PROPERTY <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> SGFramework::Physics::setGravity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>set</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcb9db7098e195711a89795d690b93af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb9db7098e195711a89795d690b93af">&#9670;&nbsp;</a></span>SphereCast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Physics::SphereCast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>origin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>direction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>distance</em> = <code><a class="el" href="namespace_s_g_framework_1_1_math_a_f.html#a8aa59d2395f84daef682a57d41a57178">MathAF::cInfinity</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s_g_framework_1_1_sweep_hit.html">SweepHit</a> *&#160;</td>
+          <td class="paramname"><em>hit</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_s_g_framework_1_1_layer_mask.html">LayerMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>layerMask</em> = <code><a class="el" href="struct_s_g_framework_1_1_layer_mask.html#ae922e95d7242c799eabaf146c9ffeff3">LayerMask::getAllLayersMask</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="a23f25bcc02a0e94c2f5a4188496b04d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f25bcc02a0e94c2f5a4188496b04d0">&#9670;&nbsp;</a></span>Application</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_application.html">Application</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ee23f4a4b202eb57b5c4428cf1ad2fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ee23f4a4b202eb57b5c4428cf1ad2fc">&#9670;&nbsp;</a></span>BaseClass::BaseCollider</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_collider.html">BaseClass::BaseCollider</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a333949ea84b6a659db1fb2709ecb631e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a333949ea84b6a659db1fb2709ecb631e">&#9670;&nbsp;</a></span>BaseClass::BaseRigidBody</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_rigid_body.html">BaseClass::BaseRigidBody</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c44bcc0dacdde1fd8d3d0a73b40a187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c44bcc0dacdde1fd8d3d0a73b40a187">&#9670;&nbsp;</a></span>BoxCollider</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_box_collider.html">BoxCollider</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5aba08524880cc6e05bb71500c7b708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5aba08524880cc6e05bb71500c7b708">&#9670;&nbsp;</a></span>CapsuleCollider</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_capsule_collider.html">CapsuleCollider</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0d24590e3f2ad748ad54745fdf07d6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d24590e3f2ad748ad54745fdf07d6c">&#9670;&nbsp;</a></span>ContactInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct <a class="el" href="struct_s_g_framework_1_1_contact_info.html">ContactInfo</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac47698a50448820b4c35c041f181dc2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac47698a50448820b4c35c041f181dc2f">&#9670;&nbsp;</a></span>MeshCollider</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class MeshCollider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a208f1c311dfeb4fad17c5a556721e986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a208f1c311dfeb4fad17c5a556721e986">&#9670;&nbsp;</a></span>PlaneCollider</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_plane_collider.html">PlaneCollider</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b430cd2420e9b310155f368cc92f4af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b430cd2420e9b310155f368cc92f4af">&#9670;&nbsp;</a></span>RigidBodyDynamic</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_rigid_body_dynamic.html">RigidBodyDynamic</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ee863840cafd77693cc9f22b56529ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ee863840cafd77693cc9f22b56529ec">&#9670;&nbsp;</a></span>RigidBodyStatic</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_rigid_body_static.html">RigidBodyStatic</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15793375868d0302266e8d1ca58e3cf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15793375868d0302266e8d1ca58e3cf2">&#9670;&nbsp;</a></span>SphereCollider</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_sphere_collider.html">SphereCollider</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a427d95316967404e8146c9d2f43cf30f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a427d95316967404e8146c9d2f43cf30f">&#9670;&nbsp;</a></span>cAllLayers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> SGFramework::Physics::cAllLayers = <a class="el" href="namespace_s_g_framework_1_1_variable_limit.html#a4e28295c9e1b4be9503f9b15a981f543">VariableLimit::cUintMax</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a811376faa21811e798f7da4904207bb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a811376faa21811e798f7da4904207bb4">&#9670;&nbsp;</a></span>controllerManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty</a>&lt; physx::PxControllerManager * &gt; SGFramework::Physics::controllerManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89182a290c38ff465f1e2d4f0a438876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89182a290c38ff465f1e2d4f0a438876">&#9670;&nbsp;</a></span>defaultPhysicsMaterial</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="class_s_g_framework_1_1_physics_material.html">PhysicsMaterial</a> &gt; SGFramework::Physics::defaultPhysicsMaterial</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad78d57273b2822fd10db209481187c7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad78d57273b2822fd10db209481187c7c">&#9670;&nbsp;</a></span>physicsFactory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty</a>&lt; physx::PxPhysics * &gt; SGFramework::Physics::physicsFactory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02361f7db3ce86184bb99c6c1f88781a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02361f7db3ce86184bb99c6c1f88781a">&#9670;&nbsp;</a></span>physicsScene</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty</a>&lt; physx::PxScene * &gt; SGFramework::Physics::physicsScene</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/10_Physics/<a class="el" href="_physics_8hpp_source.html">Physics.hpp</a></li>
+<li>D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/10_Physics/<a class="el" href="_physics_8cpp.html">Physics.cpp</a></li>
+<li>D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/10_Physics/PhysicsFunction/<a class="el" href="_physics_filter_shader_8hpp_source.html">PhysicsFilterShader.hpp</a></li>
+<li>D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/10_Physics/PhysicsFunction/<a class="el" href="_physics_processing_message_8hpp_source.html">PhysicsProcessingMessage.hpp</a></li>
+<li>D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/10_Physics/<a class="el" href="_physics_raycast_8cpp.html">PhysicsRaycast.cpp</a></li>
+<li>D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/10_Physics/<a class="el" href="_physics_thread_8cpp.html">PhysicsThread.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

@@ -1,0 +1,151 @@
+\hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body}{}\doxysection{S\+G\+Framework\+::Base\+Class\+::Base\+Rigid\+Body クラス}
+\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body}\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+
+
+{\ttfamily \#include $<$Rigid\+Body.\+hpp$>$}
+
+S\+G\+Framework\+::Base\+Class\+::Base\+Rigid\+Body の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.102493cm]{class_s_g_framework_1_1_base_class_1_1_base_rigid_body}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a92de89942c4bdb0271934d9612e3af96}{get\+Num\+Attached\+Colliders}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a6854e585a922e64c4095f15586a0c556}{get\+Is\+Static}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a7faa033448e827c6af9caf6315f6a833}{Build\+Rigid\+Body}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a8d437cba4275f5cc3d6c1678764f4b25}{Update\+Physics}} ()=0
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_af8a3801909c136ad3c5ddd6b1c2dae14}{Transfer\+Colliders}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_aba9e05e0891499d5e4bc70c9e64312a9}{On\+Destroy}} () override
+\item 
+virtual S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY physx\+::\+Px\+Rigid\+Actor $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a93d75beb3af7c2d2e28d00dfd8cf57de}{get\+Base\+Actor}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{静的限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static physx\+::\+Px\+Shape $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a32e36ea0bda68344e6f4901e63426ece}{Default\+Shape}} ()
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const char $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a79fe7491ee3fec198e4b23354b841f61}{get\+Default\+Shape\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a2e167b235a9f9a6d58b6d695c8725841}{m\+\_\+is\+Static}} = false
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_af40d4ffb53289222340d567413d543f6}{m\+\_\+is\+Register\+Scene}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a2bfcbae6c8e1d7af93c5ac1200b1535c}{Physics}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a230934d14c2cbccf3bc70762374fea62}{Base\+Collider}}
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a7faa033448e827c6af9caf6315f6a833}\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a7faa033448e827c6af9caf6315f6a833}} 
+\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}!BuildRigidBody@{BuildRigidBody}}
+\index{BuildRigidBody@{BuildRigidBody}!SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+\doxysubsubsection{\texorpdfstring{BuildRigidBody()}{BuildRigidBody()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Rigid\+Body\+::\+Build\+Rigid\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a32e36ea0bda68344e6f4901e63426ece}\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a32e36ea0bda68344e6f4901e63426ece}} 
+\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}!DefaultShape@{DefaultShape}}
+\index{DefaultShape@{DefaultShape}!SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+\doxysubsubsection{\texorpdfstring{DefaultShape()}{DefaultShape()}}
+{\footnotesize\ttfamily static physx\+::\+Px\+Shape$\ast$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Rigid\+Body\+::\+Default\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a93d75beb3af7c2d2e28d00dfd8cf57de}\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a93d75beb3af7c2d2e28d00dfd8cf57de}} 
+\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}!getBaseActor@{getBaseActor}}
+\index{getBaseActor@{getBaseActor}!SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+\doxysubsubsection{\texorpdfstring{getBaseActor()}{getBaseActor()}}
+{\footnotesize\ttfamily virtual S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY physx\+::\+Px\+Rigid\+Actor$\ast$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Rigid\+Body\+::get\+Base\+Actor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a79fe7491ee3fec198e4b23354b841f61}\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a79fe7491ee3fec198e4b23354b841f61}} 
+\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}!getDefaultShapeName@{getDefaultShapeName}}
+\index{getDefaultShapeName@{getDefaultShapeName}!SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+\doxysubsubsection{\texorpdfstring{getDefaultShapeName()}{getDefaultShapeName()}}
+{\footnotesize\ttfamily static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const char$\ast$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Rigid\+Body\+::get\+Default\+Shape\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a6854e585a922e64c4095f15586a0c556}\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a6854e585a922e64c4095f15586a0c556}} 
+\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}!getIsStatic@{getIsStatic}}
+\index{getIsStatic@{getIsStatic}!SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+\doxysubsubsection{\texorpdfstring{getIsStatic()}{getIsStatic()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Rigid\+Body\+::get\+Is\+Static (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a92de89942c4bdb0271934d9612e3af96}\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a92de89942c4bdb0271934d9612e3af96}} 
+\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}!getNumAttachedColliders@{getNumAttachedColliders}}
+\index{getNumAttachedColliders@{getNumAttachedColliders}!SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+\doxysubsubsection{\texorpdfstring{getNumAttachedColliders()}{getNumAttachedColliders()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Rigid\+Body\+::get\+Num\+Attached\+Colliders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_aba9e05e0891499d5e4bc70c9e64312a9}\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_aba9e05e0891499d5e4bc70c9e64312a9}} 
+\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Rigid\+Body\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a75fe2d3d1cf0b3409d0460110df9438d}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_af8a3801909c136ad3c5ddd6b1c2dae14}\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_af8a3801909c136ad3c5ddd6b1c2dae14}} 
+\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}!TransferColliders@{TransferColliders}}
+\index{TransferColliders@{TransferColliders}!SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+\doxysubsubsection{\texorpdfstring{TransferColliders()}{TransferColliders()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Rigid\+Body\+::\+Transfer\+Colliders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a8d437cba4275f5cc3d6c1678764f4b25}\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a8d437cba4275f5cc3d6c1678764f4b25}} 
+\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}!UpdatePhysics@{UpdatePhysics}}
+\index{UpdatePhysics@{UpdatePhysics}!SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+\doxysubsubsection{\texorpdfstring{UpdatePhysics()}{UpdatePhysics()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Rigid\+Body\+::\+Update\+Physics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a230934d14c2cbccf3bc70762374fea62}\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a230934d14c2cbccf3bc70762374fea62}} 
+\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}!BaseCollider@{BaseCollider}}
+\index{BaseCollider@{BaseCollider}!SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+\doxysubsubsection{\texorpdfstring{BaseCollider}{BaseCollider}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider}{Base\+Collider}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a2bfcbae6c8e1d7af93c5ac1200b1535c}\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a2bfcbae6c8e1d7af93c5ac1200b1535c}} 
+\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}!Physics@{Physics}}
+\index{Physics@{Physics}!SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+\doxysubsubsection{\texorpdfstring{Physics}{Physics}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_physics}{Physics}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_af40d4ffb53289222340d567413d543f6}\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_af40d4ffb53289222340d567413d543f6}} 
+\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}!m\_isRegisterScene@{m\_isRegisterScene}}
+\index{m\_isRegisterScene@{m\_isRegisterScene}!SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+\doxysubsubsection{\texorpdfstring{m\_isRegisterScene}{m\_isRegisterScene}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Rigid\+Body\+::m\+\_\+is\+Register\+Scene = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a2e167b235a9f9a6d58b6d695c8725841}\label{class_s_g_framework_1_1_base_class_1_1_base_rigid_body_a2e167b235a9f9a6d58b6d695c8725841}} 
+\index{SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}!m\_isStatic@{m\_isStatic}}
+\index{m\_isStatic@{m\_isStatic}!SGFramework::BaseClass::BaseRigidBody@{SGFramework::BaseClass::BaseRigidBody}}
+\doxysubsubsection{\texorpdfstring{m\_isStatic}{m\_isStatic}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Rigid\+Body\+::m\+\_\+is\+Static = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/10\+\_\+\+Physics/\+Rigid\+Body/\mbox{\hyperlink{_rigid_body_8hpp}{Rigid\+Body.\+hpp}}\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/10\+\_\+\+Physics/\+Rigid\+Body/\mbox{\hyperlink{_rigid_body_8cpp}{Rigid\+Body.\+cpp}}\end{DoxyCompactItemize}

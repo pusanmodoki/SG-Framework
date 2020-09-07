@@ -1,0 +1,136 @@
+\hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions}{}\doxysection{S\+G\+Framework\+::Game\+Object\+::Callback\+Functions 構造体}
+\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}
+
+
+{\ttfamily \#include $<$Game\+Object.\+hpp$>$}
+
+\doxysubsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6}{Enum}} \+: uint \{ \newline
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a14efbc1dd5af25cdd4cadcdaba173378}{Awake}} = 0x00000001, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6aac041cab7fc5c1aa92b0ee688b93e93e}{On\+Enable}} = 0x00000002, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a2debd5f16cb0ee93bd0f0168c11d4515}{Start}} = 0x00000004, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ab4ec64f9e9d0260b1ef22d1cc27d54f7}{Update}} = 0x00000008, 
+\newline
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6aea9e1a1f09dc7879fecbe43e6fc16439}{Sync}} = 0x00000010, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6adcebbaddcd4f8b280921f390579dde45}{Late\+Update}} = 0x00000020, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ae30e1e66600b0a30067b0cb34c10b86e}{Make\+Draw\+Command}} = 0x00000040, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ad6f3c68f5e7069bf125ec9661a5d23b6}{Fixed\+Update}} = 0x00000080, 
+\newline
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ab54cb27ff6bb7619027cec618bbc9629}{On\+Disable}} = 0x00000100, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a6430d34edb2802f69ff8065c069da61b}{On\+Destroy}} = 0x00000200, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6abc6ff2a8d2fc6b3e20bb6e67c98b2de4}{On\+Collision\+Enter}} = 0x00000400, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6acabe630443637adc3d8752f0cf616474}{On\+Collision\+Stay}} = 0x00000800, 
+\newline
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ace63b67cbefd61cd768e0c913ec2e877}{On\+Collision\+Exit}} = 0x00001000, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a286df1f43d7da758265c52e7132cb652}{On\+Trigger\+Enter}} = 0x00002000, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a1ad1529fc17b2a16bf54c1893714641b}{On\+Trigger\+Stay}} = 0x00004000, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a7af7512aacd47e105ed43ea624b973e3}{On\+Trigger\+Exit}} = 0x00008000, 
+\newline
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6afc7137a6d0c46e18de86ca073dc705ae}{Change\+Upper\+Hierarchy}} = 0x00010000, 
+\mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a6ab8415c149f2b5d5f31c4643b9bacc2}{Standard\+Callbacks}} = Start $\vert$ Update $\vert$ Sync
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a00df87c957d8f7ee0fc51f07a0542f4a}{Game\+Object}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6}} 
+\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!Enum@{Enum}}
+\index{Enum@{Enum}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}
+\doxysubsubsection{\texorpdfstring{Enum}{Enum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6}{S\+G\+Framework\+::\+Game\+Object\+::\+Callback\+Functions\+::\+Enum}} \+: \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Awake@{Awake}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!Awake@{Awake}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a14efbc1dd5af25cdd4cadcdaba173378}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a14efbc1dd5af25cdd4cadcdaba173378}} 
+Awake&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnEnable@{OnEnable}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!OnEnable@{OnEnable}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6aac041cab7fc5c1aa92b0ee688b93e93e}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6aac041cab7fc5c1aa92b0ee688b93e93e}} 
+On\+Enable&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Start@{Start}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!Start@{Start}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a2debd5f16cb0ee93bd0f0168c11d4515}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a2debd5f16cb0ee93bd0f0168c11d4515}} 
+Start&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Update@{Update}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!Update@{Update}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ab4ec64f9e9d0260b1ef22d1cc27d54f7}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ab4ec64f9e9d0260b1ef22d1cc27d54f7}} 
+Update&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sync@{Sync}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!Sync@{Sync}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6aea9e1a1f09dc7879fecbe43e6fc16439}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6aea9e1a1f09dc7879fecbe43e6fc16439}} 
+Sync&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LateUpdate@{LateUpdate}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!LateUpdate@{LateUpdate}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6adcebbaddcd4f8b280921f390579dde45}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6adcebbaddcd4f8b280921f390579dde45}} 
+Late\+Update&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MakeDrawCommand@{MakeDrawCommand}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!MakeDrawCommand@{MakeDrawCommand}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ae30e1e66600b0a30067b0cb34c10b86e}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ae30e1e66600b0a30067b0cb34c10b86e}} 
+Make\+Draw\+Command&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FixedUpdate@{FixedUpdate}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!FixedUpdate@{FixedUpdate}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ad6f3c68f5e7069bf125ec9661a5d23b6}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ad6f3c68f5e7069bf125ec9661a5d23b6}} 
+Fixed\+Update&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnDisable@{OnDisable}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!OnDisable@{OnDisable}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ab54cb27ff6bb7619027cec618bbc9629}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ab54cb27ff6bb7619027cec618bbc9629}} 
+On\+Disable&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnDestroy@{OnDestroy}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!OnDestroy@{OnDestroy}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a6430d34edb2802f69ff8065c069da61b}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a6430d34edb2802f69ff8065c069da61b}} 
+On\+Destroy&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnCollisionEnter@{OnCollisionEnter}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!OnCollisionEnter@{OnCollisionEnter}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6abc6ff2a8d2fc6b3e20bb6e67c98b2de4}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6abc6ff2a8d2fc6b3e20bb6e67c98b2de4}} 
+On\+Collision\+Enter&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnCollisionStay@{OnCollisionStay}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!OnCollisionStay@{OnCollisionStay}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6acabe630443637adc3d8752f0cf616474}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6acabe630443637adc3d8752f0cf616474}} 
+On\+Collision\+Stay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnCollisionExit@{OnCollisionExit}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!OnCollisionExit@{OnCollisionExit}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ace63b67cbefd61cd768e0c913ec2e877}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6ace63b67cbefd61cd768e0c913ec2e877}} 
+On\+Collision\+Exit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnTriggerEnter@{OnTriggerEnter}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!OnTriggerEnter@{OnTriggerEnter}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a286df1f43d7da758265c52e7132cb652}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a286df1f43d7da758265c52e7132cb652}} 
+On\+Trigger\+Enter&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnTriggerStay@{OnTriggerStay}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!OnTriggerStay@{OnTriggerStay}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a1ad1529fc17b2a16bf54c1893714641b}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a1ad1529fc17b2a16bf54c1893714641b}} 
+On\+Trigger\+Stay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnTriggerExit@{OnTriggerExit}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!OnTriggerExit@{OnTriggerExit}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a7af7512aacd47e105ed43ea624b973e3}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a7af7512aacd47e105ed43ea624b973e3}} 
+On\+Trigger\+Exit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ChangeUpperHierarchy@{ChangeUpperHierarchy}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!ChangeUpperHierarchy@{ChangeUpperHierarchy}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6afc7137a6d0c46e18de86ca073dc705ae}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6afc7137a6d0c46e18de86ca073dc705ae}} 
+Change\+Upper\+Hierarchy&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StandardCallbacks@{StandardCallbacks}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!StandardCallbacks@{StandardCallbacks}}}\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a6ab8415c149f2b5d5f31c4643b9bacc2}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a4e923c048cebbb72fb95b190b80924c6a6ab8415c149f2b5d5f31c4643b9bacc2}} 
+Standard\+Callbacks&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a00df87c957d8f7ee0fc51f07a0542f4a}\label{struct_s_g_framework_1_1_game_object_1_1_callback_functions_a00df87c957d8f7ee0fc51f07a0542f4a}} 
+\index{SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!SGFramework::GameObject::CallbackFunctions@{SGFramework::GameObject::CallbackFunctions}}
+\doxysubsubsection{\texorpdfstring{GameObject}{GameObject}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/11\+\_\+\+Game\+Object/\mbox{\hyperlink{_game_object_8hpp}{Game\+Object.\+hpp}}\end{DoxyCompactItemize}

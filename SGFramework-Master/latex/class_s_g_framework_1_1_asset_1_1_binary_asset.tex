@@ -1,0 +1,132 @@
+\hypertarget{class_s_g_framework_1_1_asset_1_1_binary_asset}{}\doxysection{S\+G\+Framework\+::Asset\+::Binary\+Asset クラス}
+\label{class_s_g_framework_1_1_asset_1_1_binary_asset}\index{SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}}
+
+
+{\ttfamily \#include $<$Binary\+Asset.\+hpp$>$}
+
+S\+G\+Framework\+::Asset\+::Binary\+Asset の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_s_g_framework_1_1_asset_1_1_binary_asset}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_binary_asset_af2d4506d52d95d97a1f29f1c89d2f9ee}{$\sim$\+Binary\+Asset}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_binary_asset_a49aa8ef1111b393c18d6551939776fac}{Open}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_binary_asset_a4864fe4f1b6cd9c751a49fbfe1453136}{Write}} (const std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&write\+Bytes, bool is\+Append=false)
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_binary_asset_ac4ca793c93f8b8c6a4bb1cead32b95c6}{Reload}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_binary_asset_ac5781babc5bb7e136fe1e5b8eaa1545a}{Close}} ()
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_binary_asset_a08ac87046e2021f6cb024d982d629c40}{Read}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{Asset\+::\+Asset\+Type}} \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_binary_asset_a47a8177bc17bb1aac5ba06d09da10980}{get\+Type}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_binary_asset_ae8221a76ab81910b93d53a95582f5261}{bytes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_binary_asset_aafe72876a584aedb5a5546d4fe7746fb}{Asset\+Manager}}
+\item 
+{\footnotesize template$<$typename T\+Asset $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$ T\+Asset $>$ \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_binary_asset_ac8ed677720e0a948a793d7e0163780ac}{Asset\+::\+Instantiate\+Asset}} (const sgstring \&file\+Path, bool is\+Register\+Shared\+Asset)
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_binary_asset_af2d4506d52d95d97a1f29f1c89d2f9ee}\label{class_s_g_framework_1_1_asset_1_1_binary_asset_af2d4506d52d95d97a1f29f1c89d2f9ee}} 
+\index{SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}!````~BinaryAsset@{$\sim$BinaryAsset}}
+\index{````~BinaryAsset@{$\sim$BinaryAsset}!SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}}
+\doxysubsubsection{\texorpdfstring{$\sim$BinaryAsset()}{~BinaryAsset()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Asset\+::\+Binary\+Asset\+::$\sim$\+Binary\+Asset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_binary_asset_ac5781babc5bb7e136fe1e5b8eaa1545a}\label{class_s_g_framework_1_1_asset_1_1_binary_asset_ac5781babc5bb7e136fe1e5b8eaa1545a}} 
+\index{SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}!Close@{Close}}
+\index{Close@{Close}!SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Binary\+Asset\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_asset_aafc7e6f4123fd328d2e37a5bf5dad41d}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Asset}}を実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_binary_asset_a47a8177bc17bb1aac5ba06d09da10980}\label{class_s_g_framework_1_1_asset_1_1_binary_asset_a47a8177bc17bb1aac5ba06d09da10980}} 
+\index{SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}!getType@{getType}}
+\index{getType@{getType}!SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_adda3675d35f5e7dcea0dd7e6955d97da}{Asset\+::\+Asset\+Type}} S\+G\+Framework\+::\+Asset\+::\+Binary\+Asset\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_asset_ac34501a9b8fbcc63400ca9e25c906efd}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Asset}}を実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_binary_asset_a49aa8ef1111b393c18d6551939776fac}\label{class_s_g_framework_1_1_asset_1_1_binary_asset_a49aa8ef1111b393c18d6551939776fac}} 
+\index{SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}!Open@{Open}}
+\index{Open@{Open}!SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}}
+\doxysubsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Binary\+Asset\+::\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_binary_asset_a08ac87046e2021f6cb024d982d629c40}\label{class_s_g_framework_1_1_asset_1_1_binary_asset_a08ac87046e2021f6cb024d982d629c40}} 
+\index{SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}!Read@{Read}}
+\index{Read@{Read}!SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}}
+\doxysubsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \& S\+G\+Framework\+::\+Asset\+::\+Binary\+Asset\+::\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_binary_asset_ac4ca793c93f8b8c6a4bb1cead32b95c6}\label{class_s_g_framework_1_1_asset_1_1_binary_asset_ac4ca793c93f8b8c6a4bb1cead32b95c6}} 
+\index{SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}!Reload@{Reload}}
+\index{Reload@{Reload}!SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}}
+\doxysubsubsection{\texorpdfstring{Reload()}{Reload()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Binary\+Asset\+::\+Reload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_asset_a413eae58644e5c6a4c9b6a4924e3f422}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Asset}}を実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_binary_asset_a4864fe4f1b6cd9c751a49fbfe1453136}\label{class_s_g_framework_1_1_asset_1_1_binary_asset_a4864fe4f1b6cd9c751a49fbfe1453136}} 
+\index{SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}!Write@{Write}}
+\index{Write@{Write}!SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Asset\+::\+Binary\+Asset\+::\+Write (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&}]{write\+Bytes,  }\item[{bool}]{is\+Append = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_binary_asset_ac8ed677720e0a948a793d7e0163780ac}\label{class_s_g_framework_1_1_asset_1_1_binary_asset_ac8ed677720e0a948a793d7e0163780ac}} 
+\index{SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}!Asset::InstantiateAsset@{Asset::InstantiateAsset}}
+\index{Asset::InstantiateAsset@{Asset::InstantiateAsset}!SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}}
+\doxysubsubsection{\texorpdfstring{Asset::InstantiateAsset}{Asset::InstantiateAsset}}
+{\footnotesize\ttfamily template$<$typename T\+Asset $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_shared_pointer}{Shared\+Pointer}}$<$T\+Asset$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_asset_ad512f0eb01593582e1507de561c2f71f}{Asset\+::\+Instantiate\+Asset}} (\begin{DoxyParamCaption}\item[{const sgstring \&}]{file\+Path,  }\item[{bool}]{is\+Register\+Shared\+Asset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_binary_asset_aafe72876a584aedb5a5546d4fe7746fb}\label{class_s_g_framework_1_1_asset_1_1_binary_asset_aafe72876a584aedb5a5546d4fe7746fb}} 
+\index{SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}!AssetManager@{AssetManager}}
+\index{AssetManager@{AssetManager}!SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}}
+\doxysubsubsection{\texorpdfstring{AssetManager}{AssetManager}}
+{\footnotesize\ttfamily friend class Asset\+Manager\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_asset_1_1_binary_asset_ae8221a76ab81910b93d53a95582f5261}\label{class_s_g_framework_1_1_asset_1_1_binary_asset_ae8221a76ab81910b93d53a95582f5261}} 
+\index{SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}!bytes@{bytes}}
+\index{bytes@{bytes}!SGFramework::Asset::BinaryAsset@{SGFramework::Asset::BinaryAsset}}
+\doxysubsubsection{\texorpdfstring{bytes}{bytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$std\+::vector$<$\mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}}$>$ $>$ S\+G\+Framework\+::\+Asset\+::\+Binary\+Asset\+::bytes}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/04\+\_\+\+Asset/\+Asset/\mbox{\hyperlink{_binary_asset_8hpp}{Binary\+Asset.\+hpp}}\end{DoxyCompactItemize}

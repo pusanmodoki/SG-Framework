@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/02_Variables/Stringf/StringfOtherFunctions.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_0cf03c12e51ae64724f6ec73d30b9672.html">02_Variables</a></li><li class="navelem"><a class="el" href="dir_0fb975916cc8324b1532f8bca5e3e213.html">Stringf</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">StringfOtherFunctions.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_stringf_other_functions_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">string_wを操作するstringf namespace</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">→to, convert以外の関数を定義するStringfOtherFunctions.hpp</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_STRINGF_OTHER_FUNCTIONS_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_STRINGF_OTHER_FUNCTIONS_HPP_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_stringf_using_and_structure_8hpp.html">StringfUsingAndStructure.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//std::wstring, std::stringを操作するstringf namespace</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//stdクラスとの連携を前提としたもののため特例で命名規則をsnake_caseにする</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">namespace </span>stringf</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">//[split]</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">//文字列をdellimiterを区切りとして分割する</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">//return: 分割した文字列を代入したvector</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">//argument 1: result</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">//argument 2: source</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">//argument 3 : delimiter = Default: &#39;,&#39;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">//argument 4 : \0除く最後の要素が\nだった場合trueなら削除 = Default: false </span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1stringf.html#a92ea1f012fa9f29b1d72e6e723ac1577">   28</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespace_s_g_framework_1_1stringf.html#a92ea1f012fa9f29b1d72e6e723ac1577">split</a>(std::vector&lt;string_w&gt;&amp; write, <span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; source, <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> delimiter = L<span class="charliteral">&#39;,&#39;</span>, <span class="keywordtype">bool</span> isNewLineDelete = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            write.clear();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span> (source.empty() ^ <span class="keyword">false</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            std::wstring buf = source;                  <span class="comment">//getline用のバッファ</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="comment">//改行削除 = true で最後の文字が改行なら削除</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">if</span> ((isNewLineDelete ^ <span class="keyword">false</span>) &amp;&amp; buf[buf.size() - 1] == L<span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                buf.erase(buf.size() - 1);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="comment">//getline用のstream</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            std::wstringstream stream(buf);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="comment">//区切り文字をもとに要素取得を行い要素をstring vectorに追加</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">while</span> (std::getline(stream, buf, delimiter))</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                write.emplace_back(buf);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">//[split]</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">//文字列をdellimiterを区切りとして分割する</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">//return: 分割した文字列を代入したvector</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">//argument 1: source</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">//argument 2 : delimiter = Default: &#39;,&#39;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">//argument 3 : \0除く最後の要素が\nだった場合trueなら削除 = Default: false </span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1stringf.html#ac9f7ae3f4a7e979075573dbbac8ac7ba">   53</a></span>&#160;        <span class="keyword">inline</span> std::vector&lt;string_w&gt; <a class="code" href="namespace_s_g_framework_1_1stringf.html#a92ea1f012fa9f29b1d72e6e723ac1577">split</a>(<span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; source, <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> delimiter = L<span class="charliteral">&#39;,&#39;</span>, <span class="keywordtype">bool</span> isNewLineDelete = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="comment">//リザルト</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            std::vector&lt;string_w&gt; result;               </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="comment">//split</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="namespace_s_g_framework_1_1stringf.html#a92ea1f012fa9f29b1d72e6e723ac1577">split</a>(result, source, delimiter, isNewLineDelete);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="comment">//move</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> std::move(result);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">//[join]</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">//joinstringをdelimiterを区切りとし連結する</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//argument 1: result</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//argument 2: source</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">//argument 3: 結果の最後に改行を追加するか, default = false</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">//argument 4: delimiter = Default: &#39;,&#39;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1stringf.html#a9f36107210d5d8535829bd1aeeb3e829">   71</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespace_s_g_framework_1_1stringf.html#a9f36107210d5d8535829bd1aeeb3e829">join</a>(<a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; write, <span class="keyword">const</span> std::vector&lt;string_w&gt;&amp; source, <span class="keywordtype">bool</span> isNewLine = <span class="keyword">false</span>, <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> delimiter = <span class="charliteral">&#39;,&#39;</span>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            write.clear();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="comment">//追加ループ</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : source)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                write.append(e);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                write.push_back(delimiter);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">if</span> (write.size() &gt; 0)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="comment">//resultが要素ありなら最後の区切り文字削除</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                write.erase(write.end() - 1);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="comment">//retが要素あり &amp; 結果の最後に改行 = trueなら最後に改行追加</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keywordflow">if</span> (isNewLine ^ <span class="keyword">false</span>) write.push_back(L<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">//[join]</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">//joinstringをdelimiterを区切りとし連結する</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="comment">//return: result</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="comment">//argument 1: source</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">//argument 2: 結果の最後に改行を追加するか, default = false</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="comment">//argument 3: delimiter = Default: &#39;,&#39;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1stringf.html#a628ee53430c4d48e00870799a25cd1e0">   96</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a> <a class="code" href="namespace_s_g_framework_1_1stringf.html#a9f36107210d5d8535829bd1aeeb3e829">join</a>(<span class="keyword">const</span> std::vector&lt;string_w&gt;&amp; source, <span class="keywordtype">bool</span> isNewLine = <span class="keyword">false</span>, <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> delimiter = <span class="charliteral">&#39;,&#39;</span>) </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a> result;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="comment">//join</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <a class="code" href="namespace_s_g_framework_1_1stringf.html#a9f36107210d5d8535829bd1aeeb3e829">join</a>(result, source, isNewLine, delimiter);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">//move</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">return</span> std::move(result);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="comment">//[index_of]</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="comment">//sourceの文字列の先頭からfindを検索する</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="comment">//return: あった場合は先頭の添字, なければstringf::c_invalid_pos(string_w::npos)</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="comment">//argument 1: source</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="comment">//argument 2: find</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1stringf.html#a06a52a81a539d369a33c157863b94726">  111</a></span>&#160;        <span class="keyword">inline</span> std::size_t <a class="code" href="namespace_s_g_framework_1_1stringf.html#a06a52a81a539d369a33c157863b94726">index_of</a>(<span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; source, <span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; find) noexcept { <span class="keywordflow">return</span> source.find_first_of(find); }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="comment">//[index_last_of]</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="comment">//自身の文字列の最後からstringを検索する</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="comment">//return: あった場合は先頭の添字, なければstringf::c_invalid_pos(string_w::npos)</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="comment">//argument 1: source</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="comment">//argument 2: find</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1stringf.html#a937a24282487a201a4768c723b321652">  118</a></span>&#160;        <span class="keyword">inline</span> std::size_t <a class="code" href="namespace_s_g_framework_1_1stringf.html#a937a24282487a201a4768c723b321652">index_last_of</a>(<span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; source, <span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; find) noexcept { <span class="keywordflow">return</span> source.find_last_of(find); }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="comment">//[is_start_with]</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="comment">//return: source文字列がfindから始まっていればtrue</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="comment">//argument 1: source</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="comment">//argument 2: find</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1stringf.html#a255bd4b2eb5c42409c0745bae6043ef2">  125</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespace_s_g_framework_1_1stringf.html#a255bd4b2eb5c42409c0745bae6043ef2">is_start_with</a>(<span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; source, <span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; find) { <span class="keywordflow">return</span> (source.length() &gt;= find.length() &amp;&amp; std::equal(find.begin(), find.end(), source.begin())); }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="comment">//[is_end_with]</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="comment">//return: source文字列がfindで終わっていればtrue</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="comment">//argument 1: source</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="comment">//argument 2: find</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1stringf.html#aae51c04931fb1ac3df771ee6797593b0">  131</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespace_s_g_framework_1_1stringf.html#aae51c04931fb1ac3df771ee6797593b0">is_end_with</a>(<span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; source, <span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; find) { <span class="keywordflow">return</span> (source.length() &gt;= find.length() &amp;&amp; std::equal(find.rbegin(), find.rend(), source.rbegin())); }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="comment">//[is_contains]</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="comment">//return: source文字列にfindが含まれていればtrue</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="comment">//argument 1: source</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="comment">//argument 2: find</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1stringf.html#a3a37d064bb268aa4e079fca3f25b65df">  137</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespace_s_g_framework_1_1stringf.html#a3a37d064bb268aa4e079fca3f25b65df">is_contains</a>(<span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; source, <span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; find) noexcept { <span class="keyword">auto</span> result = (source.find(find)); <span class="keywordflow">return</span> (result &gt;= 0 &amp;&amp; result != string_w::npos); }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="comment">//[is_start_with_number]</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="comment">//return: sourceの先頭文字が数字ならtrue</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="comment">//argument 1: source</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="comment">//argument 2: 空白文字が先頭にあり、その後が数字文字列の場合空白を無視する?, default = true</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1stringf.html#af759f3e8b6da21ee29fefaf0186fafbb">  144</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespace_s_g_framework_1_1stringf.html#af759f3e8b6da21ee29fefaf0186fafbb">is_start_with_number</a>(<span class="keyword">const</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a>&amp; source, <span class="keywordtype">bool</span> isIgnoreBlanks = <span class="keyword">true</span>) noexcept</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="comment">//numbers</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> cNumbers[10] = { L<span class="charliteral">&#39;0&#39;</span>, L<span class="charliteral">&#39;1&#39;</span>,  L<span class="charliteral">&#39;2&#39;</span>,  L<span class="charliteral">&#39;3&#39;</span>,  L<span class="charliteral">&#39;4&#39;</span>,  L<span class="charliteral">&#39;5&#39;</span>,  L<span class="charliteral">&#39;6&#39;</span>,  L<span class="charliteral">&#39;7&#39;</span>,  L<span class="charliteral">&#39;8&#39;</span>,  L<span class="charliteral">&#39;9&#39;</span> };</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="comment">//blacks</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> cBlanks[2] = { L<span class="charliteral">&#39; &#39;</span>, L<span class="stringliteral">&#39;　&#39;</span> };</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="comment">//empty?</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">if</span> (source.empty()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> first = source[0], second = source.length() &gt;= 2 ? source[1] : <span class="charliteral">&#39;n&#39;</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="comment">//数字文字列でループ</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : cNumbers)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                <span class="comment">//先頭文字が数字ならtrue</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <span class="keywordflow">if</span> (first == e) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="comment">//先頭文字が-, ２番目の文字が数字なら負数と判断しtrue</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (source[0] == L<span class="charliteral">&#39;-&#39;</span> &amp;&amp; source[1] == e) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="comment">//見つからなかった場合空白か否か確認をする</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">if</span> ((isIgnoreBlanks ^ <span class="keyword">false</span>) &amp;&amp; (source[0] == cBlanks[0] || source[0] == cBlanks[1]))</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <span class="comment">//空白でない文字インデックス, source.length</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                <span class="keywordtype">int</span> notBlackIndex = 1, length = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(source.length());</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                <span class="comment">//空白でない文字を検索するループ</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <span class="keywordflow">while</span> (notBlackIndex &lt; length &amp;&amp; (source[notBlackIndex] == cBlanks[0] || source[notBlackIndex] == cBlanks[1]))</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                    ++notBlackIndex;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <span class="comment">//空白でない文字を発見できなかった場合終了</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">if</span> (notBlackIndex &gt;= length) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                first = source[notBlackIndex];</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                second = length &gt; notBlackIndex + 1 ? source[notBlackIndex + 1] : <span class="charliteral">&#39;n&#39;</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                <span class="comment">//数字文字列でループ</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : cNumbers)</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                    <span class="comment">//先頭文字が数字ならtrue</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    <span class="keywordflow">if</span> (first == e) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                    <span class="comment">//先頭文字が-, ２番目の文字が数字なら負数と判断しtrue</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (source[0] == L<span class="charliteral">&#39;-&#39;</span> &amp;&amp; source[1] == e) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                <span class="comment">//ここまでやったけどみつかりまへんでした！！！</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_STRINGF_OTHER_FUNCTIONS_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespace_s_g_framework_1_1stringf_html_a937a24282487a201a4768c723b321652"><div class="ttname"><a href="namespace_s_g_framework_1_1stringf.html#a937a24282487a201a4768c723b321652">SGFramework::stringf::index_last_of</a></div><div class="ttdeci">std::size_t index_last_of(const string_w &amp;source, const string_w &amp;find) noexcept</div><div class="ttdef"><b>Definition:</b> StringfOtherFunctions.hpp:118</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1stringf_html_a9f36107210d5d8535829bd1aeeb3e829"><div class="ttname"><a href="namespace_s_g_framework_1_1stringf.html#a9f36107210d5d8535829bd1aeeb3e829">SGFramework::stringf::join</a></div><div class="ttdeci">void join(string_w &amp;write, const std::vector&lt; string_w &gt; &amp;source, bool isNewLine=false, wchar delimiter=',')</div><div class="ttdef"><b>Definition:</b> StringfOtherFunctions.hpp:71</div></div>
+<div class="ttc" id="a_stringf_using_and_structure_8hpp_html"><div class="ttname"><a href="_stringf_using_and_structure_8hpp.html">StringfUsingAndStructure.hpp</a></div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1stringf_html_a3a37d064bb268aa4e079fca3f25b65df"><div class="ttname"><a href="namespace_s_g_framework_1_1stringf.html#a3a37d064bb268aa4e079fca3f25b65df">SGFramework::stringf::is_contains</a></div><div class="ttdeci">bool is_contains(const string_w &amp;source, const string_w &amp;find) noexcept</div><div class="ttdef"><b>Definition:</b> StringfOtherFunctions.hpp:137</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1stringf_html_a255bd4b2eb5c42409c0745bae6043ef2"><div class="ttname"><a href="namespace_s_g_framework_1_1stringf.html#a255bd4b2eb5c42409c0745bae6043ef2">SGFramework::stringf::is_start_with</a></div><div class="ttdeci">bool is_start_with(const string_w &amp;source, const string_w &amp;find)</div><div class="ttdef"><b>Definition:</b> StringfOtherFunctions.hpp:125</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1stringf_html_af759f3e8b6da21ee29fefaf0186fafbb"><div class="ttname"><a href="namespace_s_g_framework_1_1stringf.html#af759f3e8b6da21ee29fefaf0186fafbb">SGFramework::stringf::is_start_with_number</a></div><div class="ttdeci">bool is_start_with_number(const string_w &amp;source, bool isIgnoreBlanks=true) noexcept</div><div class="ttdef"><b>Definition:</b> StringfOtherFunctions.hpp:144</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1stringf_html_a92ea1f012fa9f29b1d72e6e723ac1577"><div class="ttname"><a href="namespace_s_g_framework_1_1stringf.html#a92ea1f012fa9f29b1d72e6e723ac1577">SGFramework::stringf::split</a></div><div class="ttdeci">void split(std::vector&lt; string_w &gt; &amp;write, const string_w &amp;source, wchar delimiter=L',', bool isNewLineDelete=false)</div><div class="ttdef"><b>Definition:</b> StringfOtherFunctions.hpp:28</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a7f41ac37dc0d3ba6fa22b37126f944cb"><div class="ttname"><a href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">SGFramework::wchar</a></div><div class="ttdeci">wchar_t wchar</div><div class="ttdoc">wchar = wchar_t</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:153</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1stringf_html_a06a52a81a539d369a33c157863b94726"><div class="ttname"><a href="namespace_s_g_framework_1_1stringf.html#a06a52a81a539d369a33c157863b94726">SGFramework::stringf::index_of</a></div><div class="ttdeci">std::size_t index_of(const string_w &amp;source, const string_w &amp;find) noexcept</div><div class="ttdef"><b>Definition:</b> StringfOtherFunctions.hpp:111</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1stringf_html_aae51c04931fb1ac3df771ee6797593b0"><div class="ttname"><a href="namespace_s_g_framework_1_1stringf.html#aae51c04931fb1ac3df771ee6797593b0">SGFramework::stringf::is_end_with</a></div><div class="ttdeci">bool is_end_with(const string_w &amp;source, const string_w &amp;find)</div><div class="ttdef"><b>Definition:</b> StringfOtherFunctions.hpp:131</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_adf036df762e05b8540f7c43a2da08189"><div class="ttname"><a href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">SGFramework::string_w</a></div><div class="ttdeci">std::wstring string_w</div><div class="ttdef"><b>Definition:</b> StringfUsingAndStructure.hpp:15</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

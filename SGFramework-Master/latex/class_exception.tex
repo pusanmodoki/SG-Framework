@@ -1,0 +1,74 @@
+\hypertarget{class_exception}{}\doxysection{Exception クラス}
+\label{class_exception}\index{Exception@{Exception}}
+
+
+{\ttfamily \#include $<$Exception.\+h$>$}
+
+Exception の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_exception}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_exception_a85c3b9e4f0af398774cc6a8e8999a5ed}{Exception}} (\mbox{\hyperlink{struct_error_code_a29e835e02385e7256054e4b22c2ff090}{Error\+Code\+::\+Type}} error\+Code, const std\+::string \&message)  throw ()
+\item 
+\mbox{\hyperlink{class_exception_ae0fd52e62283ee92c085d767d0aab736}{Exception}} (const \mbox{\hyperlink{class_exception}{Exception}} \&other)  throw ()
+\item 
+\mbox{\hyperlink{class_exception}{Exception}} \& \mbox{\hyperlink{class_exception_ad900a393018463dabfa6fcfb5c4d22ed}{operator=}} (const \mbox{\hyperlink{class_exception}{Exception}} \&rhs)  throw ()
+\item 
+const char $\ast$ \mbox{\hyperlink{class_exception_a9b7a84449b96ed03abd5c4da5160de7a}{what}} () const override  throw ()
+\item 
+const char $\ast$ \mbox{\hyperlink{class_exception_a6f5803575eba0d6c66b90887d4f88b00}{Message}} () const  throw ()
+\item 
+int \mbox{\hyperlink{class_exception_ada4a46b12f8360f3d8ba9c2a603164ea}{Error\+Code}} () const  throw ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_exception_a85c3b9e4f0af398774cc6a8e8999a5ed}\label{class_exception_a85c3b9e4f0af398774cc6a8e8999a5ed}} 
+\index{Exception@{Exception}!Exception@{Exception}}
+\index{Exception@{Exception}!Exception@{Exception}}
+\doxysubsubsection{\texorpdfstring{Exception()}{Exception()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Exception\+::\+Exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_error_code_a29e835e02385e7256054e4b22c2ff090}{Error\+Code\+::\+Type}}}]{error\+Code,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption}) throw ( ) \hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_exception_ae0fd52e62283ee92c085d767d0aab736}\label{class_exception_ae0fd52e62283ee92c085d767d0aab736}} 
+\index{Exception@{Exception}!Exception@{Exception}}
+\index{Exception@{Exception}!Exception@{Exception}}
+\doxysubsubsection{\texorpdfstring{Exception()}{Exception()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Exception\+::\+Exception (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_exception}{Exception}} \&}]{other }\end{DoxyParamCaption}) throw ( ) \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_exception_ada4a46b12f8360f3d8ba9c2a603164ea}\label{class_exception_ada4a46b12f8360f3d8ba9c2a603164ea}} 
+\index{Exception@{Exception}!ErrorCode@{ErrorCode}}
+\index{ErrorCode@{ErrorCode}!Exception@{Exception}}
+\doxysubsubsection{\texorpdfstring{ErrorCode()}{ErrorCode()}}
+{\footnotesize\ttfamily int Exception\+::\+Error\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const throw ( ) \hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_exception_a6f5803575eba0d6c66b90887d4f88b00}\label{class_exception_a6f5803575eba0d6c66b90887d4f88b00}} 
+\index{Exception@{Exception}!Message@{Message}}
+\index{Message@{Message}!Exception@{Exception}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}}
+{\footnotesize\ttfamily const char$\ast$ Exception\+::\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const throw ( ) \hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_exception_ad900a393018463dabfa6fcfb5c4d22ed}\label{class_exception_ad900a393018463dabfa6fcfb5c4d22ed}} 
+\index{Exception@{Exception}!operator=@{operator=}}
+\index{operator=@{operator=}!Exception@{Exception}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_exception}{Exception}}\& Exception\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_exception}{Exception}} \&}]{rhs }\end{DoxyParamCaption}) throw ( ) \hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_exception_a9b7a84449b96ed03abd5c4da5160de7a}\label{class_exception_a9b7a84449b96ed03abd5c4da5160de7a}} 
+\index{Exception@{Exception}!what@{what}}
+\index{what@{what}!Exception@{Exception}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const throw ( ) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/998\+\_\+\+Demo\+Application/\+Academy\+Source/\mbox{\hyperlink{_exception_8h}{Exception.\+h}}\end{DoxyCompactItemize}

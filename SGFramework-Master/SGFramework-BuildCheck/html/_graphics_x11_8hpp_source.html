@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/05_Graphics/DirectX11/GraphicsX11/GraphicsX11.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_3179bfb1337b5dc243543deb8f1fb9cf.html">05_Graphics</a></li><li class="navelem"><a class="el" href="dir_2a4559de03f6cae991f9fd49f0dc1978.html">DirectX11</a></li><li class="navelem"><a class="el" href="dir_c9c67cea4a742f4770ea7b0aeb9a0106.html">GraphicsX11</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GraphicsX11.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_graphics_x11_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_GRAPHICS_X11_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_GRAPHICS_X11_HPP_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;d3d11.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../../../02_CustomVariable/CustomVariable.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../../DrawCommand/DrawCommand.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../../Screen/Screen.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_graphics_x11_constant_buffer_8hpp.html">GraphicsX11ConstantBuffer.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;DirectXTex/DirectXTex.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;DDSTextureLoader/DDSTextureLoader.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;WICTextureLoader/WICTextureLoader.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma comment(lib, &quot;d3d11.lib&quot;)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma comment(lib, &quot;dxgi.lib&quot;)</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#pragma comment(lib, &quot;DirectXTex.lib&quot;)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// Framework namespace</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">class </span>Application;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">class </span>Thread;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">class </span>GUI;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">class </span>Animator;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">namespace </span>BaseClass</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">class </span>BasePolygonX11;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//フレームワークの管理をするAdministrator namespace</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">namespace </span>Administrator</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">//GraphicsDetail namespace</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">namespace </span>GraphicsDetail</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">class </span>TransformX11;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keyword">class </span>TextureAssetX11;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">class </span>PolygonSquareX11;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keyword">class </span>GraphicsObjectX11;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">class </span>MaterialX11;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">class </span>VertexShaderAssetX11;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">class </span>PixelShaderAssetX11;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">class </span>CameraX11;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html">   45</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html">GraphicsX11</a> final</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a23f25bcc02a0e94c2f5a4188496b04d0">   48</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_application.html">Application</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#adbc148eaddd341d7ae4d07c9e9e33bfd">   49</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_thread.html">Thread</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#ac5a3536de371167fdf200e8943f8c2b0">   50</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_g_u_i.html">GUI</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abbbfe7b916ef7239a2e95fdb21d0211f">   51</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_animator.html">Animator</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a414ae5643693eb61f528663a8aad5bde">   52</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11.html">GraphicsDetail::TransformX11</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#ab0e1222a2446d338257d8eb72f8dbda0">   53</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_texture_asset_x11.html">GraphicsDetail::TextureAssetX11</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#ab701af826abc5955adc5f06f23b83643">   54</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_polygon_square_x11.html">GraphicsDetail::PolygonSquareX11</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a09674e56b1144ccf9b714a8cb3215b4c">   55</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html">GraphicsDetail::GraphicsObjectX11</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#adca952cf76e91f14f549c7eaf042e613">   56</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html">GraphicsDetail::MaterialX11</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#add0c6a1c9b2f7fb397aaecdcc9967655">   57</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_vertex_shader_asset_x11.html">GraphicsDetail::VertexShaderAssetX11</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#ad8855ed8a0f426c14bbf867d5238f3f3">   58</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_pixel_shader_asset_x11.html">GraphicsDetail::PixelShaderAssetX11</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#aac2be5f76386cb3516f8d6735c50c504">   59</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_camera_x11.html">GraphicsDetail::CameraX11</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#ac20ab122d238a20c1cb244275c902372">   60</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_polygon_x11.html">BaseClass::BasePolygonX11</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a179519a8d87152a94f18e9a9ce5ea1c9">   62</a></span>&#160;            <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a179519a8d87152a94f18e9a9ce5ea1c9">DELETE_ALL_DEFAULT_CLASS_FUNCTIONS</a>(<a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html">GraphicsX11</a>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="comment">//set alpha blending graphics &lt;static&gt;(sync function only property)</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">//argument 1: enabled = true, disabled = false</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keyword">static</span> SGF_FUNCTION_PROPERTY <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a59dd2767809f3422d752a0d5070e9041">setAlphaBlending</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="comment">//set depth buffer graphics &lt;static&gt;(sync function only property)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="comment">//argument 1: enabled = true, disabled = false</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keyword">static</span> SGF_FUNCTION_PROPERTY <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#afa97c45ba353cfddd5d8f724698a6e38">setDepthBuffer</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="comment">//send draw function to graphics thread &lt;static&gt;(draw function only property)</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="comment">//argument 1: function (member function -&gt; ramda)</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="comment">//argument 2: priority</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a4568c6bb6297f3ec434778f5506dcb83">SendDrawFunction</a>(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt; drawFunctionCommand, <span class="keywordtype">int</span> priority);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a53459af7b39f72920e05864e1ae6ee04">   77</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_screen.html">BaseClass::BaseScreen&lt;GraphicsX11&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a53459af7b39f72920e05864e1ae6ee04">screen</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a4a4899d6c97e18322776258bd2e88daf">   79</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty&lt;ID3D11Device*&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a4a4899d6c97e18322776258bd2e88daf">device</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">   80</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty&lt;ID3D11DeviceContext*&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">context</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a05a902ec03782a58e31dda92092f8f78">   81</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty&lt;IDXGISwapChain*&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a05a902ec03782a58e31dda92092f8f78">swapChain</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#aaf2d2d0bdbfc89d92e4b60c49dac6d30">   82</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty&lt;ID3D11RenderTargetView*&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#aaf2d2d0bdbfc89d92e4b60c49dac6d30">renderTargetView</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#ad9b510ff07d4c5fa1fc47bb5e66cfc79">   83</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty&lt;ID3D11DepthStencilView*&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#ad9b510ff07d4c5fa1fc47bb5e66cfc79">depthStencilView</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a1b84707093c8a442044fcb3480d5621d">   84</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_pointer_property.html">PointerProperty&lt;ID3D11SamplerState*&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a1b84707093c8a442044fcb3480d5621d">defaultSamplerState</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a0b9df4801752775deaca2db4ee2aa139">   85</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;sgstring&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a0b9df4801752775deaca2db4ee2aa139">videoCardName</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#aa07f5eecf1918a5cf75dd00ef796256d">   86</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty&lt;Color&gt;</a> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#aa07f5eecf1918a5cf75dd00ef796256d">clearColor</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keyword">struct </span>ScreenChangeSet</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> width = 0U;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> height = 0U;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                std::atomic_bool lock = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordtype">bool</span> isChange = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            };</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">//GraphicsUpdateで使用</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_cGraphicsThreadState = 0;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="comment">//GraphicsUpdate以外のスレッドで使用</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_UpdateThreadState = 1;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_cConstantBufferSceneSlot = 0;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_cConstantBufferLightSlot = 1;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_cConstantBufferObjectSlot = 2;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_cConstantBufferMaterial3DSlot = 3;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_cConstantBufferMaterial2DSlot = 4;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_cConstantBufferModelSlot = 5;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keyword">using</span> DrawCommandList = std::unordered_map&lt;std::thread::id, std::list&lt;DrawCommand&gt;&gt;;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> StartUp(<span class="keyword">const</span> ReadElement::Pack&amp; isVsyncEnabled, <span class="keyword">const</span> ReadElement::Pack&amp; isNoRestrictionsFPS, </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keyword">const</span> ReadElement::Pack&amp; depth, <span class="keyword">const</span> ReadElement::Pack&amp; _near, <span class="keyword">const</span> ReadElement::Pack&amp; <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#aa07f5eecf1918a5cf75dd00ef796256d">clearColor</a>, <span class="keywordtype">bool</span> isRemote);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> ShutDown();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> InitCommandList();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> InitCommandList(<span class="keyword">const</span> std::vector&lt;std::thread&gt;&amp; subIDs);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> SortList();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> SyncGraphics();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> UpdateGraphics();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_cNumTypeShader = 2;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_cTypeVertexShader = 0;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keyword">static</span> constexpr <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_cTypePixelShader = 1;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keyword">static</span> D3D11_VIEWPORT m_viewPort;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keyword">static</span> ID3D11Device* m_device;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keyword">static</span> ID3D11DeviceContext* m_deviceContext;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keyword">static</span> IDXGISwapChain* m_swapChain;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keyword">static</span> ID3D11RenderTargetView*  m_renderTargetView;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keyword">static</span> ID3D11Texture2D* m_depthStencilBuffer;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keyword">static</span> ID3D11DepthStencilState* m_depthStencilEnableState;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keyword">static</span> ID3D11DepthStencilView* m_depthStencilView;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keyword">static</span> ID3D11RasterizerState* m_rasterState;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keyword">static</span> ID3D11DepthStencilState* m_depthStencilDisabledState;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keyword">static</span> ID3D11BlendState* m_alphaBlendingEnableState;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="keyword">static</span> ID3D11BlendState* m_alphaBlendingDisableState;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keyword">static</span> ID3D11SamplerState* m_defaultSamplerState;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keyword">static</span> DrawCommandList m_commandList;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keyword">static</span> DrawCommandList m_commandQueue;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keyword">static</span> std::list&lt;DrawCommand&gt; m_makeCommand;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keyword">static</span> D3D_DRIVER_TYPE m_driverType;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keyword">static</span> D3D_FEATURE_LEVEL m_featureLevel;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keyword">static</span> ID3D11Buffer* m_constantBufferScene;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="keyword">static</span> ID3D11Buffer* m_constantBufferLight;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keyword">static</span> ID3D11Buffer* m_constantBufferObject;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keyword">static</span> ID3D11Buffer* m_constantBufferMaterial2D;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keyword">static</span> ID3D11Buffer* m_constantBufferMaterial3D;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keyword">static</span> ID3D11Buffer* m_constantBufferModel;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keyword">static</span> std::unordered_set&lt;GraphicsDetail::GraphicsObjectX11*&gt; m_graphicsObjects;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keyword">static</span> std::vector&lt;Tuple::Two&lt;GraphicsDetail::GraphicsObjectX11*, bool&gt;&gt; m_addOrEraseGraphicsObjects;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keyword">static</span> std::atomic_bool m_graphicsObjectsLock;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keyword">static</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_scene.html">GraphicsDetail::X11::ConstantBufferScene</a> m_setConstantBufferScene;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keyword">static</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_light.html">GraphicsDetail::X11::ConstantBufferLight</a> m_setConstantBufferLight;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keyword">static</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_object.html">GraphicsDetail::X11::ConstantBufferObject</a> m_setConstantBufferObject;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keyword">static</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_material2_d.html">GraphicsDetail::X11::ConstantBufferMaterial2D</a> m_setConstantBufferMaterial2D;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keyword">static</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_material3_d.html">GraphicsDetail::X11::ConstantBufferMaterial3D</a> m_setConstantBufferMaterial3D;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keyword">static</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_model.html">GraphicsDetail::X11::ConstantBufferModel</a> m_setConstantBufferModel;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keyword">static</span> sgstring m_videoCardName;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keyword">static</span> <a class="code" href="struct_s_g_framework_1_1_color.html">Color</a> m_clearColor;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keyword">static</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_nowShaderInstanceIDs[m_cNumTypeShader];</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keyword">static</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_nowTextureInstanceID;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">int</span> m_videoCardMemoryWithGB;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">bool</span> m_isEnabledDepthBuffer[2];</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">bool</span> m_isEnabledAlphaBlending[2];</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">bool</span> m_isEnabledVsync;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">bool</span> m_isSetConstantBufferLight;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">bool</span> m_isFirstFrame;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        };</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a4568c6bb6297f3ec434778f5506dcb83">  177</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a4568c6bb6297f3ec434778f5506dcb83">GraphicsX11::SendDrawFunction</a>(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt; drawFunctionCommand, <span class="keywordtype">int</span> priority)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            m_commandQueue.at(std::this_thread::get_id()).emplace_back(drawFunctionCommand, priority);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        </div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a59dd2767809f3422d752a0d5070e9041">  182</a></span>&#160;        SGF_FUNCTION_PROPERTY <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a59dd2767809f3422d752a0d5070e9041">GraphicsX11::setAlphaBlending</a>(<span class="keywordtype">bool</span> value)</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">float</span> blendFactor[4] = { 0.0f,0.0f,0.0f,0.0f };</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">if</span> ((value ^ m_isEnabledAlphaBlending[m_cGraphicsThreadState]) &amp; value)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                m_deviceContext-&gt;OMSetBlendState(m_alphaBlendingEnableState, blendFactor, 0xffffffff);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((value ^ m_isEnabledAlphaBlending[m_cGraphicsThreadState])</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                &amp; m_isEnabledAlphaBlending[m_cGraphicsThreadState])</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                m_deviceContext-&gt;OMSetBlendState(m_alphaBlendingDisableState, blendFactor, 0xffffffff);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            m_isEnabledAlphaBlending[m_cGraphicsThreadState] = value;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#afa97c45ba353cfddd5d8f724698a6e38">  199</a></span>&#160;        SGF_FUNCTION_PROPERTY <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#afa97c45ba353cfddd5d8f724698a6e38">GraphicsX11::setDepthBuffer</a>(<span class="keywordtype">bool</span> value)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        {   </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">if</span> ((value ^ m_isEnabledDepthBuffer[m_cGraphicsThreadState]) &amp; value)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                m_deviceContext-&gt;OMSetDepthStencilState(m_depthStencilEnableState, 1);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((value ^ m_isEnabledAlphaBlending[m_cGraphicsThreadState])</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                &amp; m_isEnabledAlphaBlending[m_cGraphicsThreadState])</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                m_deviceContext-&gt;OMSetDepthStencilState(m_depthStencilDisabledState, 1);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            m_isEnabledDepthBuffer[m_cGraphicsThreadState] = value;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;}</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_GRAPHICS_X11_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_s_g_framework_1_1_color_html"><div class="ttname"><a href="struct_s_g_framework_1_1_color.html">SGFramework::Color</a></div><div class="ttdef"><b>Definition:</b> Color.hpp:15</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_a59dd2767809f3422d752a0d5070e9041"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a59dd2767809f3422d752a0d5070e9041">SGFramework::Administrator::GraphicsX11::setAlphaBlending</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY void setAlphaBlending(bool value)</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:182</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_afa97c45ba353cfddd5d8f724698a6e38"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#afa97c45ba353cfddd5d8f724698a6e38">SGFramework::Administrator::GraphicsX11::setDepthBuffer</a></div><div class="ttdeci">static SGF_FUNCTION_PROPERTY void setDepthBuffer(bool value)</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:199</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_thread_html"><div class="ttname"><a href="class_s_g_framework_1_1_thread.html">SGFramework::Thread</a></div><div class="ttdef"><b>Definition:</b> Thread.hpp:37</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_a05a902ec03782a58e31dda92092f8f78"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a05a902ec03782a58e31dda92092f8f78">SGFramework::Administrator::GraphicsX11::swapChain</a></div><div class="ttdeci">static PointerProperty&lt; IDXGISwapChain * &gt; swapChain</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:81</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_application_html"><div class="ttname"><a href="class_s_g_framework_1_1_application.html">SGFramework::Application</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:15</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_ad9b510ff07d4c5fa1fc47bb5e66cfc79"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#ad9b510ff07d4c5fa1fc47bb5e66cfc79">SGFramework::Administrator::GraphicsX11::depthStencilView</a></div><div class="ttdeci">static PointerProperty&lt; ID3D11DepthStencilView * &gt; depthStencilView</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:83</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_a4a4899d6c97e18322776258bd2e88daf"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a4a4899d6c97e18322776258bd2e88daf">SGFramework::Administrator::GraphicsX11::device</a></div><div class="ttdeci">static PointerProperty&lt; ID3D11Device * &gt; device</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:79</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_graphics_object_x11.html">SGFramework::Administrator::GraphicsDetail::GraphicsObjectX11</a></div><div class="ttdef"><b>Definition:</b> GraphicsObjectX11.hpp:18</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_g_u_i_html"><div class="ttname"><a href="class_s_g_framework_1_1_g_u_i.html">SGFramework::GUI</a></div><div class="ttdef"><b>Definition:</b> GUI.hpp:25</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_material_x11.html">SGFramework::Administrator::GraphicsDetail::MaterialX11</a></div><div class="ttdef"><b>Definition:</b> MaterialX11.hpp:28</div></div>
+<div class="ttc" id="a_graphics_x11_constant_buffer_8hpp_html"><div class="ttname"><a href="_graphics_x11_constant_buffer_8hpp.html">GraphicsX11ConstantBuffer.hpp</a></div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html">SGFramework::Administrator::GraphicsX11</a></div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:46</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_a4568c6bb6297f3ec434778f5506dcb83"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a4568c6bb6297f3ec434778f5506dcb83">SGFramework::Administrator::GraphicsX11::SendDrawFunction</a></div><div class="ttdeci">static void SendDrawFunction(const std::function&lt; void()&gt; drawFunctionCommand, int priority)</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:177</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_get_only_property_html"><div class="ttname"><a href="class_s_g_framework_1_1_get_only_property.html">SGFramework::GetOnlyProperty&lt; sgstring &gt;</a></div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_a0b9df4801752775deaca2db4ee2aa139"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a0b9df4801752775deaca2db4ee2aa139">SGFramework::Administrator::GraphicsX11::videoCardName</a></div><div class="ttdeci">static GetOnlyProperty&lt; sgstring &gt; videoCardName</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:85</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animator_html"><div class="ttname"><a href="class_s_g_framework_1_1_animator.html">SGFramework::Animator</a></div><div class="ttdef"><b>Definition:</b> Animator.hpp:13</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_a1b84707093c8a442044fcb3480d5621d"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a1b84707093c8a442044fcb3480d5621d">SGFramework::Administrator::GraphicsX11::defaultSamplerState</a></div><div class="ttdeci">static PointerProperty&lt; ID3D11SamplerState * &gt; defaultSamplerState</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:84</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_a179519a8d87152a94f18e9a9ce5ea1c9"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a179519a8d87152a94f18e9a9ce5ea1c9">SGFramework::Administrator::GraphicsX11::DELETE_ALL_DEFAULT_CLASS_FUNCTIONS</a></div><div class="ttdeci">DELETE_ALL_DEFAULT_CLASS_FUNCTIONS(GraphicsX11)</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_aaf2d2d0bdbfc89d92e4b60c49dac6d30"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#aaf2d2d0bdbfc89d92e4b60c49dac6d30">SGFramework::Administrator::GraphicsX11::renderTargetView</a></div><div class="ttdeci">static PointerProperty&lt; ID3D11RenderTargetView * &gt; renderTargetView</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:82</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_model_html"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_model.html">SGFramework::Administrator::GraphicsDetail::X11::ConstantBufferModel</a></div><div class="ttdef"><b>Definition:</b> GraphicsX11ConstantBuffer.hpp:86</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:151</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_a53459af7b39f72920e05864e1ae6ee04"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a53459af7b39f72920e05864e1ae6ee04">SGFramework::Administrator::GraphicsX11::screen</a></div><div class="ttdeci">static BaseClass::BaseScreen&lt; GraphicsX11 &gt; screen</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:77</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_polygon_square_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_polygon_square_x11.html">SGFramework::Administrator::GraphicsDetail::PolygonSquareX11</a></div><div class="ttdef"><b>Definition:</b> PolygonX11.hpp:113</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_camera_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_camera_x11.html">SGFramework::Administrator::GraphicsDetail::CameraX11</a></div><div class="ttdef"><b>Definition:</b> CameraX11.hpp:26</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_screen_html"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_screen.html">SGFramework::BaseClass::BaseScreen</a></div><div class="ttdef"><b>Definition:</b> Screen.hpp:20</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_pointer_property_html"><div class="ttname"><a href="class_s_g_framework_1_1_pointer_property.html">SGFramework::PointerProperty&lt; ID3D11Device * &gt;</a></div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_abec131015d4fea236a329f1fb5f18c45"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">SGFramework::Administrator::GraphicsX11::context</a></div><div class="ttdeci">static PointerProperty&lt; ID3D11DeviceContext * &gt; context</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:80</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_material2_d_html"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_material2_d.html">SGFramework::Administrator::GraphicsDetail::X11::ConstantBufferMaterial2D</a></div><div class="ttdef"><b>Definition:</b> GraphicsX11ConstantBuffer.hpp:81</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_object_html"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_object.html">SGFramework::Administrator::GraphicsDetail::X11::ConstantBufferObject</a></div><div class="ttdef"><b>Definition:</b> GraphicsX11ConstantBuffer.hpp:64</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_light_html"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_light.html">SGFramework::Administrator::GraphicsDetail::X11::ConstantBufferLight</a></div><div class="ttdef"><b>Definition:</b> GraphicsX11ConstantBuffer.hpp:31</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_aa07f5eecf1918a5cf75dd00ef796256d"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#aa07f5eecf1918a5cf75dd00ef796256d">SGFramework::Administrator::GraphicsX11::clearColor</a></div><div class="ttdeci">static GetOnlyProperty&lt; Color &gt; clearColor</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:86</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_vertex_shader_asset_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_vertex_shader_asset_x11.html">SGFramework::Administrator::GraphicsDetail::VertexShaderAssetX11</a></div><div class="ttdef"><b>Definition:</b> VertexShaderX11.hpp:23</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_polygon_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_polygon_x11.html">SGFramework::BaseClass::BasePolygonX11</a></div><div class="ttdef"><b>Definition:</b> PolygonX11.hpp:17</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_pixel_shader_asset_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_pixel_shader_asset_x11.html">SGFramework::Administrator::GraphicsDetail::PixelShaderAssetX11</a></div><div class="ttdef"><b>Definition:</b> PixelShaderAssetX11.hpp:22</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_scene_html"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_scene.html">SGFramework::Administrator::GraphicsDetail::X11::ConstantBufferScene</a></div><div class="ttdef"><b>Definition:</b> GraphicsX11ConstantBuffer.hpp:25</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_texture_asset_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_texture_asset_x11.html">SGFramework::Administrator::GraphicsDetail::TextureAssetX11</a></div><div class="ttdef"><b>Definition:</b> TextureAssetX11.hpp:36</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_material3_d_html"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_x11_1_1_constant_buffer_material3_d.html">SGFramework::Administrator::GraphicsDetail::X11::ConstantBufferMaterial3D</a></div><div class="ttdef"><b>Definition:</b> GraphicsX11ConstantBuffer.hpp:70</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11.html">SGFramework::Administrator::GraphicsDetail::TransformX11</a></div><div class="ttdef"><b>Definition:</b> TransformX11.hpp:44</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

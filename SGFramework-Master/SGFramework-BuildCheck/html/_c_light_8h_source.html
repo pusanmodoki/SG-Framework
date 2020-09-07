@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/998_DemoApplication/AcademySource/CLight.h „ÇΩ„Éº„Çπ„Éï„Ç°„Ç§„É´</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- ÊßãÁØâ: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Ê§úÁ¥¢');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Ê§úÁ¥¢');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_e0e4c557ebc218887fb43396bcf8db4f.html">998_DemoApplication</a></li><li class="navelem"><a class="el" href="dir_184bc37a952b722a29d3658ce9868392.html">AcademySource</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CLight.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_c_light_8h.html">[Ë©≥Ëß£]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include    &lt;DirectXMath.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include    &quot;memory.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include    &quot;<a class="code" href="_shader_8h.html">Shader.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include    &quot;<a class="code" href="_d_x11util_8h.html">DX11util.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_c_light.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_light.html">CLight</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="_c_light_8h.html#af95298b7181f9b9484f4b76e794c8d25">ALIGN16</a> <span class="keyword">struct </span>ConstantBufferLight {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        DirectX::XMFLOAT4 LightDirection;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        DirectX::XMFLOAT4 EyePos;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    };</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">enum class</span> LightType {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        DIRECTIONAL,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        POINT,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        SPOT</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    LightType           m_type;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    DirectX::XMFLOAT3   m_eyepos;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    DirectX::XMFLOAT4   m_lightpos;     <span class="comment">// w=0ÇÃéûÇÕï˚å¸ w=1ÇÃéûÇÕà íu</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    ID3D11Buffer*       m_pConstantBufferLight = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_c_light.html#a41372195c0d429762d4e9b9867e6ab00">   23</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_c_light.html#a41372195c0d429762d4e9b9867e6ab00">Init</a>(DirectX::XMFLOAT3 eyepos,DirectX::XMFLOAT4 lightpos) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        m_lightpos = lightpos;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        m_eyepos = eyepos;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        m_type = LightType::DIRECTIONAL;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// ÉRÉìÉXÉ^ÉìÉgÉoÉbÉtÉ@çÏê¨</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">bool</span> sts = <a class="code" href="_shader_8cpp.html#ab36f0bd1d17063c03f474733e0fea219">CreateConstantBuffer</a>(</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="dx11util_8cpp.html#affaf418a02a2a4ca28e588a67675d0d1">GetDX11Device</a>(),                <span class="comment">// ÉfÉoÉCÉX</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keyword">sizeof</span>(ConstantBufferLight),        <span class="comment">// ÉTÉCÉY</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            &amp;m_pConstantBufferLight);           <span class="comment">// ÉRÉìÉXÉ^ÉìÉgÉoÉbÉtÉ@ÇS</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> (!sts) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            MessageBox(NULL, L<span class="stringliteral">&quot;CreateBuffer(constant buffer Light) error&quot;</span>, L<span class="stringliteral">&quot;Error&quot;</span>, MB_OK);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_c_light.html#a1b2de3df3d3bd1ee6e0258a9bde46b90">Update</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_c_light.html#a1b2de3df3d3bd1ee6e0258a9bde46b90">   43</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_light.html#a1b2de3df3d3bd1ee6e0258a9bde46b90">Update</a>() {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        ConstantBufferLight     cb;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        cb.EyePos.w = 1.0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        cb.EyePos.x = m_eyepos.x;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        cb.EyePos.y = m_eyepos.y;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        cb.EyePos.z = m_eyepos.z;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        cb.LightDirection.x = m_lightpos.x;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        cb.LightDirection.y = m_lightpos.y;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        cb.LightDirection.z = m_lightpos.z;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        cb.LightDirection.w = m_lightpos.w;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="dx11util_8cpp.html#acdf15f11d9ced27c6411ab7411fa68c1">GetDX11DeviceContext</a>()-&gt;UpdateSubresource(m_pConstantBufferLight, </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            0, </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keyword">nullptr</span>, </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            &amp;cb, </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            0, 0);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">//GetDX11DeviceContext()-&gt;VSSetConstantBuffers(4, 1, &amp;m_pConstantBufferLight);</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span>        <span class="comment">//GetDX11DeviceContext()-&gt;PSSetConstantBuffers(4, 1, &amp;m_pConstantBufferLight);</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_c_light.html#a68fde027994c77262d45e3e009c85023">   69</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_light.html#a68fde027994c77262d45e3e009c85023">Uninit</a>() {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> (m_pConstantBufferLight) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            m_pConstantBufferLight-&gt;Release();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            m_pConstantBufferLight = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_c_light.html#aff604dab5cf7d344c61597ba36c09cad">   76</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_light.html#aff604dab5cf7d344c61597ba36c09cad">SetEyePos</a>(DirectX::XMFLOAT3 eyepos) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        m_eyepos = eyepos;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_c_light.html#a7762ac2ca72a64abe710819baea5db06">   80</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_light.html#a7762ac2ca72a64abe710819baea5db06">SetLightPos</a>(DirectX::XMFLOAT4 lightpos) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        m_lightpos = lightpos;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="adx11util_8cpp_html_affaf418a02a2a4ca28e588a67675d0d1"><div class="ttname"><a href="dx11util_8cpp.html#affaf418a02a2a4ca28e588a67675d0d1">GetDX11Device</a></div><div class="ttdeci">ID3D11Device * GetDX11Device()</div><div class="ttdef"><b>Definition:</b> dx11util.cpp:31</div></div>
+<div class="ttc" id="a_shader_8cpp_html_ab36f0bd1d17063c03f474733e0fea219"><div class="ttname"><a href="_shader_8cpp.html#ab36f0bd1d17063c03f474733e0fea219">CreateConstantBuffer</a></div><div class="ttdeci">bool CreateConstantBuffer(ID3D11Device *device, unsigned int bytesize, ID3D11Buffer **pConstantBuffer)</div><div class="ttdef"><b>Definition:</b> Shader.cpp:129</div></div>
+<div class="ttc" id="adx11util_8cpp_html_acdf15f11d9ced27c6411ab7411fa68c1"><div class="ttname"><a href="dx11util_8cpp.html#acdf15f11d9ced27c6411ab7411fa68c1">GetDX11DeviceContext</a></div><div class="ttdeci">ID3D11DeviceContext * GetDX11DeviceContext()</div><div class="ttdef"><b>Definition:</b> dx11util.cpp:35</div></div>
+<div class="ttc" id="a_d_x11util_8h_html"><div class="ttname"><a href="_d_x11util_8h.html">DX11util.h</a></div></div>
+<div class="ttc" id="aclass_c_light_html"><div class="ttname"><a href="class_c_light.html">CLight</a></div><div class="ttdef"><b>Definition:</b> CLight.h:7</div></div>
+<div class="ttc" id="a_shader_8h_html"><div class="ttname"><a href="_shader_8h.html">Shader.h</a></div></div>
+<div class="ttc" id="aclass_c_light_html_a68fde027994c77262d45e3e009c85023"><div class="ttname"><a href="class_c_light.html#a68fde027994c77262d45e3e009c85023">CLight::Uninit</a></div><div class="ttdeci">void Uninit()</div><div class="ttdef"><b>Definition:</b> CLight.h:69</div></div>
+<div class="ttc" id="a_c_light_8h_html_af95298b7181f9b9484f4b76e794c8d25"><div class="ttname"><a href="_c_light_8h.html#af95298b7181f9b9484f4b76e794c8d25">ALIGN16</a></div><div class="ttdeci">#define ALIGN16</div><div class="ttdef"><b>Definition:</b> Memory.h:50</div></div>
+<div class="ttc" id="aclass_c_light_html_a7762ac2ca72a64abe710819baea5db06"><div class="ttname"><a href="class_c_light.html#a7762ac2ca72a64abe710819baea5db06">CLight::SetLightPos</a></div><div class="ttdeci">void SetLightPos(DirectX::XMFLOAT4 lightpos)</div><div class="ttdef"><b>Definition:</b> CLight.h:80</div></div>
+<div class="ttc" id="aclass_c_light_html_aff604dab5cf7d344c61597ba36c09cad"><div class="ttname"><a href="class_c_light.html#aff604dab5cf7d344c61597ba36c09cad">CLight::SetEyePos</a></div><div class="ttdeci">void SetEyePos(DirectX::XMFLOAT3 eyepos)</div><div class="ttdef"><b>Definition:</b> CLight.h:76</div></div>
+<div class="ttc" id="aclass_c_light_html_a1b2de3df3d3bd1ee6e0258a9bde46b90"><div class="ttname"><a href="class_c_light.html#a1b2de3df3d3bd1ee6e0258a9bde46b90">CLight::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> CLight.h:43</div></div>
+<div class="ttc" id="aclass_c_light_html_a41372195c0d429762d4e9b9867e6ab00"><div class="ttname"><a href="class_c_light.html#a41372195c0d429762d4e9b9867e6ab00">CLight::Init</a></div><div class="ttdeci">bool Init(DirectX::XMFLOAT3 eyepos, DirectX::XMFLOAT4 lightpos)</div><div class="ttdef"><b>Definition:</b> CLight.h:23</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+ÊßãÁØâ:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

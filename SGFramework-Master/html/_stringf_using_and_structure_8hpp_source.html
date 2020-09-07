@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/02_Variables/Stringf/StringfUsingAndStructure.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_0cf03c12e51ae64724f6ec73d30b9672.html">02_Variables</a></li><li class="navelem"><a class="el" href="dir_0fb975916cc8324b1532f8bca5e3e213.html">Stringf</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">StringfUsingAndStructure.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_stringf_using_and_structure_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">string_wを操作するstringf namespace</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">→using, 構造体定義をするStringfUsingAndStructure.hpp</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_STRINGF_USING_AND_STRUCTURE_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_STRINGF_USING_AND_STRUCTURE_HPP_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//string ascii</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="namespace_s_g_framework.html#ad41983f38ab7712c74ffd480b9c6a8c8">   13</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespace_s_g_framework.html#ad41983f38ab7712c74ffd480b9c6a8c8">string_a</a> = std::string;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//SG-Framework default string, string wide</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">   15</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">string_w</a> = std::wstring;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//std::wstring, std::stringを操作するstringf namespace</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">//stdクラスとの連携を前提としたもののため特例で命名規則をsnake_caseにする</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">namespace </span>stringf</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">//find系で見つからなかった場合のinvalid_pos</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1stringf.html#a811cb437bd021210203ba44995361b8a">   22</a></span>&#160;        constexpr std::size_t <a class="code" href="namespace_s_g_framework_1_1stringf.html#a811cb437bd021210203ba44995361b8a">c_invalid_pos</a> = std::wstring::npos;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">//基数指定に使うradix structure</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1stringf_1_1radix.html">   25</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="struct_s_g_framework_1_1stringf_1_1radix.html">radix</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="comment">//enum</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959">   28</a></span>&#160;            <span class="keyword">enum</span> <a class="code" href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959">enum_radix</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            {</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959acb9c2c14947ac3eceb80d42dabb20d69">   30</a></span>&#160;                <a class="code" href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959acb9c2c14947ac3eceb80d42dabb20d69">x10</a> = 0x1,</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959ae273bb6d4c30bfcb7a03b29de63ec70e">   31</a></span>&#160;                <a class="code" href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959ae273bb6d4c30bfcb7a03b29de63ec70e">x2</a> = 0x2,</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959a4d82222cdacb8c7123dc0bbfcb570c86">   32</a></span>&#160;                <a class="code" href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959a4d82222cdacb8c7123dc0bbfcb570c86">x8</a> = 0x4,</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959ab59667b80f9e502cf533a26ca81893e2">   33</a></span>&#160;                <a class="code" href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959ab59667b80f9e502cf533a26ca81893e2">x16</a> = 0x8,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_STRINGF_USING_AND_STRUCTURE_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_s_g_framework_1_1stringf_1_1radix_html_a4ad4678846d2fc8526812e20cc8da959a4d82222cdacb8c7123dc0bbfcb570c86"><div class="ttname"><a href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959a4d82222cdacb8c7123dc0bbfcb570c86">SGFramework::stringf::radix::x8</a></div><div class="ttdeci">@ x8</div><div class="ttdef"><b>Definition:</b> StringfUsingAndStructure.hpp:32</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1stringf_1_1radix_html_a4ad4678846d2fc8526812e20cc8da959"><div class="ttname"><a href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959">SGFramework::stringf::radix::enum_radix</a></div><div class="ttdeci">enum_radix</div><div class="ttdef"><b>Definition:</b> StringfUsingAndStructure.hpp:29</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_ad41983f38ab7712c74ffd480b9c6a8c8"><div class="ttname"><a href="namespace_s_g_framework.html#ad41983f38ab7712c74ffd480b9c6a8c8">SGFramework::string_a</a></div><div class="ttdeci">std::string string_a</div><div class="ttdef"><b>Definition:</b> StringfUsingAndStructure.hpp:13</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1stringf_html_a811cb437bd021210203ba44995361b8a"><div class="ttname"><a href="namespace_s_g_framework_1_1stringf.html#a811cb437bd021210203ba44995361b8a">SGFramework::stringf::c_invalid_pos</a></div><div class="ttdeci">constexpr std::size_t c_invalid_pos</div><div class="ttdef"><b>Definition:</b> StringfUsingAndStructure.hpp:22</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1stringf_1_1radix_html_a4ad4678846d2fc8526812e20cc8da959ab59667b80f9e502cf533a26ca81893e2"><div class="ttname"><a href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959ab59667b80f9e502cf533a26ca81893e2">SGFramework::stringf::radix::x16</a></div><div class="ttdeci">@ x16</div><div class="ttdef"><b>Definition:</b> StringfUsingAndStructure.hpp:33</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1stringf_1_1radix_html_a4ad4678846d2fc8526812e20cc8da959ae273bb6d4c30bfcb7a03b29de63ec70e"><div class="ttname"><a href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959ae273bb6d4c30bfcb7a03b29de63ec70e">SGFramework::stringf::radix::x2</a></div><div class="ttdeci">@ x2</div><div class="ttdef"><b>Definition:</b> StringfUsingAndStructure.hpp:31</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1stringf_1_1radix_html_a4ad4678846d2fc8526812e20cc8da959acb9c2c14947ac3eceb80d42dabb20d69"><div class="ttname"><a href="struct_s_g_framework_1_1stringf_1_1radix.html#a4ad4678846d2fc8526812e20cc8da959acb9c2c14947ac3eceb80d42dabb20d69">SGFramework::stringf::radix::x10</a></div><div class="ttdeci">@ x10</div><div class="ttdef"><b>Definition:</b> StringfUsingAndStructure.hpp:30</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1stringf_1_1radix_html"><div class="ttname"><a href="struct_s_g_framework_1_1stringf_1_1radix.html">SGFramework::stringf::radix</a></div><div class="ttdef"><b>Definition:</b> StringfUsingAndStructure.hpp:26</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_adf036df762e05b8540f7c43a2da08189"><div class="ttname"><a href="namespace_s_g_framework.html#adf036df762e05b8540f7c43a2da08189">SGFramework::string_w</a></div><div class="ttdeci">std::wstring string_w</div><div class="ttdef"><b>Definition:</b> StringfUsingAndStructure.hpp:15</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

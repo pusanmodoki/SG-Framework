@@ -1,0 +1,189 @@
+\hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key}{}\doxysection{S\+G\+Framework\+::File\+::Encryption\+Key クラス}
+\label{class_s_g_framework_1_1_file_1_1_encryption_key}\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+
+
+{\ttfamily \#include $<$Encryption\+Key.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_ac8d2fc962a1145f234caef6917f5ef3d}{Encryption\+Key}} ()=delete
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_a494eab43daa52c8731996b080b5ec937}{Encryption\+Key}} (const \mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{wchar}} \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_a261c94b71cfce52fe0e25882b098ebfd}{value}}=0)
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_ae70f5356fb91839767fe299b6513c3b6}{Encryption\+Key}} (const sgstring \&seed)
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_aa14a6a672b98d5e9ef1585539ab00101}{Encryption\+Key}} (const int seed)
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_a93abdfef8a1d4885c304781982c03273}{operator wchar}} ()
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_aeafae15a0f67daac24b8100a226125a7}{operator byte}} ()
+\item 
+\mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{wchar}} \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_a08d89311e7d91ca5f50295957601e202}{operator()}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_a45aab2ba3af03b29b9b85bc151bf8999}{Create\+Key}} (const sgstring \&seed)
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_a84370249c43b77489bebb3fd5178b2b9}{Create\+Key}} (const int seed)
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_ac3e4a7dc475f3743f46b7040572e4fd0}{Init\+Default\+Key}} (\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} key)
+\item 
+static \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}} ()
+\item 
+static sgstring \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af3717cb5fe01473086aef538b99f06c5}{Lock}} (const sgstring \&encryption\+String, const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} lock\+Key=\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}())
+\item 
+static sgstring \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_ae4905a22ed0fe620f08624841eec7960}{Unlock}} (const sgstring \&encryption\+String, const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} unlock\+Key=\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}())
+\item 
+static void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_abdd34338e48c0ce8a9e304159b97f2be}{Lock}} (sgstring \&string, const sgstring \&encryption\+String, const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} lock\+Key=\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}())
+\item 
+static void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_ade97accc19f4b0409db5b4a3970256b2}{Unlock}} (sgstring \&string, const sgstring \&encryption\+String, const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} unlock\+Key=\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}())
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_a28acfded7f8248b6a1c06930565e4991}{Lock\+Binary}} (const std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&encryption\+String, const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} lock\+Key=\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}())
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_a5a1d180be3c31659e24fc4d1a4734347}{Unlock\+Binary}} (const std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&encryption\+String, const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} unlock\+Key=\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}())
+\item 
+static void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_a01e573a8ccf58e0095a4d1a330ed72ca}{Lock\+Binary}} (std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&string, const std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&encryption\+String, const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} lock\+Key=\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}())
+\item 
+static void \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_a4f903dfa4ef0ef49fe73069967a6e82c}{Unlock\+Binary}} (std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&string, const std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&encryption\+String, const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} unlock\+Key=\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}())
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{wchar}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_a261c94b71cfce52fe0e25882b098ebfd}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_ac8d2fc962a1145f234caef6917f5ef3d}\label{class_s_g_framework_1_1_file_1_1_encryption_key_ac8d2fc962a1145f234caef6917f5ef3d}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!EncryptionKey@{EncryptionKey}}
+\index{EncryptionKey@{EncryptionKey}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{EncryptionKey()}{EncryptionKey()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Encryption\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_a494eab43daa52c8731996b080b5ec937}\label{class_s_g_framework_1_1_file_1_1_encryption_key_a494eab43daa52c8731996b080b5ec937}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!EncryptionKey@{EncryptionKey}}
+\index{EncryptionKey@{EncryptionKey}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{EncryptionKey()}{EncryptionKey()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Encryption\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{wchar}}}]{value = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_ae70f5356fb91839767fe299b6513c3b6}\label{class_s_g_framework_1_1_file_1_1_encryption_key_ae70f5356fb91839767fe299b6513c3b6}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!EncryptionKey@{EncryptionKey}}
+\index{EncryptionKey@{EncryptionKey}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{EncryptionKey()}{EncryptionKey()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Encryption\+Key (\begin{DoxyParamCaption}\item[{const sgstring \&}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_aa14a6a672b98d5e9ef1585539ab00101}\label{class_s_g_framework_1_1_file_1_1_encryption_key_aa14a6a672b98d5e9ef1585539ab00101}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!EncryptionKey@{EncryptionKey}}
+\index{EncryptionKey@{EncryptionKey}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{EncryptionKey()}{EncryptionKey()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Encryption\+Key (\begin{DoxyParamCaption}\item[{const int}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_a84370249c43b77489bebb3fd5178b2b9}\label{class_s_g_framework_1_1_file_1_1_encryption_key_a84370249c43b77489bebb3fd5178b2b9}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!CreateKey@{CreateKey}}
+\index{CreateKey@{CreateKey}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{CreateKey()}{CreateKey()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Create\+Key (\begin{DoxyParamCaption}\item[{const int}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_a45aab2ba3af03b29b9b85bc151bf8999}\label{class_s_g_framework_1_1_file_1_1_encryption_key_a45aab2ba3af03b29b9b85bc151bf8999}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!CreateKey@{CreateKey}}
+\index{CreateKey@{CreateKey}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{CreateKey()}{CreateKey()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Create\+Key (\begin{DoxyParamCaption}\item[{const sgstring \&}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}\label{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!DefaultKey@{DefaultKey}}
+\index{DefaultKey@{DefaultKey}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{DefaultKey()}{DefaultKey()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Default\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_ac3e4a7dc475f3743f46b7040572e4fd0}\label{class_s_g_framework_1_1_file_1_1_encryption_key_ac3e4a7dc475f3743f46b7040572e4fd0}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!InitDefaultKey@{InitDefaultKey}}
+\index{InitDefaultKey@{InitDefaultKey}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{InitDefaultKey()}{InitDefaultKey()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}} S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Init\+Default\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_af3717cb5fe01473086aef538b99f06c5}\label{class_s_g_framework_1_1_file_1_1_encryption_key_af3717cb5fe01473086aef538b99f06c5}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!Lock@{Lock}}
+\index{Lock@{Lock}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{Lock()}{Lock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sgstring S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Lock (\begin{DoxyParamCaption}\item[{const sgstring \&}]{encryption\+String,  }\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}}}]{lock\+Key = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_abdd34338e48c0ce8a9e304159b97f2be}\label{class_s_g_framework_1_1_file_1_1_encryption_key_abdd34338e48c0ce8a9e304159b97f2be}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!Lock@{Lock}}
+\index{Lock@{Lock}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{Lock()}{Lock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Lock (\begin{DoxyParamCaption}\item[{sgstring \&}]{string,  }\item[{const sgstring \&}]{encryption\+String,  }\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}}}]{lock\+Key = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_a28acfded7f8248b6a1c06930565e4991}\label{class_s_g_framework_1_1_file_1_1_encryption_key_a28acfded7f8248b6a1c06930565e4991}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!LockBinary@{LockBinary}}
+\index{LockBinary@{LockBinary}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{LockBinary()}{LockBinary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Lock\+Binary (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&}]{encryption\+String,  }\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}}}]{lock\+Key = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_a01e573a8ccf58e0095a4d1a330ed72ca}\label{class_s_g_framework_1_1_file_1_1_encryption_key_a01e573a8ccf58e0095a4d1a330ed72ca}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!LockBinary@{LockBinary}}
+\index{LockBinary@{LockBinary}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{LockBinary()}{LockBinary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Lock\+Binary (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&}]{string,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&}]{encryption\+String,  }\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}}}]{lock\+Key = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_aeafae15a0f67daac24b8100a226125a7}\label{class_s_g_framework_1_1_file_1_1_encryption_key_aeafae15a0f67daac24b8100a226125a7}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!operator byte@{operator byte}}
+\index{operator byte@{operator byte}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{operator byte()}{operator byte()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::operator \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_a93abdfef8a1d4885c304781982c03273}\label{class_s_g_framework_1_1_file_1_1_encryption_key_a93abdfef8a1d4885c304781982c03273}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!operator wchar@{operator wchar}}
+\index{operator wchar@{operator wchar}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{operator wchar()}{operator wchar()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::operator \mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{wchar}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_a08d89311e7d91ca5f50295957601e202}\label{class_s_g_framework_1_1_file_1_1_encryption_key_a08d89311e7d91ca5f50295957601e202}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!operator()@{operator()}}
+\index{operator()@{operator()}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{wchar}} S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_ae4905a22ed0fe620f08624841eec7960}\label{class_s_g_framework_1_1_file_1_1_encryption_key_ae4905a22ed0fe620f08624841eec7960}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!Unlock@{Unlock}}
+\index{Unlock@{Unlock}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{Unlock()}{Unlock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sgstring S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Unlock (\begin{DoxyParamCaption}\item[{const sgstring \&}]{encryption\+String,  }\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}}}]{unlock\+Key = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_ade97accc19f4b0409db5b4a3970256b2}\label{class_s_g_framework_1_1_file_1_1_encryption_key_ade97accc19f4b0409db5b4a3970256b2}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!Unlock@{Unlock}}
+\index{Unlock@{Unlock}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{Unlock()}{Unlock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Unlock (\begin{DoxyParamCaption}\item[{sgstring \&}]{string,  }\item[{const sgstring \&}]{encryption\+String,  }\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}}}]{unlock\+Key = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_a5a1d180be3c31659e24fc4d1a4734347}\label{class_s_g_framework_1_1_file_1_1_encryption_key_a5a1d180be3c31659e24fc4d1a4734347}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!UnlockBinary@{UnlockBinary}}
+\index{UnlockBinary@{UnlockBinary}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{UnlockBinary()}{UnlockBinary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Unlock\+Binary (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&}]{encryption\+String,  }\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}}}]{unlock\+Key = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_a4f903dfa4ef0ef49fe73069967a6e82c}\label{class_s_g_framework_1_1_file_1_1_encryption_key_a4f903dfa4ef0ef49fe73069967a6e82c}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!UnlockBinary@{UnlockBinary}}
+\index{UnlockBinary@{UnlockBinary}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{UnlockBinary()}{UnlockBinary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::\+Unlock\+Binary (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&}]{string,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} $>$ \&}]{encryption\+String,  }\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key}{Encryption\+Key}}}]{unlock\+Key = {\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_file_1_1_encryption_key_af58dee6f53c2a433db3acdd47ab1871b}{Default\+Key}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_file_1_1_encryption_key_a261c94b71cfce52fe0e25882b098ebfd}\label{class_s_g_framework_1_1_file_1_1_encryption_key_a261c94b71cfce52fe0e25882b098ebfd}} 
+\index{SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}!value@{value}}
+\index{value@{value}!SGFramework::File::EncryptionKey@{SGFramework::File::EncryptionKey}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$\mbox{\hyperlink{namespace_s_g_framework_a7f41ac37dc0d3ba6fa22b37126f944cb}{wchar}}$>$ S\+G\+Framework\+::\+File\+::\+Encryption\+Key\+::value}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/04\+\_\+\+Asset/\+File\+R\+W/\mbox{\hyperlink{_encryption_key_8hpp}{Encryption\+Key.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,284 @@
+\hypertarget{class_s_g_framework_1_1_unique_pointer}{}\doxysection{S\+G\+Framework\+::Unique\+Pointer$<$ Pointer\+Type $>$ クラステンプレート}
+\label{class_s_g_framework_1_1_unique_pointer}\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+
+
+{\ttfamily \#include $<$Unique\+Pointer.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_af709521d7a577ca4a48fc5e0f042cac6}{Unique\+Pointer}} (const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \&copy)=delete
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_aa7f8bcd3d9eb75d8753641d7b5c03753}{Unique\+Pointer}} (const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Different\+Type $>$ \&copy)=delete
+\item 
+const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a6b0c68b8af47e5191f134b6a91d97d08}{operator=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \&copy)=delete
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Different\+Type $>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a94f9e238f3d0554c7ebe53675248481f}{operator=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Different\+Type $>$ \&copy)=delete
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_afec33fa154eaa31d77e5c483b1365acf}{Unique\+Pointer}} () noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_ae006645c5b9992a0d91562bc7db9bc57}{Unique\+Pointer}} (\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \&\&move) noexcept
+\item 
+{\footnotesize template$<$class New\+Type $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_ad55756ba246acc204a7158d0f3e030f1}{Unique\+Pointer}} (New\+Type $\ast$new\+Pointer, bool is\+Auto\+Gabage\+Collection=true) noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_aae4e866648efbea55a6ee5010ccdc96b}{$\sim$\+Unique\+Pointer}} () noexcept
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a1ec09bf3d58b228513b059f32b70575b}{Release}} () noexcept
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Different\+Type $>$ \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a5765649c231bd0faba7e7253c9c7246f}{Moving\+Dynamic\+Cast}} () noexcept
+\item 
+{\footnotesize template$<$class Different\+Type $>$ }\\\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Different\+Type $>$ \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a6abe88d614bcb5567e02e35eb76c3ea4}{Moving\+Down\+Cast}} () noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY Pointer\+Type $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_aee23b708aa8460e07916803f6e273df1}{get\+Pointer}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a1b372975664d172ea941b2635ef4e1d6}{get\+Is\+Owned}} () const noexcept
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_ac8142f1c86dcedae40397267a909cd03}{set\+Null}} () noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a4c47548deffe1cbf4a8c93e9edd88c82}{operator=}} (\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \&\&move) noexcept
+\item 
+Pointer\+Type \& \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a8920079adb56695838abd90a1a30b737}{operator$\ast$}} () const noexcept
+\item 
+Pointer\+Type $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a6dfa66b27177c355fcf8a05e12cae5bf}{operator-\/$>$}} () const noexcept
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_ad5bc0625d2706615c27ef92fffac6f22}{operator bool}} () const noexcept
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a80dc67388608d35563bea4fbcbd41acc}{operator!}} () const noexcept
+\begin{DoxyCompactList}\small\item\em operator is pointer == nullptr \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a3ca4ab7f0bd2a28b275c97cc264c2157}{operator==}} (const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \&pointer)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_af3677dac9d73fdec70dca88c5e93ce3d}{operator==}} (const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ T $>$ \&pointer)
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_abdd3ea45877c70b863ec9996c56b48c2}{operator!=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \&pointer)
+\begin{DoxyCompactList}\small\item\em = operator \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a8c27491120eed08f1dcedfa8323a8af4}{operator!=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ T $>$ \&pointer)
+\begin{DoxyCompactList}\small\item\em = operator \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_ab018e97d1cb3c962af5bacddeb473ea2}{get\+Null}} () noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a0ed5d51d6c32faa0b6ffc7036a0ee776}{Unique\+Pointer$<$ Pointer\+Type $>$}}
+\item 
+{\footnotesize template$<$class New\+Type $>$ }\\class \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a81f2596989658977f99e9ec5aa1673de}{Unique\+Pointer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_af709521d7a577ca4a48fc5e0f042cac6}\label{class_s_g_framework_1_1_unique_pointer_af709521d7a577ca4a48fc5e0f042cac6}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!UniquePointer@{UniquePointer}}
+\index{UniquePointer@{UniquePointer}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{UniquePointer()}{UniquePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \&}]{copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_aa7f8bcd3d9eb75d8753641d7b5c03753}\label{class_s_g_framework_1_1_unique_pointer_aa7f8bcd3d9eb75d8753641d7b5c03753}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!UniquePointer@{UniquePointer}}
+\index{UniquePointer@{UniquePointer}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{UniquePointer()}{UniquePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Different\+Type $>$ \&}]{copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_afec33fa154eaa31d77e5c483b1365acf}\label{class_s_g_framework_1_1_unique_pointer_afec33fa154eaa31d77e5c483b1365acf}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!UniquePointer@{UniquePointer}}
+\index{UniquePointer@{UniquePointer}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{UniquePointer()}{UniquePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_ae006645c5b9992a0d91562bc7db9bc57}\label{class_s_g_framework_1_1_unique_pointer_ae006645c5b9992a0d91562bc7db9bc57}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!UniquePointer@{UniquePointer}}
+\index{UniquePointer@{UniquePointer}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{UniquePointer()}{UniquePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \&\&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_ad55756ba246acc204a7158d0f3e030f1}\label{class_s_g_framework_1_1_unique_pointer_ad55756ba246acc204a7158d0f3e030f1}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!UniquePointer@{UniquePointer}}
+\index{UniquePointer@{UniquePointer}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{UniquePointer()}{UniquePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class New\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}} (\begin{DoxyParamCaption}\item[{New\+Type $\ast$}]{new\+Pointer,  }\item[{bool}]{is\+Auto\+Gabage\+Collection = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_aae4e866648efbea55a6ee5010ccdc96b}\label{class_s_g_framework_1_1_unique_pointer_aae4e866648efbea55a6ee5010ccdc96b}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!````~UniquePointer@{$\sim$UniquePointer}}
+\index{````~UniquePointer@{$\sim$UniquePointer}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$UniquePointer()}{~UniquePointer()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::$\sim$\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a1b372975664d172ea941b2635ef4e1d6}\label{class_s_g_framework_1_1_unique_pointer_a1b372975664d172ea941b2635ef4e1d6}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!getIsOwned@{getIsOwned}}
+\index{getIsOwned@{getIsOwned}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{getIsOwned()}{getIsOwned()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::get\+Is\+Owned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_ab018e97d1cb3c962af5bacddeb473ea2}\label{class_s_g_framework_1_1_unique_pointer_ab018e97d1cb3c962af5bacddeb473ea2}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!getNull@{getNull}}
+\index{getNull@{getNull}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{getNull()}{getNull()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$Pointer\+Type$>$ \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::get\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_aee23b708aa8460e07916803f6e273df1}\label{class_s_g_framework_1_1_unique_pointer_aee23b708aa8460e07916803f6e273df1}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!getPointer@{getPointer}}
+\index{getPointer@{getPointer}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{getPointer()}{getPointer()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY Pointer\+Type$\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::get\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a6abe88d614bcb5567e02e35eb76c3ea4}\label{class_s_g_framework_1_1_unique_pointer_a6abe88d614bcb5567e02e35eb76c3ea4}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!MovingDownCast@{MovingDownCast}}
+\index{MovingDownCast@{MovingDownCast}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{MovingDownCast()}{MovingDownCast()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Different\+Type $>$ \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::Moving\+Down\+Cast\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a5765649c231bd0faba7e7253c9c7246f}\label{class_s_g_framework_1_1_unique_pointer_a5765649c231bd0faba7e7253c9c7246f}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!MovingDynamicCast@{MovingDynamicCast}}
+\index{MovingDynamicCast@{MovingDynamicCast}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{MovingDynamicCast()}{MovingDynamicCast()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Different\+Type $>$ \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::Moving\+Dynamic\+Cast\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_ad5bc0625d2706615c27ef92fffac6f22}\label{class_s_g_framework_1_1_unique_pointer_ad5bc0625d2706615c27ef92fffac6f22}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a80dc67388608d35563bea4fbcbd41acc}\label{class_s_g_framework_1_1_unique_pointer_a80dc67388608d35563bea4fbcbd41acc}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!()}{operator!()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::operator! (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+operator is pointer == nullptr 
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_abdd3ea45877c70b863ec9996c56b48c2}\label{class_s_g_framework_1_1_unique_pointer_abdd3ea45877c70b863ec9996c56b48c2}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a80dc67388608d35563bea4fbcbd41acc}{operator!}}= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \&}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+= operator 
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a8c27491120eed08f1dcedfa8323a8af4}\label{class_s_g_framework_1_1_unique_pointer_a8c27491120eed08f1dcedfa8323a8af4}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer_a80dc67388608d35563bea4fbcbd41acc}{operator!}}= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ T $>$ \&}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+= operator 
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a8920079adb56695838abd90a1a30b737}\label{class_s_g_framework_1_1_unique_pointer_a8920079adb56695838abd90a1a30b737}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+Pointer\+Type\& \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a6dfa66b27177c355fcf8a05e12cae5bf}\label{class_s_g_framework_1_1_unique_pointer_a6dfa66b27177c355fcf8a05e12cae5bf}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+Pointer\+Type$\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a94f9e238f3d0554c7ebe53675248481f}\label{class_s_g_framework_1_1_unique_pointer_a94f9e238f3d0554c7ebe53675248481f}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class Different\+Type $>$ \\
+const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$Different\+Type$>$\& \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Different\+Type $>$ \&}]{copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a6b0c68b8af47e5191f134b6a91d97d08}\label{class_s_g_framework_1_1_unique_pointer_a6b0c68b8af47e5191f134b6a91d97d08}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$Pointer\+Type$>$\& \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \&}]{copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a4c47548deffe1cbf4a8c93e9edd88c82}\label{class_s_g_framework_1_1_unique_pointer_a4c47548deffe1cbf4a8c93e9edd88c82}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \& \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \&\&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a3ca4ab7f0bd2a28b275c97cc264c2157}\label{class_s_g_framework_1_1_unique_pointer_a3ca4ab7f0bd2a28b275c97cc264c2157}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$ \&}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_af3677dac9d73fdec70dca88c5e93ce3d}\label{class_s_g_framework_1_1_unique_pointer_af3677dac9d73fdec70dca88c5e93ce3d}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ T $>$ \&}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a1ec09bf3d58b228513b059f32b70575b}\label{class_s_g_framework_1_1_unique_pointer_a1ec09bf3d58b228513b059f32b70575b}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!Release@{Release}}
+\index{Release@{Release}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+void \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_ac8142f1c86dcedae40397267a909cd03}\label{class_s_g_framework_1_1_unique_pointer_ac8142f1c86dcedae40397267a909cd03}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!setNull@{setNull}}
+\index{setNull@{setNull}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{setNull()}{setNull()}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY const \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$Pointer\+Type$>$\& \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{S\+G\+Framework\+::\+Unique\+Pointer}}$<$ Pointer\+Type $>$\+::set\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a81f2596989658977f99e9ec5aa1673de}\label{class_s_g_framework_1_1_unique_pointer_a81f2596989658977f99e9ec5aa1673de}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!UniquePointer@{UniquePointer}}
+\index{UniquePointer@{UniquePointer}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{UniquePointer}{UniquePointer}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+template$<$class New\+Type $>$ \\
+friend class \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_unique_pointer_a0ed5d51d6c32faa0b6ffc7036a0ee776}\label{class_s_g_framework_1_1_unique_pointer_a0ed5d51d6c32faa0b6ffc7036a0ee776}} 
+\index{SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}!UniquePointer$<$ PointerType $>$@{UniquePointer$<$ PointerType $>$}}
+\index{UniquePointer$<$ PointerType $>$@{UniquePointer$<$ PointerType $>$}!SGFramework::UniquePointer$<$ PointerType $>$@{SGFramework::UniquePointer$<$ PointerType $>$}}
+\doxysubsubsection{\texorpdfstring{UniquePointer$<$ PointerType $>$}{UniquePointer< PointerType >}}
+{\footnotesize\ttfamily template$<$class Pointer\+Type $>$ \\
+friend class \mbox{\hyperlink{class_s_g_framework_1_1_unique_pointer}{Unique\+Pointer}}$<$ Pointer\+Type $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Pointer/\mbox{\hyperlink{_garbage_collector_8hpp}{Garbage\+Collector.\+hpp}}\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Pointer/\mbox{\hyperlink{_unique_pointer_8hpp}{Unique\+Pointer.\+hpp}}\end{DoxyCompactItemize}

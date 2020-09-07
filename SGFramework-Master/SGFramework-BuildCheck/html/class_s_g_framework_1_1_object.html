@@ -1,0 +1,545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework::Object クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_s_g_framework.html">SGFramework</a></li><li class="navelem"><a class="el" href="class_s_g_framework_1_1_object.html">Object</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pro-static-methods">静的限定公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="class_s_g_framework_1_1_object-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">SGFramework::Object クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_object_8hpp_source.html">Object.hpp</a>&gt;</code></p>
+<div class="dynheader">
+SGFramework::Object の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_s_g_framework_1_1_object.png" usemap="#SGFramework::Object_map" alt=""/>
+  <map id="SGFramework::Object_map" name="SGFramework::Object_map">
+<area href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html" alt="SGFramework::Administrator::GraphicsDetail::ComponentX11" shape="rect" coords="0,56,648,80"/>
+<area href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11.html" alt="SGFramework::Administrator::GraphicsDetail::TransformX11" shape="rect" coords="658,56,1306,80"/>
+<area href="class_s_g_framework_1_1_base_class_1_1_base_asset.html" alt="SGFramework::BaseClass::BaseAsset" shape="rect" coords="1316,56,1964,80"/>
+<area href="class_s_g_framework_1_1_game_object.html" alt="SGFramework::GameObject" shape="rect" coords="2632,56,3280,80"/>
+<area href="class_demo_music_player.html" alt="DemoMusicPlayer" shape="rect" coords="658,112,1306,136"/>
+<area href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_camera_x11.html" alt="SGFramework::Administrator::GraphicsDetail::CameraX11" shape="rect" coords="658,168,1306,192"/>
+<area href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_mesh_renderer_x11.html" alt="SGFramework::Administrator::GraphicsDetail::MeshRendererX11&lt; MeshVertexType, MeshMaterialPointerType &gt;" shape="rect" coords="658,224,1306,248"/>
+<area href="class_s_g_framework_1_1_animator.html" alt="SGFramework::Animator" shape="rect" coords="658,280,1306,304"/>
+<area href="class_s_g_framework_1_1_audio_listener.html" alt="SGFramework::AudioListener" shape="rect" coords="658,336,1306,360"/>
+<area href="class_s_g_framework_1_1_base_class_1_1_base_collider.html" alt="SGFramework::BaseClass::BaseCollider" shape="rect" coords="658,392,1306,416"/>
+<area href="class_s_g_framework_1_1_base_class_1_1_base_rigid_body.html" alt="SGFramework::BaseClass::BaseRigidBody" shape="rect" coords="658,448,1306,472"/>
+<area href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_model_asset_x11.html" alt="SGFramework::Administrator::GraphicsDetail::ModelAssetX11" shape="rect" coords="1974,112,2622,136"/>
+<area href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_texture_asset_x11.html" alt="SGFramework::Administrator::GraphicsDetail::TextureAssetX11" shape="rect" coords="1974,168,2622,192"/>
+<area href="class_s_g_framework_1_1_asset_1_1_binary_asset.html" alt="SGFramework::Asset::BinaryAsset" shape="rect" coords="1974,224,2622,248"/>
+<area href="class_s_g_framework_1_1_asset_1_1_text_asset.html" alt="SGFramework::Asset::TextAsset" shape="rect" coords="1974,280,2622,304"/>
+<area href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html" alt="SGFramework::BaseClass::BaseAudioAsset" shape="rect" coords="1974,336,2622,360"/>
+<area href="class_s_g_framework_1_1_base_class_1_1_base_shader_asset_x11.html" alt="SGFramework::BaseClass::BaseShaderAssetX11" shape="rect" coords="1974,392,2622,416"/>
+<area href="class_player.html" alt="Player" shape="rect" coords="3290,112,3938,136"/>
+<area href="class_s_g_framework_1_1_model_node_object.html" alt="SGFramework::ModelNodeObject" shape="rect" coords="3290,168,3938,192"/>
+<area href="class_sphere.html" alt="Sphere" shape="rect" coords="3290,224,3938,248"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab10d7c569fa77c42ba803a2b51ccbe67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#ab10d7c569fa77c42ba803a2b51ccbe67">Object</a> (const sgstring &amp;<a class="el" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>)</td></tr>
+<tr class="separator:ab10d7c569fa77c42ba803a2b51ccbe67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f1289a7cb67b6f686725d788bc340b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#ae5f1289a7cb67b6f686725d788bc340b">~Object</a> ()</td></tr>
+<tr class="separator:ae5f1289a7cb67b6f686725d788bc340b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b31786505026403364e9ec5e7ba46df"><td class="memItemLeft" align="right" valign="top">SGF_FUNCTION_PROPERTY void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a0b31786505026403364e9ec5e7ba46df">setName</a> (const sgstring &amp;<a class="el" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>)</td></tr>
+<tr class="separator:a0b31786505026403364e9ec5e7ba46df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529acf8232e115276a51d2fc562e95bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a529acf8232e115276a51d2fc562e95bb">operator==</a> (const <a class="el" href="class_s_g_framework_1_1_object.html">Object</a> &amp;obj)</td></tr>
+<tr class="separator:a529acf8232e115276a51d2fc562e95bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6642b24b7403676e5980452be06629f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a6642b24b7403676e5980452be06629f7">operator!=</a> (const <a class="el" href="class_s_g_framework_1_1_object.html">Object</a> &amp;obj)</td></tr>
+<tr class="separator:a6642b24b7403676e5980452be06629f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a243756d4135d84499f1031a79ceb68a1"><td class="memItemLeft" align="right" valign="top">static SGF_FUNCTION_PROPERTY <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a243756d4135d84499f1031a79ceb68a1">getNumTotaleInstantiateObjects</a> ()</td></tr>
+<tr class="separator:a243756d4135d84499f1031a79ceb68a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a0ff5173fe2e73571e27214ff744bd"><td class="memItemLeft" align="right" valign="top">static SGF_FUNCTION_PROPERTY <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a40a0ff5173fe2e73571e27214ff744bd">getNumNowTotaleInstantiateObjects</a> ()</td></tr>
+<tr class="separator:a40a0ff5173fe2e73571e27214ff744bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb3a845f9d607c22d41739965f3c6418"><td class="memTemplParams" colspan="2">template&lt;class Left , class Right &gt; </td></tr>
+<tr class="memitem:adb3a845f9d607c22d41739965f3c6418"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#adb3a845f9d607c22d41739965f3c6418">IsEqualPointer</a> (const Left &amp;left, const Right &amp;right)</td></tr>
+<tr class="separator:adb3a845f9d607c22d41739965f3c6418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb82cd6ef915c5fd1d3343c71b7cec1e"><td class="memTemplParams" colspan="2">template&lt;class Left , class Right &gt; </td></tr>
+<tr class="memitem:acb82cd6ef915c5fd1d3343c71b7cec1e"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#acb82cd6ef915c5fd1d3343c71b7cec1e">IsNotEqualPointer</a> (const Left &amp;left, const Right &amp;right)</td></tr>
+<tr class="separator:acb82cd6ef915c5fd1d3343c71b7cec1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a81c886cd57a3c42b7e2ed81c0ad978f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; sgstring &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a></td></tr>
+<tr class="separator:a81c886cd57a3c42b7e2ed81c0ad978f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ea7385b13efc6b88990c394bb0b8b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt; <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#aa4ea7385b13efc6b88990c394bb0b8b2">instanceID</a></td></tr>
+<tr class="separator:aa4ea7385b13efc6b88990c394bb0b8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+静的限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a9adfd87f8eb2fc4e24efef4ba5a90d02"><td class="memItemLeft" align="right" valign="top">static sgstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a9adfd87f8eb2fc4e24efef4ba5a90d02">CreateCopyName</a> (const sgstring &amp;<a class="el" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>)</td></tr>
+<tr class="separator:a9adfd87f8eb2fc4e24efef4ba5a90d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a00df87c957d8f7ee0fc51f07a0542f4a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a></td></tr>
+<tr class="separator:a00df87c957d8f7ee0fc51f07a0542f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2089047587d39834aab446c240f5621c"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#a2089047587d39834aab446c240f5621c">BaseClass::BaseAsset</a></td></tr>
+<tr class="separator:a2089047587d39834aab446c240f5621c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1828c1c2dfb16d5d2a41b143abaa862"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_g_framework_1_1_object.html#aa1828c1c2dfb16d5d2a41b143abaa862">Administrator::GraphicsDetail::TransformX11</a></td></tr>
+<tr class="separator:aa1828c1c2dfb16d5d2a41b143abaa862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="ab10d7c569fa77c42ba803a2b51ccbe67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab10d7c569fa77c42ba803a2b51ccbe67">&#9670;&nbsp;</a></span>Object()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SGFramework::Object::Object </td>
+          <td>(</td>
+          <td class="paramtype">const sgstring &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5f1289a7cb67b6f686725d788bc340b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5f1289a7cb67b6f686725d788bc340b">&#9670;&nbsp;</a></span>~Object()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual SGFramework::Object::~Object </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a9adfd87f8eb2fc4e24efef4ba5a90d02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9adfd87f8eb2fc4e24efef4ba5a90d02">&#9670;&nbsp;</a></span>CreateCopyName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sgstring SGFramework::Object::CreateCopyName </td>
+          <td>(</td>
+          <td class="paramtype">const sgstring &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40a0ff5173fe2e73571e27214ff744bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40a0ff5173fe2e73571e27214ff744bd">&#9670;&nbsp;</a></span>getNumNowTotaleInstantiateObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static SGF_FUNCTION_PROPERTY <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> SGFramework::Object::getNumNowTotaleInstantiateObjects </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a243756d4135d84499f1031a79ceb68a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a243756d4135d84499f1031a79ceb68a1">&#9670;&nbsp;</a></span>getNumTotaleInstantiateObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static SGF_FUNCTION_PROPERTY <a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> SGFramework::Object::getNumTotaleInstantiateObjects </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb3a845f9d607c22d41739965f3c6418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb3a845f9d607c22d41739965f3c6418">&#9670;&nbsp;</a></span>IsEqualPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Left , class Right &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Object::IsEqualPointer </td>
+          <td>(</td>
+          <td class="paramtype">const Left &amp;&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Right &amp;&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb82cd6ef915c5fd1d3343c71b7cec1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb82cd6ef915c5fd1d3343c71b7cec1e">&#9670;&nbsp;</a></span>IsNotEqualPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Left , class Right &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Object::IsNotEqualPointer </td>
+          <td>(</td>
+          <td class="paramtype">const Left &amp;&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Right &amp;&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6642b24b7403676e5980452be06629f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6642b24b7403676e5980452be06629f7">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Object::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_s_g_framework_1_1_object.html">Object</a> &amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a529acf8232e115276a51d2fc562e95bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a529acf8232e115276a51d2fc562e95bb">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SGFramework::Object::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_s_g_framework_1_1_object.html">Object</a> &amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b31786505026403364e9ec5e7ba46df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b31786505026403364e9ec5e7ba46df">&#9670;&nbsp;</a></span>setName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SGF_FUNCTION_PROPERTY void SGFramework::Object::setName </td>
+          <td>(</td>
+          <td class="paramtype">const sgstring &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="aa1828c1c2dfb16d5d2a41b143abaa862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1828c1c2dfb16d5d2a41b143abaa862">&#9670;&nbsp;</a></span>Administrator::GraphicsDetail::TransformX11</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11.html">Administrator::GraphicsDetail::TransformX11</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2089047587d39834aab446c240f5621c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2089047587d39834aab446c240f5621c">&#9670;&nbsp;</a></span>BaseClass::BaseAsset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html">BaseClass::BaseAsset</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00df87c957d8f7ee0fc51f07a0542f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00df87c957d8f7ee0fc51f07a0542f4a">&#9670;&nbsp;</a></span>GameObject</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_s_g_framework_1_1_game_object.html">GameObject</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="aa4ea7385b13efc6b88990c394bb0b8b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4ea7385b13efc6b88990c394bb0b8b2">&#9670;&nbsp;</a></span>instanceID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt;<a class="el" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a>&gt; SGFramework::Object::instanceID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81c886cd57a3c42b7e2ed81c0ad978f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81c886cd57a3c42b7e2ed81c0ad978f5">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_g_framework_1_1_get_only_property.html">GetOnlyProperty</a>&lt;sgstring&gt; SGFramework::Object::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/02_Variables/未実装/Object/<a class="el" href="_object_8hpp_source.html">Object.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

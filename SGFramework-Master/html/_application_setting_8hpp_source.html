@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/97_Application/Setting/ApplicationSetting.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_c93e3b688d980b898336741ace47f4b7.html">97_Application</a></li><li class="navelem"><a class="el" href="dir_944f74069dc51862823569852e3e7992.html">Setting</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ApplicationSetting.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_application_setting_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_APPLICATION_SETTING_IMPORT_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_APPLICATION_SETTING_IMPORT_HPP_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../../01_LibraryImport/LibraryImport.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_application_setting_tied_info_8hpp.html">ApplicationSettingTiedInfo.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">namespace </span>ApplicationSetting</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_application_setting.html#ab8d57570badaa4249c1490d317c721fa">   13</a></span>&#160;        constexpr <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> <a class="code" href="namespace_s_g_framework_1_1_application_setting.html#ab8d57570badaa4249c1490d317c721fa">cApplicationSettingPath</a>[] = L<span class="stringliteral">&quot;Assets/Settings/SGFApplicationSetting&quot;</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_application_setting.html#aba0d7b0dbdb78044558d8f333cbbf788">   14</a></span>&#160;        constexpr <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> <a class="code" href="namespace_s_g_framework_1_1_application_setting.html#aba0d7b0dbdb78044558d8f333cbbf788">StartGroopIdentifier</a>[] = L<span class="stringliteral">&quot;[StartGroop]&quot;</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespace_s_g_framework_1_1_application_setting.html#a423c49dc472f05bf7667d64c40f5f319">   15</a></span>&#160;        constexpr <a class="code" href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">wchar</a> <a class="code" href="namespace_s_g_framework_1_1_application_setting.html#a423c49dc472f05bf7667d64c40f5f319">cEndGroopIdentifier</a>[] = L<span class="stringliteral">&quot;[EndGroop]&quot;</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_application_setting_1_1_application_setting_values.html">   17</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_application_setting_1_1_application_setting_values.html">ApplicationSettingValues</a> final</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_application_setting_1_1_application_setting_values.html#a23f25bcc02a0e94c2f5a4188496b04d0">   20</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_application.html">Application</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">const</span> ReadElement::Pack&amp; <a class="code" href="class_s_g_framework_1_1_application_setting_1_1_application_setting_values.html#acb371fbadb081cf98a985200a1905974">SearchPack</a>(<span class="keyword">const</span> sgstring&amp; header) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">const</span> ReadElement::Groop&amp; <a class="code" href="class_s_g_framework_1_1_application_setting_1_1_application_setting_values.html#a9992919065cc94e7c346119800dec416">SearchGroop</a>(<span class="keyword">const</span> sgstring&amp; header) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            SGF_NOTINLINE_FUNCTION_PROPERTY ReadElement::Pack&amp; <a class="code" href="class_s_g_framework_1_1_application_setting_1_1_application_setting_values.html#a4bc9f0289bdb8510bf1ce044a2af908e">getPack</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> tiedNumber);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            SGF_NOTINLINE_FUNCTION_PROPERTY ReadElement::Groop&amp; <a class="code" href="class_s_g_framework_1_1_application_setting_1_1_application_setting_values.html#abe83ecaa61d4b8e2f033f0e4b93fea20">getGroop</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> tiedNumber);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordtype">void</span> ReadSetting();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            std::unordered_map&lt;uint, ReadElement::Pack&gt; m_elements;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            std::unordered_map&lt;uint, ReadElement::Groop&gt; m_elementGroops;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_APPLICATION_SETTING_IMPORT_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespace_s_g_framework_1_1_application_setting_html_ab8d57570badaa4249c1490d317c721fa"><div class="ttname"><a href="namespace_s_g_framework_1_1_application_setting.html#ab8d57570badaa4249c1490d317c721fa">SGFramework::ApplicationSetting::cApplicationSettingPath</a></div><div class="ttdeci">constexpr wchar cApplicationSettingPath[]</div><div class="ttdef"><b>Definition:</b> ApplicationSetting.hpp:13</div></div>
+<div class="ttc" id="a_application_setting_tied_info_8hpp_html"><div class="ttname"><a href="_application_setting_tied_info_8hpp.html">ApplicationSettingTiedInfo.hpp</a></div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_application_html"><div class="ttname"><a href="class_s_g_framework_1_1_application.html">SGFramework::Application</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:15</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_application_setting_1_1_application_setting_values_html_a4bc9f0289bdb8510bf1ce044a2af908e"><div class="ttname"><a href="class_s_g_framework_1_1_application_setting_1_1_application_setting_values.html#a4bc9f0289bdb8510bf1ce044a2af908e">SGFramework::ApplicationSetting::ApplicationSettingValues::getPack</a></div><div class="ttdeci">SGF_NOTINLINE_FUNCTION_PROPERTY ReadElement::Pack &amp; getPack(uint tiedNumber)</div><div class="ttdef"><b>Definition:</b> ApplicationSetting.cpp:21</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_application_setting_html_a423c49dc472f05bf7667d64c40f5f319"><div class="ttname"><a href="namespace_s_g_framework_1_1_application_setting.html#a423c49dc472f05bf7667d64c40f5f319">SGFramework::ApplicationSetting::cEndGroopIdentifier</a></div><div class="ttdeci">constexpr wchar cEndGroopIdentifier[]</div><div class="ttdef"><b>Definition:</b> ApplicationSetting.hpp:15</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdoc">uint = unsigned int</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:157</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_application_setting_1_1_application_setting_values_html_abe83ecaa61d4b8e2f033f0e4b93fea20"><div class="ttname"><a href="class_s_g_framework_1_1_application_setting_1_1_application_setting_values.html#abe83ecaa61d4b8e2f033f0e4b93fea20">SGFramework::ApplicationSetting::ApplicationSettingValues::getGroop</a></div><div class="ttdeci">SGF_NOTINLINE_FUNCTION_PROPERTY ReadElement::Groop &amp; getGroop(uint tiedNumber)</div><div class="ttdef"><b>Definition:</b> ApplicationSetting.cpp:28</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_application_setting_1_1_application_setting_values_html_a9992919065cc94e7c346119800dec416"><div class="ttname"><a href="class_s_g_framework_1_1_application_setting_1_1_application_setting_values.html#a9992919065cc94e7c346119800dec416">SGFramework::ApplicationSetting::ApplicationSettingValues::SearchGroop</a></div><div class="ttdeci">const ReadElement::Groop &amp; SearchGroop(const sgstring &amp;header) const</div><div class="ttdef"><b>Definition:</b> ApplicationSetting.cpp:14</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_application_setting_1_1_application_setting_values_html_acb371fbadb081cf98a985200a1905974"><div class="ttname"><a href="class_s_g_framework_1_1_application_setting_1_1_application_setting_values.html#acb371fbadb081cf98a985200a1905974">SGFramework::ApplicationSetting::ApplicationSettingValues::SearchPack</a></div><div class="ttdeci">const ReadElement::Pack &amp; SearchPack(const sgstring &amp;header) const</div><div class="ttdef"><b>Definition:</b> ApplicationSetting.cpp:7</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a7f41ac37dc0d3ba6fa22b37126f944cb"><div class="ttname"><a href="namespace_s_g_framework.html#a7f41ac37dc0d3ba6fa22b37126f944cb">SGFramework::wchar</a></div><div class="ttdeci">wchar_t wchar</div><div class="ttdoc">wchar = wchar_t</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:153</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_application_setting_1_1_application_setting_values_html"><div class="ttname"><a href="class_s_g_framework_1_1_application_setting_1_1_application_setting_values.html">SGFramework::ApplicationSetting::ApplicationSettingValues</a></div><div class="ttdef"><b>Definition:</b> ApplicationSetting.hpp:18</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_application_setting_html_aba0d7b0dbdb78044558d8f333cbbf788"><div class="ttname"><a href="namespace_s_g_framework_1_1_application_setting.html#aba0d7b0dbdb78044558d8f333cbbf788">SGFramework::ApplicationSetting::StartGroopIdentifier</a></div><div class="ttdeci">constexpr wchar StartGroopIdentifier[]</div><div class="ttdef"><b>Definition:</b> ApplicationSetting.hpp:14</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

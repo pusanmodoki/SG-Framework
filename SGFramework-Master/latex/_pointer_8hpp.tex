@@ -1,0 +1,181 @@
+\hypertarget{_pointer_8hpp}{}\doxysection{S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Pointer/\+Pointer.hpp ファイル}
+\label{_pointer_8hpp}\index{SGFramework-\/Master\_ToExe/02\_Variables/未実装/Pointer/Pointer.hpp@{SGFramework-\/Master\_ToExe/02\_Variables/未実装/Pointer/Pointer.hpp}}
+{\ttfamily \#include \char`\"{}Garbage\+Collector.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Shared\+Pointer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Unique\+Pointer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Clone\+Pointer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Lock\+Weak\+Guard.\+hpp\char`\"{}}\newline
+\doxysubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework}{S\+G\+Framework}}
+\begin{DoxyCompactList}\small\item\em S\+G-\/\+Framework namespace \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer}{S\+G\+Framework\+::\+Pointer}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_unique}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Unique}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_unique_array}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Unique\+Array}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_shared}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Shared}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Shared}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_shared_array}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Shared\+Array}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared_array}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Shared\+Array}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+Array}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+Array}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Pointer\+Type $>$ }\\Unique\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_unique_accbb3c2c59124364e6092f9061143bdd}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Unique\+::\+Auto}} ()
+\item 
+{\footnotesize template$<$class Pointer\+Type , class... Args$>$ }\\Unique\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_unique_aa15df39140b40ddf8e93e63d2826d1e6}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Unique\+::\+Auto}} (Args \&... args)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class... Args$>$ }\\Unique\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_unique_afbbccd2cd073b0bf34d57f1d9dec9d1f}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Unique\+::\+Auto}} (const Args \&... args)
+\item 
+{\footnotesize template$<$class Pointer\+Type $>$ }\\Unique\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_unique_a27e595b8c37ea38d176b2ea2f71dc30e}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Unique\+::\+Manual}} ()
+\item 
+{\footnotesize template$<$class Pointer\+Type , class... Args$>$ }\\Unique\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_unique_a1f0f1b69d6b5cfadc9af0207a4373642}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Unique\+::\+Manual}} (Args \&... args)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class... Args$>$ }\\Unique\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_unique_af22c4a27dea3d556a921e359a76e536c}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Unique\+::\+Manual}} (const Args \&... args)
+\item 
+{\footnotesize template$<$class Pointer\+Type $>$ }\\Unique\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_unique_array_aad6a4121ca963e6825a2c1d8c88e6577}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Unique\+Array\+::\+Auto}} (uint size)
+\item 
+{\footnotesize template$<$class Pointer\+Type $>$ }\\Unique\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_unique_array_a0f67d8a4dd43e7964a53cfc48db8a76b}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Unique\+Array\+::\+Manual}} (uint size)
+\item 
+{\footnotesize template$<$class Pointer\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_shared_a8583bc19aff66a4fd1ad69943439e9d7}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Shared\+::\+Auto}} ()
+\item 
+{\footnotesize template$<$class Pointer\+Type , class... Args$>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_shared_a397d1fae75ec3adede5dc6863f1c1aea}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Shared\+::\+Auto}} (Args \&... args)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class... Args$>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_shared_a06d11a82f03be7e02ce1e7600c59fa65}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Shared\+::\+Auto}} (const Args \&... args)
+\item 
+{\footnotesize template$<$class Pointer\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_shared_ab323174881bd0044d156ff9369cdce6a}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Shared\+::\+Manual}} ()
+\item 
+{\footnotesize template$<$class Pointer\+Type , class... Args$>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_shared_a155a9feb2e8605508b7206bd139523c5}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Shared\+::\+Manual}} (Args \&... args)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class... Args$>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_shared_ab505028905bd0329e7ac098272e9c5d7}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Shared\+::\+Manual}} (const Args \&... args)
+\item 
+{\footnotesize template$<$class Pointer\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared_a4f9178ea4b386c14075c9ed43d60c702}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Shared\+::\+Auto}} ()
+\item 
+{\footnotesize template$<$class Pointer\+Type , class... Args$>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared_ac27a7374a67d142f93852b15567c321b}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Shared\+::\+Auto}} (Args \&... args)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class... Args$>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared_a001868ba051cdacc40693202499f97a1}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Shared\+::\+Auto}} (const Args \&... args)
+\item 
+{\footnotesize template$<$class Pointer\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared_afa21bc2f1671d91d2bf63cc9fb83291b}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Shared\+::\+Manual}} ()
+\item 
+{\footnotesize template$<$class Pointer\+Type , class... Args$>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared_a25e5ac2e98c37e9b3265f28ed7b43655}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Shared\+::\+Manual}} (Args \&... args)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class... Args$>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared_a96317b0e1050053de3529f0e6c3c045f}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Shared\+::\+Manual}} (const Args \&... args)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class... Args$>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_shared_array_ad4c1076f01813f74bc2e5aa4fea67863}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Shared\+Array\+::\+Auto}} (uint size)
+\item 
+{\footnotesize template$<$class Pointer\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_shared_array_aa8dccf017d7603414538b22109bc96a7}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Shared\+Array\+::\+Manual}} (uint size)
+\item 
+{\footnotesize template$<$class Pointer\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared_array_a4a81b41b724ee7b8151ab41b72d8d5ed}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Shared\+Array\+::\+Auto}} (uint size)
+\item 
+{\footnotesize template$<$class Pointer\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_shared_array_a83120f1dee2d389ecb67717383648ff5}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Shared\+Array\+::\+Manual}} (uint size)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_a1b37e8bdd648c7ffbe147fd6696b6cb4}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+::\+Auto}} (const Clone\+Base\+Type $\ast$clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_a7f2c43bf9ef43b17c1fbf99371fc243c}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+::\+Auto}} (const Unique\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_a5e500da301c468b754eba268d8aa6d0a}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+::\+Auto}} (const Shared\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_ab8e0008472ceb524f61921614350b83f}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+::\+Auto}} (Weak\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_adb08430d403c5e720fc41698a2c9b356}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+::\+Auto}} (const Clone\+Shared\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_a869682996066ae74d2791f1e551b5a50}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+::\+Auto}} (Clone\+Weak\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_ae7943838a9b2eabb437b873b808528f4}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+::\+Manual}} (const Clone\+Base\+Type $\ast$clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_a9c03911a81db43638ad5a465ce6a6887}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+::\+Manual}} (const Unique\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_a6790f6756ebb381a088fc6a2d158c433}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+::\+Manual}} (const Shared\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_a49b203cdc0f2a59f23b98947216c2d95}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+::\+Manual}} (Weak\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_a18a81d27e959e9d1ac913b661cb4041c}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+::\+Manual}} (const Clone\+Shared\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_a44e7d8f3d20111a13defe2bfd7405f7b}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+::\+Manual}} (Clone\+Weak\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_aa23906413d3bf502f80f6e081c6b2713}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+::\+Auto}} (const Clone\+Base\+Type $\ast$clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_a89ebbde9c49710d5b48f6b57adef6505}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+::\+Auto}} (const Unique\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_a14dd629cdfe432a232a7f4dd6bf6daac}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+::\+Auto}} (const Shared\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_a72179f89a7b0474aba442acbac6c7487}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+::\+Auto}} (Weak\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_a681ab9b47f508b1cf80671d7b4635736}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+::\+Auto}} (const Clone\+Shared\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_a5855c92323d7488274a06419cef332ff}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+::\+Auto}} (Clone\+Weak\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_ae96aa6b2a9ebb6c64a254cfa8fb56893}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+::\+Manual}} (const Clone\+Base\+Type $\ast$clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_ae85b9fb6a5fea95098aff7b23242d017}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+::\+Manual}} (const Unique\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_a26e332d7a794a7c2595f4edc4b61c77c}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+::\+Manual}} (const Shared\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_a7fa36be5f9aa307b3d0189df3b50ed1f}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+::\+Manual}} (Weak\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_a6a01ccd4f4946fa9b63aabf53e2cb81c}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+::\+Manual}} (const Clone\+Shared\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type $>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_a80699d7812ea5a3ee09d187dce1a5c3c}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+::\+Manual}} (Clone\+Weak\+Pointer$<$ Clone\+Base\+Type $>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array_a128d3b3c81066d2dd75c0e4709cd7c31}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+Array\+::\+Auto}} (const Clone\+Base\+Type $\ast$clone\+Source\+Pointer, uint array\+Size)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array_aaa229695cd78c83b89a29fcad9bf2978}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+Array\+::\+Auto}} (const Unique\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array_a71c49b0c4ffc8fdd27f1cd3c64767c43}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+Array\+::\+Auto}} (const Shared\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array_a3e16c13642db76ef04fd1f8dec205797}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+Array\+::\+Auto}} (Weak\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array_abec1319e30935aa04b609d40b25e6f64}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+Array\+::\+Auto}} (const Clone\+Shared\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array_a38872bb6aab51062b024ccb056c107b5}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+Array\+::\+Auto}} (Clone\+Weak\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array_aee75c0fc2817d88814344d3c62fbe491}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+Array\+::\+Manual}} (const Clone\+Base\+Type $\ast$clone\+Source\+Pointer, uint array\+Size)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array_ae06f2b2e9f7176bb7ad641d52348d677}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+Array\+::\+Manual}} (const Unique\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array_ad4d099adce20819ae050c60d700aa9e1}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+Array\+::\+Manual}} (const Shared\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array_ab2140a27c1de64f6e60bf048074f46e2}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+Array\+::\+Manual}} (Weak\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array_a5514ab2649a447431dc39298e3574a13}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+Array\+::\+Manual}} (const Clone\+Shared\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_single_clone_array_ab8f8bf934059f4470ae929fd6d9c8acb}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Single\+Clone\+Array\+::\+Manual}} (Clone\+Weak\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array_ae09308d491ec98d0dc4dd3b3a9eb7561}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+Array\+::\+Auto}} (const Clone\+Base\+Type $\ast$clone\+Source\+Pointer, uint array\+Size)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array_aa3cc9aa00adbf67a8fd1d6ad7aba71f8}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+Array\+::\+Auto}} (const Unique\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array_a2209e97ab90ec1304b6cd9a3a097a4eb}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+Array\+::\+Auto}} (const Shared\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array_ada3ca46e3085eb7e8152d13a3f98815b}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+Array\+::\+Auto}} (Weak\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array_a5235f570bd456d90d968f14d09fc82a4}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+Array\+::\+Auto}} (const Clone\+Shared\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array_a5f0fc00b056ff9c468adb388fb4c5a9d}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+Array\+::\+Auto}} (Clone\+Weak\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array_a642f783e747a4e783d7fedc6b13f9aeb}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+Array\+::\+Manual}} (const Clone\+Base\+Type $\ast$clone\+Source\+Pointer, uint array\+Size)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array_abe2612e3a38e0d4944993dd42e6acba2}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+Array\+::\+Manual}} (const Unique\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array_aabb5ede88d05e153c258f1b7571a1b6f}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+Array\+::\+Manual}} (const Shared\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array_ae8d3c0d519f4743206f7d710a225e060}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+Array\+::\+Manual}} (Weak\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array_a6f7470b2ee491df316ca7abee62c5bb3}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+Array\+::\+Manual}} (const Clone\+Shared\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\item 
+{\footnotesize template$<$class Pointer\+Type , class Clone\+Base\+Type $>$ }\\Shared\+Pointer$<$ Pointer\+Type\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{namespace_s_g_framework_1_1_pointer_1_1_make_multi_clone_array_a7311026fc8a42f2db5fc07dc9e718d72}{S\+G\+Framework\+::\+Pointer\+::\+Make\+Multi\+Clone\+Array\+::\+Manual}} (Clone\+Weak\+Pointer$<$ Clone\+Base\+Type\mbox{[}$\,$\mbox{]}$>$ \&clone\+Source\+Pointer)
+\end{DoxyCompactItemize}

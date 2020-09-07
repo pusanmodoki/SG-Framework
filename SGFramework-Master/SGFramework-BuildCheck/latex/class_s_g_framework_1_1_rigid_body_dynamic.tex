@@ -1,0 +1,256 @@
+\hypertarget{class_s_g_framework_1_1_rigid_body_dynamic}{}\doxysection{S\+G\+Framework\+::Rigid\+Body\+Dynamic クラス}
+\label{class_s_g_framework_1_1_rigid_body_dynamic}\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+
+
+{\ttfamily \#include $<$Rigid\+Body.\+hpp$>$}
+
+S\+G\+Framework\+::Rigid\+Body\+Dynamic の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_s_g_framework_1_1_rigid_body_dynamic}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a1ca54d53579e0ca06cfa1865698d0464}{Add\+Force}} (\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} force, \mbox{\hyperlink{struct_s_g_framework_1_1_force_mode_ac9867bd4886e918e350e6b4e8db5e41e}{Force\+Mode\+::\+Enum}} force\+Mode=\mbox{\hyperlink{struct_s_g_framework_1_1_force_mode_ac9867bd4886e918e350e6b4e8db5e41eaf861927223aeaa57d5bb8f393462eb3e}{Force\+Mode\+::\+Force}}, bool is\+Auto\+Awake=true)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a19360650ff399f7c41e2a182492fab99}{Clear\+Force}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a70057dd6b08944c4e7d75d805a3b9cf9}{Add\+Torque}} (\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} torque, \mbox{\hyperlink{struct_s_g_framework_1_1_force_mode_ac9867bd4886e918e350e6b4e8db5e41e}{Force\+Mode\+::\+Enum}} force\+Mode=\mbox{\hyperlink{struct_s_g_framework_1_1_force_mode_ac9867bd4886e918e350e6b4e8db5e41eaf861927223aeaa57d5bb8f393462eb3e}{Force\+Mode\+::\+Force}}, bool is\+Auto\+Awake=true)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a322ed3eaeea2d32622d4bd03bf3e38ea}{Clear\+Torque}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_adca298b9005cc9ac8f99f0f6bea5aadc}{Wake\+Up}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_aed811b2529ce3c7ada909cd86fc14711}{get\+Velocity}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a715d426da59955690efdd73f773576b6}{set\+Velocity}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&set, bool is\+Auto\+Awake=true)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_af7ae60a832fc0c95bcefd5fe0e02c042}{get\+Max\+Speed}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a49d287dd423c500abaea776b11b4227b}{set\+Max\+Speed}} (float set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a1b60e3bef5f26f957b78de977e807ff5}{get\+Velocity\+Damping}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a066889c9ff8113186c109a51b7f50de0}{set\+Velocity\+Damping}} (float set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a5c96204334d9994129186665f7c0a6e9}{get\+Angular\+Velocity}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_adb55f4576e414f8931c885eeace59473}{set\+Angular\+Velocity}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&set, bool is\+Auto\+Awake=true)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a875d5333898807999343c33b2ceb7e7e}{get\+Max\+Angular\+Speed}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a71c2e991f81b9603883ba536f7153fb0}{set\+Max\+Angular\+Speed}} (float set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_ad9353c9cf1a7c1e1df16f7702142048c}{get\+Angular\+Velocity\+Damping}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_abbc13c96f860a610290a9fef65bf2c5d}{set\+Angular\+Velocity\+Damping}} (float set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a38a54cfe67693a7827e9273c468b1e74}{get\+Mass}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a710548cdaa21f9fba2ce991bffb12e4f}{set\+Mass}} (float set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_ab8a329523ff4586535b3b9876951a49c}{get\+Lock\+Flags}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_rigid_body_lock_af1b618f43c0536361331f55bdc7ed83c}{Rigid\+Body\+Lock\+::\+Enum}} \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a0108d1640a09f704d15b6d4745c95009}{set\+Lock\+Flag}} (\mbox{\hyperlink{struct_s_g_framework_1_1_rigid_body_lock_af1b618f43c0536361331f55bdc7ed83c}{Rigid\+Body\+Lock\+::\+Enum}} flag, bool set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a003e7a9f6a1dce21d801f20e5eb4f9bc}{set\+Lock\+Flags}} (\mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} flags)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_adfe7e1eacd4f5b529a715e0069e2befe}{get\+Is\+Kinematic}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_aa4f87c6bec4d817fb3b572d55aabb6e1}{set\+Is\+Kinematic}} (bool set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_abb3b8a5305aa397d90e93045f69e3c0d}{get\+Is\+C\+CD}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_aff50bcfb2cb53b942e3c517bcf2625de}{set\+Is\+C\+CD}} (bool set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a7fa51bf097cfc4dc7961d538dc956902}{get\+Is\+Sleep}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a65e895156d6b4edb28a5228a1fa2fd46}{set\+Is\+Sleep}} (bool set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY physx\+::\+Px\+Rigid\+Dynamic \& \mbox{\hyperlink{class_s_g_framework_1_1_rigid_body_dynamic_a904ef659cd320a0dce91ff3bc3ebc4b6}{get\+PhysX}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a1ca54d53579e0ca06cfa1865698d0464}\label{class_s_g_framework_1_1_rigid_body_dynamic_a1ca54d53579e0ca06cfa1865698d0464}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!AddForce@{AddForce}}
+\index{AddForce@{AddForce}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{AddForce()}{AddForce()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::\+Add\+Force (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}}}]{force,  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_force_mode_ac9867bd4886e918e350e6b4e8db5e41e}{Force\+Mode\+::\+Enum}}}]{force\+Mode = {\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_force_mode_ac9867bd4886e918e350e6b4e8db5e41eaf861927223aeaa57d5bb8f393462eb3e}{Force\+Mode\+::\+Force}}},  }\item[{bool}]{is\+Auto\+Awake = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a70057dd6b08944c4e7d75d805a3b9cf9}\label{class_s_g_framework_1_1_rigid_body_dynamic_a70057dd6b08944c4e7d75d805a3b9cf9}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!AddTorque@{AddTorque}}
+\index{AddTorque@{AddTorque}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{AddTorque()}{AddTorque()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::\+Add\+Torque (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}}}]{torque,  }\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_force_mode_ac9867bd4886e918e350e6b4e8db5e41e}{Force\+Mode\+::\+Enum}}}]{force\+Mode = {\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_force_mode_ac9867bd4886e918e350e6b4e8db5e41eaf861927223aeaa57d5bb8f393462eb3e}{Force\+Mode\+::\+Force}}},  }\item[{bool}]{is\+Auto\+Awake = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a19360650ff399f7c41e2a182492fab99}\label{class_s_g_framework_1_1_rigid_body_dynamic_a19360650ff399f7c41e2a182492fab99}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!ClearForce@{ClearForce}}
+\index{ClearForce@{ClearForce}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{ClearForce()}{ClearForce()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::\+Clear\+Force (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a322ed3eaeea2d32622d4bd03bf3e38ea}\label{class_s_g_framework_1_1_rigid_body_dynamic_a322ed3eaeea2d32622d4bd03bf3e38ea}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!ClearTorque@{ClearTorque}}
+\index{ClearTorque@{ClearTorque}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{ClearTorque()}{ClearTorque()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::\+Clear\+Torque (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a5c96204334d9994129186665f7c0a6e9}\label{class_s_g_framework_1_1_rigid_body_dynamic_a5c96204334d9994129186665f7c0a6e9}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!getAngularVelocity@{getAngularVelocity}}
+\index{getAngularVelocity@{getAngularVelocity}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{getAngularVelocity()}{getAngularVelocity()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::get\+Angular\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_ad9353c9cf1a7c1e1df16f7702142048c}\label{class_s_g_framework_1_1_rigid_body_dynamic_ad9353c9cf1a7c1e1df16f7702142048c}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!getAngularVelocityDamping@{getAngularVelocityDamping}}
+\index{getAngularVelocityDamping@{getAngularVelocityDamping}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{getAngularVelocityDamping()}{getAngularVelocityDamping()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::get\+Angular\+Velocity\+Damping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_abb3b8a5305aa397d90e93045f69e3c0d}\label{class_s_g_framework_1_1_rigid_body_dynamic_abb3b8a5305aa397d90e93045f69e3c0d}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!getIsCCD@{getIsCCD}}
+\index{getIsCCD@{getIsCCD}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{getIsCCD()}{getIsCCD()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::get\+Is\+C\+CD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_adfe7e1eacd4f5b529a715e0069e2befe}\label{class_s_g_framework_1_1_rigid_body_dynamic_adfe7e1eacd4f5b529a715e0069e2befe}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!getIsKinematic@{getIsKinematic}}
+\index{getIsKinematic@{getIsKinematic}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{getIsKinematic()}{getIsKinematic()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::get\+Is\+Kinematic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a7fa51bf097cfc4dc7961d538dc956902}\label{class_s_g_framework_1_1_rigid_body_dynamic_a7fa51bf097cfc4dc7961d538dc956902}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!getIsSleep@{getIsSleep}}
+\index{getIsSleep@{getIsSleep}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{getIsSleep()}{getIsSleep()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::get\+Is\+Sleep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_ab8a329523ff4586535b3b9876951a49c}\label{class_s_g_framework_1_1_rigid_body_dynamic_ab8a329523ff4586535b3b9876951a49c}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!getLockFlags@{getLockFlags}}
+\index{getLockFlags@{getLockFlags}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{getLockFlags()}{getLockFlags()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::get\+Lock\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a38a54cfe67693a7827e9273c468b1e74}\label{class_s_g_framework_1_1_rigid_body_dynamic_a38a54cfe67693a7827e9273c468b1e74}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!getMass@{getMass}}
+\index{getMass@{getMass}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{getMass()}{getMass()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::get\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a875d5333898807999343c33b2ceb7e7e}\label{class_s_g_framework_1_1_rigid_body_dynamic_a875d5333898807999343c33b2ceb7e7e}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!getMaxAngularSpeed@{getMaxAngularSpeed}}
+\index{getMaxAngularSpeed@{getMaxAngularSpeed}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{getMaxAngularSpeed()}{getMaxAngularSpeed()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::get\+Max\+Angular\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_af7ae60a832fc0c95bcefd5fe0e02c042}\label{class_s_g_framework_1_1_rigid_body_dynamic_af7ae60a832fc0c95bcefd5fe0e02c042}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!getMaxSpeed@{getMaxSpeed}}
+\index{getMaxSpeed@{getMaxSpeed}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{getMaxSpeed()}{getMaxSpeed()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::get\+Max\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a904ef659cd320a0dce91ff3bc3ebc4b6}\label{class_s_g_framework_1_1_rigid_body_dynamic_a904ef659cd320a0dce91ff3bc3ebc4b6}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!getPhysX@{getPhysX}}
+\index{getPhysX@{getPhysX}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{getPhysX()}{getPhysX()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY physx\+::\+Px\+Rigid\+Dynamic\& S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::get\+PhysX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_aed811b2529ce3c7ada909cd86fc14711}\label{class_s_g_framework_1_1_rigid_body_dynamic_aed811b2529ce3c7ada909cd86fc14711}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!getVelocity@{getVelocity}}
+\index{getVelocity@{getVelocity}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{getVelocity()}{getVelocity()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a1b60e3bef5f26f957b78de977e807ff5}\label{class_s_g_framework_1_1_rigid_body_dynamic_a1b60e3bef5f26f957b78de977e807ff5}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!getVelocityDamping@{getVelocityDamping}}
+\index{getVelocityDamping@{getVelocityDamping}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{getVelocityDamping()}{getVelocityDamping()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::get\+Velocity\+Damping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_adb55f4576e414f8931c885eeace59473}\label{class_s_g_framework_1_1_rigid_body_dynamic_adb55f4576e414f8931c885eeace59473}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!setAngularVelocity@{setAngularVelocity}}
+\index{setAngularVelocity@{setAngularVelocity}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{setAngularVelocity()}{setAngularVelocity()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::set\+Angular\+Velocity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{set,  }\item[{bool}]{is\+Auto\+Awake = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_abbc13c96f860a610290a9fef65bf2c5d}\label{class_s_g_framework_1_1_rigid_body_dynamic_abbc13c96f860a610290a9fef65bf2c5d}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!setAngularVelocityDamping@{setAngularVelocityDamping}}
+\index{setAngularVelocityDamping@{setAngularVelocityDamping}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{setAngularVelocityDamping()}{setAngularVelocityDamping()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::set\+Angular\+Velocity\+Damping (\begin{DoxyParamCaption}\item[{float}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_aff50bcfb2cb53b942e3c517bcf2625de}\label{class_s_g_framework_1_1_rigid_body_dynamic_aff50bcfb2cb53b942e3c517bcf2625de}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!setIsCCD@{setIsCCD}}
+\index{setIsCCD@{setIsCCD}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{setIsCCD()}{setIsCCD()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::set\+Is\+C\+CD (\begin{DoxyParamCaption}\item[{bool}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_aa4f87c6bec4d817fb3b572d55aabb6e1}\label{class_s_g_framework_1_1_rigid_body_dynamic_aa4f87c6bec4d817fb3b572d55aabb6e1}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!setIsKinematic@{setIsKinematic}}
+\index{setIsKinematic@{setIsKinematic}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{setIsKinematic()}{setIsKinematic()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::set\+Is\+Kinematic (\begin{DoxyParamCaption}\item[{bool}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a65e895156d6b4edb28a5228a1fa2fd46}\label{class_s_g_framework_1_1_rigid_body_dynamic_a65e895156d6b4edb28a5228a1fa2fd46}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!setIsSleep@{setIsSleep}}
+\index{setIsSleep@{setIsSleep}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{setIsSleep()}{setIsSleep()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::set\+Is\+Sleep (\begin{DoxyParamCaption}\item[{bool}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a0108d1640a09f704d15b6d4745c95009}\label{class_s_g_framework_1_1_rigid_body_dynamic_a0108d1640a09f704d15b6d4745c95009}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!setLockFlag@{setLockFlag}}
+\index{setLockFlag@{setLockFlag}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{setLockFlag()}{setLockFlag()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_rigid_body_lock_af1b618f43c0536361331f55bdc7ed83c}{Rigid\+Body\+Lock\+::\+Enum}} S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::set\+Lock\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_rigid_body_lock_af1b618f43c0536361331f55bdc7ed83c}{Rigid\+Body\+Lock\+::\+Enum}}}]{flag,  }\item[{bool}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a003e7a9f6a1dce21d801f20e5eb4f9bc}\label{class_s_g_framework_1_1_rigid_body_dynamic_a003e7a9f6a1dce21d801f20e5eb4f9bc}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!setLockFlags@{setLockFlags}}
+\index{setLockFlags@{setLockFlags}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{setLockFlags()}{setLockFlags()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}} S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::set\+Lock\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_s_g_framework_a351e615f70cf2b6741809c2ed21c4530}{byte}}}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a710548cdaa21f9fba2ce991bffb12e4f}\label{class_s_g_framework_1_1_rigid_body_dynamic_a710548cdaa21f9fba2ce991bffb12e4f}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!setMass@{setMass}}
+\index{setMass@{setMass}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{setMass()}{setMass()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::set\+Mass (\begin{DoxyParamCaption}\item[{float}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a71c2e991f81b9603883ba536f7153fb0}\label{class_s_g_framework_1_1_rigid_body_dynamic_a71c2e991f81b9603883ba536f7153fb0}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!setMaxAngularSpeed@{setMaxAngularSpeed}}
+\index{setMaxAngularSpeed@{setMaxAngularSpeed}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{setMaxAngularSpeed()}{setMaxAngularSpeed()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::set\+Max\+Angular\+Speed (\begin{DoxyParamCaption}\item[{float}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a49d287dd423c500abaea776b11b4227b}\label{class_s_g_framework_1_1_rigid_body_dynamic_a49d287dd423c500abaea776b11b4227b}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!setMaxSpeed@{setMaxSpeed}}
+\index{setMaxSpeed@{setMaxSpeed}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{setMaxSpeed()}{setMaxSpeed()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::set\+Max\+Speed (\begin{DoxyParamCaption}\item[{float}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a715d426da59955690efdd73f773576b6}\label{class_s_g_framework_1_1_rigid_body_dynamic_a715d426da59955690efdd73f773576b6}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!setVelocity@{setVelocity}}
+\index{setVelocity@{setVelocity}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{setVelocity()}{setVelocity()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::set\+Velocity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{set,  }\item[{bool}]{is\+Auto\+Awake = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_a066889c9ff8113186c109a51b7f50de0}\label{class_s_g_framework_1_1_rigid_body_dynamic_a066889c9ff8113186c109a51b7f50de0}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!setVelocityDamping@{setVelocityDamping}}
+\index{setVelocityDamping@{setVelocityDamping}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{setVelocityDamping()}{setVelocityDamping()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::set\+Velocity\+Damping (\begin{DoxyParamCaption}\item[{float}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_rigid_body_dynamic_adca298b9005cc9ac8f99f0f6bea5aadc}\label{class_s_g_framework_1_1_rigid_body_dynamic_adca298b9005cc9ac8f99f0f6bea5aadc}} 
+\index{SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}!WakeUp@{WakeUp}}
+\index{WakeUp@{WakeUp}!SGFramework::RigidBodyDynamic@{SGFramework::RigidBodyDynamic}}
+\doxysubsubsection{\texorpdfstring{WakeUp()}{WakeUp()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Rigid\+Body\+Dynamic\+::\+Wake\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/10\+\_\+\+Physics/\+Rigid\+Body/\mbox{\hyperlink{_rigid_body_8hpp}{Rigid\+Body.\+hpp}}\end{DoxyCompactItemize}

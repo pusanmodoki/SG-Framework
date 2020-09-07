@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/05_Graphics/Animation/Animator.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_3179bfb1337b5dc243543deb8f1fb9cf.html">05_Graphics</a></li><li class="navelem"><a class="el" href="dir_46a0e75c3ddf016b5e62e8e2fd97f181.html">Animation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Animator.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_animator_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_ANIMATOR_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_ANIMATOR_HPP_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../GraphicsUsing.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../TransformUsing.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../ModelAssetUsing.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_model_node_object_8hpp.html">ModelNodeObject.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_animation_8hpp.html">Animation.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Framework namespace</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_animator.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_animator.html">Animator</a> : <span class="keyword">public</span> <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html">Component</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">friend</span> <a class="code" href="namespace_s_g_framework_1_1_asset.html#a546c99c6bfe199b32469e327d3b54fb8">Asset::ModelAsset</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">//[EnabledCallbacks]</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">//return: 自身がCallされるCallback Flags, Component::CallbackFunctions参照</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_animator.html#a889583f99e4dee252211f2181a0ed560">   20</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">virtual</span> <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_animator.html#a889583f99e4dee252211f2181a0ed560">EnableCallbacks</a>() { <span class="keywordflow">return</span> <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions.html#a5a8f33e4b94facbe2b1cdafcdfbd6a88a329b760b89275b4a429a2477452e7335">CallbackFunctions::Update</a> | <a class="code" href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions.html#a5a8f33e4b94facbe2b1cdafcdfbd6a88a32592ed1836d9517ff34742d53a15aec">CallbackFunctions::MakeDrawCommand</a>; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">//[Update]</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">//毎フレームUpdateブロックでCallbackされる関数</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_animator.html#a28dbd3287238a5612e10a69572ddcd84">   24</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_animator.html#a28dbd3287238a5612e10a69572ddcd84">Update</a>() </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">if</span> (m_player)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                m_player-&gt;<a class="code" href="class_s_g_framework_1_1_animation.html#ae55a6f05b4f5a569bbf81f3865bc5f12">Update</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                aiMatrix4x4 matrix = aiMatrix4x4();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <a class="code" href="class_s_g_framework_1_1_animator.html#adac6706f3b06f57622408296a24829df">UpdateMatrix</a>(m_scene-&gt;mRootNode, matrix);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_animator.html#adac6706f3b06f57622408296a24829df">   35</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_animator.html#adac6706f3b06f57622408296a24829df">UpdateMatrix</a>(aiNode* node, aiMatrix4x4&amp; worldMatrix)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">auto</span>&amp; bone = m_animationObjects.find(node-&gt;mName.C_Str())-&gt;second;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            aiMatrix4x4 myWorldMatrix = worldMatrix * bone-&gt;m_animationBoneMatrix;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            bone-&gt;m_boneWorldMatrix = myWorldMatrix * bone-&gt;m_animationOffsetMatrix;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> i = 0; i &lt; node-&gt;mNumChildren; ++i)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <a class="code" href="class_s_g_framework_1_1_animator.html#adac6706f3b06f57622408296a24829df">UpdateMatrix</a>(node-&gt;mChildren[i], myWorldMatrix);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_animator.html#af836171803839a061f330201571adde6">   46</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_animator.html#af836171803839a061f330201571adde6">MakeDrawCommand</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a4568c6bb6297f3ec434778f5506dcb83">Graphics::SendDrawFunction</a>([<span class="keyword">this</span>]()</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">if</span> (m_player)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : m_animationObjects)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(e.second-&gt;getIsRegisterAnimationBone()))</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                            memcpy_s(&amp;Graphics::m_setConstantBufferModel.bones[e.second-&gt;getNodeID()], <span class="keyword">sizeof</span>(<a class="code" href="struct_s_g_framework_1_1_vector4x4.html">Vector4x4</a>),</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                &amp;e.second-&gt;getGraphicsBoneMatrix(), <span class="keyword">sizeof</span>(<a class="code" href="struct_s_g_framework_1_1_vector4x4.html">Vector4x4</a>));</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">Graphics::context</a>-&gt;UpdateSubresource(Graphics::m_constantBufferModel,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                        0, <span class="keyword">nullptr</span>, &amp;Graphics::m_setConstantBufferModel, 0, 0);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">Graphics::context</a>-&gt;VSSetConstantBuffers(Graphics::m_cConstantBufferModelSlot,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                        1, &amp;Graphics::m_constantBufferModel);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">Graphics::context</a>-&gt;PSSetConstantBuffers(Graphics::m_cConstantBufferModelSlot,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        1, &amp;Graphics::m_constantBufferModel);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a25df37a4894475f8af90549d5fe1fa84">transform</a>-&gt;setDrawMatrix();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : m_meshRenderers)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        e-&gt;DrawManual();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : m_animationObjects)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(e.second-&gt;getIsRegisterAnimationBone()))</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                            memcpy_s(&amp;Graphics::m_setConstantBufferModel.bones[e.second-&gt;getNodeID()], <span class="keyword">sizeof</span>(<a class="code" href="struct_s_g_framework_1_1_vector4x4.html">Vector4x4</a>),</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                &amp;e.second-&gt;getGraphicsBoneMatrix(), <span class="keyword">sizeof</span>(<a class="code" href="struct_s_g_framework_1_1_vector4x4.html">Vector4x4</a>));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">Graphics::context</a>-&gt;UpdateSubresource(Graphics::m_constantBufferModel,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                        0, <span class="keyword">nullptr</span>, &amp;Graphics::m_setConstantBufferModel, 0, 0);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">Graphics::context</a>-&gt;VSSetConstantBuffers(Graphics::m_cConstantBufferModelSlot,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        1, &amp;Graphics::m_constantBufferModel);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">Graphics::context</a>-&gt;PSSetConstantBuffers(Graphics::m_cConstantBufferModelSlot,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        1, &amp;Graphics::m_constantBufferModel);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a25df37a4894475f8af90549d5fe1fa84">transform</a>-&gt;setDrawMatrix();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : m_meshRenderers)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        e-&gt;DrawManual();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            }, m_priority);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_animator.html#a3577d3ce7bad2160a6a670b2c1547113">   99</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_animator.html#a3577d3ce7bad2160a6a670b2c1547113">PlayAnimation</a>(<span class="keyword">const</span> sgstring&amp; <a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keyword">auto</span> find = m_animations.find(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">if</span> (find != m_animations.end())</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                find-&gt;second.Play();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                m_player = &amp;find-&gt;second;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_animator.html#ae69cc244803a81c408c993ffe58d3e03">  109</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_animator.html#ae69cc244803a81c408c993ffe58d3e03">PlayAnimation</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> index)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> i = 0;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : m_animations)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <span class="keywordflow">if</span> (i == index)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    e.second.Play();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    m_player = &amp;e.second;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                ++i;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_animator.html#a5162939e656616fdeec334d26f9d40f6">  125</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_animator.html#a5162939e656616fdeec334d26f9d40f6">StopAnimation</a>()</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keywordflow">if</span> (m_player)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                m_player-&gt;m_playSecondsCounter = 0.0f;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                m_player = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_animator.html#aafe7d00cce7a457598a9acd622eeed87">  134</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_animator.html#aafe7d00cce7a457598a9acd622eeed87">AddAnimation</a>(<span class="keyword">const</span> sgstring&amp; <a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>, aiAnimation* animation)</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            AtomicOperation::LockGuard guard(m_lock);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            m_animations.try_emplace(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>, std::move(<a class="code" href="class_s_g_framework_1_1_animation.html">Animation</a>(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>, animation, <a class="code" href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a25df37a4894475f8af90549d5fe1fa84">transform</a>, &amp;m_animationObjects)));</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_animator.html#ac857f915a6d321836a3f516d351b683a">  140</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_animator.html#ac857f915a6d321836a3f516d351b683a">RemoveAnimation</a>(<span class="keyword">const</span> sgstring&amp; <a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            AtomicOperation::LockGuard guard(m_lock);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            m_animations.erase(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;ModelNodeObject&gt;</a> AddAnimationObject(<a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;Transform&gt;</a> parent,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keyword">const</span> aiMatrix4x4&amp; transfomation,  std::string&amp; <a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>, <span class="keywordtype">bool</span> isCreateCopyName)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            AtomicOperation::LockGuard guard(m_lock);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            sgstring sgName(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(isCreateCopyName))</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                sgName = <a class="code" href="class_s_g_framework_1_1_object.html#a9adfd87f8eb2fc4e24efef4ba5a90d02">CreateCopyName</a>(sgName);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                <a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a> = sgName.to_std_string();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keyword">auto</span> newObject = GameObject::Instantiate&lt;ModelNodeObject&gt;(</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <a class="code" href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a>(parent.<a class="code" href="class_s_g_framework_1_1_shared_pointer.html#a1295590f5d857f59b52fd3aa68591e8b">getIsValid</a>()) ? parent : this-&gt;transform.InstantiateShared(), <span class="keyword">true</span>, sgName);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            aiVector3D position, scale;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            aiQuaternion rotation;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            transfomation.Decompose(scale, rotation, position);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            newObject-&gt;transform-&gt;setLocalPosition(position);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            newObject-&gt;transform-&gt;setLocalScale(scale);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            newObject-&gt;transform-&gt;setLocalRotation(rotation);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            m_animationObjects.try_emplace(<a class="code" href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">name</a>, newObject);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">return</span> newObject;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        std::unordered_map&lt;std::string, SharedPointer&lt;ModelNodeObject&gt;&gt; m_animationObjects;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        std::vector&lt;WeakPointer&lt;MeshRenderer&lt;Vertex::Model, Material*&gt;&gt;&gt; m_meshRenderers;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        std::unordered_map&lt;std::wstring, Animation&gt; m_animations;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        Animation* m_player = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keyword">const</span> aiScene* m_scene = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> m_priority = 0;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        std::atomic_bool m_lock;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    };</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor">#endif //!SGFRAMEWORK_HEADER_ANIMATOR_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_s_g_framework_1_1_animator_html_aafe7d00cce7a457598a9acd622eeed87"><div class="ttname"><a href="class_s_g_framework_1_1_animator.html#aafe7d00cce7a457598a9acd622eeed87">SGFramework::Animator::AddAnimation</a></div><div class="ttdeci">void AddAnimation(const sgstring &amp;name, aiAnimation *animation)</div><div class="ttdef"><b>Definition:</b> Animator.hpp:134</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animator_html_ac857f915a6d321836a3f516d351b683a"><div class="ttname"><a href="class_s_g_framework_1_1_animator.html#ac857f915a6d321836a3f516d351b683a">SGFramework::Animator::RemoveAnimation</a></div><div class="ttdeci">void RemoveAnimation(const sgstring &amp;name)</div><div class="ttdef"><b>Definition:</b> Animator.hpp:140</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_vector4x4_html"><div class="ttname"><a href="struct_s_g_framework_1_1_vector4x4.html">SGFramework::Vector4x4</a></div><div class="ttdef"><b>Definition:</b> Vector4x4.hpp:25</div></div>
+<div class="ttc" id="a_model_node_object_8hpp_html"><div class="ttname"><a href="_model_node_object_8hpp.html">ModelNodeObject.hpp</a></div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animator_html_af836171803839a061f330201571adde6"><div class="ttname"><a href="class_s_g_framework_1_1_animator.html#af836171803839a061f330201571adde6">SGFramework::Animator::MakeDrawCommand</a></div><div class="ttdeci">void MakeDrawCommand() override</div><div class="ttdef"><b>Definition:</b> Animator.hpp:46</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animator_html_a3577d3ce7bad2160a6a670b2c1547113"><div class="ttname"><a href="class_s_g_framework_1_1_animator.html#a3577d3ce7bad2160a6a670b2c1547113">SGFramework::Animator::PlayAnimation</a></div><div class="ttdeci">void PlayAnimation(const sgstring &amp;name)</div><div class="ttdef"><b>Definition:</b> Animator.hpp:99</div></div>
+<div class="ttc" id="a_animation_8hpp_html"><div class="ttname"><a href="_animation_8hpp.html">Animation.hpp</a></div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_a4568c6bb6297f3ec434778f5506dcb83"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#a4568c6bb6297f3ec434778f5506dcb83">SGFramework::Administrator::GraphicsX11::SendDrawFunction</a></div><div class="ttdeci">static void SendDrawFunction(const std::function&lt; void()&gt; drawFunctionCommand, int priority)</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:177</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html">SGFramework::SharedPointer</a></div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:22</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animator_html_ae69cc244803a81c408c993ffe58d3e03"><div class="ttname"><a href="class_s_g_framework_1_1_animator.html#ae69cc244803a81c408c993ffe58d3e03">SGFramework::Animator::PlayAnimation</a></div><div class="ttdeci">void PlayAnimation(uint index)</div><div class="ttdef"><b>Definition:</b> Animator.hpp:109</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animator_html"><div class="ttname"><a href="class_s_g_framework_1_1_animator.html">SGFramework::Animator</a></div><div class="ttdef"><b>Definition:</b> Animator.hpp:13</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_object_html_a9adfd87f8eb2fc4e24efef4ba5a90d02"><div class="ttname"><a href="class_s_g_framework_1_1_object.html#a9adfd87f8eb2fc4e24efef4ba5a90d02">SGFramework::Object::CreateCopyName</a></div><div class="ttdeci">static sgstring CreateCopyName(const sgstring &amp;name)</div><div class="ttdef"><b>Definition:</b> Object.hpp:125</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animation_html_ae55a6f05b4f5a569bbf81f3865bc5f12"><div class="ttname"><a href="class_s_g_framework_1_1_animation.html#ae55a6f05b4f5a569bbf81f3865bc5f12">SGFramework::Animation::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> Animation.hpp:58</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_html_a25df37a4894475f8af90549d5fe1fa84"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html#a25df37a4894475f8af90549d5fe1fa84">SGFramework::Administrator::GraphicsDetail::ComponentX11::transform</a></div><div class="ttdeci">WeakPointer&lt; TransformX11 &gt; transform</div><div class="ttdef"><b>Definition:</b> TransformX11.hpp:1417</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_asset_html_a546c99c6bfe199b32469e327d3b54fb8"><div class="ttname"><a href="namespace_s_g_framework_1_1_asset.html#a546c99c6bfe199b32469e327d3b54fb8">SGFramework::Asset::ModelAsset</a></div><div class="ttdeci">Administrator::GraphicsDetail::ModelAssetX11 ModelAsset</div><div class="ttdef"><b>Definition:</b> Graphics.hpp:36</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:151</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_html_a5a8f33e4b94facbe2b1cdafcdfbd6a88a32592ed1836d9517ff34742d53a15aec"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions.html#a5a8f33e4b94facbe2b1cdafcdfbd6a88a32592ed1836d9517ff34742d53a15aec">SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions::MakeDrawCommand</a></div><div class="ttdeci">@ MakeDrawCommand</div><div class="ttdef"><b>Definition:</b> TransformX11.hpp:1255</div></div>
+<div class="ttc" id="a_macro_and_using_8hpp_html_aa2eae4e8c99ada2e0afd8011beca63c4"><div class="ttname"><a href="_macro_and_using_8hpp.html#aa2eae4e8c99ada2e0afd8011beca63c4">IS_TRUE</a></div><div class="ttdeci">#define IS_TRUE(val)</div><div class="ttdoc">true判定高速化, 見やすさ向上マクロ(高速化は環境依存？)</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:64</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_weak_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_weak_pointer.html">SGFramework::WeakPointer</a></div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:266</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animator_html_a5162939e656616fdeec334d26f9d40f6"><div class="ttname"><a href="class_s_g_framework_1_1_animator.html#a5162939e656616fdeec334d26f9d40f6">SGFramework::Animator::StopAnimation</a></div><div class="ttdeci">void StopAnimation()</div><div class="ttdef"><b>Definition:</b> Animator.hpp:125</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animator_html_adac6706f3b06f57622408296a24829df"><div class="ttname"><a href="class_s_g_framework_1_1_animator.html#adac6706f3b06f57622408296a24829df">SGFramework::Animator::UpdateMatrix</a></div><div class="ttdeci">void UpdateMatrix(aiNode *node, aiMatrix4x4 &amp;worldMatrix)</div><div class="ttdef"><b>Definition:</b> Animator.hpp:35</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_x11_html_abec131015d4fea236a329f1fb5f18c45"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_x11.html#abec131015d4fea236a329f1fb5f18c45">SGFramework::Administrator::GraphicsX11::context</a></div><div class="ttdeci">static PointerProperty&lt; ID3D11DeviceContext * &gt; context</div><div class="ttdef"><b>Definition:</b> GraphicsX11.hpp:80</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html_a1295590f5d857f59b52fd3aa68591e8b"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html#a1295590f5d857f59b52fd3aa68591e8b">SGFramework::SharedPointer::getIsValid</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY bool getIsValid() const noexcept</div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:83</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animator_html_a889583f99e4dee252211f2181a0ed560"><div class="ttname"><a href="class_s_g_framework_1_1_animator.html#a889583f99e4dee252211f2181a0ed560">SGFramework::Animator::EnableCallbacks</a></div><div class="ttdeci">virtual uint EnableCallbacks()</div><div class="ttdef"><b>Definition:</b> Animator.hpp:20</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_object_html_a81c886cd57a3c42b7e2ed81c0ad978f5"><div class="ttname"><a href="class_s_g_framework_1_1_object.html#a81c886cd57a3c42b7e2ed81c0ad978f5">SGFramework::Object::name</a></div><div class="ttdeci">GetOnlyProperty&lt; sgstring &gt; name</div><div class="ttdef"><b>Definition:</b> Object.hpp:68</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animator_html_a28dbd3287238a5612e10a69572ddcd84"><div class="ttname"><a href="class_s_g_framework_1_1_animator.html#a28dbd3287238a5612e10a69572ddcd84">SGFramework::Animator::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdef"><b>Definition:</b> Animator.hpp:24</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_html"><div class="ttname"><a href="class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11.html">SGFramework::Administrator::GraphicsDetail::ComponentX11</a></div><div class="ttdef"><b>Definition:</b> TransformX11.hpp:1222</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions_html_a5a8f33e4b94facbe2b1cdafcdfbd6a88a329b760b89275b4a429a2477452e7335"><div class="ttname"><a href="struct_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_1_1_callback_functions.html#a5a8f33e4b94facbe2b1cdafcdfbd6a88a329b760b89275b4a429a2477452e7335">SGFramework::Administrator::GraphicsDetail::ComponentX11::CallbackFunctions::Update</a></div><div class="ttdeci">@ Update</div><div class="ttdef"><b>Definition:</b> TransformX11.hpp:1249</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_animation_html"><div class="ttname"><a href="class_s_g_framework_1_1_animation.html">SGFramework::Animation</a></div><div class="ttdef"><b>Definition:</b> Animation.hpp:11</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

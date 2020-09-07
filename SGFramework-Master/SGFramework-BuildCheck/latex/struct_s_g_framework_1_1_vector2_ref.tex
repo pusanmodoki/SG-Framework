@@ -1,0 +1,575 @@
+\hypertarget{struct_s_g_framework_1_1_vector2_ref}{}\doxysection{S\+G\+Framework\+::Vector2\+Ref 構造体}
+\label{struct_s_g_framework_1_1_vector2_ref}\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+
+
+{\ttfamily \#include $<$Vector2\+Ref.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a6c4c68bce64333892d1f4e8d207d1608}{Vector2\+Ref}} (float \&\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a20eb089ca95248546ff35c22fb0cdbdd}{x}}, float \&\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a8653279baab82042fc4b1ce7372fac71}{y}})
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_acd04e671dccaab162648d44808da9186}{Vector2\+Ref}} (Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&value)
+\item 
+Xm\+Vector \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a6cec5272e3f778b1cfbfcd38c640a5e4}{To\+Xm\+Vector}} () const noexcept
+\item 
+physx\+::\+Px\+Vec2 \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a0da7883be02f8c49407be24ba55957d4}{To\+PhysX}} () const noexcept
+\item 
+ai\+Vector2D \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_ae3c80a1e664277764e6f97763d6515f7}{To\+Assimp}} () const noexcept
+\item 
+Im\+Vec2 \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a605d2e031c3de62d62dab82d07afafc5}{To\+Im\+Gui}} () const noexcept
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a3123350173490d9785b5f9d9e5c49067}{Vector2\+Ref}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&)=default
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a2274d78990477495076cdd477c44ecfd}{operator=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&)=default
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_adbd28c374f8f6867bc0811623b55d737}{Vector2\+Ref}} (\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&\&)=default
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a84d463060bc8bc204c7b3962f88f76de}{operator=}} (\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&\&)=default
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_ab1481ccdda04f56b89abae867d58c6c3}{Absolute}} () const noexcept
+\item 
+constexpr float \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a015940e7736680efd3e5381ab077ebf4}{Magnitude}} () const noexcept
+\item 
+float \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a30b78c748350b6f168bd20de653ce3a1}{Exact\+Magnitude}} () const noexcept
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a6f546bd2430aff2872f0f0bf2a69dd8a}{Clamp\+Magnitude}} (const float max\+Length) const noexcept
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a7b480035947bcf0672d3136a8b02f198}{Normalized}} () const noexcept
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a6ff042d37a06fd8b9dfcd8fec1f29a56}{operator Xm\+Vector}} () const noexcept
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a9235d28e7af97e4ce070bf34ea36da33}{operator+}} () const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_ae7b2ea192296e87eb8f678019ca5a259}{operator-\/}} () const
+\item 
+bool \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a2004e19000f14ec2a7c0d5aa696abe8a}{operator==}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&vec) const
+\item 
+bool \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_af1200cff281a0319184f9a556c2ade75}{operator!=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&vec) const
+\begin{DoxyCompactList}\small\item\em =オペレーター \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a398b263eb8f0f6f34ec55ecc398fe084}{operator+}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&vec) const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_ab6ea53aefeeb3475c7346edcd29cdb81}{operator-\/}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&vec) const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a764b39f9bfa13db3c2d8744daef9dccd}{operator$\ast$}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&vec) const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_ac55c64e82c7db76e67cea0b71ac7ecca}{operator$\ast$}} (float value) const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a8db25d49abe6a37adbe9620312196bf7}{operator/}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&vec) const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_ad33d2c51ad459284364ffdac96f1165e}{operator/}} (float value) const
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a21e548afc7f66e6cfc9b4fd613250e77}{operator+=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&vec)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a5745e7e93780816b0b47b9c92e9b6f0b}{operator-\/=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&vec)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a1578e383914d01cb8d083419c6a2bc0c}{operator$\ast$=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&vec)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a7a3bf4608e96a88c13ce0a1f58012d7f}{operator$\ast$=}} (float value)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a7e3daf89ac7a7439ca639e47bdcfb5ee}{operator/=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&vec)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_ad644cec35c706619d6304a9e12ae2b23}{operator/=}} (float value)
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_ac95c272fb6ff3f2824f51959652f5e2d}{operator sgstring}} () const
+\item 
+sgstring \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a3f7031cce1663f9ede3c5875793a6d34}{To\+String}} () const
+\item 
+std\+::string \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_aa3c4d8a726703749c1f71bf7c487e52b}{To\+Std\+String}} () const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_ae98ef9dc000ffed62eb62b847f363765}{Vector2\+Ref}} (\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&value)
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a1d0be58a23992476018247bce3df2e69}{To\+Vector2}} () const
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a74c37feb750913407a562acc01276bda}{operator=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&vec)
+\item 
+bool \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a9b239e61a469817596aeac1884643209}{operator==}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&vec) const
+\item 
+bool \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a2a12dc935006ee79ec6a090bc50b0381}{operator!=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&vec) const
+\begin{DoxyCompactList}\small\item\em =オペレーター \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_aec4e798d4c53ca3aff875e955de1088a}{operator+}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&vec) const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a38a8f01c60ebc88ea9e8d1c72a0e74f5}{operator-\/}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&vec) const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_ad9b3b94163c89be55e818d520374369d}{operator$\ast$}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&vec) const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a9c800c6454334c3a94f0b4cb6035443b}{operator/}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&vec) const
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a6414622644dc9d8ff78033707390dbe3}{operator+=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&vec)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a7ab54e9c0572b374aefe1742675b4146}{operator-\/=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&vec)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a79e1cccab78bc909dc29c354425f7785}{operator$\ast$=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&vec)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a2e1e6a28cdff4f9260eef01bc6870e72}{operator/=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&vec)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_ad423a9aa5d33fcaf9178b2c8433b8901}{operator=}} (const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&vec)
+\item 
+bool \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_adca04f0814aff057e921b053e7d41c92}{operator==}} (const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&vec) const
+\item 
+bool \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a79f0fbd64d54e2522bec1b707d34d0b6}{operator!=}} (const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&vec) const
+\begin{DoxyCompactList}\small\item\em =オペレーター \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a6a9a8b076f6f474e3ce7fc097dac89ed}{operator+}} (const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&vec) const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_aab0ced451dee29d4484c5d59fb5c8c23}{operator-\/}} (const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&vec) const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a28a1e71fe944d280dd1f6a2212b7e1a4}{operator$\ast$}} (const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&vec) const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_aed7e1a600699b3cfe9ed94d3cf933007}{operator/}} (const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&vec) const
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a5db1c5069236a4a3262c459fe3ede33c}{operator+=}} (const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&vec)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a4709986c5f2e48edc7c1be0303f49dc0}{operator-\/=}} (const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&vec)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a5916bc7c50bb06330ebde7e792ab327e}{operator$\ast$=}} (const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&vec)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a959b2c1792393761b4adbad9e34bc8de}{operator/=}} (const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&vec)
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a80d855c5fede58bed2502a3bb2f4e6e8}{operator Vector3}} () const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_ac7a03a51d40e28b9af32b151465136e7}{operator Vector4}} () const
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a022ab1130475d34201f4cbff1122545d}{operator Vector2\+Int}} () const
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_ab9e09e8cef823ff255993dd2344c2465}{operator=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&vec)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a7b9235dc57e22f177e24d7813a1e225a}{operator=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector4}{Vector4}} \&vec)
+\item 
+const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a30655e0d662cfb472a064335c5a6190b}{operator=}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_int}{Vector2\+Int}} \&vec)
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+float \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a20eb089ca95248546ff35c22fb0cdbdd}{x}}
+\item 
+float \& \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref_a8653279baab82042fc4b1ce7372fac71}{y}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a6c4c68bce64333892d1f4e8d207d1608}\label{struct_s_g_framework_1_1_vector2_ref_a6c4c68bce64333892d1f4e8d207d1608}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!Vector2Ref@{Vector2Ref}}
+\index{Vector2Ref@{Vector2Ref}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{Vector2Ref()}{Vector2Ref()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Vector2\+Ref\+::\+Vector2\+Ref (\begin{DoxyParamCaption}\item[{float \&}]{x,  }\item[{float \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_acd04e671dccaab162648d44808da9186}\label{struct_s_g_framework_1_1_vector2_ref_acd04e671dccaab162648d44808da9186}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!Vector2Ref@{Vector2Ref}}
+\index{Vector2Ref@{Vector2Ref}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{Vector2Ref()}{Vector2Ref()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Vector2\+Ref\+::\+Vector2\+Ref (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a3123350173490d9785b5f9d9e5c49067}\label{struct_s_g_framework_1_1_vector2_ref_a3123350173490d9785b5f9d9e5c49067}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!Vector2Ref@{Vector2Ref}}
+\index{Vector2Ref@{Vector2Ref}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{Vector2Ref()}{Vector2Ref()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Vector2\+Ref\+::\+Vector2\+Ref (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_adbd28c374f8f6867bc0811623b55d737}\label{struct_s_g_framework_1_1_vector2_ref_adbd28c374f8f6867bc0811623b55d737}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!Vector2Ref@{Vector2Ref}}
+\index{Vector2Ref@{Vector2Ref}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{Vector2Ref()}{Vector2Ref()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Vector2\+Ref\+::\+Vector2\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_ae98ef9dc000ffed62eb62b847f363765}\label{struct_s_g_framework_1_1_vector2_ref_ae98ef9dc000ffed62eb62b847f363765}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!Vector2Ref@{Vector2Ref}}
+\index{Vector2Ref@{Vector2Ref}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{Vector2Ref()}{Vector2Ref()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Vector2\+Ref\+::\+Vector2\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_ab1481ccdda04f56b89abae867d58c6c3}\label{struct_s_g_framework_1_1_vector2_ref_ab1481ccdda04f56b89abae867d58c6c3}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!Absolute@{Absolute}}
+\index{Absolute@{Absolute}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{Absolute()}{Absolute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::\+Absolute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a6f546bd2430aff2872f0f0bf2a69dd8a}\label{struct_s_g_framework_1_1_vector2_ref_a6f546bd2430aff2872f0f0bf2a69dd8a}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!ClampMagnitude@{ClampMagnitude}}
+\index{ClampMagnitude@{ClampMagnitude}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{ClampMagnitude()}{ClampMagnitude()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::\+Clamp\+Magnitude (\begin{DoxyParamCaption}\item[{const float}]{max\+Length }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a30b78c748350b6f168bd20de653ce3a1}\label{struct_s_g_framework_1_1_vector2_ref_a30b78c748350b6f168bd20de653ce3a1}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!ExactMagnitude@{ExactMagnitude}}
+\index{ExactMagnitude@{ExactMagnitude}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{ExactMagnitude()}{ExactMagnitude()}}
+{\footnotesize\ttfamily float S\+G\+Framework\+::\+Vector2\+Ref\+::\+Exact\+Magnitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a015940e7736680efd3e5381ab077ebf4}\label{struct_s_g_framework_1_1_vector2_ref_a015940e7736680efd3e5381ab077ebf4}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!Magnitude@{Magnitude}}
+\index{Magnitude@{Magnitude}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{Magnitude()}{Magnitude()}}
+{\footnotesize\ttfamily constexpr float S\+G\+Framework\+::\+Vector2\+Ref\+::\+Magnitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a7b480035947bcf0672d3136a8b02f198}\label{struct_s_g_framework_1_1_vector2_ref_a7b480035947bcf0672d3136a8b02f198}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!Normalized@{Normalized}}
+\index{Normalized@{Normalized}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{Normalized()}{Normalized()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::\+Normalized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_ac95c272fb6ff3f2824f51959652f5e2d}\label{struct_s_g_framework_1_1_vector2_ref_ac95c272fb6ff3f2824f51959652f5e2d}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator sgstring@{operator sgstring}}
+\index{operator sgstring@{operator sgstring}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator sgstring()}{operator sgstring()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Vector2\+Ref\+::operator sgstring (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a022ab1130475d34201f4cbff1122545d}\label{struct_s_g_framework_1_1_vector2_ref_a022ab1130475d34201f4cbff1122545d}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator Vector2Int@{operator Vector2Int}}
+\index{operator Vector2Int@{operator Vector2Int}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator Vector2Int()}{operator Vector2Int()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Vector2\+Ref\+::operator \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_int}{Vector2\+Int}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a80d855c5fede58bed2502a3bb2f4e6e8}\label{struct_s_g_framework_1_1_vector2_ref_a80d855c5fede58bed2502a3bb2f4e6e8}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator Vector3@{operator Vector3}}
+\index{operator Vector3@{operator Vector3}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator Vector3()}{operator Vector3()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Vector2\+Ref\+::operator \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_ac7a03a51d40e28b9af32b151465136e7}\label{struct_s_g_framework_1_1_vector2_ref_ac7a03a51d40e28b9af32b151465136e7}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator Vector4@{operator Vector4}}
+\index{operator Vector4@{operator Vector4}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator Vector4()}{operator Vector4()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Vector2\+Ref\+::operator \mbox{\hyperlink{struct_s_g_framework_1_1_vector4}{Vector4}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a6ff042d37a06fd8b9dfcd8fec1f29a56}\label{struct_s_g_framework_1_1_vector2_ref_a6ff042d37a06fd8b9dfcd8fec1f29a56}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator XmVector@{operator XmVector}}
+\index{operator XmVector@{operator XmVector}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator XmVector()}{operator XmVector()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Vector2\+Ref\+::operator Xm\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a79f0fbd64d54e2522bec1b707d34d0b6}\label{struct_s_g_framework_1_1_vector2_ref_a79f0fbd64d54e2522bec1b707d34d0b6}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Vector2\+Ref\+::operator!= (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+=オペレーター 
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a2a12dc935006ee79ec6a090bc50b0381}\label{struct_s_g_framework_1_1_vector2_ref_a2a12dc935006ee79ec6a090bc50b0381}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Vector2\+Ref\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+=オペレーター 
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_af1200cff281a0319184f9a556c2ade75}\label{struct_s_g_framework_1_1_vector2_ref_af1200cff281a0319184f9a556c2ade75}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Vector2\+Ref\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+=オペレーター 
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a28a1e71fe944d280dd1f6a2212b7e1a4}\label{struct_s_g_framework_1_1_vector2_ref_a28a1e71fe944d280dd1f6a2212b7e1a4}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_ad9b3b94163c89be55e818d520374369d}\label{struct_s_g_framework_1_1_vector2_ref_ad9b3b94163c89be55e818d520374369d}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a764b39f9bfa13db3c2d8744daef9dccd}\label{struct_s_g_framework_1_1_vector2_ref_a764b39f9bfa13db3c2d8744daef9dccd}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_ac55c64e82c7db76e67cea0b71ac7ecca}\label{struct_s_g_framework_1_1_vector2_ref_ac55c64e82c7db76e67cea0b71ac7ecca}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a5916bc7c50bb06330ebde7e792ab327e}\label{struct_s_g_framework_1_1_vector2_ref_a5916bc7c50bb06330ebde7e792ab327e}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a79e1cccab78bc909dc29c354425f7785}\label{struct_s_g_framework_1_1_vector2_ref_a79e1cccab78bc909dc29c354425f7785}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a1578e383914d01cb8d083419c6a2bc0c}\label{struct_s_g_framework_1_1_vector2_ref_a1578e383914d01cb8d083419c6a2bc0c}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a7a3bf4608e96a88c13ce0a1f58012d7f}\label{struct_s_g_framework_1_1_vector2_ref_a7a3bf4608e96a88c13ce0a1f58012d7f}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a9235d28e7af97e4ce070bf34ea36da33}\label{struct_s_g_framework_1_1_vector2_ref_a9235d28e7af97e4ce070bf34ea36da33}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator+@{operator+}}
+\index{operator+@{operator+}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a6a9a8b076f6f474e3ce7fc097dac89ed}\label{struct_s_g_framework_1_1_vector2_ref_a6a9a8b076f6f474e3ce7fc097dac89ed}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator+@{operator+}}
+\index{operator+@{operator+}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator+ (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_aec4e798d4c53ca3aff875e955de1088a}\label{struct_s_g_framework_1_1_vector2_ref_aec4e798d4c53ca3aff875e955de1088a}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator+@{operator+}}
+\index{operator+@{operator+}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a398b263eb8f0f6f34ec55ecc398fe084}\label{struct_s_g_framework_1_1_vector2_ref_a398b263eb8f0f6f34ec55ecc398fe084}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator+@{operator+}}
+\index{operator+@{operator+}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a5db1c5069236a4a3262c459fe3ede33c}\label{struct_s_g_framework_1_1_vector2_ref_a5db1c5069236a4a3262c459fe3ede33c}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator+= (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a6414622644dc9d8ff78033707390dbe3}\label{struct_s_g_framework_1_1_vector2_ref_a6414622644dc9d8ff78033707390dbe3}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a21e548afc7f66e6cfc9b4fd613250e77}\label{struct_s_g_framework_1_1_vector2_ref_a21e548afc7f66e6cfc9b4fd613250e77}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_ae7b2ea192296e87eb8f678019ca5a259}\label{struct_s_g_framework_1_1_vector2_ref_ae7b2ea192296e87eb8f678019ca5a259}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_aab0ced451dee29d4484c5d59fb5c8c23}\label{struct_s_g_framework_1_1_vector2_ref_aab0ced451dee29d4484c5d59fb5c8c23}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator-\/ (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a38a8f01c60ebc88ea9e8d1c72a0e74f5}\label{struct_s_g_framework_1_1_vector2_ref_a38a8f01c60ebc88ea9e8d1c72a0e74f5}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_ab6ea53aefeeb3475c7346edcd29cdb81}\label{struct_s_g_framework_1_1_vector2_ref_ab6ea53aefeeb3475c7346edcd29cdb81}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a4709986c5f2e48edc7c1be0303f49dc0}\label{struct_s_g_framework_1_1_vector2_ref_a4709986c5f2e48edc7c1be0303f49dc0}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator-\/= (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a7ab54e9c0572b374aefe1742675b4146}\label{struct_s_g_framework_1_1_vector2_ref_a7ab54e9c0572b374aefe1742675b4146}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a5745e7e93780816b0b47b9c92e9b6f0b}\label{struct_s_g_framework_1_1_vector2_ref_a5745e7e93780816b0b47b9c92e9b6f0b}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_aed7e1a600699b3cfe9ed94d3cf933007}\label{struct_s_g_framework_1_1_vector2_ref_aed7e1a600699b3cfe9ed94d3cf933007}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator/@{operator/}}
+\index{operator/@{operator/}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator/ (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a9c800c6454334c3a94f0b4cb6035443b}\label{struct_s_g_framework_1_1_vector2_ref_a9c800c6454334c3a94f0b4cb6035443b}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator/@{operator/}}
+\index{operator/@{operator/}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a8db25d49abe6a37adbe9620312196bf7}\label{struct_s_g_framework_1_1_vector2_ref_a8db25d49abe6a37adbe9620312196bf7}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator/@{operator/}}
+\index{operator/@{operator/}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_ad33d2c51ad459284364ffdac96f1165e}\label{struct_s_g_framework_1_1_vector2_ref_ad33d2c51ad459284364ffdac96f1165e}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator/@{operator/}}
+\index{operator/@{operator/}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::operator/ (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a959b2c1792393761b4adbad9e34bc8de}\label{struct_s_g_framework_1_1_vector2_ref_a959b2c1792393761b4adbad9e34bc8de}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator/= (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a2e1e6a28cdff4f9260eef01bc6870e72}\label{struct_s_g_framework_1_1_vector2_ref_a2e1e6a28cdff4f9260eef01bc6870e72}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a7e3daf89ac7a7439ca639e47bdcfb5ee}\label{struct_s_g_framework_1_1_vector2_ref_a7e3daf89ac7a7439ca639e47bdcfb5ee}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_ad644cec35c706619d6304a9e12ae2b23}\label{struct_s_g_framework_1_1_vector2_ref_ad644cec35c706619d6304a9e12ae2b23}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator/= (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_ad423a9aa5d33fcaf9178b2c8433b8901}\label{struct_s_g_framework_1_1_vector2_ref_ad423a9aa5d33fcaf9178b2c8433b8901}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator= (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a74c37feb750913407a562acc01276bda}\label{struct_s_g_framework_1_1_vector2_ref_a74c37feb750913407a562acc01276bda}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a30655e0d662cfb472a064335c5a6190b}\label{struct_s_g_framework_1_1_vector2_ref_a30655e0d662cfb472a064335c5a6190b}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_int}{Vector2\+Int}} \&}]{vec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a2274d78990477495076cdd477c44ecfd}\label{struct_s_g_framework_1_1_vector2_ref_a2274d78990477495076cdd477c44ecfd}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}}\& S\+G\+Framework\+::\+Vector2\+Ref\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_ab9e09e8cef823ff255993dd2344c2465}\label{struct_s_g_framework_1_1_vector2_ref_ab9e09e8cef823ff255993dd2344c2465}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{vec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a7b9235dc57e22f177e24d7813a1e225a}\label{struct_s_g_framework_1_1_vector2_ref_a7b9235dc57e22f177e24d7813a1e225a}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \& S\+G\+Framework\+::\+Vector2\+Ref\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector4}{Vector4}} \&}]{vec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a84d463060bc8bc204c7b3962f88f76de}\label{struct_s_g_framework_1_1_vector2_ref_a84d463060bc8bc204c7b3962f88f76de}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator=@{operator=}}
+\index{operator=@{operator=}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}}\& S\+G\+Framework\+::\+Vector2\+Ref\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_adca04f0814aff057e921b053e7d41c92}\label{struct_s_g_framework_1_1_vector2_ref_adca04f0814aff057e921b053e7d41c92}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator==@{operator==}}
+\index{operator==@{operator==}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Vector2\+Ref\+::operator== (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+X\+M\+F\+L\+O\+A\+T2 \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a9b239e61a469817596aeac1884643209}\label{struct_s_g_framework_1_1_vector2_ref_a9b239e61a469817596aeac1884643209}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator==@{operator==}}
+\index{operator==@{operator==}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Vector2\+Ref\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a2004e19000f14ec2a7c0d5aa696abe8a}\label{struct_s_g_framework_1_1_vector2_ref_a2004e19000f14ec2a7c0d5aa696abe8a}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!operator==@{operator==}}
+\index{operator==@{operator==}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Vector2\+Ref\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector2_ref}{Vector2\+Ref}} \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_ae3c80a1e664277764e6f97763d6515f7}\label{struct_s_g_framework_1_1_vector2_ref_ae3c80a1e664277764e6f97763d6515f7}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!ToAssimp@{ToAssimp}}
+\index{ToAssimp@{ToAssimp}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{ToAssimp()}{ToAssimp()}}
+{\footnotesize\ttfamily ai\+Vector2D S\+G\+Framework\+::\+Vector2\+Ref\+::\+To\+Assimp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a605d2e031c3de62d62dab82d07afafc5}\label{struct_s_g_framework_1_1_vector2_ref_a605d2e031c3de62d62dab82d07afafc5}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!ToImGui@{ToImGui}}
+\index{ToImGui@{ToImGui}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{ToImGui()}{ToImGui()}}
+{\footnotesize\ttfamily Im\+Vec2 S\+G\+Framework\+::\+Vector2\+Ref\+::\+To\+Im\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a0da7883be02f8c49407be24ba55957d4}\label{struct_s_g_framework_1_1_vector2_ref_a0da7883be02f8c49407be24ba55957d4}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!ToPhysX@{ToPhysX}}
+\index{ToPhysX@{ToPhysX}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{ToPhysX()}{ToPhysX()}}
+{\footnotesize\ttfamily physx\+::\+Px\+Vec2 S\+G\+Framework\+::\+Vector2\+Ref\+::\+To\+PhysX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_aa3c4d8a726703749c1f71bf7c487e52b}\label{struct_s_g_framework_1_1_vector2_ref_aa3c4d8a726703749c1f71bf7c487e52b}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!ToStdString@{ToStdString}}
+\index{ToStdString@{ToStdString}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{ToStdString()}{ToStdString()}}
+{\footnotesize\ttfamily std\+::string S\+G\+Framework\+::\+Vector2\+Ref\+::\+To\+Std\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a3f7031cce1663f9ede3c5875793a6d34}\label{struct_s_g_framework_1_1_vector2_ref_a3f7031cce1663f9ede3c5875793a6d34}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!ToString@{ToString}}
+\index{ToString@{ToString}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily sgstring S\+G\+Framework\+::\+Vector2\+Ref\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a1d0be58a23992476018247bce3df2e69}\label{struct_s_g_framework_1_1_vector2_ref_a1d0be58a23992476018247bce3df2e69}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!ToVector2@{ToVector2}}
+\index{ToVector2@{ToVector2}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{ToVector2()}{ToVector2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector2}{Vector2}} S\+G\+Framework\+::\+Vector2\+Ref\+::\+To\+Vector2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a6cec5272e3f778b1cfbfcd38c640a5e4}\label{struct_s_g_framework_1_1_vector2_ref_a6cec5272e3f778b1cfbfcd38c640a5e4}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!ToXmVector@{ToXmVector}}
+\index{ToXmVector@{ToXmVector}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{ToXmVector()}{ToXmVector()}}
+{\footnotesize\ttfamily Xm\+Vector S\+G\+Framework\+::\+Vector2\+Ref\+::\+To\+Xm\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a20eb089ca95248546ff35c22fb0cdbdd}\label{struct_s_g_framework_1_1_vector2_ref_a20eb089ca95248546ff35c22fb0cdbdd}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!x@{x}}
+\index{x@{x}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float\& S\+G\+Framework\+::\+Vector2\+Ref\+::x}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vector2_ref_a8653279baab82042fc4b1ce7372fac71}\label{struct_s_g_framework_1_1_vector2_ref_a8653279baab82042fc4b1ce7372fac71}} 
+\index{SGFramework::Vector2Ref@{SGFramework::Vector2Ref}!y@{y}}
+\index{y@{y}!SGFramework::Vector2Ref@{SGFramework::Vector2Ref}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float\& S\+G\+Framework\+::\+Vector2\+Ref\+::y}
+
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Vector/\+Vector2/\+Ref/\mbox{\hyperlink{_vector2_ref_8hpp}{Vector2\+Ref.\+hpp}}\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Vector/\+Vector2/\+Ref/\mbox{\hyperlink{_vector2_ref_8cpp}{Vector2\+Ref.\+cpp}}\end{DoxyCompactItemize}

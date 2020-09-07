@@ -1,0 +1,517 @@
+\hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider}{}\doxysection{S\+G\+Framework\+::Base\+Class\+::Base\+Collider クラス}
+\label{class_s_g_framework_1_1_base_class_1_1_base_collider}\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+
+
+{\ttfamily \#include $<$Base\+Collider.\+hpp$>$}
+
+S\+G\+Framework\+::Base\+Class\+::Base\+Collider の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.551247cm]{class_s_g_framework_1_1_base_class_1_1_base_collider}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY physx\+::\+Px\+Shape \& \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a5597797b99e51c8e8385effc05483f96}{get\+PhysX}} () const
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_af01d305c720243a4d8596b5848560050}{get\+Center}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_ad5c057177726dc41477909652f5d6d6e}{set\+Center}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&set)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a7f80cd2c5e4e4d0fe2b905c703f1373b}{Collider\+Type}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_aa73e40fc577026e9fc8238508df08cc5}{get\+Collider\+Type}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_ac927ad093045776c18fd4e3423df13a8}{get\+Is\+Builded}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_ab59532efbde8e952e9b2f73d74d92ff3}{get\+Is\+Linked\+Rigid\+Body}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a9fd2ad9f3dc32caaa988c1d08b270944}{get\+Is\+Trigger}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a045343e6b758aaf8219d0ab98f3d3024}{set\+Is\+Trigger}} (bool set)
+\item 
+virtual S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a8a924749efea1d70dc6a0174c784d12b}{get\+Is\+Static\+Onlly}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a6d6654de5eed6cf87cca21b65cf26803}{attached\+Rigid\+Body\+Transform}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body}{Base\+Class\+::\+Base\+Rigid\+Body}} $>$ $>$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_aa4d17c00ce93fa4b586432f6af212eaa}{rigid\+Body}}
+\end{DoxyCompactItemize}
+\doxysubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a1b66c5d49e6cebf4b53602e61fc2f240}{Base\+Collider}} ()
+\item 
+\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a53fbef9eacd10228246dade2869bf519}{Enable\+Callbacks}} () override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_aafc616b4ddbae52a85f45605cf3f94e5}{Get\+Actor}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a31ffa444042b81d9a7fc20c31491f9b7}{On\+Destroy}} () override
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a87f6447c8ff07f86a52f1532863d2e94}{Change\+Upper\+Hierarchy}} (\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$ new\+Parent, \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$ old\+Parent) override
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a5e1688f246703566dbcbfc21ae87f981}{Create\+Shape}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_ac87511c7a8c1b30c506f4c8b8d73d777}{Change\+Scale}} ()=0
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_aab159a04b27ef49172d94d78194ab714}{Init\+Filter\+Mask}} (bool is\+Used\+Callback)
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_ade4a79751be8af8c270b0a18036381fd}{Calculate\+Center}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_abe6d443d9786704c587393d8e26ff764}{Update\+Physics}} ()
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a142254c5cd99b5651735b101ec1439ce}{Transfer\+Rigid\+Body}} (const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$ \&new\+Rigid\+Body\+Transform, const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body}{Base\+Class\+::\+Base\+Rigid\+Body}} $>$ \&new\+Rigid\+Body)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a3b4cf72e650c6cca9ee76666b17b70df}{On\+Enable}} () override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a3194688a5244a301a4ae489c4b032446}{Start}} () override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a4b9044eb8f6bf22cb7a9c5ff35b35e76}{Update}} () override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a796fc9e7998718587a4177520569c205}{Sync}} () override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a42f1d3847da479834bb2b048fd0cb5b9}{Late\+Update}} () override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a2aca02c052b3e7e25d1488268ea9a819}{Fixed\+Update}} () override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a6fa2b68b2de1a8c65fe61db1c40ed8f0}{Make\+Draw\+Command}} () override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a4c7a18c10bcb78faaee2c3cce80b26b8}{On\+Disable}} () override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_ae9facccac55054e3fd371ad421ec4095}{On\+Collision\+Enter}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&contact\+Info) override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a37bbb1f016ca7d1c5fd4010e10fc9288}{On\+Collision\+Stay}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&contact\+Info) override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_ae54a7dc79dd49200199e77761f100a15}{On\+Collision\+Exit}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&contact\+Info) override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a90e12ac655df71576200118468c8b26c}{On\+Trigger\+Enter}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&contact\+Info) override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_ae8d425c8a3176a9a6da27dabe12c3cb6}{On\+Trigger\+Stay}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&contact\+Info) override
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a7cdeed47a6250560bae4ed9a0394c455}{On\+Trigger\+Exit}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&contact\+Info) override
+\end{DoxyCompactItemize}
+\doxysubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a8c2e6885109a6f43c6f09b773a0f0d3b}{m\+\_\+rigid\+Body\+Transform}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body}{Base\+Class\+::\+Base\+Rigid\+Body}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_af85d2f662862253ebe2236a2954e4220}{m\+\_\+rigid\+Body}}
+\item 
+physx\+::\+Px\+Shape $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a47fca3bebacd500988734532b43bc0fd}{m\+\_\+shape}} = nullptr
+\item 
+physx\+::\+Px\+Rigid\+Actor $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a49bfc51a199036e1d6e1ec6360e7d05c}{m\+\_\+actor}} = nullptr
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_physics_material}{Physics\+Material}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a3f71432a3591fbf91907b2586f0876f2}{m\+\_\+material}}
+\item 
+\mbox{\hyperlink{namespace_s_g_framework_a7f80cd2c5e4e4d0fe2b905c703f1373b}{Collider\+Type}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a46561004bf409ac5de96d158ed36b047}{m\+\_\+type}} = \mbox{\hyperlink{namespace_s_g_framework_a7f80cd2c5e4e4d0fe2b905c703f1373bab7095f057db3fefa7325ad93a04e14fd}{Collider\+Type\+::\+Invalid}}
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a397ac1e781b06717e3710990b0c858bc}{m\+\_\+center}} = \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a069fd0a9a9c80d1a7b8e73bc45198b3e}{m\+\_\+is\+Equal\+Rigid\+Transform}} = false
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a7e6572b4218664c999b87bc067ce4794}{m\+\_\+is\+Link\+Rigid\+Body}} = false
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_afb1cbe4ddd0bacf3060cb5657f346d67}{m\+\_\+is\+Un\+Linked}} = false
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a4436279e90304731e2b6e8cdd9ba4b7c}{m\+\_\+is\+Trigger}} = false
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a1bbddb1fad958597a83eeb1118ea4863}{m\+\_\+is\+Used\+Callback}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a980bc94d0820f3318abdfbfbcbf05a0d}{Base\+Rigid\+Body}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_collider_a2bfcbae6c8e1d7af93c5ac1200b1535c}{Physics}}
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a1b66c5d49e6cebf4b53602e61fc2f240}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a1b66c5d49e6cebf4b53602e61fc2f240}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!BaseCollider@{BaseCollider}}
+\index{BaseCollider@{BaseCollider}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{BaseCollider()}{BaseCollider()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Base\+Collider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_ade4a79751be8af8c270b0a18036381fd}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_ade4a79751be8af8c270b0a18036381fd}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!CalculateCenter@{CalculateCenter}}
+\index{CalculateCenter@{CalculateCenter}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{CalculateCenter()}{CalculateCenter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Calculate\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_ac87511c7a8c1b30c506f4c8b8d73d777}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_ac87511c7a8c1b30c506f4c8b8d73d777}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!ChangeScale@{ChangeScale}}
+\index{ChangeScale@{ChangeScale}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{ChangeScale()}{ChangeScale()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Change\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a87f6447c8ff07f86a52f1532863d2e94}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a87f6447c8ff07f86a52f1532863d2e94}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!ChangeUpperHierarchy@{ChangeUpperHierarchy}}
+\index{ChangeUpperHierarchy@{ChangeUpperHierarchy}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{ChangeUpperHierarchy()}{ChangeUpperHierarchy()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Change\+Upper\+Hierarchy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$}]{new\+Parent,  }\item[{\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$}]{old\+Parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a13a0250926c4af3402e2b4135498a6e7}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a5e1688f246703566dbcbfc21ae87f981}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a5e1688f246703566dbcbfc21ae87f981}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!CreateShape@{CreateShape}}
+\index{CreateShape@{CreateShape}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{CreateShape()}{CreateShape()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Create\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a53fbef9eacd10228246dade2869bf519}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a53fbef9eacd10228246dade2869bf519}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!EnableCallbacks@{EnableCallbacks}}
+\index{EnableCallbacks@{EnableCallbacks}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{EnableCallbacks()}{EnableCallbacks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Enable\+Callbacks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a988d769ab40083ac08a03485703864a0}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a2aca02c052b3e7e25d1488268ea9a819}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a2aca02c052b3e7e25d1488268ea9a819}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a6e204f74d959f84dec480970d9a69e4a}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_aafc616b4ddbae52a85f45605cf3f94e5}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_aafc616b4ddbae52a85f45605cf3f94e5}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!GetActor@{GetActor}}
+\index{GetActor@{GetActor}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{GetActor()}{GetActor()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Get\+Actor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_af01d305c720243a4d8596b5848560050}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_af01d305c720243a4d8596b5848560050}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::get\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_aa73e40fc577026e9fc8238508df08cc5}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_aa73e40fc577026e9fc8238508df08cc5}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!getColliderType@{getColliderType}}
+\index{getColliderType@{getColliderType}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{getColliderType()}{getColliderType()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a7f80cd2c5e4e4d0fe2b905c703f1373b}{Collider\+Type}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::get\+Collider\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_ac927ad093045776c18fd4e3423df13a8}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_ac927ad093045776c18fd4e3423df13a8}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!getIsBuilded@{getIsBuilded}}
+\index{getIsBuilded@{getIsBuilded}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{getIsBuilded()}{getIsBuilded()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::get\+Is\+Builded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_ab59532efbde8e952e9b2f73d74d92ff3}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_ab59532efbde8e952e9b2f73d74d92ff3}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!getIsLinkedRigidBody@{getIsLinkedRigidBody}}
+\index{getIsLinkedRigidBody@{getIsLinkedRigidBody}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{getIsLinkedRigidBody()}{getIsLinkedRigidBody()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::get\+Is\+Linked\+Rigid\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a8a924749efea1d70dc6a0174c784d12b}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a8a924749efea1d70dc6a0174c784d12b}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!getIsStaticOnlly@{getIsStaticOnlly}}
+\index{getIsStaticOnlly@{getIsStaticOnlly}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{getIsStaticOnlly()}{getIsStaticOnlly()}}
+{\footnotesize\ttfamily virtual S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::get\+Is\+Static\+Onlly (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_sphere_collider_abac6af60ac058c7e44649c815d06e954}{S\+G\+Framework\+::\+Sphere\+Collider}}, \mbox{\hyperlink{class_s_g_framework_1_1_plane_collider_a7a1b4d650516090c620340e494a154d0}{S\+G\+Framework\+::\+Plane\+Collider}}, \mbox{\hyperlink{class_s_g_framework_1_1_capsule_collider_a749daed49a5dfef9e6acf2a746b1c5b1}{S\+G\+Framework\+::\+Capsule\+Collider}}, \mbox{\hyperlink{class_s_g_framework_1_1_box_collider_ad4262e257f22fba5916426eefbecca3d}{S\+G\+Framework\+::\+Box\+Collider}}で実装されています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a9fd2ad9f3dc32caaa988c1d08b270944}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a9fd2ad9f3dc32caaa988c1d08b270944}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!getIsTrigger@{getIsTrigger}}
+\index{getIsTrigger@{getIsTrigger}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{getIsTrigger()}{getIsTrigger()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::get\+Is\+Trigger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a5597797b99e51c8e8385effc05483f96}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a5597797b99e51c8e8385effc05483f96}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!getPhysX@{getPhysX}}
+\index{getPhysX@{getPhysX}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{getPhysX()}{getPhysX()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY physx\+::\+Px\+Shape\& S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::get\+PhysX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_aab159a04b27ef49172d94d78194ab714}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_aab159a04b27ef49172d94d78194ab714}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!InitFilterMask@{InitFilterMask}}
+\index{InitFilterMask@{InitFilterMask}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{InitFilterMask()}{InitFilterMask()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Init\+Filter\+Mask (\begin{DoxyParamCaption}\item[{bool}]{is\+Used\+Callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a42f1d3847da479834bb2b048fd0cb5b9}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a42f1d3847da479834bb2b048fd0cb5b9}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!LateUpdate@{LateUpdate}}
+\index{LateUpdate@{LateUpdate}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{LateUpdate()}{LateUpdate()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Late\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_ac7aa7180cedaa2c424de5dc1d9adad0a}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a6fa2b68b2de1a8c65fe61db1c40ed8f0}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a6fa2b68b2de1a8c65fe61db1c40ed8f0}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!MakeDrawCommand@{MakeDrawCommand}}
+\index{MakeDrawCommand@{MakeDrawCommand}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{MakeDrawCommand()}{MakeDrawCommand()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Make\+Draw\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a7f62fed4c57317e0ba41124da9f403b0}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_ae9facccac55054e3fd371ad421ec4095}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_ae9facccac55054e3fd371ad421ec4095}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!OnCollisionEnter@{OnCollisionEnter}}
+\index{OnCollisionEnter@{OnCollisionEnter}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{OnCollisionEnter()}{OnCollisionEnter()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+On\+Collision\+Enter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&}]{contact\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a0a82dbef86bc76e9d144deddd3f94c93}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_ae54a7dc79dd49200199e77761f100a15}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_ae54a7dc79dd49200199e77761f100a15}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!OnCollisionExit@{OnCollisionExit}}
+\index{OnCollisionExit@{OnCollisionExit}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{OnCollisionExit()}{OnCollisionExit()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+On\+Collision\+Exit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&}]{contact\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a9e5724d068e7cd5f2deb5489c4a44221}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a37bbb1f016ca7d1c5fd4010e10fc9288}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a37bbb1f016ca7d1c5fd4010e10fc9288}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!OnCollisionStay@{OnCollisionStay}}
+\index{OnCollisionStay@{OnCollisionStay}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{OnCollisionStay()}{OnCollisionStay()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+On\+Collision\+Stay (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&}]{contact\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a3072bb68b1e4ed42183dc068e7dc9c2d}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a31ffa444042b81d9a7fc20c31491f9b7}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a31ffa444042b81d9a7fc20c31491f9b7}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a75fe2d3d1cf0b3409d0460110df9438d}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a4c7a18c10bcb78faaee2c3cce80b26b8}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a4c7a18c10bcb78faaee2c3cce80b26b8}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a591a69486a261b23e7e482df6d007738}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a3b4cf72e650c6cca9ee76666b17b70df}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a3b4cf72e650c6cca9ee76666b17b70df}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a194b9ab55e21c31beaa11867d9664aee}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a90e12ac655df71576200118468c8b26c}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a90e12ac655df71576200118468c8b26c}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!OnTriggerEnter@{OnTriggerEnter}}
+\index{OnTriggerEnter@{OnTriggerEnter}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter()}{OnTriggerEnter()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+On\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&}]{contact\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_aaadc432bf1caccc57d9e74ed72b1a936}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a7cdeed47a6250560bae4ed9a0394c455}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a7cdeed47a6250560bae4ed9a0394c455}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!OnTriggerExit@{OnTriggerExit}}
+\index{OnTriggerExit@{OnTriggerExit}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit()}{OnTriggerExit()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+On\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&}]{contact\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_a740cc89df623ef55f19f24fea049deb0}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_ae8d425c8a3176a9a6da27dabe12c3cb6}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_ae8d425c8a3176a9a6da27dabe12c3cb6}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!OnTriggerStay@{OnTriggerStay}}
+\index{OnTriggerStay@{OnTriggerStay}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{OnTriggerStay()}{OnTriggerStay()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+On\+Trigger\+Stay (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_contact_info}{Contact\+Info}} \&}]{contact\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_ab5c1fcd52b82cb0bd35ad4208558e277}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_ad5c057177726dc41477909652f5d6d6e}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_ad5c057177726dc41477909652f5d6d6e}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!setCenter@{setCenter}}
+\index{setCenter@{setCenter}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{setCenter()}{setCenter()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::set\+Center (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a045343e6b758aaf8219d0ab98f3d3024}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a045343e6b758aaf8219d0ab98f3d3024}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!setIsTrigger@{setIsTrigger}}
+\index{setIsTrigger@{setIsTrigger}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{setIsTrigger()}{setIsTrigger()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY bool S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::set\+Is\+Trigger (\begin{DoxyParamCaption}\item[{bool}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a3194688a5244a301a4ae489c4b032446}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a3194688a5244a301a4ae489c4b032446}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!Start@{Start}}
+\index{Start@{Start}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_accfd68bedf583e9565a9d55ca7fb3585}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a796fc9e7998718587a4177520569c205}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a796fc9e7998718587a4177520569c205}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!Sync@{Sync}}
+\index{Sync@{Sync}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{Sync()}{Sync()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_ae56dea1139451dca4432083d57bcbbf6}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a142254c5cd99b5651735b101ec1439ce}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a142254c5cd99b5651735b101ec1439ce}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!TransferRigidBody@{TransferRigidBody}}
+\index{TransferRigidBody@{TransferRigidBody}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{TransferRigidBody()}{TransferRigidBody()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Transfer\+Rigid\+Body (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}} $>$ \&}]{new\+Rigid\+Body\+Transform,  }\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body}{Base\+Class\+::\+Base\+Rigid\+Body}} $>$ \&}]{new\+Rigid\+Body }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a4b9044eb8f6bf22cb7a9c5ff35b35e76}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a4b9044eb8f6bf22cb7a9c5ff35b35e76}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!Update@{Update}}
+\index{Update@{Update}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_component_x11_ac081f4141ab48919def37807b09963e9}{S\+G\+Framework\+::\+Administrator\+::\+Graphics\+Detail\+::\+Component\+X11}}を再実装しています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_abe6d443d9786704c587393d8e26ff764}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_abe6d443d9786704c587393d8e26ff764}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!UpdatePhysics@{UpdatePhysics}}
+\index{UpdatePhysics@{UpdatePhysics}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{UpdatePhysics()}{UpdatePhysics()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::\+Update\+Physics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a980bc94d0820f3318abdfbfbcbf05a0d}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a980bc94d0820f3318abdfbfbcbf05a0d}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!BaseRigidBody@{BaseRigidBody}}
+\index{BaseRigidBody@{BaseRigidBody}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{BaseRigidBody}{BaseRigidBody}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body}{Base\+Rigid\+Body}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a2bfcbae6c8e1d7af93c5ac1200b1535c}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a2bfcbae6c8e1d7af93c5ac1200b1535c}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!Physics@{Physics}}
+\index{Physics@{Physics}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{Physics}{Physics}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_physics}{Physics}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a6d6654de5eed6cf87cca21b65cf26803}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a6d6654de5eed6cf87cca21b65cf26803}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!attachedRigidBodyTransform@{attachedRigidBodyTransform}}
+\index{attachedRigidBodyTransform@{attachedRigidBodyTransform}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{attachedRigidBodyTransform}{attachedRigidBodyTransform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}}$>$ $>$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::attached\+Rigid\+Body\+Transform}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a49bfc51a199036e1d6e1ec6360e7d05c}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a49bfc51a199036e1d6e1ec6360e7d05c}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!m\_actor@{m\_actor}}
+\index{m\_actor@{m\_actor}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{m\_actor}{m\_actor}}
+{\footnotesize\ttfamily physx\+::\+Px\+Rigid\+Actor$\ast$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::m\+\_\+actor = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a397ac1e781b06717e3710990b0c858bc}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a397ac1e781b06717e3710990b0c858bc}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!m\_center@{m\_center}}
+\index{m\_center@{m\_center}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{m\_center}{m\_center}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::m\+\_\+center = \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a069fd0a9a9c80d1a7b8e73bc45198b3e}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a069fd0a9a9c80d1a7b8e73bc45198b3e}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!m\_isEqualRigidTransform@{m\_isEqualRigidTransform}}
+\index{m\_isEqualRigidTransform@{m\_isEqualRigidTransform}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{m\_isEqualRigidTransform}{m\_isEqualRigidTransform}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::m\+\_\+is\+Equal\+Rigid\+Transform = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a7e6572b4218664c999b87bc067ce4794}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a7e6572b4218664c999b87bc067ce4794}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!m\_isLinkRigidBody@{m\_isLinkRigidBody}}
+\index{m\_isLinkRigidBody@{m\_isLinkRigidBody}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{m\_isLinkRigidBody}{m\_isLinkRigidBody}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::m\+\_\+is\+Link\+Rigid\+Body = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a4436279e90304731e2b6e8cdd9ba4b7c}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a4436279e90304731e2b6e8cdd9ba4b7c}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!m\_isTrigger@{m\_isTrigger}}
+\index{m\_isTrigger@{m\_isTrigger}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{m\_isTrigger}{m\_isTrigger}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::m\+\_\+is\+Trigger = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_afb1cbe4ddd0bacf3060cb5657f346d67}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_afb1cbe4ddd0bacf3060cb5657f346d67}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!m\_isUnLinked@{m\_isUnLinked}}
+\index{m\_isUnLinked@{m\_isUnLinked}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{m\_isUnLinked}{m\_isUnLinked}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::m\+\_\+is\+Un\+Linked = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a1bbddb1fad958597a83eeb1118ea4863}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a1bbddb1fad958597a83eeb1118ea4863}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!m\_isUsedCallback@{m\_isUsedCallback}}
+\index{m\_isUsedCallback@{m\_isUsedCallback}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{m\_isUsedCallback}{m\_isUsedCallback}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::m\+\_\+is\+Used\+Callback = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a3f71432a3591fbf91907b2586f0876f2}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a3f71432a3591fbf91907b2586f0876f2}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!m\_material@{m\_material}}
+\index{m\_material@{m\_material}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{m\_material}{m\_material}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_physics_material}{Physics\+Material}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::m\+\_\+material\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_af85d2f662862253ebe2236a2954e4220}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_af85d2f662862253ebe2236a2954e4220}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!m\_rigidBody@{m\_rigidBody}}
+\index{m\_rigidBody@{m\_rigidBody}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{m\_rigidBody}{m\_rigidBody}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body}{Base\+Class\+::\+Base\+Rigid\+Body}}$>$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::m\+\_\+rigid\+Body\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a8c2e6885109a6f43c6f09b773a0f0d3b}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a8c2e6885109a6f43c6f09b773a0f0d3b}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!m\_rigidBodyTransform@{m\_rigidBodyTransform}}
+\index{m\_rigidBodyTransform@{m\_rigidBodyTransform}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{m\_rigidBodyTransform}{m\_rigidBodyTransform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{namespace_s_g_framework_ac1fa8164e079f8f15b113e2efbaa21bd}{Transform}}$>$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::m\+\_\+rigid\+Body\+Transform\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a47fca3bebacd500988734532b43bc0fd}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a47fca3bebacd500988734532b43bc0fd}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!m\_shape@{m\_shape}}
+\index{m\_shape@{m\_shape}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{m\_shape}{m\_shape}}
+{\footnotesize\ttfamily physx\+::\+Px\+Shape$\ast$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::m\+\_\+shape = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_a46561004bf409ac5de96d158ed36b047}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_a46561004bf409ac5de96d158ed36b047}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!m\_type@{m\_type}}
+\index{m\_type@{m\_type}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{m\_type}{m\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_s_g_framework_a7f80cd2c5e4e4d0fe2b905c703f1373b}{Collider\+Type}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::m\+\_\+type = \mbox{\hyperlink{namespace_s_g_framework_a7f80cd2c5e4e4d0fe2b905c703f1373bab7095f057db3fefa7325ad93a04e14fd}{Collider\+Type\+::\+Invalid}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_collider_aa4d17c00ce93fa4b586432f6af212eaa}\label{class_s_g_framework_1_1_base_class_1_1_base_collider_aa4d17c00ce93fa4b586432f6af212eaa}} 
+\index{SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}!rigidBody@{rigidBody}}
+\index{rigidBody@{rigidBody}!SGFramework::BaseClass::BaseCollider@{SGFramework::BaseClass::BaseCollider}}
+\doxysubsubsection{\texorpdfstring{rigidBody}{rigidBody}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_weak_pointer}{Weak\+Pointer}}$<$\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_rigid_body}{Base\+Class\+::\+Base\+Rigid\+Body}}$>$ $>$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Collider\+::rigid\+Body}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/10\+\_\+\+Physics/\+Collider/\mbox{\hyperlink{_base_collider_8hpp}{Base\+Collider.\+hpp}}\end{DoxyCompactItemize}

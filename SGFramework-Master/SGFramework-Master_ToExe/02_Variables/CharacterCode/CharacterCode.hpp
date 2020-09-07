@@ -1,7 +1,31 @@
 /*----------------------------------------------------------------------------------
-<CharacterCode.hpp> contents->ファイルの文字コード変換定数を列挙するCharacterCode namespace
-制作者: Shota Uemura
+S.Game-Framework  (SG-Framework)
+The MIT License (MIT)
+
+Copyright (c) 2020 Shota Uemura
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 ------------------------------------------------------------------------------------*/
+/**
+* @file CharacterCode.hpp
+*  @brief ファイルの文字コード変換定数をプロパティで提供するCharacterCode namespace
+*/
 #ifndef SGFRAMEWORK_HEADER_CHARACTER_CODE_HPP_
 #define SGFRAMEWORK_HEADER_CHARACTER_CODE_HPP_
 #include <codecvt>
@@ -16,18 +40,34 @@ namespace SGFramework
 	//Use function
 	//fstream -> fstream.imbue(std::locale(std::locale::empty(), &change);
 	//FileStream -> FileStream.ChangeLocale(change)
+
+	//! @brief ファイルの文字コード変換定数をプロパティで提供するCharacterCode namespace
+	//! @par How to use
+	//! std::fstream -> fstream.imbue(std::locale(std::locale::empty(), &change)\n
+	//! FileStream -> FileStream.ChangeLocale(change)
 	namespace CharacterCode
 	{
-		extern std::codecvt_utf8<wchar_t> g_defaultWide;	//UTF8
-		extern std::codecvt_utf8<char> g_defaultChar;		//UTF8
-		extern std::codecvt_utf8<wchar_t> g_toUTF8Wide;	//UTF8
-		extern std::codecvt_utf8<char> g_toUTF8Char;		//UTF8
+		//! @brief_property_get CharacterCode used by default(Wide-UTF8)
+		inline const std::codecvt_utf8<wchar_t>& _defaultWide() { static std::codecvt_utf8<wchar_t> instance; return instance; }
+		//! @brief_property_get CharacterCode used by default(Narrow-UTF8)
+		inline const std::codecvt_utf8<char>& _defaultNarrow() { static std::codecvt_utf8<char> instance; return instance; }
+		//! @brief_property_get CharacterCode Wide-UTF8
+		inline const std::codecvt_utf8<wchar_t>& _utf8Wide() { static std::codecvt_utf8<wchar_t> instance; return instance; }
+		//! @brief_property_get CharacterCode Narrow-UTF8
+		inline const std::codecvt_utf8<char>& _utf8Narrow() { static std::codecvt_utf8<char> instance; return instance; }
+	
+		//! @brief_property_get CharacterCode Wide-UTF16 little endian
+		inline const std::codecvt_utf16<wchar_t, 0x10ffff, std::little_endian>& _utf16LeWide() { static std::codecvt_utf16<wchar_t, 0x10ffff, std::little_endian> instance; return instance; }
+		//! @brief_property_get CharacterCode Wide-UTF16 big endian
+		inline const std::codecvt_utf16<wchar_t>& _utf16BeWide() { static std::codecvt_utf16<wchar_t> instance; return instance; }
 
-		//UTF16 little endian
-		extern std::codecvt_utf16<wchar_t, 0x10ffff, std::little_endian> g_toUTF16LEWide;
-		//UTF16 big endian
-		extern std::codecvt_utf16<wchar_t> g_toUTF16BEWide;
-		//UTF8 In Exclusive UseBOM
+		//! @brief_property_get CharacterCode Wide-UTF8 with BOM
+		inline const std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header>& _utf8WithBomWide() { static std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header> instance; return instance; }
+		//! @brief_property_get CharacterCode Wide-UTF16 little endian with BOM
+		inline const std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header>& _utf16LeWithBomWide() { static std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header> instance; return instance; }
+
+
+		//UTF8 with BOM
 		extern std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header> g_inUTF8UseBomWide;
 		//UTF16 little endian In Exclusive UseBOM
 		extern std::codecvt_utf16<wchar_t, 0x10ffff, std::consume_header> g_inUTF16LEUseBomWide;

@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: SGFramework-Master_ToExe/06_Audio/AudioAsset/AudioAssetEffect.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_7364b1c18594ceef956b3411048bfa26.html">06_Audio</a></li><li class="navelem"><a class="el" href="dir_1308bf92d1b8b3ee31f475d1981cd495.html">AudioAsset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AudioAssetEffect.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_audio_asset_effect_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">通常SEを扱うAudioAssetEffect class</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_AUDIO_ASSET_EFFECT_HPP_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_AUDIO_ASSET_EFFECT_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;xaudio2.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../../02_CustomVariable/CustomVariable.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../../03_MathAF/MathAF.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../../04_Asset/Asset/BaseAsset.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_audio_asset_8hpp.html">AudioAsset.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../Audio.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// Framework namespace</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//prototype</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">class </span><a class="code" href="_todo_8txt.html#a44b740236187bd7f5a7e7f21c6aa97a4">Audio</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">class </span>Audio::SubmixLayer;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">class </span>AssetManager;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//Asset関連を格納したAsset namespace</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">namespace </span>Asset</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">//通常SEを扱うAudioAssetEffect class</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html">   25</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html">AudioAssetEffect</a> final : <span class="keyword">public</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html">BaseClass::BaseAudioSEAsset</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="comment">//friend</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#a211f008bd6a46efe478fe81d31e28933">   29</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_audio.html">Audio</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#aafe72876a584aedb5a5546d4fe7746fb">   30</a></span>&#160;            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#aafe72876a584aedb5a5546d4fe7746fb">AssetManager</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TAsset&gt;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#ac8ed677720e0a948a793d7e0163780ac">   32</a></span>&#160;            <span class="keyword">friend</span> <a class="code" href="class_s_g_framework_1_1_shared_pointer.html">SharedPointer&lt;TAsset&gt;</a> <a class="code" href="namespace_s_g_framework_1_1_asset.html#ad512f0eb01593582e1507de561c2f71f">Asset::InstantiateAsset</a>(<span class="keyword">const</span> sgstring&amp; filePath, <span class="keywordtype">bool</span> isRegisterSharedAsset);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="comment">//[デストラクタ]</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="comment">//アセットの開放を行う</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#ab8b705119fe8683c5e92419e9bc7b485">   38</a></span>&#160;            <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#ab8b705119fe8683c5e92419e9bc7b485">~AudioAssetEffect</a>() { ReleaseVoice(); <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#ac23b03144611d5fa2985ec28124af337">CloseBaseAsset</a>(<a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#a8c2eb259e2e73f6eaf2f0969c166323d">getType</a>(), <span class="keyword">true</span>); }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="comment">//[Open]</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="comment">//アセットのロードを行う</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="comment">//引数1: 音声が所属するSubmixLayer, default = not monoral root layer</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="comment">//引数2: ソースの数 (最大同時再生数)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="comment">//引数3: 再生間隔</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="comment">//引数4: 再生開始秒数, default = cDefault (Begin)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="comment">//引数5: ループ時開始秒数, default = cDefault (Begin)</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="comment">//引数6: 再生終了秒数, default = cDefault (End)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#a8b5ec784c8fada1ea8574430cdde4b41">Open</a>(<a class="code" href="class_s_g_framework_1_1_weak_pointer.html">WeakPointer&lt;Audio::SubmixLayer&gt;</a> submixLayer = <a class="code" href="class_s_g_framework_1_1_audio.html#a46e4687ffaa8cfaf89c77cb16e16a5b4">Audio::submixRootLayer</a>(),</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#aa5f926feaf92b494b185217e273e18dd">amountOfSource</a> = 1, <span class="keywordtype">float</span> <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a88073e022f8a341b09b3fdbe87921750">playbackInterval</a> = 0.0f, <span class="keywordtype">float</span> setPlayBeginSeconds = <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a4b5883de7cb1c5357cd3ca4bcb189f91">cDefault</a>, </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordtype">float</span> setLoopBeginSeconds = <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a4b5883de7cb1c5357cd3ca4bcb189f91">cDefault</a>, <span class="keywordtype">float</span> setPlayEndSeconds = <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a4b5883de7cb1c5357cd3ca4bcb189f91">cDefault</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="comment">//[Reload]</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="comment">//アセットのリロードを行う</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#a0dcfcc09e7dd272251f5144289d935ff">Reload</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="comment">//[Close]</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="comment">//ファイルを閉じる</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#ab175575f2d81c63fa4c2703db9a7a378">Close</a>()  <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="comment">//[Play]</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">//再生を行う, 実際に再生されるのは1フレーム後となる</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">//引数1: ループ回数, default = 0</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#af3fb4dee8a85eb0e045657656f1ce149">   67</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#af3fb4dee8a85eb0e045657656f1ce149">Play</a>(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> loopCount = 0)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keyword">using namespace </span><a class="code" href="_todo_8txt.html#a44b740236187bd7f5a7e7f21c6aa97a4">Detail::Audio</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="comment">//Message作成</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                AudioMessage message(MessageType::EffectFlag | MessageType::PlayEffect);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                message.attachment.playEffect.instanceID = <a class="code" href="class_s_g_framework_1_1_object.html#aa4ea7385b13efc6b88990c394bb0b8b2">instanceID</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                message.attachment.playEffect.loopCount = loopCount;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="comment">//Message送信</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                Audio::SendAudioMessage(message);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="comment">//[Stop]</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="comment">//再生を全て停止する, 実際に停止されるのは1フレーム後となる</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#abb927804156d3110a99c936eaa2fc3a0">   81</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#abb927804156d3110a99c936eaa2fc3a0">Stop</a>()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keyword">using namespace </span><a class="code" href="_todo_8txt.html#a44b740236187bd7f5a7e7f21c6aa97a4">Detail::Audio</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="comment">//Message作成</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                AudioMessage message(MessageType::EffectFlag | MessageType::StopEffect);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                message.attachment.onlyInstanceID = <a class="code" href="class_s_g_framework_1_1_object.html#aa4ea7385b13efc6b88990c394bb0b8b2">instanceID</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="comment">//Message送信</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                Audio::SendAudioMessage(message);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="comment">//get asset type (read function property)</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#a8c2eb259e2e73f6eaf2f0969c166323d">   93</a></span>&#160;            SGF_FUNCTION_PROPERTY <a class="code" href="namespace_s_g_framework_1_1_asset.html#adda3675d35f5e7dcea0dd7e6955d97da">Asset::AssetType</a> <a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#a8c2eb259e2e73f6eaf2f0969c166323d">getType</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> Asset::AssetType::AudioEffect; }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keyword">private</span>:    </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">//[コンストラクタ]</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="comment">//初期化を行う</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keyword">inline</span> <a class="code" href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html">AudioAssetEffect</a>() : <a class="code" href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#ae3f684102926267b8db33dce8ebdbde0">BaseAudioSEAsset</a>() {}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="comment">//[PlayExecution]</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="comment">//実際に再生を行う</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordtype">void</span> PlayExecution(<a class="code" href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">uint</a> loopCount);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="comment">//[StopExecution]</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="comment">//実際に停止を行う</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordtype">void</span> StopExecution();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="comment">//[ReleaseVoice]</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="comment">//音声を開放する</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordtype">void</span> ReleaseVoice();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        };</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif //!SGFRAMEWORK_HEADER_AUDIO_ASSET_EFFECT_HPP_ </span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect_html_af3fb4dee8a85eb0e045657656f1ce149"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#af3fb4dee8a85eb0e045657656f1ce149">SGFramework::Asset::AudioAssetEffect::Play</a></div><div class="ttdeci">void Play(uint loopCount=0)</div><div class="ttdef"><b>Definition:</b> AudioAssetEffect.hpp:67</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect_html_a8c2eb259e2e73f6eaf2f0969c166323d"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#a8c2eb259e2e73f6eaf2f0969c166323d">SGFramework::Asset::AudioAssetEffect::getType</a></div><div class="ttdeci">SGF_FUNCTION_PROPERTY Asset::AssetType getType() override</div><div class="ttdef"><b>Definition:</b> AudioAssetEffect.hpp:93</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html">SGFramework::Audio</a></div><div class="ttdef"><b>Definition:</b> Audio.hpp:38</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect_html_a8b5ec784c8fada1ea8574430cdde4b41"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#a8b5ec784c8fada1ea8574430cdde4b41">SGFramework::Asset::AudioAssetEffect::Open</a></div><div class="ttdeci">void Open(WeakPointer&lt; Audio::SubmixLayer &gt; submixLayer=Audio::submixRootLayer(), uint amountOfSource=1, float playbackInterval=0.0f, float setPlayBeginSeconds=cDefault, float setLoopBeginSeconds=cDefault, float setPlayEndSeconds=cDefault)</div><div class="ttdef"><b>Definition:</b> AudioAssetEffect.cpp:22</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_asset_html_adda3675d35f5e7dcea0dd7e6955d97da"><div class="ttname"><a href="namespace_s_g_framework_1_1_asset.html#adda3675d35f5e7dcea0dd7e6955d97da">SGFramework::Asset::AssetType</a></div><div class="ttdeci">AssetType</div><div class="ttdef"><b>Definition:</b> BaseAsset.hpp:87</div></div>
+<div class="ttc" id="anamespace_s_g_framework_1_1_asset_html_ad512f0eb01593582e1507de561c2f71f"><div class="ttname"><a href="namespace_s_g_framework_1_1_asset.html#ad512f0eb01593582e1507de561c2f71f">SGFramework::Asset::InstantiateAsset</a></div><div class="ttdeci">SharedPointer&lt; TAsset &gt; InstantiateAsset(const sgstring &amp;filePath, bool isRegisterSharedAsset)</div><div class="ttdef"><b>Definition:</b> InstantiateAsset.hpp:25</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect_html_ab8b705119fe8683c5e92419e9bc7b485"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#ab8b705119fe8683c5e92419e9bc7b485">SGFramework::Asset::AudioAssetEffect::~AudioAssetEffect</a></div><div class="ttdeci">~AudioAssetEffect()</div><div class="ttdef"><b>Definition:</b> AudioAssetEffect.hpp:38</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect_html_aafe72876a584aedb5a5546d4fe7746fb"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#aafe72876a584aedb5a5546d4fe7746fb">SGFramework::Asset::AudioAssetEffect::AssetManager</a></div><div class="ttdeci">friend class AssetManager</div><div class="ttdef"><b>Definition:</b> AudioAssetEffect.hpp:30</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect_html_a0dcfcc09e7dd272251f5144289d935ff"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#a0dcfcc09e7dd272251f5144289d935ff">SGFramework::Asset::AudioAssetEffect::Reload</a></div><div class="ttdeci">void Reload() override</div><div class="ttdef"><b>Definition:</b> AudioAssetEffect.cpp:52</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset_html"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html">SGFramework::BaseClass::BaseAudioSEAsset</a></div><div class="ttdef"><b>Definition:</b> AudioAsset.hpp:160</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect_html"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html">SGFramework::Asset::AudioAssetEffect</a></div><div class="ttdef"><b>Definition:</b> AudioAssetEffect.hpp:26</div></div>
+<div class="ttc" id="a_todo_8txt_html_a44b740236187bd7f5a7e7f21c6aa97a4"><div class="ttname"><a href="_todo_8txt.html#a44b740236187bd7f5a7e7f21c6aa97a4">Audio</a></div><div class="ttdeci">RigidBodyなどPhysics Disable SyncSystem Sync Callback Sync Value sync時同期 collider rigid body検索 &amp;addchildren対策 addchirdren callback comment Time tm AssetPackageClass Quaternionなど一部関数直書き Polygon ClonePointer Transform ClonePointer Transform動作確認まだ WinMainにModelちょっと書いてる Nodeに直接MeshRendrer的なのくっつけるか否か Shader AssetPackege スレッド割当 WinMainスレッド &amp; Audio</div><div class="ttdef"><b>Definition:</b> Todo.txt:54</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_shared_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_shared_pointer.html">SGFramework::SharedPointer</a></div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:22</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_audio_asset_html_a4b5883de7cb1c5357cd3ca4bcb189f91"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_audio_asset.html#a4b5883de7cb1c5357cd3ca4bcb189f91">SGFramework::BaseClass::BaseAudioAsset::cDefault</a></div><div class="ttdeci">static constexpr float cDefault</div><div class="ttdef"><b>Definition:</b> AudioAsset.hpp:46</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html_a1d27b3a3f23edd79234a8f5ee37c3beb"><div class="ttname"><a href="namespace_s_g_framework.html#a1d27b3a3f23edd79234a8f5ee37c3beb">SGFramework::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdoc">uint = unsigned int</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:157</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset_html_ae3f684102926267b8db33dce8ebdbde0"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#ae3f684102926267b8db33dce8ebdbde0">SGFramework::BaseClass::BaseAudioSEAsset::BaseAudioSEAsset</a></div><div class="ttdeci">BaseAudioSEAsset()</div><div class="ttdef"><b>Definition:</b> AudioAsset.hpp:197</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_object_html_aa4ea7385b13efc6b88990c394bb0b8b2"><div class="ttname"><a href="class_s_g_framework_1_1_object.html#aa4ea7385b13efc6b88990c394bb0b8b2">SGFramework::Object::instanceID</a></div><div class="ttdeci">GetOnlyProperty&lt; uint &gt; instanceID</div><div class="ttdef"><b>Definition:</b> Object.hpp:69</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect_html_ab175575f2d81c63fa4c2703db9a7a378"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#ab175575f2d81c63fa4c2703db9a7a378">SGFramework::Asset::AudioAssetEffect::Close</a></div><div class="ttdeci">void Close() override</div><div class="ttdef"><b>Definition:</b> AudioAssetEffect.cpp:76</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_weak_pointer_html"><div class="ttname"><a href="class_s_g_framework_1_1_weak_pointer.html">SGFramework::WeakPointer</a></div><div class="ttdef"><b>Definition:</b> SharedPointer.hpp:266</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_asset_1_1_audio_asset_effect_html_abb927804156d3110a99c936eaa2fc3a0"><div class="ttname"><a href="class_s_g_framework_1_1_asset_1_1_audio_asset_effect.html#abb927804156d3110a99c936eaa2fc3a0">SGFramework::Asset::AudioAssetEffect::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition:</b> AudioAssetEffect.hpp:81</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset_html_a88073e022f8a341b09b3fdbe87921750"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#a88073e022f8a341b09b3fdbe87921750">SGFramework::BaseClass::BaseAudioSEAsset::playbackInterval</a></div><div class="ttdeci">GetOnlyProperty&lt; float &gt; playbackInterval</div><div class="ttdef"><b>Definition:</b> AudioAsset.hpp:193</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_audio_html_a46e4687ffaa8cfaf89c77cb16e16a5b4"><div class="ttname"><a href="class_s_g_framework_1_1_audio.html#a46e4687ffaa8cfaf89c77cb16e16a5b4">SGFramework::Audio::submixRootLayer</a></div><div class="ttdeci">static GetOnlyProperty&lt; SharedPointer&lt; SubmixLayer &gt; &gt; submixRootLayer</div><div class="ttdef"><b>Definition:</b> Audio.hpp:129</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset_html_aa5f926feaf92b494b185217e273e18dd"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset.html#aa5f926feaf92b494b185217e273e18dd">SGFramework::BaseClass::BaseAudioSEAsset::amountOfSource</a></div><div class="ttdeci">GetOnlyProperty&lt; uint &gt; amountOfSource</div><div class="ttdef"><b>Definition:</b> AudioAsset.hpp:191</div></div>
+<div class="ttc" id="a_audio_asset_8hpp_html"><div class="ttname"><a href="_audio_asset_8hpp.html">AudioAsset.hpp</a></div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdoc">SG-Framework namespace</div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:134</div></div>
+<div class="ttc" id="aclass_s_g_framework_1_1_base_class_1_1_base_asset_html_ac23b03144611d5fa2985ec28124af337"><div class="ttname"><a href="class_s_g_framework_1_1_base_class_1_1_base_asset.html#ac23b03144611d5fa2985ec28124af337">SGFramework::BaseClass::BaseAsset::CloseBaseAsset</a></div><div class="ttdeci">void CloseBaseAsset(Asset::AssetType type, bool isDestructor)</div><div class="ttdef"><b>Definition:</b> BaseAsset.cpp:16</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

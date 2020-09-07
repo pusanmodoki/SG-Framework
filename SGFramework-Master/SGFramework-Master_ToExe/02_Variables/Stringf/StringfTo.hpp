@@ -1,13 +1,13 @@
 /*----------------------------------------------------------------------------------
 string_wを操作するstringf namespace
-→to関数を定義するStringfTo.hpp
+→to関数を定義するStringfConvert.hpp
 ------------------------------------------------------------------------------------*/
 #ifndef SGFRAMEWORK_HEADER_STRINGF_TO_HPP_
 #define SGFRAMEWORK_HEADER_STRINGF_TO_HPP_
 #include <string>
-#include <bitset>
-#include <type_traits>
+#include <vector>
 #include "StringfUsingAndStructure.hpp"
+#include "StringfOtherFunctions.hpp"
 #include "../MacroAndUsing/MacroAndUsing.hpp"
 #include "../Exception/Exception.hpp"
 
@@ -22,400 +22,227 @@ string_wを操作するstringf namespace
 //Framework namespace
 namespace SGFramework
 {
-	//std::wstring, string_aを操作するstringf namespace
+	//std::wstring, std::stringを操作するstringf namespace
 	//stdクラスとの連携を前提としたもののため特例で命名規則をsnake_caseにする
 	namespace stringf
 	{
 		//----------------------------------------------------------------------------------
 		//to functions
 
+
 		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<typename T>
-		inline string_w to(T source)
+		//[to_ascii]
+		//return: source(string_w)を変換したstring_a
+		//argument 1: to source
+		inline string_a to_ascii(const string_w& source)
 		{
-			static_assert(std::is_integral_v<T>, "Unsupported template. supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types.");
-			//char<n>_tなど普段使わない型はこちらで実装する, 定義未実装が起きた際はこれで防ぎたい…
-			return IS_FALSE(std::is_unsigned_v<T>) ? std::to_wstring(static_cast<int64>(source)) : std::to_wstring(static_cast<uint64>(source));
-		}
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a, char*, const char*, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		inline string_w to(const string_a& source) noexcept
-		{
-			//Windows Version
-#if defined(SGF_PLATFORM_WINDOWS)
 			int inLength = static_cast<int>(source.length());
-			int outLength = MultiByteToWideChar(CP_UTF8, 0, source.c_str(), inLength, nullptr, 0);
-			std::wstring result(outLength, L'\0');
-			if (outLength) MultiByteToWideChar(CP_UTF8, 0, source.c_str(), inLength, &result[0], outLength);
+			int outLength = WideCharToMultiByte(CP_UTF8, 0, source.c_str(), inLength, nullptr, 0, nullptr, nullptr);
+
+			string_a result(outLength, L'\0');
+			if (outLength > 0) WideCharToMultiByte(CP_UTF8, 0, source.c_str(), inLength, &result[0], outLength, nullptr, nullptr);
 			return std::move(result);
-			//else
-#else
-#error "Unsupported platform."
-#endif//endif
 		}
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		inline string_w to(const char* source) noexcept
-		{
-			//Windows Version
-#if defined(SGF_PLATFORM_WINDOWS)
-			int inLength = static_cast<int>(std::strlen(source));
-			int outLength = MultiByteToWideChar(CP_UTF8, 0, source, inLength, nullptr, 0);
-			std::wstring result(outLength, L'\0');
-			if (outLength) MultiByteToWideChar(CP_UTF8, 0, source, inLength, &result[0], outLength);
-			return std::move(result);
-			//else
-#else
-#error "Unsupported platform."
-#endif//endif
-		}
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<char*>(char* source) noexcept
-		{
-			//Windows Version
-#if defined(SGF_PLATFORM_WINDOWS)
-			int inLength = static_cast<int>(std::strlen(source));
-			int outLength = MultiByteToWideChar(CP_UTF8, 0, source, inLength, nullptr, 0);
-			std::wstring result(outLength, L'\0');
-			if (outLength) MultiByteToWideChar(CP_UTF8, 0, source, inLength, &result[0], outLength);
-			return std::move(result);
-			//else
-#else
-#error "Unsupported platform."
-#endif//endif
-		}
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<float>(float source) { return std::to_wstring(source); }
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<double>(double source) { return std::to_wstring(source); }
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<bool>(bool source) { return IS_TRUE(source) ? L"true" : L"false"; }
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<char>(char source) { return std::to_wstring(static_cast<int>(source)); }
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<uchar>(uchar source) { return std::to_wstring(static_cast<uint>(source)); }
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<short>(short source) { return std::to_wstring(static_cast<int>(source)); }
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<ushort>(ushort source) { return std::to_wstring(static_cast<uint>(source)); }
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<wchar>(wchar source) { return std::to_wstring(static_cast<uint>(source)); }
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<int>(int source) { return std::to_wstring(source); }
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<uint>(uint source) { return std::to_wstring(source); }
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<long>(long source) { return std::to_wstring(source); }
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<ulong>(ulong source) { return std::to_wstring(source); }
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<int64>(int64 source) { return std::to_wstring(source); }
-		//----------------------------------------------------------------------------------
-		//[to]
-		//template: source type (supported templates: string_a<override>, const char*<override>, char*<override>, float, double, bool, integer types)
-		//return: sourceを変換したstring
-		//argument 1: convert source
-		template<>
-		inline string_w to<uint64>(uint64 source) { return std::to_wstring(source); }
 
 		//----------------------------------------------------------------------------------
-		//[to_pointer]
-		//template: source type (supported templates: pointer types)
-		//return: ポインタを16進数表現に変換したstring
-		//argument 1: 基数表現に用いる基数
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, integer types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
 		template<typename T>
-		inline string_w to_pointer(T source)
+		inline T to(const string_w& source)
 		{
-			//ポインタ型のみ可
-			static_assert(std::is_pointer_v<T>, "Unsupported template. supported templates: pointer types.");
-
-			std::wstringstream stream;
-			stream << L"0x" << std::showbase;
-			stream << std::hex << source;
-			return stream.str();
+			static_assert(std::is_integral_v<T>, "Unsupported template. supported templates: supported templates: float, double, bool, integer types");
+			
+			//char<n>_tなど普段使わない型はこちらで実装する, 定義未実装が起きた際はこれで防ぎたい…
+			TRY_CATCH_ON_DEBUG(return IS_FALSE(std::is_unsigned_v<T>) ? static_cast<T>(std::stoll(source)) : static_cast<T>(std::stoull(source)),
+				throw Exception::InvalidArgumentException("stringf", "to", "source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, integer types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
+		template<>
+		inline float to<float>(const string_w& source)
+		{
+			TRY_CATCH_ON_DEBUG(return std::stof(source), throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, integer types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
+		template<>
+		inline double to<double>(const string_w& source)
+		{
+			TRY_CATCH_ON_DEBUG(return std::stod(source), throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, integer types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source (true, false, 0, 1の場合のみ正常動作, それ以外の場合throw)
+		template<>
+		inline bool to<bool>(const string_w& source)
+		{
+			if (source == L"true") return true;
+			else if (source == L"false") return false;
+			else if (source.length() == 1)
+			{
+				if (source[0] == L'1') return true;
+				else if (source[0] == L'0') return true;
+				else throw Exception::InvalidArgumentException("stringf", "to",
+					"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>"));
+			}
+			else throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>"));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, integer types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
+		template<>
+		inline char to<char>(const string_w& source)
+		{
+			TRY_CATCH_ON_DEBUG(return  static_cast<char>(std::stoi(source)), throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, integer types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
+		template<>
+		inline uchar to<uchar>(const string_w& source)
+		{
+			TRY_CATCH_ON_DEBUG(return  static_cast<uchar>(std::stoul(source)), throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, integer types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
+		template<>
+		inline short to<short>(const string_w& source)
+		{
+			TRY_CATCH_ON_DEBUG(return  static_cast<short>(std::stoi(source)), throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, integer types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
+		template<>
+		inline ushort to<ushort>(const string_w& source)
+		{
+			TRY_CATCH_ON_DEBUG(return  static_cast<ushort>(std::stoul(source)), throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, integer types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
+		template<>
+		inline wchar to<wchar>(const string_w& source)
+		{
+			TRY_CATCH_ON_DEBUG(return  static_cast<wchar>(std::stoul(source)), throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, integer types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
+		template<>
+		inline int to<int>(const string_w& source)
+		{
+			TRY_CATCH_ON_DEBUG(return  std::stoi(source), throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, integer types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
+		template<>
+		inline uint to<uint>(const string_w& source)
+		{
+			TRY_CATCH_ON_DEBUG(return  static_cast<uint>(std::stoul(source)), throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, longeger types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
+		template<>
+		inline long to<long>(const string_w& source)
+		{
+			TRY_CATCH_ON_DEBUG(return  std::stol(source), throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, longeger types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
+		template<>
+		inline ulong to<ulong>(const string_w& source)
+		{
+			TRY_CATCH_ON_DEBUG(return  std::stoul(source), throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, integer types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
+		template<>
+		inline int64 to<int64>(const string_w& source)
+		{
+			TRY_CATCH_ON_DEBUG(return std::stoll(source), throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
+		}
+		//----------------------------------------------------------------------------------
+		//[to]<possibly throw>
+		//template: return type (supported templates: float, double, bool, integer types)
+		//return: sourceを変換したT型変数
+		//argument 1: to source
+		template<>
+		inline uint64 to<uint64>(const string_w& source)
+		{
+			TRY_CATCH_ON_DEBUG(return std::stoull(source), throw Exception::InvalidArgumentException("stringf", "to",
+				"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
 		}
 
 		//----------------------------------------------------------------------------------
-		//[to_radix]
-		//template: source type (supported templates: string_w<override>, wchar*<override>, const wchar*<override>, integer types)
-		//return: sourceを基数表現に変換したstring
-		//argument 1: 基数表現に用いる基数
-		template<typename T>
-		inline string_w to_radix(T source, radix::enum_radix radix)
+		//[to_array]
+		//template: return type split array(supported templates: float, double, bool, integer types)
+		//return: sourceをdelimiterで分割し数字変換T型配列
+		//argument 1: to source (数字, delmiterのみで構成したものに限る)
+		template <typename T>
+		inline std::vector<T> to_array(const string_w& source, wchar delimiter = L',')
 		{
-			//整数型のみ可
-			static_assert(std::is_integral_v<T>, "Unsupported template. supported templates: string_w<override>, wchar*<override>, const wchar*<override>, integer types.");
+			static_assert(std::is_integral_v<T> || std::is_same_v<bool, T> || std::is_same_v<float, T> || std::is_same_v<double, T>,
+				"Unsupported template. supported templates: supported templates: float, double, bool, integer types");
+			
+			std::vector<string_w> split = stringf::split(source, delimiter, true);
+			std::vector<T> result;
 
-			//文字列変換
-			switch (radix)
+			for (auto& e : split)
 			{
-			case radix::x10:
-				return to(source);
-			case radix::x16:
-			{
-				std::wstringstream stream;
-				stream << std::showbase;
-				stream << std::hex << source;
-				return stream.str();
+				TRY_CATCH_ON_DEBUG(result.emplace_back(to<T>(e)), throw Exception::InvalidArgumentException("stringf", "to_array",
+					"source to failed, source = " + (source.length() > 0 ? to_ascii(source) : "<empty>")));
 			}
-			case radix::x8:
-			{
-				std::wstringstream stream;
-				stream << std::showbase;
-				stream << std::oct << source;
-				return stream.str();
-			}
-			case radix::x2:
-			{
-				std::wstringstream stream;
-				stream << std::showbase;
-				stream << std::bitset<sizeof(source) * 8>(source) ;
-				return stream.str();
-			}
-			default:
-				throw Exception::InvalidArgumentException("stringf", "to_radix", "radix is invalid value.");
-			}
-		}
-		//----------------------------------------------------------------------------------
-		//[to_radix]
-		//template: source type (supported templates: string_w<override>, wchar*<override>, const wchar*<override>, integer types)
-		//return: source(数字文字列)を基数表現に変換したstring
-		//argument 1: 基数表現に用いる基数
-		inline string_w to_radix(const string_w& source, radix::enum_radix radix)
-		{
-			//convert int64
-			int64 convert = 0;
-			try { convert = std::stoll(source); }
-			catch (...)
-			{
-				//wstring->string
-				int inLength = static_cast<int>(source.length());
-				int outLength = WideCharToMultiByte(CP_UTF8, 0, source.c_str(), inLength, nullptr, 0, nullptr, nullptr);
-
-				string_a sourceToAscii(outLength, L'\0');
-				if (outLength > 0) WideCharToMultiByte(CP_UTF8, 0, source.c_str(), inLength, &sourceToAscii[0], outLength, nullptr, nullptr);
-
-				throw Exception::InvalidArgumentException("stringf", "to_radix",
-					"source->integer convert failed, source = " + (outLength > 0 ? sourceToAscii : "<empty>"));
-			}
-
-			//文字列変換
-			switch (radix)
-			{
-			case radix::x10:
-				return source;
-			case radix::x16:
-			{
-				std::wstringstream stream;
-				stream << std::showbase;
-				stream << std::hex << convert;
-				return stream.str();
-			}
-			case radix::x8:
-			{
-				std::wstringstream stream;
-				stream << std::showbase;
-				stream << std::oct << convert;
-				return stream.str();
-			}
-			case radix::x2:
-			{
-				std::wstringstream stream;
-				stream << std::showbase;
-				stream << std::bitset<sizeof(convert) * 8>(convert);
-				return stream.str();
-			}
-			default:
-				throw Exception::InvalidArgumentException("stringf", "to_radix", "radix is invalid value.");
-			}
-		}
-		//----------------------------------------------------------------------------------
-		//[to_radix]
-		//template: source type (supported templates: string_w<override>, wchar*<override>, const wchar*<override>, integer types)
-		//return: source(数字文字列)を基数表現に変換したstring
-		//argument 1: 基数表現に用いる基数
-		inline string_w to_radix(wchar* source, radix::enum_radix radix)
-		{
-			//convert int64
-			int64 convert = 0;
-			try { convert = std::stoll(source); }
-			catch (...) 
-			{ 
-				//wstring->string
-				int inLength = static_cast<int>(std::wcslen(source));
-				int outLength = WideCharToMultiByte(CP_UTF8, 0, source, inLength, nullptr, 0, nullptr, nullptr);
-
-				string_a sourceToAscii(outLength, L'\0');
-				if (outLength > 0) WideCharToMultiByte(CP_UTF8, 0, source, inLength, &sourceToAscii[0], outLength, nullptr, nullptr);
-
-				throw Exception::InvalidArgumentException("stringf", "to_radix", 
-					"source->integer convert failed, source = " + (outLength > 0 ? sourceToAscii : "<empty>"));
-			}
-
-			//文字列変換
-			switch (radix)
-			{
-			case radix::x10:
-				return source;
-			case radix::x16:
-			{
-				std::wstringstream stream;
-				stream << std::showbase;
-				stream << std::hex << convert;
-				return stream.str();
-			}
-			case radix::x8:
-			{
-				std::wstringstream stream;
-				stream << std::showbase;
-				stream << std::oct << convert;
-				return stream.str();
-			}
-			case radix::x2:
-			{
-				std::wstringstream stream;
-				stream << std::showbase;
-				stream << std::bitset<sizeof(convert) * 8>(convert);
-				return stream.str();
-			}
-			default:
-				throw Exception::InvalidArgumentException("stringf", "to_radix", "radix is invalid value.");
-			}
-		}
-		//----------------------------------------------------------------------------------
-		//[to_radix]
-		//template: source type (supported templates: string_w<override>, wchar*<override>, const wchar*<override>, integer types)
-		//return: source(数字文字列)を基数表現に変換したstring
-		//argument 1: 基数表現に用いる基数
-		inline string_w to_radix(const wchar* source, radix::enum_radix radix)
-		{
-			//convert int64
-			int64 convert = 0;
-			try { convert = std::stoll(source); }
-			catch (...)
-			{
-				//wstring->string
-				int inLength = static_cast<int>(std::wcslen(source));
-				int outLength = WideCharToMultiByte(CP_UTF8, 0, source, inLength, nullptr, 0, nullptr, nullptr);
-
-				string_a sourceToAscii(outLength, L'\0');
-				if (outLength > 0) WideCharToMultiByte(CP_UTF8, 0, source, inLength, &sourceToAscii[0], outLength, nullptr, nullptr);
-
-				throw Exception::InvalidArgumentException("stringf", "to_radix",
-					"source->integer convert failed, source = " + (outLength > 0 ? sourceToAscii : "<empty>"));
-			}
-
-			//文字列変換
-			switch (radix)
-			{
-			case radix::x10:
-				return source;
-			case radix::x16:
-			{
-				std::wstringstream stream;
-				stream << std::showbase;
-				stream << std::hex << convert;
-				return stream.str();
-			}
-			case radix::x8:
-			{
-				std::wstringstream stream;
-				stream << std::showbase;
-				stream << std::oct << convert;
-				return stream.str();
-			}
-			case radix::x2:
-			{
-				std::wstringstream stream;
-				stream << std::showbase;
-				stream << std::bitset<sizeof(convert) * 8>(convert);
-				return stream.str();
-			}
-			default:
-				throw Exception::InvalidArgumentException("stringf", "to_radix", "radix is invalid value.");
-			}
+			return std::move(result);
 		}
 	}
 }
-
 #endif // !SGFRAMEWORK_HEADER_STRINGF_TO_HPP_

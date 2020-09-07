@@ -1,0 +1,77 @@
+\hypertarget{_atomic_8hpp}{}\doxysection{D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/\+Atomic/\+Atomic.hpp ファイル}
+\label{_atomic_8hpp}\index{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/02\_Variables/Atomic/Atomic.hpp@{D:/SGFramework/SGFramework-\/Master/SGFramework-\/Master\_ToExe/02\_Variables/Atomic/Atomic.hpp}}
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include \char`\"{}../../01\+\_\+\+Macro\+And\+Librarys/\+Macro\+And\+Librarys.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Exception/\+Exception.\+hpp\char`\"{}}\newline
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_atomic_1_1_lock_guard}{S\+G\+Framework\+::\+Atomic\+::\+Lock\+Guard}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_atomic_1_1_try_lock_guard}{S\+G\+Framework\+::\+Atomic\+::\+Try\+Lock\+Guard}}
+\end{DoxyCompactItemize}
+\doxysubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework}{S\+G\+Framework}}
+\item 
+ \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic}{S\+G\+Framework\+::\+Atomic}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_aa74003ea2ff69348cf11120966582c0e}{S\+G\+Framework\+::\+Atomic\+::\+Init}} (std\+::atomic$<$ T $>$ \&atomic, T init) noexcept
+\begin{DoxyCompactList}\small\item\em atomicをロックフリーアルゴリズムを用いて初期化する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_ab60547931733dc7db056dd1a6dcd691f}{S\+G\+Framework\+::\+Atomic\+::\+Init}} (std\+::atomic$<$ T $>$ \&atomic, Cast\+Type init) noexcept
+\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_ac710f71b81d51c9cd1acaa2d18591f16}{S\+G\+Framework\+::\+Atomic\+::\+And}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean, bool and\+Flag) noexcept
+\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a13655012797f0c1d0377a5a66b137095}{S\+G\+Framework\+::\+Atomic\+::\+Or}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean, bool or\+Flag) noexcept
+\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a61b05e0c62c2e95a1cc53bd8695f2470}{S\+G\+Framework\+::\+Atomic\+::\+Xor}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean, bool xor\+Flag) noexcept
+\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_aa66fdcad406b46f91f50ec3891ee184e}{S\+G\+Framework\+::\+Atomic\+::\+Bit\+Inversion}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean) noexcept
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a063122ef30b1ea668e40c5a4aa0f43d2}{S\+G\+Framework\+::\+Atomic\+::\+Lock\+Atomic}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean) noexcept
+\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a40a422b977f64282b5e5212782685a94}{S\+G\+Framework\+::\+Atomic\+::\+Try\+Lock\+Atomic}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean) noexcept
+\item 
+bool \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a8de0ee8467c69adfba76c2387d06f383}{S\+G\+Framework\+::\+Atomic\+::\+Try\+Cycle\+Lock\+Atomic}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean, unsigned int cycle) noexcept
+\item 
+void \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_ad4668b40d56cdbf6bdfe819c1b68b7dc}{S\+G\+Framework\+::\+Atomic\+::\+Unlock\+Atomic}} (std\+::atomic$<$ bool $>$ \&atomic\+Boolean) noexcept
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a69134ddcfb8423cd5cd553260112e46f}{S\+G\+Framework\+::\+Atomic\+::\+Add}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T add) noexcept
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a464bc8109c7d98cd8078cf3079707c24}{S\+G\+Framework\+::\+Atomic\+::\+Subtract}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T sub) noexcept
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a2963bb66e76a854c06a02b2283e056e6}{S\+G\+Framework\+::\+Atomic\+::\+Multiply}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T multi) noexcept
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_aa25546dda965c51dd123b49ca8d9d511}{S\+G\+Framework\+::\+Atomic\+::\+Divide}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T div) noexcept
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a90c9d6a5ba1b577515bab5b121f84297}{S\+G\+Framework\+::\+Atomic\+::\+And}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T and\+Flag) noexcept
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a166ba0cdf32ba979b129ed0b130bde9b}{S\+G\+Framework\+::\+Atomic\+::\+Or}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T or\+Flag) noexcept
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a6a8c6aeb7d8f93ac897e13709555c12b}{S\+G\+Framework\+::\+Atomic\+::\+Xor}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, T xor\+Flag) noexcept
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a49fd5c6fd7695ebd4c7bfb72e2a7bf84}{S\+G\+Framework\+::\+Atomic\+::\+Bit\+Inversion}} (std\+::atomic$<$ T $>$ \&atomic\+Integral) noexcept
+\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a45c9e128fa8cecd0f706a5616f9f49d9}{S\+G\+Framework\+::\+Atomic\+::\+Add}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type add) noexcept
+\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a23767cf6c54df533f36eec0a38eebfa3}{S\+G\+Framework\+::\+Atomic\+::\+Subtract}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type sub) noexcept
+\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a6af10cdac7322b7c5545ce0131fc2d17}{S\+G\+Framework\+::\+Atomic\+::\+Multiply}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type multi) noexcept
+\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_ab83d8997235051ed4d04f194d5420778}{S\+G\+Framework\+::\+Atomic\+::\+Divide}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type div) noexcept
+\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a47ac1f068543b3281e7d1e8f0935d8e2}{S\+G\+Framework\+::\+Atomic\+::\+And}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type and\+Flag) noexcept
+\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a5238446ac3bde908d93deee7be2af14e}{S\+G\+Framework\+::\+Atomic\+::\+Or}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type or\+Flag) noexcept
+\item 
+{\footnotesize template$<$class T , class Cast\+Type $>$ }\\T \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_a4bd07f7222b7e4463c6f178685e8c745}{S\+G\+Framework\+::\+Atomic\+::\+Xor}} (std\+::atomic$<$ T $>$ \&atomic\+Integral, Cast\+Type xor\+Flag) noexcept
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_ab35951d73bdf296e7d20a06995a91d9d}{S\+G\+Framework\+::\+Atomic\+::\+Add}} (std\+::atomic$<$ T $\ast$ $>$ \&atomic\+Pointer, int add) noexcept
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \mbox{\hyperlink{namespace_s_g_framework_1_1_atomic_ae395f898d32dbfcde29603d6bebc2974}{S\+G\+Framework\+::\+Atomic\+::\+Subtract}} (std\+::atomic$<$ T $\ast$ $>$ \&atomic\+Pointer, int sub) noexcept
+\end{DoxyCompactItemize}

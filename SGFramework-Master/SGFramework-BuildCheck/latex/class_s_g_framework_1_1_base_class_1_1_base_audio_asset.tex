@@ -1,0 +1,287 @@
+\hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset}{}\doxysection{S\+G\+Framework\+::Base\+Class\+::Base\+Audio\+Asset クラス}
+\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset}\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+
+
+{\ttfamily \#include $<$Audio\+Asset.\+hpp$>$}
+
+S\+G\+Framework\+::Base\+Class\+::Base\+Audio\+Asset の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.345281cm]{class_s_g_framework_1_1_base_class_1_1_base_audio_asset}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_adfaf7b9de5c1f11ac9d9ea2069f62f9a}{Stop}} ()=0
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_af3a7bc3924d9a9257a53e944801a8a3f}{Change\+Speed\+Smoothly}} (float target, float seconds, bool is\+Stop=false)
+\item 
+void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a5afb71dbf96dab226fcb8c1824051311}{Change\+Volume\+Smoothly}} (float target, float seconds, bool is\+Stop=false)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a1f82a5fd5288a821a8e791798986a0d3}{get\+Play\+Back\+Speed}} ()
+\item 
+virtual S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a870250516de6e482478732bc2d263b57}{set\+Play\+Back\+Speed}} (float magnification)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a7f2b677c0d771b239b74e93aaf080c50}{get\+Volume}} ()
+\item 
+virtual S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY void \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a9325e35316c687e77dfa2362462040ae}{set\+Volume}} (float magnification)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY I\+X\+Audio2\+Source\+Voice $\ast$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a6f5e55d0e8a79624f9c672c8bb379c35}{get\+Voice}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_abd5d2dde891032ad3e8bee12033396df}{audio\+Seconds}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a77a665e23bf28efb9bae34569269554e}{play\+Begin\+Seconds}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a42a484b5f0040e0d309e94c2db4f8b94}{loop\+Begin\+Seconds}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ float $>$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_ab9d3806511ccd42f99a51bb77917637d}{play\+End\+Seconds}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_aed2c1f1f895d5979c3ea6182fc156d96}{source\+Sample\+Rate}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a473831ebf048fd486915d7ef1caa5d56}{channels}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a19c2b033abdb93ecd2a6225edad75008}{submix\+Layer\+ID}}
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr float \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a4b5883de7cb1c5357cd3ca4bcb189f91}{c\+Default}} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_af30a67d11d5470eff54fba9a4faf0536}{Base\+Audio\+Asset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_com_wear_function}{Com\+Wear\+Function}}$<$ I\+X\+Audio2\+Source\+Voice $>$ \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_ab4eb8653604ef9484680379e1b8f5335}{m\+\_\+voice}}
+\item 
+float \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a636dfd0fd716296780c90de752bf0163}{m\+\_\+audio\+Seconds}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_af6bb8e9a21b5efe72df94c9ac751fc48}{m\+\_\+play\+Begin\+Seconds}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_ac7721a19483b57c780199dabc7a10aed}{m\+\_\+loop\+Begin\+Seconds}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_acb75919767e3979eb20668f3f53dc17c}{m\+\_\+play\+End\+Seconds}} = 0.\+0f
+\item 
+\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_ac427b51f23604b6b0742c1de55ddac3a}{m\+\_\+source\+Sample\+Rate}} = 0
+\item 
+\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a756e66ac02750dc58ee9e5aaae549bdf}{m\+\_\+channels}} = 0
+\item 
+\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a09c6e8aaca3f10217e5c2f537e50a4f7}{m\+\_\+submix\+Layer\+ID}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{静的限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a418ebcc09198e9f61aea3d86bb20dded}{m\+\_\+c\+Base\+Flag\+Public\+State}} = 0
+\item 
+static constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_abb6c341053c2ba9ee76f0168ab4eecb2}{m\+\_\+c\+Base\+Flag\+Private\+State}} = 1
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a190a6c63966ace0121ab213b898e0d3a}{S\+G\+Framework\+::\+Audio}}
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_af30a67d11d5470eff54fba9a4faf0536}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_af30a67d11d5470eff54fba9a4faf0536}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!BaseAudioAsset@{BaseAudioAsset}}
+\index{BaseAudioAsset@{BaseAudioAsset}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{BaseAudioAsset()}{BaseAudioAsset()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::\+Base\+Audio\+Asset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_af3a7bc3924d9a9257a53e944801a8a3f}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_af3a7bc3924d9a9257a53e944801a8a3f}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!ChangeSpeedSmoothly@{ChangeSpeedSmoothly}}
+\index{ChangeSpeedSmoothly@{ChangeSpeedSmoothly}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{ChangeSpeedSmoothly()}{ChangeSpeedSmoothly()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::\+Change\+Speed\+Smoothly (\begin{DoxyParamCaption}\item[{float}]{target,  }\item[{float}]{seconds,  }\item[{bool}]{is\+Stop = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a5afb71dbf96dab226fcb8c1824051311}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a5afb71dbf96dab226fcb8c1824051311}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!ChangeVolumeSmoothly@{ChangeVolumeSmoothly}}
+\index{ChangeVolumeSmoothly@{ChangeVolumeSmoothly}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{ChangeVolumeSmoothly()}{ChangeVolumeSmoothly()}}
+{\footnotesize\ttfamily void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::\+Change\+Volume\+Smoothly (\begin{DoxyParamCaption}\item[{float}]{target,  }\item[{float}]{seconds,  }\item[{bool}]{is\+Stop = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a1f82a5fd5288a821a8e791798986a0d3}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a1f82a5fd5288a821a8e791798986a0d3}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!getPlayBackSpeed@{getPlayBackSpeed}}
+\index{getPlayBackSpeed@{getPlayBackSpeed}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{getPlayBackSpeed()}{getPlayBackSpeed()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::get\+Play\+Back\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a6f5e55d0e8a79624f9c672c8bb379c35}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a6f5e55d0e8a79624f9c672c8bb379c35}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!getVoice@{getVoice}}
+\index{getVoice@{getVoice}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{getVoice()}{getVoice()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY I\+X\+Audio2\+Source\+Voice$\ast$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::get\+Voice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a7f2b677c0d771b239b74e93aaf080c50}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a7f2b677c0d771b239b74e93aaf080c50}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY float S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a870250516de6e482478732bc2d263b57}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a870250516de6e482478732bc2d263b57}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!setPlayBackSpeed@{setPlayBackSpeed}}
+\index{setPlayBackSpeed@{setPlayBackSpeed}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{setPlayBackSpeed()}{setPlayBackSpeed()}}
+{\footnotesize\ttfamily virtual S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::set\+Play\+Back\+Speed (\begin{DoxyParamCaption}\item[{float}]{magnification }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset_af07b48b87e4b30c61438ca04e4860edf}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+S\+E\+Asset}}で再実装されています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a9325e35316c687e77dfa2362462040ae}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a9325e35316c687e77dfa2362462040ae}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!setVolume@{setVolume}}
+\index{setVolume@{setVolume}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{setVolume()}{setVolume()}}
+{\footnotesize\ttfamily virtual S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::set\+Volume (\begin{DoxyParamCaption}\item[{float}]{magnification }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_audio_s_e_asset_a767cbb3bb9c0c2a47410a775ac862830}{S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+S\+E\+Asset}}で再実装されています。
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_adfaf7b9de5c1f11ac9d9ea2069f62f9a}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_adfaf7b9de5c1f11ac9d9ea2069f62f9a}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!Stop@{Stop}}
+\index{Stop@{Stop}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily virtual void S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_music_ab3b58990f459b7d2aab714c916cb0d38}{S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Music}}, \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect3_d_a38751d0fd1e94c76569a00d16ed6724e}{S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect3D}}, \mbox{\hyperlink{class_s_g_framework_1_1_asset_1_1_audio_asset_effect_abb927804156d3110a99c936eaa2fc3a0}{S\+G\+Framework\+::\+Asset\+::\+Audio\+Asset\+Effect}}で実装されています。
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a190a6c63966ace0121ab213b898e0d3a}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a190a6c63966ace0121ab213b898e0d3a}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!SGFramework::Audio@{SGFramework::Audio}}
+\index{SGFramework::Audio@{SGFramework::Audio}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{SGFramework::Audio}{SGFramework::Audio}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_audio}{S\+G\+Framework\+::\+Audio}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_abd5d2dde891032ad3e8bee12033396df}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_abd5d2dde891032ad3e8bee12033396df}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!audioSeconds@{audioSeconds}}
+\index{audioSeconds@{audioSeconds}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{audioSeconds}{audioSeconds}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$float$>$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::audio\+Seconds}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a4b5883de7cb1c5357cd3ca4bcb189f91}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a4b5883de7cb1c5357cd3ca4bcb189f91}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!cDefault@{cDefault}}
+\index{cDefault@{cDefault}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{cDefault}{cDefault}}
+{\footnotesize\ttfamily constexpr float S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::c\+Default = -\/1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a473831ebf048fd486915d7ef1caa5d56}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a473831ebf048fd486915d7ef1caa5d56}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!channels@{channels}}
+\index{channels@{channels}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{channels}{channels}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}$>$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::channels}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a42a484b5f0040e0d309e94c2db4f8b94}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a42a484b5f0040e0d309e94c2db4f8b94}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!loopBeginSeconds@{loopBeginSeconds}}
+\index{loopBeginSeconds@{loopBeginSeconds}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{loopBeginSeconds}{loopBeginSeconds}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$float$>$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::loop\+Begin\+Seconds}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a636dfd0fd716296780c90de752bf0163}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a636dfd0fd716296780c90de752bf0163}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!m\_audioSeconds@{m\_audioSeconds}}
+\index{m\_audioSeconds@{m\_audioSeconds}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{m\_audioSeconds}{m\_audioSeconds}}
+{\footnotesize\ttfamily float S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::m\+\_\+audio\+Seconds = 0.\+0f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_abb6c341053c2ba9ee76f0168ab4eecb2}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_abb6c341053c2ba9ee76f0168ab4eecb2}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!m\_cBaseFlagPrivateState@{m\_cBaseFlagPrivateState}}
+\index{m\_cBaseFlagPrivateState@{m\_cBaseFlagPrivateState}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{m\_cBaseFlagPrivateState}{m\_cBaseFlagPrivateState}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::m\+\_\+c\+Base\+Flag\+Private\+State = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a418ebcc09198e9f61aea3d86bb20dded}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a418ebcc09198e9f61aea3d86bb20dded}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!m\_cBaseFlagPublicState@{m\_cBaseFlagPublicState}}
+\index{m\_cBaseFlagPublicState@{m\_cBaseFlagPublicState}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{m\_cBaseFlagPublicState}{m\_cBaseFlagPublicState}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::m\+\_\+c\+Base\+Flag\+Public\+State = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a756e66ac02750dc58ee9e5aaae549bdf}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a756e66ac02750dc58ee9e5aaae549bdf}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!m\_channels@{m\_channels}}
+\index{m\_channels@{m\_channels}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{m\_channels}{m\_channels}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::m\+\_\+channels = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_ac7721a19483b57c780199dabc7a10aed}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_ac7721a19483b57c780199dabc7a10aed}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!m\_loopBeginSeconds@{m\_loopBeginSeconds}}
+\index{m\_loopBeginSeconds@{m\_loopBeginSeconds}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{m\_loopBeginSeconds}{m\_loopBeginSeconds}}
+{\footnotesize\ttfamily float S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::m\+\_\+loop\+Begin\+Seconds = 0.\+0f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_af6bb8e9a21b5efe72df94c9ac751fc48}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_af6bb8e9a21b5efe72df94c9ac751fc48}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!m\_playBeginSeconds@{m\_playBeginSeconds}}
+\index{m\_playBeginSeconds@{m\_playBeginSeconds}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{m\_playBeginSeconds}{m\_playBeginSeconds}}
+{\footnotesize\ttfamily float S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::m\+\_\+play\+Begin\+Seconds = 0.\+0f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_acb75919767e3979eb20668f3f53dc17c}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_acb75919767e3979eb20668f3f53dc17c}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!m\_playEndSeconds@{m\_playEndSeconds}}
+\index{m\_playEndSeconds@{m\_playEndSeconds}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{m\_playEndSeconds}{m\_playEndSeconds}}
+{\footnotesize\ttfamily float S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::m\+\_\+play\+End\+Seconds = 0.\+0f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_ac427b51f23604b6b0742c1de55ddac3a}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_ac427b51f23604b6b0742c1de55ddac3a}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!m\_sourceSampleRate@{m\_sourceSampleRate}}
+\index{m\_sourceSampleRate@{m\_sourceSampleRate}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{m\_sourceSampleRate}{m\_sourceSampleRate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::m\+\_\+source\+Sample\+Rate = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a09c6e8aaca3f10217e5c2f537e50a4f7}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a09c6e8aaca3f10217e5c2f537e50a4f7}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!m\_submixLayerID@{m\_submixLayerID}}
+\index{m\_submixLayerID@{m\_submixLayerID}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{m\_submixLayerID}{m\_submixLayerID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::m\+\_\+submix\+Layer\+ID = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_ab4eb8653604ef9484680379e1b8f5335}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_ab4eb8653604ef9484680379e1b8f5335}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!m\_voice@{m\_voice}}
+\index{m\_voice@{m\_voice}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{m\_voice}{m\_voice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_com_wear_function}{Com\+Wear\+Function}}$<$I\+X\+Audio2\+Source\+Voice$>$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::m\+\_\+voice\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a77a665e23bf28efb9bae34569269554e}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a77a665e23bf28efb9bae34569269554e}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!playBeginSeconds@{playBeginSeconds}}
+\index{playBeginSeconds@{playBeginSeconds}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{playBeginSeconds}{playBeginSeconds}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$float$>$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::play\+Begin\+Seconds}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_ab9d3806511ccd42f99a51bb77917637d}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_ab9d3806511ccd42f99a51bb77917637d}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!playEndSeconds@{playEndSeconds}}
+\index{playEndSeconds@{playEndSeconds}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{playEndSeconds}{playEndSeconds}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$float$>$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::play\+End\+Seconds}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_aed2c1f1f895d5979c3ea6182fc156d96}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_aed2c1f1f895d5979c3ea6182fc156d96}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!sourceSampleRate@{sourceSampleRate}}
+\index{sourceSampleRate@{sourceSampleRate}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{sourceSampleRate}{sourceSampleRate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}$>$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::source\+Sample\+Rate}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a19c2b033abdb93ecd2a6225edad75008}\label{class_s_g_framework_1_1_base_class_1_1_base_audio_asset_a19c2b033abdb93ecd2a6225edad75008}} 
+\index{SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}!submixLayerID@{submixLayerID}}
+\index{submixLayerID@{submixLayerID}!SGFramework::BaseClass::BaseAudioAsset@{SGFramework::BaseClass::BaseAudioAsset}}
+\doxysubsubsection{\texorpdfstring{submixLayerID}{submixLayerID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}$>$ S\+G\+Framework\+::\+Base\+Class\+::\+Base\+Audio\+Asset\+::submix\+Layer\+ID}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/06\+\_\+\+Audio/\+Audio\+Asset/\mbox{\hyperlink{_audio_asset_8hpp}{Audio\+Asset.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SG-Framework_BuildCheck: D:/SGFramework/SGFramework-Master/SGFramework-Master_ToExe/02_Variables/InputCode/InputCode.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SG-Framework_BuildCheck
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d232af32513dc747c64665ae5f10016c.html">SGFramework-Master_ToExe</a></li><li class="navelem"><a class="el" href="dir_0cf03c12e51ae64724f6ec73d30b9672.html">02_Variables</a></li><li class="navelem"><a class="el" href="dir_da48fff684492a1362dd6e9262e0b7fd.html">InputCode</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">InputCode.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_input_code_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">入力を全て担当するInput Class内関数での引数に使う、</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">enumやtypedefを纏めたInputCode.h</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">------------------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SGFRAMEWORK_HEADER_INPUTCODE_INPUTCODE_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SGFRAMEWORK_HEADER_INPUTCODE_INPUTCODE_HPP_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;JoyStickCode.hpp&quot;</span> <span class="comment">//ジョイパッド用コード</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_key_bord_code_8hpp.html">KeyBordCode.hpp</a>&quot;</span>  <span class="comment">//キーボード用コード</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_mouse_code_8hpp.html">MouseCode.hpp</a>&quot;</span>        <span class="comment">//マウス用コード</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//Framework namespace</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_s_g_framework.html">SGFramework</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//friend用</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">class </span>Input;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">//AxisPack-&gt;AxisUserに使用するAxisCode</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_axis_code.html">   19</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_s_g_framework_1_1_axis_code.html">AxisCode</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">//friend</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_axis_code.html#ae05b16b09e27f3ba2260ba7451af7f9b">   23</a></span>&#160;        <span class="keyword">friend</span> <a class="code" href="struct_s_g_framework_1_1_axis_code.html#ae05b16b09e27f3ba2260ba7451af7f9b">Input</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ec">   25</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ec">Enum</a> : <span class="keywordtype">short</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca08c9d35cb2d6e0706fae84e78bc328b9">   27</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca08c9d35cb2d6e0706fae84e78bc328b9">MouseAccelerationX</a> = 0x101,     <span class="comment">//マウス加速度X</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecab8bf3ba4465dd6e3cc453a16f701a9f4">   28</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecab8bf3ba4465dd6e3cc453a16f701a9f4">MouseAccelerationY</a> = 0x102,     <span class="comment">//マウス加速度Y</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca107b83262d77c7394059acbc81d8ff8f">   29</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca107b83262d77c7394059acbc81d8ff8f">JoystickLTrigger</a> = 0x201,           <span class="comment">//ジョイスティックトリガーL</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecad06d5c2e137de6209a58401bc9215a04">   30</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecad06d5c2e137de6209a58401bc9215a04">JoystickRTrigger</a> = 0x202,           <span class="comment">//ジョイスティックトリガーR</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecae434e2a69652c496149b889028103112">   31</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecae434e2a69652c496149b889028103112">JoystickLStickX</a> = 0x204,                <span class="comment">//ジョイスティックLスティックX</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca89cce8823e19a2e25bc0a0c527cb4a7a">   32</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca89cce8823e19a2e25bc0a0c527cb4a7a">JoystickLStickY</a> = 0x208,                <span class="comment">//ジョイスティックLスティックY</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca451003cb457ed458e993eef4aead244f">   33</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca451003cb457ed458e993eef4aead244f">JoystickRStickX</a> = 0x210,            <span class="comment">//ジョイスティックRスティックX</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecacf81d0ef543f1442c206514345229904">   34</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecacf81d0ef543f1442c206514345229904">JoystickRStickY</a> = 0x220,            <span class="comment">//ジョイスティックRスティックY</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecab3526e5bb8ea460a0d2f51d870095519">   35</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecab3526e5bb8ea460a0d2f51d870095519">WindowAccelerationX</a> = 0x401,    <span class="comment">//ウィンドウ移動X</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca7a8d799550b94a22545929294c48ef3c">   36</a></span>&#160;            <a class="code" href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca7a8d799550b94a22545929294c48ef3c">WindowAccelerationY</a> = 0x402,    <span class="comment">//ウィンドウ移動Y</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        };</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">short</span> m_cUpperBitMouse = 0x0100;                   <span class="comment">//マウス</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">short</span> m_cUpperBitJoystick = 0x0200;                    <span class="comment">//ジョイスティック</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">short</span> m_cUpperBitWindow = 0x0400;                  <span class="comment">//ウィンドウ</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">short</span> m_cLowerBitMouseAccelerationX = 0x01;    <span class="comment">//マウス加速度X</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">short</span> m_cLowerBitMouseAccelerationY = 0x02;    <span class="comment">//マウス加速度Y</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">short</span> m_cLowerBitJoystickLTrigger = 0x01;          <span class="comment">//ジョイスティックトリガーL</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">short</span> m_cLowerBitJoystickRTrigger = 0x02;          <span class="comment">//ジョイスティックトリガーR</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">short</span> m_cLowerBitJoystickLStickX = 0x04;           <span class="comment">//ジョイスティックLスティックX</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">short</span> m_cLowerBitJoystickLStickY = 0x08;           <span class="comment">//ジョイスティックLスティックY</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">short</span> m_cLowerBitJoystickRStickX = 0x10;           <span class="comment">//ジョイスティックRスティックX</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">short</span> m_cLowerBitJoystickRStickY = 0x20;           <span class="comment">//ジョイスティックRスティックY</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">short</span> m_cLowerBitWindowAccelerationX = 0x01;   <span class="comment">//ウィンドウ移動X</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">short</span> m_cLowerBitWindowAccelerationY = 0x32;   <span class="comment">//ウィンドウ移動Y</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif // !SGFRAMEWORK_HEADER_INPUTCODE_INPUTCODE_HPP_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_s_g_framework_1_1_axis_code_html_a6810d52970318f6fae3067e08a4897eca08c9d35cb2d6e0706fae84e78bc328b9"><div class="ttname"><a href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca08c9d35cb2d6e0706fae84e78bc328b9">SGFramework::AxisCode::MouseAccelerationX</a></div><div class="ttdeci">@ MouseAccelerationX</div><div class="ttdef"><b>Definition:</b> InputCode.hpp:27</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_axis_code_html"><div class="ttname"><a href="struct_s_g_framework_1_1_axis_code.html">SGFramework::AxisCode</a></div><div class="ttdef"><b>Definition:</b> InputCode.hpp:20</div></div>
+<div class="ttc" id="a_key_bord_code_8hpp_html"><div class="ttname"><a href="_key_bord_code_8hpp.html">KeyBordCode.hpp</a></div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_axis_code_html_a6810d52970318f6fae3067e08a4897eca7a8d799550b94a22545929294c48ef3c"><div class="ttname"><a href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca7a8d799550b94a22545929294c48ef3c">SGFramework::AxisCode::WindowAccelerationY</a></div><div class="ttdeci">@ WindowAccelerationY</div><div class="ttdef"><b>Definition:</b> InputCode.hpp:36</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_axis_code_html_a6810d52970318f6fae3067e08a4897ecab3526e5bb8ea460a0d2f51d870095519"><div class="ttname"><a href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecab3526e5bb8ea460a0d2f51d870095519">SGFramework::AxisCode::WindowAccelerationX</a></div><div class="ttdeci">@ WindowAccelerationX</div><div class="ttdef"><b>Definition:</b> InputCode.hpp:35</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_axis_code_html_a6810d52970318f6fae3067e08a4897ecab8bf3ba4465dd6e3cc453a16f701a9f4"><div class="ttname"><a href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecab8bf3ba4465dd6e3cc453a16f701a9f4">SGFramework::AxisCode::MouseAccelerationY</a></div><div class="ttdeci">@ MouseAccelerationY</div><div class="ttdef"><b>Definition:</b> InputCode.hpp:28</div></div>
+<div class="ttc" id="a_mouse_code_8hpp_html"><div class="ttname"><a href="_mouse_code_8hpp.html">MouseCode.hpp</a></div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_axis_code_html_a6810d52970318f6fae3067e08a4897eca451003cb457ed458e993eef4aead244f"><div class="ttname"><a href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca451003cb457ed458e993eef4aead244f">SGFramework::AxisCode::JoystickRStickX</a></div><div class="ttdeci">@ JoystickRStickX</div><div class="ttdef"><b>Definition:</b> InputCode.hpp:33</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_axis_code_html_a6810d52970318f6fae3067e08a4897eca107b83262d77c7394059acbc81d8ff8f"><div class="ttname"><a href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca107b83262d77c7394059acbc81d8ff8f">SGFramework::AxisCode::JoystickLTrigger</a></div><div class="ttdeci">@ JoystickLTrigger</div><div class="ttdef"><b>Definition:</b> InputCode.hpp:29</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_axis_code_html_a6810d52970318f6fae3067e08a4897eca89cce8823e19a2e25bc0a0c527cb4a7a"><div class="ttname"><a href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897eca89cce8823e19a2e25bc0a0c527cb4a7a">SGFramework::AxisCode::JoystickLStickY</a></div><div class="ttdeci">@ JoystickLStickY</div><div class="ttdef"><b>Definition:</b> InputCode.hpp:32</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_axis_code_html_a6810d52970318f6fae3067e08a4897ec"><div class="ttname"><a href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ec">SGFramework::AxisCode::Enum</a></div><div class="ttdeci">Enum</div><div class="ttdef"><b>Definition:</b> InputCode.hpp:26</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_axis_code_html_a6810d52970318f6fae3067e08a4897ecacf81d0ef543f1442c206514345229904"><div class="ttname"><a href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecacf81d0ef543f1442c206514345229904">SGFramework::AxisCode::JoystickRStickY</a></div><div class="ttdeci">@ JoystickRStickY</div><div class="ttdef"><b>Definition:</b> InputCode.hpp:34</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_axis_code_html_a6810d52970318f6fae3067e08a4897ecae434e2a69652c496149b889028103112"><div class="ttname"><a href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecae434e2a69652c496149b889028103112">SGFramework::AxisCode::JoystickLStickX</a></div><div class="ttdeci">@ JoystickLStickX</div><div class="ttdef"><b>Definition:</b> InputCode.hpp:31</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_axis_code_html_ae05b16b09e27f3ba2260ba7451af7f9b"><div class="ttname"><a href="struct_s_g_framework_1_1_axis_code.html#ae05b16b09e27f3ba2260ba7451af7f9b">SGFramework::AxisCode::Input</a></div><div class="ttdeci">friend Input</div><div class="ttdef"><b>Definition:</b> InputCode.hpp:23</div></div>
+<div class="ttc" id="anamespace_s_g_framework_html"><div class="ttname"><a href="namespace_s_g_framework.html">SGFramework</a></div><div class="ttdef"><b>Definition:</b> MacroAndUsing.hpp:135</div></div>
+<div class="ttc" id="astruct_s_g_framework_1_1_axis_code_html_a6810d52970318f6fae3067e08a4897ecad06d5c2e137de6209a58401bc9215a04"><div class="ttname"><a href="struct_s_g_framework_1_1_axis_code.html#a6810d52970318f6fae3067e08a4897ecad06d5c2e137de6209a58401bc9215a04">SGFramework::AxisCode::JoystickRTrigger</a></div><div class="ttdeci">@ JoystickRTrigger</div><div class="ttdef"><b>Definition:</b> InputCode.hpp:30</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

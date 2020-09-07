@@ -1,0 +1,166 @@
+\hypertarget{class_s_g_framework_1_1_object}{}\doxysection{S\+G\+Framework\+::Object クラス}
+\label{class_s_g_framework_1_1_object}\index{SGFramework::Object@{SGFramework::Object}}
+
+
+{\ttfamily \#include $<$Object.\+hpp$>$}
+
+S\+G\+Framework\+::Object の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.280488cm]{class_s_g_framework_1_1_object}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_object_ab10d7c569fa77c42ba803a2b51ccbe67}{Object}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+virtual \mbox{\hyperlink{class_s_g_framework_1_1_object_ae5f1289a7cb67b6f686725d788bc340b}{$\sim$\+Object}} ()
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY void \mbox{\hyperlink{class_s_g_framework_1_1_object_a0b31786505026403364e9ec5e7ba46df}{set\+Name}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_object_a529acf8232e115276a51d2fc562e95bb}{operator==}} (const \mbox{\hyperlink{class_s_g_framework_1_1_object}{Object}} \&obj)
+\item 
+bool \mbox{\hyperlink{class_s_g_framework_1_1_object_a6642b24b7403676e5980452be06629f7}{operator!=}} (const \mbox{\hyperlink{class_s_g_framework_1_1_object}{Object}} \&obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_object_a243756d4135d84499f1031a79ceb68a1}{get\+Num\+Totale\+Instantiate\+Objects}} ()
+\item 
+static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{class_s_g_framework_1_1_object_a40a0ff5173fe2e73571e27214ff744bd}{get\+Num\+Now\+Totale\+Instantiate\+Objects}} ()
+\item 
+{\footnotesize template$<$class Left , class Right $>$ }\\static bool \mbox{\hyperlink{class_s_g_framework_1_1_object_adb3a845f9d607c22d41739965f3c6418}{Is\+Equal\+Pointer}} (const Left \&left, const Right \&right)
+\item 
+{\footnotesize template$<$class Left , class Right $>$ }\\static bool \mbox{\hyperlink{class_s_g_framework_1_1_object_acb82cd6ef915c5fd1d3343c71b7cec1e}{Is\+Not\+Equal\+Pointer}} (const Left \&left, const Right \&right)
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ sgstring $>$ \mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}}
+\item 
+\mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$ \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} $>$ \mbox{\hyperlink{class_s_g_framework_1_1_object_aa4ea7385b13efc6b88990c394bb0b8b2}{instance\+ID}}
+\end{DoxyCompactItemize}
+\doxysubsection*{静的限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static sgstring \mbox{\hyperlink{class_s_g_framework_1_1_object_a9adfd87f8eb2fc4e24efef4ba5a90d02}{Create\+Copy\+Name}} (const sgstring \&\mbox{\hyperlink{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}{name}})
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_object_a00df87c957d8f7ee0fc51f07a0542f4a}{Game\+Object}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_object_a2089047587d39834aab446c240f5621c}{Base\+Class\+::\+Base\+Asset}}
+\item 
+class \mbox{\hyperlink{class_s_g_framework_1_1_object_aa1828c1c2dfb16d5d2a41b143abaa862}{Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_ab10d7c569fa77c42ba803a2b51ccbe67}\label{class_s_g_framework_1_1_object_ab10d7c569fa77c42ba803a2b51ccbe67}} 
+\index{SGFramework::Object@{SGFramework::Object}!Object@{Object}}
+\index{Object@{Object}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Object\+::\+Object (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_ae5f1289a7cb67b6f686725d788bc340b}\label{class_s_g_framework_1_1_object_ae5f1289a7cb67b6f686725d788bc340b}} 
+\index{SGFramework::Object@{SGFramework::Object}!````~Object@{$\sim$Object}}
+\index{````~Object@{$\sim$Object}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{$\sim$Object()}{~Object()}}
+{\footnotesize\ttfamily virtual S\+G\+Framework\+::\+Object\+::$\sim$\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_a9adfd87f8eb2fc4e24efef4ba5a90d02}\label{class_s_g_framework_1_1_object_a9adfd87f8eb2fc4e24efef4ba5a90d02}} 
+\index{SGFramework::Object@{SGFramework::Object}!CreateCopyName@{CreateCopyName}}
+\index{CreateCopyName@{CreateCopyName}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{CreateCopyName()}{CreateCopyName()}}
+{\footnotesize\ttfamily sgstring S\+G\+Framework\+::\+Object\+::\+Create\+Copy\+Name (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_a40a0ff5173fe2e73571e27214ff744bd}\label{class_s_g_framework_1_1_object_a40a0ff5173fe2e73571e27214ff744bd}} 
+\index{SGFramework::Object@{SGFramework::Object}!getNumNowTotaleInstantiateObjects@{getNumNowTotaleInstantiateObjects}}
+\index{getNumNowTotaleInstantiateObjects@{getNumNowTotaleInstantiateObjects}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{getNumNowTotaleInstantiateObjects()}{getNumNowTotaleInstantiateObjects()}}
+{\footnotesize\ttfamily static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Object\+::get\+Num\+Now\+Totale\+Instantiate\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_a243756d4135d84499f1031a79ceb68a1}\label{class_s_g_framework_1_1_object_a243756d4135d84499f1031a79ceb68a1}} 
+\index{SGFramework::Object@{SGFramework::Object}!getNumTotaleInstantiateObjects@{getNumTotaleInstantiateObjects}}
+\index{getNumTotaleInstantiateObjects@{getNumTotaleInstantiateObjects}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{getNumTotaleInstantiateObjects()}{getNumTotaleInstantiateObjects()}}
+{\footnotesize\ttfamily static S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Object\+::get\+Num\+Totale\+Instantiate\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_adb3a845f9d607c22d41739965f3c6418}\label{class_s_g_framework_1_1_object_adb3a845f9d607c22d41739965f3c6418}} 
+\index{SGFramework::Object@{SGFramework::Object}!IsEqualPointer@{IsEqualPointer}}
+\index{IsEqualPointer@{IsEqualPointer}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{IsEqualPointer()}{IsEqualPointer()}}
+{\footnotesize\ttfamily template$<$class Left , class Right $>$ \\
+bool S\+G\+Framework\+::\+Object\+::\+Is\+Equal\+Pointer (\begin{DoxyParamCaption}\item[{const Left \&}]{left,  }\item[{const Right \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_acb82cd6ef915c5fd1d3343c71b7cec1e}\label{class_s_g_framework_1_1_object_acb82cd6ef915c5fd1d3343c71b7cec1e}} 
+\index{SGFramework::Object@{SGFramework::Object}!IsNotEqualPointer@{IsNotEqualPointer}}
+\index{IsNotEqualPointer@{IsNotEqualPointer}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{IsNotEqualPointer()}{IsNotEqualPointer()}}
+{\footnotesize\ttfamily template$<$class Left , class Right $>$ \\
+bool S\+G\+Framework\+::\+Object\+::\+Is\+Not\+Equal\+Pointer (\begin{DoxyParamCaption}\item[{const Left \&}]{left,  }\item[{const Right \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_a6642b24b7403676e5980452be06629f7}\label{class_s_g_framework_1_1_object_a6642b24b7403676e5980452be06629f7}} 
+\index{SGFramework::Object@{SGFramework::Object}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Object\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_object}{Object}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_a529acf8232e115276a51d2fc562e95bb}\label{class_s_g_framework_1_1_object_a529acf8232e115276a51d2fc562e95bb}} 
+\index{SGFramework::Object@{SGFramework::Object}!operator==@{operator==}}
+\index{operator==@{operator==}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool S\+G\+Framework\+::\+Object\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_g_framework_1_1_object}{Object}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_a0b31786505026403364e9ec5e7ba46df}\label{class_s_g_framework_1_1_object_a0b31786505026403364e9ec5e7ba46df}} 
+\index{SGFramework::Object@{SGFramework::Object}!setName@{setName}}
+\index{setName@{setName}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY void S\+G\+Framework\+::\+Object\+::set\+Name (\begin{DoxyParamCaption}\item[{const sgstring \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_aa1828c1c2dfb16d5d2a41b143abaa862}\label{class_s_g_framework_1_1_object_aa1828c1c2dfb16d5d2a41b143abaa862}} 
+\index{SGFramework::Object@{SGFramework::Object}!Administrator::GraphicsDetail::TransformX11@{Administrator::GraphicsDetail::TransformX11}}
+\index{Administrator::GraphicsDetail::TransformX11@{Administrator::GraphicsDetail::TransformX11}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{Administrator::GraphicsDetail::TransformX11}{Administrator::GraphicsDetail::TransformX11}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_administrator_1_1_graphics_detail_1_1_transform_x11}{Administrator\+::\+Graphics\+Detail\+::\+Transform\+X11}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_a2089047587d39834aab446c240f5621c}\label{class_s_g_framework_1_1_object_a2089047587d39834aab446c240f5621c}} 
+\index{SGFramework::Object@{SGFramework::Object}!BaseClass::BaseAsset@{BaseClass::BaseAsset}}
+\index{BaseClass::BaseAsset@{BaseClass::BaseAsset}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{BaseClass::BaseAsset}{BaseClass::BaseAsset}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_base_class_1_1_base_asset}{Base\+Class\+::\+Base\+Asset}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_a00df87c957d8f7ee0fc51f07a0542f4a}\label{class_s_g_framework_1_1_object_a00df87c957d8f7ee0fc51f07a0542f4a}} 
+\index{SGFramework::Object@{SGFramework::Object}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{GameObject}{GameObject}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_s_g_framework_1_1_game_object}{Game\+Object}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_aa4ea7385b13efc6b88990c394bb0b8b2}\label{class_s_g_framework_1_1_object_aa4ea7385b13efc6b88990c394bb0b8b2}} 
+\index{SGFramework::Object@{SGFramework::Object}!instanceID@{instanceID}}
+\index{instanceID@{instanceID}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{instanceID}{instanceID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$\mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}}$>$ S\+G\+Framework\+::\+Object\+::instance\+ID}
+
+\mbox{\Hypertarget{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}\label{class_s_g_framework_1_1_object_a81c886cd57a3c42b7e2ed81c0ad978f5}} 
+\index{SGFramework::Object@{SGFramework::Object}!name@{name}}
+\index{name@{name}!SGFramework::Object@{SGFramework::Object}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_g_framework_1_1_get_only_property}{Get\+Only\+Property}}$<$sgstring$>$ S\+G\+Framework\+::\+Object\+::name}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+S\+G\+Framework/\+S\+G\+Framework-\/\+Master/\+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/02\+\_\+\+Variables/未実装/\+Object/\mbox{\hyperlink{_object_8hpp}{Object.\+hpp}}\end{DoxyCompactItemize}

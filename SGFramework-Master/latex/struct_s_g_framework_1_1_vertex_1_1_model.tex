@@ -1,0 +1,139 @@
+\hypertarget{struct_s_g_framework_1_1_vertex_1_1_model}{}\doxysection{S\+G\+Framework\+::Vertex\+::Model 構造体}
+\label{struct_s_g_framework_1_1_vertex_1_1_model}\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+
+
+{\ttfamily \#include $<$Vertex.\+hpp$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_a9615f02281617922d04673b239385677}{Model}} ()=default
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_ae88cd71351f161929e0f7e92ca249237}{Model}} (const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&\mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_a0a8afd12b28087055cf74cf554beeed3}{position}}, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&\mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_a2eb3c60c87f2e7606fa83774a88d89c7}{normal}}, const \mbox{\hyperlink{struct_s_g_framework_1_1_u_v}{UV}} \&uv0, const \mbox{\hyperlink{struct_s_g_framework_1_1_u_v}{UV}} \&uv1, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector4}{Vector4}} \&weight, const \mbox{\hyperlink{struct_s_g_framework_1_1_vector4_int}{Vector4\+Int}} \&bone\+Indexes\+Vector)
+\item 
+S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY int \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_a28a7363225a99ee5e538a72add15a498}{get\+Initial\+Bone\+Index}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_a0a8afd12b28087055cf74cf554beeed3}{position}} = \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}
+\item 
+\mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_a2eb3c60c87f2e7606fa83774a88d89c7}{normal}} = \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}
+\item 
+std\+::array$<$ \mbox{\hyperlink{struct_s_g_framework_1_1_u_v}{UV}}, \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_acc04ae4acace2005161e54bbf97283ab}{c\+Num\+Supported\+U\+Vs}} $>$ \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_a47fe65687314e3be2cb8cf8259b57d5b}{uv\+Array}} = \{ \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_u_v_a16cfba6694c563a1ac3f27c0e08aeff4}{Const\+::\+U\+V\+::left\+Top}},\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_u_v_a16cfba6694c563a1ac3f27c0e08aeff4}{Const\+::\+U\+V\+::left\+Top}} \}
+\item 
+std\+::array$<$ float, \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_ae22e27677bd4bcbe0191c28ff6a45c27}{c\+Num\+Supported\+Bones}} $>$ \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_a34de7ed7a3eee55cda78cc9b3f0d5b2d}{weights}}
+\item 
+std\+::array$<$ int, \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_ae22e27677bd4bcbe0191c28ff6a45c27}{c\+Num\+Supported\+Bones}} $>$ \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_a6ac002550c4a479f5b1cdd5bd3d06c3b}{bone\+Indexes}} = \{ -\/1, -\/1, -\/1, -\/1, -\/1, -\/1, -\/1, -\/1 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_acc04ae4acace2005161e54bbf97283ab}{c\+Num\+Supported\+U\+Vs}} = 2
+\item 
+static constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_ae22e27677bd4bcbe0191c28ff6a45c27}{c\+Num\+Supported\+Bones}} = 8
+\item 
+static constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_a10e6661f9c8411d6de1cc6f6109c50ac}{c\+Num\+Max\+One\+Model\+Bone\+Indexes}} = 999
+\item 
+static constexpr int \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_a33f948ceb16cf987070d4b5c22d9ec7e}{c\+Identity\+Bone\+Index}} = 999
+\item 
+static constexpr int \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_a388307d324f0825e93b26f3c53da0369}{c\+Invalid\+Bone\+Index}} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vertex_1_1_model_a9615f02281617922d04673b239385677}\label{struct_s_g_framework_1_1_vertex_1_1_model_a9615f02281617922d04673b239385677}} 
+\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}!Model@{Model}}
+\index{Model@{Model}!SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+\doxysubsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Vertex\+::\+Model\+::\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vertex_1_1_model_ae88cd71351f161929e0f7e92ca249237}\label{struct_s_g_framework_1_1_vertex_1_1_model_ae88cd71351f161929e0f7e92ca249237}} 
+\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}!Model@{Model}}
+\index{Model@{Model}!SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+\doxysubsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily S\+G\+Framework\+::\+Vertex\+::\+Model\+::\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{position,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} \&}]{normal,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_u_v}{UV}} \&}]{uv0,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_u_v}{UV}} \&}]{uv1,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector4}{Vector4}} \&}]{weight,  }\item[{const \mbox{\hyperlink{struct_s_g_framework_1_1_vector4_int}{Vector4\+Int}} \&}]{bone\+Indexes\+Vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vertex_1_1_model_a28a7363225a99ee5e538a72add15a498}\label{struct_s_g_framework_1_1_vertex_1_1_model_a28a7363225a99ee5e538a72add15a498}} 
+\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}!getInitialBoneIndex@{getInitialBoneIndex}}
+\index{getInitialBoneIndex@{getInitialBoneIndex}!SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+\doxysubsubsection{\texorpdfstring{getInitialBoneIndex()}{getInitialBoneIndex()}}
+{\footnotesize\ttfamily S\+G\+F\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+P\+R\+O\+P\+E\+R\+TY int S\+G\+Framework\+::\+Vertex\+::\+Model\+::get\+Initial\+Bone\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vertex_1_1_model_a6ac002550c4a479f5b1cdd5bd3d06c3b}\label{struct_s_g_framework_1_1_vertex_1_1_model_a6ac002550c4a479f5b1cdd5bd3d06c3b}} 
+\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}!boneIndexes@{boneIndexes}}
+\index{boneIndexes@{boneIndexes}!SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+\doxysubsubsection{\texorpdfstring{boneIndexes}{boneIndexes}}
+{\footnotesize\ttfamily std\+::array$<$int, \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_ae22e27677bd4bcbe0191c28ff6a45c27}{c\+Num\+Supported\+Bones}}$>$ S\+G\+Framework\+::\+Vertex\+::\+Model\+::bone\+Indexes = \{ -\/1, -\/1, -\/1, -\/1, -\/1, -\/1, -\/1, -\/1 \}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vertex_1_1_model_a33f948ceb16cf987070d4b5c22d9ec7e}\label{struct_s_g_framework_1_1_vertex_1_1_model_a33f948ceb16cf987070d4b5c22d9ec7e}} 
+\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}!cIdentityBoneIndex@{cIdentityBoneIndex}}
+\index{cIdentityBoneIndex@{cIdentityBoneIndex}!SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+\doxysubsubsection{\texorpdfstring{cIdentityBoneIndex}{cIdentityBoneIndex}}
+{\footnotesize\ttfamily constexpr int S\+G\+Framework\+::\+Vertex\+::\+Model\+::c\+Identity\+Bone\+Index = 999\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vertex_1_1_model_a388307d324f0825e93b26f3c53da0369}\label{struct_s_g_framework_1_1_vertex_1_1_model_a388307d324f0825e93b26f3c53da0369}} 
+\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}!cInvalidBoneIndex@{cInvalidBoneIndex}}
+\index{cInvalidBoneIndex@{cInvalidBoneIndex}!SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+\doxysubsubsection{\texorpdfstring{cInvalidBoneIndex}{cInvalidBoneIndex}}
+{\footnotesize\ttfamily constexpr int S\+G\+Framework\+::\+Vertex\+::\+Model\+::c\+Invalid\+Bone\+Index = -\/1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vertex_1_1_model_a10e6661f9c8411d6de1cc6f6109c50ac}\label{struct_s_g_framework_1_1_vertex_1_1_model_a10e6661f9c8411d6de1cc6f6109c50ac}} 
+\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}!cNumMaxOneModelBoneIndexes@{cNumMaxOneModelBoneIndexes}}
+\index{cNumMaxOneModelBoneIndexes@{cNumMaxOneModelBoneIndexes}!SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+\doxysubsubsection{\texorpdfstring{cNumMaxOneModelBoneIndexes}{cNumMaxOneModelBoneIndexes}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Vertex\+::\+Model\+::c\+Num\+Max\+One\+Model\+Bone\+Indexes = 999\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vertex_1_1_model_ae22e27677bd4bcbe0191c28ff6a45c27}\label{struct_s_g_framework_1_1_vertex_1_1_model_ae22e27677bd4bcbe0191c28ff6a45c27}} 
+\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}!cNumSupportedBones@{cNumSupportedBones}}
+\index{cNumSupportedBones@{cNumSupportedBones}!SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+\doxysubsubsection{\texorpdfstring{cNumSupportedBones}{cNumSupportedBones}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Vertex\+::\+Model\+::c\+Num\+Supported\+Bones = 8\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vertex_1_1_model_acc04ae4acace2005161e54bbf97283ab}\label{struct_s_g_framework_1_1_vertex_1_1_model_acc04ae4acace2005161e54bbf97283ab}} 
+\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}!cNumSupportedUVs@{cNumSupportedUVs}}
+\index{cNumSupportedUVs@{cNumSupportedUVs}!SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+\doxysubsubsection{\texorpdfstring{cNumSupportedUVs}{cNumSupportedUVs}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespace_s_g_framework_a1d27b3a3f23edd79234a8f5ee37c3beb}{uint}} S\+G\+Framework\+::\+Vertex\+::\+Model\+::c\+Num\+Supported\+U\+Vs = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vertex_1_1_model_a2eb3c60c87f2e7606fa83774a88d89c7}\label{struct_s_g_framework_1_1_vertex_1_1_model_a2eb3c60c87f2e7606fa83774a88d89c7}} 
+\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}!normal@{normal}}
+\index{normal@{normal}!SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+\doxysubsubsection{\texorpdfstring{normal}{normal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Vertex\+::\+Model\+::normal = \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vertex_1_1_model_a0a8afd12b28087055cf74cf554beeed3}\label{struct_s_g_framework_1_1_vertex_1_1_model_a0a8afd12b28087055cf74cf554beeed3}} 
+\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}!position@{position}}
+\index{position@{position}!SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_g_framework_1_1_vector3}{Vector3}} S\+G\+Framework\+::\+Vertex\+::\+Model\+::position = \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_vector3_ac773f04184a04dfbb5820902d31f4c87}{Const\+::\+Vector3\+::zero}}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vertex_1_1_model_a47fe65687314e3be2cb8cf8259b57d5b}\label{struct_s_g_framework_1_1_vertex_1_1_model_a47fe65687314e3be2cb8cf8259b57d5b}} 
+\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}!uvArray@{uvArray}}
+\index{uvArray@{uvArray}!SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+\doxysubsubsection{\texorpdfstring{uvArray}{uvArray}}
+{\footnotesize\ttfamily std\+::array$<$\mbox{\hyperlink{struct_s_g_framework_1_1_u_v}{UV}}, \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_acc04ae4acace2005161e54bbf97283ab}{c\+Num\+Supported\+U\+Vs}}$>$ S\+G\+Framework\+::\+Vertex\+::\+Model\+::uv\+Array = \{ \mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_u_v_a16cfba6694c563a1ac3f27c0e08aeff4}{Const\+::\+U\+V\+::left\+Top}},\mbox{\hyperlink{namespace_s_g_framework_1_1_const_1_1_u_v_a16cfba6694c563a1ac3f27c0e08aeff4}{Const\+::\+U\+V\+::left\+Top}} \}}
+
+\mbox{\Hypertarget{struct_s_g_framework_1_1_vertex_1_1_model_a34de7ed7a3eee55cda78cc9b3f0d5b2d}\label{struct_s_g_framework_1_1_vertex_1_1_model_a34de7ed7a3eee55cda78cc9b3f0d5b2d}} 
+\index{SGFramework::Vertex::Model@{SGFramework::Vertex::Model}!weights@{weights}}
+\index{weights@{weights}!SGFramework::Vertex::Model@{SGFramework::Vertex::Model}}
+\doxysubsubsection{\texorpdfstring{weights}{weights}}
+{\footnotesize\ttfamily std\+::array$<$float, \mbox{\hyperlink{struct_s_g_framework_1_1_vertex_1_1_model_ae22e27677bd4bcbe0191c28ff6a45c27}{c\+Num\+Supported\+Bones}}$>$ S\+G\+Framework\+::\+Vertex\+::\+Model\+::weights}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            \{ 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f \}}
+
+\end{DoxyCode}
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+S\+G\+Framework-\/\+Master\+\_\+\+To\+Exe/05\+\_\+\+Graphics/\+Vertex/\mbox{\hyperlink{_vertex_8hpp}{Vertex.\+hpp}}\end{DoxyCompactItemize}
