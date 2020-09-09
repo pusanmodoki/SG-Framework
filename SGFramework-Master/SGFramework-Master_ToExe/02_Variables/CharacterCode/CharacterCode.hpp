@@ -43,19 +43,23 @@ namespace SGFramework
 
 	//! @brief ファイルの文字コード変換定数をプロパティで提供するCharacterCode namespace
 	//! @par How to use
-	//! std::fstream -> fstream.imbue(std::locale(std::locale::empty(), &change)\n
+	//! std::wfstream -> fstream.imbue(std::locale(std::locale::empty(), &change)\n
 	//! FileStream -> FileStream.ChangeLocale(change)
 	namespace CharacterCode
 	{
-		//! @brief_property_get CharacterCode used by default(Wide-UTF8)
-		inline const std::codecvt_utf8<wchar_t>& _defaultWide() { static std::codecvt_utf8<wchar_t> instance; return instance; }
-		//! @brief_property_get CharacterCode used by default(Narrow-UTF8)
-		inline const std::codecvt_utf8<char>& _defaultNarrow() { static std::codecvt_utf8<char> instance; return instance; }
-		//! @brief_property_get CharacterCode Wide-UTF8
-		inline const std::codecvt_utf8<wchar_t>& _utf8Wide() { static std::codecvt_utf8<wchar_t> instance; return instance; }
-		//! @brief_property_get CharacterCode Narrow-UTF8
-		inline const std::codecvt_utf8<char>& _utf8Narrow() { static std::codecvt_utf8<char> instance; return instance; }
-	
+		//! @brief_property_get CharacterCode used by default(UTF-8N)
+		inline const std::codecvt_utf8<wchar_t>& _default() { static std::codecvt_utf8<wchar_t> instance; return instance; }
+		//! @brief_property_get CharacterCode UTF-8N
+		inline const std::codecvt_utf8<wchar_t>& _utf8() { static std::codecvt_utf8<wchar_t> instance; return instance; }
+
+		namespace Narrow
+		{
+			//! @brief_property_get CharacterCode used by default(Narrow-UTF8)
+			inline const std::codecvt_utf8<char>& _default() { static std::codecvt_utf8<char> instance; return instance; }
+			//! @brief_property_get CharacterCode Narrow-UTF8
+			inline const std::codecvt_utf8<char>& _utf8() { static std::codecvt_utf8<char> instance; return instance; }
+		}
+
 		//! @brief_property_get CharacterCode Wide-UTF16 little endian
 		inline const std::codecvt_utf16<wchar_t, 0x10ffff, std::little_endian>& _utf16LeWide() { static std::codecvt_utf16<wchar_t, 0x10ffff, std::little_endian> instance; return instance; }
 		//! @brief_property_get CharacterCode Wide-UTF16 big endian
@@ -64,7 +68,7 @@ namespace SGFramework
 		//! @brief_property_get CharacterCode Wide-UTF8 with BOM
 		inline const std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header>& _utf8WithBomWide() { static std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header> instance; return instance; }
 		//! @brief_property_get CharacterCode Wide-UTF16 little endian with BOM
-		inline const std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header>& _utf16LeWithBomWide() { static std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header> instance; return instance; }
+		inline const std::codecvt_utf16<wchar_t, 0x10ffff, std::consume_header>& _utf16LeWithBomWide() { static std::codecvt_utf16<wchar_t, 0x10ffff, std::consume_header> instance; return instance; }
 
 
 		//UTF8 with BOM
