@@ -32,6 +32,7 @@ THE SOFTWARE.
 #include <fstream>
 #include <algorithm>
 #include <locale>
+#include <array>
 
 //Framework namespace
 namespace SGFramework
@@ -48,61 +49,35 @@ namespace SGFramework
 	namespace CharacterCode
 	{
 		//! @brief_property_get CharacterCode used by default(UTF-8N)
-		inline const std::codecvt_utf8<wchar_t>& _default() { static std::codecvt_utf8<wchar_t> instance; return instance; }
+		//! @attention newされたポインタが返されます, std::localeのコンストラクタで使用する場合std::localeが自動でdeleteします
+		SGF_PROPERTY const std::codecvt_utf8<wchar_t>* _default() { return new  std::codecvt_utf8<wchar_t>; }
 		//! @brief_property_get CharacterCode UTF-8N
-		inline const std::codecvt_utf8<wchar_t>& _utf8() { static std::codecvt_utf8<wchar_t> instance; return instance; }
+		//! @attention newされたポインタが返されます, std::localeのコンストラクタで使用する場合std::localeが自動でdeleteします
+		SGF_PROPERTY const std::codecvt_utf8<wchar_t>* _utf8() { return new  std::codecvt_utf8<wchar_t>; }
 
-		namespace Narrow
-		{
-			//! @brief_property_get CharacterCode used by default(Narrow-UTF8)
-			inline const std::codecvt_utf8<char>& _default() { static std::codecvt_utf8<char> instance; return instance; }
-			//! @brief_property_get CharacterCode Narrow-UTF8
-			inline const std::codecvt_utf8<char>& _utf8() { static std::codecvt_utf8<char> instance; return instance; }
-		}
+		//! @brief_property_get CharacterCode UTF16 little endian
+		//! @attention newされたポインタが返されます, std::localeのコンストラクタで使用する場合std::localeが自動でdeleteします
+		SGF_PROPERTY const std::codecvt_utf16<wchar_t, 0x10ffff, std::little_endian>* _utf16Le() { return new  std::codecvt_utf16<wchar_t, 0x10ffff, std::little_endian>; }
+		//! @brief_property_get CharacterCode UTF16 big endian
+		//! @attention newされたポインタが返されます, std::localeのコンストラクタで使用する場合std::localeが自動でdeleteします
+		SGF_PROPERTY const std::codecvt_utf16<wchar_t>* _utf16Be() { return new  std::codecvt_utf16<wchar_t>; }
 
-		//! @brief_property_get CharacterCode Wide-UTF16 little endian
-		inline const std::codecvt_utf16<wchar_t, 0x10ffff, std::little_endian>& _utf16LeWide() { static std::codecvt_utf16<wchar_t, 0x10ffff, std::little_endian> instance; return instance; }
-		//! @brief_property_get CharacterCode Wide-UTF16 big endian
-		inline const std::codecvt_utf16<wchar_t>& _utf16BeWide() { static std::codecvt_utf16<wchar_t> instance; return instance; }
+		//! @brief_property_get CharacterCode UTF-8(BOM)
+		//! @attention newされたポインタが返されます, std::localeのコンストラクタで使用する場合std::localeが自動でdeleteします
+		SGF_PROPERTY const std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header>* _utf8WithBom() { return new  std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header>; }
+		//! @brief_property_get CharacterCode UTF16 little endian(BOM)
+		//! @attention newされたポインタが返されます, std::localeのコンストラクタで使用する場合std::localeが自動でdeleteします
+		SGF_PROPERTY const std::codecvt_utf16<wchar_t, 0x10ffff, std::consume_header>* _utf16LeWithBom() { return new  std::codecvt_utf16<wchar_t, 0x10ffff, std::consume_header>; }
+		//! @brief_property_get CharacterCode UTF16 big endian(BOM)
+		//! @attention newされたポインタが返されます, std::localeのコンストラクタで使用する場合std::localeが自動でdeleteします
+		SGF_PROPERTY const std::codecvt_utf16<wchar_t, 0x10ffff, std::consume_header>* _utf16BeWithBom() { return new  std::codecvt_utf16<wchar_t, 0x10ffff, std::consume_header>; }
 
-		//! @brief_property_get CharacterCode Wide-UTF8 with BOM
-		inline const std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header>& _utf8WithBomWide() { static std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header> instance; return instance; }
-		//! @brief_property_get CharacterCode Wide-UTF16 little endian with BOM
-		inline const std::codecvt_utf16<wchar_t, 0x10ffff, std::consume_header>& _utf16LeWithBomWide() { static std::codecvt_utf16<wchar_t, 0x10ffff, std::consume_header> instance; return instance; }
-
-
-		//UTF8 with BOM
-		extern std::codecvt_utf8<wchar_t, 0x10ffff, std::consume_header> g_inUTF8UseBomWide;
-		//UTF16 little endian In Exclusive UseBOM
-		extern std::codecvt_utf16<wchar_t, 0x10ffff, std::consume_header> g_inUTF16LEUseBomWide;
-		//UTF16 big endian In Exclusive UseBOM
-		extern std::codecvt_utf16<wchar_t, 0x10ffff, std::consume_header> g_inUTF16BEUseBomWide;
-		//UTF8 Out Exclusive UseBOM
-		extern std::codecvt_utf8<wchar_t, 0x10ffff, std::generate_header> g_outUTF8UseBomWide;
-		//UTF16 little endian Out Exclusive UseBOM
-		extern std::codecvt_utf16<wchar_t, 0x10ffff, (std::codecvt_mode)(std::generate_header | std::little_endian)> g_outUTF16LEUseBomWide;
-
-		//UTF16 little endian
-		extern std::codecvt_utf16<char, 0x10ffff, std::little_endian> g_toUTF16LEChar;
-		//UTF16 big endian
-		extern std::codecvt_utf16<char> g_toUTF16BEChar;
-		//UTF8 In Exclusive UseBOM
-		extern std::codecvt_utf8<char, 0x10ffff, std::consume_header> g_inUTF8UseBomChar;
-		//UTF16 little endian In Exclusive UseBOM
-		extern std::codecvt_utf16<char, 0x10ffff, std::consume_header> g_inUTF16LEUseBomChar;
-		//UTF16 big endian In Exclusive UseBOM
-		extern std::codecvt_utf16<char, 0x10ffff, std::consume_header> g_inUTF16BEUseBomChar;
-		//UTF8 Out Exclusive UseBOM
-		extern std::codecvt_utf8<char, 0x10ffff, std::generate_header> g_outUTF8UseBomChar;
-		//UTF16 little endian Out Exclusive UseBOM
-		extern std::codecvt_utf16<char, 0x10ffff, (std::codecvt_mode)(std::generate_header | std::little_endian)> g_outUTF16LEUseBomChar;
-		
-		//BOM is UTF8
-		constexpr int g_cBomIsUTF8[3] = { 0xEF, 0xBB, 0xBF };
-		//BOM is UTF16 little endian
-		constexpr int g_cBomIsUTF16BE[2] = { 0xFE, 0xFF };
-		//BOM is UTF8 big endian
-		constexpr int g_cBomIsUTF16LE[2] = { 0xFF, 0xFE };
+		//! @brief_property_get UTF-8 BOM identifier
+		SGF_PROPERTY const std::array<int, 3>& _utf8BomIdentifier() { static std::array<int, 3> instance = { 0xEF, 0xBB, 0xBF }; return instance; }
+		//! @brief_property_get UTF-16 little endian BOM identifier
+		SGF_PROPERTY const std::array<int, 2>& _utf16LeBomIdentifier() { static std::array<int, 2> instance = { 0xFF, 0xFE }; return instance; }
+		//! @brief_property_get UTF-16 big endian BOM identifier
+		SGF_PROPERTY const std::array<int, 2>& _utf16BeBomIdentifier() { static std::array<int, 2> instance = { 0xFE, 0xFF }; return instance; }
 	}
 }
 

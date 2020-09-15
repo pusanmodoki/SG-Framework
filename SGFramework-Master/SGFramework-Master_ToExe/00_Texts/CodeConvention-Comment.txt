@@ -51,6 +51,7 @@ THE SOFTWARE.
 //! @brief_property_get Summary
 //! @brief_property_set Summary
 //! @throw Summary(std関数が非noexceptだが記載がない等で判断できない場合: possibly. noexceptな場合: noexcept.)
+//! @attention 注意(template等)
 //! @fellow_property Function()
 
 

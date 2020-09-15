@@ -1,7 +1,31 @@
 /*----------------------------------------------------------------------------------
-<Color.hpp> contents->色を扱うカラー structure
-制作者: Shota Uemura
+S.Game-Framework  (SG-Framework)
+The MIT License (MIT)
+
+Copyright (c) 2020 Shota Uemura
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 ------------------------------------------------------------------------------------*/
+/**
+* @file Color.hpp
+*  @brief 色を扱うColor structure
+*/
 #ifndef SGFRAMEWORK_HEADER_COLOR_HPP_
 #define SGFRAMEWORK_HEADER_COLOR_HPP_
 #include "../../01_MacroAndLibrarys/MacroAndLibrarys.hpp"
